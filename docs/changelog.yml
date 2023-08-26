@@ -1,182 +1,185 @@
 - "2023":
-  - "2023-08-08":
-    - newpage:
-        text: Others > 字幕制作系列 共四个页面
-        href: /others/subs/
-  - "2023-08-06":
-    - newpage: 
-        text: 上传计算机系统 Ⅲ 实验报告
-        href: /cs/system/cs3/
-    - newpage:
-        text: 上传软件安全实验报告
-        href: /sec/softsec/
-    - refactor: 删除 ADS，重构 HPC 部分目录结构，TOC 添加课程笔记/实验报告标签
-  - "2023-06-20":
-    - pageupdate:
-        text: CS > 编程语言 & ISA > C/C++ > oop（期末复习）
-        href: /cs/pl/c_cpp/oop/
-  - "2023-06-19":
-    - newpage:
-        text: Security > 密码学（期末复习）
-        href: /sec/crypto/
-  - "2023-05-29":
-    - newpage:
-        text: CISCN 2023 Quals Writeup
-        href: /writeups/ciscn2023/
-  - "2023-05-22":
-    - newpage:
-        text: CS > 编程语言 & ISA > RISC-V ISA > 页表相关特权级架构
-        href: /cs/pl/riscv/paging/
-  - "2023-05-10":
-    - pageupdate:
-        text: CS > 编程语言 & ISA > C/C++ > oop（期中复习）
-        href: /cs/pl/c_cpp/oop/
-    - pageupdate:
-        text: CS > 编程语言 & ISA > RISC-V ISA
-        href: /cs/pl/riscv/
-  - "2023-04-25":
-    - newpage:
-        text: RCTF 2022 Writeup
-        href: /writeups/rctf2022/
-    - newpage:
-        text: SECCON 2022 Final Writeup
-        href: /writeups/seccon2022final/
-    - newpage:
-        text: XCTF 2022 Final Writeup
-        href: /writeups/xctf2022final/
-    - newpage:
-        text: Midnight Sun CTF 2023 Quals Writeup
-        href: /writeups/midnight2023/
-    - newpage:
-        text: AliyunCTF 2023 Writeup
-        href: /writeups/aliyunctf2023/
-  - "2023-02-27":
-    - newpage: 新学期！建立了系统Ⅲ、密码学、oop、ads 的笔记框架
-    - newpage:
-        text: CS > 编程语言 & ISA > Chisel
-        href: /cs/pl/chisel/
-    - refactor: 重构了 C/C++ 部分页面结构
-  - "2023-02-24":
-    - pageupdate:
-        text: 上传了普物二和概率论的手写笔记
-        href: /others/notes/
-    - refactor: 更新了 CTF 部分页面结构
-    - function: 增加了更新链接结构后向后兼容重定向的功能
-  - "2023-02-20":
-    - pageupdate:
-        text: SadServers Writeup 更新了新的三道题目
-        href: /writeups/sadservers/
-    - function: 主页增加了随机卡片！
-  - "2023-02-02":
-    - function: 增加每页的字数统计和阅读时间估计
-  - "2023-02-01":
-    - newpage:
-        text: CS > 计算机系统 > 南京大学 ICS PA 实验纪实
-        href: /cs/system/pa/
-  - "2023-01-10":
-    - newpage:
-        text: CS > 人工智能相关 > 人工智能基础
-        href: /cs/ai/basic/
-  - "2023-01-06":
-    - pageupdate:
-        text: 上传了程序设计辅学常问题目集及解析
-        href: /cs/pl/c_cpp/
-    - function: 更新了一些关于字体大小的设置
-  - "2023-01-02":
-    - newpage:
-        text: CS > 算法相关 > 数据结构基础 > 基础数据结构
-        href: /cs/algorithm/ds/summary1/
-    - newpage:
-        text: CS > 算法相关 > 数据结构基础 > 排序与哈希
-        href: /cs/algorithm/ds/summary2/
-  - "2023-01-01":
-    - function: 首页统计信息增加网站运行时间
-    - function: 字体改用个人 CDN
-- "2022":
-  - "2022-12-24":
-    - pageupdate:
-        text: SadServers Writeup 更新了新的两道题目
-        href: /writeups/sadservers/
-  - "2022-12-16":
-    - newpage:
-        text: Web > 排版写作规范 > 中文排版需求
-        href: /web/typesetting/clreq/
-    - newpage:
-        text: Web > 排版写作规范 > 中文技术文档风格指南
-        href: /web/typesetting/tech/
-  - "2022-12-15":
-    - refactor: 更新了一些 index，新增了 Security、Web 两个分区
-    - function: 引入了心心念念的 heti，实现了四分宽混排空格以及标点挤压
-  - "2022-12-06 ~ 2022-12-10":
-    - newpage: 
-        text: 更新了系列系统 Ⅱ 笔记
-        href: /cs/system/cs2/
-  - "2022-12-03":
-    - newpage:
-        text: CTF > Blockchain > Ethereum > Solidity 语言
-        href: /ctf/blockchain/eth/solidity/
-  - "2022-12-02":
-    - pageupdate:
-        text: CTF > Blockchain > Ethereum > ERC 标准
-        href: /ctf/blockchain/eth/erc/
-    - newpage:
-        text: CTF > Blockchain > Ethereum > Yul 语言
-        href: /ctf/blockchain/eth/yul/
-  - "2022-12-01":
-    - function: 主页增加站点统计信息
-    - newpage:
-        text: CTF > Blockchain > Ethereum > 常见合约漏洞攻击手段
-        href: /ctf/blockchain/eth/vuln/
-    - newpage:
-        text: CTF > Blockchain > Ethereum > 其余重要 EIPs
-        href: /ctf/blockchain/eth/eip/
-    - pageupdate:
-        text: CTF > Blockchain > Ethereum > ERC 标准
-        href: /ctf/blockchain/eth/erc/
-  - "2022-11-30":
-    - function: 添加最近更新部分
-  - "2022-11-29":
-    - newpage: 
-        text: CTF > Blockchain > Ethereum > 以太坊虚拟机
-        href: /ctf/blockchain/eth/evm/
-    - newpage: 新增系统 I、II 实验报告
-  - "2022-11-28":
-    - newpage:
-        text: CS > ISA > RISC-V ISA > 特权级 ISA
-        href: /cs/pl/riscv/privileged/
-    - pageupdate:
-        text: CS > ISA > RISC-V ISA > 非特权级 ISA
-        href: /cs/pl/riscv/unprivileged/
-    - newpage:
-        text: CTF > Blockchain > Ethereum > 以太坊基础
-        href: /ctf/blockchain/eth/basic/
-  - "2022-11-25":
-    - function: 添加友链部分
-    - refactor: 重构 CS > ISA > RISC-V ISA 部分
-  - "2022-11-13":
-    - newpage:
-        text: SECCON 2022 Quals Writeup
-        href: /writeups/seccon2022/
-  - "2022-11-07":
-    - newpage:
-        text: CS > 工具 > 命令行工具 > Docker 相关备忘
-        href: cs/tools/docker/
-    - newpage:
-        text: CS > 工具 > 命令行工具 > gdb 相关备忘
-        href: cs/tools/gdb/
-    - newpage:
-        text: CS > 工具 > 命令行工具 > Shell 命令备忘
-        href: cs/tools/shell/
-    - newpage:
-        text: CTF > 取证 > 内存取证
-        href: ctf/forensics/mem/
-    - newpage:
-        text: Others > TroubleShooting > macOS TroubleShooting
-        href: others/troubleshooting/mac/
-    - newpage:
-        text: N1CTF 2022 Writeup
-        href: /writeups/n1ctf2022/
-  - "2022-11-03":
-    - newpage:
-        text: SadServers Writeup
-        href: /writeups/sadservers/
+  - "2023-08-26":
+    - refactor: init notebook
+# - "2023":
+#   - "2023-08-08":
+#     - newpage:
+#         text: Others > 字幕制作系列 共四个页面
+#         href: /others/subs/
+#   - "2023-08-06":
+#     - newpage: 
+#         text: 上传计算机系统 Ⅲ 实验报告
+#         href: /cs/system/cs3/
+#     - newpage:
+#         text: 上传软件安全实验报告
+#         href: /sec/softsec/
+#     - refactor: 删除 ADS，重构 HPC 部分目录结构，TOC 添加课程笔记/实验报告标签
+#   - "2023-06-20":
+#     - pageupdate:
+#         text: CS > 编程语言 & ISA > C/C++ > oop（期末复习）
+#         href: /cs/pl/c_cpp/oop/
+#   - "2023-06-19":
+#     - newpage:
+#         text: Security > 密码学（期末复习）
+#         href: /sec/crypto/
+#   - "2023-05-29":
+#     - newpage:
+#         text: CISCN 2023 Quals Writeup
+#         href: /writeups/ciscn2023/
+#   - "2023-05-22":
+#     - newpage:
+#         text: CS > 编程语言 & ISA > RISC-V ISA > 页表相关特权级架构
+#         href: /cs/pl/riscv/paging/
+#   - "2023-05-10":
+#     - pageupdate:
+#         text: CS > 编程语言 & ISA > C/C++ > oop（期中复习）
+#         href: /cs/pl/c_cpp/oop/
+#     - pageupdate:
+#         text: CS > 编程语言 & ISA > RISC-V ISA
+#         href: /cs/pl/riscv/
+#   - "2023-04-25":
+#     - newpage:
+#         text: RCTF 2022 Writeup
+#         href: /writeups/rctf2022/
+#     - newpage:
+#         text: SECCON 2022 Final Writeup
+#         href: /writeups/seccon2022final/
+#     - newpage:
+#         text: XCTF 2022 Final Writeup
+#         href: /writeups/xctf2022final/
+#     - newpage:
+#         text: Midnight Sun CTF 2023 Quals Writeup
+#         href: /writeups/midnight2023/
+#     - newpage:
+#         text: AliyunCTF 2023 Writeup
+#         href: /writeups/aliyunctf2023/
+#   - "2023-02-27":
+#     - newpage: 新学期！建立了系统Ⅲ、密码学、oop、ads 的笔记框架
+#     - newpage:
+#         text: CS > 编程语言 & ISA > Chisel
+#         href: /cs/pl/chisel/
+#     - refactor: 重构了 C/C++ 部分页面结构
+#   - "2023-02-24":
+#     - pageupdate:
+#         text: 上传了普物二和概率论的手写笔记
+#         href: /others/notes/
+#     - refactor: 更新了 CTF 部分页面结构
+#     - function: 增加了更新链接结构后向后兼容重定向的功能
+#   - "2023-02-20":
+#     - pageupdate:
+#         text: SadServers Writeup 更新了新的三道题目
+#         href: /writeups/sadservers/
+#     - function: 主页增加了随机卡片！
+#   - "2023-02-02":
+#     - function: 增加每页的字数统计和阅读时间估计
+#   - "2023-02-01":
+#     - newpage:
+#         text: CS > 计算机系统 > 南京大学 ICS PA 实验纪实
+#         href: /cs/system/pa/
+#   - "2023-01-10":
+#     - newpage:
+#         text: CS > 人工智能相关 > 人工智能基础
+#         href: /cs/ai/basic/
+#   - "2023-01-06":
+#     - pageupdate:
+#         text: 上传了程序设计辅学常问题目集及解析
+#         href: /cs/pl/c_cpp/
+#     - function: 更新了一些关于字体大小的设置
+#   - "2023-01-02":
+#     - newpage:
+#         text: CS > 算法相关 > 数据结构基础 > 基础数据结构
+#         href: /cs/algorithm/ds/summary1/
+#     - newpage:
+#         text: CS > 算法相关 > 数据结构基础 > 排序与哈希
+#         href: /cs/algorithm/ds/summary2/
+#   - "2023-01-01":
+#     - function: 首页统计信息增加网站运行时间
+#     - function: 字体改用个人 CDN
+# - "2022":
+#   - "2022-12-24":
+#     - pageupdate:
+#         text: SadServers Writeup 更新了新的两道题目
+#         href: /writeups/sadservers/
+#   - "2022-12-16":
+#     - newpage:
+#         text: Web > 排版写作规范 > 中文排版需求
+#         href: /web/typesetting/clreq/
+#     - newpage:
+#         text: Web > 排版写作规范 > 中文技术文档风格指南
+#         href: /web/typesetting/tech/
+#   - "2022-12-15":
+#     - refactor: 更新了一些 index，新增了 Security、Web 两个分区
+#     - function: 引入了心心念念的 heti，实现了四分宽混排空格以及标点挤压
+#   - "2022-12-06 ~ 2022-12-10":
+#     - newpage: 
+#         text: 更新了系列系统 Ⅱ 笔记
+#         href: /cs/system/cs2/
+#   - "2022-12-03":
+#     - newpage:
+#         text: CTF > Blockchain > Ethereum > Solidity 语言
+#         href: /ctf/blockchain/eth/solidity/
+#   - "2022-12-02":
+#     - pageupdate:
+#         text: CTF > Blockchain > Ethereum > ERC 标准
+#         href: /ctf/blockchain/eth/erc/
+#     - newpage:
+#         text: CTF > Blockchain > Ethereum > Yul 语言
+#         href: /ctf/blockchain/eth/yul/
+#   - "2022-12-01":
+#     - function: 主页增加站点统计信息
+#     - newpage:
+#         text: CTF > Blockchain > Ethereum > 常见合约漏洞攻击手段
+#         href: /ctf/blockchain/eth/vuln/
+#     - newpage:
+#         text: CTF > Blockchain > Ethereum > 其余重要 EIPs
+#         href: /ctf/blockchain/eth/eip/
+#     - pageupdate:
+#         text: CTF > Blockchain > Ethereum > ERC 标准
+#         href: /ctf/blockchain/eth/erc/
+#   - "2022-11-30":
+#     - function: 添加最近更新部分
+#   - "2022-11-29":
+#     - newpage: 
+#         text: CTF > Blockchain > Ethereum > 以太坊虚拟机
+#         href: /ctf/blockchain/eth/evm/
+#     - newpage: 新增系统 I、II 实验报告
+#   - "2022-11-28":
+#     - newpage:
+#         text: CS > ISA > RISC-V ISA > 特权级 ISA
+#         href: /cs/pl/riscv/privileged/
+#     - pageupdate:
+#         text: CS > ISA > RISC-V ISA > 非特权级 ISA
+#         href: /cs/pl/riscv/unprivileged/
+#     - newpage:
+#         text: CTF > Blockchain > Ethereum > 以太坊基础
+#         href: /ctf/blockchain/eth/basic/
+#   - "2022-11-25":
+#     - function: 添加友链部分
+#     - refactor: 重构 CS > ISA > RISC-V ISA 部分
+#   - "2022-11-13":
+#     - newpage:
+#         text: SECCON 2022 Quals Writeup
+#         href: /writeups/seccon2022/
+#   - "2022-11-07":
+#     - newpage:
+#         text: CS > 工具 > 命令行工具 > Docker 相关备忘
+#         href: cs/tools/docker/
+#     - newpage:
+#         text: CS > 工具 > 命令行工具 > gdb 相关备忘
+#         href: cs/tools/gdb/
+#     - newpage:
+#         text: CS > 工具 > 命令行工具 > Shell 命令备忘
+#         href: cs/tools/shell/
+#     - newpage:
+#         text: CTF > 取证 > 内存取证
+#         href: ctf/forensics/mem/
+#     - newpage:
+#         text: Others > TroubleShooting > macOS TroubleShooting
+#         href: others/troubleshooting/mac/
+#     - newpage:
+#         text: N1CTF 2022 Writeup
+#         href: /writeups/n1ctf2022/
+#   - "2022-11-03":
+#     - newpage:
+#         text: SadServers Writeup
+#         href: /writeups/sadservers/

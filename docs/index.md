@@ -8,7 +8,7 @@ statistics: true
 
 # o(〃'▽'〃)o Hi!
 
-这里是鹤翔万里（TonyCrane）的个人笔记本哦！  
+这里是狙击美佐（jujimeizuo）的个人笔记本哦！  
 
 <!-- [:octicons-info-16: 关于我](about/) /  -->
 [:material-clock-time-two-outline: 最近更新](changelog/) / 
@@ -28,7 +28,7 @@ statistics: true
 function updateTime() {
     var date = new Date();
     var now = date.getTime();
-    var startDate = new Date("2022/01/03 09:10:00");
+    var startDate = new Date("2023/08/026 17:26:00");
     var start = startDate.getTime();
     var diff = now - start;
     var y, d, h, m;

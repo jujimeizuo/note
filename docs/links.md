@@ -11,7 +11,7 @@ nostatistics: True
 
 <div class="flink-list">
 
-<div class="flink-list-item">
+<!-- <div class="flink-list-item">
     <a href="https://note.isshikih.top/" title="Isshiki修's Notebook" target="_blank">
         <div class="flink-item-icon">
             <img src="https://cdn.tonycrane.cc/note/friends/isshiki.png" alt="Isshiki修">
@@ -129,6 +129,6 @@ nostatistics: True
         <div class="flink-item-name">烧风的博客</div>
         <div class="flink-item-desc">一个很强的 up 主@烧风</div>
     </a>
-</div>
+</div> -->
 
 </div>
