@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="鹤翔万里（TonyCrane）的笔记本" name="description"/>
+<link href="https://note.tonycrane.cc/cs/ai/basic/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
+<title>人工智能基础 - 鹤翔万里的笔记本</title>
+<link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/card.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c273de7f67d992cb6aef08c3ddf09bb2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-DYETCPM289"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-DYETCPM289",{page_path:e.pathname})})})</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DYETCPM289"></script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script src="../../../js/scheme.js" type="text/javascript"></script>
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+            跳转至
+          </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="鹤翔万里的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="鹤翔万里的笔记本">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            鹤翔万里的笔记本
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              人工智能基础
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__options">
+<div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+<a class="light-mode" href="javascript:toggleScheme();" title="Light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"></path></svg>
+</a>
+<a class="dark-mode" href="javascript:toggleScheme();" title="Dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"></path></svg>
+</a>
+<a class="system-mode" href="javascript:toggleScheme();" title="System preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34z"></path></svg>
+</a>
+<a class="unknown-mode" href="javascript:toggleScheme();" title="Unknown scheme">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10z"></path></svg>
+</a>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/TonyCrane/note/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    TonyCrane/note
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
+        Computer Science
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../sec/">
+        Security
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../web/">
+        Web
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ctf/">
+        CTF
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../writeups/">
+        Writeups
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../others/">
+        Others
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="鹤翔万里的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="鹤翔万里的笔记本">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
+</a>
+    鹤翔万里的笔记本
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/TonyCrane/note/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    TonyCrane/note
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../changelog/">
+        更新记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../links/">
+        友链
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../">Computer Science</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Computer Science" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../pl/">编程语言 &amp; ISA</a>
+<label for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="编程语言 &amp; ISA" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          编程语言 &amp; ISA
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_2">
+          C/C++
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="C/C++" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_2">
+<span class="md-nav__icon md-icon"></span>
+          C/C++
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/c_cpp/c/">
+        C 语言杂项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/c_cpp/oop/">
+        C++ 面向对象
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../pl/python/">Python</a>
+<label for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Python" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/python/basic/">
+        Python 基础语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/python/numpy/">
+        NumPy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/python/pil/">
+        PIL
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../pl/rust/">Rust</a>
+<label for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Rust" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+          Rust
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/rust/basic/">
+        Rust 基础语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/rust/misc/">
+        Rust 杂项随记
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/haskell/">
+        Haskell
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/chisel/">
+        Chisel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/asm/">
+        x86 汇编语言
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_8" id="__nav_2_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../pl/riscv/">RISC-V ISA</a>
+<label for="__nav_2_2_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="RISC-V ISA" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_8">
+<span class="md-nav__icon md-icon"></span>
+          RISC-V ISA
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/riscv/unprivileged/">
+        RISC-V 非特权级 ISA
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/riscv/privileged/">
+        RISC-V 特权级 ISA
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pl/riscv/paging/">
+        RISC-V 页表相关
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../system/">计算机系统</a>
+<label for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" id="__nav_2_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../system/cs1/">计算机系统 I</a>
+<label for="__nav_2_3_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统 I" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_2">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统 I
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/topic1/">
+        数据的表示
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/topic2/">
+        数字逻辑电路基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/topic3/">
+        组合逻辑电路设计
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/topic4/">
+        时序逻辑电路设计
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/topic5/">
+        指令集体系结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/topic6/">
+        处理器
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2_8" id="__nav_2_3_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_2_8">
+          系统 I 实验部分
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="系统 I 实验部分" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_3_2_8">
+<span class="md-nav__icon md-icon"></span>
+          系统 I 实验部分
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab1-1/">
+        系统 I lab1-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab1-2/">
+        系统 I lab1-2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab2-1/">
+        系统 I lab2-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab2-2/">
+        系统 I lab2-2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab3/">
+        系统 I lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab4-1/">
+        系统 I lab4-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab4-2/">
+        系统 I lab4-2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab5-1/">
+        系统 I lab5-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs1/lab5-2/">
+        系统 I lab5-2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" id="__nav_2_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../system/cs2/">计算机系统 II</a>
+<label for="__nav_2_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统 II" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_3">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统 II
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/topic1/">
+        流水线 CPU
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/topic2/">
+        操作系统简介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/topic3/">
+        操作系统结构及系统调用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/topic4/">
+        进程与线程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/topic5/">
+        CPU 调度
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/topic6/">
+        进程同步
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3_8" id="__nav_2_3_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_3_8">
+          系统 II 实验部分
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="系统 II 实验部分" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_3_3_8">
+<span class="md-nav__icon md-icon"></span>
+          系统 II 实验部分
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab1/">
+        系统 II lab1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab2/">
+        系统 II lab2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab3/">
+        系统 II lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab4/">
+        系统 II lab4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab5/">
+        系统 II lab5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab6/">
+        系统 II lab6
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs2/lab7/">
+        系统 II lab7
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" id="__nav_2_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../system/cs3/">计算机系统 III</a>
+<label for="__nav_2_3_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统 III" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_4">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统 III
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs3/topic1/">
+        系统量化研究方法
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4_3" id="__nav_2_3_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_4_3">
+          系统 III 实验部分
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="系统 III 实验部分" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_3_4_3">
+<span class="md-nav__icon md-icon"></span>
+          系统 III 实验部分
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs3/lab1/">
+        系统 III lab1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs3/lab2/">
+        系统 III lab2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs3/lab3/">
+        系统 III lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs3/lab4/">
+        系统 III lab4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/cs3/lab5/">
+        系统 III lab5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../system/pa/">
+        ICS PA 实验纪实
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4">
+          算法相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="算法相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+          算法相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_1" id="__nav_2_4_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../algorithm/ds/">数据结构基础</a>
+<label for="__nav_2_4_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="数据结构基础" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_4_1">
+<span class="md-nav__icon md-icon"></span>
+          数据结构基础
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../algorithm/ds/topic1/">
+        算法分析基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../algorithm/ds/summary1/">
+        基础数据结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../algorithm/ds/summary2/">
+        排序与哈希
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5">
+          人工智能相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="人工智能相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+          人工智能相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          人工智能基础
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        人工智能基础
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    逻辑与推理
+  </a>
+<nav aria-label="逻辑与推理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    命题逻辑
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    谓词逻辑
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    知识图谱推理
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    搜索求解
+  </a>
+<nav aria-label="搜索求解" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    搜索算法基础
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    启发式搜索
+  </a>
+<nav aria-label="启发式搜索" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    最大最小搜索
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alpha-beta">
+    Alpha-Beta 剪枝
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    蒙特卡洛树搜索
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    机器学习：监督学习
+  </a>
+<nav aria-label="机器学习：监督学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    机器学习基本概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    回归分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    决策树
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    线性判别分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ada-boosting">
+    Ada Boosting
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    统计机器学习：无监督学习
+  </a>
+<nav aria-label="统计机器学习：无监督学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#k">
+    K 均值聚类
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    主成分分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    特征人脸方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    潜在语义分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    期望最大化算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    深度学习
+  </a>
+<nav aria-label="深度学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    前馈神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    卷积神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    循环神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    深度学习应用
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    强化学习
+  </a>
+<nav aria-label="强化学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    强化学习问题定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    基于价值的强化学习
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    人工智能博弈
+  </a>
+<nav aria-label="人工智能博弈" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    博弈论基础概念
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_6">
+          高性能计算
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="高性能计算" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+          高性能计算
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" id="__nav_2_6_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../hpc/hpc101/">HPC 101 超算小学期</a>
+<label for="__nav_2_6_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="HPC 101 超算小学期" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_6_1">
+<span class="md-nav__icon md-icon"></span>
+          HPC 101 超算小学期
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../hpc/hpc101/vectorized/">
+        向量化计算
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../hpc/hpc101/gpu/">
+        GPU 编程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../hpc/hpc101/openmp/">
+        OpenMP 基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../hpc/hpc101/mpi/">
+        MPI 基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../hpc/hpc101/ml/">
+        机器学习基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+          零散知识点
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="零散知识点" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          零散知识点
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../regex/">
+        正则表达式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../unicode/">
+        Unicode
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../analysis/">源码剖析</a>
+<label for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="源码剖析" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+          源码剖析
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analysis/mkdocs/">
+        mkdocs 源码剖析
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" id="__nav_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../tools/">工具相关</a>
+<label for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="工具相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+          工具相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/toolbox/">
+        工具收集
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_3" id="__nav_2_9_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9_3">
+          命令行工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="命令行工具" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_9_3">
+<span class="md-nav__icon md-icon"></span>
+          命令行工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/git/">
+        Git 命令备忘
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/shell/">
+        Shell 命令备忘
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/docker/">
+        Docker 相关备忘
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/gdb/">
+        gdb 相关备忘
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_4" id="__nav_2_9_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9_4">
+          CI 工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CI 工具" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_9_4">
+<span class="md-nav__icon md-icon"></span>
+          CI 工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/action/">
+        GitHub Action
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_5" id="__nav_2_9_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9_5">
+          站点生成工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="站点生成工具" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_9_5">
+<span class="md-nav__icon md-icon"></span>
+          站点生成工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/mkdocs/">
+        mkdocs 使用记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/hexo/">
+        hexo 使用记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/sphinx/">
+        sphinx 使用记录
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../sec/">Security</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Security" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../sec/crypto/">密码学</a>
+</div>
+<nav aria-label="密码学" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          密码学
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../sec/softsec/">软件安全</a>
+<label for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="软件安全" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          软件安全
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sec/softsec/lab1/">
+        软件安全 lab1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sec/softsec/lab2/">
+        软件安全 lab2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sec/softsec/lab3/">
+        软件安全 lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sec/softsec/lab4/">
+        软件安全 lab4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sec/softsec/final/">
+        软件安全 final lab
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4">
+          漏洞复现
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="漏洞复现" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          漏洞复现
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sec/vulns/log4j/">
+        log4j 漏洞复现
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../web/">Web</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Web" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../web/protocol/">网络协议</a>
+<label for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="网络协议" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          网络协议
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../web/protocol/vmess/">
+        VMess
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          排版写作规范
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="排版写作规范" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          排版写作规范
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../web/typesetting/clreq/">
+        中文排版需求
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../web/typesetting/tech/">
+        中文技术文档风格指南
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../web/svg/">
+        SVG
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/">CTF</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="CTF" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          CTF
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+          misc
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="misc" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          misc
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" id="__nav_5_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/misc/steg/">隐写术</a>
+<label for="__nav_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="隐写术" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+          隐写术
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/steg/image/">
+        图片隐写
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/steg/audio/">
+        音频隐写
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_2" id="__nav_5_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/misc/escapes/">沙箱逃逸</a>
+<label for="__nav_5_2_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="沙箱逃逸" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_2">
+<span class="md-nav__icon md-icon"></span>
+          沙箱逃逸
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/escapes/pysandbox/">
+        Python 沙箱逃逸
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3" id="__nav_5_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/misc/forensics/">取证</a>
+<label for="__nav_5_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="取证" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_3">
+<span class="md-nav__icon md-icon"></span>
+          取证
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/forensics/mem/">
+        内存取证
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_4" id="__nav_5_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2_4">
+          编码/密码类
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="编码/密码类" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_4">
+<span class="md-nav__icon md-icon"></span>
+          编码/密码类
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/coding/">
+        编码及古典密码
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/qrcode/">
+        QRCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/misc/esolang/">
+        Esolang
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5" id="__nav_5_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/blockchain/">Blockchain</a>
+<label for="__nav_5_2_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Blockchain" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Blockchain
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5_2" id="__nav_5_2_5_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/blockchain/eth/">Ethereum</a>
+<label for="__nav_5_2_5_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Ethereum" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_5_2_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Ethereum
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/basic/">
+        以太坊基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/evm/">
+        以太坊虚拟机
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/solidity/">
+        Solidity 语言
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/yul/">
+        Yul 语言
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/vuln/">
+        常见合约漏洞攻击手段
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/erc/">
+        ERC 标准
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ctf/blockchain/eth/eip/">
+        其余重要 EIPs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5_3" id="__nav_5_2_5_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/blockchain/solana/">Solana</a>
+</div>
+<nav aria-label="Solana" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_5_2_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Solana
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          pwn
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="pwn" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          pwn
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1" id="__nav_5_3_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/pwn/stack/">栈漏洞利用</a>
+</div>
+<nav aria-label="栈漏洞利用" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_3_1">
+<span class="md-nav__icon md-icon"></span>
+          栈漏洞利用
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" id="__nav_5_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ctf/pwn/heap/">堆漏洞利用</a>
+</div>
+<nav aria-label="堆漏洞利用" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_3_2">
+<span class="md-nav__icon md-icon"></span>
+          堆漏洞利用
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../writeups/">Writeups</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Writeups" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Writeups
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+          Training
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Training" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Training
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/ethernaut/">
+        Ethernaut
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/SecurityInnovation/">
+        Security Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/sadservers/">
+        SadServers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/AAA.md">
+        AAA School Bus
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3">
+          2021
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="2021" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          2021
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/sysu_msc_puzzle/">
+        SYSU MSC Puzzle 2021
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/hackergame2021/">
+        USTC Hackergame 2021
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/d0g3/">
+        第四届“安洵杯”
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/bytectf2021_final/">
+        ByteCTF 2021 Final
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/sctf2021/">
+        SCTF 2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4">
+          2022
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="2022" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          2022
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/vnctf2022/">
+        VNCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/tqlctf2022/">
+        TQLCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/susctf2022/">
+        SUSCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/d3ctf2022/">
+        D3CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/%2Actf2022/">
+        *CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/mrctf2022/">
+        MRCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/qwb2022/">
+        强网杯 2022 Quals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/tctf2022/">
+        TCTF/0CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/hackergame2022/">
+        USTC Hackergame 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/n1ctf2022/">
+        N1CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/seccon2022/">
+        SECCON 2022 Quals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/rctf2022/">
+        RCTF 2022
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5">
+          2023
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="2023" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          2023
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/seccon2022final/">
+        SECCON 2022 Final
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/xctf2022final/">
+        XCTF 2022 Final
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/midnight2023/">
+        MidnightSun 2023 Quals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/aliyunctf2023/">
+        AliyunCTF 2023
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../writeups/ciscn2023/">
+        CISCN 2023 Quals
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../others/">Others</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Others" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Others
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../others/notes/">
+        课程笔记
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" id="__nav_7_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../others/subs/">字幕制作系列</a>
+<label for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="字幕制作系列" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+          字幕制作系列
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../others/subs/ass/">
+        ass 标签
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../others/subs/aegisub/automation/">
+        Aegisub 自动化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../others/subs/aegisub/karaoke/">
+        Aegisub 卡拉 OK 模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../others/subs/ffmpeg/">
+        ffmpeg 套件杂记
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" id="__nav_7_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../others/troubleshooting/">TroubleShooting</a>
+<label for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="TroubleShooting" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+          TroubleShooting
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../others/troubleshooting/mac/">
+        macOS TroubleShooting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    逻辑与推理
+  </a>
+<nav aria-label="逻辑与推理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    命题逻辑
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    谓词逻辑
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    知识图谱推理
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    搜索求解
+  </a>
+<nav aria-label="搜索求解" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    搜索算法基础
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    启发式搜索
+  </a>
+<nav aria-label="启发式搜索" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    最大最小搜索
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alpha-beta">
+    Alpha-Beta 剪枝
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    蒙特卡洛树搜索
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    机器学习：监督学习
+  </a>
+<nav aria-label="机器学习：监督学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    机器学习基本概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    回归分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    决策树
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    线性判别分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ada-boosting">
+    Ada Boosting
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    统计机器学习：无监督学习
+  </a>
+<nav aria-label="统计机器学习：无监督学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#k">
+    K 均值聚类
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    主成分分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    特征人脸方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    潜在语义分析
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    期望最大化算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    深度学习
+  </a>
+<nav aria-label="深度学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    前馈神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    卷积神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    循环神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    深度学习应用
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    强化学习
+  </a>
+<nav aria-label="强化学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    强化学习问题定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    基于价值的强化学习
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    人工智能博弈
+  </a>
+<nav aria-label="人工智能博弈" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    博弈论基础概念
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/TonyCrane/note/tree/master/docs/cs/ai/basic.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="_1">人工智能基础<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>12139<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>103<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>42<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>浙江大学 “人工智能基础” 课程复习笔记</p>
+<p>参考教材<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>《人工智能导论：模型与算法》<span>-<span class="heti-spacing"> </span></span>吴飞</p>
+<p>一门我觉得很烂的课，反正没学到任何有用的知识，这里记的东西基本都是书上抄下来的，因为考试大部分考各种概念……<br/>
+前两部分是上课边听边记的，会详细一点（？）而且没那么偏向概念，后面基本上就全是挑概念抄了<br/>
+几个实验没有任何含金量和记录的必要，设计的很烂而且几乎学不到东西</p>
+<p>图灵班课程学习指南：<a href="https://zju-turing.github.io/TuringCourses/major_basic/ai_basic/">人工智能基础</a></p>
+</div>
+<h2 id="_2">逻辑与推理<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">命题逻辑<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>命题逻辑（proposition logic）是应用一套形式化规则对以符号表示的描述性陈述（称为命题）进行推理的系统</li>
+<li>命题逻辑以原子命题作为最基本的单位，无法对原子命题进行分解（分离其主语与谓语）</li>
+<li>命题逻辑是数理逻辑的基础</li>
+<li>通过命题联结词（connectives）对已有命题进行组合，得到新命题，称为符合命题（compound proposition）<ul>
+<li>命题合取<span><span class="heti-spacing"> </span>conjunction</span>，<span class="arithmatex">\(p\wedge q\)</span></li>
+<li>命题析取<span><span class="heti-spacing"> </span>disjunction</span>，<span class="arithmatex">\(p\vee q\)</span></li>
+<li>命题否定<span><span class="heti-spacing"> </span>negation</span>，<span class="arithmatex">\(\neg p\)</span></li>
+<li>命题蕴含<span><span class="heti-spacing"> </span>implication</span>，<span class="arithmatex">\(p\rightarrow q\)</span>，<span class="arithmatex">\(p\)</span> 为前件，<span class="arithmatex">\(q\)</span> 为后件</li>
+<li>命题双向蕴含<span><span class="heti-spacing"> </span>bi-implication</span>，<span class="arithmatex">\(p\leftrightarrow q\)</span></li>
+</ul>
+</li>
+<li>逻辑等价：在所有情况下都有相同真假结果<ul>
+<li>逆否命题：<span class="arithmatex">\((\alpha\rightarrow\beta)\equiv\neg\beta\rightarrow\neg\alpha\)</span></li>
+<li>蕴含消除：<span class="arithmatex">\((\alpha\rightarrow\beta)\equiv\neg\alpha\vee\beta\)</span></li>
+<li>双向消除：<span class="arithmatex">\((\alpha\leftrightarrow\beta)\equiv(\alpha\rightarrow\beta)\wedge(\beta\rightarrow\alpha)\)</span></li>
+<li>...</li>
+</ul>
+</li>
+<li>推理：按照某种策略从前提出发推出结论的过程。常见推理规则：<ul>
+<li>假言推理<span><span class="heti-spacing"> </span>modus ponens</span>：<span class="arithmatex">\(\alpha\rightarrow\beta, \alpha\Rightarrow\beta\)</span></li>
+<li>与消解<span><span class="heti-spacing"> </span>and-elimination</span>：<span class="arithmatex">\(\alpha_1\wedge\alpha_2\wedge\cdots\wedge\alpha_n\Rightarrow\alpha_i(1\leq i\leq n)\)</span></li>
+<li>与导入<span><span class="heti-spacing"> </span>and-introduction</span>：<span class="arithmatex">\(\alpha_1,\alpha_2,\cdots,\alpha_n\Rightarrow\alpha_1\wedge\alpha_2\wedge\cdots\wedge\alpha_n\)</span></li>
+<li>双重否定<span><span class="heti-spacing"> </span>double-negation elimation</span></li>
+<li>单项消解或单项归结<span><span class="heti-spacing"> </span>unit resolution</span>：<span class="arithmatex">\(\alpha\vee\beta,\neg\beta\Rightarrow\alpha\)</span></li>
+<li>消解或归结<span><span class="heti-spacing"> </span>resolution</span>：<span class="arithmatex">\(\alpha\vee\beta,\neg\beta\vee\gamma\Rightarrow\alpha\vee\gamma\)</span></li>
+</ul>
+</li>
+<li>范式（normal form）是把命题公式化为一种标准的形式，作用是可以进行两个命题的等价判断<ul>
+<li>析取范式<span><span class="heti-spacing"> </span>disjunctive normal form</span>（DNF）：有限个简单合取式构成的析取式称为析取范式</li>
+<li>合取范式<span><span class="heti-spacing"> </span>conjunctive normal form</span>（CNF）：有限个简单析取式构成的合取式称为合取范式</li>
+<li>一个<span class="heti-skip"><span class="heti-spacing"> </span>DNF<span class="heti-spacing"> </span></span>不成立当且仅当每个简单合取式都不成立</li>
+<li>一个<span class="heti-skip"><span class="heti-spacing"> </span>CNF<span class="heti-spacing"> </span></span>成立当且仅当每个简单析取式都成立</li>
+<li>命题公式的<span class="heti-skip"><span class="heti-spacing"> </span>DNF<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>CNF<span class="heti-spacing"> </span></span>都是不唯一的</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">谓词逻辑<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>命题逻辑无法表达局部与整体、一般与个别的关系</li>
+<li>将原子命题进一步细化，分解出个体、谓词和量词，来表达个体与总体的内在联系和数量关系，就是谓词逻辑（predicate logic）的研究内容</li>
+<li>个体：个体式指所研究领域中可以独立存在的具体或抽象的概念<ul>
+<li>具体、特定<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>个体常量；抽象、泛指<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>个体变量</li>
+<li>规定，用小写字母 <span class="arithmatex">\(a\)</span> 至 <span class="arithmatex">\(w\)</span> 表示个体常量（<span class="arithmatex">\(x,y,z\)</span> 表示个体变量）</li>
+<li>个体的取值范围称为个体域</li>
+</ul>
+</li>
+<li>谓词：谓词是用来刻画个体属性或者描述个体之间的关系存在性的元素，其值为真或假<ul>
+<li>包含一个参数的谓词称为一元谓词，表示一元关系</li>
+<li>包含多个参数的谓词称为多元谓词，表示个体间的多元关系</li>
+<li>规定，用 <span class="arithmatex">\(A(\cdots)\)</span> 至 <span class="arithmatex">\(Z(\cdots)\)</span> 表示谓词，为大写字母后跟括号，括号内放置个体常量或变量</li>
+</ul>
+</li>
+<li>量词：全称量词和存在量词统称为量词<ul>
+<li>全称量词：表示一切的、所有的、凡事、每一个等，符号 <span class="arithmatex">\(\forall\)</span></li>
+<li>存在量词：表示存在、有一个、某些等，符号 <span class="arithmatex">\(\exist\)</span></li>
+<li>全称量词的描述性是可以用相应的存在量词的藐视形式替换</li>
+<li>约束变元：在全称量词或存在量词约束条件下的变量符号</li>
+<li>自由变元：不受全称量词或存在量词约束的变量符号</li>
+<li>定理：自由变元既可以存在于量词的约束范围之内，也可以存在于量词约束范围之外，即：<ul>
+<li><span class="arithmatex">\((\forall x)(A(x)\vee B)\equiv(\forall x)A(x)\vee B\)</span></li>
+<li><span class="arithmatex">\((\forall x)(A(x)\wedge B)\equiv(\forall x)A(x)\wedge B\)</span></li>
+<li><span class="arithmatex">\((\exist x)(A(x)\vee B)\equiv(\exist x)A(x)\vee B\)</span></li>
+<li><span class="arithmatex">\((\exist x)(A(x)\wedge B)\equiv(\exist x)A(x)\wedge B\)</span></li>
+</ul>
+</li>
+<li>定理：在约束变元相同的条件下，量词的运算满足分配率</li>
+<li>定理：当公式中存在多个量词时，若多个量词都是全称量词或者都是存在量词，则量词位置可以互换；若多个量词中既有全称量词又有存在量词，则量词位置不可以随意互换    </li>
+</ul>
+</li>
+<li>谓词逻辑：<ul>
+<li>只包含个体谓词和个体量词的谓词逻辑称为一阶谓词逻辑，无法对谓词和量词进行量化</li>
+<li>需要高阶谓词和高阶量词进行量化，包含高阶谓词和高阶量词的谓词逻辑称为高阶谓词逻辑</li>
+</ul>
+</li>
+<li>项：项是描述对象的逻辑表达式，递归定义：<ul>
+<li>常量符号和变量符号是项</li>
+<li>若 <span class="arithmatex">\(f(x_1, x_2,\cdots, x_n)\)</span> 是 <span class="arithmatex">\(n\)</span> 元函数符号，<span class="arithmatex">\(t_1, t_2, \cdots, t_n\)</span> 是项，则 <span class="arithmatex">\(f(t_1, t_2, \cdots, t_n)\)</span> 是项</li>
+<li>有限次数地使用上述规则产生的符号串是项</li>
+</ul>
+</li>
+<li>原子谓词公式：若 <span class="arithmatex">\(P(x_1, x_2, \cdots, x_n)\)</span> 是 <span class="arithmatex">\(n\)</span> 元谓词，<span class="arithmatex">\(t_1, t_2, \cdots, t_n\)</span> 是项，则称 <span class="arithmatex">\(P(t_1, t_2, \cdots, t_n)\)</span> 为原子谓词公式，简称原子公式</li>
+<li>合式公式：由逻辑联结词和原子公式构成的用于陈述事实的复杂语句，又称谓词公式：<ul>
+<li>命题常项，命题变项，原子谓词公式都是合式公式</li>
+<li>通过逻辑联结词联结合式公式得到的也是合式公式</li>
+<li>如果 <span class="arithmatex">\(A\)</span> 是合式公式，<span class="arithmatex">\(x\)</span> 是个体变项，则 <span class="arithmatex">\((\exist x)A(x), (\forall x)A(x)\)</span> 也是合式公式</li>
+<li>有限次数地使用上述规则</li>
+</ul>
+</li>
+<li>推理规则（<span class="arithmatex">\(A(x)\)</span> 是谓词公式，<span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 是变元，<span class="arithmatex">\(a\)</span> 是常量符号）<ul>
+<li>全称量词消去<span><span class="heti-spacing"> </span>universal instantiation</span>（UI）：<span class="arithmatex">\((\forall x)A(x)\Rightarrow A(y)\)</span></li>
+<li>全称量词引入<span><span class="heti-spacing"> </span>universal generalization</span>（UG）：<span class="arithmatex">\(A(y)\Rightarrow(\forall x)A(x)\)</span></li>
+<li>存在量词消去<span><span class="heti-spacing"> </span>existential instantiation</span>（EI）：<span class="arithmatex">\((\exist x)A(x)\Rightarrow A(a)\)</span></li>
+<li>存在量词引入<span><span class="heti-spacing"> </span>existential generalization</span>（EG）：<span class="arithmatex">\(A(a)\Rightarrow(\exist x)A(x)\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">知识图谱推理<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>知识图谱（knowledge graph）由有向图（directed graph）构成，被用来描述现实世界中实体及实体之间的关系</li>
+<li>两个节点和连接边可表示为形如<span class="heti-skip"><span class="heti-spacing"> </span>&lt;left_node, relation, right_node&gt;<span class="heti-spacing"> </span></span>的三元组形式，也可表示为一阶逻辑（fisrt order logic，FOL）的形式</li>
+<li>关系推理是统计关系学习研究的基本问题，也是当前知识图谱领域研究的热点问题</li>
+<li>归纳逻辑程序设计（inductive logic programming，ILP）<ul>
+<li><span>ILP<span class="heti-spacing"> </span></span>是机器学习和逻辑程序设计交叉领域的研究内容</li>
+<li><span>ILP<span class="heti-spacing"> </span></span>使用一阶谓词逻辑进行知识表示，通过修改和扩充逻辑表达式对现有知识进行归纳，完成推理内容</li>
+<li>FOIL（first order inductive learner）算法是<span class="heti-skip"><span class="heti-spacing"> </span>ILP<span class="heti-spacing"> </span></span>的代表性方法，通过<strong>序贯覆盖</strong>学习推理规则</li>
+</ul>
+</li>
+<li>路径排序算法（path ranking algorithm，GRA）<ul>
+<li>将实体之间的关联路径作为特征，来学习目标关系的分类器</li>
+<li>流程：<ol>
+<li>特征抽取：生成并选择路径特征集合。生成路径方法：随机游走（random walk）、BFS、DFS</li>
+<li>特征计算：计算每个训练样例的特征值 <span class="arithmatex">\(P(s\rightarrow t; \pi_j)\)</span>，表示从实体节点 <span class="arithmatex">\(s\)</span> 出发，通过关系路径 <span class="arithmatex">\(\pi_j\)</span> 达到实体节点 <span class="arithmatex">\(t\)</span> 的概率。或表示是否存在这样一条路径，或表示路径出现的频次频率</li>
+<li>分类器训练：根据训练样例特征值，为目标关系训练分类器。训练后可用于推理两个实体间是否存在目标关系</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<details class="note">
+<summary><span>FOIL<span class="heti-spacing"> </span></span>算法</summary>
+<ul>
+<li>算法内容<ul>
+<li>输入：目标谓词 <span class="arithmatex">\(P\)</span>，目标谓词 <span class="arithmatex">\(P\)</span> 的训练样例（正例集合 <span class="arithmatex">\(E^+\)</span> 和反例集合 <span class="arithmatex">\(E^-\)</span>），以及其它背景知识样例</li>
+<li>输出：可得到目标谓词这一结论的推理规则</li>
+<li>过程：<ol>
+<li>将目标谓词作为所学习推理规则的结论</li>
+<li>将其它谓词逐一作为<strong>前提约束谓词</strong>加入推理规则，计算所得到推理规则的<span class="heti-skip"><span class="heti-spacing"> </span>FOIL<span class="heti-spacing"> </span></span>信息增益值，选取可带来最大信息增益值的前提约束谓词加入原来的推理规则，得到新的推理规则，并将训练样例集合中与该推理规则不符的样例去掉</li>
+<li>重复<span class="heti-skip"><span class="heti-spacing"> </span>b.<span class="heti-spacing"> </span></span>过程，知道所得到的推理规则不覆盖任何反例</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>目标谓词是需要推断规则的结论，也称为规则头</li>
+<li>给定推理结论后，<span>FOIL<span class="heti-spacing"> </span></span>算法学习得到使得结论满足的前提条件，即目标谓词作为结论的推理规则</li>
+<li><span>FOIL<span class="heti-spacing"> </span></span>算法从一般到特殊，逐步添加目标谓词的前提约束谓词，直到所构成的推理规则不覆盖任何反例</li>
+<li>
+<p>添加前提约束谓词后所得的推理规则的质量的好坏由信息增益值（information gain）作为评估标准，计算方法：</p>
+<div class="arithmatex">\[
+\mathrm{FOIL\_Gain} = \widehat{m_+}\cdot\left(\log_2\frac{\widehat{m_+}}{\widehat{m_+}+\widehat{m_-}}-\log_2\frac{m_+}{m_++m_-}\right)
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\widehat{m_+}, \widehat{m_-}\)</span> 是增加前提约束谓词后得到的新推理规则能覆盖的正例和反例数目</li>
+<li><span class="arithmatex">\(m_+, m_-\)</span> 是原推理规则覆盖的正例和反例数目</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="_6">搜索求解<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_7">搜索算法基础<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>评价指标<ul>
+<li>完备性：能否找到解（不一定最优）</li>
+<li>最优性：能否保证找到的第一个解是最优解</li>
+<li>时间复杂度（通过扩展的结点数量衡量）</li>
+<li>空间复杂度（通过同时记录的结点数量衡量）</li>
+</ul>
+</li>
+<li>搜索算法框架
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>F &lt;- {根节点}
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>while F != ∅ do
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    n &lt;- pick_from(F)
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    F &lt;- F - {n}
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    if goal_test(n) then
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>        return n.path
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    end
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    F &lt;- F ∪ successor_nodes(n)
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>end
+</code></pre></div><ul>
+<li><span>pick_from<span class="heti-spacing"> </span></span>决定扩展结点的顺序，<span>successor_nodes<span class="heti-spacing"> </span></span>决定哪些节点可被放入边缘集合（fringe set，也叫开表，open list）以在后面扩展（expand）</li>
+<li>每次从边缘集合中取出最上层（最浅）的结点时是广度优先搜索（breadth first search，BFS）</li>
+<li>每次从边缘集合中取出最下层（最深）的结点时是深度优先搜索（depth first search，DFS）</li>
+<li>放弃扩展部分结点的做法称为剪枝（pruning）</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">启发式搜索<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>利用一些能够辅助算法做出决策的额外信息的搜索算法称为启发式搜索（heuristic search），或有信息搜索（informed search）</li>
+<li>提供的这些辅助信息称为启发信息</li>
+<li>启发信息通常形式化为一个关于结点的函数 <span class="arithmatex">\(h(n)\)</span>，其用于估计结点 <span class="arithmatex">\(n\)</span> 距离达到目标还需付出多少代价，这个函数称为启发函数（heuristic function）<ul>
+<li>启发函数通常是非负的</li>
+<li>常见用法是用来更改前面的<span class="heti-skip"><span class="heti-spacing"> </span>pick_from<span class="heti-spacing"> </span></span>函数来规定挑选结点的顺序</li>
+</ul>
+</li>
+<li>对于任意结点 <span class="arithmatex">\(n\)</span>，决定了搜索算法扩展结点 <span class="arithmatex">\(n\)</span> 的优先度的函数 <span class="arithmatex">\(f(n)\)</span> 称为评价函数（evaluation function）<ul>
+<li>评价函数值越小，被挑选的优先级越高</li>
+<li>深度优先搜索中 <span class="arithmatex">\(f(n)\)</span> 可被定义为该结点深度的倒数</li>
+<li>广度优先搜索中 <span class="arithmatex">\(f(n)\)</span> 可被定义为该结点深度</li>
+</ul>
+</li>
+<li>
+<p>贪婪最佳优先搜索</p>
+<ul>
+<li>即<span><span class="heti-spacing"> </span>greedy best-first search</span>，GBFS</li>
+<li>优先扩展距离目标近的结点，即令 <span class="arithmatex">\(f(n) = h(n)\)</span></li>
+<li>不排除环路的贪婪最佳优先搜索算法是不完备的</li>
+<li>排除环路的贪婪最佳优先搜索是完备的，但不一定最优</li>
+<li>最坏情况下的时间复杂度和空间复杂度均为 <span class="arithmatex">\(O(b^m)\)</span><ul>
+<li><span class="arithmatex">\(b\)</span> 为分支因子（每个结点最大的分支数目）</li>
+<li><span class="arithmatex">\(m\)</span> 为最大深度，也就是搜索树中路径的最大可能长度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>智能体不唯一，解决信息确定、全局可观察、轮流行动、输赢收益零和的博弈问题，求解这样问题的算法称为对抗搜索（adversarial search）或博弈搜索（game search）</p>
+</li>
+<li>智能体会选择最大化自身利益、最小化对手利益的策略</li>
+<li>形式化描述：<ul>
+<li>状态：状态 <span class="arithmatex">\(s\)</span> 包括当前游戏局面和当前行动的智能体，初始状态 <span class="arithmatex">\(s_0\)</span> 为游戏开始时的状态。<span class="arithmatex">\(\mathrm{player}(s)\)</span> 表示状态 <span class="arithmatex">\(s\)</span> 下行动的智能体</li>
+<li>动作：动作是指 <span class="arithmatex">\(\mathrm{player}(s)\)</span> 在当前局面下可以采取的操作 <span class="arithmatex">\(a\)</span>，记动作集合为 <span class="arithmatex">\(\mathrm{actions}(s)\)</span></li>
+<li>状态转移：状态转移函数 <span class="arithmatex">\(s' = \mathrm{result}(s, a)\)</span> 表示在状态 <span class="arithmatex">\(s\)</span> 下采取动作 <span class="arithmatex">\(a\)</span> 后的下一个状态</li>
+<li>终局状态测试：终局状态测试函数 <span class="arithmatex">\(\mathrm{terminal\_test}(s)\)</span> 用于测试游戏是否在状态 <span class="arithmatex">\(s\)</span> 下结束</li>
+<li>终局得分：终局得分函数 <span class="arithmatex">\(\mathrm{utility}(s, p)\)</span> 表示在状态 <span class="arithmatex">\(s\)</span> 下玩家 <span class="arithmatex">\(p\)</span> 的得分<ul>
+<li>对于二人零和博弈，只需要记录其中一人的终局得分即可</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_9">最大最小搜索<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>最大最小搜索（minimax search）是求解对抗搜索问题的基本算法</li>
+<li>该算法假设两名玩家在决策时总是理性地倾向于最大化自己的得分（最小化对方得分）</li>
+<li>算法过程<ul>
+<li>假设以最大化得分为目标的玩家为<span><span class="heti-spacing"> </span>MAX</span>，以最小化得分为目标的玩家为<span><span class="heti-spacing"> </span>MIN</span></li>
+<li>某一层由<span class="heti-skip"><span class="heti-spacing"> </span>MAX<span class="heti-spacing"> </span></span>玩家行动，则其会选择得分最大的子树进行行动</li>
+<li>某一层由<span class="heti-skip"><span class="heti-spacing"> </span>MIN<span class="heti-spacing"> </span></span>玩家行动，则其会选择得分最小的子树进行行动</li>
+<li>递归地进行上述过程，直到达到终局状态</li>
+<li>（子树的得分由所有它的子树的得分取最大或最小得到）</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mathrm{minimax}(s) = \begin{cases}
+\mathrm{utility}(s) &amp; \text{if terminal\_test(}s\text{)} \\
+\max_{a \in \mathrm{actions}(s)} \mathrm{minimax}(\mathrm{result}(s, a)) &amp; \text{if player(}s\text{) = MAX} \\
+\min_{a \in \mathrm{actions}(s)} \mathrm{minimax}(\mathrm{result}(s, a)) &amp; \text{if player(}s\text{) = MIN}
+\end{cases}
+\]</div>
+<ul>
+<li>最大最小搜索的时间复杂度为 <span class="arithmatex">\(O(b^m)\)</span>，空间复杂度为 <span class="arithmatex">\(O(bm)\)</span></li>
+</ul>
+<h4 id="alpha-beta"><span>Alpha-Beta<span class="heti-spacing"> </span></span>剪枝<a class="headerlink" href="#alpha-beta" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>如果搜索树极大，则最大最小搜索的开销巨大，无法在合理时间内返回结果</li>
+<li>
+<p><span>Alpha-Beta<span class="heti-spacing"> </span></span>剪枝算法的思想如下：</p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathrm{minimax}(s_0) &amp;= \max(\min(3, 9, 10), \min(2, x, y), \min(10, 5, 1))\\
+&amp;= \max(3, \min(2, x, y), 1)
+\end{align*}
+\]</div>
+<ul>
+<li>上式中 <span class="arithmatex">\(\min(2, x, y)\)</span> 肯定小于<span><span class="heti-spacing"> </span>2</span>，而外面一层求最大值又有<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>比它大</li>
+<li>所以就没有必要去搜索 <span class="arithmatex">\(x, y\)</span> 对应的子树得到具体的 <span class="arithmatex">\(x, y\)</span> 值，可以将这两个动作剪枝掉</li>
+</ul>
+</li>
+</ul>
+<h3 id="_10">蒙特卡洛树搜索<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>四个步骤<ul>
+<li>选择（selection）：算法从搜索树的根节点开始，向下递归选择子节点直到到达叶子结点或者到达还具有未被扩展的子节点的节点<span><span class="heti-spacing"> </span>L</span>，向下递归选择的过程可由<span class="heti-skip"><span class="heti-spacing"> </span>UCB1<span class="heti-spacing"> </span></span>算法来实现，在递归选择过程中记录下每个节点被选择的次数和每个节点得到的奖励均值</li>
+<li>扩展（expansion）：如果节点<span class="heti-skip"><span class="heti-spacing"> </span>L<span class="heti-spacing"> </span></span>还不是一个终止节点，则随机扩展它的一个未被扩展过的后继边缘节点<span><span class="heti-spacing"> </span>M</span></li>
+<li>模拟（simulation）：从节点<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>出发，模拟扩展搜索树，直到找到一个终止节点</li>
+<li>反向传播（back propagation）：用模拟所得结果回溯更新模拟路径中<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>及以上节点的奖励均值和被访问次数</li>
+</ul>
+</li>
+</ul>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">AIPlayer</span><span class="p">:</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">player</span> <span class="o">=</span> <span class="n">color</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">=</span> <span class="n">C</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">iterations</span> <span class="o">=</span> <span class="n">iterations</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">def</span> <span class="nf">game_over</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">):</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="c1"># 根据当前棋盘，判断棋局是否终止</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="c1"># 如果当前选手没有合法下棋的位子，则切换选手；如果另外一个选手也没有合法的下棋位置，则比赛停止。</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="n">b_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">get_legal_actions</span><span class="p">(</span><span class="s1">'X'</span><span class="p">))</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>        <span class="n">w_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">get_legal_actions</span><span class="p">(</span><span class="s1">'O'</span><span class="p">))</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>        <span class="n">is_over</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">b_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">w_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># 返回值 True/False</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>        <span class="k">return</span> <span class="n">is_over</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="k">def</span> <span class="nf">uct_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">iterations</span><span class="p">):</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations</span><span class="p">):</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>            <span class="n">reward</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">backpropagate</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">reward</span><span class="p">)</span>
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ucb</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">action</span>
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">board</span><span class="p">):</span>
+<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">finished</span><span class="p">():</span>
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a>                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>            <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>                <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ucb</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
+<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>        <span class="k">return</span> <span class="n">node</span>
+<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>
+<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="k">def</span> <span class="nf">expand</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>        <span class="n">actions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">get_legal_actions</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">player</span><span class="p">))</span>
+<a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a>            <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">parent</span>
+<a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a>        <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="n">child</span><span class="o">.</span><span class="n">action</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">]</span>
+<a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a>        <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="n">action</span> <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">actions</span> <span class="k">if</span> <span class="n">action</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">]</span>
+<a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a>        <span class="n">action</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+<a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a>        <span class="n">new_board</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+<a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a>        <span class="n">new_board</span><span class="o">.</span><span class="n">_move</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">player</span><span class="p">)</span>
+<a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a>        <span class="n">node</span><span class="o">.</span><span class="n">expend</span><span class="p">(</span><span class="n">new_board</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="s1">'X'</span> <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">player</span> <span class="o">==</span> <span class="s1">'O'</span> <span class="k">else</span> <span class="s1">'O'</span><span class="p">)</span>
+<a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a>        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a>
+<a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="k">def</span> <span class="nf">ucb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+<a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a>        <span class="n">max_ucb</span> <span class="o">=</span> <span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="s1">'inf'</span><span class="p">)</span>
+<a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a>        <span class="n">max_children</span> <span class="o">=</span> <span class="p">[]</span>
+<a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a>        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+<a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a>            <span class="n">ucb</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">reward</span> <span class="o">/</span> <span class="n">child</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+</span> <span class="n">C</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">cnt</span><span class="p">)</span> <span class="o">/</span> <span class="n">child</span><span class="o">.</span><span class="n">cnt</span><span class="p">)</span>
+<a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a>            <span class="k">if</span> <span class="n">ucb</span> <span class="o">&gt;</span> <span class="n">max_ucb</span><span class="p">:</span>
+<a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>                <span class="n">max_ucb</span> <span class="o">=</span> <span class="n">ucb</span>
+<a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a>                <span class="n">max_children</span> <span class="o">=</span> <span class="p">[</span><span class="n">child</span><span class="p">]</span>
+<a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a>            <span class="k">elif</span> <span class="n">ucb</span> <span class="o">==</span> <span class="n">max_ucb</span><span class="p">:</span>
+<a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a>                <span class="n">max_children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+<a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">max_children</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a>            <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">parent</span>
+<a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a>        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">max_children</span><span class="p">)</span>
+<a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a>
+<a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a>    <span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+<a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a>        <span class="n">board</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+<a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a>        <span class="n">player</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">player</span>
+<a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a>        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+<a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a>            <span class="n">actions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">get_legal_actions</span><span class="p">(</span><span class="n">player</span><span class="p">))</span>
+<a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a>                <span class="n">action</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+<a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a>                <span class="n">board</span><span class="o">.</span><span class="n">_move</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
+<a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a>            <span class="n">player</span> <span class="o">=</span> <span class="s1">'X'</span> <span class="k">if</span> <span class="n">player</span> <span class="o">==</span> <span class="s1">'O'</span> <span class="k">else</span> <span class="s1">'O'</span>
+<a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+<a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a>
+<a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a>    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">:</span> <span class="n">Board</span><span class="p">):</span>
+<a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a>        <span class="n">winner</span><span class="p">,</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">get_winner</span><span class="p">()</span>
+<a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a>        <span class="k">if</span> <span class="n">winner</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a>            <span class="k">return</span> <span class="mi">0</span>
+<a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a>        <span class="n">winner</span> <span class="o">=</span> <span class="s1">'X'</span> <span class="k">if</span> <span class="n">winner</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">'O'</span>
+<a href="#__codelineno-1-72" id="__codelineno-1-72" name="__codelineno-1-72"></a>        <span class="k">if</span> <span class="n">winner</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="p">:</span>
+<a href="#__codelineno-1-73" id="__codelineno-1-73" name="__codelineno-1-73"></a>            <span class="k">return</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">diff</span>
+<a href="#__codelineno-1-74" id="__codelineno-1-74" name="__codelineno-1-74"></a>        <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-1-75" id="__codelineno-1-75" name="__codelineno-1-75"></a>            <span class="k">return</span> <span class="o">-</span><span class="mi">10</span> <span class="o">-</span> <span class="n">diff</span>
+<a href="#__codelineno-1-76" id="__codelineno-1-76" name="__codelineno-1-76"></a>
+<a href="#__codelineno-1-77" id="__codelineno-1-77" name="__codelineno-1-77"></a>    <span class="k">def</span> <span class="nf">backpropagate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">,</span> <span class="n">reward</span><span class="p">):</span>
+<a href="#__codelineno-1-78" id="__codelineno-1-78" name="__codelineno-1-78"></a>        <span class="k">while</span> <span class="n">node</span><span class="p">:</span>
+<a href="#__codelineno-1-79" id="__codelineno-1-79" name="__codelineno-1-79"></a>            <span class="n">node</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+<a href="#__codelineno-1-80" id="__codelineno-1-80" name="__codelineno-1-80"></a>            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">player</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="p">:</span>
+<a href="#__codelineno-1-81" id="__codelineno-1-81" name="__codelineno-1-81"></a>                <span class="n">node</span><span class="o">.</span><span class="n">reward</span> <span class="o">-=</span> <span class="n">reward</span>
+<a href="#__codelineno-1-82" id="__codelineno-1-82" name="__codelineno-1-82"></a>            <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-1-83" id="__codelineno-1-83" name="__codelineno-1-83"></a>                <span class="n">node</span><span class="o">.</span><span class="n">reward</span> <span class="o">+=</span> <span class="n">reward</span>
+<a href="#__codelineno-1-84" id="__codelineno-1-84" name="__codelineno-1-84"></a>            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">parent</span>
+<a href="#__codelineno-1-85" id="__codelineno-1-85" name="__codelineno-1-85"></a>
+<a href="#__codelineno-1-86" id="__codelineno-1-86" name="__codelineno-1-86"></a>    <span class="k">def</span> <span class="nf">get_move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">):</span>
+<a href="#__codelineno-1-87" id="__codelineno-1-87" name="__codelineno-1-87"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">player</span> <span class="o">==</span> <span class="s1">'X'</span><span class="p">:</span>
+<a href="#__codelineno-1-88" id="__codelineno-1-88" name="__codelineno-1-88"></a>            <span class="n">player_name</span> <span class="o">=</span> <span class="s1">'黑棋'</span>
+<a href="#__codelineno-1-89" id="__codelineno-1-89" name="__codelineno-1-89"></a>        <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-1-90" id="__codelineno-1-90" name="__codelineno-1-90"></a>            <span class="n">player_name</span> <span class="o">=</span> <span class="s1">'白棋'</span>
+<a href="#__codelineno-1-91" id="__codelineno-1-91" name="__codelineno-1-91"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"请等一会，对方 </span><span class="si">{}</span><span class="s2">-</span><span class="si">{}</span><span class="s2"> 正在思考中..."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">player_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="p">))</span>
+<a href="#__codelineno-1-92" id="__codelineno-1-92" name="__codelineno-1-92"></a>        <span class="n">root</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">board</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="p">)</span>
+<a href="#__codelineno-1-93" id="__codelineno-1-93" name="__codelineno-1-93"></a>        <span class="n">action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uct_search</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterations</span><span class="p">)</span>
+<a href="#__codelineno-1-94" id="__codelineno-1-94" name="__codelineno-1-94"></a>        <span class="k">return</span> <span class="n">action</span>
+</code></pre></div>
+</details>
+<h2 id="_11">机器学习：监督学习<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_12">机器学习基本概念<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>机器学习的目标是从原始数据中提取特征，学习一个映射函数<span class="heti-skip"><span class="heti-spacing"> </span>f<span class="heti-spacing"> </span></span>将上述特征（或原始数据）映射到语义空间，寻找数据和任务目标之间的关系</li>
+<li>机器学习种类<ul>
+<li>监督学习<ul>
+<li>给定带有标签信息的训练集合，学习从输入到输出的映射</li>
+<li>一般被应用在回归或分类的任务中</li>
+</ul>
+</li>
+<li>无监督学习<ul>
+<li>最大特点是<strong>数据无标签</strong></li>
+<li>一般被应用在聚类或若干降维任务中</li>
+<li>半监督学习依赖于部分被标注的数据</li>
+</ul>
+</li>
+<li>强化学习<ul>
+<li>一种序列数据决策学习方法</li>
+<li>从与环境交互中学习，通过回报值（reward）让智能体（agent）学习到在不同状态（state）下如何选择行为方式（action）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>监督学习<ul>
+<li>在训练过程中希望映射函数在训练数据集上得到所有样本的“损失和”最小</li>
+<li>损失函数包括<span class="heti-skip"><span class="heti-spacing"> </span>0-1<span class="heti-spacing"> </span></span>损失函数（相等为<span><span class="heti-spacing"> </span>0</span>，反之为<span><span class="heti-spacing"> </span>1</span>），平方损失函数，绝对损失函数，对数损失函数（对数似然函数）</li>
+<li>监督学习一般包含三个部分内容：<ul>
+<li>从训练数据集中学习得到映射函数<span><span class="heti-spacing"> </span>f</span></li>
+<li>在测试数据集上测试映射函数<span><span class="heti-spacing"> </span>f</span></li>
+<li>在未知数据集上测试映射函数<span><span class="heti-spacing"> </span>f</span>（投入使用）</li>
+</ul>
+</li>
+<li>训练及中产生的损失一般称为经验风险（empirical risk），越小对训练集拟合效果越好</li>
+<li>测试集中加入从真实数据分布采样的样本时，测试集上的损失会不断逼近期望风险（expected risk），越小模型越好</li>
+<li>机器学习的目标是追求期望风险最小化</li>
+<li>结构风险最小化（structural risk minimization）：防止过学习，基于过学习时参数值通常都较大这一发现，在经验风险上加上表示模型复杂度的正则化项（regularizer）或惩罚项（penalty term），在最小化经验风险与降低模型复杂度之间寻找平衡</li>
+<li>主要的监督学习方法：<ul>
+<li>判别方法（discriminative approach）<ul>
+<li>直接学习判别函数<span class="heti-skip"><span class="heti-spacing"> </span>f(X)<span class="heti-spacing"> </span></span>或者条件概率分布<span class="heti-skip"><span class="heti-spacing"> </span>P(Y|X)<span class="heti-spacing"> </span></span>作为预测的模型</li>
+<li>典型判别模型包括回归模型、神经网络、支持向量机和<span><span class="heti-spacing"> </span>Ada boosting</span></li>
+</ul>
+</li>
+<li>生成方法（generative approach）<ul>
+<li>从数据中学习联合概率分布<span><span class="heti-spacing"> </span>P(X, Y)</span>（通过似然概率<span class="heti-skip"><span class="heti-spacing"> </span>P(X|Y)<span class="heti-spacing"> </span></span>和类概率<span class="heti-skip"><span class="heti-spacing"> </span>P(Y)<span class="heti-spacing"> </span></span>乘积来求）</li>
+<li>生成模型典型方法为贝叶斯方法、隐马尔可夫链</li>
+<li>难点在于联合分布概率或似然概率很难求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_13">回归分析<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>一元线性回归</li>
+<li>
+<p>多元线性回归</p>
+<ul>
+<li>有 <span class="arithmatex">\(m\)</span> 个训练数据 <span class="arithmatex">\(\{(\mathbf{x}_i, y_i)\}_{i=1}^m\)</span>，要找到参数 <span class="arithmatex">\(\mathbf{a}\)</span>，使线性函数 <span class="arithmatex">\(f(\mathbf{x}_i)=a_0+\mathbf{a}^\top\mathbf{x}_i\)</span> 最小化均方误差函数 </li>
+</ul>
+<div class="arithmatex">\[
+J_m=\dfrac{1}{m}\sum_{i=1}^m\left(y_i-f(\mathbf{x}_i)\right)^2=(\mathbf{y}-\mathbf{X}^\top\mathbf{a})^\top(\mathbf{y}-\mathbf{X}^\top\mathbf{a})
+\]</div>
+<ul>
+<li>对均方误差函数求导得 <span class="arithmatex">\(\nabla J(\mathbf{a}) = -2\mathbf{X}(\mathbf{y}-\mathbf{X}^\top\mathbf{a})\)</span>，令其为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>解得 <span class="arithmatex">\(\mathbf{a}=(\mathbf{X}\mathbf{X}^\top)^{-1}\mathbf{X}\mathbf{y}\)</span></li>
+<li>逻辑斯蒂回归<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>对数几率回归</li>
+<li>线性回归对离群点非常敏感，导致模型不稳定，为了缓解这个问题可以考虑逻辑斯蒂回归（logistic regression）</li>
+<li>在回归模型中引入<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>函数，逻辑斯蒂回归模型</li>
+</ul>
+<div class="arithmatex">\[
+y=\dfrac{1}{1+e^{-z}}=\dfrac{1}{1+e^{\mathbf{w}^\top\mathbf{x}+b}}
+\]</div>
+<ul>
+<li>逻辑斯蒂回归函数的输出具有概率意义，一般用于二分类问题</li>
+<li>逻辑斯蒂回归是一个线性模型，在预测时可以计算线性函数 <span class="arithmatex">\(\mathbf{w}^\top\mathbf{x}+b\)</span> 取值是否大于<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>来判断输入数据的类别归属</li>
+<li>求解参数的典型做法是最大化对数似然（log likelihood）函数</li>
+<li>最大似然估计目的是计算似然函数的最大值，而分类过程是需要损失函数最小化，常用梯度下降法（gradient descent）：批量梯度下降、随机梯度下降、小批量梯度下降</li>
+<li>只能用于解决二分类问题</li>
+<li>多分类可以将其推广为多项逻辑斯蒂回归模型，即<span class="heti-skip"><span class="heti-spacing"> </span>softmax<span class="heti-spacing"> </span></span>函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="_14">决策树<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>通过树形结构来进行分类的方法</li>
+<li>每个非叶子结点表示对分类目标在某个属性上的一个判断，每个分支代表基于该属性做出的一个判断，每个叶子结点代表一种分类结果</li>
+<li>决策树将分类问题分解为若干基于单个信息的推理任务，采用树状结构来逐步完成决策判断</li>
+<li>建立决策树的过程，就是不断选择属性值对样本集进行划分、直至每个子样本为同一个类别<ul>
+<li>对于较大数据集，需要理论和方法来评价不同属性值划分的子样本集的好坏程度</li>
+</ul>
+</li>
+<li>构建决策树<ul>
+<li>性能好的决策树随着划分不断进行，决策树分支结点样本集的纯度会越来越高，即所包含样本尽可能属于相同类别</li>
+<li>信息熵（entropy）可以用来衡量样本集和纯度，越大说明不确定性越大纯度越低<ul>
+<li>划分样本集前后信息熵的减少量称为信息增益（information gain）用来衡量样本复杂度减少的程度</li>
+</ul>
+</li>
+<li>如果划分后的不同子样本集都只存在同类样本，那么停止划分</li>
+<li>一般而言，信息增益偏向选择分支多的数学，一些场合容易导致模型过拟合<ul>
+<li>一个直接的想法是对分支过多进行惩罚，即另一个纯度衡量指标</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_15">线性判别分析<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>线性判别分析（linear discriminant analysis，LDA）是一种基于监督学习的降维方法，也称为<span class="heti-skip"><span class="heti-spacing"> </span>Fisher<span class="heti-spacing"> </span></span>线性判别分析（FDA）</li>
+<li>对于一组具有标签信息的高位数据样本，<span>LDA<span class="heti-spacing"> </span></span>利用其类别信息将其线性投影到一个低维空间熵，在低维空间中同一类别样本尽可能靠近，不同类样本尽可能彼此远离<ul>
+<li>类内方差小，类间间隔大</li>
+</ul>
+</li>
+<li><span>LDA<span class="heti-spacing"> </span></span>与主成分分析（PCA）紧密相关，都在寻找最佳解释数据的变量线性组合</li>
+<li>对线性判别分析的降维步骤描述<ul>
+<li>计算数据样本集中每个类别样本的均值</li>
+<li>计算类内散度矩阵 <span class="arithmatex">\(\mathbf{S}_w=\mathbf{\Sigma}_1+\mathbf{\Sigma}_2\)</span>（<span class="arithmatex">\(\mathbf{\Sigma}\)</span> 协方差矩阵）和类间散度矩阵 <span class="arithmatex">\(\mathbf{S}_b=(\mathbf{m}_2-\mathbf{m}_1)(\mathbf{m}_2-\mathbf{m}_1)^\top\)</span></li>
+<li>根据 <span class="arithmatex">\(\mathbf{S}_w^{-1}\mathbf{S}_b\mathbf{W}=\lambda\mathbf{W}\)</span> 来求解 <span class="arithmatex">\(\mathbf{S}_w^{-1}\mathbf{S}_b\)</span> 所对应的前 <span class="arithmatex">\(r\)</span> 个最大特征值所对应的特征向量 <span class="arithmatex">\((\mathbf{w}_1, \mathbf{w}_2, \cdots, \mathbf{w}_r)\)</span> 构成矩阵 <span class="arithmatex">\(\mathbf{W}\)</span></li>
+<li>通过矩阵 <span class="arithmatex">\(\mathbf{W}\)</span> 将每个样本映射到低维空间，实现特征降维</li>
+</ul>
+</li>
+<li><span>PCA<span class="heti-spacing"> </span></span>是一种无监督学习的降维方法，<span>LDA<span class="heti-spacing"> </span></span>是监督学习<ul>
+<li><span>PCA<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>LDA<span class="heti-spacing"> </span></span>均是优化寻找特征向量 <span class="arithmatex">\(\mathbf{w}\)</span> 来实现降维</li>
+<li><span>PCA<span class="heti-spacing"> </span></span>寻找投影后数据间方差最大的投影方向，<span>LDA<span class="heti-spacing"> </span></span>寻找类内方差小、类间间隔大的投影方向</li>
+<li><span>PCA<span class="heti-spacing"> </span></span>可以将<span class="heti-skip"><span class="heti-spacing"> </span>d<span class="heti-spacing"> </span></span>为数据降至小于<span class="heti-skip"><span class="heti-spacing"> </span>d<span class="heti-spacing"> </span></span>的任意维度</li>
+<li><span>LDA<span class="heti-spacing"> </span></span>将为后得到维度与数据样本类别个数<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>有关，<span>d<span class="heti-spacing"> </span></span>维数据有<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>个类别，则降维维度小于或等于<span><span class="heti-spacing"> </span>min(K-1, d)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="ada-boosting">Ada Boosting<a class="headerlink" href="#ada-boosting" title="Permanent link">¶</a></h3>
+<ul>
+<li>Ada Boosting（自适应提升）通过集成（ensemble）手段来达到提升（boosting）算法性能目的</li>
+<li>对于一个复杂分类任务，将其分解为若干个子任务，然后将若干个子任务综合构建到一起，最终完成复杂分类任务<ul>
+<li>每个子任务只能完成成体任务的部分，是一个弱分类器（weak classifier）</li>
+<li>将若干个弱分类器组合起来形成强分类器（strong classifier），可以完成复杂分类任务</li>
+</ul>
+</li>
+<li>可计算学习理论<ul>
+<li>可计算理论关心什么样的问题可以被计算<ul>
+<li>一个任务如果是图灵可停机的，那么该任务可计算</li>
+</ul>
+</li>
+<li>可学习理论关心什么样的任务可以被习得，从而能被算法模型完成</li>
+<li>概率近似正确（PAC）研究问题包括<ul>
+<li>如何知道学习所得的假设（hypothesis）是正确的</li>
+<li>为了接近真实假设所需要的训练数据是多少</li>
+<li>假设空间的复杂度如何度量以及如何选择假设空间</li>
+</ul>
+</li>
+<li>概率近似正确可学习（PAC-learnable）：能够完成任务的概率大于<span class="heti-skip"><span class="heti-spacing"> </span>0.5<span class="heti-spacing"> </span></span>即大于随机分类器，称为弱分类器<ul>
+<li>强可学习模型：学习模型能够以较高精度对绝大多数样本完成识别分类任务</li>
+<li>弱可学习模型：学习模型仅能完成若干部分样本识别与分类，精度略高于随机猜测</li>
+<li>强可学习和弱可学习是等价的（可以利用<span class="heti-skip"><span class="heti-spacing"> </span>ada boosting<span class="heti-spacing"> </span></span>算法）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Ada Boosting<span class="heti-spacing"> </span></span>算法<ul>
+<li>解决两个核心问题<ul>
+<li>在每个弱分类器学习过程中，如何提高在上一轮中被错误分类的样本权重，即关注目前尚未被正确分类的样本</li>
+<li>如何将一系列弱分类器组合成强分类器，给分类误差小的弱分类器赋予更大权重，同时减少分类误差大的弱分类器的权重</li>
+</ul>
+</li>
+<li>通过集成学习方法将若干个弱分类器组合成强分类器</li>
+<li><span>Ada Boosting<span class="heti-spacing"> </span></span>算法的基本思想（from copilot）<ul>
+<li>通过迭代的方式，每一轮迭代都会产生一个弱分类器，每个弱分类器都会对样本进行分类</li>
+<li>在每一轮迭代中，根据上一轮迭代的分类结果，对样本进行加权，使得被错误分类的样本权重增大，被正确分类的样本权重减小</li>
+<li>在每一轮迭代中，根据上一轮迭代的分类结果，计算弱分类器的权重</li>
+<li>将所有弱分类器的分类结果进行加权求和，得到最终的强分类器</li>
+</ul>
+</li>
+<li><span>Ada Boosting<span class="heti-spacing"> </span></span>采取了序列化学习机制，即一个分类器学习完成后才会进行下一个分类器的学习，后一个分类器的学习受到前面的影响</li>
+<li><span>Ada Boosting<span class="heti-spacing"> </span></span>实际是在最小化指数损失函数</li>
+<li>在第<span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>次迭代中，<span>Ada Boosting<span class="heti-spacing"> </span></span>总是趋向于将具有最小误差的学习模型选做本轮次生成的弱分类器<span><span class="heti-spacing"> </span>Gm</span>，促使累积误差快速下降</li>
+<li><span>Ada Boosting<span class="heti-spacing"> </span></span>可归属为集成学习这一分类方法<ul>
+<li>另一种常用的集成学习方法是袋装法（bagging）<ul>
+<li>不改变样本数据的权重，通过并行和随机采样的思想来将多个弱学习模型集成为强学习模型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_16">统计机器学习：无监督学习<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="k"><span>K<span class="heti-spacing"> </span></span>均值聚类<a class="headerlink" href="#k" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>K-means<span class="heti-spacing"> </span></span>算法要求特征变量连续，数据没有异常值</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>的目标是将<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个<span class="heti-skip"><span class="heti-spacing"> </span>d<span class="heti-spacing"> </span></span>维的数据划分为<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>个聚簇，使得簇内的方差最小化，是局部最优不一定全局最优</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>是一个易受初始值影响的迭代算法，常用初始化方法包括<span class="heti-skip"><span class="heti-spacing"> </span>forgy<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>random partition</span></li>
+<li>算法步骤<ul>
+<li>初始化聚类质心</li>
+<li>对数据进行聚类：将每个数据放入与之距离最近的聚类质心所在聚类集合中</li>
+<li>更新聚类质心：根据聚类结果更新聚类质心</li>
+<li>迭代：上述操作进行迭代，直到到达迭代次数上限<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>两次迭代中聚类质心保持不变</li>
+</ul>
+</li>
+<li>通常<span class="heti-skip"><span class="heti-spacing"> </span>K-means<span class="heti-spacing"> </span></span>收敛速度很快，对于聚簇数量 <span class="arithmatex">\(K\)</span> 和维度 <span class="arithmatex">\(d\)</span>，能在 <span class="arithmatex">\(O(n^{dK+1})\)</span> 复杂度内收敛</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>假设数据没有离群点，对离群点的处理和其它数据一样<ul>
+<li>可以使用其他目标函数或<span class="heti-skip"><span class="heti-spacing"> </span>K-medoids<span class="heti-spacing"> </span></span>算法来减小离群点的影响（<span>K-medoids<span class="heti-spacing"> </span></span>选择聚簇中的一个点而不是均值作为聚类中心）</li>
+</ul>
+</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>需要事先确定聚类数目<span><span class="heti-spacing"> </span>K</span>，一般在一个范围内遍历，选择最优的一个</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>聚类算法对数据的尺度敏感</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>属于硬聚类（hard clustering），即每个数据只能属于一个聚簇<ul>
+<li>层次聚类（hierarchical clustering）不需要事先决定聚类数目<span><span class="heti-spacing"> </span>K</span></li>
+<li>基于降维的聚类算法谱聚类（spectral clustering）对数据所在坐标空间不敏感</li>
+</ul>
+</li>
+<li><span>K-means<span class="heti-spacing"> </span></span>可以用于图像压缩，即将所有色彩替换为聚类后的<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>种色彩</li>
+</ul>
+<h3 id="_17">主成分分析<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>PCA<span class="heti-spacing"> </span></span>是一种特征降维的方法，也称<span class="heti-skip"><span class="heti-spacing"> </span>KL<span class="heti-spacing"> </span></span>变换、霍林特变换、本征正交分解</li>
+<li>主成分分析通过分析找到数据特征的主要成分，使用这些主要成分来代替原始数据</li>
+<li><span>PCA<span class="heti-spacing"> </span></span>要求降维后的结果要保持原始数据的原有结构，要求最大程度保持原始高维数据的总体方差结构</li>
+<li>降维需要尽可能将数据向方差最大的方向进行投影，使得数据所蕴含的信息丢失得尽可能少</li>
+<li><span>PCA<span class="heti-spacing"> </span></span>思想是将<span class="heti-skip"><span class="heti-spacing"> </span>d<span class="heti-spacing"> </span></span>维特征数据映射到<span class="heti-skip"><span class="heti-spacing"> </span>l<span class="heti-spacing"> </span></span>维空间（d&gt;&gt;l），去除原始数据之间的冗余性（去除相关性），将原始数据向这些数据方差最大的方向进行投影，然后继续寻找保持方差第二的方向进行投影，使数据每一维的方差都尽可能大</li>
+<li>算法步骤<ul>
+<li>对于每个样本数据 <span class="arithmatex">\(x_i\)</span> 进行中心化处理：<span class="arithmatex">\(x_i:=x_i-\mu, \mu=\dfrac{1}{n}\sum_{j=1}^nx_j\)</span></li>
+<li>计算原始样本数据的协方差矩阵：<span class="arithmatex">\(\mathbf{\Sigma} = \dfrac{1}{n-1}\mathbf{X}^\top\mathbf{X}\)</span></li>
+<li>对协方差矩阵 <span class="arithmatex">\(\mathbf{\Sigma}\)</span> 进行特征值分解，对所得特征根进行排序 <span class="arithmatex">\(\lambda_1\geq\lambda_2\geq\cdots\geq\lambda_l\)</span></li>
+<li>取前 <span class="arithmatex">\(l\)</span> 个特征根所对应特征向量 <span class="arithmatex">\(\mathbf{w}_1, \mathbf{w}_2, \cdots, \mathbf{w}_l\)</span> 组成映射矩阵</li>
+</ul>
+</li>
+<li>其他常用降维方法<ul>
+<li>非负矩阵分解（NMF），将非负的大矩阵分解为两个非负的小矩阵，</li>
+<li>多维尺度法（MDS）保持原始数据之间两两距离不变，但无法对新数据集合进行降维（out-of-sample）</li>
+<li>局部线性嵌入（LLE）是一种非线性降维方法，一个流形的局部可以近似于一个非欧氏空间，每个样本均可以利用其邻居进行线性重构</li>
+</ul>
+</li>
+</ul>
+<h3 id="_18">特征人脸方法<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>特征人脸方法是基于外观的人脸识别方法，目的是捕捉人脸图像集合中特征信息，使用该信息对各个人脸图像进行编码和比较</li>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span>PCA<span class="heti-spacing"> </span></span>手段来表示特征人脸，本质是使用一组特征向量线性组合来表示原始人脸，进而实现人脸识别</li>
+<li>在特征维度较高的情况下，主成分分析算法暴力求解特征向量是一个耗时操作，可以使用奇异值分解（SVD）来实现主成分分析</li>
+</ul>
+<h3 id="_19">潜在语义分析<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>潜在语义分析，又称为隐形语义分析（LSA/LSI）是一种从海量文本数据中学习单词<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>单词、单词<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>文档以及文档<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>文档之间的隐形关系，从而得到文档和单词表达特征的方法</li>
+<li>该方法的基本思想是综合考虑某些单词在哪些文档中同时出现以此来决定该词语的含义与其他的词语的相似度</li>
+<li><span>LSI<span class="heti-spacing"> </span></span>被广泛运用在了语义理解任务中，如自动文档分类、文本摘要和关系发现</li>
+<li>潜在语义分析思想<ul>
+<li>先构建一个单词<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>文档矩阵<span><span class="heti-spacing"> </span>A</span></li>
+<li>进而寻找该矩阵的低秩逼近，来挖掘单词<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>单词、单词<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>文档以及文档<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>文档之间的关联关系</li>
+</ul>
+</li>
+</ul>
+<h3 id="_20">期望最大化算法<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>假设由<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个数据样本构成的集合 <span class="arithmatex">\(\mathcal{D}=\{x_1, x_2, \cdots, x_n\}\)</span> 以参数为 <span class="arithmatex">\(\Theta\)</span> 的某个模型以一定概率独立采样得到，于是可以通过最大似然估计法（MLE）来求取参数 <span class="arithmatex">\(\Theta\)</span>，使得在参数为 <span class="arithmatex">\(\Theta\)</span> 的模型下，样本集 <span class="arithmatex">\(\mathcal{D}\)</span> 出现的概率最大<ul>
+<li>也可以使用最大后验估计（MAP）来估计参数 <span class="arithmatex">\(\Theta\)</span></li>
+<li>都是充分利用已有数据，在参数模型确定（只是参数值未知）的情况下，对所优化目标中的参数求导，令导数为<span><span class="heti-spacing"> </span>0</span>，求取模型的参数值</li>
+</ul>
+</li>
+<li>一些情况下难以事先确定模型，无法用<span class="heti-skip"><span class="heti-spacing"> </span>MLE<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>MAP</span></li>
+<li>期望最大化（expectation maximization，EM）算法是一种用于解决含有隐变量问题的参数估计方法<ul>
+<li>求取期望（<span>E<span class="heti-spacing"> </span></span>步骤）：先假设模型参数的初始值，估计隐变量取值</li>
+<li>期望最大化（<span>M<span class="heti-spacing"> </span></span>步骤）：基于观测数据、模型参数和隐变量取值一起来最大化拟合数据，更新参数模型，直到算法收敛</li>
+</ul>
+</li>
+<li><span>EM<span class="heti-spacing"> </span></span>算法不能保证找到全局的最大值，有可能找到一个鞍点</li>
+<li><span>EM<span class="heti-spacing"> </span></span>算法步骤<ul>
+<li>初始化参数取值 <span class="arithmatex">\(\Theta^0\)</span></li>
+<li>求取期望步骤：计算 <span class="arithmatex">\(Q(\Theta|\Theta^t)=\sum_{i=1}^n\sum_{z_i}P(z_i|x_i,\Theta)\log P(x_i, z_i|\Theta)\)</span><ul>
+<li>含义是对数似然函数 <span class="arithmatex">\(\log P(x_i, z_i|\Theta)\)</span> 在已观测数据 <span class="arithmatex">\(X\)</span> 和当前参数 <span class="arithmatex">\(\Theta^t\)</span> 下去估计隐变量 <span class="arithmatex">\(Z\)</span> 的条件概率分布</li>
+</ul>
+</li>
+<li>期望最大化步骤：<span class="arithmatex">\(\Theta^{t+1}=\argmax_\Theta Q(\Theta|\Theta^t)\)</span></li>
+<li>重复二三步，直到收敛</li>
+</ul>
+</li>
+</ul>
+<h2 id="_21">深度学习<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_22">前馈神经网络<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>前馈神经网络（feedforward neural network，FNN）是一种最简单的神经网络，由输入层、隐藏层和输出层组成<ul>
+<li>每层神经元只和相邻层神经元相连，即每层神经元只接受相邻前序神经层中神经元传来的信息，只给相邻后续神经层中神经元传递信息</li>
+<li>同一层的神经元之间没有任何连接，后续神经层也不向前序相邻神经层传递信息</li>
+<li>是目前最为广泛的神经网络之一</li>
+</ul>
+</li>
+<li>神经元<ul>
+<li>给定 <span class="arithmatex">\(n\)</span> 个二值化输入数据 <span class="arithmatex">\(x_i\)</span> 与连接参数 <span class="arithmatex">\(w_i\)</span>，<span>MCP<span class="heti-spacing"> </span></span>神经元对输入数据线性加权求和然后将结果根据阈值 <span class="arithmatex">\(\theta\)</span> 进行二值化，得到输出 <span class="arithmatex">\(y=\Phi\left(\sum_{i=1}^nw_ix_i\right)\)</span></li>
+<li>二值可能是<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>也可能是<span class="heti-skip"><span class="heti-spacing"> </span>-1<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span></li>
+</ul>
+</li>
+<li>激活函数<ul>
+<li>神经网络使用非线性函数作为激活函数，通过对多个非线性函数进行组合，来实现对输入信息的非线性变换</li>
+<li>激活函数必须是连续可导的</li>
+<li>常用激活函数<ul>
+<li>sigmoid，<span class="arithmatex">\(f(x)=\dfrac{1}{1+e^{-x}}\)</span>，导数 <span class="arithmatex">\(f'(x)=f(x)(1-f(x))\)</span></li>
+<li>tanh，<span class="arithmatex">\(f(x)=\dfrac{1-e^{-2x}}{1+e^{-2x}}\)</span>，导数 <span class="arithmatex">\(f'(x)=1-f^2(x)\)</span></li>
+<li>ReLU，<span class="arithmatex">\(f(x)=\max(0, x)\)</span>，导数<span><span class="heti-spacing"> </span>0/1</span><ul>
+<li>有效克服梯度消失问题</li>
+</ul>
+</li>
+<li>softmax，一般用在多分类问题中，<span class="arithmatex">\(f(x_i)=\dfrac{e^{x_i}}{\sum_{j=1}^ke^{x_j}}\)</span><ul>
+<li>可将输出概率最大的作为分类目标</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>损失函数（loss function）<span>/<span class="heti-spacing"> </span></span>代价函数（cost function）<ul>
+<li>用来计算模型预测值与真实值之间的误差</li>
+<li>均方误差损失函数 <span class="arithmatex">\(\mathrm{MSE}=\dfrac{1}{n}\sum_{i=1}^n(y_i-\hat{y}_i)^2\)</span></li>
+<li>交叉熵损失函数，度量两个概率分布之间的差异 <span class="arithmatex">\(H(p, q)=-\sum_xp(x)\log q(x)\)</span><ul>
+<li>旨在描绘通过概率分布 <span class="arithmatex">\(q\)</span> 来表达概率分布 <span class="arithmatex">\(p\)</span> 的困难程度</li>
+<li>交叉熵越小，两个概率分布越接近</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>感知机模型<ul>
+<li>单层感知机<ul>
+<li>由一个输入层和一个输出层构成，输出层输出<span class="heti-skip"><span class="heti-spacing"> </span>-1<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>1</span></li>
+<li>可作为一种二类线性分类模型</li>
+<li>单层感知机构建损失函数来计算模型预测值与数据真实值之间的误差，通过修改权重最小化损失函数值，来优化模型参数</li>
+<li>单层感知机可被用来区分线性可分数据</li>
+</ul>
+</li>
+<li>多层感知机<ul>
+<li>由输入层、输出层和至少一层的隐藏层构成</li>
+<li>相邻层之间全连接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>参数优化<ul>
+<li>神经网络参数优化是一种监督学习的过程</li>
+<li>模型会利用反向传播算法将损失函数计算所得误差从输出端出发，由后向前传递给神经网络中的每个单元，然后通过梯度下降算法对神经网络中的参数进行更新</li>
+<li>梯度下降（gradient descent）<ul>
+<li>批量梯度下降：在整个训练集上计算损失误差</li>
+<li>随机梯度下降：在每个训练样本上计算损失误差，收敛快，但可能出现目标函数震荡不稳定现象</li>
+<li>小批量梯度下降：选取训练集上小批量样本计算损失误差，最常用</li>
+</ul>
+</li>
+<li>反向传播（back propagation，BP）</li>
+</ul>
+</li>
+</ul>
+<h3 id="_23">卷积神经网络<a class="headerlink" href="#_23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>卷积（convolution）是针对像素点的空间依赖性来对图像进行处理的一种技术</li>
+<li>卷积滤波的结果在卷积神经网络中被称为特征图（feature map）</li>
+<li>在卷积操作时，经常会采用<span><span class="heti-spacing"> </span>padding</span>（填充）和<span><span class="heti-spacing"> </span>striding</span>（步长）两种方法</li>
+<li>池化（pooling）<ul>
+<li>可用某一区域子块的统计信息来刻画该区域中所有像素点呈现的空间分布模式，来替代区域子块中所有像素点取值</li>
+<li>池化操作对卷积结果特征图进行约减，实现了下采样，同时保留了特征图中主要信息</li>
+<li>最大池化、平均池化、<span>k<span class="heti-spacing"> </span></span>最大池化（取前<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个最大值，常用于自然语言处理）</li>
+</ul>
+</li>
+<li>神经网络正则化<ul>
+<li>深度神经网络结构复杂参数众多，容易造成过拟合，需要采取一些正则化技术来提升神经网络泛化能力（generalization）</li>
+<li>dropout：随机丢掉一部分神经元来减少神经网络复杂度</li>
+<li>批归一化：通过规范化手段，把神经网络每层中任意神经元的输入值分布改为标准正态分布，把偏移较大的分布强制映射为标准正态分布</li>
+<li><span>L1<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>L2<span class="heti-spacing"> </span></span>正则化</li>
+</ul>
+</li>
+</ul>
+<h3 id="_24">循环神经网络<a class="headerlink" href="#_24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>循环神经网络（recurrent neural network，RNN）是一类处理序列数据时采用的网格结构</li>
+<li>循环神经网络本质是模拟人所具有的记忆能力，在学习过程中记住部分已经出现的信息，并利用所记住的信息影响后续节点输出</li>
+<li><span>RNN<span class="heti-spacing"> </span></span>在自然语言处理如语音识别、情感分析、机器翻译等领域有重要应用</li>
+<li>循环神经网络模型<ul>
+<li>循环神经网络在处理数据过程中构成了一个循环体</li>
+<li>对于一个序列数据，在每一时刻 <span class="arithmatex">\(t\)</span>，循环神经网络单元会读取当前输入数据 <span class="arithmatex">\(x_t\)</span> 和前一时刻输入数据 <span class="arithmatex">\(x_{t-1}\)</span> 所对应的隐式编码结果 <span class="arithmatex">\(h_{t-1}\)</span>，一起生成 <span class="arithmatex">\(t\)</span> 时刻的隐式编码结果 <span class="arithmatex">\(h_t\)</span></li>
+<li>激活函数一般可为<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>tanh</span>，使模型能够忘掉无关信息同时更新记忆内容</li>
+<li>训练方式为沿时间反向传播算法（BPTT）</li>
+<li>当序列过长时，循环神经网络也容易出现梯度消失或梯度爆炸的问题</li>
+</ul>
+</li>
+<li>长短时记忆网络（LSTM）：引入了内部记忆单元和门结构来对当前输入信息以及前序时刻所生成的信息进行整合和传递</li>
+<li>门控循环单元（gated recurrent unit，GRU）：一种对<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>简化的深度学习模型<ul>
+<li>不使用记忆单元来传递信息，而是使用隐藏状态来传递，有更高的计算速度</li>
+<li>只包含更新门和重置门</li>
+</ul>
+</li>
+</ul>
+<h3 id="_25">深度学习应用<a class="headerlink" href="#_25" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>词向量模型<ul>
+<li>词袋模型（bag of words），将文本看作是一组词的集合，忽略词与词之间的顺序关系</li>
+<li>分布式向量表达（distributed vector representation）<ul>
+<li>利用深度学习模型，将每个单词表征为<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>维实值的分布式向量</li>
+<li>词向量（Word2Vec）是较为经典的模型<ul>
+<li>训练模式有<span><span class="heti-spacing"> </span>continuous bag-of-words</span>（CBOW）和<span><span class="heti-spacing"> </span>skip-gram</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>图像分类和目标定位<ul>
+<li>输入一幅图像，首先利用卷积神经网络来提取视觉特征，得到一个特征向量来表示输入图像</li>
+<li>这个向量作为输入特征分别传送给两个任务，即分类任务和定位任务</li>
+<li>分类任务中，使用<span><span class="heti-spacing"> </span>softmax</span></li>
+<li>定位任务中，将向量转化为一个四维向量，表示定位边界</li>
+</ul>
+</li>
+</ul>
+<h2 id="_26">强化学习<a class="headerlink" href="#_26" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_27">强化学习问题定义<a class="headerlink" href="#_27" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>智能体（agent），根据经验做出判断并执行动作；环境（environment），智能体意外的一切</li>
+<li>状态（state），智能体对环境的一种理解和编码；动作（action）；策略（policy），当前状态执行某个动作的依据；奖励（reaward）</li>
+<li>与监督学习和无监督学习相比，强化学习基于评估，数据来源于时序交互，决策过程是序贯决策，目标是选择能够获取最大收益的状态到动作的映射</li>
+<li>马尔可夫决策过程<ul>
+<li>马尔可夫性（Markov property）：下一刻的状态 <span class="arithmatex">\(X_{t+1}\)</span> 只由当前状态 <span class="arithmatex">\(X_t\)</span> 决定，与更早的所有状态均无关</li>
+<li>满足马尔可夫性的离散随机过程被称为马尔可夫链（Markov chain）</li>
+<li>定义离散马尔可夫过程 <span class="arithmatex">\(\{S_t\}_{t=0, 1, \cdots}\)</span>，可以定义状态转移概率 <span class="arithmatex">\(P(S_{t+1}|S_t,A_t)\)</span>，其中 <span class="arithmatex">\(A_t\)</span> 为在状态 <span class="arithmatex">\(S_t\)</span> 下执行的动作</li>
+<li>定义奖励函数 <span class="arithmatex">\(R_{t+1}=R(S_t, A_t, S_{t+1})\)</span> 描述从第 <span class="arithmatex">\(t\)</span> 步状态转移采取动作 <span class="arithmatex">\(A_t\)</span> 到第 <span class="arithmatex">\(t+1\)</span> 步状态的奖励</li>
+<li>在每个时刻定义回报（return）来反映该时刻可得到的累加奖励 <span class="arithmatex">\(G_t=R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\cdots\)</span>，其中 <span class="arithmatex">\(\gamma\)</span> 称为折扣因子</li>
+<li>一般情况下，初始状态和终止状态并不包括在马尔可夫决策过程定义中<ul>
+<li>可以添加虚拟的初始状态和终止状态，虚拟初始状态以一定概率转移到真正初始状态，真正终止状态以概率<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>转移到虚拟终止状态</li>
+</ul>
+</li>
+<li>智能体逐步采取行动，可得到一个状态序列 <span class="arithmatex">\((S_0, S_1, \cdots)\)</span> 称为轨迹（trajectory），轨迹长度可以是无限的，也可以有终止状态 <span class="arithmatex">\(S_T\)</span><ul>
+<li>包含终止状态的问题叫分段（episodic）问题，此时从初始状态到终止状态的完整轨迹称为一个片段（episode）</li>
+<li>不包含终止状态的问题叫持续（continuing）问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>强化学习问题定义<ul>
+<li>智能体选择动作的模型即策略函数，<span class="arithmatex">\(\pi(s, a)\)</span> 表示在状态 <span class="arithmatex">\(s\)</span> 下采取动作 <span class="arithmatex">\(a\)</span> 的概率<ul>
+<li>一个好的策略函数应该能够使智能体在采取了一系列行动之后可得到最佳奖励</li>
+</ul>
+</li>
+<li>价值函数（value function），<span class="arithmatex">\(V_\pi(s)=\mathbb{E}_\pi[G_t|S_t=s]\)</span> 表示智能体在时刻 <span class="arithmatex">\(t\)</span> 时处于状态 <span class="arithmatex">\(s\)</span> 时，按照策略 <span class="arithmatex">\(\pi\)</span> 采取行动时所得到的回报的期望</li>
+<li>动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数，<span class="arithmatex">\(q_\pi(s, a)=\mathbb{E}_\pi[G_t|S_t=s, A_t=a]\)</span></li>
+<li>强化学习可以转化为一个策略学习问题，给定一个马尔可夫决策过程 <span class="arithmatex">\(MDP=(S, A, P, R, \gamma)\)</span>，学习一个最优策略 <span class="arithmatex">\(\pi^*\)</span>，对任意 <span class="arithmatex">\(s\in S\)</span> 使得 <span class="arithmatex">\(V_{\pi^*}(s)\)</span> 值最大</li>
+</ul>
+</li>
+<li>贝尔曼方程（Bellman equation）<span>/<span class="heti-spacing"> </span></span>动态规划方程（dynamic programming equation）<ul>
+<li><span class="arithmatex">\(V_\pi(s)=\sum_{a\in A}\pi(s, a)q_\pi(s, a)\)</span>，可用动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数来表达价值函数<ul>
+<li>状态 <span class="arithmatex">\(s\)</span> 的价值可用该状态下可采取所有动作而取得的期望价值来表述</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(q_pi(s, a) = \sum_{s'\in S}P(s'|s, a)[R(s, a, s')+\gamma V_\pi(s')]\)</span>，可用价值函数来表示动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数<ul>
+<li>在某个状态下执行某一个动作所得的价值可以通过执行该动作之后进入的所有状态获得的瞬时奖励和后续状态可取得价值的期望来表示</li>
+</ul>
+</li>
+<li>价值函数贝尔曼方程：<span class="arithmatex">\(V_\pi(s)=\mathbb{E}_{a\sim \pi(s, \cdot)}\mathbb{E}_{s'\sim P(\cdot | s, a)}[R(s, a, s'), \gamma V_pi(s')]\)</span><ul>
+<li>价值函数取值和时间没有关系，只与策略 <span class="arithmatex">\(\pi\)</span>、在策略 <span class="arithmatex">\(\pi\)</span> 下从某个状态转移到后续状态所取得的回报以及在后续所得回报有关</li>
+<li><span class="arithmatex">\(V_\pi\)</span> 由两个部分构成：执行当前动作所得到的瞬时奖励，在后续状态所能得到的回报的期望的折扣值</li>
+</ul>
+</li>
+<li>贝尔曼方程描述了价值函数或动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数的递推关系，是研究强化学习问题的重要手段</li>
+<li>求解最优策略的一种方法是求解最优的价值函数或最优的动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数，即基于价值方法（value-based approach）</li>
+</ul>
+</li>
+</ul>
+<h3 id="_28">基于价值的强化学习<a class="headerlink" href="#_28" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>一种求解最优策略的思路：从一个任意的策略开始，首先计算该策略下价值函数，然后根据价值函数调整改进策略使其更优，不断迭代直到策略收敛<ul>
+<li>通过策略计算价值函数的过程称为策略评估（policy evaluation）</li>
+<li>通过价值优化策略的过程叫做策略优化（policy improvement）</li>
+<li>策略评估和策略优化交替进行的强化学习求解方法叫做通用策略迭代（GPI）</li>
+<li>几乎所有强化学习方法都可以使用<span class="heti-skip"><span class="heti-spacing"> </span>GPI<span class="heti-spacing"> </span></span>来解释</li>
+</ul>
+</li>
+<li>策略优化定理<ul>
+<li>假设当前策略为 <span class="arithmatex">\(\pi\)</span>，对应的价值函数和动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数为 <span class="arithmatex">\(V_\pi, q_\pi\)</span>，则可以构造策略 <span class="arithmatex">\(\pi'(s)=\argmax_aq_\pi(s, a)\)</span>，此时 <span class="arithmatex">\(\pi'\)</span> 不比 <span class="arithmatex">\(\pi\)</span> 差</li>
+<li>给定策略、价值函数和动作<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>价值函数，就可以通过该式计算得到更好或同等的策略</li>
+</ul>
+</li>
+</ul>
+<h2 id="_29">人工智能博弈<a class="headerlink" href="#_29" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_30">博弈论基础概念<a class="headerlink" href="#_30" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>参与博弈的决策主体被称为玩家或参与者（player），通常被认为是完全理性的</li>
+<li>在博弈中参与者能获得的与博弈相关的知识称为信息（information）</li>
+<li>博弈需要遵循一定的规则（rule）</li>
+<li>参与者可以采取的行动方案称为策略（strategy）<ul>
+<li>策略必须是一整套在采取行动之前就已经准备好的完整方案</li>
+<li>一个参与者能采纳策略的全体组合形成其所拥有的策略集（strategy set）</li>
+<li>参与者也可以按照一定概率随机选择若干不同行动，称为混合策略（mixed strategy），反之称为纯策略（pure strategy）</li>
+</ul>
+</li>
+<li>参与者采取各自行动后形成的状态称为局势（outcome），不同局势下各个参与者所得到的利益或回报称为博弈的收益（payoff）<ul>
+<li>混合策略下收益为期望收益（expected payoff）</li>
+</ul>
+</li>
+<li>博弈分类<ul>
+<li>是否允许参与者之间合作：合作博弈（cooperative game）、非合作博弈（non-……）</li>
+<li>决策时间：静态博弈（static game）、动态博弈（dynamic game）<ul>
+<li>静态博弈中所有参与者同时决策，动态博弈中由规则决定先后且后者知道前者的行动</li>
+</ul>
+</li>
+<li>对信息的了解程度：完全信息博弈（complete information game）、不完全信息博弈（in-……）<ul>
+<li>完全信息博弈中所有参与者都知道所有信息，不完全信息博弈中参与者只知道部分信息</li>
+<li>完美信息博弈（perfect information game）：参与者知道所有参与者之前采取的行动</li>
+</ul>
+</li>
+<li>总收益：零和博弈（zero-sum game）、非零和博弈（non-……）</li>
+</ul>
+</li>
+<li>纳什均衡（Nash equilibrium）：博弈的稳定局势<ul>
+<li>纳什定理：若参与者有限，每位参与者采取策略的集合有限，收益函数为实值函数，则博弈对抗必存在混合策略意义下的纳什均衡</li>
+<li>策梅洛定理（Zermelo's theorem）：对于任意一个有限步的双人完全信息零和动态博弈，一定存在先手必胜策略<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后手必胜策略<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>双方保平策略</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+<br/>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+</small>
+</div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOGnfbUc4CPrf4" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="TonyCrane/note" data-repo-id="R_kgDOGnfbUQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/TonyCrane/note/docs/css/giscus.css") 
+                      }
+                    </script>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              回到页面顶部
+            </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 排序与哈希" class="md-footer__link md-footer__link--prev" href="../../algorithm/ds/summary2/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              排序与哈希
+            </div>
+</div>
+</a>
+<a aria-label="下一页: HPC 101 超算小学期" class="md-footer__link md-footer__link--next" href="../../hpc/hpc101/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              HPC 101 超算小学期
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022-2023 <a href="https://github.com/TonyCrane" rel="noopener" target="_blank">TonyCrane</a>
+</div>
+  
+  
+    Powered by
+    <a href="https://www.mkdocs.org/" rel="noopener" target="_blank">
+      MkDocs
+    </a>
+    with theme
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material
+    </a>
+    modified by
+    <a href="https://github.com/TonyCrane" rel="noopener" target="_blank">
+      TonyCrane
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/TonyCrane/" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://blog.tonycrane.cc/" rel="noopener" target="_blank" title="blog.tonycrane.cc">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg>
+</a>
+<a class="md-social__link" href="https://tonycrane.cc/" rel="noopener" target="_blank" title="tonycrane.cc">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M280.37 148.26 96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47 488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="../../../js/katex.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

@@ -1,0 +1,2639 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="鹤翔万里（TonyCrane）的笔记本" name="description"/>
+<link href="https://note.tonycrane.cc/sec/crypto/" rel="canonical"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
+<title>密码学 - 鹤翔万里的笔记本</title>
+<link href="../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<link href="../../css/timeline.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<link href="../../css/card.css" rel="stylesheet"/>
+<link href="../../css/flink.css" rel="stylesheet"/>
+<link href="../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c273de7f67d992cb6aef08c3ddf09bb2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-DYETCPM289"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-DYETCPM289",{page_path:e.pathname})})})</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DYETCPM289"></script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script src="../../js/scheme.js" type="text/javascript"></script>
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+            跳转至
+          </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="鹤翔万里的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../.." title="鹤翔万里的笔记本">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            鹤翔万里的笔记本
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              密码学
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__options">
+<div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+<a class="light-mode" href="javascript:toggleScheme();" title="Light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"></path></svg>
+</a>
+<a class="dark-mode" href="javascript:toggleScheme();" title="Dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"></path></svg>
+</a>
+<a class="system-mode" href="javascript:toggleScheme();" title="System preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34z"></path></svg>
+</a>
+<a class="unknown-mode" href="javascript:toggleScheme();" title="Unknown scheme">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10z"></path></svg>
+</a>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/TonyCrane/note/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    TonyCrane/note
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cs/">
+        Computer Science
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        Security
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../web/">
+        Web
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ctf/">
+        CTF
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../writeups/">
+        Writeups
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../others/">
+        Others
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="鹤翔万里的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="鹤翔万里的笔记本">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
+</a>
+    鹤翔万里的笔记本
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/TonyCrane/note/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    TonyCrane/note
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../changelog/">
+        更新记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../links/">
+        友链
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/">Computer Science</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Computer Science" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/pl/">编程语言 &amp; ISA</a>
+<label for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="编程语言 &amp; ISA" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          编程语言 &amp; ISA
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_2">
+          C/C++
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="C/C++" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_2">
+<span class="md-nav__icon md-icon"></span>
+          C/C++
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/c_cpp/c/">
+        C 语言杂项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/c_cpp/oop/">
+        C++ 面向对象
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/pl/python/">Python</a>
+<label for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Python" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/python/basic/">
+        Python 基础语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/python/numpy/">
+        NumPy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/python/pil/">
+        PIL
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/pl/rust/">Rust</a>
+<label for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Rust" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+          Rust
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/rust/basic/">
+        Rust 基础语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/rust/misc/">
+        Rust 杂项随记
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/haskell/">
+        Haskell
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/chisel/">
+        Chisel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/asm/">
+        x86 汇编语言
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_8" id="__nav_2_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/pl/riscv/">RISC-V ISA</a>
+<label for="__nav_2_2_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="RISC-V ISA" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_8">
+<span class="md-nav__icon md-icon"></span>
+          RISC-V ISA
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/riscv/unprivileged/">
+        RISC-V 非特权级 ISA
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/riscv/privileged/">
+        RISC-V 特权级 ISA
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/pl/riscv/paging/">
+        RISC-V 页表相关
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/system/">计算机系统</a>
+<label for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" id="__nav_2_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/system/cs1/">计算机系统 I</a>
+<label for="__nav_2_3_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统 I" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_2">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统 I
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/topic1/">
+        数据的表示
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/topic2/">
+        数字逻辑电路基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/topic3/">
+        组合逻辑电路设计
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/topic4/">
+        时序逻辑电路设计
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/topic5/">
+        指令集体系结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/topic6/">
+        处理器
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2_8" id="__nav_2_3_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_2_8">
+          系统 I 实验部分
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="系统 I 实验部分" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_3_2_8">
+<span class="md-nav__icon md-icon"></span>
+          系统 I 实验部分
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab1-1/">
+        系统 I lab1-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab1-2/">
+        系统 I lab1-2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab2-1/">
+        系统 I lab2-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab2-2/">
+        系统 I lab2-2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab3/">
+        系统 I lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab4-1/">
+        系统 I lab4-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab4-2/">
+        系统 I lab4-2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab5-1/">
+        系统 I lab5-1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs1/lab5-2/">
+        系统 I lab5-2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" id="__nav_2_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/system/cs2/">计算机系统 II</a>
+<label for="__nav_2_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统 II" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_3">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统 II
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/topic1/">
+        流水线 CPU
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/topic2/">
+        操作系统简介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/topic3/">
+        操作系统结构及系统调用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/topic4/">
+        进程与线程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/topic5/">
+        CPU 调度
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/topic6/">
+        进程同步
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3_8" id="__nav_2_3_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_3_8">
+          系统 II 实验部分
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="系统 II 实验部分" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_3_3_8">
+<span class="md-nav__icon md-icon"></span>
+          系统 II 实验部分
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab1/">
+        系统 II lab1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab2/">
+        系统 II lab2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab3/">
+        系统 II lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab4/">
+        系统 II lab4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab5/">
+        系统 II lab5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab6/">
+        系统 II lab6
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs2/lab7/">
+        系统 II lab7
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" id="__nav_2_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/system/cs3/">计算机系统 III</a>
+<label for="__nav_2_3_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="计算机系统 III" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_4">
+<span class="md-nav__icon md-icon"></span>
+          计算机系统 III
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs3/topic1/">
+        系统量化研究方法
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4_3" id="__nav_2_3_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_4_3">
+          系统 III 实验部分
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="系统 III 实验部分" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_3_4_3">
+<span class="md-nav__icon md-icon"></span>
+          系统 III 实验部分
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs3/lab1/">
+        系统 III lab1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs3/lab2/">
+        系统 III lab2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs3/lab3/">
+        系统 III lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs3/lab4/">
+        系统 III lab4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/cs3/lab5/">
+        系统 III lab5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/system/pa/">
+        ICS PA 实验纪实
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4">
+          算法相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="算法相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+          算法相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_1" id="__nav_2_4_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/algorithm/ds/">数据结构基础</a>
+<label for="__nav_2_4_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="数据结构基础" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_4_1">
+<span class="md-nav__icon md-icon"></span>
+          数据结构基础
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/algorithm/ds/topic1/">
+        算法分析基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/algorithm/ds/summary1/">
+        基础数据结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/algorithm/ds/summary2/">
+        排序与哈希
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5">
+          人工智能相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="人工智能相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+          人工智能相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/ai/basic/">
+        人工智能基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_6">
+          高性能计算
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="高性能计算" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+          高性能计算
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" id="__nav_2_6_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/hpc/hpc101/">HPC 101 超算小学期</a>
+<label for="__nav_2_6_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="HPC 101 超算小学期" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_6_1">
+<span class="md-nav__icon md-icon"></span>
+          HPC 101 超算小学期
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/hpc/hpc101/vectorized/">
+        向量化计算
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/hpc/hpc101/gpu/">
+        GPU 编程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/hpc/hpc101/openmp/">
+        OpenMP 基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/hpc/hpc101/mpi/">
+        MPI 基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/hpc/hpc101/ml/">
+        机器学习基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+          零散知识点
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="零散知识点" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          零散知识点
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/regex/">
+        正则表达式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/unicode/">
+        Unicode
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/analysis/">源码剖析</a>
+<label for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="源码剖析" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+          源码剖析
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/analysis/mkdocs/">
+        mkdocs 源码剖析
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" id="__nav_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../cs/tools/">工具相关</a>
+<label for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="工具相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+          工具相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/toolbox/">
+        工具收集
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_3" id="__nav_2_9_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9_3">
+          命令行工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="命令行工具" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_9_3">
+<span class="md-nav__icon md-icon"></span>
+          命令行工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/git/">
+        Git 命令备忘
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/shell/">
+        Shell 命令备忘
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/docker/">
+        Docker 相关备忘
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/gdb/">
+        gdb 相关备忘
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_4" id="__nav_2_9_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9_4">
+          CI 工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CI 工具" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_9_4">
+<span class="md-nav__icon md-icon"></span>
+          CI 工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/action/">
+        GitHub Action
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9_5" id="__nav_2_9_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9_5">
+          站点生成工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="站点生成工具" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_9_5">
+<span class="md-nav__icon md-icon"></span>
+          站点生成工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/mkdocs/">
+        mkdocs 使用记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/hexo/">
+        hexo 使用记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cs/tools/sphinx/">
+        sphinx 使用记录
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Security</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Security" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">密码学</a>
+</div>
+<nav aria-label="密码学" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          密码学
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../softsec/">软件安全</a>
+<label for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="软件安全" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          软件安全
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../softsec/lab1/">
+        软件安全 lab1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../softsec/lab2/">
+        软件安全 lab2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../softsec/lab3/">
+        软件安全 lab3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../softsec/lab4/">
+        软件安全 lab4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../softsec/final/">
+        软件安全 final lab
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4">
+          漏洞复现
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="漏洞复现" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          漏洞复现
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vulns/log4j/">
+        log4j 漏洞复现
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../web/">Web</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Web" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../web/protocol/">网络协议</a>
+<label for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="网络协议" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          网络协议
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../web/protocol/vmess/">
+        VMess
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          排版写作规范
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="排版写作规范" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          排版写作规范
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../web/typesetting/clreq/">
+        中文排版需求
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../web/typesetting/tech/">
+        中文技术文档风格指南
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../web/svg/">
+        SVG
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/">CTF</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="CTF" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          CTF
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+          misc
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="misc" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          misc
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" id="__nav_5_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/misc/steg/">隐写术</a>
+<label for="__nav_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="隐写术" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+          隐写术
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/steg/image/">
+        图片隐写
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/steg/audio/">
+        音频隐写
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_2" id="__nav_5_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/misc/escapes/">沙箱逃逸</a>
+<label for="__nav_5_2_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="沙箱逃逸" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_2">
+<span class="md-nav__icon md-icon"></span>
+          沙箱逃逸
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/escapes/pysandbox/">
+        Python 沙箱逃逸
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3" id="__nav_5_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/misc/forensics/">取证</a>
+<label for="__nav_5_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="取证" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_3">
+<span class="md-nav__icon md-icon"></span>
+          取证
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/forensics/mem/">
+        内存取证
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_4" id="__nav_5_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2_4">
+          编码/密码类
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="编码/密码类" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_4">
+<span class="md-nav__icon md-icon"></span>
+          编码/密码类
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/coding/">
+        编码及古典密码
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/qrcode/">
+        QRCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/misc/esolang/">
+        Esolang
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5" id="__nav_5_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/blockchain/">Blockchain</a>
+<label for="__nav_5_2_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Blockchain" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Blockchain
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5_2" id="__nav_5_2_5_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/blockchain/eth/">Ethereum</a>
+<label for="__nav_5_2_5_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Ethereum" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_5_2_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Ethereum
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/basic/">
+        以太坊基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/evm/">
+        以太坊虚拟机
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/solidity/">
+        Solidity 语言
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/yul/">
+        Yul 语言
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/vuln/">
+        常见合约漏洞攻击手段
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/erc/">
+        ERC 标准
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ctf/blockchain/eth/eip/">
+        其余重要 EIPs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5_3" id="__nav_5_2_5_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/blockchain/solana/">Solana</a>
+</div>
+<nav aria-label="Solana" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_5_2_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Solana
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          pwn
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="pwn" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          pwn
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_1" id="__nav_5_3_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/pwn/stack/">栈漏洞利用</a>
+</div>
+<nav aria-label="栈漏洞利用" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_3_1">
+<span class="md-nav__icon md-icon"></span>
+          栈漏洞利用
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3_2" id="__nav_5_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ctf/pwn/heap/">堆漏洞利用</a>
+</div>
+<nav aria-label="堆漏洞利用" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_3_2">
+<span class="md-nav__icon md-icon"></span>
+          堆漏洞利用
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../writeups/">Writeups</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Writeups" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Writeups
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+          Training
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Training" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Training
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/ethernaut/">
+        Ethernaut
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/SecurityInnovation/">
+        Security Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/sadservers/">
+        SadServers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/AAA.md">
+        AAA School Bus
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3">
+          2021
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="2021" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          2021
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/sysu_msc_puzzle/">
+        SYSU MSC Puzzle 2021
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/hackergame2021/">
+        USTC Hackergame 2021
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/d0g3/">
+        第四届“安洵杯”
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/bytectf2021_final/">
+        ByteCTF 2021 Final
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/sctf2021/">
+        SCTF 2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4">
+          2022
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="2022" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          2022
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/vnctf2022/">
+        VNCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/tqlctf2022/">
+        TQLCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/susctf2022/">
+        SUSCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/d3ctf2022/">
+        D3CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/%2Actf2022/">
+        *CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/mrctf2022/">
+        MRCTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/qwb2022/">
+        强网杯 2022 Quals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/tctf2022/">
+        TCTF/0CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/hackergame2022/">
+        USTC Hackergame 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/n1ctf2022/">
+        N1CTF 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/seccon2022/">
+        SECCON 2022 Quals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/rctf2022/">
+        RCTF 2022
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5">
+          2023
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="2023" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          2023
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/seccon2022final/">
+        SECCON 2022 Final
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/xctf2022final/">
+        XCTF 2022 Final
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/midnight2023/">
+        MidnightSun 2023 Quals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/aliyunctf2023/">
+        AliyunCTF 2023
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writeups/ciscn2023/">
+        CISCN 2023 Quals
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../others/">Others</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Others" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Others
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../others/notes/">
+        课程笔记
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" id="__nav_7_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../others/subs/">字幕制作系列</a>
+<label for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="字幕制作系列" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+          字幕制作系列
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../others/subs/ass/">
+        ass 标签
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../others/subs/aegisub/automation/">
+        Aegisub 自动化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../others/subs/aegisub/karaoke/">
+        Aegisub 卡拉 OK 模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../others/subs/ffmpeg/">
+        ffmpeg 套件杂记
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" id="__nav_7_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../others/troubleshooting/">TroubleShooting</a>
+<label for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="TroubleShooting" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+          TroubleShooting
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../others/troubleshooting/mac/">
+        macOS TroubleShooting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    数学基础
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    古典密码
+  </a>
+<nav aria-label="古典密码" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    单表加密
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    多表密码
+  </a>
+<nav aria-label="多表密码" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enigma">
+    Enigma
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    哈希算法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    分组加密模式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    流密码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#des">
+    DES
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aes">
+    AES
+  </a>
+<nav aria-label="AES" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    有限域
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aes_1">
+    AES 算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rsa">
+    RSA
+  </a>
+<nav aria-label="RSA" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    数学基础
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rsa_1">
+    RSA 算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ecc">
+    ECC
+  </a>
+<nav aria-label="ECC" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    数学基础
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ecc_1">
+    ECC 算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/TonyCrane/note/tree/master/docs/sec/crypto/index.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="_1">密码学<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>4335<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>119<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>浙江大学 “密码学” 课程相关知识笔记</p>
+<p>这里的内容主要是针对于密码学这门课的。由于一系列原因，这门课的目的其实是进行代码实践，而不偏重于理论。更多关于密码学的理论知识等如果我会写的话后续会加在<span class="heti-skip"><span class="heti-spacing"> </span>CTF<span class="heti-spacing"> </span></span>部分的笔记里。</p>
+<p>课程主要内容是古典密码、哈希算法（md5、sha1）、分组加密模式（ecb、cbc、cfb）、流密码（rc4）、四大加密算法（DES、AES、RSA、ECC）。笔记主要是期末复习的时候写的总结，并不全面。</p>
+<p>参考：</p>
+<ul>
+<li>图灵班课程学习指南：<a href="https://zju-turing.github.io/TuringCourses/major_mandatory/cryptography/">密码学</a></li>
+</ul>
+</div>
+<h2 id="_2">数学基础<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li><span class="arithmatex">\(a, b\)</span> 为整数，且至少有一个不为<span><span class="heti-spacing"> </span>0</span>，则一定存在整数 <span class="arithmatex">\(x, y\)</span> 使得 <span class="arithmatex">\(ax + by = \gcd(a, b)\)</span></li>
+<li>若 <span class="arithmatex">\(a+b \equiv 0 \pmod n\)</span>，则 <span class="arithmatex">\(a, b\)</span> 互为模 <span class="arithmatex">\(n\)</span> 的<strong>加法逆元</strong><ul>
+<li>加法逆元一定存在</li>
+</ul>
+</li>
+<li>若 <span class="arithmatex">\(ab \equiv 1 \pmod n\)</span>，则 <span class="arithmatex">\(a, b\)</span> 互为模 <span class="arithmatex">\(n\)</span> 的<strong>乘法逆元</strong>，<span class="arithmatex">\(a\)</span> 的乘法逆元记为 <span class="arithmatex">\(a^{-1}\)</span><ul>
+<li>乘法逆元不一定存在</li>
+<li><span class="arithmatex">\(a\)</span> 的逆元存在，则 <span class="arithmatex">\(\gcd(a, n) = 1\)</span></li>
+<li>求乘法逆元，根据 <span class="arithmatex">\(ax+ny = \gcd(a, n) = 1\)</span> 以及 <span class="arithmatex">\(aa^{-1}\equiv 1\pmod n\)</span>，即求解 <span class="arithmatex">\(x\)</span></li>
+<li>
+<p>扩展欧几里得算法，求解 <span class="arithmatex">\(ax+by = \gcd(a, b)\)</span> 中的 <span class="arithmatex">\(x, y\)</span>
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">exgcd</span><span class="p">(</span><span class="n">LL</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">LL</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">LL</span><span class="o">&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">LL</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">LL</span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>求<span class="heti-skip"><span class="heti-spacing"> </span>13<span class="heti-spacing"> </span></span>在模<span class="heti-skip"><span class="heti-spacing"> </span>35<span class="heti-spacing"> </span></span>下的逆元（求解<span><span class="heti-spacing"> </span>13x + 35y = 1</span>）
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>35 / 13 = 2 ... 9
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>13 / 9 = 1 ... 4
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>9 / 4 = 2 ... 1
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>1 = 9 - 2 * 4
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>  = (35 - 13 * 2) - 2 * (13 - 9 * 1)
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>  = (35 - 13 * 2) - 2 * (13 - (35 - 13 * 2) * 1)
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>  = 3 * 35 - 8 * 13
+</code></pre></div>
+<p>所以<span><span class="heti-spacing"> </span>x = -8, y = 3</span>，得<span class="heti-skip"><span class="heti-spacing"> </span>13<span class="heti-spacing"> </span></span>在模<span class="heti-skip"><span class="heti-spacing"> </span>35<span class="heti-spacing"> </span></span>下的逆元为<span><span class="heti-spacing"> </span>-8</span>，即<span><span class="heti-spacing"> </span>27</span>。</p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">古典密码<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_4">单表加密<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>加法密码<ul>
+<li><span class="arithmatex">\(y = (x + key)\bmod 26\)</span></li>
+<li><span class="arithmatex">\(x = (y - key)\bmod 26\)</span> 利用加法逆元</li>
+</ul>
+</li>
+<li>乘法密码<ul>
+<li><span class="arithmatex">\(y = (x \times key)\bmod 26\)</span></li>
+<li><span class="arithmatex">\(x = (y \times key^{-1})\bmod 26\)</span> 利用乘法逆元</li>
+</ul>
+</li>
+<li>仿射密码<ul>
+<li>结合加法密码和乘法密码</li>
+<li><span class="arithmatex">\(y = (ax + b)\bmod 26\)</span></li>
+<li><span class="arithmatex">\(x = a^{-1}(y - b)\bmod 26\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">多表密码<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>相同的明文对应的密文会有变化。</p>
+<ul>
+<li><span>Vigenere<span class="heti-spacing"> </span></span>密码<ul>
+<li>密钥循环使用，第 <span class="arithmatex">\(i\)</span> 位为 <span class="arithmatex">\(key_i\)</span></li>
+<li><span class="arithmatex">\(y_i = (x_i + key_i)\bmod 26\)</span></li>
+<li><span class="arithmatex">\(x_i = (y_i - key_i)\bmod 26\)</span></li>
+</ul>
+</li>
+</ul>
+<h4 id="enigma">Enigma<a class="headerlink" href="#enigma" title="Permanent link">¶</a></h4>
+<p>整体逻辑就不写了，大概就是五个选三个转子，右侧是输入输出，左侧是反射板，每个转子有<span class="heti-skip"><span class="heti-spacing"> </span>RingSetting<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>MessageKey<span class="heti-spacing"> </span></span>属性</p>
+<ul>
+<li>RingSetting：初始位置，不变的</li>
+<li>MessageKey：从设定的<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>开始，可以转动（加<span><span class="heti-spacing"> </span>1</span>）</li>
+</ul>
+<p>对于每个字符：</p>
+<ul>
+<li>经过插线板查表<span><span class="heti-spacing"> </span>P1 = plugboard[P - 'A']</span><ul>
+<li><span>P<span class="heti-spacing"> </span></span>是明文，<span>P1<span class="heti-spacing"> </span></span>什么的命名有些混乱见谅</li>
+<li><code>- 'A'</code> 什么的后面也不再写了，反正理解了就好</li>
+</ul>
+</li>
+<li>转动最右侧转子：MessageKey[2] = (MessageKey[2] + 1) % 26</li>
+<li>检查左侧的转子是否会发生转动：<ul>
+<li>如果当前转子转到了对应位置，则下一个转子转动<ul>
+<li>五个转子从<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>号到<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>号的位置分别为<span><span class="heti-spacing"> </span>RFWKA</span>（拍洗头佬马屁）</li>
+</ul>
+</li>
+<li>可能会发生<span><span class="heti-spacing"> </span>double stepping</span><ul>
+<li>如果中间的转子转到了对应位置的前一个，则它也会发生转动（同时带动左侧的也转）</li>
+<li>机械结构决定的<span><span class="heti-spacing"> </span>double stepping</span>，只会发生在<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>号转子</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>从右到左查询转子，每个的操作：<ul>
+<li>计算<span><span class="heti-spacing"> </span>delta = MessageKey[i] - RingSetting[i]</span></li>
+<li>查表<span><span class="heti-spacing"> </span>P2 = rotor[i][P1 + delta]</span></li>
+<li>得到<span><span class="heti-spacing"> </span>P2 - delta</span></li>
+</ul>
+</li>
+<li>经过反射板查表（类似插线板）</li>
+<li>从左到右查询转子，每个的操作：<ul>
+<li>计算<span><span class="heti-spacing"> </span>delta = MessageKey[i] - RingSetting[i]</span></li>
+<li>查找<span class="heti-skip"><span class="heti-spacing"> </span>index<span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span>rotor[i][index] = P3 + delta</span></li>
+<li>得到<span><span class="heti-spacing"> </span>index - delta</span></li>
+</ul>
+</li>
+<li>经过插线板查表<span><span class="heti-spacing"> </span>C = plugboard[P3 - 'A']</span><ul>
+<li><span>C<span class="heti-spacing"> </span></span>即对应的密文</li>
+<li>同状态下<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>作为明文即可得到解密结果<span><span class="heti-spacing"> </span>P</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">哈希算法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>md5<ul>
+<li><span>message<span class="heti-spacing"> </span></span>任意长（<span>0<span class="heti-spacing"> </span></span>也可以），<span>digest<span class="heti-spacing"> </span></span>固定<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>字节（<span>128<span class="heti-spacing"> </span></span>位）</li>
+<li>分块填充<ul>
+<li>每块<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>字节（<span>512<span class="heti-spacing"> </span></span>位）</li>
+<li>填充至保证最后一块长度为<span class="heti-skip"><span class="heti-spacing"> </span>56<span class="heti-spacing"> </span></span>字节（留出<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>字节存储<span class="heti-skip"><span class="heti-spacing"> </span>message<span class="heti-spacing"> </span></span>长度）<ul>
+<li>填充方式为一个<span class="heti-skip"><span class="heti-spacing"> </span>0x80<span class="heti-spacing"> </span></span>后全是<span><span class="heti-spacing"> </span>0x00</span>（即后一位<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>接下来全是<span><span class="heti-spacing"> </span>0</span>）</li>
+<li>一定会存在填充，恰好为<span class="heti-skip"><span class="heti-spacing"> </span>56<span class="heti-spacing"> </span></span>字节时需要填充<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>字节</li>
+</ul>
+</li>
+<li>最后<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>字节存储<span class="heti-skip"><span class="heti-spacing"> </span>message<span class="heti-spacing"> </span></span>长度<ul>
+<li>以比特为单位的长度，小端序存储</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>openssl<ul>
+<li><code class="highlight"><span class="n">MD5</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">digest</span><span class="p">)</span></code>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">MD5_CTX</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">MD5_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">m</span><span class="p">);</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">MD5_Update</span><span class="p">(</span><span class="o">&amp;</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">MD5_Final</span><span class="p">(</span><span class="n">digest</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>彩虹表<ul>
+<li>思想：预计算有限原文的摘要，节省原文与摘要映射的空间</li>
+<li>需要一个消减函数<span><span class="heti-spacing"> </span>R</span>，可以将摘要映射回原文空间中的一个值</li>
+<li>选择一个起始信息<span class="heti-skip"><span class="heti-spacing"> </span>M0<span class="heti-spacing"> </span></span>逐次计算形成一条链：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>M0 --H--&gt; H0 --R--&gt; M1 --H--&gt; H1 ... --R--&gt; Hn
+</code></pre></div></li>
+<li>这样只需要记录一系列<span class="heti-skip"><span class="heti-spacing"> </span>M0<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Hn<span class="heti-spacing"> </span></span>就可以实现查表</li>
+<li>假设要破解<span><span class="heti-spacing"> </span>Hm</span>，同样对<span class="heti-skip"><span class="heti-spacing"> </span>Hm<span class="heti-spacing"> </span></span>施加<span><span class="heti-spacing"> </span>R</span>、H，直到得到的<span class="heti-skip"><span class="heti-spacing"> </span>Hn<span class="heti-spacing"> </span></span>在表中出现，就说明<span class="heti-skip"><span class="heti-spacing"> </span>Mm<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Hm<span class="heti-spacing"> </span></span>在这条链上，沿着<span class="heti-skip"><span class="heti-spacing"> </span>M0<span class="heti-spacing"> </span></span>开始的链找到<span class="heti-skip"><span class="heti-spacing"> </span>Mm<span class="heti-spacing"> </span></span>即可</li>
+<li>缺点是消减函数需要避免两条链碰撞</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sha1<ul>
+<li><span>message<span class="heti-spacing"> </span></span>不超过<span class="heti-skip"><span class="heti-spacing"> </span>2^64<span class="heti-spacing"> </span></span>位，<span>digest<span class="heti-spacing"> </span></span>固定<span class="heti-skip"><span class="heti-spacing"> </span>20<span class="heti-spacing"> </span></span>字节（<span>160<span class="heti-spacing"> </span></span>位）</li>
+<li>和<span class="heti-skip"><span class="heti-spacing"> </span>md5<span class="heti-spacing"> </span></span>同样分块填充，填充方法基本一致<ul>
+<li>差别在于<span class="heti-skip"><span class="heti-spacing"> </span>message<span class="heti-spacing"> </span></span>长度用大端序存储</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">分组加密模式<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>ECB：电子密码本模式<ul>
+<li>分块，分别以同种方式加密，合并</li>
+<li><span class="arithmatex">\(C_i=\mathrm{enc}(P_i), P_i=\mathrm{dec}(C_i)\)</span></li>
+<li>优点：可以并行计算</li>
+<li>缺点：相同明文块得到的密文块相同，安全性较差</li>
+</ul>
+</li>
+<li>CBC：密文块链接模式<ul>
+<li>每块加密前将明文块与前一块密文块异或<ul>
+<li>与第一块明文块异或的称为<span><span class="heti-spacing"> </span>IV</span>（Initialization Vector），长度要等宽</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(C_i=\mathrm{enc}(P_i\oplus C_{i-1}), P_i=\mathrm{dec}(C_i)\oplus C_{i-1}\)</span></li>
+<li>当前块的密文与前一块的密文有关</li>
+<li>加密只能串行，解密可以并行</li>
+<li>密文块出错影响两个明文块，密文块缺失影响后续所有明文块</li>
+<li>密文偷窃模式（ciphertext stealing）<ul>
+<li>最后一块不够长时<span class="heti-skip"><span class="heti-spacing"> </span>pad 0<span class="heti-spacing"> </span></span>会导致密文长于原文（改变了明文长度）</li>
+<li>解决方法：倒数第二个密文块只保留最后一个明文块同样长度的字节，即<span><span class="heti-spacing"> </span>C1 || C2 || ... || Cn-1' || Cn</span>，其中<span class="heti-skip"><span class="heti-spacing"> </span>Cn-1'<span class="heti-spacing"> </span></span>长度可能会小于块大小</li>
+<li>CBC-CS1：即如上保留密文块</li>
+<li>CBC-CS2：如果最后一个块不完整，则交换后两个密文块</li>
+<li>CBC-CS3：无条件交换后两个密文块</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CFB：密文反馈模式<ul>
+<li>加密<span class="heti-skip"><span class="heti-spacing"> </span>iv<span class="heti-spacing"> </span></span>然后与明文块异或，得到密文块<ul>
+<li><span>iv<span class="heti-spacing"> </span></span>长于明文块</li>
+</ul>
+</li>
+<li>比如<span class="heti-skip"><span class="heti-spacing"> </span>iv<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位<span><span class="heti-spacing"> </span>(iv[0]..iv[7])</span>，块大小为<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位，则每次：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">iv_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enc</span><span class="p">(</span><span class="n">iv</span><span class="p">)</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">iv_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">    </span><span class="c1">// 每次都只用 iv 的第一个字节</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">iv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">iv</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w">   </span><span class="c1">// 将 C[i] 放到 iv 的最后一个字节</span>
+</code></pre></div></li>
+<li>解密：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">iv_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enc</span><span class="p">(</span><span class="n">iv</span><span class="p">)</span><span class="w">   </span><span class="c1">// 同样是加密，不需要解密</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">iv_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">iv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">iv</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div></li>
+<li>逐字节，适合流加密，用于网络传输之类，传输过程中出错一个字节只影响九个字节，后续可以恢复，效率低</li>
+</ul>
+</li>
+</ul>
+<h2 id="_8">流密码<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>rc4<ul>
+<li>每次加解密一个字节，高效</li>
+<li>密钥长度<span class="heti-skip"><span class="heti-spacing"> </span>1-256<span class="heti-spacing"> </span></span>字节，内部有一个<span class="heti-skip"><span class="heti-spacing"> </span>256<span class="heti-spacing"> </span></span>字节的状态向量<span><span class="heti-spacing"> </span>S</span></li>
+<li>状态向量初始化：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>加解密过程相同：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">message_len</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="n">message</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="n">S</span><span class="p">[(</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">256</span><span class="p">];</span>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="des">DES<a class="headerlink" href="#des" title="Permanent link">¶</a></h2>
+<ul>
+<li>块加密算法，每次明文八字节密文八字节，密钥<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位（<span>56<span class="heti-spacing"> </span></span>位有效、<span>8<span class="heti-spacing"> </span></span>位校验）</li>
+<li>存在的问题：密钥太短，差分攻击可以缩短工作量，<span>sbox<span class="heti-spacing"> </span></span>设计规则没有公开</li>
+<li>主要流程：初始置换（ip）、<span>16<span class="heti-spacing"> </span></span>轮迭代（<span>f<span class="heti-spacing"> </span></span>函数）、逆初始置换（fp/ip-1）</li>
+<li>初始置换：<ul>
+<li>64 bit -&gt; 64 bit</li>
+<li>如：ip[0] = 58，初始第<span class="heti-skip"><span class="heti-spacing"> </span>58<span class="heti-spacing"> </span></span>位为置换后第<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>位</li>
+<li>置换后记左侧<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位为 <span class="arithmatex">\(L_0\)</span>，右侧<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位为 <span class="arithmatex">\(R_0\)</span></li>
+</ul>
+</li>
+<li>子密钥生成：<ul>
+<li>每一轮的<span class="heti-skip"><span class="heti-spacing"> </span>f<span class="heti-spacing"> </span></span>函数都需要一个<span class="heti-skip"><span class="heti-spacing"> </span>48<span class="heti-spacing"> </span></span>位子密钥，都是由初始<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位密钥生成的</li>
+<li><span>PC-1<span class="heti-spacing"> </span></span>表置换（key_perm_table）<ul>
+<li>64 bit -&gt; 56 bit（去掉校验位并打乱）</li>
+<li>置换过程同<span><span class="heti-spacing"> </span>ip</span></li>
+<li>置换后记左<span class="heti-skip"><span class="heti-spacing"> </span>28<span class="heti-spacing"> </span></span>位为 <span class="arithmatex">\(C_0\)</span>，右<span class="heti-skip"><span class="heti-spacing"> </span>28<span class="heti-spacing"> </span></span>位为 <span class="arithmatex">\(D_0\)</span></li>
+</ul>
+</li>
+<li>循环左移<ul>
+<li>有一张表记录每一轮循环左移的位数（<span>1<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>2</span>）</li>
+<li><span class="arithmatex">\(C_{i-1}\)</span> 循环左移<span class="heti-skip"><span class="heti-spacing"> </span>1/2<span class="heti-spacing"> </span></span>位得到 <span class="arithmatex">\(C_i\)</span>，<span class="arithmatex">\(D\)</span> 同理</li>
+<li>得到 <span class="arithmatex">\(C_1, \cdots, C_{16}\)</span> 和 <span class="arithmatex">\(D_1, \cdots, D_{16}\)</span></li>
+</ul>
+</li>
+<li><span>PC-2<span class="heti-spacing"> </span></span>表置换（key_56bit_to_48bit_table）<ul>
+<li>56 bit -&gt; 48 bit（每组 <span class="arithmatex">\(CD\)</span> 中选<span class="heti-skip"><span class="heti-spacing"> </span>48<span class="heti-spacing"> </span></span>位并打乱）</li>
+<li><span class="arithmatex">\(C_n\)</span> 和 <span class="arithmatex">\(D_n\)</span> 从左到右拼到一起置换后得到第 <span class="arithmatex">\(n\)</span> 轮子密钥 <span class="arithmatex">\(K_n\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>轮函数<ul>
+<li>初始置换后得到了 <span class="arithmatex">\(L_0\)</span> 和 <span class="arithmatex">\(R_0\)</span></li>
+<li>每一轮进行：<ul>
+<li><span class="arithmatex">\(L_i = R_{i-1}\)</span></li>
+<li><span class="arithmatex">\(R_i = L_{i-1} \oplus f(R_{i-1}, K_i)\)</span></li>
+</ul>
+</li>
+<li><span>16<span class="heti-spacing"> </span></span>轮后得到 <span class="arithmatex">\(L_{16}\)</span> 和 <span class="arithmatex">\(R_{16}\)</span>，调换一下拼接 <span class="arithmatex">\(R_{16}L_{16}\)</span> 再逆初始置换后得到密文</li>
+</ul>
+</li>
+<li><span>f<span class="heti-spacing"> </span></span>函数<ul>
+<li><span>DES<span class="heti-spacing"> </span></span>算法核心，两个输入<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>48<span class="heti-spacing"> </span></span>位<span><span class="heti-spacing"> </span>K</span>，输出<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位</li>
+<li><span>E<span class="heti-spacing"> </span></span>扩展置换（plaintext_32bit_expanded_to_48bit_table）<ul>
+<li>32 bit -&gt; 48 bit（扩展<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>48<span class="heti-spacing"> </span></span>位）</li>
+</ul>
+</li>
+<li><span>E<span class="heti-spacing"> </span></span>扩展后的结果与<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>异或，得到<span class="heti-skip"><span class="heti-spacing"> </span>48<span class="heti-spacing"> </span></span>位结果</li>
+<li><span>S-box<span class="heti-spacing"> </span></span>置换<ul>
+<li><span>48<span class="heti-spacing"> </span></span>位结果分为<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>组，每组<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>位，分别进入对应<span class="heti-skip"><span class="heti-spacing"> </span>sbox<span class="heti-spacing"> </span></span>中进行置换得到<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>位结果<ul>
+<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>sbox 4<span class="heti-spacing"> </span></span>行<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>列</li>
+<li><span>6<span class="heti-spacing"> </span></span>位中第<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>位和第<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>位组成行数，中间<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>位组成列数</li>
+<li><span>sbox<span class="heti-spacing"> </span></span>对应行列位置上的数就是得到的<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>位结果</li>
+</ul>
+</li>
+<li><span>8<span class="heti-spacing"> </span></span>组<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>位结果拼起来得到<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位结果</li>
+</ul>
+</li>
+<li><span>P<span class="heti-spacing"> </span></span>盒置换（sbox_perm_table）<ul>
+<li>32 bit -&gt; 32 bit（打乱<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位结果）</li>
+<li>置换后得到<span class="heti-skip"><span class="heti-spacing"> </span>f<span class="heti-spacing"> </span></span>函数的输出</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>DES<span class="heti-spacing"> </span></span>解密：和加密过程相同，将子密钥逆序即可“从后往前”逆推<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>轮</li>
+<li>上述加解密都是针对一个块的，可以配合<span class="heti-skip"><span class="heti-spacing"> </span>ECB CBC CFB<span class="heti-spacing"> </span></span>等分组加密模式使用</li>
+<li>openssl<ul>
+<li>DES_ncbc_encrypt
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">DES_cblock</span><span class="w"> </span><span class="n">iv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x23</span><span class="p">,</span><span class="w"> </span><span class="mh">0x45</span><span class="p">,</span><span class="w"> </span><span class="mh">0x67</span><span class="p">,</span><span class="w"> </span><span class="mh">0x89</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAB</span><span class="p">,</span><span class="w"> </span><span class="mh">0xCD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xED</span><span class="p">};</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">des_key_schedule</span><span class="w"> </span><span class="n">ks</span><span class="p">;</span>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">des_set_key</span><span class="p">((</span><span class="n">DES_cblock</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">ks</span><span class="p">);</span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">DES_ncbc_encrypt</span><span class="p">(</span><span class="n">plain</span><span class="p">,</span><span class="w"> </span><span class="n">cipher</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">plain</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ks</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">iv</span><span class="p">,</span><span class="w"> </span><span class="n">DES_ENCRYPT</span><span class="p">);</span>
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="c1">// 解密将最后一个参数改为 DES_DECRYPT</span>
+</code></pre></div></li>
+<li>DES_cfb_encrypt<ul>
+<li>写法和<span class="heti-skip"><span class="heti-spacing"> </span>ncbc<span class="heti-spacing"> </span></span>基本一致</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>双重<span><span class="heti-spacing"> </span>DES</span><ul>
+<li><span class="arithmatex">\(C = \mathrm{enc}(\mathrm{enc}(P, K_1), K_2)\)</span>，预期是使密钥变为<span class="heti-skip"><span class="heti-spacing"> </span>112<span class="heti-spacing"> </span></span>位，增大枚举难度</li>
+<li>meet in the middle attack <ul>
+<li>枚举 <span class="arithmatex">\(K_1\)</span>，计算 <span class="arithmatex">\(\mathrm{enc}(P, K_1)\)</span>，得到一系列 <span class="arithmatex">\(P'\)</span></li>
+<li>枚举 <span class="arithmatex">\(K_2\)</span>，计算 <span class="arithmatex">\(\mathrm{dec}(C, K_2)\)</span>，得到一系列 <span class="arithmatex">\(C'\)</span></li>
+<li>枚举 <span class="arithmatex">\(K_2\)</span> 过程中检查 <span class="arithmatex">\(C'\)</span> 是否出现在前面一系列 <span class="arithmatex">\(P'\)</span> 中即可</li>
+<li>难度最大才<span class="heti-skip"><span class="heti-spacing"> </span>2^57<span class="heti-spacing"> </span></span>次枚举，只增强了一倍</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>三重<span><span class="heti-spacing"> </span>DES</span><ul>
+<li><span class="arithmatex">\(C = \mathrm{enc}(\mathrm{dec}(\mathrm{enc}(P, K_1), K_2), K_3)\)</span></li>
+<li><span class="arithmatex">\(P = \mathrm{dec}(\mathrm{enc}(\mathrm{dec}(C, K_3), K_2), K_1)\)</span></li>
+<li>缺点：加密速度慢，密钥长度长</li>
+</ul>
+</li>
+</ul>
+<h2 id="aes">AES<a class="headerlink" href="#aes" title="Permanent link">¶</a></h2>
+<h3 id="_9">有限域<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>AES<span class="heti-spacing"> </span></span>使用 <span class="arithmatex">\(GF(2^8)\)</span> 伽罗瓦域，不可约多项式为 <span class="arithmatex">\(x^8 + x^4 + x^3 + x + 1\)</span><ul>
+<li>二进制为<span><span class="heti-spacing"> </span>100011011</span>，十六进制为<span><span class="heti-spacing"> </span>0x11B</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(GF(2^8)\)</span> 上每个多项式都可以表示为一个<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位二进制数</li>
+<li>加法：二进制异或</li>
+<li>乘法：多项式乘法（注意加是异或），模 <span class="arithmatex">\(x^8 + x^4 + x^3 + x + 1\)</span><ul>
+<li>手工计算，长除法算模</li>
+<li>农夫算法
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 结果</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// y 右移丢失 1 则 p += x</span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x100</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="mh">0x11B</span><span class="p">;</span><span class="w"> </span><span class="c1">// x 左移进位 1 则 x -= 0x11B</span>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="aes_1"><span>AES<span class="heti-spacing"> </span></span>算法<a class="headerlink" href="#aes_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>每次<span class="heti-skip"><span class="heti-spacing"> </span>128<span class="heti-spacing"> </span></span>位（<span>16<span class="heti-spacing"> </span></span>字节）分组，密钥长度<span class="heti-skip"><span class="heti-spacing"> </span>128/192/256<span class="heti-spacing"> </span></span>位（<span>16/24/32<span class="heti-spacing"> </span></span>字节）</li>
+<li>每一块明文转为<span class="heti-skip"><span class="heti-spacing"> </span>4*4<span class="heti-spacing"> </span></span>的矩阵<heti-adjacent class="heti-adjacent-half">，</heti-adjacent><span class="arithmatex">\(\mathbf{S}_{i\bmod 4, i/4} = \mathbf{byte}_i\)</span>（从上到下从左到右）</li>
+<li>进行多轮加密（<span>128<span class="heti-spacing"> </span></span>位密钥进行<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>轮），每轮都有一个密钥，也是<span class="heti-skip"><span class="heti-spacing"> </span>4*4<span class="heti-spacing"> </span></span>矩阵</li>
+<li>加密过程（<span>p<span class="heti-spacing"> </span></span>为明文矩阵，<span>k<span class="heti-spacing"> </span></span>为密钥矩阵）：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">};</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">AddRoundKey</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">);</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="n">ByteSub</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="n">ShiftRow</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">MixColumn</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">    </span><span class="n">AddRoundKey</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="p">}</span>
+</code></pre></div></li>
+<li><span>AddRoundKey<span class="heti-spacing"> </span></span>矩阵异或</li>
+<li><span>ByteSub<span class="heti-spacing"> </span></span>逐字节进行<span class="heti-skip"><span class="heti-spacing"> </span>sbox<span class="heti-spacing"> </span></span>置换：p[i] = sbox[p[i]]<ul>
+<li><span>sbox<span class="heti-spacing"> </span></span>生成：<span class="arithmatex">\(\mathrm{sbox}_a = ((a^{-1}\times \mathtt{0x1F})\bmod (x^8+1))\oplus \mathtt{0x63}\)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">sbox</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aes_8bit_mul_mod_0x101</span><span class="p">(</span><span class="n">aes_8bit_inverse</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="mh">0x1F</span><span class="p">)</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mh">0x63</span><span class="p">;</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li><span>ShiftRow<span class="heti-spacing"> </span></span>行移位<ul>
+<li>第一行不变，第二行循环左移<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>位，第三行循环左移<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>位，第四行循环左移<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>位
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>0 1 2 3       0 1 2 3
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>4 5 6 7  --&gt;  5 6 7 4
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>8 9 A B       A B 8 9
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>C D E F       F C D E
+</code></pre></div></li>
+</ul>
+</li>
+<li><span>MixColumn<span class="heti-spacing"> </span></span>列混淆<ul>
+<li>取出矩阵的每一列，作为一个多项式（低位在上），与 <span class="arithmatex">\(a(x)\)</span> 相乘，再模 <span class="arithmatex">\(x^4 + 1\)</span><ul>
+<li>加密时<span class="arithmatex">\(a(x) = 3x^3 + x^2 + x + 2\)</span><span><span class="heti-spacing"> </span>[0x03, 0x01, 0x01, 0x02]</span></li>
+<li>解密时<span class="arithmatex">\(a(x) = 11x^3 + 13x^2 + 9x + 14\)</span><span><span class="heti-spacing"> </span>[0x0B, 0x0D, 0x09, 0x0E]</span></li>
+<li>模 <span class="arithmatex">\(x^4 + 1\)</span> 就相当于把超过<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>次的项都减去 <span class="arithmatex">\(x^4\)</span></li>
+</ul>
+</li>
+<li>例如一列从上到下为<span><span class="heti-spacing"> </span>[4, 3, 2, 1]</span>，则运算为<br/>
+<div class="arithmatex">\[
+    \begin{bmatrix}
+    2 &amp; 3 &amp; 1 &amp; 1 \\
+    1 &amp; 2 &amp; 3 &amp; 1 \\
+    1 &amp; 1 &amp; 2 &amp; 3 \\
+    3 &amp; 1 &amp; 1 &amp; 2
+    \end{bmatrix}\times
+    \begin{bmatrix}
+    4 \\ 3 \\ 2 \\ 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+    8\oplus 1\oplus 2\oplus 5\\
+    \cdots \\ \cdots \\ \cdots
+    \end{bmatrix} =
+    \begin{bmatrix}
+    14 \\ 5 \\ 0 \\ 15
+    \end{bmatrix}
+    \]</div><ul>
+<li>这里乘法是<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位<span class="heti-skip"><span class="heti-spacing"> </span>mod 0x11B<span class="heti-spacing"> </span></span>的有限域乘法，加法是异或</li>
+</ul>
+</li>
+<li>计算之后再放回原来的列</li>
+</ul>
+</li>
+<li>密钥生成过程<ul>
+<li>取上轮密钥的最后一列，循环上移一位，进行<span><span class="heti-spacing"> </span>ByteSub</span>，与上轮密钥第一列异或，再将第一位和 <span class="arithmatex">\(2^{i-1}\bmod \mathtt{0x11B}\)</span> 异或得到新一轮密钥的第一列<ul>
+<li>第一位异或的分别是<span><span class="heti-spacing"> </span>01 02 04 08 10 20 40 80 1b 36</span></li>
+</ul>
+</li>
+<li>上轮密钥第二列异或新一轮密钥第一列，得到新一轮密钥的第二列</li>
+<li>上轮密钥第三列异或新一轮密钥第二列，得到新一轮密钥的第三列</li>
+<li>上轮密钥第四列异或新一轮密钥第三列，得到新一轮密钥的第四列</li>
+</ul>
+</li>
+<li>解密过程就逆着推回去就可以了</li>
+<li>小白老师的写法有一些不一样的地方<ul>
+<li>大概是为了<span class="heti-skip"><span class="heti-spacing"> </span>memcpy<span class="heti-spacing"> </span></span>方便以及同一行的可以当做一个<span class="heti-skip"><span class="heti-spacing"> </span>int<span class="heti-spacing"> </span></span>处理，所以好多地方列变成了行</li>
+<li>明文块是从左到右从上到下排列的</li>
+<li>每轮进行的操作为：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">ByteSub</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">MixColumnInverse</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">ShiftRow</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">MixColumn</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="k">else</span><span class="w"> </span><span class="n">MixColumn</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="n">AddRoundKey</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+</code></pre></div></li>
+<li><span>MixColumn<span class="heti-spacing"> </span></span>加了一个参数<span><span class="heti-spacing"> </span>do_mul</span><ul>
+<li><span>MixColumn<span class="heti-spacing"> </span></span>取出一列，乘完放回一行</li>
+<li><span>do_mul=0<span class="heti-spacing"> </span></span>则只进行这个列转行的操作</li>
+<li><span>MixColumnInverse(p, a, 0)<span class="heti-spacing"> </span></span>也就相当于将<span class="heti-skip"><span class="heti-spacing"> </span>p<span class="heti-spacing"> </span></span>行转列</li>
+</ul>
+</li>
+<li>因为<span class="heti-skip"><span class="heti-spacing"> </span>AddRoundKey<span class="heti-spacing"> </span></span>的参数<span class="heti-skip"><span class="heti-spacing"> </span>p<span class="heti-spacing"> </span></span>这时是行优先的，所以密钥的计算也是行优先计算的</li>
+</ul>
+</li>
+<li>openssl
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">AES_KEY</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">AES_set_encrypt_key</span><span class="p">(</span><span class="s">"..."</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">k</span><span class="p">);</span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">AES_encrypt</span><span class="p">(</span><span class="n">plain</span><span class="p">,</span><span class="w"> </span><span class="n">cipher</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">k</span><span class="p">);</span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="n">AES_decrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span><span class="w"> </span><span class="n">plain</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">k</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h2 id="rsa">RSA<a class="headerlink" href="#rsa" title="Permanent link">¶</a></h2>
+<h3 id="_10">数学基础<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>欧拉函数<ul>
+<li><span class="arithmatex">\(\phi(n)\)</span> 表示小于 <span class="arithmatex">\(n\)</span> 且与 <span class="arithmatex">\(n\)</span> 互质的数的个数</li>
+<li>若 <span class="arithmatex">\(n_1, n_2\)</span> 互素，则 <span class="arithmatex">\(\phi(n_1n_2) = \phi(n_1)\phi(n_2)\)</span></li>
+<li><span class="arithmatex">\(\phi(n) = n\prod_{p|n}(1-\frac{1}{p})\)</span>（其中 <span class="arithmatex">\(p\)</span> 为质数<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>质因子）</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="arithmatex">\[
+\begin{aligned}
+\phi(100) = 100\times(1-\frac{1}{2})(1-\frac{1}{5}) = 100\times\frac{1}{2}\times\frac{4}{5} = 40\\
+\phi(100) = \phi(2^2\times 5^2) = 2^{2-1}(2-1)\times 5^{2-1}(5-1) = 40
+\end{aligned}
+\]</div>
+</details>
+</li>
+<li>欧拉定理<ul>
+<li>若 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(n\)</span> 互质，则 <span class="arithmatex">\(a^{\phi(n)} \equiv 1 \pmod{n}\)</span></li>
+</ul>
+</li>
+<li>费马小定理<ul>
+<li>若 <span class="arithmatex">\(p\)</span> 为素数，且 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(p\)</span> 互质，则 <span class="arithmatex">\(a^{p-1} \equiv 1 \pmod{p}\)</span></li>
+<li>因为 <span class="arithmatex">\(\phi(p) = p - 1\)</span></li>
+</ul>
+</li>
+<li>中国剩余定理<ul>
+<li>设 <span class="arithmatex">\(m_1, m_2, \cdots, m_r\)</span> 两两互素，则同余方程组 <span class="arithmatex">\(x \equiv a_i \pmod{m_i}\)</span> 模 <span class="arithmatex">\(M=m_1m_2\cdots m_r\)</span> 有唯一解 <span class="arithmatex">\(x = \sum_{i=1}^ra_iM_iy_i\bmod M\)</span><ul>
+<li>其中<span class="arithmatex">\(M_i=M/m_i\)</span><span><span class="heti-spacing"> </span>,</span> <span class="arithmatex">\(y_i=M_i^{-1}\bmod m_i\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="rsa_1"><span>RSA<span class="heti-spacing"> </span></span>算法<a class="headerlink" href="#rsa_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>非对称密码体制，有公钥和私钥</li>
+<li><span>RSA<span class="heti-spacing"> </span></span>算法过程<ul>
+<li>选取两个不相等的大素数 <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span>，计算 <span class="arithmatex">\(n = pq\)</span>，<span class="arithmatex">\(\phi(n) = (p-1)(q-1)\)</span><ul>
+<li><span class="arithmatex">\(n\)</span> 公开，<span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span> 保密</li>
+</ul>
+</li>
+<li>随机选取加密密钥 <span class="arithmatex">\(e\)</span>，使得 <span class="arithmatex">\(1 &lt; e &lt; \phi(n)\)</span>，且 <span class="arithmatex">\(e\)</span> 与 <span class="arithmatex">\(\phi(n)\)</span> 互质</li>
+<li>找到 <span class="arithmatex">\(d\)</span> 使得 <span class="arithmatex">\(ed \equiv 1 \pmod{\phi(n)}\)</span></li>
+<li>公钥为 <span class="arithmatex">\((n, e)\)</span>，私钥为 <span class="arithmatex">\((n, d)\)</span></li>
+<li>加密：<span class="arithmatex">\(c = m^e \bmod n\)</span></li>
+<li>解密：<span class="arithmatex">\(m = c^d \bmod n\)</span></li>
+</ul>
+</li>
+<li>证明略，带入前面的数学基础一通化就好了</li>
+<li>安全性<ul>
+<li>能分解 <span class="arithmatex">\(n\)</span> 的因子<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>得到 <span class="arithmatex">\(p\)</span> 和<span class="arithmatex">\(q\)</span><span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>破解<span class="heti-skip"><span class="heti-spacing"> </span>RSA<span class="heti-spacing"> </span></span>不比因子分解更困难</li>
+<li>不分解因子直接求<span class="arithmatex">\(\phi(n)\)</span><span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>有 <span class="arithmatex">\(\phi(n), n\)</span> 可以直接求得<span class="arithmatex">\(p, q\)</span><span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>不比因子分解更容易<ul>
+<li><span class="arithmatex">\(p+q=n-\phi(n)+1\)</span></li>
+<li><span class="arithmatex">\(p-q=\sqrt{(p+q)^2-4n}\)</span></li>
+</ul>
+</li>
+<li>不分解因子不求 <span class="arithmatex">\(\phi(n)\)</span> 直接求解<span class="arithmatex">\(d\)</span><span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span><span class="arithmatex">\(ed-1\)</span>是 <span class="arithmatex">\(\phi(n)\)</span> 倍数<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>同样可求<span class="arithmatex">\(p, q\)</span><span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>不比因子分解更容易</li>
+<li>目前 <span class="arithmatex">\(n\)</span> 长度为<span class="heti-skip"><span class="heti-spacing"> </span>1024 bit<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>2048 bit<span class="heti-spacing"> </span></span>是合理的</li>
+<li>避免选取容易分解的 <span class="arithmatex">\(n\)</span><ul>
+<li><span class="arithmatex">\(p, q\)</span> 长度相差不多</li>
+<li><span class="arithmatex">\(p-1, q-1\)</span> 有大素因子</li>
+<li><span class="arithmatex">\(\gcd(p-1, q-1)\)</span> 应该很小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>openssl<ul>
+<li>大数相关
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">BIGNUM</span><span class="w"> </span><span class="o">*</span><span class="n">pn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BN_new</span><span class="p">();</span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">BN_bin2bn</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">pn</span><span class="p">);</span>
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">BN_hex2bn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pn</span><span class="p">,</span><span class="w"> </span><span class="s">"..."</span><span class="p">);</span>
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="n">BN_CTX</span><span class="w"> </span><span class="o">*</span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BN_CTX_new</span><span class="p">();</span>
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="n">BN_mod_exp</span><span class="p">(</span><span class="n">pout</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">pe</span><span class="p">,</span><span class="w"> </span><span class="n">pn</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span><span class="w"> </span><span class="c1">// 乘方求模</span>
+<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BN_bn2bin</span><span class="p">(</span><span class="n">pout</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">);</span>
+<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="n">BN_CTF_free</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="n">BN_free</span><span class="p">(</span><span class="n">pn</span><span class="p">);</span>
+</code></pre></div><ul>
+<li><span>BN<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>128/256/512/1024<span class="heti-spacing"> </span></span>位证书</li>
+</ul>
+</li>
+<li><span>RSA<span class="heti-spacing"> </span></span>相关
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">RSA</span><span class="w"> </span><span class="o">*</span><span class="n">rsa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RSA_new</span><span class="p">();</span>
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">rsa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RSA_generate_key</span><span class="p">(</span><span class="n">bits_len</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RSA_public_encrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">rsa</span><span class="p">,</span><span class="w"> </span><span class="n">RSA_PKCS1_PADDING</span><span class="p">);</span><span class="w"> </span><span class="c1">// 公钥加密</span>
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RSA_private_decrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">rsa</span><span class="p">,</span><span class="w"> </span><span class="n">RSA_PKCS1_PADDING</span><span class="p">);</span><span class="w"> </span><span class="c1">// 私钥解密</span>
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RSA_private_encrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">rsa</span><span class="p">,</span><span class="w"> </span><span class="n">RSA_PKCS1_PADDING</span><span class="p">);</span><span class="w"> </span><span class="c1">// 私钥加密</span>
+<a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RSA_public_decrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">rsa</span><span class="p">,</span><span class="w"> </span><span class="n">RSA_PKCS1_PADDING</span><span class="p">);</span><span class="w"> </span><span class="c1">// 公钥解密</span>
+<a href="#__codelineno-16-7" id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="n">RSA_free</span><span class="p">(</span><span class="n">rsa</span><span class="p">);</span>
+</code></pre></div></li>
+<li><span>N<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>128<span class="heti-spacing"> </span></span>位时明文长度也必须是<span class="heti-skip"><span class="heti-spacing"> </span>128<span class="heti-spacing"> </span></span>位，且明文值要小于<span><span class="heti-spacing"> </span>N</span>，密文长度也是<span class="heti-skip"><span class="heti-spacing"> </span>128<span class="heti-spacing"> </span></span>位<ul>
+<li>如果明文位数很小，<span class="arithmatex">\(m^e&lt;N\)</span>，则解密时不需要用到 <span class="arithmatex">\(d\)</span>，直接对 <span class="arithmatex">\(m\)</span> 开 <span class="arithmatex">\(e\)</span> 次方即可</li>
+</ul>
+</li>
+<li>比如明文<span class="heti-skip"><span class="heti-spacing"> </span>char m[] = {'A', 'B', 'C', 'D', 0, 0, ...}<span class="heti-spacing"> </span></span>当作大数<span class="heti-skip"><span class="heti-spacing"> </span>0x414243440000...<span class="heti-spacing"> </span></span>处理</li>
+</ul>
+</li>
+<li><span>blinding<span class="heti-spacing"> </span></span>模式防止侧信道计时攻击</li>
+<li>大数快速幂
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">pow_mod</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow_mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="p">}</span>
+<a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">pow_mod</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a href="#__codelineno-17-11" id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a href="#__codelineno-17-12" id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>数字签名<ul>
+<li>对消息内容进行摘要，比如<span><span class="heti-spacing"> </span>md5</span>，得到<span><span class="heti-spacing"> </span>M</span></li>
+<li><span>A<span class="heti-spacing"> </span></span>用自己的私钥对<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>进行加密，得到签名<span><span class="heti-spacing"> </span>M'</span></li>
+<li><span>B<span class="heti-spacing"> </span></span>用<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的公钥对<span class="heti-skip"><span class="heti-spacing"> </span>M'<span class="heti-spacing"> </span></span>解密，将结果与消息摘要<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>比较</li>
+</ul>
+</li>
+</ul>
+<h2 id="ecc">ECC<a class="headerlink" href="#ecc" title="Permanent link">¶</a></h2>
+<h3 id="_11">数学基础<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>有限域上椭圆曲线<ul>
+<li>设 <span class="arithmatex">\(p&gt;3\)</span> 为素数，有限域 <span class="arithmatex">\(Z_p\)</span> 上椭圆曲线 <span class="arithmatex">\(y^2=x^3+ax+b\)</span> 是由无穷远点 <span class="arithmatex">\(\mathcal{O}\)</span> 和满足 <span class="arithmatex">\(y^2\equiv x^3+ax+b\pmod{p}\)</span> 的点 <span class="arithmatex">\((x, y)\in Z_p\times Z_p\)</span> 组成的集合 <span class="arithmatex">\(E\)</span><ul>
+<li>其中 <span class="arithmatex">\(a, b\in Z_p\)</span>，<span class="arithmatex">\(4a^3+27b^2\not\equiv 0\pmod{p}\)</span></li>
+</ul>
+</li>
+<li>定义加法：<span class="arithmatex">\(P=(x_1, y_1)\in E, Q=(x_2, y_2)\in E\)</span><ul>
+<li>如果 <span class="arithmatex">\(x_1=x_2, y_1=y_2=0\)</span>，则 <span class="arithmatex">\(P+Q=\mathcal{O}\)</span></li>
+<li>如果 <span class="arithmatex">\(x_1=x_2, y_1=-y_2\neq 0\)</span>，则 <span class="arithmatex">\(P+Q=\mathcal{O}\)</span></li>
+<li>否则 <span class="arithmatex">\(P+Q=(x_3, y_3)\)</span><ul>
+<li><span class="arithmatex">\(x_3 = \lambda^2-x_1-x_2\)</span></li>
+<li><span class="arithmatex">\(y_3 = \lambda(x_1-x_3)-y_1\)</span></li>
+<li><span class="arithmatex">\(\lambda = \begin{cases}(y_2-y_1)(x_2-x_1)^{-1} &amp; \text{if }P\neq Q \\(3x_1^2+a)(2y_1)^{-1} &amp; \text{if }P=Q\end{cases}\)</span></li>
+</ul>
+</li>
+<li>实数域上椭圆曲线加法就是两点连线与曲线的交点关于<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>轴的对称点</li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>曲线 <span class="arithmatex">\(a=1, p=11\)</span>，有点 <span class="arithmatex">\(\alpha=(2, 7)\)</span>，求 <span class="arithmatex">\(2\alpha\)</span><br/>
+<span class="arithmatex">\(\lambda = (3x_1^2+a)(2y_1)^{-1} = (3\times 4+1)(2\times 7)^{-1} = 2\times 3^{-1} = 2\times 4 = 8\pmod{11}\)</span><br/>
+<span class="arithmatex">\(x_3 = \lambda^2-x_1-x_2 = 8^2-2-2 = 60 = 5\pmod{11}\)</span><br/>
+<span class="arithmatex">\(y_3 = \lambda(x_1-x_3)-y_1 = 8\times(2-5)-7 = -31 = 2\pmod{11}\)</span><br/>
+<span class="arithmatex">\(2\alpha = (x_3, y_3) = (5, 2)\)</span></p>
+</details>
+</li>
+<li>阶<ul>
+<li>曲线的阶<heti-adjacent class="heti-adjacent-half">：</heti-adjacent><span class="arithmatex">\(|E|\)</span>（曲线上点的个数）</li>
+<li>点的阶：<span class="arithmatex">\(nP=\mathcal{O}\)</span> 的最小正整数 <span class="arithmatex">\(n\)</span></li>
+</ul>
+</li>
+<li>生成元<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>基点<ul>
+<li>如果点 <span class="arithmatex">\(P\)</span> 的阶 <span class="arithmatex">\(n=|E|\)</span>，称 <span class="arithmatex">\(P\)</span> 为 <span class="arithmatex">\(E\)</span> 的一个生成元</li>
+<li>如果 <span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(E\)</span> 的生成元，则 <span class="arithmatex">\(E=\{P, 2P, 3P, ..., (n-1)P, \mathcal{O}\}\)</span></li>
+</ul>
+</li>
+<li>一条椭圆曲线由 <span class="arithmatex">\(a, b, p\)</span>，基点 <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(G\)</span> 的阶，余因子决定<ul>
+<li>余因子为曲线的阶<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span><span class="arithmatex">\(G\)</span>的阶，通常为<span><span class="heti-spacing"> </span>1</span></li>
+</ul>
+</li>
+<li>离散对数问题<ul>
+<li><span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(E\)</span> 的生成元，<span class="arithmatex">\(Q\)</span> 是 <span class="arithmatex">\(E\)</span> 上的任意点，求 <span class="arithmatex">\(n\)</span> 使得 <span class="arithmatex">\(nP=Q\)</span></li>
+<li>离散对数问题是难解的，是<span class="heti-skip"><span class="heti-spacing"> </span>ECC<span class="heti-spacing"> </span></span>的基础</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>欧拉准则<ul>
+<li>设 <span class="arithmatex">\(p&gt;2\)</span> 是一个素数，<span class="arithmatex">\(x\)</span> 是一个整数与 <span class="arithmatex">\(p\)</span> 互素</li>
+<li>如果 <span class="arithmatex">\(y^2\equiv x\pmod p\)</span> 有解，则称 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(p\)</span> 的平方剩余，否则称为平方非剩余</li>
+<li><span class="arithmatex">\(x\)</span> 是模 <span class="arithmatex">\(p\)</span> 的平方剩余当且仅当 <span class="arithmatex">\(x^{(p-1)/2}\equiv 1\pmod p\)</span><ul>
+<li><span class="arithmatex">\(x\)</span> 两个平方根为 <span class="arithmatex">\(\pm x^{(p+1)/4}\bmod p\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(x\)</span> 是模 <span class="arithmatex">\(p\)</span> 的平方非剩余当且仅当 <span class="arithmatex">\(x^{(p-1)/2}\equiv -1\pmod p\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="ecc_1"><span>ECC<span class="heti-spacing"> </span></span>算法<a class="headerlink" href="#ecc_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>Menezes-Vanstone<span class="heti-spacing"> </span></span>公钥密码体制<ul>
+<li><span class="arithmatex">\(p&gt;3\)</span> 大素数，<span class="arithmatex">\(Z_p\)</span> 上椭圆曲线 <span class="arithmatex">\(E\)</span>，基点 <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(G\)</span> 的阶 <span class="arithmatex">\(n\)</span></li>
+<li>私钥 <span class="arithmatex">\(d\)</span> 是一个小于 <span class="arithmatex">\(n\)</span> 的随机数</li>
+<li>公钥点 <span class="arithmatex">\(R=dG\)</span></li>
+<li>加密：对 <span class="arithmatex">\(m\)</span> 进行加密，得到密文两部分 <span class="arithmatex">\((r, s)\)</span><ul>
+<li>选取随机数 <span class="arithmatex">\(k&lt;n\)</span></li>
+<li><span class="arithmatex">\(r=(kG)_x\)</span></li>
+<li><span class="arithmatex">\(s=m\times(kR)_x\bmod n\)</span></li>
+</ul>
+</li>
+<li>解密：<ul>
+<li><span class="arithmatex">\(\dfrac{s}{(d(kG))_x}=\dfrac{m\times(kR)_x}{(kdG)_x}=\dfrac{m\times(kdG)_x}{(kdG)_x}=\dfrac{m\times(kR)_x}{(kR)_x}=m\)</span></li>
+<li>需要通过 <span class="arithmatex">\(r\)</span> 找到点 <span class="arithmatex">\(kG\)</span>，然后利用私钥解密</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>ecdsa<span class="heti-spacing"> </span></span>签名验证<ul>
+<li>签名<ul>
+<li><span class="arithmatex">\(r = (kG)_x\)</span></li>
+<li><span class="arithmatex">\(s = k^{-1}(m+rd)\bmod p\)</span></li>
+</ul>
+</li>
+<li>验证<ul>
+<li><span class="arithmatex">\((s^{-1}\times m\times G + s^{-1}\times r\times R)\)</span> 横坐标是否等于 <span class="arithmatex">\(r\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>ecnr<span class="heti-spacing"> </span></span>签名验证<ul>
+<li>签名<ul>
+<li><span class="arithmatex">\(r = (kG)_x+m\)</span></li>
+<li><span class="arithmatex">\(s = k-rd\)</span></li>
+</ul>
+</li>
+<li>验证<ul>
+<li><span class="arithmatex">\(r-(sG+rR)_x\)</span> 是否等于 <span class="arithmatex">\(m\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>openssl<ul>
+<li>曲线参数 <span class="arithmatex">\(a, b, p, n, G\)</span> 和私钥 <span class="arithmatex">\(d\)</span> 都用<span class="heti-skip"><span class="heti-spacing"> </span>BN<span class="heti-spacing"> </span></span>给出</li>
+<li>设置曲线
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">EC_GROUP</span><span class="w"> </span><span class="o">*</span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EC_GROUP_new</span><span class="p">(</span><span class="n">EC_GFp_mont_method</span><span class="p">());</span>
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">BN_CTX</span><span class="w"> </span><span class="o">*</span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BN_CTX_new</span><span class="p">();</span>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">EC_GROUP_set_curve_GFp</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span>
+</code></pre></div></li>
+<li>设置基点
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">EC_POINT</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EC_POINT_new</span><span class="p">(</span><span class="n">group</span><span class="p">);</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">EC_POINT_set_affine_coordinates_GFp</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">Gx</span><span class="p">,</span><span class="w"> </span><span class="n">Gy</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span>
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">EC_GROUP_set_generator</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">BN_value_one</span><span class="p">());</span>
+</code></pre></div></li>
+<li>计算公钥 <span class="arithmatex">\(R=dG\)</span>（点乘）
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">EC_POINT</span><span class="w"> </span><span class="o">*</span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EC_POINT_new</span><span class="p">(</span><span class="n">group</span><span class="p">);</span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">EC_POINT_mul</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span>
+</code></pre></div></li>
+<li>其他函数
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">EC_POINT_get_affine_coordinates_GFp</span><span class="p">(...)</span><span class="w"> </span><span class="c1">// 类似 set，获取点横纵坐标</span>
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">EC_POINT_mul</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span><span class="w"> </span><span class="c1">// 计算 T=kR</span>
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="n">EC_POINT_set_compressed_coordinates_GFp</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span><span class="w"> </span><span class="c1">// T 横坐标为 r，计算纵坐标</span>
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="n">EC_POINT_free</span><span class="w"> </span><span class="n">EC_GROUP_free</span>
+</code></pre></div></li>
+<li>大数相关
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kt">long</span><span class="w"> </span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="n">RAND_add</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ticks</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">BN_rand</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">BN_num_bits</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 产生与 n 位数相等的随机数 k</span>
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="n">BN_copy</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span><span class="w"> </span><span class="c1">// 复制</span>
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="n">BN_mod_mul</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span><span class="w"> </span><span class="c1">// s = m * (kR)_x mod n</span>
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="n">BN_mod_inverse</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">);</span><span class="w"> </span><span class="c1">// k = k^-1 mod n</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+<br/>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+</small>
+</div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOGnfbUc4CPrf4" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="TonyCrane/note" data-repo-id="R_kgDOGnfbUQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/TonyCrane/note/docs/css/giscus.css") 
+                      }
+                    </script>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              回到页面顶部
+            </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Security" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              Security
+            </div>
+</div>
+</a>
+<a aria-label="下一页: 软件安全原理和实践" class="md-footer__link md-footer__link--next" href="../softsec/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              软件安全原理和实践
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022-2023 <a href="https://github.com/TonyCrane" rel="noopener" target="_blank">TonyCrane</a>
+</div>
+  
+  
+    Powered by
+    <a href="https://www.mkdocs.org/" rel="noopener" target="_blank">
+      MkDocs
+    </a>
+    with theme
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material
+    </a>
+    modified by
+    <a href="https://github.com/TonyCrane" rel="noopener" target="_blank">
+      TonyCrane
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/TonyCrane/" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://blog.tonycrane.cc/" rel="noopener" target="_blank" title="blog.tonycrane.cc">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg>
+</a>
+<a class="md-social__link" href="https://tonycrane.cc/" rel="noopener" target="_blank" title="tonycrane.cc">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M280.37 148.26 96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47 488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="../../js/katex.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
