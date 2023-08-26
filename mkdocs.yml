@@ -1,0 +1,347 @@
+site_name: 鹤翔万里的笔记本
+site_url: https://note.tonycrane.cc/
+repo_name: TonyCrane/note
+repo_url: https://github.com/TonyCrane/note/
+edit_uri: tree/master/docs
+site_description: 鹤翔万里（TonyCrane）的笔记本
+copyright: Copyright &copy; 2022-2023 <a href="https://github.com/TonyCrane" target="_blank" rel="noopener">TonyCrane</a>
+
+theme: 
+  name: 'material'
+  language: 'zh'
+  icon: 
+    logo: material/notebook-outline
+  custom_dir: overrides
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+  font: false
+  palette:
+    - scheme: default
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TonyCrane/
+    - icon: fontawesome/solid/rss
+      link: https://blog.tonycrane.cc/
+    - icon: fontawesome/solid/home
+      link: https://tonycrane.cc/
+  analytics:
+    provider: custom
+    property: G-DYETCPM289
+
+extra_css:
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://cdn.tonycrane.cc/utils/katex.min.css
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - css/tasklist.css
+  - css/custom.css
+  - css/card.css
+  - css/flink.css
+  - css/changelog_extra.css
+  # - css/heti.css
+
+extra_javascript:
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+  - https://cdn.tonycrane.cc/utils/katex.min.js
+  - js/katex.js
+  # - js/heti.js
+  # - js/scheme.js # this is in template 'base.html'
+
+plugins:
+  - rss
+  - search
+  - glightbox:
+      width: 80%
+  - encryptcontent:  # now just for one page, need to be improved
+      title_prefix: "🔒 "
+      remember_password: True 
+      default_expire_dalay: 48
+      decryption_failure_message: '密码错误'
+      encrypted_something:
+        mkdocs-encrypted-toc: [nav, class]
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - writeups/AAA.md
+  - changelog
+  - statistics:
+      page_check_metadata: comment
+  - heti:
+      extra_skipped_class:
+        - arithmatex
+  - linkbackward:
+      wait_time: 0
+      redirections:
+        - /ctf/steg/ -> /ctf/misc/steg/
+        - /ctf/steg/image/ -> /ctf/misc/steg/image/
+        - /ctf/steg/audio/ -> /ctf/misc/steg/audio/
+        - /ctf/escapes/ -> /ctf/misc/escapes/
+        - /ctf/escapes/pysandbox/ -> /ctf/misc/escapes/pysandbox/
+        - /ctf/forensics/ -> /ctf/misc/forensics/
+        - /ctf/forensics/mem/ -> /ctf/misc/forensics/mem/
+        - /ctf/coding/ -> /ctf/misc/coding/
+        - /ctf/qrcode/ -> /ctf/misc/qrcode/
+        - /ctf/esolang/ -> /ctf/misc/esolang/
+        - /cs/pl/c_cpp/ -> /cs/pl/c_cpp/c/
+        - /hpc/ -> /cs/hpc/hpc101/
+        - /hpc/hpc101/vectorized/ -> /cs/hpc/hpc101/vectorized/
+        - /hpc/hpc101/gpu/ -> /cs/hpc/hpc101/gpu/
+        - /hpc/hpc101/openmp/ -> /cs/hpc/hpc101/openmp/
+        - /hpc/hpc101/mpi/ -> /cs/hpc/hpc101/mpi/
+        - /hpc/hpc101/ml/ -> /cs/hpc/hpc101/ml/
+
+nav:
+  - Home:
+    - index.md
+    - 更新记录: changelog.md
+    - 友链: links.md
+  - Computer Science:
+    - cs/index.md
+    - 编程语言 & ISA:
+      - cs/pl/index.md
+      - C/C++:
+        - C 语言杂项: cs/pl/c_cpp/c.md
+        - C++ 面向对象: cs/pl/c_cpp/oop.md
+      - Python:
+        - cs/pl/python/index.md
+        - Python 基础语法: cs/pl/python/basic.md
+        - NumPy: cs/pl/python/numpy.md
+        - PIL: cs/pl/python/pil.md
+      - Rust:
+        - cs/pl/rust/index.md
+        - Rust 基础语法: cs/pl/rust/basic.md
+        - Rust 杂项随记: cs/pl/rust/misc.md
+      - Haskell: cs/pl/haskell.md
+      - Chisel: cs/pl/chisel.md
+      - x86 汇编语言: cs/pl/asm.md
+      - RISC-V ISA: 
+        - cs/pl/riscv/index.md
+        - RISC-V 非特权级 ISA: cs/pl/riscv/unprivileged.md
+        - RISC-V 特权级 ISA: cs/pl/riscv/privileged.md
+        - RISC-V 页表相关: cs/pl/riscv/paging.md
+    - 计算机系统:
+      - cs/system/index.md
+      - 计算机系统 I:
+        - cs/system/cs1/index.md
+        - 数据的表示: cs/system/cs1/topic1.md
+        - 数字逻辑电路基础: cs/system/cs1/topic2.md
+        - 组合逻辑电路设计: cs/system/cs1/topic3.md
+        - 时序逻辑电路设计: cs/system/cs1/topic4.md
+        - 指令集体系结构: cs/system/cs1/topic5.md
+        - 处理器: cs/system/cs1/topic6.md
+        - 系统 I 实验部分:
+          - 系统 I lab1-1: cs/system/cs1/lab1-1.md
+          - 系统 I lab1-2: cs/system/cs1/lab1-2.md
+          - 系统 I lab2-1: cs/system/cs1/lab2-1.md
+          - 系统 I lab2-2: cs/system/cs1/lab2-2.md
+          - 系统 I lab3: cs/system/cs1/lab3.md
+          - 系统 I lab4-1: cs/system/cs1/lab4-1.md
+          - 系统 I lab4-2: cs/system/cs1/lab4-2.md
+          - 系统 I lab5-1: cs/system/cs1/lab5-1.md
+          - 系统 I lab5-2: cs/system/cs1/lab5-2.md
+      - 计算机系统 II:
+        - cs/system/cs2/index.md
+        - 流水线 CPU: cs/system/cs2/topic1.md
+        - 操作系统简介: cs/system/cs2/topic2.md
+        - 操作系统结构及系统调用: cs/system/cs2/topic3.md
+        - 进程与线程: cs/system/cs2/topic4.md
+        - CPU 调度: cs/system/cs2/topic5.md
+        - 进程同步: cs/system/cs2/topic6.md
+        - 系统 II 实验部分:
+          - 系统 II lab1: cs/system/cs2/lab1.md
+          - 系统 II lab2: cs/system/cs2/lab2.md
+          - 系统 II lab3: cs/system/cs2/lab3.md
+          - 系统 II lab4: cs/system/cs2/lab4.md
+          - 系统 II lab5: cs/system/cs2/lab5.md
+          - 系统 II lab6: cs/system/cs2/lab6.md
+          - 系统 II lab7: cs/system/cs2/lab7.md
+      - 计算机系统 III:
+        - cs/system/cs3/index.md
+        - 系统量化研究方法: cs/system/cs3/topic1.md
+        - 系统 III 实验部分:
+          - 系统 III lab1: cs/system/cs3/lab1.md
+          - 系统 III lab2: cs/system/cs3/lab2.md
+          - 系统 III lab3: cs/system/cs3/lab3.md
+          - 系统 III lab4: cs/system/cs3/lab4.md
+          - 系统 III lab5: cs/system/cs3/lab5.md
+      - ICS PA 实验纪实: cs/system/pa.md
+    - 算法相关:
+      - 数据结构基础:
+        - cs/algorithm/ds/index.md
+        - 算法分析基础: cs/algorithm/ds/topic1.md
+        - 基础数据结构: cs/algorithm/ds/summary1.md
+        - 排序与哈希: cs/algorithm/ds/summary2.md
+    - 人工智能相关:
+      - 人工智能基础: cs/ai/basic.md
+    - 高性能计算:
+      - HPC 101 超算小学期:
+        - cs/hpc/hpc101/index.md
+        - 向量化计算: cs/hpc/hpc101/vectorized.md
+        - GPU 编程: cs/hpc/hpc101/gpu.md
+        - OpenMP 基础: cs/hpc/hpc101/openmp.md
+        - MPI 基础: cs/hpc/hpc101/mpi.md
+        - 机器学习基础: cs/hpc/hpc101/ml.md
+    - 零散知识点:
+      - 正则表达式: cs/regex.md
+      - Unicode: cs/unicode.md
+    - 源码剖析:
+      - cs/analysis/index.md
+      - mkdocs 源码剖析: cs/analysis/mkdocs.md
+    - 工具相关:
+      - cs/tools/index.md
+      - 工具收集: cs/tools/toolbox.md
+      - 命令行工具:
+        - Git 命令备忘: cs/tools/git.md
+        - Shell 命令备忘: cs/tools/shell.md
+        - Docker 相关备忘: cs/tools/docker.md
+        - gdb 相关备忘: cs/tools/gdb.md
+      - CI 工具:
+        - GitHub Action: cs/tools/action.md
+      - 站点生成工具:
+        - mkdocs 使用记录: cs/tools/mkdocs.md
+        - hexo 使用记录: cs/tools/hexo.md
+        - sphinx 使用记录: cs/tools/sphinx.md
+  - Security:
+    - sec/index.md
+    - 密码学:
+      - sec/crypto/index.md
+    - 软件安全:
+      - sec/softsec/index.md
+      - 软件安全 lab1: sec/softsec/lab1.md
+      - 软件安全 lab2: sec/softsec/lab2.md
+      - 软件安全 lab3: sec/softsec/lab3.md
+      - 软件安全 lab4: sec/softsec/lab4.md
+      - 软件安全 final lab: sec/softsec/final.md
+    - 漏洞复现:
+      - log4j 漏洞复现: sec/vulns/log4j.md
+  - Web:
+    - web/index.md
+    - 网络协议:
+      - web/protocol/index.md
+      - VMess: web/protocol/vmess.md
+    - 排版写作规范:
+      - 中文排版需求: web/typesetting/clreq.md
+      - 中文技术文档风格指南: web/typesetting/tech.md
+    - SVG: web/svg.md
+  - CTF:
+    - ctf/index.md
+    - misc:
+      - 隐写术:
+        - ctf/misc/steg/index.md
+        - 图片隐写: ctf/misc/steg/image.md
+        - 音频隐写: ctf/misc/steg/audio.md
+      - 沙箱逃逸: 
+        - ctf/misc/escapes/index.md
+        - Python 沙箱逃逸: ctf/misc/escapes/pysandbox.md
+      - 取证:
+        - ctf/misc/forensics/index.md
+        - 内存取证: ctf/misc/forensics/mem.md
+      - 编码/密码类:
+        - 编码及古典密码: ctf/misc/coding.md
+        - QRCode: ctf/misc/qrcode.md
+        - Esolang: ctf/misc/esolang.md
+      - Blockchain:
+        - ctf/blockchain/index.md
+        - Ethereum:
+          - ctf/blockchain/eth/index.md
+          - 以太坊基础: ctf/blockchain/eth/basic.md
+          - 以太坊虚拟机: ctf/blockchain/eth/evm.md
+          - Solidity 语言: ctf/blockchain/eth/solidity.md
+          - Yul 语言: ctf/blockchain/eth/yul.md
+          - 常见合约漏洞攻击手段: ctf/blockchain/eth/vuln.md
+          - ERC 标准: ctf/blockchain/eth/erc.md
+          - 其余重要 EIPs: ctf/blockchain/eth/eip.md
+        - Solana:
+          - ctf/blockchain/solana/index.md
+    - pwn:
+      - 栈漏洞利用:
+        - ctf/pwn/stack/index.md
+      - 堆漏洞利用:
+        - ctf/pwn/heap/index.md
+  - Writeups:
+    - writeups/index.md
+    - Training:
+      - Ethernaut: writeups/ethernaut.md
+      - Security Innovation: writeups/SecurityInnovation.md
+      - SadServers: writeups/sadservers.md
+      - AAA School Bus: writeups/AAA.md
+    - "2021":
+      - SYSU MSC Puzzle 2021: writeups/sysu_msc_puzzle.md
+      - USTC Hackergame 2021: writeups/hackergame2021.md
+      - 第四届“安洵杯”: writeups/d0g3.md
+      - ByteCTF 2021 Final: writeups/bytectf2021_final.md
+      - SCTF 2021: writeups/sctf2021.md
+    - "2022":
+      - VNCTF 2022: writeups/vnctf2022.md
+      - TQLCTF 2022: writeups/tqlctf2022.md
+      - SUSCTF 2022: writeups/susctf2022.md
+      - D3CTF 2022: writeups/d3ctf2022.md
+      - "*CTF 2022": writeups/*ctf2022.md
+      - MRCTF 2022: writeups/mrctf2022.md
+      - 强网杯 2022 Quals: writeups/qwb2022.md
+      - TCTF/0CTF 2022: writeups/tctf2022.md
+      - USTC Hackergame 2022: writeups/hackergame2022.md
+      - N1CTF 2022: writeups/n1ctf2022.md
+      - SECCON 2022 Quals: writeups/seccon2022.md
+      - RCTF 2022: writeups/rctf2022.md
+    - "2023":
+      - SECCON 2022 Final: writeups/seccon2022final.md
+      - XCTF 2022 Final: writeups/xctf2022final.md
+      - MidnightSun 2023 Quals: writeups/midnight2023.md
+      - AliyunCTF 2023: writeups/aliyunctf2023.md
+      - CISCN 2023 Quals: writeups/ciscn2023.md
+  - Others:
+    - others/index.md
+    - 课程笔记: others/notes.md
+    - 字幕制作系列:
+      - others/subs/index.md
+      - ass 标签: others/subs/ass.md
+      - Aegisub 自动化: others/subs/aegisub/automation.md
+      - Aegisub 卡拉 OK 模板: others/subs/aegisub/karaoke.md
+      - ffmpeg 套件杂记: others/subs/ffmpeg.md
+    - TroubleShooting:
+      - others/troubleshooting/index.md
+      - macOS TroubleShooting: others/troubleshooting/mac.md
