@@ -1,797 +1,797 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://note.tonycrane.cc/</loc>
+         <loc>https://note.jujimeizuo/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/changelog/</loc>
+         <loc>https://note.jujimeizuo/changelog/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/links/</loc>
+         <loc>https://note.jujimeizuo/links/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/todo/</loc>
+         <loc>https://note.jujimeizuo/todo/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/</loc>
+         <loc>https://note.jujimeizuo/cs/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/regex/</loc>
+         <loc>https://note.jujimeizuo/cs/regex/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/unicode/</loc>
+         <loc>https://note.jujimeizuo/cs/unicode/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/ai/basic/</loc>
+         <loc>https://note.jujimeizuo/cs/ai/basic/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/algorithm/ds/</loc>
+         <loc>https://note.jujimeizuo/cs/algorithm/ds/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/algorithm/ds/summary1/</loc>
+         <loc>https://note.jujimeizuo/cs/algorithm/ds/summary1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/algorithm/ds/summary2/</loc>
+         <loc>https://note.jujimeizuo/cs/algorithm/ds/summary2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/algorithm/ds/topic1/</loc>
+         <loc>https://note.jujimeizuo/cs/algorithm/ds/topic1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/analysis/</loc>
+         <loc>https://note.jujimeizuo/cs/analysis/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/analysis/mkdocs/</loc>
+         <loc>https://note.jujimeizuo/cs/analysis/mkdocs/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/hpc/hpc101/</loc>
+         <loc>https://note.jujimeizuo/cs/hpc/hpc101/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/hpc/hpc101/gpu/</loc>
+         <loc>https://note.jujimeizuo/cs/hpc/hpc101/gpu/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/hpc/hpc101/ml/</loc>
+         <loc>https://note.jujimeizuo/cs/hpc/hpc101/ml/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/hpc/hpc101/mpi/</loc>
+         <loc>https://note.jujimeizuo/cs/hpc/hpc101/mpi/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/hpc/hpc101/openmp/</loc>
+         <loc>https://note.jujimeizuo/cs/hpc/hpc101/openmp/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/hpc/hpc101/vectorized/</loc>
+         <loc>https://note.jujimeizuo/cs/hpc/hpc101/vectorized/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/asm/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/asm/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/chisel/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/chisel/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/haskell/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/haskell/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/c_cpp/c/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/c_cpp/c/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/c_cpp/oop/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/c_cpp/oop/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/python/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/python/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/python/basic/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/python/basic/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/python/numpy/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/python/numpy/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/python/pil/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/python/pil/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/riscv/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/riscv/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/riscv/paging/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/riscv/paging/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/riscv/privileged/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/riscv/privileged/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/riscv/unprivileged/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/riscv/unprivileged/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/rust/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/rust/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/rust/basic/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/rust/basic/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/pl/rust/misc/</loc>
+         <loc>https://note.jujimeizuo/cs/pl/rust/misc/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/</loc>
+         <loc>https://note.jujimeizuo/cs/system/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/pa/</loc>
+         <loc>https://note.jujimeizuo/cs/system/pa/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab1-1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab1-1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab1-2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab1-2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab2-1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab2-1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab2-2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab2-2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab3/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab4-1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab4-1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab4-2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab4-2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab5-1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab5-1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/lab5-2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/lab5-2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/topic1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/topic1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/topic2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/topic2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/topic3/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/topic3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/topic4/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/topic4/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/topic5/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/topic5/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs1/topic6/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs1/topic6/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab3/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab4/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab4/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab5/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab5/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab6/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab6/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/lab7/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/lab7/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/topic1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/topic1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/topic2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/topic2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/topic3/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/topic3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/topic4/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/topic4/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/topic5/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/topic5/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs2/topic6/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs2/topic6/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/lab1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/lab1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/lab2/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/lab2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/lab3/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/lab3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/lab4/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/lab4/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/lab5/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/lab5/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/system/cs3/topic1/</loc>
+         <loc>https://note.jujimeizuo/cs/system/cs3/topic1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/action/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/action/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/docker/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/docker/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/gdb/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/gdb/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/git/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/git/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/hexo/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/hexo/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/mkdocs/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/mkdocs/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/shell/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/shell/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/sphinx/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/sphinx/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/cs/tools/toolbox/</loc>
+         <loc>https://note.jujimeizuo/cs/tools/toolbox/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/</loc>
+         <loc>https://note.jujimeizuo/ctf/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/basic/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/basic/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/eip/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/eip/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/erc/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/erc/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/evm/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/evm/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/solidity/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/solidity/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/vuln/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/vuln/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/eth/yul/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/eth/yul/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/blockchain/solana/</loc>
+         <loc>https://note.jujimeizuo/ctf/blockchain/solana/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/coding/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/coding/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/esolang/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/esolang/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/qrcode/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/qrcode/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/escapes/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/escapes/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/escapes/pysandbox/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/escapes/pysandbox/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/forensics/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/forensics/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/forensics/mem/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/forensics/mem/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/steg/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/steg/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/steg/audio/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/steg/audio/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/misc/steg/image/</loc>
+         <loc>https://note.jujimeizuo/ctf/misc/steg/image/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/pwn/heap/</loc>
+         <loc>https://note.jujimeizuo/ctf/pwn/heap/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/ctf/pwn/stack/</loc>
+         <loc>https://note.jujimeizuo/ctf/pwn/stack/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/</loc>
+         <loc>https://note.jujimeizuo/others/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/notes/</loc>
+         <loc>https://note.jujimeizuo/others/notes/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/subs/</loc>
+         <loc>https://note.jujimeizuo/others/subs/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/subs/ass/</loc>
+         <loc>https://note.jujimeizuo/others/subs/ass/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/subs/ffmpeg/</loc>
+         <loc>https://note.jujimeizuo/others/subs/ffmpeg/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/subs/aegisub/automation/</loc>
+         <loc>https://note.jujimeizuo/others/subs/aegisub/automation/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/subs/aegisub/karaoke/</loc>
+         <loc>https://note.jujimeizuo/others/subs/aegisub/karaoke/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/troubleshooting/</loc>
+         <loc>https://note.jujimeizuo/others/troubleshooting/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/others/troubleshooting/mac/</loc>
+         <loc>https://note.jujimeizuo/others/troubleshooting/mac/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/</loc>
+         <loc>https://note.jujimeizuo/sec/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/crypto/</loc>
+         <loc>https://note.jujimeizuo/sec/crypto/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/softsec/</loc>
+         <loc>https://note.jujimeizuo/sec/softsec/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/softsec/final/</loc>
+         <loc>https://note.jujimeizuo/sec/softsec/final/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/softsec/lab1/</loc>
+         <loc>https://note.jujimeizuo/sec/softsec/lab1/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/softsec/lab2/</loc>
+         <loc>https://note.jujimeizuo/sec/softsec/lab2/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/softsec/lab3/</loc>
+         <loc>https://note.jujimeizuo/sec/softsec/lab3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/softsec/lab4/</loc>
+         <loc>https://note.jujimeizuo/sec/softsec/lab4/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/sec/vulns/log4j/</loc>
+         <loc>https://note.jujimeizuo/sec/vulns/log4j/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/web/</loc>
+         <loc>https://note.jujimeizuo/web/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/web/svg/</loc>
+         <loc>https://note.jujimeizuo/web/svg/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/web/protocol/</loc>
+         <loc>https://note.jujimeizuo/web/protocol/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/web/protocol/vmess/</loc>
+         <loc>https://note.jujimeizuo/web/protocol/vmess/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/web/typesetting/clreq/</loc>
+         <loc>https://note.jujimeizuo/web/typesetting/clreq/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/web/typesetting/tech/</loc>
+         <loc>https://note.jujimeizuo/web/typesetting/tech/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/</loc>
+         <loc>https://note.jujimeizuo/writeups/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/%2Actf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/%2Actf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/SecurityInnovation/</loc>
+         <loc>https://note.jujimeizuo/writeups/SecurityInnovation/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/aliyunctf2023/</loc>
+         <loc>https://note.jujimeizuo/writeups/aliyunctf2023/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/bytectf2021_final/</loc>
+         <loc>https://note.jujimeizuo/writeups/bytectf2021_final/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/ciscn2023/</loc>
+         <loc>https://note.jujimeizuo/writeups/ciscn2023/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/d0g3/</loc>
+         <loc>https://note.jujimeizuo/writeups/d0g3/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/d3ctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/d3ctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/ethernaut/</loc>
+         <loc>https://note.jujimeizuo/writeups/ethernaut/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/hackergame2021/</loc>
+         <loc>https://note.jujimeizuo/writeups/hackergame2021/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/hackergame2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/hackergame2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/midnight2023/</loc>
+         <loc>https://note.jujimeizuo/writeups/midnight2023/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/mrctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/mrctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/n1ctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/n1ctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/qwb2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/qwb2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/rctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/rctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/sadservers/</loc>
+         <loc>https://note.jujimeizuo/writeups/sadservers/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/sctf2021/</loc>
+         <loc>https://note.jujimeizuo/writeups/sctf2021/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/seccon2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/seccon2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/seccon2022final/</loc>
+         <loc>https://note.jujimeizuo/writeups/seccon2022final/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/susctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/susctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/sysu_msc_puzzle/</loc>
+         <loc>https://note.jujimeizuo/writeups/sysu_msc_puzzle/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/tctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/tctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/tqlctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/tqlctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/vnctf2022/</loc>
+         <loc>https://note.jujimeizuo/writeups/vnctf2022/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.tonycrane.cc/writeups/xctf2022final/</loc>
+         <loc>https://note.jujimeizuo/writeups/xctf2022final/</loc>
          <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
