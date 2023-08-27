@@ -2,797 +2,797 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://note.jujimeizuo.cn/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/changelog/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/links/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/todo/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/regex/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/unicode/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/ai/basic/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/algorithm/ds/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/algorithm/ds/summary1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/algorithm/ds/summary2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/algorithm/ds/topic1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/analysis/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/analysis/mkdocs/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/hpc101/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/hpc101/gpu/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/hpc101/ml/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/hpc101/mpi/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/hpc101/openmp/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/hpc101/vectorized/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/asm/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/chisel/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/haskell/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/c/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/oop/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/basic/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/numpy/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/pil/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/riscv/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/riscv/paging/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/riscv/privileged/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/riscv/unprivileged/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/rust/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/rust/basic/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/rust/misc/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/pa/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab1-1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab1-2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab2-1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab2-2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab4-1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab4-2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab5-1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/lab5-2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/topic1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/topic2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/topic3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/topic4/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/topic5/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs1/topic6/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab4/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab5/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab6/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/lab7/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/topic1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/topic2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/topic3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/topic4/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/topic5/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs2/topic6/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/lab1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/lab2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/lab3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/lab4/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/lab5/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/system/cs3/topic1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/action/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/docker/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/gdb/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/git/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/hexo/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/mkdocs/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/shell/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/sphinx/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/tools/toolbox/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/basic/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/eip/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/erc/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/evm/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/solidity/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/vuln/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/eth/yul/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/blockchain/solana/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/coding/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/esolang/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/qrcode/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/escapes/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/escapes/pysandbox/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/forensics/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/forensics/mem/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/steg/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/steg/audio/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/misc/steg/image/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/pwn/heap/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/ctf/pwn/stack/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/notes/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/subs/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/subs/ass/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/subs/ffmpeg/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/subs/aegisub/automation/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/subs/aegisub/karaoke/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/troubleshooting/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/others/troubleshooting/mac/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/crypto/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/softsec/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/softsec/final/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/softsec/lab1/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/softsec/lab2/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/softsec/lab3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/softsec/lab4/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/sec/vulns/log4j/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/web/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/web/svg/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/web/protocol/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/web/protocol/vmess/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/web/typesetting/clreq/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/web/typesetting/tech/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/%2Actf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/SecurityInnovation/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/aliyunctf2023/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/bytectf2021_final/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/ciscn2023/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/d0g3/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/d3ctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/ethernaut/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/hackergame2021/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/hackergame2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/midnight2023/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/mrctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/n1ctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/qwb2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/rctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/sadservers/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/sctf2021/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/seccon2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/seccon2022final/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/susctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/sysu_msc_puzzle/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/tctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/tqlctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/vnctf2022/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/writeups/xctf2022final/</loc>
-         <lastmod>2023-08-26</lastmod>
+         <lastmod>2023-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
