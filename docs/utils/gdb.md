@@ -1,11 +1,16 @@
+---
+counter: True
+comment: True
+---
+
 # gdb 命令相关
 
 !!! abstract
     gdb相关的一些命令，插件等
 
-## 1 前言
+## 前言
 
-### 1.1 什么是gdb
+### 什么是gdb
 
 > GNU调试器（英语：GNU Debugger，缩写：GDB），是GNU软件系统中的标准调试器，此外GDB也是个具有移携性的调试器，经过移携需求的调修与重新编译，如今许多的类UNIX操作系统上都可以使用GDB，而现有GDB所能支持调试的编程语言有C、C++、Pascal以及FORTRAN。
 > <div style="text-align: right">———— 维基百科</div>
@@ -26,9 +31,9 @@
 $ gcc -g -Wall test.c -o test
 ```
 
-## 2 gdb命令
+## gdb命令
 
-### 2.1 过程操作
+### 过程操作
 
 - `gdb` (可执行程序) 启动gdb调试
 - `quit / q` 退出gdb调试
@@ -41,7 +46,7 @@ $ gcc -g -Wall test.c -o test
 - `ptype 变量名` 打印变量类型
 - `until` 跳出循环
 
-### 2.2 断点
+### 断点
 
 - `gdb break (file:)line/function` 断在(文件:)行号或函数(b)
 - `gdb break *0x....` 断在地址
@@ -55,7 +60,7 @@ $ gcc -g -Wall test.c -o test
 - `gdb break/watch <where> if <condition>` 如果条件满足则断
 - `gdb condition <breakpoint#> <condition>` 更改条件
 
-### 2.3 运行
+### 运行
 - `gdb start` 程序停在第一行
 - `gdb run` 直接运行，遇到端点才停止 (r)
 - `gdb continue` 继续运行 (c)
@@ -66,7 +71,7 @@ $ gcc -g -Wall test.c -o test
 - `gdb detach` 从当前程序断连
 - `gdb target remote localhost:1234` 连接 qemu
 
-### 2.4 调用栈
+### 调用栈
 
 - `gdb backtrace` 查看调用栈 (bt)
 - `gdb frame` 查看当前帧栈
@@ -74,9 +79,9 @@ $ gcc -g -Wall test.c -o test
 - `gdb info locals` 查看当前帧栈变量
 - `gdb info args` 查看函数参数
 
-## 3 gdb插件
+## gdb插件
 
-### 3.1 gdb-peda
+### gdb-peda
 
 每条指令带寄存器、汇编、内存数据回显
 
