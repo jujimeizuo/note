@@ -69,9 +69,9 @@ extra_css:
   # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  - https://cdn.tonycrane.cc/utils/katex.min.css
-  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
-  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - https://cdn.jujimeizuo.cn/utils/katex.min.css
+  - https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css
+  - https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css
   - css/tasklist.css
   - css/custom.css
   - css/card.css
@@ -81,7 +81,7 @@ extra_css:
 
 extra_javascript:
   # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
-  - https://cdn.tonycrane.cc/utils/katex.min.js
+  - https://cdn.jujimeizuo.cn/utils/katex.min.js
   - js/katex.js
   # - js/heti.js
   # - js/scheme.js # this is in template 'base.html'
@@ -138,6 +138,19 @@ nav:
     - index.md
     - 更新记录: changelog.md
     - 友链: links.md
+  - Utils:
+    - utils/index.md
+    - 工具收集: utils/utilsbox.md
+    - 命令行工具:
+      - Shell 命令相关: utils/shell.md
+      - Git 命令相关: utils/git.md
+      - Docker 命令相关: utils/docker.md
+      - gdb 命令相关: utils/gdb.md
+    - CI 工具:
+      - Github Action: utils/action.md
+    - 站点生成工具:
+      - mkdocs: utils/mkdocs.md
+      - hexo: utils/hexo.md
   # - Computer Science:
   #   - cs/index.md
   #   - 编程语言 & ISA:
