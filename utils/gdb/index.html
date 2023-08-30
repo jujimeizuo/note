@@ -4,23 +4,23 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/links/" rel="canonical"/>
-<link href="../assets/images/favicon.png" rel="icon"/>
+<link href="https://note.jujimeizuo.cn/utils/gdb/" rel="canonical"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>友链 - 狙击美佐的笔记本</title>
-<link href="../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
-<link href="../css/heti.css" rel="stylesheet"/>
-<link href="../css/timeline.css" rel="stylesheet"/>
+<title>gdb 命令相关 - 狙击美佐的笔记本</title>
+<link href="../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<link href="../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../css/tasklist.css" rel="stylesheet"/>
-<link href="../css/custom.css" rel="stylesheet"/>
-<link href="../css/card.css" rel="stylesheet"/>
-<link href="../css/flink.css" rel="stylesheet"/>
-<link href="../css/changelog_extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<link href="../../css/card.css" rel="stylesheet"/>
+<link href="../../css/flink.css" rel="stylesheet"/>
+<link href="../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -32,15 +32,26 @@ var _hmt = _hmt || [];
 </script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-DYETCPM289"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-DYETCPM289",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DYETCPM289"></script>
-</head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
-<script src="../js/scheme.js" type="text/javascript"></script>
+<script src="../../js/scheme.js" type="text/javascript"></script>
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#gdb">
             跳转至
           </a>
 </div>
@@ -48,7 +59,7 @@ var _hmt = _hmt || [];
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href=".." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -64,7 +75,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              友链
+              gdb 命令相关
             
           </span>
 </div>
@@ -133,12 +144,12 @@ var _hmt = _hmt || [];
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="..">
+<a class="md-tabs__link" href="../..">
         Home
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../utils/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         Utils
       </a>
 </li>
@@ -152,7 +163,7 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href=".." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
     狙击美佐的笔记本
@@ -168,10 +179,10 @@ var _hmt = _hmt || [];
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="..">Home</a>
+<a href="../..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -183,23 +194,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../changelog/">
+<a class="md-nav__link" href="../../changelog/">
         更新记录
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../links/">
         友链
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../utils/">Utils</a>
+<a href="../">Utils</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -211,12 +221,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/utilsbox/">
+<a class="md-nav__link" href="../utilsbox/">
         工具收集
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_3">
           命令行工具
           <span class="md-nav__icon md-icon"></span>
@@ -228,24 +238,104 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/shell/">
+<a class="md-nav__link" href="../shell/">
         Shell 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/git/">
+<a class="md-nav__link" href="../git/">
         Git 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/docker/">
+<a class="md-nav__link" href="../docker/">
         Docker 命令相关
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../utils/gdb/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          gdb 命令相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         gdb 命令相关
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1 前言
+  </a>
+<nav aria-label="1 前言" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-gdb">
+    1.1 什么是gdb
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    准备工作
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-gdb">
+    2 gdb命令
+  </a>
+<nav aria-label="2 gdb命令" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+    2.1 过程操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22">
+    2.2 断点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23">
+    2.3 运行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24">
+    2.4 调用栈
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-gdb">
+    3 gdb插件
+  </a>
+<nav aria-label="3 gdb插件" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-gdb-peda">
+    3.1 gdb-peda
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -263,7 +353,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/action/">
+<a class="md-nav__link" href="../action/">
         Github Action
       </a>
 </li>
@@ -283,12 +373,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/mkdocs/">
+<a class="md-nav__link" href="../mkdocs/">
         mkdocs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../utils/hexo/">
+<a class="md-nav__link" href="../hexo/">
         hexo
       </a>
 </li>
@@ -307,6 +397,79 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1 前言
+  </a>
+<nav aria-label="1 前言" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-gdb">
+    1.1 什么是gdb
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    准备工作
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-gdb">
+    2 gdb命令
+  </a>
+<nav aria-label="2 gdb命令" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+    2.1 过程操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22">
+    2.2 断点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23">
+    2.3 运行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24">
+    2.4 调用栈
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-gdb">
+    3 gdb插件
+  </a>
+<nav aria-label="3 gdb插件" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-gdb-peda">
+    3.1 gdb-peda
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -315,154 +478,102 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/links.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/utils/gdb.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">友链<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="gdb"><span>gdb<span class="heti-spacing"> </span></span>命令相关<a class="headerlink" href="#gdb" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>一些朋友们的笔记本！</p>
+<p><span>gdb<span class="heti-spacing"> </span></span>相关的一些命令，插件等</p>
 </div>
-<div class="flink-list">
-<!-- <div class="flink-list-item">
-    <a href="https://note.isshikih.top/" title="Isshiki修's Notebook" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/isshiki.png" alt="Isshiki修">
-        </div>
-        <div class="flink-item-name heti-skip">Isshiki修's Notebook</div>
-        <div class="flink-item-desc">修佬 tql！</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://xuan-insr.github.io/" title="咸鱼暄的代码空间" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/xyx.ico" alt="咸鱼暄">
-        </div>
-        <div class="flink-item-name">咸鱼暄的代码空间</div>
-        <div class="flink-item-desc">一个好怪的学长（划掉</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://notes.widcard.win/" title="widcardw 的笔记" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/wid.png" alt="widcardw">
-        </div>
-        <div class="flink-item-name">widcardw 的笔记</div>
-        <div class="flink-item-desc">wid 好强，笔记好好看</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://blog.chenyuan.me/" title="chenyuan 的技术笔记本" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/cy.jpeg" alt="zjuchenyuan">
-        </div>
-        <div class="flink-item-name">chenyuan 的技术笔记本</div>
-        <div class="flink-item-desc">\cydl/\cydl/\cydl/</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://yhwu-is.github.io/Notes/" title="yhwu_is's Notes" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/wyy.jpg" alt="yhwu_is's Notes">
-        </div>
-        <div class="flink-item-name">yhwu_is's Notes</div>
-        <div class="flink-item-desc">wyy! 我滴超人</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://frightenedfoxcn.github.io/notes/" title="FFox's Notes" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/ffox.jpg" alt="FFox's Notes">
-        </div>
-        <div class="flink-item-name">FFox's Notes</div>
-        <div class="flink-item-desc">kami❗️</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://note.hobbitqia.cc" title="HobbitQia 的笔记本" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/q.ico" alt="HobbitQia 的笔记本">
-        </div>
-        <div class="flink-item-name">HobbitQia 的笔记本</div>
-        <div class="flink-item-desc">你是❓ 您❗️</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://note.bowling233.top/" title="Bowling's TechStack" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/bowling.jpeg" alt="Bowling">
-        </div>
-        <div class="flink-item-name">Bowling's TechStack</div>
-        <div class="flink-item-desc">强得恐怖的学弟</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://notes.zerokei.top/" title="克瑞奇的笔记本" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/zerokei.png" alt="克瑞奇">
-        </div>
-        <div class="flink-item-name">克瑞奇的笔记本</div>
-        <div class="flink-item-desc">也是一个好强的学长/拜谢</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://matheart.github.io/matheart-note/" title="Matheart's Note" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/mh.jpeg" alt="Matheart">
-        </div>
-        <div class="flink-item-name">Matheart's Note</div>
-        <div class="flink-item-desc">是数心耶（大肥鸽子好久没更新了</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://blog.gztime.cc/" title="GZTime's Blog" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/GZTime_2021.png" alt="GZTime's Blog">
-        </div>
-        <div class="flink-item-name">GZTime's Blog</div>
-        <div class="flink-item-desc">这个懒蛋还没搞 note</div>
-    </a>
-</div>
-
-<div class="flink-list-item">
-    <a href="https://shao.fun/" title="烧风的博客" target="_blank">
-        <div class="flink-item-icon">
-            <img src="https://shao.fun/images/logo.svg" alt="烧风">
-        </div>
-        <div class="flink-item-name">烧风的博客</div>
-        <div class="flink-item-desc">一个很强的 up 主@烧风</div>
-    </a>
-</div> -->
-</div>
+<h2 id="1"><span>1<span class="heti-spacing"> </span></span>前言<a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="11-gdb"><span>1.1<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>gdb</span><a class="headerlink" href="#11-gdb" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<blockquote>
+<p><span>GNU<span class="heti-spacing"> </span></span>调试器（英语：GNU Debugger，缩写：GDB），是<span class="heti-skip"><span class="heti-spacing"> </span>GNU<span class="heti-spacing"> </span></span>软件系统中的标准调试器，此外<span class="heti-skip"><span class="heti-spacing"> </span>GDB<span class="heti-spacing"> </span></span>也是个具有移携性的调试器，经过移携需求的调修与重新编译，如今许多的类<span class="heti-skip"><span class="heti-spacing"> </span>UNIX<span class="heti-spacing"> </span></span>操作系统上都可以使用<span><span class="heti-spacing"> </span>GDB</span>，而现有<span class="heti-skip"><span class="heti-spacing"> </span>GDB<span class="heti-spacing"> </span></span>所能支持调试的编程语言有<span><span class="heti-spacing"> </span>C</span>、C++、<span>Pascal<span class="heti-spacing"> </span></span>以及<span><span class="heti-spacing"> </span>FORTRAN</span>。
+</p><div style="text-align: right">———— 维基百科</div>
+</blockquote>
+<h3 id="_1">准备工作<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>通常，在为调试而编译时，我们会关掉编译器的优化选项<code>（-O）</code>， 并打开调试选项<code>（-g）</code>。另外，<code>-Wall</code>在尽量不影响程序行为的情况下选项打开所有<span><span class="heti-spacing"> </span>warning</span>，也可以发现许多问题，避免一些不必要的<span><span class="heti-spacing"> </span>BUG</span>。</p>
+<p>例如： <code>gcc -g -Wall program.c -o program</code></p>
+<p><code>-g</code> 选项的作用是在可执行文件中加入源代码的信息，比如可执行文件中第几条机
+器指令对应源代码的第几行，但并不是把整个源文件嵌入到可执行文件中，所以在调
+试时必须保证<code>gdb</code>能找到源文件。</p>
+<p>调试下列程序前要做准备工作，在<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>中输入：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>$<span class="w"> </span>gcc<span class="w"> </span>-g<span class="w"> </span>-Wall<span class="w"> </span>test.c<span class="w"> </span>-o<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<h2 id="2-gdb"><span>2 gdb<span class="heti-spacing"> </span></span>命令<a class="headerlink" href="#2-gdb" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="21"><span>2.1<span class="heti-spacing"> </span></span>过程操作<a class="headerlink" href="#21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>gdb</code> <span>(<span class="heti-spacing"> </span></span>可执行程序<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>启动<span class="heti-skip"><span class="heti-spacing"> </span>gdb<span class="heti-spacing"> </span></span>调试</li>
+<li><code>quit / q</code> 退出<span class="heti-skip"><span class="heti-spacing"> </span>gdb<span class="heti-spacing"> </span></span>调试</li>
+<li><code>set args 10 20</code>给程序设置参数</li>
+<li><code>show args</code>获取设置的参数</li>
+<li><code>help</code>用来查看调试帮助或具体指令的相关信息</li>
+<li><code>list</code> 查看当前文件代码，可以指定文件和函数<span><span class="heti-spacing"> </span>(l)</span></li>
+<li><code>set list / listsize</code> 设置显示的行数</li>
+<li><code>print 变量名</code> 打印变量值<span><span class="heti-spacing"> </span>(p)</span></li>
+<li><code>ptype 变量名</code> 打印变量类型</li>
+<li><code>until</code> 跳出循环</li>
+</ul>
+<h3 id="22"><span>2.2<span class="heti-spacing"> </span></span>断点<a class="headerlink" href="#22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>gdb break (file:)line/function</code> 断在<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>文件<span class="heti-skip"><span class="heti-spacing"> </span>:)<span class="heti-spacing"> </span></span>行号或函数<span><span class="heti-spacing"> </span>(b)</span></li>
+<li><code>gdb break *0x....</code> 断在地址</li>
+<li><code>gdb info breakpoints</code> 查看断点及状态<span><span class="heti-spacing"> </span>(i b)</span></li>
+<li><code>gdb delete / clear</code> 清除所有断点<span><span class="heti-spacing"> </span>(d/cl)</span></li>
+<li><code>gdb delete &lt;breakpoint#&gt;</code> 删除某一断点（从<span class="heti-skip"><span class="heti-spacing"> </span>i b<span class="heti-spacing"> </span></span>得来断点号）</li>
+<li><code>gdb clear ...</code> 清除某一符号、地址处的断点</li>
+<li><code>gdb disable &lt;breakpoint#&gt;</code> 禁用某一断点</li>
+<li><code>gdb enable &lt;breakpoint#&gt;</code> 启用某一断点</li>
+<li><code>gdb watch ...</code> 在某处增加观察点，delete、enable、<span>disable<span class="heti-spacing"> </span></span>与断点共用</li>
+<li><code>gdb break/watch &lt;where&gt; if &lt;condition&gt;</code> 如果条件满足则断</li>
+<li><code>gdb condition &lt;breakpoint#&gt; &lt;condition&gt;</code> 更改条件</li>
+</ul>
+<h3 id="23"><span>2.3<span class="heti-spacing"> </span></span>运行<a class="headerlink" href="#23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>gdb start</code> 程序停在第一行</li>
+<li><code>gdb run</code> 直接运行，遇到端点才停止<span><span class="heti-spacing"> </span>(r)</span></li>
+<li><code>gdb continue</code> 继续运行<span><span class="heti-spacing"> </span>(c)</span></li>
+<li><code>gdb step</code> 运行到下一条源码<span><span class="heti-spacing"> </span>(s)</span></li>
+<li><code>gdb next</code> 单步运行，跳过函数<span><span class="heti-spacing"> </span>(n)</span></li>
+<li><code>gdb finish</code> 运行完当前函数<span><span class="heti-spacing"> </span>(fin)</span></li>
+<li><code>gdb attach &lt;pid&gt;</code> 连接程序</li>
+<li><code>gdb detach</code> 从当前程序断连</li>
+<li><code>gdb target remote localhost:1234</code> 连接<span><span class="heti-spacing"> </span>qemu</span></li>
+</ul>
+<h3 id="24"><span>2.4<span class="heti-spacing"> </span></span>调用栈<a class="headerlink" href="#24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>gdb backtrace</code> 查看调用栈<span><span class="heti-spacing"> </span>(bt)</span></li>
+<li><code>gdb frame</code> 查看当前帧栈</li>
+<li><code>gdb up/down</code> 移动当前帧栈（向<span class="heti-skip"><span class="heti-spacing"> </span>main /<span class="heti-spacing"> </span></span>远离<span><span class="heti-spacing"> </span>main</span>）</li>
+<li><code>gdb info locals</code> 查看当前帧栈变量</li>
+<li><code>gdb info args</code> 查看函数参数</li>
+</ul>
+<h2 id="3-gdb"><span>3 gdb<span class="heti-spacing"> </span></span>插件<a class="headerlink" href="#3-gdb" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="31-gdb-peda">3.1 gdb-peda<a class="headerlink" href="#31-gdb-peda" title="Permanent link">¶</a></h3>
+<p>每条指令带寄存器、汇编、内存数据回显</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/longld/peda.git<span class="w"> </span>~/peda
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"source ~/peda/peda.py"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.gdbinit
+</code></pre></div>
+<p>其实就是下载完成后<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>将 <code>source ~/peda/peda.py</code> 写入 <code>~/.gdbinit</code></p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="http://www.jujimeizuo.cn/blog/index.php/2022/12/31/linux-gdb-debug/"><span>jujimeizuo<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Linux GDB<span class="heti-spacing"> </span></span>调试</a></li>
+<li><a href="https://note.tonycrane.cc/cs/tools/gdb/"><span>gdb<span class="heti-spacing"> </span></span>相关备忘</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GNU_Debugger">维基百科<span><span class="heti-spacing"> </span>-gdb</span></a></li>
+<li><a href="https://blog.csdn.net/gatieme/article/details/63254211"><span>GDB<span class="heti-spacing"> </span></span>实用插件<span class="heti-skip"><span class="heti-spacing"> </span>(peda, gef, gdbinit)<span class="heti-spacing"> </span></span>全解</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:51:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月30日 22:16:27</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月30日 22:16:27</span>
 </small>
 </div>
-<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
-</script>
-<script>
-                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
-                        var giscus = document.querySelector("script[src*=giscus]")
-                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
-                      }
-                    </script>
 </article>
 </div>
 </div>
@@ -473,7 +584,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 更新记录" class="md-footer__link md-footer__link--prev" href="../changelog/" rel="prev">
+<a aria-label="上一页: Docker 命令相关" class="md-footer__link md-footer__link--prev" href="../docker/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -482,17 +593,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              更新记录
+              Docker 命令相关
             </div>
 </div>
 </a>
-<a aria-label="下一页: 工具相关" class="md-footer__link md-footer__link--next" href="../utils/" rel="next">
+<a aria-label="下一页: Github Action" class="md-footer__link md-footer__link--next" href="../action/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              工具相关
+              Github Action
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -539,9 +650,9 @@ var _hmt = _hmt || [];
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
 <script src="https://cdn.jujimeizuo.cn/utils/katex.min.js"></script>
-<script src="../js/katex.js"></script>
-</body>
+<script src="../../js/katex.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
