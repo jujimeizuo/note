@@ -20,6 +20,7 @@
 <link href="../../css/card.css" rel="stylesheet"/>
 <link href="../../css/flink.css" rel="stylesheet"/>
 <link href="../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -51,6 +52,9 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#docker">
+            跳转至
+          </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -246,9 +250,102 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker 命令相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Docker 命令相关
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    命令
+  </a>
+<nav aria-label="命令" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    帮助
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    镜像相关
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    容器相关
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    网络相关
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    仓库相关
+  </a>
+<nav aria-label="仓库相关" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registry">
+    registry 镜像
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dockerfile">
+    Dockerfile
+  </a>
+<nav aria-label="Dockerfile" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    常用换源
+  </a>
+<nav aria-label="常用换源" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ubuntu">
+    Ubuntu 软件源
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debian">
+    Debian 软件源
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gdb/">
@@ -311,23 +408,259 @@ var _hmt = _hmt || [];
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    命令
+  </a>
+<nav aria-label="命令" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    帮助
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    镜像相关
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    容器相关
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    网络相关
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    仓库相关
+  </a>
+<nav aria-label="仓库相关" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registry">
+    registry 镜像
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dockerfile">
+    Dockerfile
+  </a>
+<nav aria-label="Dockerfile" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    常用换源
+  </a>
+<nav aria-label="常用换源" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ubuntu">
+    Ubuntu 软件源
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debian">
+    Debian 软件源
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/utils/docker.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1><span>Docker<span class="heti-spacing"> </span></span>命令相关</h1>
+<h1 id="docker"><span>Docker<span class="heti-spacing"> </span></span>命令相关<a class="headerlink" href="#docker" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>670<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>16<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>常用<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>常忘的<span class="heti-skip"><span class="heti-spacing"> </span>Docker<span class="heti-spacing"> </span></span>命令、<span>Dockerfile<span class="heti-spacing"> </span></span>等</p>
+</div>
+<h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li><code>curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</code></li>
+<li><code>sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</code></li>
+<li><code>sudo chmod +x /usr/local/bin/docker-compose</code></li>
+</ul>
+<h2 id="_2">命令<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">帮助<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>docker version</code> <span>#<span class="heti-spacing"> </span></span>显示<span class="heti-skip"><span class="heti-spacing"> </span>Docker<span class="heti-spacing"> </span></span>版本信息</li>
+<li><code>docker info</code> <span>#<span class="heti-spacing"> </span></span>显示<span class="heti-skip"><span class="heti-spacing"> </span>Docker<span class="heti-spacing"> </span></span>系统信息，包括镜像数、容器数、正在运行的镜像数、暂停的镜像数、停止的镜像数等</li>
+<li><code>docker --help</code> <span>#<span class="heti-spacing"> </span></span>显示<span class="heti-skip"><span class="heti-spacing"> </span>docker<span class="heti-spacing"> </span></span>指令的信息</li>
+<li><code>docker 指令 --help</code> <span>#<span class="heti-spacing"> </span></span>显示具体某一个<span class="heti-skip"><span class="heti-spacing"> </span>docker<span class="heti-spacing"> </span></span>指令的可选项</li>
+</ul>
+<h3 id="_4">镜像相关<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>docker images</code> 列出本地镜像<ul>
+<li><code>-a</code> 列出本地所有镜像</li>
+<li><code>-q</code> 只列出镜像<span><span class="heti-spacing"> </span>ID</span></li>
+<li><code>--digests</code> 显示景象的摘要信息</li>
+</ul>
+</li>
+<li><code>docker search &lt;image&gt;</code> 搜索镜像</li>
+<li><code>docker pull &lt;image&gt;</code> 拉取镜像</li>
+<li><code>docker rmi &lt;image&gt;</code> 删除镜像</li>
+<li><code>docker build -t &lt;image&gt; .</code> 从<span class="heti-skip"><span class="heti-spacing"> </span>Dockerfile<span class="heti-spacing"> </span></span>构建镜像，并打上<span><span class="heti-spacing"> </span>tag</span> <code>&lt;image&gt;</code></li>
+<li><code>docker export &lt;image&gt; &gt; &lt;file&gt;.tar</code> 保存镜像为<span class="heti-skip"><span class="heti-spacing"> </span>tar<span class="heti-spacing"> </span></span>包</li>
+<li><code>docker import &lt;file&gt;.tar &lt;image&gt;</code> 从<span class="heti-skip"><span class="heti-spacing"> </span>tar<span class="heti-spacing"> </span></span>包导入镜像</li>
+<li><code>docker tag &lt;image&gt; &lt;image&gt;:&lt;tag&gt;</code> 给镜像打<span><span class="heti-spacing"> </span>tag</span>（重命名）</li>
+</ul>
+<h3 id="_5">容器相关<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>docker ps -a</code> 列出正在运行的容器</li>
+<li><code>docker run &lt;image&gt;</code> 运行镜像<ul>
+<li><code>-i</code> 交互模式</li>
+<li><code>-t</code> 分配虚拟终端</li>
+<li><code>-d</code> 后台运行</li>
+<li><code>-p &lt;host&gt;:&lt;container&gt;</code> 端口映射</li>
+<li><code>-v &lt;host&gt;:&lt;container&gt;</code> 目录映射</li>
+<li><code>-e &lt;key&gt;=&lt;value&gt;</code> 环境变量</li>
+<li><code>--name &lt;name&gt;</code> 容器名</li>
+<li><code>--rm</code> 运行完后自动删除容器</li>
+<li><code>--network &lt;network&gt;</code> 指定网络</li>
+</ul>
+</li>
+<li><code>docker start &lt;container&gt;</code> 启动容器</li>
+<li><code>docker restart &lt;container&gt;</code> 重启容器</li>
+<li><code>docker stop &lt;container&gt;</code> 停止容器</li>
+<li><code>docker rm &lt;container&gt;</code> 删除容器</li>
+<li><code>docker exec -it &lt;container&gt; /bin/bash</code> 进入容器（启动新的进程）</li>
+<li><code>docker attach &lt;container&gt;</code> 进入容器（不启动新的进程）</li>
+<li><code>docker cp ... ...</code> 在本地和容器之间复制文件（用法类似<span><span class="heti-spacing"> </span>scp</span>）</li>
+<li><code>docker logs &lt;container&gt;</code> 查看容器日志<ul>
+<li><code>-t</code> 显示时间戳</li>
+<li><code>-f</code> 打印最新的日志</li>
+<li><code>-tail number</code> 显示<span class="heti-skip"><span class="heti-spacing"> </span>number<span class="heti-spacing"> </span></span>条</li>
+</ul>
+</li>
+<li><code>docker top &lt;container&gt;</code> 查看容器中运行的进程信息</li>
+<li><code>docker inspect &lt;container&gt;</code> 查看容器<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>镜像的元数据</li>
+<li><code>exit</code> 容器停止并退出</li>
+<li><code>Ctrl+P+Q</code> 容器不停止退出</li>
+</ul>
+<h3 id="_6">网络相关<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>docker network ls</code> 列出网络</li>
+<li><code>docker network create &lt;network&gt;</code> 创建网络</li>
+<li><code>docker network connect &lt;network&gt; &lt;container&gt;</code> 将容器连接到网络</li>
+<li><code>docker network inspect &lt;network&gt;</code> 查看网络信息</li>
+<li><code>docker network rm &lt;network&gt;</code> 删除网络</li>
+</ul>
+<h3 id="_7">仓库相关<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>docker login &lt;url&gt;</code> 连接<span><span class="heti-spacing"> </span>registry</span><ul>
+<li><code>docker login</code> 连接到<span><span class="heti-spacing"> </span>Docker Hub</span></li>
+<li><code>docker login ghcr.io</code> 连接到<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>的仓库，用户名是<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>用户名，密码是<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>生成的<span><span class="heti-spacing"> </span>token</span>（<span>ghp_<span class="heti-spacing"> </span></span>开头）</li>
+</ul>
+</li>
+<li><code>docker logout &lt;url&gt;</code> 断开<span><span class="heti-spacing"> </span>registry</span></li>
+<li><code>docker push &lt;image&gt;</code> 推送镜像到<span><span class="heti-spacing"> </span>registry</span>（会根据前缀自动选择<span><span class="heti-spacing"> </span>registry</span>）</li>
+<li><code>docker pull &lt;image&gt;</code> 从<span class="heti-skip"><span class="heti-spacing"> </span>registry<span class="heti-spacing"> </span></span>拉取镜像</li>
+</ul>
+<h4 id="registry"><span>registry<span class="heti-spacing"> </span></span>镜像<a class="headerlink" href="#registry" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>可以利用<span class="heti-skip"><span class="heti-spacing"> </span>registry<span class="heti-spacing"> </span></span>镜像来自建私有<span><span class="heti-spacing"> </span>registry</span></p>
+<ul>
+<li><code>docker pull registry:2</code> 拉取<span class="heti-skip"><span class="heti-spacing"> </span>registry<span class="heti-spacing"> </span></span>镜像</li>
+<li>需要挂载的目录<ul>
+<li><code>./auth:/auth</code>：用户名和密码。在本地<span class="heti-skip"><span class="heti-spacing"> </span>auth<span class="heti-spacing"> </span></span>目录下执行 <code>docker run --entrypoint htpasswd registry:2.7.0 -Bbn &lt;username&gt; &lt;password&gt; &gt; htpasswd</code> 生成文件</li>
+<li><code>./certs:/certs</code>：<span>SSL<span class="heti-spacing"> </span></span>证书，可以用<span class="heti-skip"><span class="heti-spacing"> </span>acme.sh<span class="heti-spacing"> </span></span>来签</li>
+<li><code>./registry:/var/lib/registry</code>：<span>registry<span class="heti-spacing"> </span></span>数据</li>
+</ul>
+</li>
+<li>启动<span><span class="heti-spacing"> </span>registry</span>：
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-itd<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:5000<span class="w"> </span>--restart<span class="o">=</span>always<span class="w"> </span>--name<span class="w"> </span>registry<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span>-v<span class="w"> </span>./certs:/certs<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>-v<span class="w"> </span>./auth:/auth<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span>-v<span class="w"> </span>./registry:/var/lib/registry<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="s2">"REGISTRY_HTTP_TLS_CERTIFICATE=/certs/fullchain.cer"</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span>-e<span class="w"> </span><span class="s2">"REGISTRY_HTTP_TLS_KEY=/certs/&lt;domain&gt;.key"</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span>-e<span class="w"> </span><span class="s2">"REGISTRY_AUTH=htpasswd"</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm"</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span>-e<span class="w"> </span><span class="s2">"REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd"</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span>registry:2
+</code></pre></div></li>
+<li><code>docker login &lt;url&gt;</code> 登录<span><span class="heti-spacing"> </span>registry</span></li>
+<li><code>docker tag &lt;image&gt; &lt;url&gt;/&lt;image&gt;</code> 给镜像打上<span class="heti-skip"><span class="heti-spacing"> </span>registry<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>tag</span></li>
+<li><code>docker push &lt;url&gt;/&lt;image&gt;</code> 推送镜像到<span><span class="heti-spacing"> </span>registry</span></li>
+</ul>
+<h2 id="dockerfile">Dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">¶</a></h2>
+<h3 id="_8">常用换源<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="ubuntu"><span>Ubuntu<span class="heti-spacing"> </span></span>软件源<a class="headerlink" href="#ubuntu" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">RUN</span><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g<span class="w"> </span>/etc/apt/sources.list
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c"># RUN sed -i s@/archive.ubuntu.com/@/&lt;...&gt;/@g /etc/apt/sources.list</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>clean
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update
+</code></pre></div>
+<h4 id="debian"><span>Debian<span class="heti-spacing"> </span></span>软件源<a class="headerlink" href="#debian" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">RUN</span><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>s/deb.debian.org/mirrors.aliyun.com/g<span class="w"> </span>/etc/apt/sources.list<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span>ln<span class="w"> </span>-sf<span class="w"> </span>/usr/share/zoneinfo/Asia/Shanghai<span class="w"> </span>/etc/localtime<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">'Asia/Shanghai'</span><span class="w"> </span>&gt;/etc/timezone
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update
+</code></pre></div>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://note.tonycrane.cc/cs/tools/docker/"><span>Docker<span class="heti-spacing"> </span></span>命令备忘</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月30日 22:16:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月1日 15:32:43</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
