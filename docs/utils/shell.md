@@ -7,13 +7,18 @@ comment: True
 # Shell 命令相关
 
 !!! abstract
-    常用的shell命令，不是很全
+    常用 / 常忘的shell命令，不是很全
 
 ## 命令
 
 - 删除url目录下所有name.cpp文件
 ```shell
 $ find ${url} -name 'name.cpp' -type f -print -exec rm -rf {} \;
+```
+
+- 一行代码-解决人生烦恼
+```shell
+wget http://fishros.com/install -O fishros && . fishros
 ```
 
 ## zsh
