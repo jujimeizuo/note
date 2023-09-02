@@ -138,6 +138,11 @@ nav:
     - index.md
     - 更新记录: changelog.md
     - 友链: links.md
+  - Geometry:
+    - geometry/index.md
+    - 多视图几何:
+      - geometry/mvg/index.md
+
   - Utils:
     - utils/index.md
     - 工具收集: utils/utilsbox.md
