@@ -142,6 +142,8 @@ nav:
     - geometry/index.md
     - 多视图几何:
       - geometry/mvg/index.md
+      - 2D射影几何和变换: geometry/mvg/pjt2d.md
+      - 3D射影几何和变换: geometry/mvg/pjt3d.md
 
   - Utils:
     - utils/index.md
