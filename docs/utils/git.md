@@ -46,6 +46,28 @@ comment: True
 - `git tag -a <tag_name>` 添加注解标签
 - `git tag -d <tag_name>` 删除标签
 
+## awesome_git_log
+
+为了方便查看`commit`相关信息，用`alias`来简化操作，将下面代码粘贴到`bashrc`中，然后在终端中直接`awe+tab`即可。
+
+  
+
+```shell
+# git
+function git_branch {
+   branch="`git branch 2>/dev/null | grep "^\*" | sed -e "s/^\*\ //"`"
+   if [ "${branch}" != "" ];then
+       if [ "${branch}" = "(no branch)" ];then
+           branch="(`git rev-parse --short HEAD`...)"
+       fi
+       echo " ($branch)"
+   fi
+}
+
+alias __git_awesome_log="git log --oneline --decorate --all --graph"
+alias awesome_git_log="git log --oneline --decorate --all --graph"
+```
+
 ## Reference
 
 - [猴子都能懂的GIT入门](https://backlog.com/git-tutorial/cn/intro/intro1_1.html)
