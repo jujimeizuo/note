@@ -138,6 +138,13 @@ nav:
     - index.md
     - 更新记录: changelog.md
     - 友链: links.md
+  - Geometry:
+    - geometry/index.md
+    - 多视图几何:
+      - geometry/mvg/index.md
+      - 2D射影几何和变换: geometry/mvg/pjt2d.md
+      - 3D射影几何和变换: geometry/mvg/pjt3d.md
+
   - Utils:
     - utils/index.md
     - 工具收集: utils/utilsbox.md
