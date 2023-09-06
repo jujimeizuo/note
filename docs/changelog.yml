@@ -1,4 +1,39 @@
 - "2023":
+  - "2023-09-09":
+    - newpage:
+        text: CS > 编程语言 > Go > Go 语法基础
+        href: /cs/pl/go/basic
+  - "2023-09-06":
+    - newpage:
+        text: CS > 编程语言 > Python > Python 语法基础
+        href: /cs/pl/python/basic
+    - newpage:
+        text: CS > 编程语言 > C/C++ > C++ 系统知识
+        href: /cs/pl/c_cpp/system_knowledge
+  - "2023-09-03":
+    - newpage:
+        text: Geometry > 多视图几何 > 2D 射影几何变换
+        href: /geometry/mvg/pjt2d/
+  - "2023-09-01":
+    - newpage:
+        text: Utils > 工具收集
+        href: /utils/
+    - newpage:
+        text: Utils > 命令行工具 > Docker 命令相关
+        href: /utils/docker/utilsbox/
+    - pageupdate:
+        text: 新增 awesome_git_log 命令
+        href: /utils/git/
+    - newpage:
+        text: Utils > 命令行工具 > Shell 命令相关
+        href: /utils/shell/
+  - "2023-08-30":
+    - newpage:
+        text: Utils > 命令行工具 > gdb 命令相关
+        href: /utils/gdb/
+    - newpage:
+        text: Utils > 命令行工具 > Git 命令相关
+        href: /utils/git/
   - "2023-08-26":
     - refactor: init notebook
 # - "2023":

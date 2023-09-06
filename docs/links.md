@@ -11,16 +11,17 @@ nostatistics: True
 
 <div class="flink-list">
 
-<!-- <div class="flink-list-item">
-    <a href="https://note.isshikih.top/" title="Isshiki修's Notebook" target="_blank">
+<div class="flink-list-item">
+    <a href="https://note.tonycrane.cc/" title="鹤翔万里的笔记本" target="_blank">
         <div class="flink-item-icon">
-            <img src="https://cdn.tonycrane.cc/note/friends/isshiki.png" alt="Isshiki修">
+            <img src="https://cdn.jujimeizuo.cn/note/friends/tonycrane.png" alt="鹤翔万里">
         </div>
-        <div class="flink-item-name heti-skip">Isshiki修's Notebook</div>
-        <div class="flink-item-desc">修佬 tql！</div>
+        <div class="flink-item-name heti-skip">鹤翔万里的笔记本</div>
+        <div class="flink-item-desc">非常厉害的（浙大）大佬</div>
     </a>
 </div>
 
+<!-- 
 <div class="flink-list-item">
     <a href="https://xuan-insr.github.io/" title="咸鱼暄的代码空间" target="_blank">
         <div class="flink-item-icon">

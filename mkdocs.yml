@@ -138,13 +138,30 @@ nav:
     - index.md
     - 更新记录: changelog.md
     - 友链: links.md
+  - Computer Science:
+    - cs/index.md
+    - 编程语言:
+      - cs/pl/index.md
+      - C/C++:
+        - cs/pl/c_cpp/index.md
+        - C++ 系统知识: cs/pl/c_cpp/system_knowledge.md
+        - C++ 各种函数使用: cs/pl/c_cpp/function.md
+      - Python:
+        - cs/pl/python/index.md
+        - Python 语法基础: cs/pl/python/basic.md
+        - Numpy 科学计算库 (TODO): cs/pl/python/numpy.md
+      - Go:
+        - cs/pl/go/index.md
+        - Go 语法基础: cs/pl/go/basic.md
+        - gin框架 (TODO): cs/pl/go/gin.md
+      - Java:
+        - cs/pl/java/index.md
   - Geometry:
     - geometry/index.md
     - 多视图几何:
       - geometry/mvg/index.md
-      - 2D射影几何和变换: geometry/mvg/pjt2d.md
-      - 3D射影几何和变换: geometry/mvg/pjt3d.md
-
+      - 2D 射影几何和变换: geometry/mvg/pjt2d.md
+      - 3D 射影几何和变换: geometry/mvg/pjt3d.md
   - Utils:
     - utils/index.md
     - 工具收集: utils/utilsbox.md
@@ -168,6 +185,7 @@ nav:
   #     - Python:
   #       - cs/pl/python/index.md
   #       - Python 基础语法: cs/pl/python/basic.md
+
   #       - NumPy: cs/pl/python/numpy.md
   #       - PIL: cs/pl/python/pil.md
   #     - Rust:
