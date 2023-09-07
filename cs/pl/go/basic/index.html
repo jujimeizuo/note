@@ -20,6 +20,7 @@
 <link href="../../../../css/card.css" rel="stylesheet"/>
 <link href="../../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -51,6 +52,9 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#go">
+            跳转至
+          </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -311,8 +315,141 @@ var _hmt = _hmt || [];
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Go 语法基础
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Go 语法基础
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go_1">
+    为什么学习 Go
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go_2">
+    怎么装 Go
+  </a>
+<nav aria-label="怎么装 Go" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    下载
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goroot-gopath">
+    GOROOT 和 GOPATH
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go_3">
+    怎么编写、运行 Go
+  </a>
+<nav aria-label="怎么编写、运行 Go" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go-mod-init">
+    go mod init
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    编译、运行、安装
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go-module">
+    go module
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    变量和常量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    条件语句
+  </a>
+<nav aria-label="条件语句" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ifelse">
+    if/else 分支
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch">
+    switch 分支
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    循环
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    数据类型
+  </a>
+<nav aria-label="数据类型" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    数字与运算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    布尔类型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    字符串
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#byterune">
+    byte和rune类型
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencce">
+    Referencce
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gin/">
+        gin框架 (TODO)
       </a>
 </li>
 </ul>
@@ -489,12 +626,397 @@ var _hmt = _hmt || [];
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go_1">
+    为什么学习 Go
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go_2">
+    怎么装 Go
+  </a>
+<nav aria-label="怎么装 Go" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    下载
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goroot-gopath">
+    GOROOT 和 GOPATH
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go_3">
+    怎么编写、运行 Go
+  </a>
+<nav aria-label="怎么编写、运行 Go" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go-mod-init">
+    go mod init
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    编译、运行、安装
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go-module">
+    go module
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    变量和常量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    条件语句
+  </a>
+<nav aria-label="条件语句" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ifelse">
+    if/else 分支
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch">
+    switch 分支
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    循环
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    数据类型
+  </a>
+<nav aria-label="数据类型" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    数字与运算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    布尔类型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    字符串
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#byterune">
+    byte和rune类型
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencce">
+    Referencce
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cs/pl/go/basic.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1><span>Go<span class="heti-spacing"> </span></span>语法基础</h1>
+<h1 id="go"><span>Go<span class="heti-spacing"> </span></span>语法基础<a class="headerlink" href="#go" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2119<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>57<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>归档一些学习<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>的一些语法，和其他编程语言无太大区别，入门还是很简单的</p>
+</div>
+<h2 id="go_1">为什么学习<span><span class="heti-spacing"> </span>Go</span><a class="headerlink" href="#go_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>硬件限制：摩尔定律已然失效</li>
+<li><span>Go<span class="heti-spacing"> </span></span>为并发而生：在多核并发上拥有原生的设计优势，从底层原生并发</li>
+<li><span>Go<span class="heti-spacing"> </span></span>性能强悍：同<span class="heti-skip"><span class="heti-spacing"> </span>C/C++<span class="heti-spacing"> </span></span>一样，<span>Go<span class="heti-spacing"> </span></span>也是编译型语言，执行效率更高，性能更好</li>
+<li><span>Go<span class="heti-spacing"> </span></span>简单易学：语法简洁、代码风格统一、开发效率高</li>
+</ul>
+<h2 id="go_2">怎么装<span><span class="heti-spacing"> </span>Go</span><a class="headerlink" href="#go_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_1">下载<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><a href="https://golang.org/dl/"><span>Go<span class="heti-spacing"> </span></span>官网下载地址</a></li>
+<li><a href="https://golang.google.cn/dl/"><span>Go<span class="heti-spacing"> </span></span>官方镜像站（推荐）</a></li>
+<li><span>Windows<span class="heti-spacing"> </span></span>平台和<span class="heti-skip"><span class="heti-spacing"> </span>Mac<span class="heti-spacing"> </span></span>平台推荐下载可执行文件版，<span>Linux<span class="heti-spacing"> </span></span>平台下载压缩文件版。</li>
+</ul>
+<h3 id="_2">安装<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>Windows：以<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位<span class="heti-skip"><span class="heti-spacing"> </span>Win10<span class="heti-spacing"> </span></span>举例，将选好安装包下载到本地，双击一直<span><span class="heti-spacing"> </span>next</span>，<strong>注意要指定一个<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>安装目录，这很重要</strong></li>
+<li>Linux：</li>
+</ul>
+<p></p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 在版本选择好下载文件后</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>wget<span class="w"> </span>https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># 将下载好的文件解压到 `/usr/local` 目录中，没有权限加上 `sudo`</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>tar<span class="w"> </span>-zxvf<span class="w"> </span>go1.14.1.linux-amd64.tar.gz<span class="w"> </span>-C<span class="w"> </span>/usr/local
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># 配置环境变量，在 `~/.profile` 中添加以下代码，并用 `source` 重新加载</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GOROOT</span><span class="o">=</span>/usr/local/go
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOROOT</span>/bin
+</code></pre></div>
+- Mac：下载可执行文件后，直接点击下一步安装即可，默认会将 go 安装到 <code>/usr/local/go</code> 目录下
+<h3 id="goroot-gopath"><span>GOROOT<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>GOPATH</span><a class="headerlink" href="#goroot-gopath" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<blockquote>
+<p>  <code>GOROOT</code>和<code>GOPATH</code>都是环境变量，其中<code>GOROOT</code>是我们安装<span class="heti-skip"><span class="heti-spacing"> </span>go<span class="heti-spacing"> </span></span>开发包的路径，而从<code>Go 1.8</code>版本开始，<span>Go<span class="heti-spacing"> </span></span>开发包在安装完成后会为<code>GOPATH</code>设置一个默认目录，并且在<code>Go1.14</code>及之后的版本中启用了<code>Go Module</code>模式之后，不一定非要将代码写到<code>GOPATH</code>目录下，所以也就不需要我们再自己配置<code>GOPATH</code>了，使用默认的即可。</p>
+</blockquote>
+<ul>
+<li>查看 <code>GOPATH</code> 路径：<code>go env</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">GOPROXY</p>
+<p><code>Go1.14</code>版本之后，都推荐使用<code>go mod</code>模式来管理依赖环境了，也不再强制我们把代码必须写在<code>GOPATH</code>下面的<span class="heti-skip"><span class="heti-spacing"> </span>src<span class="heti-spacing"> </span></span>目录了，你可以在你电脑的任意位置编写<span class="heti-skip"><span class="heti-spacing"> </span>go<span class="heti-spacing"> </span></span>代码<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（网上有些教程适用于<span class="heti-skip"><span class="heti-spacing"> </span>1.11<span class="heti-spacing"> </span></span>版本之前<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>）</p>
+<p>默认<code>GoPROXY</code>配置是：<code>GOPROXY</code>=<a href="https://proxy.golang.org,direct">https://proxy.golang.org,direct</a>，由于国内访问不到<a href="https://proxy.golang.org"><span><span class="heti-spacing"> </span>https://proxy.golang.org</span></a>，所以我们需要换一个<span><span class="heti-spacing"> </span>PROXY</span>，这里推荐使用<a href="https://goproxy.io"><span class="heti-skip"><span class="heti-spacing"> </span>https://goproxy.io<span class="heti-spacing"> </span></span></a>或<a href="https://goproxy.cn"><span><span class="heti-spacing"> </span>https://goproxy.cn</span></a>。</p>
+<p>可以执行下面的命令修改<span><span class="heti-spacing"> </span>GOPROXY</span>：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>go<span class="w"> </span>env<span class="w"> </span>-w<span class="w"> </span><span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn,direct
+</code></pre></div>
+</div>
+<h2 id="go_3">怎么编写、运行<span><span class="heti-spacing"> </span>Go</span><a class="headerlink" href="#go_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p>  任何编辑器都可以编写<span><span class="heti-spacing"> </span>Go</span>（包括记事本），这里推荐用<span><span class="heti-spacing"> </span>VsCode</span>（需安装<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>扩展），当然也可以用<span><span class="heti-spacing"> </span>Sublime</span>，<span>JB<span class="heti-spacing"> </span></span>的全家桶等等</p>
+</blockquote>
+<h3 id="go-mod-init">go mod init<a class="headerlink" href="#go-mod-init" title="Permanent link">¶</a></h3>
+<p>使用<code>go module</code>模式新建项目时，我们需要通过<code>go mod init</code> 项目名命令对项目进行初始化，该命令会在项目根目录下生成<code>go.mod</code>文件。执行如下命令
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span><span class="si">${</span><span class="nv">project</span><span class="si">}</span>
+</code></pre></div>
+<p><strong>记得配置好 <code>GOPROXY</code></strong></p>
+<h3 id="_3">编译、运行、安装<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><code>go build</code>： 命令表示将源代码编译成可执行文件。</li>
+<li><code>go run</code>：命令本质上是先在临时目录编译程序然后再执行。</li>
+<li><code>go install</code>：它先编译源代码得到可执行文件，然后将可执行文件移动到<span class="heti-skip"><span class="heti-spacing"> </span>GOPATH<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>bin<span class="heti-spacing"> </span></span>目录下。因为<strong>把 <code>GOPATH</code> 下的 <code>bin</code> 目录添加到了环境变量中</strong>，所以就可以在任意地方直接执行可执行文件。</li>
+</ul>
+<h2 id="go-module">go module<a class="headerlink" href="#go-module" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>   <code>go module</code> 是<span class="heti-skip"><span class="heti-spacing"> </span>Go1.13<span class="heti-spacing"> </span></span>版本之后。<span>Go<span class="heti-spacing"> </span></span>语言默认的依赖管理工具。</p>
+</blockquote>
+<ul>
+<li>设置好 <code>GO111MODULE=on</code> 就可以使用 <code>go module</code></li>
+<li>使用<code>go module`` 管理依赖后会在项目根目录下生成两个文件</code><span><span class="heti-spacing"> </span>go.mod</span><code>和</code><span><span class="heti-spacing"> </span>go.sum`</span></li>
+<li><code>go mod</code> 命令：<ul>
+<li><code>go mod download</code>    下载依赖的<span class="heti-skip"><span class="heti-spacing"> </span>module<span class="heti-spacing"> </span></span>到本地<span><span class="heti-spacing"> </span>cache</span>（默认为<span class="heti-skip"><span class="heti-spacing"> </span>$GOPATH/pkg/mod<span class="heti-spacing"> </span></span>目录）</li>
+<li><code>go mod edit</code>        编辑<span class="heti-skip"><span class="heti-spacing"> </span>go.mod<span class="heti-spacing"> </span></span>文件</li>
+<li><code>go mod graph</code>       打印模块依赖图</li>
+<li><code>go mod init</code>        初始化当前文件夹<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>创建<span class="heti-skip"><span class="heti-spacing"> </span>go.mod<span class="heti-spacing"> </span></span>文件</li>
+<li><code>go mod tidy</code>        增加缺少的<span><span class="heti-spacing"> </span>module</span>，删除无用的<span><span class="heti-spacing"> </span>module</span></li>
+<li><code>go mod vendor</code>      将依赖复制到<span class="heti-skip"><span class="heti-spacing"> </span>vendor<span class="heti-spacing"> </span></span>下</li>
+<li><code>go mod verify</code>      校验依赖</li>
+<li><code>go mod why</code>         解释为什么需要依赖</li>
+</ul>
+</li>
+<li><span>go.mod<span class="heti-spacing"> </span></span>文件记录了项目所有的依赖信息</li>
+<li>在项目中执行 <code>go get</code> 命令可以下载依赖包，并且还可以指定下载的版本</li>
+</ul>
+<h2 id="_4">变量和常量<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>变量<ul>
+<li>需要显式声明，并且在函数调用等情况下，编译器会检查其类型的正确性</li>
+<li><code>var</code> 声明<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>个或多个变量，<span>Go<span class="heti-spacing"> </span></span>会自动推断已经有初始值的变量类型</li>
+<li>声明后却没有给出对应的初始值时，变量将会初始化为 零值 。 例如，<span>int<span class="heti-spacing"> </span></span>的零值是<span><span class="heti-spacing"> </span>0</span></li>
+<li><span>:=<span class="heti-spacing"> </span></span>语法是声明并初始化变量的简写（不能在函数外使用）， 例如 <code>var f string = "short"</code> 可以简写为<code>f := "short"</code></li>
+<li>在使用多重赋值时，如果想要忽略某个值，可以使用匿名变量，一个下划线<code>_</code>表示</li>
+</ul>
+</li>
+<li>常量<ul>
+<li>支持字符、字符串、布尔和数值常量</li>
+<li><span>const<span class="heti-spacing"> </span></span>用于声明一个常量</li>
+<li><span>const<span class="heti-spacing"> </span></span>语句可以出现在任何<span class="heti-skip"><span class="heti-spacing"> </span>var<span class="heti-spacing"> </span></span>语句可以出现的地方</li>
+<li><span>iota<span class="heti-spacing"> </span></span>是常量计数器，在<span class="heti-skip"><span class="heti-spacing"> </span>const<span class="heti-spacing"> </span></span>关键字出现时会被重置为<span><span class="heti-spacing"> </span>0</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">条件语句<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="ifelse"><span>if/else<span class="heti-spacing"> </span></span>分支<a class="headerlink" href="#ifelse" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>if-else if-else<span class="heti-spacing"> </span></span>结构</li>
+<li><span>Go<span class="heti-spacing"> </span></span>规定与<span class="heti-skip"><span class="heti-spacing"> </span>if<span class="heti-spacing"> </span></span>匹配的左括号<span class="heti-skip"><span class="heti-spacing"> </span>{<span class="heti-spacing"> </span></span>必须与<span class="heti-skip"><span class="heti-spacing"> </span>if<span class="heti-spacing"> </span></span>和表达式放在同行，其他位置会触发编译错误，同理<span><span class="heti-spacing"> </span>else</span></li>
+<li>在条件语句之前可以有一个声明语句；在这里声明的变量可以在这个语句所有的条件分支中使用</li>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>中，条件语句的圆括号不是必需的，但是花括号是必需的</li>
+<li><span>Go<span class="heti-spacing"> </span></span>没有三目运算符， 即使是基本的条件判断，依然需要使用完整的<span class="heti-skip"><span class="heti-spacing"> </span>if<span class="heti-spacing"> </span></span>语句</li>
+</ul>
+<details class="example">
+<summary>if-else</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="s">"is negative"</span><span class="p">)</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="s">"has 1 digit"</span><span class="p">)</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="s">"has multiple digits"</span><span class="p">)</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<h3 id="switch"><span>switch<span class="heti-spacing"> </span></span>分支<a class="headerlink" href="#switch" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>不带表达式的<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>是实现<span class="heti-skip"><span class="heti-spacing"> </span>if/else<span class="heti-spacing"> </span></span>逻辑的另一种方式</li>
+<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>只能有一个<span class="heti-skip"><span class="heti-spacing"> </span>default<span class="heti-spacing"> </span></span>分支</li>
+<li>一个分支可以有多个值，多个<span class="heti-skip"><span class="heti-spacing"> </span>case<span class="heti-spacing"> </span></span>值中间使用英文逗号分隔</li>
+<li><span>fallthrough<span class="heti-spacing"> </span></span>语法可以执行满足条件的<span class="heti-skip"><span class="heti-spacing"> </span>case<span class="heti-spacing"> </span></span>的下一个<span><span class="heti-spacing"> </span>case</span>，是为了兼容<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言中的<span class="heti-skip"><span class="heti-spacing"> </span>case<span class="heti-spacing"> </span></span>设计的</li>
+</ul>
+<details class="example">
+<summary>switch</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">switchDemo5</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nx">s</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"a"</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"a"</span><span class="p">:</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="k">fallthrough</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"b"</span><span class="p">:</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"b"</span><span class="p">)</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"c"</span><span class="p">:</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"c"</span><span class="p">)</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">"..."</span><span class="p">)</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="_6">循环<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>经典的初始<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>条件<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后续<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>循环</li>
+<li><span>for<span class="heti-spacing"> </span></span>循环的初始语句可以被忽略，但是初始语句后的分号必须要写</li>
+<li><span>for<span class="heti-spacing"> </span></span>循环的初始语句和结束语句都可以省略</li>
+<li><span>for<span class="heti-spacing"> </span></span>循环可以通过<span><span class="heti-spacing"> </span>break</span>、goto、return、<span>panic<span class="heti-spacing"> </span></span>语句强制退出循环</li>
+<li><span>Go<span class="heti-spacing"> </span></span>语言中可以使用<span class="heti-skip"><span class="heti-spacing"> </span>for range<span class="heti-spacing"> </span></span>遍历数组、切片、字符串、<span>map<span class="heti-spacing"> </span></span>及通道（channel）。 通过<span class="heti-skip"><span class="heti-spacing"> </span>for range<span class="heti-spacing"> </span></span>遍历的返回值有以下规律<ul>
+<li>数组、切片、字符串返回索引和值。</li>
+<li><span>map<span class="heti-spacing"> </span></span>返回键和值。</li>
+<li>通道（channel）只返回通道内的值</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>for</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="o">...</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">}</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="k">for</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="o">...</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="o">...</span>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="p">}</span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="o">...</span>
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="_7">数据类型<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_8">数字与运算<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>整型有<span><span class="heti-spacing"> </span>int8/16/32/64</span>，包括对应的无符号整型</li>
+<li>浮点型有<span><span class="heti-spacing"> </span>float32/64</span></li>
+<li>复数有<span><span class="heti-spacing"> </span>complex64/128</span></li>
+<li>运算：<ul>
+<li>和<span class="heti-skip"><span class="heti-spacing"> </span>C/C++<span class="heti-spacing"> </span></span>无太大差别</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">布尔类型<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>通过<span class="heti-skip"><span class="heti-spacing"> </span>bool<span class="heti-spacing"> </span></span>来声明布尔型数据，只有<span class="heti-skip"><span class="heti-spacing"> </span>true<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>false</span></li>
+<li>默认值为<span><span class="heti-spacing"> </span>false</span></li>
+<li>不允许将整型强制转换为布尔型</li>
+<li>布尔型无法参与数值运算，也无法与其他类型进行转换</li>
+</ul>
+<h3 id="_10">字符串<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>字符串的内部实现使用<span class="heti-skip"><span class="heti-spacing"> </span>UTF-8<span class="heti-spacing"> </span></span>编码，字符串的值为双引号<span class="heti-skip"><span class="heti-spacing"> </span>(")<span class="heti-spacing"> </span></span>中的内容，可以在<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>语言的源码中直接添加非<span class="heti-skip"><span class="heti-spacing"> </span>ASCII<span class="heti-spacing"> </span></span>码字符</li>
+<li>要定义一个多行字符串时，就必须使用反引号字符，反引号间换行将被作为字符串中的换行，但是所有的转义字符均无效，文本将会原样输出
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nx">s</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`第一行</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="s">第二行</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="s">第三行</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="s">`</span>
+</code></pre></div></li>
+<li>常用方法<ul>
+<li><code>len(str)</code>：求长度</li>
+<li><code>+或fmt.Sprintf</code>：拼接字符串</li>
+<li><code>strings.Split</code>：分割</li>
+<li><code>strings.contains</code>：判断是否包含</li>
+<li><code>strings.HasPrefix,strings.HasSuffix</code>：前缀<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后缀判断</li>
+<li><code>strings.Index(),strings.LastIndex()</code>：子串出现的位置</li>
+<li><code>strings.Join(a[]string, sep string)</code>：<span>join<span class="heti-spacing"> </span></span>操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="byterune"><span>byte<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>rune<span class="heti-spacing"> </span></span>类型<a class="headerlink" href="#byterune" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。 字符用单引号（’）包裹起来</li>
+<li><span>Go<span class="heti-spacing"> </span></span>包括两种字符：<ul>
+<li><code>uint8</code> 类型，或者叫 <code>byte</code> 型，代表一个<span class="heti-skip"><span class="heti-spacing"> </span>ASCII<span class="heti-spacing"> </span></span>码字符</li>
+<li><code>rune</code> 类型，代表一个 <code>UTF-8</code> 字符</li>
+</ul>
+</li>
+<li>当需要处理中文、日文或者其他复合字符时，则需要用到 <code>rune</code> 类型。<code>rune</code> 类型实际是一个<code>int32</code></li>
+<li><span>Go<span class="heti-spacing"> </span></span>使用了特殊的 <code>rune</code> 类型来处理 <code>Unicode</code>，让基于 <code>Unicode</code> 的文本处理更为方便，也可以使用 <code>byte</code> 型进行默认字符串处理，性能和扩展性都有照顾</li>
+<li>字符串底层是一个<span class="heti-skip"><span class="heti-spacing"> </span>byte<span class="heti-spacing"> </span></span>数组，所以可以和 <code>[]byte</code> 类型相互转换</li>
+<li>字符串是不能修改的，字符串是由 <code>byte</code> 字节组成，所以字符串的长度是 <code>byte</code> 字节的长度</li>
+<li><code>rune</code> 类型用来表示 <code>utf8</code> 字符，一个<code>rune</code> 字符由一个或多个<code>byte</code> 组成</li>
+<li>要修改字符串，需要先将其转换成 <code>[]rune</code> 或 <code>[]byte</code> ，完成后再转换为<code>string</code></li>
+</ul>
+<details class="example">
+<summary>byte and rune</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nx">s1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"big"</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="c1">// 强制类型转换</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nx">byteS1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nx">byteS1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="sc">'p'</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">byteS1</span><span class="p">))</span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="nx">s2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">"白萝卜"</span>
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="nx">runeS2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">rune</span><span class="p">(</span><span class="nx">s2</span><span class="p">)</span>
+<a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="nx">runeS2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="sc">'红'</span>
+<a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">runeS2</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<h2 id="referencce">Referencce<a class="headerlink" href="#referencce" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://go.dev/doc/effective_go"><span>Go<span class="heti-spacing"> </span></span>官方文档</a></li>
+<li><a href="https://www.runoob.com/go/go-tutorial.html"><span>Go<span class="heti-spacing"> </span></span>菜鸟教程</a></li>
+<li><a href="https://www.liwenzhou.com/posts/Go/golang-menu/"><span>Go<span class="heti-spacing"> </span></span>语言学习之路</a></li>
+<li><a href="https://gobyexample-cn.github.io/arrays"><span>Go by Example<span class="heti-spacing"> </span></span>中文版</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
@@ -503,9 +1025,17 @@ var _hmt = _hmt || [];
       <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月6日 10:51:03</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月6日 10:51:03</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -529,13 +1059,13 @@ var _hmt = _hmt || [];
             </div>
 </div>
 </a>
-<a aria-label="下一页: Java 系统知识" class="md-footer__link md-footer__link--next" href="../../java/" rel="next">
+<a aria-label="下一页: gin框架 (TODO)" class="md-footer__link md-footer__link--next" href="../gin/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              Java 系统知识
+              gin框架 (TODO)
             </div>
 </div>
 <div class="md-footer__button md-icon">
