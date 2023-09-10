@@ -1,6 +1,10 @@
 - "2023":
   - "2023-09-09":
     - newpage:
+        text:  Utils > 站点生成工具 > reveal-md
+        href: /utils/reveal-md
+  - "2023-09-09":
+    - newpage:
         text: CS > 编程语言 > Go > Go 语法基础
         href: /cs/pl/go/basic
   - "2023-09-06":
