@@ -54,6 +54,7 @@ comment: True
 
 ### 图标
 
+- 
 - 徽章 [shields.io](https://shields.io/)
 - 各系列图标合集 [icones](https://icones.netlify.app/)
 - 图标、插图、照片、音乐和设计工具 [icons8](https://icons8.com/)
@@ -91,6 +92,7 @@ comment: True
 
 - git提交信息中的emoji [gitmoji](https://gitmoji.js.org/)
 - Emoji 查询 [EmojiAll](https://www.emojiall.com/zh-hans)
+- 表情图标百科[emojipedia.org](https://emojipedia.org/zh)
 - 工具集合 [MikuTools](https://tools.miku.ac/)
 - Unicode编码 [Unicode](https://home.unicode.org/)
 - Youtube下载器 [yt1s](https://yt1s.com/zh-tw19)
