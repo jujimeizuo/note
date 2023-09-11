@@ -156,6 +156,15 @@ nav:
         - gin框架 (TODO): cs/pl/go/gin.md
       - Java:
         - cs/pl/java/index.md
+    - 算法相关:
+      - 基础数据结构: cs/algorithm/basic-ds.md
+      - 算法设计与分析: cs/algorithm/design-analysis.md
+      - 排序与哈希: cs/algorithm/sort-hash.md
+    - 人工智能:
+      - 工程伦理: cs/ai/engineering-ethics.md
+      - 模式识别: cs/ai/mode-recognition.md
+      - 机器学习: cs/ai/ml.md
+      - 神经网络与深度学习: cs/ai/dl.md
   - Geometry:
     - geometry/index.md
     - 多视图几何:

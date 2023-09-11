@@ -59,41 +59,11 @@
 
 ## 笔记类
 
-- [x] x86 汇编语言
-    - [x] 补充 186～386 指令
-    - [x] 补充 fl 影响
-- [x] RISC-V 汇编语言
-    - [x] 补充扩展指令集指令
-- [x] 检查各 index
-- [ ] 系统一相关
-    - [ ] 理论课
-    - [x] lab
-- [x] 系统二相关
-    - [x] 补一下前两节课的笔记
-- [x] CTF ETH
-    - [x] 基础知识
-    - [x] 常见漏洞
-- [ ] Python 相关
-    - [x] Lecture 文字版
-    - [ ] NumPy
-    - [ ] PIL
-    - [ ] matplotlib
+- [ ] x86 汇编语言
+- [ ] Python
+    - [ ] Numpy 科学计算库
 - [ ] HPC
-    - [x] SIMD
-    - [ ] ML
-- [x] 建立课程笔记页面
-    - [x] 人工智能基础
-    - [x] 数据结构基础
-- [ ] 工具
-    - [x] index
-    - [x] docker
-    - [ ] GitHub Action
-    - [x] Git
-- [x] Writeups
-    - [x] TCTF NFT
-    - [x] 强网杯碟影重重
-- [ ] Rust
-- [ ] 源码剖析
-    - [x] index
-    - [ ] mkdocs
-- [x] log4j 漏洞复现存个档
+    - [ ] GPU
+    - [ ] CUDA 编程
+    - [ ] OpenMP 基础
+    - [ ] MPI 基础
