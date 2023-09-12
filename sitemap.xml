@@ -2,152 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://note.jujimeizuo.cn/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/changelog/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/links/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/todo/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/ai/dl/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/ai/engineering-ethics/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/ai/ml/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/ai/mode-recognition/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/algorithm/basic-ds/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/algorithm/design-analysis/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/algorithm/sort-hash/</loc>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/function/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/system_knowledge/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/go/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/go/basic/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/go/gin/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/java/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/basic/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/numpy/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/geometry/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/geometry/mvg/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/geometry/mvg/pjt2d/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/geometry/mvg/pjt3d/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/mb/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/mb/optimization-theory/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/mb/optimization-theory/lec1/</loc>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/action/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/docker/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/gdb/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/git/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/hexo/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/mkdocs/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/reveal-md/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/shell/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/utilsbox/</loc>
-         <lastmod>2023-09-10</lastmod>
+         <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

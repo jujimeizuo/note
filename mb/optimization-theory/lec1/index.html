@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/geometry/mvg/pjt3d/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/mb/optimization-theory/lec1/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>3D 射影几何和变换 - 狙击美佐的笔记本</title>
+<title>最优化问题 - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -20,6 +20,7 @@
 <link href="../../../css/card.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -51,6 +52,9 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+            跳转至
+          </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -72,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              3D 射影几何和变换
+              最优化问题
             
           </span>
 </div>
@@ -151,12 +155,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../../geometry/">
         Geometry
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../mb/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         Mathematical basis
       </a>
 </li>
@@ -412,10 +416,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Geometry</a>
+<a href="../../../geometry/">Geometry</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -426,10 +430,10 @@ var _hmt = _hmt || [];
           Geometry
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">多视图几何</a>
+<a href="../../../geometry/mvg/">多视图几何</a>
 <label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -441,13 +445,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pjt2d/">
+<a class="md-nav__link" href="../../../geometry/mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../geometry/mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
@@ -457,10 +460,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mb/">Mathematical basis</a>
+<a href="../../">Mathematical basis</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -471,10 +474,10 @@ var _hmt = _hmt || [];
           Mathematical basis
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../mb/optimization-theory/">最优化理论与方法</a>
+<a href="../">最优化理论与方法</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -485,10 +488,138 @@ var _hmt = _hmt || [];
           最优化理论与方法
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          最优化问题
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         最优化问题
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    经典极值问题
+  </a>
+<nav aria-label="经典极值问题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    无约束极值问题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    具有等式约束的极值问题
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    基本概念
+  </a>
+<nav aria-label="基本概念" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    向量表达法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    一般形式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    分类
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    二维问题的图解法
+  </a>
+<nav aria-label="二维问题的图解法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    等值线
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    等值面
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    二次函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hesse">
+    梯度与 Hesse 矩阵
+  </a>
+<nav aria-label="梯度与 Hesse 矩阵" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    梯度
+  </a>
+<nav aria-label="梯度" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    性质
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    特殊类型函数的梯度
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hesse_1">
+    Hesse 矩阵
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#taylor">
+    多元函数的 Taylor 展开式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    下降迭代算法
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -608,23 +739,396 @@ var _hmt = _hmt || [];
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    经典极值问题
+  </a>
+<nav aria-label="经典极值问题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    无约束极值问题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    具有等式约束的极值问题
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    基本概念
+  </a>
+<nav aria-label="基本概念" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    向量表达法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    一般形式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    分类
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    二维问题的图解法
+  </a>
+<nav aria-label="二维问题的图解法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    等值线
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    等值面
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    二次函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hesse">
+    梯度与 Hesse 矩阵
+  </a>
+<nav aria-label="梯度与 Hesse 矩阵" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    梯度
+  </a>
+<nav aria-label="梯度" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    性质
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    特殊类型函数的梯度
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hesse_1">
+    Hesse 矩阵
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#taylor">
+    多元函数的 Taylor 展开式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    下降迭代算法
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/geometry/mvg/pjt3d.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/mb/optimization-theory/lec1.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1><span>3D<span class="heti-spacing"> </span></span>射影几何和变换</h1>
+<h1 id="_1">最优化问题<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1675<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>追求最优目标的数学问题都属于最优化问题。</p>
+<p>作为最优化问题，至少有两个要素：第一个是可能的方案；第二个是追求的目标。</p>
+</div>
+<h2 id="_2">经典极值问题<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在高数里的微积分中早以涉及到最简单的最优化问题，<strong>就是函数极值问题</strong>。</p>
+<p>可以引申出两种经典最优化的两种类型问题。</p>
+<h3 id="_3">无约束极值问题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="arithmatex">\[
+\min{f(x_1, x_2, ..., x_n)} \  或 \  \max{f(x_1, x_2, ..., x_n)}
+\]</div>
+<p>这里的<span class="arithmatex">\(f(x_1, x_2, ..., x_n)\)</span>是定义在<span class="arithmatex">\(n\)</span>维空间上的可微函数。</p>
+<p><strong>求极值点方法</strong>：从如下的含有<span class="arithmatex">\(n\)</span>个未知数<span class="arithmatex">\(x_1, x_2, ..., x_n\)</span>的非线性方程组中解出驻点，然后判定或验证这些驻点是不是极值点：</p>
+<div class="arithmatex">\[
+f_{x_1}^\prime(x_1, x_2, ..., x_n) = 0 \\
+f_{x_2}^\prime(x_1, x_2, ..., x_n) = 0 \\
+... \\
+f_{x_n}^\prime(x_1, x_2, ..., x_n) = 0
+\]</div>
+<h3 id="_4">具有等式约束的极值问题<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="arithmatex">\[
+\min{f(x_1, x_2, ..., x_n)} \  或 \  \max{f(x_1, x_2, ..., x_n)} \\
+满足于 \ \ \ h_i(x_1, x_2, ... , x_n) = 0 \ \ j = 1,2,...,l(j &lt; n)
+\]</div>
+<p><strong>求极值点方法</strong>：通常采用<span class="arithmatex">\(Lagrange\)</span>乘子法来求解。即把这个问题转换为求<span class="arithmatex">\(Lagrange\)</span>函数的无约束极值问题：</p>
+<div class="arithmatex">\[
+L(x_1, x_2, ... , x_n, \lambda_1, \lambda_2, ..., \lambda_l) \\
+= f(x_1, x_2, ..., x_n) - \sum_{j=1}^l \lambda_j h_j(x_1, x_2, ..., x_n)
+\]</div>
+<h2 id="_5">基本概念<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_6">向量表达法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>将<span class="arithmatex">\((x_1, x_2, ..., x_n)\)</span>看作是<span class="arithmatex">\(n\)</span>维向量空间<span class="arithmatex">\(R^n\)</span>中一个向量<span class="arithmatex">\(\boldsymbol{x}\)</span>的<span class="arithmatex">\(n\)</span>个分量，即<span class="arithmatex">\(\boldsymbol{x} = (x_1, x_2, ..., x_n)^T\)</span></p>
+<p>所以重定义一下最优化问题：</p>
+<ul>
+<li>
+<p>无约束极值问题：</p>
+<div class="arithmatex">\[\min{f(\boldsymbol{x})}\]</div>
+</li>
+<li>
+<p>具有等式约束的极值问题：</p>
+<div class="arithmatex">\[
+\min{f(\boldsymbol{x})} \\ 
+s.t. \ \ \ \boldsymbol{h}(\boldsymbol{x}) = \boldsymbol{0} \\
+其中 \ \ \  \boldsymbol{h}(\boldsymbol{x}) = (h_1(\boldsymbol{x}), h_2(\boldsymbol{x}), ..., h_l(\boldsymbol{x}))^T
+\]</div>
+</li>
+</ul>
+<h3 id="_7">一般形式<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>大部分所要讨论的问题是如下的（静态）最优化问题：</p>
+<div class="arithmatex">\[
+\min_{x \in \Omega}{f(\boldsymbol{x})} \\
+s.t. \ \ \ s_i(\boldsymbol{x}) \ge 0 \ \ \ i = 1, 2, ..., m \\
+h_j(\boldsymbol{x}) = 0 \ \ \ j = 1, 2, .., l \ (l &lt; n)
+\]</div>
+<p>向量表示法写成：</p>
+<div class="arithmatex">\[
+\min_{x \in \Omega}{f(\boldsymbol{x})} \\
+s.t. \ \ \ \boldsymbol{s}(\boldsymbol{x}) \ge \boldsymbol{0} \\
+\boldsymbol{h}(x) = \boldsymbol{0} \\
+其中 \ \ \ \boldsymbol{s}(\boldsymbol(x)) = (s_1(\boldsymbol{x}), ..., s_m(\boldsymbol{x}))^T
+\]</div>
+<p>这种问题称为<strong>非线性规划</strong>，比具有等式约束的极值问题仅多出<span class="arithmatex">\(m\)</span>个不等式约束。但是，所谓经典问题与近代问题的界限也就在这里。</p>
+<ul>
+<li>一些术语<ul>
+<li>满足所有约束的向量<span class="arithmatex">\(\boldsymbol{x}\)</span>称为<strong>容许解</strong>或<strong>容许点</strong>。<strong>容许点</strong>的集合称为<strong>容许集</strong>。</li>
+<li><span class="arithmatex">\(\boldsymbol{x}^*\)</span>称为问题的最优点，而相应的目标函数值<span class="arithmatex">\(f(\boldsymbol{x}^*)\)</span>称为最优值，<span class="arithmatex">\((\boldsymbol{x}^*, f(\boldsymbol{x}^*))\)</span>称为最优解。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">分类<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="arithmatex">\[
+最优化问题
+\left\{\begin{matrix}
+静态问题
+\left\{\begin{matrix}
+无约束问题
+\left\{\begin{matrix}
+一维问题
+\\
+n维问题
+\end{matrix}\right.
+\\
+约束问题
+\left\{\begin{matrix}
+线性规划
+\\
+非线性规划
+\end{matrix}\right.
+\end{matrix}\right.
+\\
+动态问题
+\end{matrix}\right.
+\]</div>
+<h2 id="_9">二维问题的图解法<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_10">等值线<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>用平面<span class="arithmatex">\(L\)</span>去截曲面<span class="arithmatex">\(S\)</span>得到的是一个圆，这个圆又一个重要的性质：<strong>圆上任何一点的目标函数都等于<span class="arithmatex">\(f_0\)</span></strong>。像这样的曲线，其上任何一点的目标函数值都等于同一常数，称为目标函数的<strong>等值线</strong>。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/mb/optimization-theory/isoline.jpg"><img alt="等值线" src="https://cdn.jujimeizuo.cn/note/mb/optimization-theory/isoline.jpg"/></a></center>
+<details class="exmaple">
+<summary>图解法</summary>
+<div class="arithmatex">\[
+求解\min{(x_1-2)^2+(x_2-1)^2} \\
+s.t. \ \ \ x_1+x_2-5=0
+\]</div>
+<p>先画出目标函数的等值线，再画出约束曲线。实际上约束曲线是一条直线，这条直线就是容许集。因为最优点是容许集上使得等值线具有最小值的点，由下左图可以看出，约束直线与等值线（圆）的切点正是最优点。利用解析几何的有关方法可求的该点是<span class="arithmatex">\(\boldsymbol{x}^x=(3,2)^T\)</span>，它所对应的最优值是<span class="arithmatex">\(f(\boldsymbol{x}^*)=2\)</span>。</p>
+<p>将无约束问题和约束问题的几何图形合在一起，如下右图所示。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/mb/optimization-theory/graphic-method.jpg"><img alt="等值线" src="https://cdn.jujimeizuo.cn/note/mb/optimization-theory/graphic-method.jpg"/></a></center>
+</details>
+<p>对于二维最优化问题，可以用图解法求解。</p>
+<h3 id="_11">等值面<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>对于三维及以上的空间，使目标函数取同一常数值的点集<span class="arithmatex">\(\{ \boldsymbol{x} | f(\boldsymbol{x})= \gamma , \gamma是常数 \}\)</span>称为<strong>等值面</strong>。具有一下性质：</p>
+<ol>
+<li>有不同值的等值面之间不相交。</li>
+<li>除里极值点所在的等值面以外，不会在区域的内部中断。</li>
+<li>等值面稠密的地方，目标函数值变化得比较快；稀疏的地方变化得比较慢。</li>
+<li>在极值点附近，等值面（线）近似地呈现为同心椭球面族。</li>
+</ol>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/mb/optimization-theory/isosurface.jpg"><img alt="等值线" src="https://cdn.jujimeizuo.cn/note/mb/optimization-theory/isosurface.jpg"/></a></center>
+<h2 id="_12">二次函数<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在<span class="arithmatex">\(n\)</span>元目标函数中，除里线性函数，最简单最重要的一类就是二次函数。</p>
+<ul>
+<li>一般形式是</li>
+</ul>
+<div class="arithmatex">\[
+f(x_1, x_2, ..., x_n)=\frac{1}{2} \sum_{i=1}^n \sum_{j=1}^m q_{ij}x_ix_j+\sum_{i=1}^nb_ix_i+c
+\]</div>
+<ul>
+<li>矩阵形式是</li>
+</ul>
+<div class="arithmatex">\[
+f(\boldsymbol{x})=\frac{1}{2}\boldsymbol{x}^T\boldsymbol{Q}\boldsymbol{x}+\boldsymbol{b}^T\boldsymbol{x}+c \\
+其中 \ \ \ \boldsymbol{Q} =
+\begin{bmatrix}
+q_{11}  &amp; q_{12}  &amp; ...  &amp; q_{1n} \\
+q_{21}  &amp; q_{22}  &amp; ...  &amp; q_{2n} \\
+...  &amp; ...  &amp; ...  &amp; ... \\
+q_{n1}  &amp; q_{n2}  &amp; ...  &amp; q_{nn}
+\end{bmatrix}
+, \ \ 
+\boldsymbol{b} =
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+... \\
+b_n
+\end{bmatrix}
+\]</div>
+<p>这里<span class="arithmatex">\(\boldsymbol{Q}\)</span>是对称矩阵（二次型）。</p>
+<h2 id="hesse">梯度与<span class="heti-skip"><span class="heti-spacing"> </span>Hesse<span class="heti-spacing"> </span></span>矩阵<a class="headerlink" href="#hesse" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_13">梯度<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="_14">定义<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>函数<span class="arithmatex">\(f(\boldsymbol{x})\)</span>在<span class="arithmatex">\(\boldsymbol{x}_0\)</span>处可微</li>
+</ul>
+<div class="arithmatex">\[
+f(\boldsymbol{x}_0 + \boldsymbol{p})-f(\boldsymbol{x}_0) = \boldsymbol{l}^T\boldsymbol{p} + o(||\boldsymbol{p}||)
+\]</div>
+<ul>
+<li>若<span class="arithmatex">\(f(\boldsymbol{x})\)</span>在<span class="arithmatex">\(\boldsymbol{x}_0\)</span>处可微，则<span class="arithmatex">\(f(\boldsymbol{x})\)</span>在该点关于各变量的一阶偏导数存在，并且</li>
+</ul>
+<div class="arithmatex">\[
+\boldsymbol{l} = (\frac{\partial f(\boldsymbol{x}_0)}{\partial x_1}, \frac{\partial f(\boldsymbol{x}_0)}{\partial x_2}, ..., \frac{\partial f(\boldsymbol{x}_0)}{\partial x_n})^T
+\]</div>
+<ul>
+<li>以<span class="arithmatex">\(f(\boldsymbol{x})\)</span>的<span class="arithmatex">\(n\)</span>个偏导数为分量的向量称为<span class="arithmatex">\(f(\boldsymbol{x})\)</span>在<span class="arithmatex">\(\boldsymbol{x}\)</span>处的梯度</li>
+</ul>
+<div class="arithmatex">\[
+\bigtriangledown f(\boldsymbol{x}) = (\frac{\partial f(\boldsymbol{x})}{\partial x_1}, \frac{\partial f(\boldsymbol{x})}{\partial x_2}, ..., \frac{\partial f(\boldsymbol{x})}{\partial x_n})^T
+\]</div>
+<h4 id="_15">性质<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>
+<p>过点<span class="arithmatex">\(\boldsymbol{x}_0\)</span>的等值面方程为<span class="arithmatex">\(f(\boldsymbol{x}) = f(\boldsymbol{x}_0) 或 f(x_1, x_2, ..., x_n) = \gamma_0 \ \ \ 其中 \ \gamma_0 = f(\boldsymbol{x}_0)\)</span>。</p>
+</li>
+<li>
+<p>设<span class="arithmatex">\(f: R^n \to R^1\)</span>在点<span class="arithmatex">\(\boldsymbol{x}_0\)</span>处可微，<span class="arithmatex">\(\boldsymbol{p}\)</span>是固定不变的向量，<span class="arithmatex">\(\boldsymbol{e}\)</span>是方向<span class="arithmatex">\(\boldsymbol{p}\)</span>上的单位向量，则称极限 <span class="arithmatex">\(\frac{\partial f(\boldsymbol{x}_0)}{\partial \boldsymbol{p}} = \lim_{t \to 0^+} \frac{f(\boldsymbol{x}_0+t\boldsymbol{e})-f(\boldsymbol{x}_0)}{t}\)</span>为函数<span class="arithmatex">\(f(\boldsymbol{x})\)</span>在点<span class="arithmatex">\(\boldsymbol{x}_0\)</span>处沿<span class="arithmatex">\(\boldsymbol{p}\)</span>方向的方向导数。</p>
+</li>
+<li>
+<p>设<span class="arithmatex">\(f:R^n \to R^1\)</span>在点<span class="arithmatex">\(\boldsymbol{x}_0\)</span>处可微，则<span class="arithmatex">\(\frac{\partial f(\boldsymbol{x}_0)}{\partial \boldsymbol{p}} = \bigtriangledown f(\boldsymbol{x}_0)^T\boldsymbol{e}\)</span>。其中<span class="arithmatex">\(\boldsymbol{e}\)</span>是<span class="arithmatex">\(\boldsymbol{p}\)</span>方向上的单位向量。</p>
+</li>
+</ul>
+<h4 id="_16">特殊类型函数的梯度<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ol>
+<li>若<span class="arithmatex">\(f(\boldsymbol{x})=C\)</span><span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>常数<span><span class="heti-spacing"> </span>)</span>，则<span class="arithmatex">\(\bigtriangledown f(\boldsymbol{x})=\boldsymbol{0}\)</span>，即<span class="arithmatex">\(\bigtriangledown C = \boldsymbol{0}\)</span></li>
+<li><span class="arithmatex">\(\bigtriangledown (\boldsymbol{b}^T\boldsymbol{x})=\boldsymbol{b}\)</span></li>
+<li><span class="arithmatex">\(\bigtriangledown (\boldsymbol{x}^T\boldsymbol{x})=2\boldsymbol{x}\)</span></li>
+<li>若<span class="arithmatex">\(\boldsymbol{Q}\)</span>是对称方阵，则<span class="arithmatex">\(\bigtriangledown (\boldsymbol{x}^T\boldsymbol{Q}\boldsymbol{x})=2\boldsymbol{Q}\boldsymbol{x}\)</span></li>
+</ol>
+<h3 id="hesse_1"><span>Hesse<span class="heti-spacing"> </span></span>矩阵<a class="headerlink" href="#hesse_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>多元函数<span class="arithmatex">\(f(\boldsymbol{x})\)</span>的一阶导数是它的梯度<span class="arithmatex">\(\bigtriangledown f(\boldsymbol{x})\)</span>，二阶导数是它的<span class="heti-skip"><span class="heti-spacing"> </span>Hesse<span class="heti-spacing"> </span></span>矩阵<span class="arithmatex">\(\bigtriangledown^2f(\boldsymbol{x})\)</span>。</p>
+<div class="arithmatex">\[
+\bigtriangledown^2 f(\boldsymbol{x})=\bigtriangledown(\bigtriangledown f(\boldsymbol{x}))=
+\begin{bmatrix}
+\frac{\partial^2 f(\boldsymbol{x})}{\partial x_1^2}  &amp; \frac{\partial^2 f(\boldsymbol{x})}{\partial x_2 \partial x_1} &amp; ... &amp; \frac{\partial^2 f(\boldsymbol{x})}{\partial x_n \partial x_1} \\
+\frac{\partial^2 f(\boldsymbol{x})}{\partial x_1 \partial x_2}  &amp; \frac{\partial^2 f(\boldsymbol{x})}{\partial x_2^2} &amp; ... &amp; \frac{\partial^2 f(\boldsymbol{x})}{\partial x_n \partial x_2} \\
+... &amp; ... &amp; ... &amp; ... \\
+\frac{\partial^2 f(\boldsymbol{x})}{\partial x_1 \partial x_n}  &amp; \frac{\partial^2 f(\boldsymbol{x})}{\partial x_2 \partial x_n} &amp; ... &amp; \frac{\partial^2 f(\boldsymbol{x})}{\partial x_n^2} \\
+\end{bmatrix}
+\]</div>
+<ul>
+<li>
+<p>常用公式：</p>
+<ol>
+<li><span class="arithmatex">\(\bigtriangledown \boldsymbol{c}=\boldsymbol{O}\)</span>，其中<span class="arithmatex">\(\boldsymbol{c}\)</span>是分量全为常数的<span class="arithmatex">\(n\)</span>维向量，<span class="arithmatex">\(\boldsymbol{O}\)</span>是<span class="arithmatex">\(n \times n\)</span>阶零矩阵。</li>
+<li><span class="arithmatex">\(\bigtriangledown \boldsymbol{x} = \boldsymbol{I}\)</span>，其中<span class="arithmatex">\(\boldsymbol{x}\)</span>是<span class="arithmatex">\(n\)</span>维向量，<span class="arithmatex">\(\boldsymbol{I}\)</span>是<span class="arithmatex">\(n \times n\)</span>阶单位矩阵。</li>
+<li><span class="arithmatex">\(\bigtriangledown (\boldsymbol{Q}\boldsymbol{x})=\boldsymbol{Q}\)</span>，其中<span class="arithmatex">\(\boldsymbol{Q}\)</span>是<span class="arithmatex">\(n \times n\)</span>阶矩阵。</li>
+<li>设<span class="arithmatex">\(\varphi (t)=f(\boldsymbol{x}_0 + t\boldsymbol{p})\)</span>，其中<span class="arithmatex">\(f:R^n \to R^1, \varphi: R^t \to R^1\)</span>，则</li>
+</ol>
+<div class="arithmatex">\[
+\varphi^\prime(t)=\bigtriangledown f(\boldsymbol{x}_0 + t\boldsymbol{p})^T\boldsymbol{p} \\
+\varphi^{\prime \prime}(t)=\boldsymbol{p}^T\bigtriangledown^2f(\boldsymbol{x}_0+t\boldsymbol{p})\boldsymbol{p}
+\]</div>
+</li>
+</ul>
+<h2 id="taylor">多元函数的<span class="heti-skip"><span class="heti-spacing"> </span>Taylor<span class="heti-spacing"> </span></span>展开式<a class="headerlink" href="#taylor" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>设<span class="arithmatex">\(f:R^n \to R^1\)</span>具有二阶连续偏导数，则</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}+\boldsymbol{p})=f(\boldsymbol{x})+\bigtriangledown f(\boldsymbol{x})^T\boldsymbol{p}+\frac{1}{2}\boldsymbol{p}^T\bigtriangledown^2f(\overline{\boldsymbol{x}})\boldsymbol{p} \\
+其中\overline{\boldsymbol{x}}=\boldsymbol{x}+\theta \boldsymbol{p}，而0 &lt; \theta &lt; 1
+\]</div>
+<h2 id="_17">下降迭代算法<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>给定初始点后，如果每迭代一步都使目标函数有所下降，即<span class="arithmatex">\(f(\boldsymbol{x}_{k+1}) &lt; f(\boldsymbol{x}_k)\)</span>，那这种迭代法称为下降法。</p>
+<p>在迭代过程中有两个规则需要确定，一个是下降方向<span class="arithmatex">\(\boldsymbol{p}_k\)</span>的选取；一个是步长因子<span class="arithmatex">\(t_k\)</span>的选取。</p>
+<p>算法的基本格式如下：</p>
+<ol>
+<li>选取初始点<span class="arithmatex">\(\boldsymbol{x}_0\)</span>，置<span class="arithmatex">\(k=0\)</span></li>
+<li>按某种规则确定<span class="arithmatex">\(\boldsymbol{p}_k\)</span>使得<span class="arithmatex">\(\bigtriangledown f(\boldsymbol{x}_k)^T \boldsymbol{p}_k &lt; 0\)</span></li>
+<li>按某种规则确定<span class="arithmatex">\(t_k\)</span>使得<span class="arithmatex">\(f(\boldsymbol{x}_k+t_k\boldsymbol{p}_k)&lt;f(\boldsymbol{x}_k)\)</span></li>
+<li>计算<span class="arithmatex">\(\boldsymbol{x}_{k+1}=\boldsymbol{x}_k+t_k\boldsymbol{p}_k\)</span></li>
+<li>判定<span class="arithmatex">\(\boldsymbol{x}_{k+1}\)</span>时候满足终止准则，若满足，打印<span class="arithmatex">\(\boldsymbol{x}_{k+1}\)</span>和<span class="arithmatex">\(f(\boldsymbol{x}_{k+1})\)</span>，停机；否则置<span class="arithmatex">\(k=k+1\)</span>，转<span><span class="heti-spacing"> </span>2</span></li>
+</ol>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月3日 17:24:08</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月12日 20:42:58</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -635,7 +1139,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 2D 射影几何和变换" class="md-footer__link md-footer__link--prev" href="../pjt2d/" rel="prev">
+<a aria-label="上一页: 最优化理论与方法" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -644,17 +1148,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              2D 射影几何和变换
+              最优化理论与方法
             </div>
 </div>
 </a>
-<a aria-label="下一页: 最优化理论与方法" class="md-footer__link md-footer__link--next" href="../../../mb/" rel="next">
+<a aria-label="下一页: 工具相关" class="md-footer__link md-footer__link--next" href="../../../utils/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              最优化理论与方法
+              工具相关
             </div>
 </div>
 <div class="md-footer__button md-icon">
