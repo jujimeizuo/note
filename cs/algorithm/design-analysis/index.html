@@ -20,6 +20,7 @@
 <link href="../../../css/card.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -51,6 +52,9 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+            跳转至
+          </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -363,9 +367,74 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          算法设计与分析
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         算法设计与分析
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    算法引论
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    复杂度渐进记号
+  </a>
+<nav aria-label="复杂度渐进记号" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    规则
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    递归与分治
+  </a>
+<nav aria-label="递归与分治" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    递归的概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    分治法思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    大整数的乘法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../sort-hash/">
@@ -608,23 +677,207 @@ var _hmt = _hmt || [];
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    算法引论
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    复杂度渐进记号
+  </a>
+<nav aria-label="复杂度渐进记号" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    规则
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    递归与分治
+  </a>
+<nav aria-label="递归与分治" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    递归的概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    分治法思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    大整数的乘法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cs/algorithm/design-analysis.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1>算法设计与分析</h1>
+<h1 id="_1">算法设计与分析<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>876<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>4<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>本科和研都选过这门课，特此来归档一下笔记</p>
+<p>（虽然都是打<span class="heti-skip"><span class="heti-spacing"> </span>acm<span class="heti-spacing"> </span></span>的时候学的 😂</p>
+</div>
+<h2 id="_2">算法引论<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>算法是满足下述性质的指令序列：<ol>
+<li>输入：有零个或多个外部量作为算法的输入。</li>
+<li>输出：算法产生至少一个量作为输出。</li>
+<li>确定性：组成算法的我条指令足清晰的，无歧义的。</li>
+<li>有限性：算法中每条指令的执行次数有限，披行每条指令的时间世存限。</li>
+</ol>
+</li>
+<li>算法分析内容：<ul>
+<li>运行时间：与机器和编译器有关</li>
+<li>时间复杂度、空间复杂度：与机器和编译器无关</li>
+</ul>
+</li>
+<li>复杂度分析假设：<ul>
+<li>指令按顺序执行</li>
+<li>所有指令（运算）都消耗同一时间单元</li>
+<li>数据规模是给定的，且有无限空间</li>
+</ul>
+</li>
+<li>一般需要分析 <span class="arithmatex">\(T_{\mathrm{avg}}(N)\)</span>（平均情况）和 <span class="arithmatex">\(T_{\mathrm{worst}}(N)\)</span>（最差情况），<span class="arithmatex">\(N\)</span> 是输入的数据规模（也可以有多个输入规模）</li>
+</ul>
+<h2 id="_3">复杂度渐进记号<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_4">定义<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>大 <span class="arithmatex">\(O\)</span> 表示法 <span class="arithmatex">\(T(N) = O(f(N))\)</span>，如果存在常数 <span class="arithmatex">\(c\)</span> 和 <span class="arithmatex">\(n_0\)</span> 使得当 <span class="arithmatex">\(N\geq n_0\)</span> 时 <span class="arithmatex">\(T(N)\leq c\cdot f(N)\)</span><ul>
+<li>渐进上界，即 <span class="arithmatex">\(T(N)\)</span> 的阶不会高于 <span class="arithmatex">\(f(N)\)</span>（增长比 <span class="arithmatex">\(f(N)\)</span> 慢或相同，&lt;=）</li>
+</ul>
+</li>
+<li>大 <span class="arithmatex">\(\Omega\)</span> 表示法 <span class="arithmatex">\(T(N) = \Omega(g(N))\)</span>，如果存在常数 <span class="arithmatex">\(c\)</span> 和 <span class="arithmatex">\(n_0\)</span> 使得当 <span class="arithmatex">\(N\geq n_0\)</span> 时 <span class="arithmatex">\(T(N)\geq c\cdot g(N)\)</span><ul>
+<li>渐进下界，即 <span class="arithmatex">\(T(N)\)</span> 的阶不会低于 <span class="arithmatex">\(f(N)\)</span>（增长比 <span class="arithmatex">\(f(N)\)</span> 快或相同，&gt;=） </li>
+</ul>
+</li>
+<li>大 <span class="arithmatex">\(\Theta\)</span> 表示法 <span class="arithmatex">\(T(N) = \Theta(h(N))\)</span>，当且仅当 <span class="arithmatex">\(T(N) = O(h(N))\)</span> 且 <span class="arithmatex">\(T(N) = \Omega(h(N))\)</span><ul>
+<li>渐进紧确界，即 <span class="arithmatex">\(T(N)\)</span> 需要与 <span class="arithmatex">\(h(N)\)</span> 同阶（增长速度相同<span><span class="heti-spacing"> </span>=</span>）</li>
+</ul>
+</li>
+<li>小 <span class="arithmatex">\(o\)</span> 表示法 <span class="arithmatex">\(T(N) = o(p(N))\)</span>，当 <span class="arithmatex">\(T(N) = O(p(N))\)</span> 且 <span class="arithmatex">\(T(N)\ne \Theta(p(N))\)</span> 时<ul>
+<li>非渐进紧确上界（<span class="arithmatex">\(T(N)\)</span> 增长比 <span class="arithmatex">\(p(N)\)</span> 慢，&lt;）</li>
+</ul>
+</li>
+<li>小 <span class="arithmatex">\(\omega\)</span> 表示法 <span class="arithmatex">\(T(N) = \omega(p(N))\)</span>，当 <span class="arithmatex">\(T(N) = \Omega(q(N))\)</span> 且 <span class="arithmatex">\(T(N)\ne \Theta(q(N))\)</span> 时<ul>
+<li>非渐进紧确下界（<span class="arithmatex">\(T(N)\)</span> 增长比 <span class="arithmatex">\(q(N)\)</span> 快，&gt;）</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">规则<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>如果 <span class="arithmatex">\(T_1(N) = O(f(N))\)</span> 且 <span class="arithmatex">\(T_2(N) = O(g(N))\)</span>，则：<ul>
+<li><span class="arithmatex">\(T_1(N) + T_2(N) = \mathrm{max}(O(f(N)), O(g(N)))\)</span></li>
+<li><span class="arithmatex">\(T_1(N)\cdot T_2(N) = O(f(N)\cdot g(N))\)</span></li>
+</ul>
+</li>
+<li>如果 <span class="arithmatex">\(T(N)\)</span> 是 <span class="arithmatex">\(N\)</span> 的 <span class="arithmatex">\(k\)</span> 次多项式，则 <span class="arithmatex">\(T(N) = \Theta(N^k)\)</span></li>
+<li>对于任意常数 <span class="arithmatex">\(k\)</span> 均有 <span class="arithmatex">\(\log^kN = O(N)\)</span></li>
+<li>大<span class="heti-skip"><span class="heti-spacing"> </span>O<span class="heti-spacing"> </span></span>记号比较：<a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a></li>
+<li>分析规则：<ul>
+<li><span>for<span class="heti-spacing"> </span></span>循环的运行时间是循环内部语句的最长时间（含<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>判断）乘循环次数</li>
+<li>嵌套<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>循环要逐次相乘</li>
+<li><span>if else<span class="heti-spacing"> </span></span>语句的运行时间不超过判断时间<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>耗时最长的语句块的运行时间</li>
+</ul>
+</li>
+<li>补充：主定理。假设有 <span class="arithmatex">\(T(n) = aT(n/b)+f(n)\)</span>（<span class="arithmatex">\(a\geq 1, b&gt;1\)</span>），则：<ul>
+<li>如果存在常数 <span class="arithmatex">\(\epsilon &gt; 0\)</span> 有 <span class="arithmatex">\(f(n) = O(n^{\log_ba-\epsilon})\)</span>，则 <span class="arithmatex">\(T(n) = \Theta(n^{\log_ba})\)</span></li>
+<li>如果 <span class="arithmatex">\(f(n) = \Theta(n^{\log_ba})\)</span> 则 <span class="arithmatex">\(T(n) = \Theta(n^{\log_ba}\log n)\)</span></li>
+<li>如果存在常数 <span class="arithmatex">\(\epsilon &gt; 0\)</span> 有 <span class="arithmatex">\(f(n) = \Omega(n^{\log_ba+\epsilon})\)</span>，同时存在常数 <span class="arithmatex">\(c&lt;1\)</span> 使得对于充分大 <span class="arithmatex">\(n\)</span> 有 <span class="arithmatex">\(af(n/b)\leq cf(n)\)</span> 则 <span class="arithmatex">\(T(N) = \Theta(f(n))\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">递归与分治<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_7">递归的概念<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>直接成间接地调用自身的算法称为递归算法。用函数自身给出定义的函数称为递归函数。</p>
+<p>例如阶乘函数、斐波那契函数等等</p>
+<div class="arithmatex">\[
+eg \ \ \ F(n) =
+\left\{\begin{matrix}
+1 &amp; n = 0, 1 \\
+F(n-1)+F(n-2) &amp; n &gt;= 1
+\end{matrix}\right.
+\]</div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>对于小范围可以用记忆化<span class="arithmatex">\(O(n)\)</span>的复杂度求解</li>
+<li>对于大范围可以用矩阵快速幂<span class="arithmatex">\(O(\log n)\)</span>的复杂度求解。</li>
+</ul>
+<h3 id="_8">分治法思想<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>分治法的基本思想是将一个規模为<span class="arithmatex">\(n\)</span>的问题分解为<span class="arithmatex">\(k\)</span>个规模较小的子问题，这些子问题互相独立且与原问题相同。递门地解这些子问题，然后將各子问题的解合井得到原向题的解。</p>
+<p>eg：快速幂、二分、归并排序、线段树、<span>cdq<span class="heti-spacing"> </span></span>分治、<span>FFT<span class="heti-spacing"> </span></span>等</p>
+<h3 id="_9">大整数的乘法<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>有两个超过<span class="heti-skip"><span class="heti-spacing"> </span>long long<span class="heti-spacing"> </span></span>类型的大整数<span class="arithmatex">\(X\)</span>和<span class="arithmatex">\(Y\)</span>，用较低的复杂度求解<span class="arithmatex">\(X*Y\)</span>。</p>
+<p>解决这个问题至少有<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>种方法，可以看之前写过的文章：<a href="http://www.jujimeizuo.cn/blog/index.php/2022/12/06/bigintegermultiply/">大整数相乘 – 模拟<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>分治<span class="heti-skip"><span class="heti-spacing"> </span>/FFT/CRT/<span class="heti-spacing"> </span></span>网络流<span><span class="heti-spacing"> </span>/Furer</span></a></p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://github.com/jujimeizuo/cdn/blob/master/book/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90(%E7%8E%8B%E6%99%93%E4%B8%9C).pdf">算法设计与分析<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>王晓东<span><span class="heti-spacing"> </span>).pdf</span></a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月11日 12:15:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月12日 22:32:26</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
