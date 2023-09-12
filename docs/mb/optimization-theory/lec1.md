@@ -1,0 +1,275 @@
+---
+counter: True
+comment: True
+---
+
+# 最优化问题
+
+!!! abstract
+    追求最优目标的数学问题都属于最优化问题。
+
+    作为最优化问题，至少有两个要素：第一个是可能的方案；第二个是追求的目标。
+
+## 经典极值问题
+
+在高数里的微积分中早以涉及到最简单的最优化问题，**就是函数极值问题**。
+
+可以引申出两种经典最优化的两种类型问题。
+
+### 无约束极值问题
+
+$$
+\min{f(x_1, x_2, ..., x_n)} \  或 \  \max{f(x_1, x_2, ..., x_n)}
+$$
+
+这里的$f(x_1, x_2, ..., x_n)$是定义在$n$维空间上的可微函数。
+
+**求极值点方法**：从如下的含有$n$个未知数$x_1, x_2, ..., x_n$的非线性方程组中解出驻点，然后判定或验证这些驻点是不是极值点：
+
+$$
+f_{x_1}^\prime(x_1, x_2, ..., x_n) = 0 \\
+f_{x_2}^\prime(x_1, x_2, ..., x_n) = 0 \\
+... \\
+f_{x_n}^\prime(x_1, x_2, ..., x_n) = 0
+$$
+
+
+### 具有等式约束的极值问题
+
+$$
+\min{f(x_1, x_2, ..., x_n)} \  或 \  \max{f(x_1, x_2, ..., x_n)} \\
+满足于 \ \ \ h_i(x_1, x_2, ... , x_n) = 0 \ \ j = 1,2,...,l(j < n)
+$$
+
+**求极值点方法**：通常采用$Lagrange$乘子法来求解。即把这个问题转换为求$Lagrange$函数的无约束极值问题：
+
+$$
+L(x_1, x_2, ... , x_n, \lambda_1, \lambda_2, ..., \lambda_l) \\
+= f(x_1, x_2, ..., x_n) - \sum_{j=1}^l \lambda_j h_j(x_1, x_2, ..., x_n)
+$$
+
+
+## 基本概念
+### 向量表达法
+
+将$(x_1, x_2, ..., x_n)$看作是$n$维向量空间$R^n$中一个向量$\boldsymbol{x}$的$n$个分量，即$\boldsymbol{x} = (x_1, x_2, ..., x_n)^T$
+
+所以重定义一下最优化问题：
+
+- 无约束极值问题：
+
+    $$\min{f(\boldsymbol{x})}$$
+
+- 具有等式约束的极值问题：
+    
+    $$
+    \min{f(\boldsymbol{x})} \\ 
+    s.t. \ \ \ \boldsymbol{h}(\boldsymbol{x}) = \boldsymbol{0} \\
+    其中 \ \ \  \boldsymbol{h}(\boldsymbol{x}) = (h_1(\boldsymbol{x}), h_2(\boldsymbol{x}), ..., h_l(\boldsymbol{x}))^T
+    $$
+
+### 一般形式
+
+大部分所要讨论的问题是如下的（静态）最优化问题：
+
+$$
+\min_{x \in \Omega}{f(\boldsymbol{x})} \\
+s.t. \ \ \ s_i(\boldsymbol{x}) \ge 0 \ \ \ i = 1, 2, ..., m \\
+h_j(\boldsymbol{x}) = 0 \ \ \ j = 1, 2, .., l \ (l < n)
+$$
+
+向量表示法写成：
+
+$$
+\min_{x \in \Omega}{f(\boldsymbol{x})} \\
+s.t. \ \ \ \boldsymbol{s}(\boldsymbol{x}) \ge \boldsymbol{0} \\
+\boldsymbol{h}(x) = \boldsymbol{0} \\
+其中 \ \ \ \boldsymbol{s}(\boldsymbol(x)) = (s_1(\boldsymbol{x}), ..., s_m(\boldsymbol{x}))^T
+$$
+
+这种问题称为**非线性规划**，比具有等式约束的极值问题仅多出$m$个不等式约束。但是，所谓经典问题与近代问题的界限也就在这里。
+
+- 一些术语
+    - 满足所有约束的向量$\boldsymbol{x}$称为**容许解**或**容许点**。**容许点**的集合称为**容许集**。
+    - $\boldsymbol{x}^*$称为问题的最优点，而相应的目标函数值$f(\boldsymbol{x}^*)$称为最优值，$(\boldsymbol{x}^*, f(\boldsymbol{x}^*))$称为最优解。
+
+### 分类
+
+$$
+最优化问题
+\left\{\begin{matrix}
+静态问题
+\left\{\begin{matrix}
+无约束问题
+\left\{\begin{matrix}
+一维问题
+\\
+n维问题
+\end{matrix}\right.
+\\
+约束问题
+\left\{\begin{matrix}
+线性规划
+\\
+非线性规划
+\end{matrix}\right.
+\end{matrix}\right.
+\\
+动态问题
+\end{matrix}\right.
+$$
+
+## 二维问题的图解法
+
+### 等值线
+
+用平面$L$去截曲面$S$得到的是一个圆，这个圆又一个重要的性质：**圆上任何一点的目标函数都等于$f_0$**。像这样的曲线，其上任何一点的目标函数值都等于同一常数，称为目标函数的**等值线**。
+
+<center>![等值线](https://cdn.jujimeizuo.cn/note/mb/optimization-theory/isoline.jpg)</center>
+
+??? exmaple "图解法"
+    $$
+    求解\min{(x_1-2)^2+(x_2-1)^2} \\
+    s.t. \ \ \ x_1+x_2-5=0
+    $$
+
+    先画出目标函数的等值线，再画出约束曲线。实际上约束曲线是一条直线，这条直线就是容许集。因为最优点是容许集上使得等值线具有最小值的点，由下左图可以看出，约束直线与等值线（圆）的切点正是最优点。利用解析几何的有关方法可求的该点是$\boldsymbol{x}^x=(3,2)^T$，它所对应的最优值是$f(\boldsymbol{x}^*)=2$。
+
+    将无约束问题和约束问题的几何图形合在一起，如下右图所示。
+
+    <center>![等值线](https://cdn.jujimeizuo.cn/note/mb/optimization-theory/graphic-method.jpg)</center>
+
+对于二维最优化问题，可以用图解法求解。
+
+### 等值面
+
+对于三维及以上的空间，使目标函数取同一常数值的点集$\{ \boldsymbol{x} | f(\boldsymbol{x})= \gamma , \gamma是常数 \}$称为**等值面**。具有一下性质：
+
+1. 有不同值的等值面之间不相交。
+2. 除里极值点所在的等值面以外，不会在区域的内部中断。
+3. 等值面稠密的地方，目标函数值变化得比较快；稀疏的地方变化得比较慢。
+4. 在极值点附近，等值面（线）近似地呈现为同心椭球面族。
+
+<center>![等值线](https://cdn.jujimeizuo.cn/note/mb/optimization-theory/isosurface.jpg)</center>
+
+
+## 二次函数
+
+在$n$元目标函数中，除里线性函数，最简单最重要的一类就是二次函数。
+
+- 一般形式是
+
+$$
+f(x_1, x_2, ..., x_n)=\frac{1}{2} \sum_{i=1}^n \sum_{j=1}^m q_{ij}x_ix_j+\sum_{i=1}^nb_ix_i+c
+$$
+
+- 矩阵形式是
+
+$$
+f(\boldsymbol{x})=\frac{1}{2}\boldsymbol{x}^T\boldsymbol{Q}\boldsymbol{x}+\boldsymbol{b}^T\boldsymbol{x}+c \\
+其中 \ \ \ \boldsymbol{Q} =
+\begin{bmatrix}
+q_{11}  & q_{12}  & ...  & q_{1n} \\
+q_{21}  & q_{22}  & ...  & q_{2n} \\
+...  & ...  & ...  & ... \\
+q_{n1}  & q_{n2}  & ...  & q_{nn}
+\end{bmatrix}
+, \ \ 
+\boldsymbol{b} =
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+... \\
+b_n
+\end{bmatrix}
+$$
+
+这里$\boldsymbol{Q}$是对称矩阵（二次型）。
+
+## 梯度与 Hesse 矩阵
+
+### 梯度
+
+#### 定义
+
+- 函数$f(\boldsymbol{x})$在$\boldsymbol{x}_0$处可微
+
+$$
+f(\boldsymbol{x}_0 + \boldsymbol{p})-f(\boldsymbol{x}_0) = \boldsymbol{l}^T\boldsymbol{p} + o(||\boldsymbol{p}||)
+$$
+
+- 若$f(\boldsymbol{x})$在$\boldsymbol{x}_0$处可微，则$f(\boldsymbol{x})$在该点关于各变量的一阶偏导数存在，并且
+
+$$
+\boldsymbol{l} = (\frac{\partial f(\boldsymbol{x}_0)}{\partial x_1}, \frac{\partial f(\boldsymbol{x}_0)}{\partial x_2}, ..., \frac{\partial f(\boldsymbol{x}_0)}{\partial x_n})^T
+$$
+
+- 以$f(\boldsymbol{x})$的$n$个偏导数为分量的向量称为$f(\boldsymbol{x})$在$\boldsymbol{x}$处的梯度
+
+$$
+\bigtriangledown f(\boldsymbol{x}) = (\frac{\partial f(\boldsymbol{x})}{\partial x_1}, \frac{\partial f(\boldsymbol{x})}{\partial x_2}, ..., \frac{\partial f(\boldsymbol{x})}{\partial x_n})^T
+$$
+
+#### 性质
+
+- 过点$\boldsymbol{x}_0$的等值面方程为$f(\boldsymbol{x}) = f(\boldsymbol{x}_0) 或 f(x_1, x_2, ..., x_n) = \gamma_0 \ \ \ 其中 \ \gamma_0 = f(\boldsymbol{x}_0)$。
+
+- 设$f: R^n \to R^1$在点$\boldsymbol{x}_0$处可微，$\boldsymbol{p}$是固定不变的向量，$\boldsymbol{e}$是方向$\boldsymbol{p}$上的单位向量，则称极限 $\frac{\partial f(\boldsymbol{x}_0)}{\partial \boldsymbol{p}} = \lim_{t \to 0^+} \frac{f(\boldsymbol{x}_0+t\boldsymbol{e})-f(\boldsymbol{x}_0)}{t}$为函数$f(\boldsymbol{x})$在点$\boldsymbol{x}_0$处沿$\boldsymbol{p}$方向的方向导数。
+
+- 设$f:R^n \to R^1$在点$\boldsymbol{x}_0$处可微，则$\frac{\partial f(\boldsymbol{x}_0)}{\partial \boldsymbol{p}} = \bigtriangledown f(\boldsymbol{x}_0)^T\boldsymbol{e}$。其中$\boldsymbol{e}$是$\boldsymbol{p}$方向上的单位向量。
+
+#### 特殊类型函数的梯度
+
+1. 若$f(\boldsymbol{x})=C$(常数)，则$\bigtriangledown f(\boldsymbol{x})=\boldsymbol{0}$，即$\bigtriangledown C = \boldsymbol{0}$
+2. $\bigtriangledown (\boldsymbol{b}^T\boldsymbol{x})=\boldsymbol{b}$
+3. $\bigtriangledown (\boldsymbol{x}^T\boldsymbol{x})=2\boldsymbol{x}$
+4. 若$\boldsymbol{Q}$是对称方阵，则$\bigtriangledown (\boldsymbol{x}^T\boldsymbol{Q}\boldsymbol{x})=2\boldsymbol{Q}\boldsymbol{x}$
+
+
+### Hesse 矩阵
+
+多元函数$f(\boldsymbol{x})$的一阶导数是它的梯度$\bigtriangledown f(\boldsymbol{x})$，二阶导数是它的 Hesse 矩阵$\bigtriangledown^2f(\boldsymbol{x})$。
+
+$$
+\bigtriangledown^2 f(\boldsymbol{x})=\bigtriangledown(\bigtriangledown f(\boldsymbol{x}))=
+\begin{bmatrix}
+\frac{\partial^2 f(\boldsymbol{x})}{\partial x_1^2}  & \frac{\partial^2 f(\boldsymbol{x})}{\partial x_2 \partial x_1} & ... & \frac{\partial^2 f(\boldsymbol{x})}{\partial x_n \partial x_1} \\
+\frac{\partial^2 f(\boldsymbol{x})}{\partial x_1 \partial x_2}  & \frac{\partial^2 f(\boldsymbol{x})}{\partial x_2^2} & ... & \frac{\partial^2 f(\boldsymbol{x})}{\partial x_n \partial x_2} \\
+... & ... & ... & ... \\
+\frac{\partial^2 f(\boldsymbol{x})}{\partial x_1 \partial x_n}  & \frac{\partial^2 f(\boldsymbol{x})}{\partial x_2 \partial x_n} & ... & \frac{\partial^2 f(\boldsymbol{x})}{\partial x_n^2} \\
+\end{bmatrix}
+$$
+
+- 常用公式：
+    1. $\bigtriangledown \boldsymbol{c}=\boldsymbol{O}$，其中$\boldsymbol{c}$是分量全为常数的$n$维向量，$\boldsymbol{O}$是$n \times n$阶零矩阵。
+    2. $\bigtriangledown \boldsymbol{x} = \boldsymbol{I}$，其中$\boldsymbol{x}$是$n$维向量，$\boldsymbol{I}$是$n \times n$阶单位矩阵。
+    3. $\bigtriangledown (\boldsymbol{Q}\boldsymbol{x})=\boldsymbol{Q}$，其中$\boldsymbol{Q}$是$n \times n$阶矩阵。
+    4. 设$\varphi (t)=f(\boldsymbol{x}_0 + t\boldsymbol{p})$，其中$f:R^n \to R^1, \varphi: R^t \to R^1$，则
+    
+    $$
+    \varphi^\prime(t)=\bigtriangledown f(\boldsymbol{x}_0 + t\boldsymbol{p})^T\boldsymbol{p} \\
+    \varphi^{\prime \prime}(t)=\boldsymbol{p}^T\bigtriangledown^2f(\boldsymbol{x}_0+t\boldsymbol{p})\boldsymbol{p}
+    $$
+
+## 多元函数的 Taylor 展开式
+
+设$f:R^n \to R^1$具有二阶连续偏导数，则
+
+$$
+f(\boldsymbol{x}+\boldsymbol{p})=f(\boldsymbol{x})+\bigtriangledown f(\boldsymbol{x})^T\boldsymbol{p}+\frac{1}{2}\boldsymbol{p}^T\bigtriangledown^2f(\overline{\boldsymbol{x}})\boldsymbol{p} \\
+其中\overline{\boldsymbol{x}}=\boldsymbol{x}+\theta \boldsymbol{p}，而0 < \theta < 1
+$$
+
+## 下降迭代算法
+
+给定初始点后，如果每迭代一步都使目标函数有所下降，即$f(\boldsymbol{x}_{k+1}) < f(\boldsymbol{x}_k)$，那这种迭代法称为下降法。
+
+在迭代过程中有两个规则需要确定，一个是下降方向$\boldsymbol{p}_k$的选取；一个是步长因子$t_k$的选取。
+
+算法的基本格式如下：
+
+1. 选取初始点$\boldsymbol{x}_0$，置$k=0$
+2. 按某种规则确定$\boldsymbol{p}_k$使得$\bigtriangledown f(\boldsymbol{x}_k)^T \boldsymbol{p}_k < 0$
+3. 按某种规则确定$t_k$使得$f(\boldsymbol{x}_k+t_k\boldsymbol{p}_k)<f(\boldsymbol{x}_k)$
+4. 计算$\boldsymbol{x}_{k+1}=\boldsymbol{x}_k+t_k\boldsymbol{p}_k$
+5. 判定$\boldsymbol{x}_{k+1}$时候满足终止准则，若满足，打印$\boldsymbol{x}_{k+1}$和$f(\boldsymbol{x}_{k+1})$，停机；否则置$k=k+1$，转2
