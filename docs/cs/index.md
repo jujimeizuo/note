@@ -18,5 +18,5 @@
 - 人工智能
     - [工程伦理](ai/engineering-ethics) <span class="toc-tag toc-tag-classnotes"></span>
     - [模式识别](ai/mode-recognition) <span class="toc-tag toc-tag-classnotes"></span>
-    - [机器学习](ai/ml) <span class="toc-tag toc-tag-classnotes"></span>
-    - [神经网络与深度学习](ai/dl) <span class="toc-tag toc-tag-classnotes"></span>
+    - [机器学习](ai/ml)
+    - [神经网络与深度学习](ai/dl)
