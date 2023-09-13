@@ -22,5 +22,5 @@
     - [神经网络与深度学习](ai/dl)
 - [软件相关](software)
     - [软件构件与体系结构](software/sca) <span class="toc-tag toc-tag-classnotes"></span>
-    - [com 原理与应用](software/compa)
+    - [COM 原理与应用](software/compa)
     - [应用服务器原理与实现](software/piaserver)

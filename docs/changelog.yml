@@ -1,8 +1,11 @@
 - "2023":
   - "2023-09-13":
     - newpage:
-        text: CS > 软件相关 > 软件构件与体系结构 > 软件复用
-        href: /cs/software/sca/lec1/
+        text: CS > 软件相关 > 软件构件与体系结构
+        href: /cs/software/sca/
+    - newpage:
+        text: CS > 软件相关 > COM 原理与应用
+        href: /cs/software/compa/
   - "2023-09-12":
     - newpage:
         text: CS > 人工智能 > 神经网络与深度学习
