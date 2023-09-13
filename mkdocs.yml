@@ -165,6 +165,11 @@ nav:
       - 模式识别: cs/ai/mode-recognition.md
       - 机器学习: cs/ai/ml.md
       - 神经网络与深度学习: cs/ai/dl.md
+    - 软件相关:
+      - cs/software/index.md
+      - 软件构件与体系结构: cs/software/sca/index.md
+      - com 原理与应用: cs/software/compa/index.md
+      - 应用服务器原理与实现: cs/software/piaserver/index.md
   - Geometry:
     - geometry/index.md
     - 多视图几何:
