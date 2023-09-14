@@ -18,5 +18,11 @@
 - 人工智能
     - [工程伦理](ai/engineering-ethics) <span class="toc-tag toc-tag-classnotes"></span>
     - [模式识别](ai/mode-recognition) <span class="toc-tag toc-tag-classnotes"></span>
-    - [机器学习](ai/ml) <span class="toc-tag toc-tag-classnotes"></span>
-    - [神经网络与深度学习](ai/dl) <span class="toc-tag toc-tag-classnotes"></span>
+    - [机器学习](ai/ml)
+    - [神经网络与深度学习](ai/dl)
+- [软件相关](software)
+    - [软件构件与体系结构](software/sca) <span class="toc-tag toc-tag-classnotes"></span>
+    - [COM 原理与应用](software/compa)
+    - [应用服务器原理与实现](software/piaserver)
+- 杂项
+    - [RegEx 正则表达式](others/regex)
