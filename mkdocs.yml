@@ -170,6 +170,8 @@ nav:
       - 软件构件与体系结构: cs/software/sca/index.md
       - COM 原理与应用: cs/software/compa/index.md
       - 应用服务器原理与实现: cs/software/piaserver/index.md
+    - 杂项:
+      - RegEx 正则表达式: cs/others/regex.md
   - Geometry:
     - geometry/index.md
     - 多视图几何:
