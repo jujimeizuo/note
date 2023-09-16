@@ -183,6 +183,9 @@ nav:
     - 最优化理论与方法:
       - mb/optimization-theory/index.md
       - 最优化问题: mb/optimization-theory/lec1.md
+    - 矩阵分析与应用:
+      - mb/maa/index.md
+      - 矩阵代数基础: mb/maa/lec1.md
   - Utils:
     - utils/index.md
     - 工具收集: utils/utilsbox.md
