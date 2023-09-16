@@ -6,3 +6,8 @@
 ## Table of Contents
 
 - [最优化问题](lec1)
+
+
+## Reference
+
+- 最优化原理与方法 薛嘉庆著

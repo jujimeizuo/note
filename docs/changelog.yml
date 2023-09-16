@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-09-16":
+    - newpage:
+        text: 数理基础 > 矩阵分析与应用 > 矩阵代数基础
+        href: /mb/maa/lec1
   - "2023-09-14":
     - newpage:
         text: CS > 杂项 > RegEx 正则表达式
