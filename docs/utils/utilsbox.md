@@ -97,6 +97,7 @@ comment: True
 - Unicode编码 [Unicode](https://home.unicode.org/)
 - Youtube下载器 [yt1s](https://yt1s.com/zh-tw19)
 - 打字训练 [monkeytype](https://monkeytype.com/)
+- PDFToPPT [smallpdf](https://smallpdf.com/cn/pdf-to-ppt)
 
 ## Reference
 

@@ -9,3 +9,4 @@
 
 - [最优化理论与方法](optimization-theory) <span class="toc-tag toc-tag-classnotes"></span>
 - [矩阵分析与应用](maa) <span class="toc-tag toc-tag-classnotes"></span>
+- [组合数学](comb)

@@ -16,11 +16,54 @@ comment: True
 - 神经网络：一种以（人工）神经元为基本单元的模型
 - 深度学习：一类机器学习问题，主要解决贡献度分配问题。
 
-<center>![总结概括](https://cdn.jujimeizuo.cn/note/cs/ai/dl/summary.png)</center>
+<center>![总结概括](https://cdn.jujimeizuo.cn/note/cs/ai/dl/summary.jpg)</center>
 
 ## 机器学习概述
 
 转移到 [机器学习](../ml)
+
+
+## 线性模型
+
+<center>![线性模型](https://cdn.jujimeizuo.cn/note/cs/ai/dl/linear-model.jpg)</center>
+
+### 应用
+
+- 图像分类
+- 文本文类
+
+### 感知器
+
+- 模型
+
+$$
+g(x,w)=
+\left\{\begin{matrix}
++1  & 当w^Tx>0  \\
+-1  & 当w^Tx<0
+\end{matrix}\right.
+$$
+
+- 学习准则
+
+$$
+L(w;x,y)=\max{(0,-yw^Tx)}
+$$
+
+- 优化：随机梯度下降
+
+$$
+\frac{\partial L(w;x,y)}{\partial w}=
+\left\{\begin{matrix}
+0  & 当yw^Tx>0  \\
+-yx  & 当yw^Tx<0
+\end{matrix}\right.
+$$
+
+### 两类感知器算法
+
+<center>![两类感知器算法](https://cdn.jujimeizuo.cn/note/cs/ai/dl/perceptron-flow.jpg)</center>
+
 
 ## Reference
 
