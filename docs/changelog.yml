@@ -1,4 +1,17 @@
 - "2023":
+  - "2023-09-19":
+    - pageupdate:
+        text: CS > 软件相关 > 软件构件与体系结构
+        href: /cs/software/sca/
+    - pageupdate:
+        text: CS > 算法相关 > 算法设计与分析
+        href: /cs/algorithm/design-analysis/
+    - pageupdate:
+        text: CS > 人工智能 > 神经网络与深度学习
+        href: /cs/ai/dl/
+    - pageupdate:
+        text: 数理基础 > 最优化理论与方法 > 最优化问题
+        href: /mb/optimization-theory/lec1/
   - "2023-09-16":
     - newpage:
         text: 数理基础 > 矩阵分析与应用 > 矩阵代数基础
@@ -25,7 +38,7 @@
     - newpage:
         text: 数理基础 > 最优化理论与方法 > 最优化问题
         href: /mb/optimization-theory/lec1/
-  - "2023-09-010":
+  - "2023-09-10":
     - newpage:
         text:  Utils > 站点生成工具 > reveal-md
         href: /utils/reveal-md/

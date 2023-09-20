@@ -167,9 +167,15 @@ nav:
       - 神经网络与深度学习: cs/ai/dl.md
     - 软件相关:
       - cs/software/index.md
-      - 软件构件与体系结构: cs/software/sca/index.md
-      - COM 原理与应用: cs/software/compa/index.md
-      - 应用服务器原理与实现: cs/software/piaserver/index.md
+      - 软件构件与体系结构: cs/software/sca.md
+      - COM 原理与应用: cs/software/compa.md
+      - 应用服务器原理与实现: cs/software/piaserver.md
+    - 数据库相关:
+      - MySQL: cs/db/mysql.md
+      - Redis:
+        - 数据类型: cs/db/redis/datatype.md
+        - 持久化: cs/db/redis/cjh.md
+        - 事务: cs/db/redis/work.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
   - Geometry:
@@ -186,6 +192,8 @@ nav:
     - 矩阵分析与应用:
       - mb/maa/index.md
       - 矩阵代数基础: mb/maa/lec1.md
+    - 组合数学:
+      - mb/comb.md
   - Utils:
     - utils/index.md
     - 工具收集: utils/utilsbox.md
@@ -198,5 +206,6 @@ nav:
       - Github Action: utils/action.md
     - 站点生成工具:
       - reveal-md: utils/reveal-md.md
+      - gitbook: utils/gitbook.md
       - mkdocs: utils/mkdocs.md
       - hexo: utils/hexo.md

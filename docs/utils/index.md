@@ -15,5 +15,6 @@
 ## 站点生成工具
 
 - [reveal-md](reveal-md)
+- [gitbook](gitbook)
 - [mkdocs（**TODO**）](mkdocs)
 - [hexo（**TODO**）](hexo)

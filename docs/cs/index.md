@@ -24,5 +24,11 @@
     - [软件构件与体系结构](software/sca) <span class="toc-tag toc-tag-classnotes"></span>
     - [COM 原理与应用](software/compa)
     - [应用服务器原理与实现](software/piaserver)
+- 数据库
+    - [MySQL](db/mysql)
+    - Redis
+        - [数据类型](db/redis/datatype)
+        - [持久化](db/redis/cjh)
+        - [事务](db/redis/work)
 - 杂项
     - [RegEx 正则表达式](others/regex)

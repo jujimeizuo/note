@@ -260,6 +260,37 @@ f(\boldsymbol{x}+\boldsymbol{p})=f(\boldsymbol{x})+\bigtriangledown f(\boldsymbo
 其中\overline{\boldsymbol{x}}=\boldsymbol{x}+\theta \boldsymbol{p}，而0 < \theta < 1
 $$
 
+## 凸集与凸函数
+
+### 凸集
+
+- 设$x_1, x_2, ..., x_l$是$R^n$中的$l$个已知点。若对某点$x \in R^n$存在常数$a_1, a_2, ..., a_l \ge 0$且$\sum_{i=1}^la_i=1$使得$x=\sum_{i=1}^la_ix_i$，则称$x$是$x_1, x_2,...,x_l$的凸组合。若$a_1, a_2, ..., a_l > 0$且$\sum_{i=1}^la_i=1$，则称$x$是$x_1, x_2, ..., x_l$的严格凸组合。
+- 设集合$C \subseteq R^n$，如果对于任意两点$x_1, x_2 \in C$，它们的任意凸组合仍然属于 C，那么称集合 C 为凸集。
+- 设集合$\alpha \in R^n$且$\alpha \ne 0, b \in R^1$，则集合$\{x | \alpha^Tx=b,x \in R^n\}$称为$R^n$中的超平面，$\alpha$称为这个超平面的法向量。
+- 设集合$\alpha \in R^n$且$\alpha \ne 0, b \in R^1$，则集合$\{x | \alpha^Tx=b,x \in R^n\}$称为$R^n$中的半空间。
+- 任意一组凸集的交仍然是凸集。
+
+
+### 凸函数
+
+- 设$f: C \subseteq R^n \to R^1$，其中 C 为凸集。若对于任意两点$x_1, x_2 \in C$和任意一对满足$\alpha_1 + \alpha_2 = 1$的数$\alpha_1, \alpha_2 \in [0,1]$都有$f(\alpha_1x_1+\alpha_2x_2) \le \alpha_1f(x_1)+\alpha_2f(x_2)$，则称 f 为定义在凸集 C 上的凸函数（严格小于时为严格凸函数）
+- 若函数 f 在凸集 C 上是（严格）凸函数，则称 f 是定义在凸集 C 上的（严格）凸函数。
+- 设$f: C \subset R^n \to R^1$，其中 C 为非空凸集。若 f 是凸函数，则对于任意实数$\beta$，水平集$D_\beta = \{x | f(x) \le \beta, x \in C\}$是凸集。
+- 设$f: C \subseteq R^n \to R^1$，其中 C 是非空凸集，f 是凸函数，则形式为$\min f(x) \ s.t. \ x \in C$的问题称为凸规划。
+- 设$x^\prime$是凸规划的局部极小点
+    - 若 f 是凸函数，则$x^\prime$是全局极小点
+    - 若 f 是严格凸函数，则$x^\prime$是唯一全局最小点
+- 设$f:C \subseteq R^n \to R^1$是可微函数，其中 C 为凸集，则
+    - f 为凸函数的充要条件是，$\forall x_1, x_2 \in C$都有 $f(x_2) \ge f(x_1) + $\bigtriangledown f(x_1)^T(x_2-x_1)$
+    - f 是严格凸函数的充要条件是，$\forall x_1, x_2 \in C$且$x_1 \ne x_2$都有$f(x_2) > f(x_1) + \bigtriangledown f(x_1)^T(x_2-x_1)$
+- 设$f:C \subseteq R^n \to R^1$是二次可微函数，C 为非空开凸集，则 f 为 C 上凸函数的充要条件是， Hesse 矩阵$\bigtriangledown^2 f(x)$在 C 上到处半正定（满足半正定时，则 f 在 C上为严格凸函数）。
+
+## 极小点的判定条件
+
+- 设$f:D \subseteq R^n \to R^1$具有连续的一阶偏导数。若$x^\prime$是$f(x)$的局部极小点并且是 D 的内点，则$\bigtriangledown f(x^\prime) = 0$
+- 设$f:D \subseteq R^n \to R^1$，$x^\prime$是 D 的哪点。若$\bigtriangledown f(x^\prime) = 0$，则$x^\prime$称为$f(x)$的驻点。
+- 设$f:D \subseteq R^n \to R^1$具有连续的二阶偏导数，$x^\prime$是 D 的一个内点。若$\bigtriangledown f(x^\prime)=0$并且$\bigtriangledown^2 f(x^\prime)$是正定的，则$x^\prime$是$f(x)$的严格局部极小点。
+
 ## 下降迭代算法
 
 给定初始点后，如果每迭代一步都使目标函数有所下降，即$f(\boldsymbol{x}_{k+1}) < f(\boldsymbol{x}_k)$，那这种迭代法称为下降法。
