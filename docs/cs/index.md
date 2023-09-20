@@ -20,7 +20,10 @@
     - [模式识别](ai/mode-recognition) <span class="toc-tag toc-tag-classnotes"></span>
     - [机器学习](ai/ml)
     - [神经网络与深度学习](ai/dl)
+- [计算机视觉](cv)
+    - [多视图几何](cv/mvg)
 - [软件相关](software)
+    - [设计模式](software/design-pattern)
     - [软件构件与体系结构](software/sca) <span class="toc-tag toc-tag-classnotes"></span>
     - [COM 原理与应用](software/compa)
     - [应用服务器原理与实现](software/piaserver)

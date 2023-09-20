@@ -55,8 +55,8 @@
         href: /cs/pl/c_cpp/system_knowledge/
   - "2023-09-03":
     - newpage:
-        text: Geometry > 多视图几何 > 2D 射影几何变换
-        href: /geometry/mvg/pjt2d/
+        text: CS > CV > 多视图几何 > 2D 射影几何变换
+        href: /cs/cv/mvg/pjt2d/
   - "2023-09-01":
     - newpage:
         text: Utils > 工具收集

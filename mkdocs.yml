@@ -165,8 +165,15 @@ nav:
       - 模式识别: cs/ai/mode-recognition.md
       - 机器学习: cs/ai/ml.md
       - 神经网络与深度学习: cs/ai/dl.md
+    - 计算机视觉:
+      - cs/cv/index.md
+      - 多视图几何:
+        - cs/cv/mvg/index.md
+        - 2D 射影几何和变换: cs/cv/mvg/pjt2d.md
+        - 3D 射影几何和变换: cs/cv/mvg/pjt3d.md
     - 软件相关:
       - cs/software/index.md
+      - 设计模式: cs/software/design-pattern.md
       - 软件构件与体系结构: cs/software/sca.md
       - COM 原理与应用: cs/software/compa.md
       - 应用服务器原理与实现: cs/software/piaserver.md
@@ -178,12 +185,6 @@ nav:
         - 事务: cs/db/redis/work.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
-  - Geometry:
-    - geometry/index.md
-    - 多视图几何:
-      - geometry/mvg/index.md
-      - 2D 射影几何和变换: geometry/mvg/pjt2d.md
-      - 3D 射影几何和变换: geometry/mvg/pjt3d.md
   - Mathematical basis:
     - mb/index.md
     - 最优化理论与方法:
@@ -192,8 +193,7 @@ nav:
     - 矩阵分析与应用:
       - mb/maa/index.md
       - 矩阵代数基础: mb/maa/lec1.md
-    - 组合数学:
-      - mb/comb.md
+    - 组合数学: mb/comb.md
   - Utils:
     - utils/index.md
     - 工具收集: utils/utilsbox.md
