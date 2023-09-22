@@ -2,11 +2,13 @@
 
 ## 笔记类
 
+- [ ] CMake 基础
 - [ ] x86 汇编语言
 - [ ] Python
     - [ ] Numpy 科学计算库
 - [ ] HPC
-    - [ ] GPU
-    - [ ] CUDA 编程
-    - [ ] OpenMP 基础
+    - [ ] 向量化计算
+    - [ ] GPU 编程
     - [ ] MPI 基础
+    - [ ] OpenMP 基础
+    - [ ] Taichi 基础

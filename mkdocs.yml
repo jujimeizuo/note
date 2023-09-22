@@ -171,6 +171,14 @@ nav:
         - cs/cv/mvg/index.md
         - 2D 射影几何和变换: cs/cv/mvg/pjt2d.md
         - 3D 射影几何和变换: cs/cv/mvg/pjt3d.md
+    - 高性能计算:
+      - cs/hpc/index.md
+      - 概论: cs/hpc/outline.md
+      - 向量化计算: cs/hpc/vectorizecompute.md
+      - GPU 编程: cs/hpc/gpu.md
+      - MPI 基础: cs/hpc/mpi.md
+      - OpenMP 基础: cs/hpc/openmp.md
+      - Taichi 基础: cs/hpc/taichi.md
     - 软件相关:
       - cs/software/index.md
       - 设计模式: cs/software/design-pattern.md

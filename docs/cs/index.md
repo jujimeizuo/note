@@ -18,10 +18,17 @@
 - 人工智能
     - [工程伦理](ai/engineering-ethics) <span class="toc-tag toc-tag-classnotes"></span>
     - [模式识别](ai/mode-recognition) <span class="toc-tag toc-tag-classnotes"></span>
-    - [机器学习](ai/ml)
+    - [机器学习](ai/ml) <span class="toc-tag toc-tag-classnotes"></span> <span class="toc-tag toc-tag-reports"></span>
     - [神经网络与深度学习](ai/dl)
 - [计算机视觉](cv)
     - [多视图几何](cv/mvg)
+- [高性能计算](hpc)
+    - [概论](hpc/outline)
+    - [向量化计算](hpc/vectorizecompute)
+    - [GPU 编程](hpc/gpu)
+    - [MPI 基础](hpc/mpi)
+    - [OpenMP 基础](hpc/openmp)
+    - [Taichi 基础](hpc/taichi)
 - [软件相关](software)
     - [设计模式](software/design-pattern)
     - [软件构件与体系结构](software/sca) <span class="toc-tag toc-tag-classnotes"></span>
@@ -30,8 +37,5 @@
 - 数据库
     - [MySQL](db/mysql)
     - Redis
-        - [数据类型](db/redis/datatype)
-        - [持久化](db/redis/cjh)
-        - [事务](db/redis/work)
 - 杂项
     - [RegEx 正则表达式](others/regex)
