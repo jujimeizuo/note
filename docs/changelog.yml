@@ -1,4 +1,11 @@
 - "2023":
+  - "2023-09-24":
+    - newpage:
+        text: CS > 编程语言 > Python > Numpy
+        href: /cs/pl/python/numpy/
+    - pageupdate:
+        text: CS > 人工智能 > 模式识别
+        href: /cs/ai/mode-recognition/
   - "2023-09-22":
     - newpage:
         text: CS > 人工智能 > 机器学习
@@ -20,6 +27,10 @@
     - pageupdate:
         text: 数理基础 > 最优化理论与方法 > 最优化问题
         href: /mb/optimization-theory/lec1/
+  - "2023-09-17":
+    - newpage:
+        text: CS > 人工智能 > 模式识别
+        href: /cs/ai/mode-recognition/
   - "2023-09-16":
     - newpage:
         text: 数理基础 > 矩阵分析与应用 > 矩阵代数基础

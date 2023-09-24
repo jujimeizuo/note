@@ -9,4 +9,5 @@
 ## Table of Contents
 
 - [Python 语法基础](basic/)
-- [Numpy 科学计算库 (TODO)](numpy/)
+- [Numpy 科学计算库](numpy/)
+- [Python 虚拟环境](virtual/)

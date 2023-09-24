@@ -12,6 +12,8 @@
     - [C++ 各种函数使用](c_cpp/function)
 - [Python](python)
     - [Python 语法基础](python/basic)
+    - [Numpy 科学计算库](python/numpy)
+    - [Python 虚拟环境](python/virtual)
 - [Go](go)
     - [Go 语法基础](go/basic)
     - [Gin 框架 (TODO)](go/gin)
