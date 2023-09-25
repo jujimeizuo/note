@@ -115,3 +115,13 @@ $x_j^{(i)}$ 表示第 $i$ 个样本中第 $j$ 个特征。
     - 如果特征数 $n$ 很大，算法会非常慢，对内存要求高
     - 特征不需要归一化
 
+### 实验报告
+
+<div class="card file-block" markdown="1">
+<div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
+<div class="file-body">
+<div class="file-title">机器学习--线性回归</div>
+<div class="file-meta">724 KB / 12 P / 2023-09-23</div>
+</div>
+<a class="down-button" target="_blank" href="/assets/files/机器学习--线性回归.pdf" markdown="1">:fontawesome-solid-download: 下载</a>
+</div>
