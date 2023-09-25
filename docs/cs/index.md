@@ -20,8 +20,6 @@
     - [模式识别](ai/mode-recognition) <span class="toc-tag toc-tag-classnotes"></span>
     - [机器学习](ai/ml) <span class="toc-tag toc-tag-classnotes"></span> <span class="toc-tag toc-tag-reports"></span>
     - [神经网络与深度学习](ai/dl)
-- [计算机视觉](cv)
-    - [多视图几何](cv/mvg)
 - [高性能计算](hpc)
     - [概论](hpc/outline)
     - [向量化计算](hpc/vectorizecompute)
