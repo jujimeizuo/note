@@ -1,6 +1,5 @@
 ---
 counter: True
-comment: True
 ---
 
 # 最优化问题
