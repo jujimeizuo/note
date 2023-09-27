@@ -15,8 +15,7 @@
     - [基础数据结构](algorithm/basic-ds)
     - [算法设计与分析](algorithm/design-analysis) <span class="toc-tag toc-tag-classnotes"></span>
     - [排序与哈希](algorithm/sort-hash)
-- 人工智能
-    - [工程伦理](ai/engineering-ethics) <span class="toc-tag toc-tag-classnotes"></span>
+- 人工智能基础
     - [模式识别](ai/mode-recognition) <span class="toc-tag toc-tag-classnotes"></span>
     - [机器学习](ai/ml) <span class="toc-tag toc-tag-classnotes"></span> <span class="toc-tag toc-tag-reports"></span>
     - [神经网络与深度学习](ai/dl)

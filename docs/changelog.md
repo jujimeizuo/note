@@ -8,7 +8,7 @@ nostatistics: True
 
 !!! abstract
 
-    PS：这个功能在由 [:material-github: TonyCrane/mkdocs-changelog-plugin](https://github.com/TonyCrane/mkdocs-changelog-plugin)开发。
+    PS：这个功能在由 [:material-github: TonyCrane/mkdocs-changelog-plugin](https://github.com/TonyCrane/mkdocs-changelog-plugin) 开发。
 
 <style>
 .md-typeset h2 {

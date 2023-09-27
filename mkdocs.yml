@@ -150,7 +150,7 @@ nav:
         - cs/pl/python/index.md
         - Python 语法基础: cs/pl/python/basic.md
         - Numpy 科学计算库: cs/pl/python/numpy.md
-        - Python 虚拟环境(TODO): cs/pl/python/virtual.md
+        - Python 虚拟环境: cs/pl/python/virtual.md
       - Go:
         - cs/pl/go/index.md
         - Go 语法基础: cs/pl/go/basic.md
@@ -160,9 +160,7 @@ nav:
     - 算法相关:
       - 基础数据结构: cs/algorithm/basic-ds.md
       - 算法设计与分析: cs/algorithm/design-analysis.md
-      - 排序与哈希: cs/algorithm/sort-hash.md
-    - 人工智能:
-      - 工程伦理: cs/ai/engineering-ethics.md
+    - 人工智能基础:
       - 模式识别: cs/ai/mode-recognition.md
       - 机器学习: cs/ai/ml.md
       - 神经网络与深度学习: cs/ai/dl.md
@@ -199,6 +197,7 @@ nav:
     - 最优化理论与方法:
       - mb/optimization-theory/index.md
       - 最优化问题: mb/optimization-theory/lec1.md
+      - 直线搜索: mb/optimization-theory/lec2.md
     - 矩阵分析与应用:
       - mb/maa/index.md
       - 矩阵代数基础: mb/maa/lec1.md
