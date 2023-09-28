@@ -1,6 +1,5 @@
 ---
 counter: True
-comment: True
 ---
 
 # 矩阵代数基础
