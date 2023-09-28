@@ -87,8 +87,7 @@ counter: True
 ## 黄金分割法
 
 - 适用于$[a,b]$区间上的任何单谷函数$\varphi(t)$求极小点问题
-- 算法流程
-    - 已知$\varphi(t)$，终止限$\varepsilon$
+- 算法流程（已知$\varphi(t)$，终止限$\varepsilon$）
     1. 确定$\varphi(t)$的初始搜索区间$\{a,b\}$
     2. 计算$t_2=a+\beta(b-a), \varphi_2=\varphi(t_2)$
     3. 计算$t_1=a+b-t_2, \varphi_1=\varphi(t_1)$

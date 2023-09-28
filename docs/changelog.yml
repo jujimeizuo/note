@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-09-17":
+    - newpage:
+        text: 数理基础 > 最优化理论与方法 > 直线搜索
+        href: /mb/optimization-theory/lec2/
   - "2023-09-24":
     - newpage:
         text: CS > 编程语言 > Python > Numpy
