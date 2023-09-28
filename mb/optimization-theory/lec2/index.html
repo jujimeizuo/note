@@ -962,14 +962,13 @@ t_{k+1}=t_k-\varphi^\prime(t_k)/\varphi^{\prime\prime}(t_k)
 <h2 id="_4">黄金分割法<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li>适用于<span class="arithmatex">\([a,b]\)</span>区间上的任何单谷函数<span class="arithmatex">\(\varphi(t)\)</span>求极小点问题</li>
-<li>算法流程<ul>
-<li>已知<span class="arithmatex">\(\varphi(t)\)</span>，终止限<span class="arithmatex">\(\varepsilon\)</span>
-1. 确定<span class="arithmatex">\(\varphi(t)\)</span>的初始搜索区间<span class="arithmatex">\(\{a,b\}\)</span>
-2. 计算<span class="arithmatex">\(t_2=a+\beta(b-a), \varphi_2=\varphi(t_2)\)</span>
-3. 计算<span class="arithmatex">\(t_1=a+b-t_2, \varphi_1=\varphi(t_1)\)</span>
-4. 若<span class="arithmatex">\(|t_1-t_2|&lt;\varepsilon\)</span>，则打印<span class="arithmatex">\(t^\prime=\frac{t_1+t_2}{2}\)</span>，停机；都则，若<span class="arithmatex">\(|t_1-t_2| \ge \varepsilon\)</span>，转 5
-5. 判别<span class="arithmatex">\(\varphi_1 \le \varphi_2\)</span>是否满足：若满足，则置<span class="arithmatex">\(b=t_2,t_2=t_1,\varphi_2=\varphi_1\)</span>，然后转 3；否则，若<span class="arithmatex">\(\varphi_1&gt;\varphi_2\)</span>，则置<span class="arithmatex">\(a=t_1,t_1=t_2,\varphi_1=\varphi_2,t_2=a+\beta(b-a),\varphi_2=\varphi(t_2)\)</span>，然后转4</li>
-</ul>
+<li>算法流程（已知<span class="arithmatex">\(\varphi(t)\)</span>，终止限<span class="arithmatex">\(\varepsilon\)</span>）<ol>
+<li>确定<span class="arithmatex">\(\varphi(t)\)</span>的初始搜索区间<span class="arithmatex">\(\{a,b\}\)</span></li>
+<li>计算<span class="arithmatex">\(t_2=a+\beta(b-a), \varphi_2=\varphi(t_2)\)</span></li>
+<li>计算<span class="arithmatex">\(t_1=a+b-t_2, \varphi_1=\varphi(t_1)\)</span></li>
+<li>若<span class="arithmatex">\(|t_1-t_2|&lt;\varepsilon\)</span>，则打印<span class="arithmatex">\(t^\prime=\frac{t_1+t_2}{2}\)</span>，停机；都则，若<span class="arithmatex">\(|t_1-t_2| \ge \varepsilon\)</span>，转<span><span class="heti-spacing"> </span>5</span></li>
+<li>判别<span class="arithmatex">\(\varphi_1 \le \varphi_2\)</span>是否满足：若满足，则置<span class="arithmatex">\(b=t_2,t_2=t_1,\varphi_2=\varphi_1\)</span>，然后转<span><span class="heti-spacing"> </span>3</span>；否则，若<span class="arithmatex">\(\varphi_1&gt;\varphi_2\)</span>，则置<span class="arithmatex">\(a=t_1,t_1=t_2,\varphi_1=\varphi_2,t_2=a+\beta(b-a),\varphi_2=\varphi(t_2)\)</span>，然后转<span><span class="heti-spacing"> </span>4</span></li>
+</ol>
 </li>
 </ul>
 <hr/>
@@ -977,7 +976,7 @@ t_{k+1}=t_k-\varphi^\prime(t_k)/\varphi^{\prime\prime}(t_k)
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月26日 10:25:51</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月28日 18:01:09</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月26日 10:25:51</span>
