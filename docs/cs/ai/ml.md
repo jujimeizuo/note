@@ -63,7 +63,7 @@ comment: true
 
 ## 多元线性回归
 
-- 有 $n$ 个特征 $[x_1, ..., x_n]^\top$，$m$ 个训练数 $\{(\mathbf{x_i}, \mathbf{y_i})\}_{i=1}^m$，需要找到参数 $\mathbf{\theta}$ 使得线性函数 $h_\theta(\mathbf{x})=\theta_0+\mathbf{\theta}^\top \mathbf{x}$ 最小化均方误差函数
+- 有 $n$ 个特征 $[x_1, ..., x_n]^{\top}$，$m$ 个训练数 $\{(\mathbf{x_i}, \mathbf{y_i})\}_{i=1}^m$，需要找到参数 $\mathbf{\theta}$ 使得线性函数 $h_\theta(\mathbf{x})=\theta_0+\mathbf{\theta}^{\top} \mathbf{x}$ 最小化均方误差函数
 
 $$
 J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m} \sum_{i=1}^m (h_{\theta}(x^{(i)})-y^{(i)})^2
@@ -72,12 +72,12 @@ $$
 ### 矩阵求逆
 
 $$
-J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m}(\mathbf{y} - \mathbf{X}^\top \mathbf{\theta})^\top(\mathbf{y} - \mathbf{X}^\top \mathbf{\theta})
+J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m}(\mathbf{y} - \mathbf{X}^{\top} \mathbf{\theta})^{\top}(\mathbf{y} - \mathbf{X}^{\top} \mathbf{\theta})
 $$
 
-对均方误差函数求导得 $\nabla J(\mathbf{\theta})=-\frac{1}{m}\mathbf{X}(\mathbf{y} - \mathbf{X}^\top \mathbf{\theta})$，令梯度等于 0 得
+对均方误差函数求导得 $\nabla J(\mathbf{\theta})=-\frac{1}{m}\mathbf{X}(\mathbf{y} - \mathbf{X}^{\top} \mathbf{\theta})$，令梯度等于 0 得
 
-$$\mathbf{\theta}=(\mathbf{X}\mathbf{X^\top})^{-1}\mathbf{X}\mathbf{y}$$
+$$\mathbf{\theta}=(\mathbf{X}\mathbf{X^{\top}})^{-1}\mathbf{X}\mathbf{y}$$
 
 ### 梯度下降
 
@@ -111,7 +111,7 @@ $x_j^{(i)}$ 表示第 $i$ 个样本中第 $j$ 个特征。
 - 矩阵求逆
     - 不需要选择 $\alpha$
     - 不需要循环
-    - 要计算 $(X^\top X)^{-1}$
+    - 要计算 $(X^{\top} X)^{-1}$
     - 如果特征数 $n$ 很大，算法会非常慢，对内存要求高
     - 特征不需要归一化
 

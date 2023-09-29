@@ -186,7 +186,7 @@ nav:
         - 事务: cs/db/redis/work.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
-  - CV:
+  - CV & Robot:
     - cv/index.md
     - 多视图几何:
       - cv/mvg/index.md
@@ -201,6 +201,8 @@ nav:
     - 矩阵分析与应用:
       - mb/maa/index.md
       - 矩阵代数基础: mb/maa/lec1.md
+      - 特殊矩阵: mb/maa/lec2.md
+      - 矩阵微分: mb/maa/lec3.md
     - 组合数学: mb/comb.md
   - Utils:
     - utils/index.md

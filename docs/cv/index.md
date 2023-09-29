@@ -7,4 +7,4 @@
 
 ## Table of Contents
 
-- [多视图几何](mvg/index.md)
+- [多视图几何](mvg/)

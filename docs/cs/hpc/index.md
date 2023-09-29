@@ -8,12 +8,12 @@
 
 ## Table of Contents
 
-- [概论](outline)
-- [向量化计算](vectorizecompute)
-- [GPU 编程](gpu)
-- [MPI 基础](mpi)
-- [OpenMP 基础](openmp)
-- [Taichi 基础](taichi)
+- [概论](outline/)
+- [向量化计算](vectorizecompute/)
+- [GPU 编程](gpu/)
+- [MPI 基础](mpi/)
+- [OpenMP 基础](openmp/)
+- [Taichi 基础](taichi/)
 
 ## Reference
 

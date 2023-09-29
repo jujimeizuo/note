@@ -5,8 +5,8 @@
 
 ## Table of Contents
 
-- [最优化问题](lec1)
-- [直线搜索](lec2)
+- [最优化问题](lec1/)
+- [直线搜索](lec2/)
 
 ## Reference
 

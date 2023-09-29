@@ -39,15 +39,15 @@ comment: True
 $$
 g(x,w)=
 \left\{\begin{matrix}
-+1  & 当w^Tx>0  \\
--1  & 当w^Tx<0
++1  & 当w^{\top}x>0  \\
+-1  & 当w^{\top}x<0
 \end{matrix}\right.
 $$
 
 - 学习准则
 
 $$
-L(w;x,y)=\max{(0,-yw^Tx)}
+L(w;x,y)=\max{(0,-yw^{\top}x)}
 $$
 
 - 优化：随机梯度下降
@@ -55,8 +55,8 @@ $$
 $$
 \frac{\partial L(w;x,y)}{\partial w}=
 \left\{\begin{matrix}
-0  & 当yw^Tx>0  \\
--yx  & 当yw^Tx<0
+0  & 当yw^{\top}x>0  \\
+-yx  & 当yw^{\top}x<0
 \end{matrix}\right.
 $$
 
