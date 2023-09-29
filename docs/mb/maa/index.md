@@ -5,9 +5,9 @@
 
 ## Table of Contents
 
-- [矩阵代数基础](lec1)
-- [特殊矩阵](lec2)
-- [矩阵微分](lec3)
+- [矩阵代数基础](lec1/)
+- [特殊矩阵](lec2/)
+- [矩阵微分](lec3/)
 
 ## Reference
 

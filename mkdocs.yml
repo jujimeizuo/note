@@ -186,7 +186,7 @@ nav:
         - 事务: cs/db/redis/work.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
-  - CV:
+  - CV & Robot:
     - cv/index.md
     - 多视图几何:
       - cv/mvg/index.md

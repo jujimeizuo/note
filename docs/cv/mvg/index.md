@@ -7,8 +7,8 @@
 
 ## Table of Contents
 
-- [2D射影几何和变换](pjt2d)
-- [3D射影几何和变换](pjt3d)
+- [2D 射影几何和变换](pjt2d/)
+- [3D 射影几何和变换](pjt3d/)
 
 ## Reference
 
