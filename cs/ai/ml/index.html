@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../cv/">
-        CV
+        CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
@@ -658,15 +658,15 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/">CV</a>
+<a href="../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="CV" class="md-nav" data-md-level="1">
+<nav aria-label="CV &amp; Robot" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          CV
+          CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -757,6 +757,16 @@ var _hmt = _hmt || [];
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../mb/maa/lec1/">
         矩阵代数基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec2/">
+        特殊矩阵
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec3/">
+        矩阵微分
       </a>
 </li>
 </ul>
@@ -1043,17 +1053,17 @@ var _hmt = _hmt || [];
 从与环境交互中学习，通过回报值（reward）让智能体（agent）学习到在不同状态（state）下如何选择行为方式（action）</p>
 <h2 id="_8">多元线性回归<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>有 <span class="arithmatex">\(n\)</span> 个特征 <span class="arithmatex">\([x_1, ..., x_n]^\top\)</span>，<span class="arithmatex">\(m\)</span> 个训练数 <span class="arithmatex">\(\{(\mathbf{x_i}, \mathbf{y_i})\}_{i=1}^m\)</span>，需要找到参数 <span class="arithmatex">\(\mathbf{\theta}\)</span> 使得线性函数 <span class="arithmatex">\(h_\theta(\mathbf{x})=\theta_0+\mathbf{\theta}^\top \mathbf{x}\)</span> 最小化均方误差函数</li>
+<li>有 <span class="arithmatex">\(n\)</span> 个特征 <span class="arithmatex">\([x_1, ..., x_n]^{\top}\)</span>，<span class="arithmatex">\(m\)</span> 个训练数 <span class="arithmatex">\(\{(\mathbf{x_i}, \mathbf{y_i})\}_{i=1}^m\)</span>，需要找到参数 <span class="arithmatex">\(\mathbf{\theta}\)</span> 使得线性函数 <span class="arithmatex">\(h_\theta(\mathbf{x})=\theta_0+\mathbf{\theta}^{\top} \mathbf{x}\)</span> 最小化均方误差函数</li>
 </ul>
 <div class="arithmatex">\[
 J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m} \sum_{i=1}^m (h_{\theta}(x^{(i)})-y^{(i)})^2
 \]</div>
 <h3 id="_9">矩阵求逆<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[
-J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m}(\mathbf{y} - \mathbf{X}^\top \mathbf{\theta})^\top(\mathbf{y} - \mathbf{X}^\top \mathbf{\theta})
+J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m}(\mathbf{y} - \mathbf{X}^{\top} \mathbf{\theta})^{\top}(\mathbf{y} - \mathbf{X}^{\top} \mathbf{\theta})
 \]</div>
-<p>对均方误差函数求导得 <span class="arithmatex">\(\nabla J(\mathbf{\theta})=-\frac{1}{m}\mathbf{X}(\mathbf{y} - \mathbf{X}^\top \mathbf{\theta})\)</span>，令梯度等于<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>得</p>
-<div class="arithmatex">\[\mathbf{\theta}=(\mathbf{X}\mathbf{X^\top})^{-1}\mathbf{X}\mathbf{y}\]</div>
+<p>对均方误差函数求导得 <span class="arithmatex">\(\nabla J(\mathbf{\theta})=-\frac{1}{m}\mathbf{X}(\mathbf{y} - \mathbf{X}^{\top} \mathbf{\theta})\)</span>，令梯度等于<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>得</p>
+<div class="arithmatex">\[\mathbf{\theta}=(\mathbf{X}\mathbf{X^{\top}})^{-1}\mathbf{X}\mathbf{y}\]</div>
 <h3 id="_10">梯度下降<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[
 \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta) \\
@@ -1080,7 +1090,7 @@ J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m}(\mathbf{y} - \mathbf{X}^\top
 <li>矩阵求逆<ul>
 <li>不需要选择 <span class="arithmatex">\(\alpha\)</span></li>
 <li>不需要循环</li>
-<li>要计算 <span class="arithmatex">\((X^\top X)^{-1}\)</span></li>
+<li>要计算 <span class="arithmatex">\((X^{\top} X)^{-1}\)</span></li>
 <li>如果特征数 <span class="arithmatex">\(n\)</span> 很大，算法会非常慢，对内存要求高</li>
 <li>特征不需要归一化</li>
 </ul>
@@ -1100,7 +1110,7 @@ J(\theta_1, \theta_2, ..., \theta_n) = \frac{1}{2m}(\mathbf{y} - \mathbf{X}^\top
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月23日 21:47:34</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

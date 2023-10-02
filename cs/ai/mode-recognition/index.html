@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../cv/">
-        CV
+        CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
@@ -719,15 +719,15 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/">CV</a>
+<a href="../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="CV" class="md-nav" data-md-level="1">
+<nav aria-label="CV &amp; Robot" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          CV
+          CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -818,6 +818,16 @@ var _hmt = _hmt || [];
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../mb/maa/lec1/">
         矩阵代数基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec2/">
+        特殊矩阵
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec3/">
+        矩阵微分
       </a>
 </li>
 </ul>
@@ -1109,7 +1119,7 @@ var _hmt = _hmt || [];
 </a>
 <h1 id="_1">模式识别<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>3402<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>3413<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
@@ -1157,7 +1167,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 <li>相似度含义<ul>
-<li>有<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个特征则组成<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维向量 <span class="arithmatex">\(X=[x_1, x_2, ..., x_n]^T\)</span>称为该样本的特征向量。它相当于特征空间中的一个点，以特征空间中，<strong>点间的距离函数作为模式相似度的测量</strong>，以“距离”作为模式分类的依据，<strong>距离越小，越相似</strong></li>
+<li>有<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个特征则组成<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维向量 <span class="arithmatex">\(X=[x_1, x_2, ..., x_n]^{\top}\)</span>称为该样本的特征向量。它相当于特征空间中的一个点，以特征空间中，<strong>点间的距离函数作为模式相似度的测量</strong>，以“距离”作为模式分类的依据，<strong>距离越小，越相似</strong></li>
 </ul>
 </li>
 </ol>
@@ -1170,19 +1180,19 @@ var _hmt = _hmt || [];
 <ul>
 <li>
 <p><strong>欧氏距离</strong></p>
-<p>设<span class="arithmatex">\(X_1, X_2\)</span>为两个<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维模式样本，<span class="arithmatex">\(X_1 = [x_{11}, x_{12}, ..., x_{1n}]^T, X_2 = [x_{21}, x_{22}, ..., x_{2n}]^T\)</span>，欧氏距离定义为<span><span class="heti-spacing"> </span>:</span></p>
+<p>设<span class="arithmatex">\(X_1, X_2\)</span>为两个<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维模式样本，<span class="arithmatex">\(X_1 = [x_{11}, x_{12}, ..., x_{1n}]^{\top}, X_2 = [x_{21}, x_{22}, ..., x_{2n}]^{\top}\)</span>，欧氏距离定义为<span><span class="heti-spacing"> </span>:</span></p>
 <div class="arithmatex">\[
-D(X_1, X_2) = \parallel X_1 - X_2 \parallel = \sqrt{(X_1 - X_2)^T(X_1-X_2)}
+D(X_1, X_2) = \parallel X_1 - X_2 \parallel = \sqrt{(X_1 - X_2)^{\top}(X_1-X_2)}
 \]</div>
 <p><strong>距离越小越相似。</strong></p>
 </li>
 <li>
 <p><strong>马式距离</strong></p>
-<p>平方表达式：<span class="arithmatex">\(D^2=(X_1-X_2)^TC^{-1}(X_1-X_2)\)</span></p>
+<p>平方表达式：<span class="arithmatex">\(D^2=(X_1-X_2)^{\top}C^{-1}(X_1-X_2)\)</span></p>
 <p>令<span class="arithmatex">\(M:\)</span>均值向量<span><span class="heti-spacing"> </span>M_Mean</span>，<span class="arithmatex">\(C:\)</span>该类模式总体的协方差矩阵<span><span class="heti-spacing"> </span>C_covariance</span>。</p>
-<p>对<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维向量<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(X=[x_1, ..., x_n]^T,M=[m_1,...,m_n]^T\)</span></p>
+<p>对<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维向量<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(X=[x_1, ..., x_n]^{\top},M=[m_1,...,m_n]^{\top}\)</span></p>
 <div class="arithmatex">\[
-C = E\{(X-M)(X-M)^T\} \\
+C = E\{(X-M)(X-M)^{\top}\} \\
 = E \{
 \begin{bmatrix}
 (x_1-m_1) \\
@@ -1229,7 +1239,7 @@ D_m(X_i, X_j)=[\sum_{k=1}^n|x_{ik}-x_{jk}|^m]^{\frac{1}{m}}
 <li>
 <p><strong>角度相似性函数</strong></p>
 <div class="arithmatex">\[
-S(X_i, X_j) = \frac{X_i^TX_j}{\parallel X_i \parallel \cdot \parallel X_j \parallel}
+S(X_i, X_j) = \frac{X_i^{\top}X_j}{\parallel X_i \parallel \cdot \parallel X_j \parallel}
 \]</div>
 <p>是模式向量<span class="arithmatex">\(X_i, X_j\)</span>之间的夹角的余弦。</p>
 </li>
@@ -1237,7 +1247,7 @@ S(X_i, X_j) = \frac{X_i^TX_j}{\parallel X_i \parallel \cdot \parallel X_j \paral
 <p><strong><span>Tanimoto<span class="heti-spacing"> </span></span>测度</strong></p>
 <p>用于<span class="heti-skip"><span class="heti-spacing"> </span>0,1<span class="heti-spacing"> </span></span>二值特征的情况<span><span class="heti-spacing"> </span>,</span></p>
 <div class="arithmatex">\[
-S(X_i,X_j)=\frac{X_i^TX_j}{X_i^TX_i+X_j^TX_j-X_i^TX_j} \\
+S(X_i,X_j)=\frac{X_i^{\top}X_j}{X_i^{\top}X_i+X_j^{\top}X_j-X_i^{\top}X_j} \\
 \ \\
 = \frac{X_i,X_j中共有的特征数目}{X_i和X_j中占有的特征数目的总数}
 \]</div>
@@ -1453,15 +1463,15 @@ Z_j(k+1) = \frac{1}{N_j} \sum_{X \in S_j(k)} \mathbf{X} \ \ \ j=1,2,...,K
 <h4 id="_21">一般形式<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>将二维形式推广到<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>维，线性判别函数的一般形式为</p>
 <div class="arithmatex">\[
-d(X) = w_1x_1+w_2x_2+...+w_nx_n+w_{n+1}=W_0^TX+w_{n+1}
+d(X) = w_1x_1+w_2x_2+...+w_nx_n+w_{n+1}=W_0^{\top}X+w_{n+1}
 \]</div>
-<p>增广向量的形式 <span class="arithmatex">\(d(X)=W^TX\)</span></p>
+<p>增广向量的形式 <span class="arithmatex">\(d(X)=W^{\top}X\)</span></p>
 <h4 id="_22">性质<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ol>
 <li>两类情况</li>
 </ol>
 <div class="arithmatex">\[
-d(X)=W^TX
+d(X)=W^{\top}X
 \left\{\begin{matrix}
 &gt;0  &amp; 若 X \in \omega_1 \\
 &lt;0  &amp; 若 X \in \omega_2
@@ -1476,7 +1486,7 @@ d(X)=W^TX
 </ul>
 </li>
 <li><span class="arithmatex">\(\omega_i \omega_i\)</span>两分法<ul>
-<li>一个判别界面只能分开两个类别，不能把其余所有的类别都分开。判决函数为<span class="arithmatex">\(d_{ij}(X)=W_{ij}^TX\)</span></li>
+<li>一个判别界面只能分开两个类别，不能把其余所有的类别都分开。判决函数为<span class="arithmatex">\(d_{ij}(X)=W_{ij}^{\top}X\)</span></li>
 <li>性质：<span class="arithmatex">\(d_{ij}(X) &gt; 0, \forall j \ne i; i, j = 1,2,...,M，若X \in \omega_i\)</span></li>
 </ul>
 </li>
@@ -1486,7 +1496,7 @@ d(X)=W^TX
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月24日 09:29:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

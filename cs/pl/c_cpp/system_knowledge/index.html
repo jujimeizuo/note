@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../../cv/">
-        CV
+        CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
@@ -1094,15 +1094,15 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../cv/">CV</a>
+<a href="../../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="CV" class="md-nav" data-md-level="1">
+<nav aria-label="CV &amp; Robot" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          CV
+          CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -1193,6 +1193,16 @@ var _hmt = _hmt || [];
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../mb/maa/lec1/">
         矩阵代数基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../mb/maa/lec2/">
+        特殊矩阵
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../mb/maa/lec3/">
+        矩阵微分
       </a>
 </li>
 </ul>
@@ -2334,7 +2344,7 @@ C++是通过类来实现的，封装为了使类中成员选择性的暴露，�
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">   </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">();</span>
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">};</span>
 </code></pre></div>
-<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>存储在对象的末尾，那么对于完整类型<span class="heti-skip"><span class="heti-spacing"> </span>base<span class="heti-spacing"> </span></span>的对象，它将位于<span class="heti-skip"><span class="heti-spacing"> </span>sizeof(T)<span class="heti-spacing"> </span></span>字节之后<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>现在，当你有一个完整类型的对象<span class="heti-skip"><span class="heti-spacing"> </span>derived<span class="heti-spacing"> </span></span>时，<span>base<span class="heti-spacing"> </span></span>子对象的布局必须与完整<span class="heti-skip"><span class="heti-spacing"> </span>base<span class="heti-spacing"> </span></span>对象的布局兼容，因此<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>仍然必须是<span class="heti-skip"><span class="heti-spacing"> </span>sizeof(T)<span class="heti-spacing"> </span></span>字节在对象内部，它将位于<span class="heti-skip"><span class="heti-spacing"> </span>derived<span class="heti-spacing"> </span></span>对象中间的某个位置<span class="heti-skip"><span class="heti-spacing"> </span>(sizeof(T)<span class="heti-spacing"> </span></span>从开始，<span>sizeof(T1)<span class="heti-spacing"> </span></span>在结束之前<span class="heti-skip"><span class="heti-spacing"> </span>).<span class="heti-spacing"> </span></span>所以它将不再位于对象的 <em>end</em> 处<span><span class="heti-spacing"> </span>.</span></p>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>存储在对象的末尾，那么对于完整类型<span class="heti-skip"><span class="heti-spacing"> </span>base<span class="heti-spacing"> </span></span>的对象，它将位于<span class="heti-skip"><span class="heti-spacing"> </span>sizeof(T)<span class="heti-spacing"> </span></span>字节之后<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>现在，当你有一个完整类型的对象<span class="heti-skip"><span class="heti-spacing"> </span>derived<span class="heti-spacing"> </span></span>时，<span>base<span class="heti-spacing"> </span></span>子对象的布局必须与完整<span class="heti-skip"><span class="heti-spacing"> </span>base<span class="heti-spacing"> </span></span>对象的布局兼容，因此<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>仍然必须是<span class="heti-skip"><span class="heti-spacing"> </span>sizeof(T)<span class="heti-spacing"> </span></span>字节在对象内部，它将位于<span class="heti-skip"><span class="heti-spacing"> </span>derived<span class="heti-spacing"> </span></span>对象中间的某个位置<span class="heti-skip"><span class="heti-spacing"> </span>(sizeof(T)<span class="heti-spacing"> </span></span>从开始，<span>sizeof(T1)<span class="heti-spacing"> </span></span>在结束之前<span class="heti-skip"><span class="heti-spacing"> </span>).<span class="heti-spacing"> </span></span>所以它将不再位于对象的<em><span class="heti-skip"><span class="heti-spacing"> </span>end<span class="heti-spacing"> </span></span></em>处<span><span class="heti-spacing"> </span>.</span></p>
 <p>此外，给定一个<span class="heti-skip"><span class="heti-spacing"> </span>this<span class="heti-spacing"> </span></span>指针，虚拟调用需要通过<span class="heti-skip"><span class="heti-spacing"> </span>vtable<span class="heti-spacing"> </span></span>进行间接调用，这基本上是取消对<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>的引用，添加一个偏移量并跳转到存储在那里的内存位置<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>如果<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>存储在对象的末尾，则对于每个虚拟调用，在取消引用<span class="heti-skip"><span class="heti-spacing"> </span>vptr<span class="heti-spacing"> </span></span>之前都会对<span class="heti-skip"><span class="heti-spacing"> </span>this<span class="heti-spacing"> </span></span>进行额外的添加<span><span class="heti-spacing"> </span>.</span></p>
 <h2 id="stlhash"><span>STL<span class="heti-spacing"> </span></span>源码中<span class="heti-skip"><span class="heti-spacing"> </span>hash<span class="heti-spacing"> </span></span>的表现<a class="headerlink" href="#stlhash" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><span>hashtable<span class="heti-spacing"> </span></span>是采用开链法来完成的<heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（vector + list）</p>

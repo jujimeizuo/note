@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../cv/">
-        CV
+        CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
@@ -568,15 +568,15 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/">CV</a>
+<a href="../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="CV" class="md-nav" data-md-level="1">
+<nav aria-label="CV &amp; Robot" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          CV
+          CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -830,6 +830,16 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lec2/">
+        特殊矩阵
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lec3/">
+        矩阵微分
+      </a>
 </li>
 </ul>
 </nav>
@@ -1130,9 +1140,6 @@ var _hmt = _hmt || [];
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1 id="_1">矩阵代数基础<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2748<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>分钟</p>
-</div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>矩阵是描述和求解线性方程组最基本和最有用的数学工具</p>
@@ -1154,10 +1161,10 @@ var _hmt = _hmt || [];
 </ul>
 <h3 id="_4">矩阵的基本运算<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li><span class="arithmatex">\(A=[a_{ij}]\)</span>的转置记作<span class="arithmatex">\(A^T\)</span>，元素定义为<span class="arithmatex">\([A^T]_{i,j}=a_{ji}\)</span></li>
+<li><span class="arithmatex">\(A=[a_{ij}]\)</span>的转置记作<span class="arithmatex">\(A^{\top}\)</span>，元素定义为<span class="arithmatex">\([A^{\top}]_{i,j}=a_{ji}\)</span></li>
 <li><span class="arithmatex">\(A=[a_{ij}]\)</span>的复数共轭记作<span class="arithmatex">\(A^*\)</span>，元素定义为<span class="arithmatex">\([A^*]_{ij}=a_{ij}^*\)</span></li>
 <li><span class="arithmatex">\(A=[a_{ij}]\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>复<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>共轭转置记作<span class="arithmatex">\(A^H\)</span>，元素定义为<span class="arithmatex">\([A^H]_{ij}=a_{ji}^*\)</span><heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（共轭转置又叫<span class="heti-skip"><span class="heti-spacing"> </span>Hlermitian<span class="heti-spacing"> </span></span>伴随<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>转置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>共轭）</li>
-<li>满足<span class="arithmatex">\(A^T=A\)</span>的正方实矩阵和<span class="arithmatex">\(A^H=A\)</span>的正方复矩阵分别称为对称矩阵和<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>复共轭对称矩阵<span><span class="heti-spacing"> </span>)</span>，共轭转置和转置的关系<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(A^H=(A^*)^T=(A^T)^*\)</span></li>
+<li>满足<span class="arithmatex">\(A^{\top}=A\)</span>的正方实矩阵和<span class="arithmatex">\(A^H=A\)</span>的正方复矩阵分别称为对称矩阵和<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>复共轭对称矩阵<span><span class="heti-spacing"> </span>)</span>，共轭转置和转置的关系<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(A^H=(A^*)^{\top}=(A^{\top})^*\)</span></li>
 <li>矩阵满足与标量<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>矩阵<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>向量之间的加法、乘法（<strong>矩阵乘法不满足交换律</strong>）</li>
 <li>矩阵与向量的乘法<span class="arithmatex">\(Ax=y\)</span>可视为向量<span class="arithmatex">\(x\)</span>的线性变换，<span class="arithmatex">\(A\)</span>称为线性变换矩阵</li>
 <li>如果<span class="arithmatex">\(A\)</span>可逆，则存在<span class="arithmatex">\(A^{-1}\)</span>使得<span class="arithmatex">\(A^{-1}A=I\)</span>，称<span class="arithmatex">\(A^{-1}\)</span>是<span class="arithmatex">\(A\)</span>的逆矩阵</li>
@@ -1265,7 +1272,7 @@ var _hmt = _hmt || [];
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/mb/maa/adjoint-operator.jpg"><img alt="几种常用算子及伴随算子" src="https://cdn.jujimeizuo.cn/note/mb/maa/adjoint-operator.jpg"/></a></center>
 <h2 id="_8">内积与范数<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_9">向量的内积与范数<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(n\)</span>阶复向量<span class="arithmatex">\(x=[x_1,...,x_n]^T,y=[y_1,...,y_n]^T\)</span>之间的内积<span class="arithmatex">\(&lt;x,y&gt;=x^Hy=\sum_{i=1}^n x_i^*y_i\)</span>称为典范内积。加权内积<span class="arithmatex">\(&lt;x,y&gt;=x^HGy\)</span>，其中<span class="arithmatex">\(G\)</span>为正定的<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵。</p>
+<p><span class="arithmatex">\(n\)</span>阶复向量<span class="arithmatex">\(x=[x_1,...,x_n]^{\top},y=[y_1,...,y_n]^{\top}\)</span>之间的内积<span class="arithmatex">\(&lt;x,y&gt;=x^Hy=\sum_{i=1}^n x_i^*y_i\)</span>称为典范内积。加权内积<span class="arithmatex">\(&lt;x,y&gt;=x^HGy\)</span>，其中<span class="arithmatex">\(G\)</span>为正定的<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵。</p>
 <p>在实和复内积空间里，范数具有以下性质：</p>
 <ol>
 <li><span class="arithmatex">\(\parallel 0 \parallel = 0\)</span>，并且<span class="arithmatex">\(\parallel x \parallel &gt; 0，\forall x \ne 0\)</span></li>
@@ -1356,26 +1363,18 @@ F \odot G = [f_1 \oplus g_1, f_2 \oplus g_2, ..., f_n \oplus g_n] \in R^{pq \tim
 <p>它由两个矩阵的对应列向量的<span class="heti-skip"><span class="heti-spacing"> </span>Kronecker<span class="heti-spacing"> </span></span>积排列而成。因此，<span>Khatri-Rao<span class="heti-spacing"> </span></span>积又叫对应列<span class="heti-skip"><span class="heti-spacing"> </span>Kronecker<span class="heti-spacing"> </span></span>积。</p>
 <h2 id="_18">向量化与矩阵化<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>矩阵的向量化<span class="arithmatex">\(vec(A)\)</span>是一线性变换，将<span class="arithmatex">\(A\)</span>按列堆栈（当然也可以按行堆栈）排列成一个<span class="arithmatex">\(mn \times 1\)</span>向量。即</p>
-<div class="arithmatex">\[vec(A)=[a_{11},...,a_{m1},...,a_{1n},...,a_{mn}]^T\]</div>
+<div class="arithmatex">\[vec(A)=[a_{11},...,a_{m1},...,a_{1n},...,a_{mn}]^{\top}\]</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月16日 14:22:57</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月16日 14:22:57</span>
 </small>
 </div>
-<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
-</script>
-<script>
-                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
-                        var giscus = document.querySelector("script[src*=giscus]")
-                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
-                      }
-                    </script>
 </article>
 </div>
 </div>
@@ -1386,7 +1385,7 @@ F \odot G = [f_1 \oplus g_1, f_2 \oplus g_2, ..., f_n \oplus g_n] \in R^{pq \tim
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 最优化理论与方法" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<a aria-label="上一页: 矩阵分析与应用" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1395,17 +1394,17 @@ F \odot G = [f_1 \oplus g_1, f_2 \oplus g_2, ..., f_n \oplus g_n] \in R^{pq \tim
 <span class="md-footer__direction">
                 上一页
               </span>
-              最优化理论与方法
+              矩阵分析与应用
             </div>
 </div>
 </a>
-<a aria-label="下一页: 组合数学" class="md-footer__link md-footer__link--next" href="../../comb/" rel="next">
+<a aria-label="下一页: 特殊矩阵" class="md-footer__link md-footer__link--next" href="../lec2/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              组合数学
+              特殊矩阵
             </div>
 </div>
 <div class="md-footer__button md-icon">
