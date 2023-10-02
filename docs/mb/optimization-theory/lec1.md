@@ -255,8 +255,8 @@ $$
 设$f:R^n \to R^1$具有二阶连续偏导数，则
 
 $$
-f(\mathbf{x}+\mathbf{p})=f(\mathbf{x})+\bigtriangledown f(\mathbf{x})^{\top}\mathbf{p}+\frac{1}{2}\mathbf{p}^{\top}\bigtriangledown^2f(\overline{\mathbf{x}})\mathbf{p} \\
-其中\overline{\mathbf{x}}=\mathbf{x}+\theta \mathbf{p}，而0 < \theta < 1
+f(\mathbf{x}+\mathbf{p})=f(\mathbf{x})+\bigtriangledown f(\mathbf{x})^{\top}\mathbf{p}+\frac{1}{2}\mathbf{p}^{\top}\bigtriangledown^2f(\bar{\mathbf{x}})\mathbf{p} \\
+其中\bar{\mathbf{x}}=\mathbf{x}+\theta \mathbf{p}，而0 < \theta < 1
 $$
 
 ## 凸集与凸函数

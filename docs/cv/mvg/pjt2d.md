@@ -359,23 +359,23 @@ $$
 
 ## 1D 射影几何和交比
 
-> &ensp;&ensp;直线上的点$x$用齐次坐标表示为$(x_1, x_2)^{\top}$，而$(x_1, 0)^{\top}$是该直线的理想点。我们将用记号$\mathbf{\overline{x}}$表示$2$维矢量$(x_1, x_2)^{\top}$。可用齐次矩阵表示：
+> &ensp;&ensp;直线上的点$x$用齐次坐标表示为$(x_1, x_2)^{\top}$，而$(x_1, 0)^{\top}$是该直线的理想点。我们将用记号$\mathbf{\bar{x}}$表示$2$维矢量$(x_1, x_2)^{\top}$。可用齐次矩阵表示：
 
-> $$\mathbf{\overline{x}}^\prime = H_{2 \times 2} \mathbf{\overline{x}}$$
+> $$\mathbf{\bar{x}}^\prime = H_{2 \times 2} \mathbf{\bar{x}}$$
 
 
 ### 交比
 
-&ensp;&ensp;交比是$IP^1$的基本射影不变量。给定$4$个点$\mathbf{\overline{x}_i}$，交比定义为
+&ensp;&ensp;交比是$IP^1$的基本射影不变量。给定$4$个点$\mathbf{\bar{x}_i}$，交比定义为
 
 $$
-Cross(\mathbf{\overline{x}_1},\mathbf{\overline{x}_2},\mathbf{\overline{x}_3},\mathbf{\overline{x}_4}) = \frac{|\mathbf{\overline{x}_1}\mathbf{\overline{x}_2}||\mathbf{\overline{x}_3}\mathbf{\overline{x}_4}|}{|\mathbf{\overline{x}_1}\mathbf{\overline{x}_3}||\mathbf{\overline{x}_2}\mathbf{\overline{x}_4}|}
+Cross(\mathbf{\bar{x}_1},\mathbf{\bar{x}_2},\mathbf{\bar{x}_3},\mathbf{\bar{x}_4}) = \frac{|\mathbf{\bar{x}_1}\mathbf{\bar{x}_2}||\mathbf{\bar{x}_3}\mathbf{\bar{x}_4}|}{|\mathbf{\bar{x}_1}\mathbf{\bar{x}_3}||\mathbf{\bar{x}_2}\mathbf{\bar{x}_4}|}
 $$
 
 其中
 
 $$
-|\mathbf{\overline{x}_i}\mathbf{\overline{x}_j}|
+|\mathbf{\bar{x}_i}\mathbf{\bar{x}_j}|
 =det
 \begin{bmatrix}
 x_{i1}  & x_{j1} \\
@@ -384,9 +384,9 @@ x_{i2}  & x_{j2}
 $$
 
 - **交比的主要特点**
-    1. 交比的值与各点$\mathbf{\overline{x}_i}$所用的具体的齐次表示无关。
-    2. 如果每点$\mathbf{\overline{x}_i}$都是有限点，并且在齐次表示中均选择$x_2 = 1$，那么$|\mathbf{\overline{x}_i}\mathbf{\overline{x}_j}|$就表示由$\mathbf{\overline{x}_i}$到$\mathbf{\overline{x}_j}$的带符号的距离。
-    3. 如果点$\mathbf{\overline{x}_i}$中有一个理想点，交比的定义仍然有效。
+    1. 交比的值与各点$\mathbf{\bar{x}_i}$所用的具体的齐次表示无关。
+    2. 如果每点$\mathbf{\bar{x}_i}$都是有限点，并且在齐次表示中均选择$x_2 = 1$，那么$|\mathbf{\bar{x}_i}\mathbf{\bar{x}_j}|$就表示由$\mathbf{\bar{x}_i}$到$\mathbf{\bar{x}_j}$的带符号的距离。
+    3. 如果点$\mathbf{\bar{x}_i}$中有一个理想点，交比的定义仍然有效。
     4. 在任何直线的射影变换下，交比的值不变。
 
 - **共点线**
