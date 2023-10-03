@@ -579,16 +579,43 @@ var _hmt = _hmt || [];
           CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">多视图几何</a>
+<a href="../../ia-ocv/">图像分析 &amp; OpenCV</a>
 <label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="多视图几何" class="md-nav" data-md-level="2">
+<nav aria-label="图像分析 &amp; OpenCV" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          图像分析 &amp; OpenCV
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ia-ocv/image-analysis/">
+        图像分析与应用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ia-ocv/opencv/">
+        OpenCV
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">多视图几何</a>
+<label for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="多视图几何" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           多视图几何
         </label>
@@ -792,6 +819,25 @@ var _hmt = _hmt || [];
         3D 射影几何和变换
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../est2d/">
+        估计——2D 射影变换
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../slam/">SLAM</a>
+</div>
+<nav aria-label="SLAM" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          SLAM
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
@@ -1528,17 +1574,17 @@ A &amp; \mathbf{t} \\
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/mvg/summerize-transform.jpg"><img alt="变换的种类" src="https://cdn.jujimeizuo.cn/note/cv/mvg/summerize-transform.jpg"/></a></center>
 <h2 id="1d"><span>1D<span class="heti-spacing"> </span></span>射影几何和交比<a class="headerlink" href="#1d" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <blockquote>
-<p>  直线上的点<span class="arithmatex">\(x\)</span>用齐次坐标表示为<span class="arithmatex">\((x_1, x_2)^{\top}\)</span>，而<span class="arithmatex">\((x_1, 0)^{\top}\)</span>是该直线的理想点。我们将用记号<span class="arithmatex">\(\mathbf{\overline{x}}\)</span>表示<span class="arithmatex">\(2\)</span>维矢量<span class="arithmatex">\((x_1, x_2)^{\top}\)</span>。可用齐次矩阵表示：</p>
-<div class="arithmatex">\[\mathbf{\overline{x}}^\prime = H_{2 \times 2} \mathbf{\overline{x}}\]</div>
+<p>  直线上的点<span class="arithmatex">\(x\)</span>用齐次坐标表示为<span class="arithmatex">\((x_1, x_2)^{\top}\)</span>，而<span class="arithmatex">\((x_1, 0)^{\top}\)</span>是该直线的理想点。我们将用记号<span class="arithmatex">\(\mathbf{\bar{x}}\)</span>表示<span class="arithmatex">\(2\)</span>维矢量<span class="arithmatex">\((x_1, x_2)^{\top}\)</span>。可用齐次矩阵表示：</p>
+<div class="arithmatex">\[\mathbf{\bar{x}}^\prime = H_{2 \times 2} \mathbf{\bar{x}}\]</div>
 </blockquote>
 <h3 id="_12">交比<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>  交比是<span class="arithmatex">\(IP^1\)</span>的基本射影不变量。给定<span class="arithmatex">\(4\)</span>个点<span class="arithmatex">\(\mathbf{\overline{x}_i}\)</span>，交比定义为</p>
+<p>  交比是<span class="arithmatex">\(IP^1\)</span>的基本射影不变量。给定<span class="arithmatex">\(4\)</span>个点<span class="arithmatex">\(\mathbf{\bar{x}_i}\)</span>，交比定义为</p>
 <div class="arithmatex">\[
-Cross(\mathbf{\overline{x}_1},\mathbf{\overline{x}_2},\mathbf{\overline{x}_3},\mathbf{\overline{x}_4}) = \frac{|\mathbf{\overline{x}_1}\mathbf{\overline{x}_2}||\mathbf{\overline{x}_3}\mathbf{\overline{x}_4}|}{|\mathbf{\overline{x}_1}\mathbf{\overline{x}_3}||\mathbf{\overline{x}_2}\mathbf{\overline{x}_4}|}
+Cross(\mathbf{\bar{x}_1},\mathbf{\bar{x}_2},\mathbf{\bar{x}_3},\mathbf{\bar{x}_4}) = \frac{|\mathbf{\bar{x}_1}\mathbf{\bar{x}_2}||\mathbf{\bar{x}_3}\mathbf{\bar{x}_4}|}{|\mathbf{\bar{x}_1}\mathbf{\bar{x}_3}||\mathbf{\bar{x}_2}\mathbf{\bar{x}_4}|}
 \]</div>
 <p>其中</p>
 <div class="arithmatex">\[
-|\mathbf{\overline{x}_i}\mathbf{\overline{x}_j}|
+|\mathbf{\bar{x}_i}\mathbf{\bar{x}_j}|
 =det
 \begin{bmatrix}
 x_{i1}  &amp; x_{j1} \\
@@ -1549,9 +1595,9 @@ x_{i2}  &amp; x_{j2}
 <li>
 <p><strong>交比的主要特点</strong></p>
 <ol>
-<li>交比的值与各点<span class="arithmatex">\(\mathbf{\overline{x}_i}\)</span>所用的具体的齐次表示无关。</li>
-<li>如果每点<span class="arithmatex">\(\mathbf{\overline{x}_i}\)</span>都是有限点，并且在齐次表示中均选择<span class="arithmatex">\(x_2 = 1\)</span>，那么<span class="arithmatex">\(|\mathbf{\overline{x}_i}\mathbf{\overline{x}_j}|\)</span>就表示由<span class="arithmatex">\(\mathbf{\overline{x}_i}\)</span>到<span class="arithmatex">\(\mathbf{\overline{x}_j}\)</span>的带符号的距离。</li>
-<li>如果点<span class="arithmatex">\(\mathbf{\overline{x}_i}\)</span>中有一个理想点，交比的定义仍然有效。</li>
+<li>交比的值与各点<span class="arithmatex">\(\mathbf{\bar{x}_i}\)</span>所用的具体的齐次表示无关。</li>
+<li>如果每点<span class="arithmatex">\(\mathbf{\bar{x}_i}\)</span>都是有限点，并且在齐次表示中均选择<span class="arithmatex">\(x_2 = 1\)</span>，那么<span class="arithmatex">\(|\mathbf{\bar{x}_i}\mathbf{\bar{x}_j}|\)</span>就表示由<span class="arithmatex">\(\mathbf{\bar{x}_i}\)</span>到<span class="arithmatex">\(\mathbf{\bar{x}_j}\)</span>的带符号的距离。</li>
+<li>如果点<span class="arithmatex">\(\mathbf{\bar{x}_i}\)</span>中有一个理想点，交比的定义仍然有效。</li>
 <li>在任何直线的射影变换下，交比的值不变。</li>
 </ol>
 </li>
@@ -1789,7 +1835,7 @@ i \\
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月2日 18:37:34</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月3日 17:24:08</span>

@@ -1,4 +1,12 @@
 - "2023":
+  - "2023-10-03":
+    - newpage:
+        text: CV & Robot > 多视图几何 > 估计——2D 射影变换
+        href: /cs/cv/mvg/est2d/
+  - "2023-09-30":
+    - newpage:
+        text: CV & Robot > 多视图几何 > 3D 射影几何变换
+        href: /cs/cv/mvg/pjt3d/
   - "2023-09-17":
     - newpage:
         text: 数理基础 > 最优化理论与方法 > 直线搜索
@@ -58,7 +66,7 @@
         href: /cs/pl/c_cpp/system_knowledge/
   - "2023-09-03":
     - newpage:
-        text: CS > CV > 多视图几何 > 2D 射影几何变换
+        text: CV & Robot > 多视图几何 > 2D 射影几何变换
         href: /cs/cv/mvg/pjt2d/
   - "2023-09-01":
     - newpage:

@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
+<link href="https://note.jujimeizuo.cn/cv/mvg/est2d/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
+<title>估计——2D 射影变换 - 狙击美佐的笔记本</title>
+<link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/card.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c273de7f67d992cb6aef08c3ddf09bb2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-DYETCPM289"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-DYETCPM289",{page_path:e.pathname})})})</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DYETCPM289"></script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script src="../../../js/scheme.js" type="text/javascript"></script>
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#2d">
+            跳转至
+          </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            狙击美佐的笔记本
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              估计——2D 射影变换
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__options">
+<div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+<a class="light-mode" href="javascript:toggleScheme();" title="Light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"></path></svg>
+</a>
+<a class="dark-mode" href="javascript:toggleScheme();" title="Dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"></path></svg>
+</a>
+<a class="system-mode" href="javascript:toggleScheme();" title="System preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34z"></path></svg>
+</a>
+<a class="unknown-mode" href="javascript:toggleScheme();" title="Unknown scheme">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10z"></path></svg>
+</a>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/jujimeizuo/note/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    jujimeizuo/note
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../cs/">
+        Computer Science
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
+        CV &amp; Robot
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../mb/">
+        Math Basis
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../utils/">
+        Utils
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
+</a>
+    狙击美佐的笔记本
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/jujimeizuo/note/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    jujimeizuo/note
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../..">Home</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../changelog/">
+        更新记录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../links/">
+        友链
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/">Computer Science</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Computer Science" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/pl/">编程语言</a>
+<label for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="编程语言" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          编程语言
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/pl/c_cpp/">C/C++</a>
+<label for="__nav_2_2_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="C/C++" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_2">
+<span class="md-nav__icon md-icon"></span>
+          C/C++
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/system_knowledge/">
+        C++ 系统知识
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
+        C++ 各种函数使用
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/pl/python/">Python</a>
+<label for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Python" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/python/basic/">
+        Python 语法基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
+        Numpy 科学计算库
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
+        Python 虚拟环境
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/pl/go/">Go</a>
+<label for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Go" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_4">
+<span class="md-nav__icon md-icon"></span>
+          Go
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/go/basic/">
+        Go 语法基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/pl/go/gin/">
+        gin框架 (TODO)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/pl/java/">Java</a>
+</div>
+<nav aria-label="Java" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3">
+          算法相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="算法相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          算法相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
+        基础数据结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
+        算法设计与分析
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4">
+          人工智能基础
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="人工智能基础" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+          人工智能基础
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
+        模式识别
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/ai/ml/">
+        机器学习
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/ai/dl/">
+        神经网络与深度学习
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/hpc/">高性能计算</a>
+<label for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="高性能计算" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+          高性能计算
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/outline/">
+        概论
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
+        向量化计算
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/gpu/">
+        GPU 编程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/mpi/">
+        MPI 基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/openmp/">
+        OpenMP 基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/taichi/">
+        Taichi 基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/software/">软件相关</a>
+<label for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="软件相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+          软件相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/software/design-pattern/">
+        设计模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/software/sca/">
+        软件构件与体系结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/software/compa/">
+        COM 原理与应用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/software/piaserver/">
+        应用服务器原理与实现
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+          数据库相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="数据库相关" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          数据库相关
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/db/mysql/">
+        MySQL
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_2" id="__nav_2_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7_2">
+          Redis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Redis" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_7_2">
+<span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
+        数据类型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
+        持久化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/db/redis/work/">
+        事务
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" id="__nav_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_8">
+          杂项
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="杂项" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+          杂项
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/others/regex/">
+        RegEx 正则表达式
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../">CV &amp; Robot</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="CV &amp; Robot" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          CV &amp; Robot
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ia-ocv/">图像分析 &amp; OpenCV</a>
+<label for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="图像分析 &amp; OpenCV" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          图像分析 &amp; OpenCV
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ia-ocv/image-analysis/">
+        图像分析与应用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ia-ocv/opencv/">
+        OpenCV
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">多视图几何</a>
+<label for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="多视图几何" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          多视图几何
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pjt2d/">
+        2D 射影几何和变换
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pjt3d/">
+        3D 射影几何和变换
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          估计——2D 射影变换
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        估计——2D 射影变换
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dlt">
+    直接线性变换（DLT）算法
+  </a>
+<nav aria-label="直接线性变换（DLT）算法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    超定解
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    非齐次解
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    退化配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    由线和其他实体求解
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    不同的代价函数
+  </a>
+<nav aria-label="不同的代价函数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    代数距离
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    几何距离
+  </a>
+<nav aria-label="几何距离" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    记号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    单图像误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    对称转移误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    重投影误差——两幅图像
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    几何和代数距离的比较
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    重投影误差的几何解释
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sampson">
+    Sampson 误差
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    统计代价函数和最大似然估计
+  </a>
+<nav aria-label="统计代价函数和最大似然估计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    单图像误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    双图像误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mahalanobis">
+    Mahalanobis 距离
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    变换不变性和归一化
+  </a>
+<nav aria-label="变换不变性和归一化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    关于图像坐标变换的不变性
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dlt_1">
+    DLT 算法的非不变性
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    几何误差的不变性
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    归一化变换
+  </a>
+<nav aria-label="归一化变换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    各向同性缩放
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    归一化与条件数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    非各向同性缩放
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    无穷远附近的点的缩放
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    迭代最小化方法
+  </a>
+<nav aria-label="迭代最小化方法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    关于参数化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    函数确定
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    初始化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    迭代方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    算法的实验比较
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_31">
+    鲁棒估计
+  </a>
+<nav aria-label="鲁棒估计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ransac">
+    RANSAC
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_32">
+    鲁棒最大似然估计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_33">
+    其他鲁棒算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_34">
+    单应的自动计算
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../slam/">SLAM</a>
+</div>
+<nav aria-label="SLAM" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          SLAM
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mb/">Math Basis</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Math Basis" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Math Basis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mb/optimization-theory/">最优化理论与方法</a>
+<label for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="最优化理论与方法" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          最优化理论与方法
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
+        最优化问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec2/">
+        直线搜索
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../mb/maa/">矩阵分析与应用</a>
+<label for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="矩阵分析与应用" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          矩阵分析与应用
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec1/">
+        矩阵代数基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec2/">
+        特殊矩阵
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec3/">
+        矩阵微分
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/comb/">
+        组合数学
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../utils/">Utils</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Utils" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Utils
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/utilsbox/">
+        工具收集
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          命令行工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="命令行工具" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          命令行工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/shell/">
+        Shell 命令相关
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/git/">
+        Git 命令相关
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/docker/">
+        Docker 命令相关
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/gdb/">
+        gdb 命令相关
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4">
+          CI 工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CI 工具" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+          CI 工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/action/">
+        Github Action
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" id="__nav_5_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5">
+          站点生成工具
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="站点生成工具" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_5">
+<span class="md-nav__icon md-icon"></span>
+          站点生成工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/reveal-md/">
+        reveal-md
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/gitbook/">
+        gitbook
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/mkdocs/">
+        mkdocs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../utils/hexo/">
+        hexo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dlt">
+    直接线性变换（DLT）算法
+  </a>
+<nav aria-label="直接线性变换（DLT）算法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    超定解
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    非齐次解
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    退化配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    由线和其他实体求解
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    不同的代价函数
+  </a>
+<nav aria-label="不同的代价函数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    代数距离
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    几何距离
+  </a>
+<nav aria-label="几何距离" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    记号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    单图像误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    对称转移误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    重投影误差——两幅图像
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    几何和代数距离的比较
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    重投影误差的几何解释
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sampson">
+    Sampson 误差
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    统计代价函数和最大似然估计
+  </a>
+<nav aria-label="统计代价函数和最大似然估计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    单图像误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    双图像误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mahalanobis">
+    Mahalanobis 距离
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    变换不变性和归一化
+  </a>
+<nav aria-label="变换不变性和归一化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    关于图像坐标变换的不变性
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dlt_1">
+    DLT 算法的非不变性
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    几何误差的不变性
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    归一化变换
+  </a>
+<nav aria-label="归一化变换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    各向同性缩放
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    归一化与条件数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    非各向同性缩放
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    无穷远附近的点的缩放
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    迭代最小化方法
+  </a>
+<nav aria-label="迭代最小化方法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    关于参数化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    函数确定
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    初始化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    迭代方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    算法的实验比较
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_31">
+    鲁棒估计
+  </a>
+<nav aria-label="鲁棒估计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ransac">
+    RANSAC
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_32">
+    鲁棒最大似然估计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_33">
+    其他鲁棒算法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_34">
+    单应的自动计算
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/mvg/est2d.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="2d">估计——<span>2D<span class="heti-spacing"> </span></span>射影变换<a class="headerlink" href="#2d" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>6196<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>21<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>本章主要讨论估计问题，估计的含义是指在某些本质测量的基础上计算某个变换或其它数学量，常见的估计问题的类型有：</p>
+<ul>
+<li><strong><span>2D<span class="heti-spacing"> </span></span>单应</strong>：给定<span class="arithmatex">\(IP^2\)</span>中的点集<span class="arithmatex">\(\mathbf{x}_i\)</span>，和同在<span class="arithmatex">\(IP^2\)</span>中的对应点集<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>，计算把每一点<span class="arithmatex">\(\mathbf{x}_i\)</span>映射到对应点<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>的射影变换。</li>
+<li><strong><span>3D<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>的摄像机投影</strong>：给定<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>空间的点集<span class="arithmatex">\(X_i\)</span>以及一幅图像上的对应点集<span class="arithmatex">\(\mathbf{x}_i\)</span>，求把<span class="arithmatex">\(X_i\)</span>映射到<span class="arithmatex">\(\mathbf{x}_i\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>的射影映射。</li>
+<li><strong>基本矩阵的计算</strong>：给定一幅图像上的点集<span class="arithmatex">\(\mathbf{x}_i\)</span>，和另一幅图像上的对应点集<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>，计算与这些对应一直的<strong>基本矩阵<span class="arithmatex">\(F\)</span></strong>。</li>
+<li><strong>三焦点张量计算</strong>：给定跨三幅图像的点对应<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime \leftrightarrow \mathbf{x}_i^{\prime \prime}\)</span>，计算三焦点张量。</li>
+</ul>
+<p>研究两幅图像之间对应点的集合<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>，计算对所有的<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>都满足<span class="arithmatex">\(H\mathbf{x}_i=\mathbf{x}_i^\prime\)</span>的一个<span class="arithmatex">\(3 \times 3\)</span>矩阵<span><span class="heti-spacing"> </span>H</span>：</p>
+<ul>
+<li><strong>测量数</strong>：矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>个元素，但仅确定到相差一个尺度因子。因此，<span>2D<span class="heti-spacing"> </span></span>射影变换的自由度的总数是<span><span class="heti-spacing"> </span>8</span>。因为一个<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>点有两个自由度，所以为了完全约束<span><span class="heti-spacing"> </span>H</span>，需要指定四组点对应。</li>
+<li><strong>近似解</strong>：如果给定四组对应，那么可以得到矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>的精确解这种解称为<strong>最小配置解</strong>。如果给定多于四组的对应，那么这些对应可能不与任何射影变换完全相容，因而我们面临的任务是按给定的数据确定“最好”的变换。通常这个任务是通过寻找最小化某个代价函数的变换<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>来完成。</li>
+<li><strong>黄金标准算法</strong>：通常存在一种最优的代价函数，其最优的含义是在一定假设下，使代价函数取最小值的<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>是变换的最好估计。计算该代价函数最小值的算法称为“黄金标准”算法。</li>
+</ul>
+</div>
+<h2 id="dlt">直接线性变换（DLT）算法<a class="headerlink" href="#dlt" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>首先讨论由给定<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>的四组点对应<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>确定<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>的一种简单的线性算法，变换由<span class="arithmatex">\(\mathbf{x}_i^\prime = H\mathbf{x}_i\)</span>给出。但因为这是一个齐次矢量方程，因此<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>维矢量<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>和<span class="arithmatex">\(H\mathbf{x}_i\)</span>不相等。可以用矢量叉乘：<span class="arithmatex">\(\mathbf{x}_i^\prime \times H\mathbf{x}_i=\mathbf{0}\)</span>表示。</li>
+<li>如果将矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>的第<span class="heti-skip"><span class="heti-spacing"> </span>j<span class="heti-spacing"> </span></span>行记为<span class="arithmatex">\(h^{j\top},\mathbf{x}_i^\prime=(x_i^\prime, y_i^\prime, w_i^\prime)^\top\)</span>，则<span class="arithmatex">\(\mathbf{x}_i^\prime \times H \mathbf{x}_i=0\)</span>可以转换成：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\mathbf{0}^\top &amp; -w_i^\prime\mathbf{x}_i^\top &amp; y_i^\prime \mathbf{x}_i^\top \\
+w_i^\prime\mathbf{x}_i^\top  &amp; \mathbf{0}^\top &amp; -x_i^\prime\mathbf{x}_i^\top \\
+-y_i^\prime \mathbf{x}_i^\top  &amp; x_i^\prime\mathbf{x}_i^\top &amp; \mathbf{0}^\top
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{h}^1 \\
+\mathbf{h}^2 \\
+\mathbf{h}^3
+\end{bmatrix}
+=\mathbf{0}
+\]</div>
+<ul>
+<li><span>h<span class="heti-spacing"> </span></span>是由矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>的元素组成的<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>维矢量：</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{h}=
+\begin{bmatrix}
+\mathbf{h}^1 \\
+\mathbf{h}^2 \\
+\mathbf{h}^3
+\end{bmatrix}
+, \ \ \ 
+H=
+\begin{bmatrix}
+h_1 &amp; h_2 &amp; h_3 \\
+h_4 &amp; h_5 &amp; h_6 \\
+h_7 &amp; h_8 &amp; h_9
+\end{bmatrix}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(A_i\mathbf{h}=\mathbf{0}\)</span>是未知矢量<span class="arithmatex">\(\mathbf{h}\)</span>的线性方程，矩阵<span class="arithmatex">\(A_i\)</span>的元素是已知点的坐标的二次多项式。</li>
+<li>虽然式中有三个方程，但仅有两个是线性独立的。在解<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>时常省去第三个等式。</li>
+<li>该方程组对<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>的任何齐次坐标<span class="arithmatex">\((x_i^\prime, y_i^\prime, w_i^\prime)^\top\)</span>成立。</li>
+<li><strong>求解<span><span class="heti-spacing"> </span>H</span></strong>：每组点对应给出关于<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>元素的两个独立的方程。给定四组这样的点对应，便获得方程组<span class="arithmatex">\(A\mathbf{h}=\mathbf{0}\)</span>。</li>
+</ul>
+<h3 id="_1">超定解<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>如果给出的点对应<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>多余四组，方程<span class="arithmatex">\(A\mathbf{h}=\mathbf{0}\)</span>是超定的。</li>
+<li>如果点的位置是精确的，那么<span class="arithmatex">\(A\)</span>的秩仍然为<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>并有一维零空间，并且存在精确解<span class="arithmatex">\(\mathbf{h}\)</span>。</li>
+<li>如果图像坐标的测量时不精确的，方程组将不存在精确解。所以需要一个适当的代价函数取最小值的矢量<span class="arithmatex">\(\mathbf{h}\)</span>，通常附加范数条件，既然不存在<span class="arithmatex">\(A\mathbf{h}=\mathbf{0}\)</span>的精确解，很自然会在通常约束<span class="arithmatex">\(\parallel \mathbf{h} \parallel = 1\)</span>下最小化范数<span class="arithmatex">\(\parallel A \mathbf{h} \parallel\)</span>。这等价于求商<span class="arithmatex">\(\parallel A \mathbf{h} \parallel / \parallel \mathbf{h} \parallel\)</span>的最小值问题。该解是<span class="arithmatex">\(A^\top A\)</span>的最小特征值的（单位）特征矢量。由此所得到的算法称为<strong>基本<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>算法</strong>。</li>
+</ul>
+<h3 id="_2">非齐次解<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>把等式转成非齐次线性方程组，即给矢量<span class="arithmatex">\(\mathbf{h}\)</span>中的某个元素强加上<span class="arithmatex">\(h_j=1\)</span>的条件：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{bmatrix}
+ 0 &amp; 0 &amp; 0 &amp; -x_iw_i^\top &amp; -y_iw_i^\top &amp; -w_iw_i^\top &amp; x_iy_i^\top &amp; y_iy_i^\top \\
+ x_iw_i^\top &amp; y_iw_i^\top &amp; w_iw_i^\top &amp; 0 &amp; 0 &amp; 0 &amp; -x_ix_i^\top &amp; -y_ix_i^\top \\
+\end{bmatrix}
+\bar{\mathbf{h}}=
+\begin{bmatrix}
+-w_iy_i^\top \\
+-w_ix_i^\top
+\end{bmatrix}
+\]</div>
+<ul>
+<li>其中<span class="arithmatex">\(\bar{\mathbf{h}}\)</span>是由<span class="arithmatex">\(\mathbf{h}\)</span>的前八个元素组成的<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>维矢量。</li>
+<li>但是，如果事实上真正的解是<span class="arithmatex">\(h_j=0\)</span>，那么不存在一因子<span class="arithmatex">\(k\)</span>使得<span class="arithmatex">\(kh_j=1\)</span>，表示令<span class="arithmatex">\(h_j=1\)</span>得不到真解。</li>
+</ul>
+<h3 id="_3">退化配置<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>如果<span class="arithmatex">\(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3\)</span>共线，那么<span class="arithmatex">\(H^*=\mathbf{x}_4^\top\mathbf{I}^\top\)</span>是一个解<ul>
+<li><span class="arithmatex">\(H^*\)</span>是唯一解（相差一尺度因子），因为<span class="arithmatex">\(H^*\)</span>是奇异矩阵，不存在把每个<span class="arithmatex">\(\mathbf{x}_i\)</span>变到<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>的变换。当<span class="arithmatex">\(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3\)</span>共线，而<span class="arithmatex">\(\mathbf{x}_1^\prime, \mathbf{x}_2^\prime, \mathbf{x}_3^\prime\)</span>不共线时就会产生这种情况</li>
+<li>存在另外一个解<span class="arithmatex">\(H\)</span>：从而任何形如<span class="arithmatex">\(\alpha H^*+\beta H\)</span>的矩阵都是解，因此有一个<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>参数的变换簇存在，进而推出给出的<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个方程不是独立的</li>
+<li>出现某种配置不能确定唯一解的情形称为<strong>退化</strong>。</li>
+</ul>
+</li>
+<li>退化的定义既涉及配置也涉及变换类型，而且退化问题不仅限于最小配置解。如果多出来的（精确的，即无误差的）点对应也共线，那么退化问题仍没有解决。</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/mvg/dot-line-config.jpg"><img alt="点-线配置的几何等价性" src="https://cdn.jujimeizuo.cn/note/cv/mvg/dot-line-config.jpg"/></a></center>
+<h3 id="_4">由线和其他实体求解<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>前面只讨论由点对应来计算单应，然而线对应和二次曲线的对应也可以计算单应，所以就产生计算一个单应（或任何其他关系）需要多少组对应的问题。一般的原则是约束数必须等于或大于变换的自由度数。</li>
+<li>采用混合类型的对应来计算<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>时必须谨慎，例如一个<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>单应不能由两组点对应和两组线对应唯一确定，但能由三级点和一组线或一组点和三组线来唯一确定，即使每种配置都有<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个自由度也是如此。</li>
+</ul>
+<h2 id="_5">不同的代价函数<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p>为确定<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>的超定解而需最小化的若干代价函数</p>
+</blockquote>
+<h3 id="_6">代数距离<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>DLT<span class="heti-spacing"> </span></span>算法最小化范数<span class="arithmatex">\(\parallel A \mathbf{h} \parallel\)</span>。</li>
+<li>矢量<span class="arithmatex">\(\varepsilon=A\mathbf{h}\)</span>称为残差矢量，并且要最小化的正是该误差矢量的范数。</li>
+<li>矢量<span class="arithmatex">\(\varepsilon_i\)</span>被称为关联于点对应<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>和单应<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>的<strong>代数误差矢量</strong>，该矢量的范数是一个标量，称为<strong>代数距离</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+d_{alg}(\mathbf{x}_i^\prime, H\mathbf{x}_i)^2=
+\parallel \varepsilon_i \parallel=
+\parallel 
+\begin{bmatrix}
+\mathbf{0}^\top &amp; -w_i^\prime\mathbf{x}_i^\top &amp; y_i^\prime \mathbf{x}_i^\top \\
+w_i^\prime\mathbf{x}_i^\top &amp; \mathbf{0}^\top &amp; -x_i^\prime \mathbf{x}_i^\top
+\end{bmatrix}
+\mathbf{h} \parallel^2
+\]</div>
+<ul>
+<li>对于任何两个矢量<span class="arithmatex">\(\mathbf{x}_1\)</span>和<span class="arithmatex">\(\mathbf{x}_2\)</span>：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i}d_{alg}(\mathbf{x}_1, \mathbf{x}_2)^2=a_1^2+a_2^2
+\ \ 其中\mathbf{a}=(a_1,a_2,a_3)^\top=\mathbf{x}_1 \times \mathbf{x}_2
+\]</div>
+<ul>
+<li>给定对应的集合，量<span class="arithmatex">\(\varepsilon=A\mathbf{h}\)</span>是整个集合的代数误差矢量，由此可见：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i}d_{alg}(\mathbf{x}_i^\prime, H\mathbf{x}_i)^2=
+\sum_{i} \parallel \varepsilon_i \parallel^2=
+\parallel A\mathbf{h} \parallel^2=
+\parallel \varepsilon \parallel^2
+\]</div>
+<ul>
+<li>缺点是被最小化的量没有几何或统计上的意义。</li>
+</ul>
+<h3 id="_7">几何距离<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="_8">记号<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>矢量<span class="arithmatex">\(\mathbf{x}\)</span>表示<strong>测量</strong>的图像坐标；<span class="arithmatex">\(\hat{\mathbf{x}}\)</span>表示该点的估计值而<span class="arithmatex">\(\bar{\mathbf{x}}\)</span>表示该点的真值。</li>
+</ul>
+<h4 id="_9">单图像误差<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>首先考虑第一幅图像的测量非常精确而误差仅出现在第二幅图像的情形。适宜最小化的量是<strong>转移误差</strong>。它是第二幅图像上测量点<span class="arithmatex">\(\mathbf{x}^\prime\)</span>与点<span class="arithmatex">\(H\bar{\mathbf{x}}\)</span>之间的<strong>欧氏距离</strong>。用记号<span class="arithmatex">\(d(\mathbf{x}, \mathbf{y})\)</span>表示非齐次点<span class="arithmatex">\(\mathbf{x}\)</span>和<span class="arithmatex">\(\mathbf{y}\)</span>之间的欧氏距离。对应集合的转移误差是：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i} d(\mathbf{x}_i^\prime, H\bar{\mathbf{x}_i})^2
+\]</div>
+<h4 id="_10">对称转移误差<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>更切合实际的情形是图像测量误差在两幅图像中都发生，从而应该最小化两幅而不仅是一幅图像的误差：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i} d(\mathbf{x}_i, H^{-1}\mathbf{x}_i^\prime)^2+d(\mathbf{x}_i^\prime, H\mathbf{x}_i)^2
+\]</div>
+<h4 id="_11">重投影误差——两幅图像<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>对每幅图像误差作量化的另一种方法是估计每组对应的“校正值”。为了得到完全的匹配点集有必要在一幅图像（第二幅图像）上对测量进行校正。</li>
+<li>单应<span class="arithmatex">\(\hat{H}\)</span>和完全匹配的点对<span class="arithmatex">\(\hat{\mathbf{x}_i}\)</span>和<span class="arithmatex">\(\hat{\mathbf{x}_i}^\prime\)</span>以最小化总的误差函数<span><span class="heti-spacing"> </span>:</span></li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i} d(\mathbf{x}_i, \hat{\mathbf{x}_i})^2+d(\mathbf{x}_i^\prime, \hat{\mathbf{x}_i}^\prime)^2 \ \ \ s.t \ \ \ \hat{\mathbf{x}_i}^\prime=\hat{H}\hat{\mathbf{x}_i} \ \ \ \forall i.
+\]</div>
+<ul>
+<li>先由<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>估计世界平面的点<span class="arithmatex">\(\hat{\mathbf{X}_i}\)</span>，然后把它重投影到估计上认为是完全匹配的对应<span class="arithmatex">\(\hat{\mathbf{x}_i} \leftrightarrow \hat{\mathbf{x}_i}^\prime\)</span></li>
+</ul>
+<h3 id="_12">几何和代数距离的比较<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>令<span class="arithmatex">\(\mathbf{x}_i^\prime=(x_i^\prime, y_i^\prime, w_i^\prime)^\top\)</span>并定义矢量<span class="arithmatex">\((\hat{x_i}^\prime, \hat{y_i}^\prime, \hat{w_i}^\prime)^\top=\hat{\mathbf{x}_i}^\prime=H\bar{\mathbf{x}}\)</span>，则</li>
+</ul>
+<div class="arithmatex">\[
+d(\mathbf{x}_i^\prime, \hat{\mathbf{x}_i}^\prime)^2=
+d_{alg}(\mathbf{x}_i^\prime, \hat{\mathbf{x}_i}^\prime)^2/\hat{w_i}^\prime w_i^\prime
+\]</div>
+<ul>
+<li>几何距离与代数距离相关，但不相等。只有当<span class="arithmatex">\(\hat{w_i}^\prime=w_i^\prime=1\)</span>两个距离相等。因此在仿射变换下，几何距离和代数距离相等。对于仿射变换，最小化几何距离可以用基于代数距离的线性<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>算法。</li>
+</ul>
+<h3 id="_13">重投影误差的几何解释<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>两平面之间的单应估计可以视为用<span class="heti-skip"><span class="heti-spacing"> </span>4D<span class="heti-spacing"> </span></span>空间<span class="arithmatex">\(IR^4\)</span>中的“曲面”来拟合点。</li>
+<li>每对图像点<span class="arithmatex">\(\mathbf{x}, \mathbf{x}^\prime\)</span>定义测量空间<span class="arithmatex">\(IR^4\)</span>的一个点，记作<span class="arithmatex">\(\mathbf{X}\)</span>。</li>
+<li>对给定的单应<span><span class="heti-spacing"> </span>H</span>，满足<span class="arithmatex">\(\mathbf{x} \times \mathbf{x}^\prime=\mathbf{0}\)</span>的图像对应<span class="arithmatex">\(\mathbf{x} \leftrightarrow \mathbf{x}^\prime\)</span>定义来<span class="arithmatex">\(IR^4\)</span>中的一个代数簇<span class="arithmatex">\(\upsilon_H\)</span>，它是两个超二次曲面的交集。</li>
+</ul>
+<div class="arithmatex">\[
+d(\mathbf{x}_i, \hat{\mathbf{x}_i})^2+d(\mathbf{x}_i^\prime, \hat{\mathbf{x}_i}^\prime)^2=d_\perp(\mathbf{X}_i, \upsilon_H)^2
+\]</div>
+<ul>
+<li>其中<span class="arithmatex">\(d_\perp(\mathbf{X}_i, \upsilon_H)^2\)</span>是点<span class="arithmatex">\(\mathbf{X}\)</span>到簇<span class="arithmatex">\(\upsilon_H\)</span>的垂直距离。</li>
+</ul>
+<h3 id="sampson"><span>Sampson<span class="heti-spacing"> </span></span>误差<a class="headerlink" href="#sampson" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>Sampson<span class="heti-spacing"> </span></span>误差其复杂性介于代数和几何代价函数之间，但非常近似于几何误差。</li>
+<li>对给定的单应<span><span class="heti-spacing"> </span>H</span>，在<span class="arithmatex">\(\upsilon_H\)</span>上的任何点<span class="arithmatex">\(\mathbf{X}=(x,y,x^\prime, y^\prime)^\top\)</span>，代价函数用<span class="arithmatex">\(\mathcal{C}_H(\mathbf{X})=\mathbf{0}\)</span>。用下列<span class="heti-skip"><span class="heti-spacing"> </span>Taylor<span class="heti-spacing"> </span></span>展开式来一阶逼近：</li>
+</ul>
+<div class="arithmatex">\[
+\mathcal{C}_H(\mathbf{X}+\delta_x)=\mathcal{C}_H(\mathbf{X})+\frac{\partial \mathcal{C}_H}{\partial \mathbf{X}} \delta_x
+\]</div>
+<ul>
+<li>
+<p>记<span class="arithmatex">\(\delta_x = \hat{\mathbf{X}}-\mathbf{X}\)</span>希望<span class="arithmatex">\(\hat{\mathbf{X}}\)</span>在<span class="arithmatex">\(\upsilon_H\)</span>上，即<span class="arithmatex">\(\mathcal{C}_H(\hat{\mathbf{X}})=\mathbf{0}\)</span>，因此<span class="arithmatex">\(\mathcal{C}_H(\mathbf{X})+\frac{\partial \mathcal{C}_H}{\partial \mathbf{X}} \delta_x=\mathbf{0}\)</span>。记成<span class="arithmatex">\(\mathbf{J}\delta_x=-\varepsilon\)</span>，其中<span class="arithmatex">\(\mathbf{J}\)</span>是偏导数矩阵，<span class="arithmatex">\(\varepsilon\)</span>与<span class="arithmatex">\(\mathbf{X}\)</span>相关的代价函数<span class="arithmatex">\(\mathcal{C}_H(\mathbf{X})\)</span>，<strong>最小化问题</strong>是求满足此方程的最小<span class="arithmatex">\(\delta_x\)</span>。</p>
+<ul>
+<li>即 <strong>求在满足<span class="arithmatex">\(\mathbf{J}\delta_x=-\varepsilon\)</span>条件下使<span class="arithmatex">\(\parallel \delta_x \parallel\)</span>取最小值的矢量<span class="arithmatex">\(\delta_x\)</span></strong></li>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span>Lagrange<span class="heti-spacing"> </span></span>乘子法，求的范数<span class="arithmatex">\(\parallel \delta \parallel^2\)</span>是<span class="heti-skip"><span class="heti-spacing"> </span>Sampson<span class="heti-spacing"> </span></span>误差：</li>
+</ul>
+<div class="arithmatex">\[
+\parallel \delta_x \parallel^2=
+\delta_x^\top\delta_x=
+\varepsilon^\top(\mathbf{J}\mathbf{J}^\top)^{-1}\varepsilon
+\]</div>
+</li>
+</ul>
+<h2 id="_14">统计代价函数和最大似然估计<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>假定在没有测量误差时，真实的点准确满足一个单应变换，即<span class="arithmatex">\(\bar{\mathbf{x}_i}^\prime=H\bar{\mathbf{x}_i}\)</span>。</li>
+<li>假定每一幅图像坐标都具有零均值和统一的标准差<span class="arithmatex">\(\sigma\)</span>的高斯噪声。这意味着<span class="arithmatex">\(x=\bar{x}+\Delta x\)</span>，其中<span class="arithmatex">\(\Delta x\)</span>服从方差为<span class="arithmatex">\(\sigma^2\)</span>的高斯分布。进一步假设每次测量的噪声是相在独立的，那么，若点的真值是<span class="arithmatex">\(\bar{\mathbf{x}}\)</span>，则每个测量点<span class="arithmatex">\(\mathbf{x}\)</span>的概率密度函数<span class="heti-skip"><span class="heti-spacing"> </span>(pdf)<span class="heti-spacing"> </span></span>是：</li>
+</ul>
+<div class="arithmatex">\[
+\Pr(\mathbf{x})=(\frac{1}{2\pi\sigma^2})e^{-d(\mathbf{x},\bar{\mathbf{x}})^2/(2\sigma^2)}
+\]</div>
+<h3 id="_15">单图像误差<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>假定每点的误差是独立的，点对应<span class="arithmatex">\(\{\bar{\mathbf{x}_i} \leftrightarrow \mathbf{x}_i^\prime\}\)</span>的概率就是它们单个<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>的乘积：</li>
+</ul>
+<div class="arithmatex">\[
+\Pr(\{\mathbf{x}_i^\prime | H\}) = \prod_{i}(\frac{1}{2\pi\sigma^2})e^{-d(\mathbf{x}_i^\prime, H \bar{\mathbf{x}}_i)^2/(2\sigma^2)}
+\]</div>
+<ul>
+<li>该对应集合的<strong>对数似然</strong>为：</li>
+</ul>
+<div class="arithmatex">\[
+\log \Pr(\mathbf{x}_i^\prime | H)=-\frac{1}{2\sigma^2}\sum_{i}d(\mathbf{x}_i^\prime, H \bar{\mathbf{x}}_i)^2+常数
+\]</div>
+<ul>
+<li>单应的<strong>最大似然<span class="heti-skip"><span class="heti-spacing"> </span>ML<span class="heti-spacing"> </span></span></strong>估计<span class="arithmatex">\(\hat{H}\)</span>最大化这个对数似然，即最小化：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i}d(\mathbf{x}_i^\prime, H \bar{\mathbf{x}}_i)^2
+\]</div>
+<ul>
+<li>因此，<span>ML<span class="heti-spacing"> </span></span>估计等价于最小化几何误差函数</li>
+</ul>
+<h3 id="_16">双图像误差<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>如果真实对应是<span class="arithmatex">\(\{\bar{\mathbf{x}}_i \leftrightarrow H \bar{\mathbf{x}}_i=\bar{\mathbf{x}}_i^\prime\}\)</span>，受噪声干扰的数据的<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>是：</li>
+</ul>
+<div class="arithmatex">\[
+\Pr(\{\mathbf{x}_i, \mathbf{x}_i^\prime\} | H, \{\bar{\mathbf{x}}_i\}) = \prod_{i}(\frac{1}{2\pi\sigma^2})e^{-(d(\mathbf{x}_i, \bar{\mathbf{x}}_i)^2+d(\mathbf{x}_i^\prime, H\bar{\mathbf{x}}_i)^2)/(2\sigma^2)}
+\]</div>
+<ul>
+<li><span>ML<span class="heti-spacing"> </span></span>估计就是求最小化：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{i}d(\mathbf{x}_i, \hat{\mathbf{x}}_i)^2+d(\mathbf{x}_i^\prime, \hat{\mathbf{x}}_i^\prime)^2
+\]</div>
+<ul>
+<li><span>ML<span class="heti-spacing"> </span></span>估计等同于最小化重投影误差函数</li>
+</ul>
+<h3 id="mahalanobis"><span>Mahalanobis<span class="heti-spacing"> </span></span>距离<a class="headerlink" href="#mahalanobis" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>一般高斯分布的情形，可以假定测量矢量<span class="arithmatex">\(\mathbf{X}\)</span>满足一个具有协方差矩阵<span class="arithmatex">\(\sum\)</span>的高斯分布函数。最大化对数似然则等价于最小化<span class="heti-skip"><span class="heti-spacing"> </span>Mahalanobis<span class="heti-spacing"> </span></span>距离：</li>
+</ul>
+<div class="arithmatex">\[
+\parallel \mathbf{X} - \bar{\mathbf{X}} \parallel_{\sum}^2=(\mathbf{X}-\bar{\mathbf{X}})^\top\sum\nolimits^{-1}(\mathbf{X}-\bar{\mathbf{X}})
+\]</div>
+<ul>
+<li>当每幅图像都有误差并假定一幅图像中的误差与另一幅图像中的误差是独立的时，合适的代价函数是：</li>
+</ul>
+<div class="arithmatex">\[
+\parallel \mathbf{X} - \bar{\mathbf{X}} \parallel_{\sum}^2+\parallel \mathbf{X}^\prime - \bar{\mathbf{X}}^\prime \parallel_{\sum^\prime}^2
+\]</div>
+<ul>
+<li>其中<span class="arithmatex">\(\sum\)</span>和<span class="arithmatex">\(\sum^\prime\)</span>是两幅图像的测量的协方差矩阵</li>
+</ul>
+<h2 id="_17">变换不变性和归一化<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_18">关于图像坐标变换的不变性<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>
+<p>假定一幅图像的坐标<span class="arithmatex">\(\mathbf{x}\)</span>被<span class="arithmatex">\(\tilde{\mathbf{x}}=T\mathbf{x}\)</span>替代，而另一幅图像的坐标<span class="arithmatex">\(\mathbf{x}^\prime\)</span>被<span class="arithmatex">\(\tilde{\mathbf{x}}^\prime=T^\prime\mathbf{x}^\prime\)</span>替代。因此<span class="arithmatex">\(\mathbf{x}_i\)</span>映射到<span class="arithmatex">\(\mathbf{x}_i^\prime\)</span>的变换的另一种方法是：</p>
+<ol>
+<li>根据公式<span class="arithmatex">\(\tilde{\mathbf{x}}_i=T\mathbf{x}_i\)</span>和<span class="arithmatex">\(\tilde{\mathbf{x}}_i^\prime=T^\prime\mathbf{x}_i^\prime\)</span>变换图像坐标</li>
+<li>由对应<span class="arithmatex">\(\tilde{\mathbf{x}}_i \leftrightarrow \tilde{\mathbf{x}}_i^\prime\)</span>，求<span class="arithmatex">\(\tilde{H}\)</span></li>
+<li>令<span class="arithmatex">\(H=T^{\prime-1}\tilde{H}T\)</span></li>
+</ol>
+</li>
+</ul>
+<h3 id="dlt_1"><span>DLT<span class="heti-spacing"> </span></span>算法的非不变性<a class="headerlink" href="#dlt_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>
+<p>令<span class="arithmatex">\(T^\prime\)</span>为具有缩放因子<span class="arithmatex">\(s\)</span>的相似变换，<span class="arithmatex">\(T\)</span>为任意的射影变换。此外，假设<span class="arithmatex">\(H\)</span>是任何<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>单应并定义<span class="arithmatex">\(\tilde{H}=T^\prime HT^{-1}\)</span>，那么<span class="arithmatex">\(\parallel \tilde{A} \tilde{\mathbf{h}} \parallel = s \parallel A \mathbf{h} \parallel\)</span></p>
+</li>
+<li>
+<p>虽然这样定义的<span class="arithmatex">\(H\)</span>和<span class="arithmatex">\(\tilde{H}\)</span>给出同样的误差<span class="arithmatex">\(\varepsilon\)</span>，但是对解施加的约束条件<span class="arithmatex">\(\parallel H \parallel = 1\)</span>不等价于条件<span class="arithmatex">\(\parallel \tilde{H} \parallel = 1\)</span>，它们并不以任何简单的方式相关联。</p>
+</li>
+</ul>
+<h3 id="_19">几何误差的不变性<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="arithmatex">\[
+d(\tilde{\mathbf{x}}^\prime, \tilde{H}\tilde{\mathbf{x}})=
+d(T^\prime \mathbf{x}^\prime, T^\prime HT^{-1}T\mathbf{x})=
+d(T^\prime \mathbf{x}^\prime, T^\prime H\mathbf{x})=
+d(\mathbf{x}^\prime, H\mathbf{x})
+\]</div>
+<ul>
+<li>在相似变换下，几何误差被乘以变换的缩放因子，从而最小化变换的对应方式与欧氏变换相同。所以最小化几何误差在相似变换下不变。</li>
+</ul>
+<h3 id="_20">归一化变换<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>数据归一化不仅提高了结果的精度，还对初始数据归一化的算法将对任何尺度缩放和坐标原点的选择不变。因而使<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>算法实际上关于相似变换不变。</li>
+</ul>
+<h4 id="_21">各向同性缩放<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ol>
+<li>对点进行平移使点集形心位于原点</li>
+<li>对点进行缩放使它们到原点的平均距离等于<span class="arithmatex">\(\sqrt{2}\)</span></li>
+<li>对两幅图像独立进行上述变换</li>
+</ol>
+<ul>
+<li><strong>数据归一化在<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>算法中是实质性的，一定不要视它为可有可无的。</strong></li>
+</ul>
+<h4 id="_22">归一化与条件数<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>归一化的影响与<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>方程组的条件数或准确地说与方程组矩阵<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的第一个和倒数第二个奇异值的比率<span class="arithmatex">\(d_1/d_{n-1}\)</span>有关。但是，在有噪声存在时解将偏离其正确结果。大条件数会放大这种偏向。</li>
+</ul>
+<h4 id="_23">非各向同性缩放<a class="headerlink" href="#_23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>在非各同性缩放中，点的形心和前面一样平移到原点，经平移后点在原点附近形成云。然后进行坐标尺度缩放使该点集的两主矩都等于<span><span class="heti-spacing"> </span>1</span>。这样使该点集形成以原点为中心，半径为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的近似的对称圆云。</li>
+</ul>
+<h4 id="_24">无穷远附近的点的缩放<a class="headerlink" href="#_24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>当点位于或接近平面的无穷远时，各向同性（或非各向同性）的缩放方式来归一化坐标是既无道理又不可行的，因为形心坐标和缩放因子为无穷大或接近无穷大。一个似乎会给出好结果的方法是归一化点集<span class="arithmatex">\(\mathbf{x}_i=(x_i,y_i,w_i)^\top\)</span>使得：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_i x_i=\sum_i y_i=0;\sum_ix_i^2+y_i^2=2\sum_iw_i^2;x_i^2+y_i^2+w_i^2=1,\forall i
+\]</div>
+<h2 id="_25">迭代最小化方法<a class="headerlink" href="#_25" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">迭代最小化技术</p>
+<ol>
+<li><strong>代价参数</strong>：代价函数是最小化的基础</li>
+<li><strong>参数化</strong>：把要计算的变换（或其他实体）表示成有限数目的参数</li>
+<li><strong>函数确定</strong>：必须确定一个用参数集描述的代价函数</li>
+<li><strong>初始化</strong>：计算一个适当的初始参数估计。一般将由一个线性算法（例如<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>算法）来实现</li>
+<li><strong>迭代</strong>：由初始解开始，在迭代中逐步修正参数以达到最小化代价函数的目的</li>
+</ol>
+</div>
+<h3 id="_26">关于参数化<a class="headerlink" href="#_26" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>指导参数化的一般策略是选择能覆盖最小化的整个空间并能用一种方便的方式来计算代价函数。对于齐次目标通常设有必要或不鼓励追求消除尺度因子的多义性而采用最小参数化。选择参数化的另一个考虑是限制变换为一个具体的类型。</li>
+</ul>
+<h3 id="_27">函数确定<a class="headerlink" href="#_27" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ol>
+<li>有一个协方差矩阵为<span class="arithmatex">\(\sum\)</span>的<strong>测量矢量<span class="arithmatex">\(\mathbf{X} \in IR^N\)</span></strong></li>
+<li>一组参数被表达成一个矢量<span class="arithmatex">\(\mathbf{P} \in IR^M\)</span></li>
+<li>定义一个映射<span class="arithmatex">\(f:\ IR^M \to IR^N\)</span>，其值域（至少局部地）是<span class="arithmatex">\(IR^N\)</span>中表示容许测量集的模型曲面<span><span class="heti-spacing"> </span>S</span></li>
+<li>最小化代价函数是<span class="heti-skip"><span class="heti-spacing"> </span>Mahalanobis<span class="heti-spacing"> </span></span>距离</li>
+</ol>
+<div class="arithmatex">\[\parallel \mathbf{X} - f(\mathbf{P}) \parallel_{\sum}^2=(\mathbf{X} - f(\mathbf{P}))^\top\sum\nolimits^{-1}(\mathbf{X} - f(\mathbf{P}))\]</div>
+<ul>
+<li><strong>单图像误差<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>最小化代价函数</strong>：固定第一幅图像中点<span class="arithmatex">\(\mathbf{x}_i\)</span>的坐标，并变换<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>以最小化代价函数：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_id(\mathbf{x}_i^\prime,H\tilde{\mathbf{x}}_i)^2 \\
+f:\mathbf{h} \to (H\mathbf{x}_1, H\mathbf{x}_2, ..., H\mathbf{H}_n)
+\]</div>
+<ul>
+<li><strong>对称传递误差<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>对称化代价函数</strong></li>
+</ul>
+<div class="arithmatex">\[
+\sum_id(\mathbf{x}_i, H^{-1}\mathbf{x}_i^\prime)^2+d(\mathbf{x}_i^\prime, H\mathbf{x}_i)^2 \\
+f: \mathbf{h} \to (H^{-1}\mathbf{x}_1^\prime, ..., H^{-1}\mathbf{x}_n^\prime, H\mathbf{x}_1, ..., H\mathbf{x}_n)
+\]</div>
+<ul>
+<li>
+<p><strong>重投影误差</strong>：可以用<span class="arithmatex">\(\hat{\mathbf{x}}_i\)</span>坐标和<span class="arithmatex">\(\hat{H}\)</span>矩阵的元素——总共<span class="arithmatex">\(2n+9\)</span>个参数来参数化。<strong>参数矢量</strong>：<span class="arithmatex">\(\mathbf{P}=(\mathbf{h}, \hat{\mathbf{x}}_i, ..., \hat{\mathbf{x}}_n)\)</span>。函数<span class="arithmatex">\(f\)</span>定义为<span class="arithmatex">\(f:\mathbf{P}\to (\hat{\mathbf{x}}_1, \hat{\mathbf{x}}_i^\prime, ..., \hat{\mathbf{x}}_n, \hat{\mathbf{x}}_n^\prime)\)</span></p>
+</li>
+<li>
+<p><strong><span>Sampson<span class="heti-spacing"> </span></span>近似</strong>：重投影误差的<span class="heti-skip"><span class="heti-spacing"> </span>Sampson<span class="heti-spacing"> </span></span>近似使投影误差也能仅对<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>个参数最小化</p>
+</li>
+</ul>
+<h3 id="_28">初始化<a class="headerlink" href="#_28" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>可以用线性技术或最小配置解来求参数化的初始估计。还采用的另一种方法是在参数空间进行足够密的采样，从每一个采样初始点开始迭代并保留最好的结果。这种方法仅在参数空间的维数足够小时才可采用</li>
+</ul>
+<h3 id="_29">迭代方法<a class="headerlink" href="#_29" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>其中最常用的有<span class="heti-skip"><span class="heti-spacing"> </span>Newton<span class="heti-spacing"> </span></span>迭代和<span class="heti-skip"><span class="heti-spacing"> </span>Levenberg-Marquardt<span class="heti-spacing"> </span></span>方法。<span>Newton<span class="heti-spacing"> </span></span>迭代是最快的，但是它需要计算代价函数的二阶导数，而且在某些情况下可能会发散。<span>Levenberg-Marquardt<span class="heti-spacing"> </span></span>方法是一种更稳定的方法，但是它的收敛速度比<span class="heti-skip"><span class="heti-spacing"> </span>Newton<span class="heti-spacing"> </span></span>迭代慢。</li>
+</ul>
+<h3 id="_30">算法的实验比较<a class="headerlink" href="#_30" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/mvg/cpi-func-of-ptm.jpg"><img alt="图像对应点计算射影变换方法" src="https://cdn.jujimeizuo.cn/note/cv/mvg/cpi-func-of-ptm.jpg"/></a></center>
+<h2 id="_31">鲁棒估计<a class="headerlink" href="#_31" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>之前讨论的对应集的唯一误差源来自点的位置测量，在许多实际运行中，还存在着点被错配的情况。错配点对高斯误差分布而言是<strong>野值</strong>。</li>
+</ul>
+<h3 id="ransac">RANSAC<a class="headerlink" href="#ransac" title="Permanent link">¶</a></h3>
+<ul>
+<li>用<strong>模型</strong>去拟合数据，<strong>随机样本</strong>包含足以确定模型的最小数据集。如果模型是平面单应，而数据是<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>点对应集，那么最小子集包含四组对应。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">算法流程</p>
+<ol>
+<li>随机地从数据集<span class="arithmatex">\(S\)</span>中选择<span class="arithmatex">\(s\)</span>个数据点组成的一个样本作为模型的一个示例</li>
+<li>确定在模型距离阈值<span class="arithmatex">\(t\)</span>内的数据点集 <span class="arithmatex">\(S_i\)</span>，<span class="arithmatex">\(S_i\)</span>称为采样的一致集并定义<span class="arithmatex">\(S_i\)</span>的内点</li>
+<li>如果<span class="arithmatex">\(S_i\)</span>的大小<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>内点的数目<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>大于某个阈值<span class="arithmatex">\(T\)</span>，用<span class="arithmatex">\(S_i\)</span>的所有点重估计模型并结束</li>
+<li>如果<span class="arithmatex">\(S_i\)</span>的大小小于<span class="arithmatex">\(T\)</span>，选择一个新的子集并重复上面的过程</li>
+<li>经过<span class="arithmatex">\(N\)</span>次试验选择最大一致集<span class="arithmatex">\(S_i\)</span>，并用<span class="arithmatex">\(S_i\)</span>的所有点重估计模型</li>
+</ol>
+</div>
+<h3 id="_32">鲁棒最大似然估计<a class="headerlink" href="#_32" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong>鲁棒代价函数</strong>：不同于仅在内点上最小化<span class="arithmatex">\(\mathcal{C}=\sum_{i}d_{\perp}^2\)</span>，另一种改进的鲁棒方法是在所有数据上最小化。一个合适的鲁棒代价函数是</li>
+</ul>
+<div class="arithmatex">\[
+\mathcal{D}=\sum_i \gamma(d_{\perp})且\gamma(e)=
+\left\{\begin{matrix}
+ e^2 &amp; e^2 &lt; t^2 &amp; 内点 \\
+ t^2 &amp; e^2 &gt;= t^2 &amp; 野值
+\end{matrix}\right.
+\]</div>
+<ul>
+<li><span class="arithmatex">\(d_\perp\)</span>是点的误差，<span class="arithmatex">\(\gamma(e)\)</span>是一个鲁棒代价函数，其中给野值赋一个固定的代价。</li>
+</ul>
+<h3 id="_33">其他鲁棒算法<a class="headerlink" href="#_33" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong>最小中值平方<span class="heti-skip"><span class="heti-spacing"> </span>(LMS)<span class="heti-spacing"> </span></span>估计</strong>： 根据数据中所有点的距离中值，选择具有最小中值的模型。<span>LMS<span class="heti-spacing"> </span></span>的优点在于它不需要阈值或误差方差的先验知识。 <span>LMS<span class="heti-spacing"> </span></span>的缺点是如果多于一半的数据是野值那么它要失败，因为距离的中值可能是一个野值。解决的办法是用野值的比例来确定所选的距离。</li>
+<li>
+<p>如果野值的数量少，那么可以采用以下鲁棒方法：</p>
+<ul>
+<li><strong>删点方法</strong> 每点轮流被删除而用模型对剩下的数据拟合。</li>
+<li><strong>加权最小二乘方迭代</strong> 其中一个数据点对拟合的影响以它的残差来反加权。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_34">单应的自动计算<a class="headerlink" href="#_34" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>计算两幅图像间的单应的算法。</li>
+<li>算法的输入仅仅是图像，不需要其他<strong>先验</strong>信息；而输出的是单应的估计以及一组对应的兴趣点。该算法可以应用于诸如一张平坦表面的两幅图像或由摄像机绕其光心旋转的到的两幅图像。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">算法流程</p>
+<ol>
+<li><strong>兴趣点</strong>：在每一幅图像上计算兴趣点</li>
+<li><strong>假设对应</strong>：根据兴趣点灰度领域的接近和相似，计算它们的匹配集。</li>
+<li><strong><span>RANSAC<span class="heti-spacing"> </span></span>鲁棒估计</strong>：重复<span class="arithmatex">\(N\)</span>次采样：<ol>
+<li>选择由四组对应组成的一个随机样本并计算单应<span><span class="heti-spacing"> </span>H</span></li>
+<li>对假设的每组单应，计算距离<span class="arithmatex">\(d_{\perp}\)</span></li>
+<li>根据<span class="arithmatex">\(d_\perp &lt; t = \sqrt{5.99} \delta\)</span>像素确定对应数，进而计算与<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>一致的内点数</li>
+<li>选择具有最大内点数的<span><span class="heti-spacing"> </span>H</span>，当数目相等时选择内点的标准方差最低的<span><span class="heti-spacing"> </span>H</span></li>
+</ol>
+</li>
+<li><strong>最优估计</strong>：由划定的内点的所有对应重新估计<span><span class="heti-spacing"> </span>H</span>，用<span class="heti-skip"><span class="heti-spacing"> </span>Levenberg-Marquardt<span class="heti-spacing"> </span></span>算法来最小化<span class="heti-skip"><span class="heti-spacing"> </span>ML<span class="heti-spacing"> </span></span>代价函数</li>
+<li><strong>引导匹配</strong>：用估计的<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>去定义转移点位置附近的搜索区域，进一步确定兴趣点的对应。</li>
+</ol>
+<p>最后两步重复到对应的数目稳定为止</p>
+</div>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月2日 18:37:34</span>
+<br/>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月2日 18:37:34</span>
+</small>
+</div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              回到页面顶部
+            </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 3D 射影几何和变换" class="md-footer__link md-footer__link--prev" href="../pjt3d/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              3D 射影几何和变换
+            </div>
+</div>
+</a>
+<a aria-label="下一页: SLAM" class="md-footer__link md-footer__link--next" href="../../slam/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              SLAM
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023-2023 <a href="https://github.com/jujimeizuo" rel="noopener" target="_blank">jujimeizuo</a>
+</div>
+  
+  
+    Powered by
+    <a href="https://www.mkdocs.org/" rel="noopener" target="_blank">
+      MkDocs
+    </a>
+    with theme
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material
+    </a>
+    modified by
+    <a href="https://github.com/TonyCrane" rel="noopener" target="_blank">
+      TonyCrane
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/jujimeizuo/" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.jujimeizuo.cn/blog/" rel="noopener" target="_blank" title="www.jujimeizuo.cn">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.jujimeizuo.cn/" rel="noopener" target="_blank" title="www.jujimeizuo.cn">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M280.37 148.26 96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47 488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script src="https://cdn.jujimeizuo.cn/utils/katex.min.js"></script>
+<script src="../../../js/katex.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

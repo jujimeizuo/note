@@ -733,13 +733,40 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/mvg/">多视图几何</a>
+<a href="../../../cv/ia-ocv/">图像分析 &amp; OpenCV</a>
 <label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="多视图几何" class="md-nav" data-md-level="2">
+<nav aria-label="图像分析 &amp; OpenCV" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          图像分析 &amp; OpenCV
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cv/ia-ocv/image-analysis/">
+        图像分析与应用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cv/ia-ocv/opencv/">
+        OpenCV
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cv/mvg/">多视图几何</a>
+<label for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="多视图几何" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           多视图几何
         </label>
@@ -754,6 +781,25 @@ var _hmt = _hmt || [];
         3D 射影几何和变换
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cv/mvg/est2d/">
+        估计——2D 射影变换
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cv/slam/">SLAM</a>
+</div>
+<nav aria-label="SLAM" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          SLAM
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
@@ -1435,7 +1481,7 @@ Z_j(k+1) = \frac{1}{N_j} \sum_{X \in S_j(k)} \mathbf{X} \ \ \ j=1,2,...,K
 <ol start="3">
 <li>若<span class="arithmatex">\(S_j\)</span>中的样本数<span class="arithmatex">\(N_j &lt; \theta_N\)</span>，则取消该类，并且<span class="arithmatex">\(N_C\)</span>减去<span><span class="heti-spacing"> </span>1</span></li>
 <li>修正各聚类中心值 <span class="arithmatex">\(Z_j = \frac{1}{N_j} \sum_{X \in S_j} X \ \ \ j=1,2,...,N_C\)</span></li>
-<li>计算<span class="arithmatex">\(S_j\)</span>的类内的平均距离 <span class="arithmatex">\(\overline{D_j} = \frac{1}{N_j} \sum_{X \in S_j} \parallel X - Z_j \parallel  \ \ \ j=1,2,...,N_C\)</span></li>
+<li>计算<span class="arithmatex">\(S_j\)</span>的类内的平均距离 <span class="arithmatex">\(\bar{D_j} = \frac{1}{N_j} \sum_{X \in S_j} \parallel X - Z_j \parallel  \ \ \ j=1,2,...,N_C\)</span></li>
 <li>计算总体平均距离</li>
 <li>判断当前是分裂还是合并，决定迭代步骤等<ol>
 <li>若<span class="arithmatex">\(N_C \le K/2\)</span>，进入分裂</li>
@@ -1496,7 +1542,7 @@ d(X)=W^{\top}X
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月2日 18:37:34</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
