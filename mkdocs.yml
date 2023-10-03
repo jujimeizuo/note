@@ -188,10 +188,17 @@ nav:
       - RegEx 正则表达式: cs/others/regex.md
   - CV & Robot:
     - cv/index.md
+    - 图像分析 & OpenCV:
+      - cv/ia-ocv/index.md
+      - 图像分析与应用: cv/ia-ocv/image-analysis.md
+      - OpenCV: cv/ia-ocv/opencv.md
     - 多视图几何:
       - cv/mvg/index.md
       - 2D 射影几何和变换: cv/mvg/pjt2d.md
       - 3D 射影几何和变换: cv/mvg/pjt3d.md
+      - 估计——2D 射影变换: cv/mvg/est2d.md
+    - SLAM:
+      - cv/slam/index.md
   - Math Basis:
     - mb/index.md
     - 最优化理论与方法:

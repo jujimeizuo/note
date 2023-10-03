@@ -315,7 +315,7 @@ comment: True
 
     3. 若$S_j$中的样本数$N_j < \theta_N$，则取消该类，并且$N_C$减去 1
     4. 修正各聚类中心值 $Z_j = \frac{1}{N_j} \sum_{X \in S_j} X \ \ \ j=1,2,...,N_C$
-    5. 计算$S_j$的类内的平均距离 $\overline{D_j} = \frac{1}{N_j} \sum_{X \in S_j} \parallel X - Z_j \parallel  \ \ \ j=1,2,...,N_C$
+    5. 计算$S_j$的类内的平均距离 $\bar{D_j} = \frac{1}{N_j} \sum_{X \in S_j} \parallel X - Z_j \parallel  \ \ \ j=1,2,...,N_C$
     6. 计算总体平均距离
     7. 判断当前是分裂还是合并，决定迭代步骤等
         1. 若$N_C \le K/2$，进入分裂
