@@ -199,6 +199,10 @@ nav:
       - 估计——2D 射影变换: cv/mvg/est2d.md
     - SLAM:
       - cv/slam/index.md
+      - 视觉 SLAM 14 讲:
+        - cv/slam/vslam14/index.md
+        - 初识 SLAM: cv/slam/vslam14/lec1.md
+        - 三维空间刚体运动: cv/slam/vslam14/lec2.md
   - Math Basis:
     - mb/index.md
     - 最优化理论与方法:
