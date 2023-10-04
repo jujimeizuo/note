@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/db/redis/cjh/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/cv/slam/vslam14/lec2/" rel="canonical"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>持久化 - 狙击美佐的笔记本</title>
+<title>三维空间刚体运动 - 狙击美佐的笔记本</title>
 <link href="../../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#redis">
+<a class="md-skip" href="#_1">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              持久化
+              三维空间刚体运动
             
           </span>
 </div>
@@ -150,12 +150,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../../">
+<a class="md-tabs__link" href="../../../../cs/">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../cv/">
+<a class="md-tabs__link md-tabs__link--active" href="../../../">
         CV &amp; Robot
       </a>
 </li>
@@ -222,10 +222,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../">Computer Science</a>
+<a href="../../../../cs/">Computer Science</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../pl/">编程语言</a>
+<a href="../../../../cs/pl/">编程语言</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -253,7 +253,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../pl/c_cpp/">C/C++</a>
+<a href="../../../../cs/pl/c_cpp/">C/C++</a>
 <label for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -265,12 +265,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/c_cpp/system_knowledge/">
+<a class="md-nav__link" href="../../../../cs/pl/c_cpp/system_knowledge/">
         C++ 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../../cs/pl/c_cpp/function/">
         C++ 各种函数使用
       </a>
 </li>
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../pl/python/">Python</a>
+<a href="../../../../cs/pl/python/">Python</a>
 <label for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -292,17 +292,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/python/basic/">
+<a class="md-nav__link" href="../../../../cs/pl/python/basic/">
         Python 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/python/numpy/">
+<a class="md-nav__link" href="../../../../cs/pl/python/numpy/">
         Numpy 科学计算库
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/python/virtual/">
+<a class="md-nav__link" href="../../../../cs/pl/python/virtual/">
         Python 虚拟环境
       </a>
 </li>
@@ -312,7 +312,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../pl/go/">Go</a>
+<a href="../../../../cs/pl/go/">Go</a>
 <label for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -324,12 +324,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/go/basic/">
+<a class="md-nav__link" href="../../../../cs/pl/go/basic/">
         Go 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../pl/go/gin/">
+<a class="md-nav__link" href="../../../../cs/pl/go/gin/">
         gin框架 (TODO)
       </a>
 </li>
@@ -339,7 +339,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../pl/java/">Java</a>
+<a href="../../../../cs/pl/java/">Java</a>
 </div>
 <nav aria-label="Java" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_5">
@@ -366,12 +366,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../../cs/algorithm/basic-ds/">
         基础数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../../cs/algorithm/design-analysis/">
         算法设计与分析
       </a>
 </li>
@@ -391,17 +391,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ai/mode-recognition/">
+<a class="md-nav__link" href="../../../../cs/ai/mode-recognition/">
         模式识别
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ai/ml/">
+<a class="md-nav__link" href="../../../../cs/ai/ml/">
         机器学习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ai/dl/">
+<a class="md-nav__link" href="../../../../cs/ai/dl/">
         神经网络与深度学习
       </a>
 </li>
@@ -411,7 +411,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../hpc/">高性能计算</a>
+<a href="../../../../cs/hpc/">高性能计算</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -423,32 +423,32 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../hpc/outline/">
+<a class="md-nav__link" href="../../../../cs/hpc/outline/">
         概论
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../hpc/vectorizecompute/">
+<a class="md-nav__link" href="../../../../cs/hpc/vectorizecompute/">
         向量化计算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../hpc/gpu/">
+<a class="md-nav__link" href="../../../../cs/hpc/gpu/">
         GPU 编程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../hpc/mpi/">
+<a class="md-nav__link" href="../../../../cs/hpc/mpi/">
         MPI 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../hpc/openmp/">
+<a class="md-nav__link" href="../../../../cs/hpc/openmp/">
         OpenMP 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../hpc/taichi/">
+<a class="md-nav__link" href="../../../../cs/hpc/taichi/">
         Taichi 基础
       </a>
 </li>
@@ -458,7 +458,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../software/">软件相关</a>
+<a href="../../../../cs/software/">软件相关</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -470,30 +470,30 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../software/design-pattern/">
+<a class="md-nav__link" href="../../../../cs/software/design-pattern/">
         设计模式
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../software/sca/">
+<a class="md-nav__link" href="../../../../cs/software/sca/">
         软件构件与体系结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../software/compa/">
+<a class="md-nav__link" href="../../../../cs/software/compa/">
         COM 原理与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../software/piaserver/">
+<a class="md-nav__link" href="../../../../cs/software/piaserver/">
         应用服务器原理与实现
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_7">
           数据库相关
           <span class="md-nav__icon md-icon"></span>
@@ -505,12 +505,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mysql/">
+<a class="md-nav__link" href="../../../../cs/db/mysql/">
         MySQL
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_2" id="__nav_2_7_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_2" id="__nav_2_7_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_7_2">
           Redis
           <span class="md-nav__icon md-icon"></span>
@@ -522,171 +522,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../datatype/">
+<a class="md-nav__link" href="../../../../cs/db/redis/datatype/">
         数据类型
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          持久化
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../cs/db/redis/cjh/">
         持久化
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    简介
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#snapshot-rdb">
-    快照(Snapshot) / RDB
-  </a>
-<nav aria-label="快照(Snapshot) / RDB" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rdb">
-    RDB持久化的大致过程
-  </a>
-<nav aria-label="RDB持久化的大致过程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bgsave">
-    bgsave：
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#save">
-    save：
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#shutdown">
-    shutdown：
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    注意:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    优点
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    缺点
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rdb_1">
-    RDB触发机制
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    配置生成快照名称和位置
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rdb_2">
-    恢复rdb文件
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof">
-    AOF
-  </a>
-<nav aria-label="AOF" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_1">
-    什么是AOF
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    特点
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_2">
-    开启AOF持久化
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    日志追加频率
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_3">
-    AOF文件的重写
-  </a>
-<nav aria-label="AOF文件的重写" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_4">
-    AOF带来的问题
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_5">
-    AOF重写
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    触发机制
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    重写原理
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    优点
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    缺点
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    如何选择哪种持久化方式
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../work/">
+<a class="md-nav__link" href="../../../../cs/db/redis/work/">
         事务
       </a>
 </li>
@@ -709,7 +555,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../others/regex/">
+<a class="md-nav__link" href="../../../../cs/others/regex/">
         RegEx 正则表达式
       </a>
 </li>
@@ -719,10 +565,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../cv/">CV &amp; Robot</a>
+<a href="../../../">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -736,7 +582,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../cv/ia-ocv/">图像分析 &amp; OpenCV</a>
+<a href="../../../ia-ocv/">图像分析 &amp; OpenCV</a>
 <label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -748,12 +594,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/ia-ocv/image-analysis/">
+<a class="md-nav__link" href="../../../ia-ocv/image-analysis/">
         图像分析与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/ia-ocv/opencv/">
+<a class="md-nav__link" href="../../../ia-ocv/opencv/">
         OpenCV
       </a>
 </li>
@@ -763,7 +609,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../cv/mvg/">多视图几何</a>
+<a href="../../../mvg/">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -775,37 +621,37 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../../../mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../../../mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../../../mvg/est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/mvg/eval/">
+<a class="md-nav__link" href="../../../mvg/eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/mvg/camera-model/">
+<a class="md-nav__link" href="../../../mvg/camera-model/">
         摄像机模型
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../cv/slam/">SLAM</a>
+<a href="../../">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -816,10 +662,10 @@ var _hmt = _hmt || [];
           SLAM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -831,14 +677,118 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/slam/vslam14/lec1/">
+<a class="md-nav__link" href="../lec1/">
         初识 SLAM
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/slam/vslam14/lec2/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          三维空间刚体运动
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         三维空间刚体运动
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    旋转矩阵
+  </a>
+<nav aria-label="旋转矩阵" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    点、向量和坐标系
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    坐标系间的欧氏变换
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    变换矩阵与齐次坐标
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    旋转向量和欧拉角
+  </a>
+<nav aria-label="旋转向量和欧拉角" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    旋转向量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    欧拉角
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    四元数
+  </a>
+<nav aria-label="四元数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    四元数的定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    四元数的运算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    用四元数表示旋转
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    四元数到其他旋转表示的转换
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    相似、仿射、射影变换
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#eigen-todo">
+    Eigen 库 (TODO)
+  </a>
+<nav aria-label="Eigen 库 (TODO)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install">
+    install
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1057,145 +1007,95 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    简介
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#snapshot-rdb">
-    快照(Snapshot) / RDB
-  </a>
-<nav aria-label="快照(Snapshot) / RDB" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rdb">
-    RDB持久化的大致过程
-  </a>
-<nav aria-label="RDB持久化的大致过程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bgsave">
-    bgsave：
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#save">
-    save：
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#shutdown">
-    shutdown：
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-    注意:
+    旋转矩阵
   </a>
-</li>
-</ul>
-</nav>
-</li>
+<nav aria-label="旋转矩阵" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-    优点
+    点、向量和坐标系
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
-    缺点
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rdb_1">
-    RDB触发机制
+    坐标系间的欧氏变换
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-    配置生成快照名称和位置
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rdb_2">
-    恢复rdb文件
+    变换矩阵与齐次坐标
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#aof">
-    AOF
-  </a>
-<nav aria-label="AOF" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_1">
-    什么是AOF
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_6">
-    特点
+    旋转向量和欧拉角
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_2">
-    开启AOF持久化
-  </a>
-</li>
+<nav aria-label="旋转向量和欧拉角" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
-    日志追加频率
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_3">
-    AOF文件的重写
-  </a>
-<nav aria-label="AOF文件的重写" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_4">
-    AOF带来的问题
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#aof_5">
-    AOF重写
+    旋转向量
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_8">
-    触发机制
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    重写原理
+    欧拉角
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    四元数
+  </a>
+<nav aria-label="四元数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_10">
-    优点
+    四元数的定义
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_11">
-    缺点
+    四元数的运算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    用四元数表示旋转
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    四元数到其他旋转表示的转换
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    如何选择哪种持久化方式
+<a class="md-nav__link" href="#_14">
+    相似、仿射、射影变换
   </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#eigen-todo">
+    Eigen 库 (TODO)
+  </a>
+<nav aria-label="Eigen 库 (TODO)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install">
+    install
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1206,131 +1106,222 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cs/db/redis/cjh.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/slam/vslam14/lec2.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="redis"><span>Redis<span class="heti-spacing"> </span></span>持久化<a class="headerlink" href="#redis" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>由于<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>是内存数据库，所以其数据断电易失，因此需要将数据保存到磁盘中。<span>redis<span class="heti-spacing"> </span></span>有两种持久化解决方案，分别是：RDB，AOF。</p>
-<h2 id="snapshot-rdb">快照<span><span class="heti-spacing"> </span>(Snapshot) / RDB</span><a class="headerlink" href="#snapshot-rdb" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>这种方式可以将某一时刻的所有数据都写入硬盘中<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>当然这也是<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>的默认开启持久化方式<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>保存的文件是以<span class="heti-skip"><span class="heti-spacing"> </span>.rdb<span class="heti-spacing"> </span></span>形式结尾的文件因此这种方式也称之为<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>方式。</p>
-<p>在指定时间间隔后，将内存中的数据集快照写入数据库 ；在恢复时候，直接读取快照文件，进行数据的恢复 ； 默认情况下， <span>Redis<span class="heti-spacing"> </span></span>将数据库快照保存在名字为<strong><span class="heti-skip"><span class="heti-spacing"> </span>dump.rdb<span class="heti-spacing"> </span></span></strong>的二进制文件中。文件名可以在配置文件中进行自定义。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802020120.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802020120.png"/></a></p>
-<h3 id="rdb"><span>RDB<span class="heti-spacing"> </span></span>持久化的大致过程<a class="headerlink" href="#rdb" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>在进行<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>的时候，<span>redis<span class="heti-spacing"> </span></span>的主线程是不会做<span class="heti-skip"><span class="heti-spacing"> </span>io<span class="heti-spacing"> </span></span>操作的，主线程会<span class="heti-skip"><span class="heti-spacing"> </span>fork<span class="heti-spacing"> </span></span>一个子线程来完成该操作；</p>
-<ol>
-<li><span>Redis<span class="heti-spacing"> </span></span>调用<span><span class="heti-spacing"> </span>forks</span>。同时拥有父进程和子进程。</li>
-<li>子进程将数据集写入到一个临时<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>文件中。</li>
-<li>当子进程完成对新<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>文件的写入时，<span>Redis<span class="heti-spacing"> </span></span>用新<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>文件替换原来的<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>文件，并删除旧的<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>文件。</li>
-</ol>
-<p><strong>这种工作方式使得<span class="heti-skip"><span class="heti-spacing"> </span>Redis<span class="heti-spacing"> </span></span>可以从写时复制（copy-on-write）机制中获益<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>因为是使用子进程进行写操作，而父进程依然可以接收来自客户端的请求。)</strong></p>
-<h4 id="bgsave">bgsave：<a class="headerlink" href="#bgsave" title="Permanent link">¶</a></h4>
-<p>客户端可以使用<span class="heti-skip"><span class="heti-spacing"> </span>BGSAVE<span class="heti-spacing"> </span></span>命令来创建一个快照<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>当接收到客户端的<span class="heti-skip"><span class="heti-spacing"> </span>BGSAVE<span class="heti-spacing"> </span></span>命令时<span class="heti-skip"><span class="heti-spacing"> </span>,redis<span class="heti-spacing"> </span></span>会调用<span class="heti-skip"><span class="heti-spacing"> </span>fork<span class="heti-spacing"> </span></span>来创建一个子进程<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>然后子进程负责将快照写入磁盘中<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>而父进程则继续处理命令请求。 <strong><span>bgsave<span class="heti-spacing"> </span></span>是异步进行，进行持久化的时候，<span>redis<span class="heti-spacing"> </span></span>还可以将继续响应客户端请求 ；</strong> <a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802962900.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802962900.png"/></a></p>
-<h4 id="save">save：<a class="headerlink" href="#save" title="Permanent link">¶</a></h4>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>命令，会立刻对当前内存中的数据进行持久化<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>但是会阻塞，也就是不接受其他操作了； <strong>由于<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>命令是同步命令，会占用<span class="heti-skip"><span class="heti-spacing"> </span>Redis<span class="heti-spacing"> </span></span>的主进程。若<span class="heti-skip"><span class="heti-spacing"> </span>Redis<span class="heti-spacing"> </span></span>数据非常多时，<span>save<span class="heti-spacing"> </span></span>命令执行速度会非常慢，阻塞所有客户端的请求。</strong> <a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802954996.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802954996.png"/></a></p>
-<h4 id="shutdown">shutdown：<a class="headerlink" href="#shutdown" title="Permanent link">¶</a></h4>
-<p>当<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>通过<span class="heti-skip"><span class="heti-spacing"> </span>shutdown<span class="heti-spacing"> </span></span>指令接收到关闭服务器的请求时<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>会执行一个<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>命令<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>阻塞所有的客户端<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>不再执行客户端执行发送的任何命令<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>并且在<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>命令执行完毕之后关闭服务器</p>
-<h4 id="_2">注意<span><span class="heti-spacing"> </span>:</span><a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><strong><span>SAVE<span class="heti-spacing"> </span></span>命令并不常用<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>SAVE<span class="heti-spacing"> </span></span>命令在快照创建完毕之前<span class="heti-skip"><span class="heti-spacing"> </span>,redis<span class="heti-spacing"> </span></span>处于阻塞状态<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>无法对外服务</strong></p>
-<p>如果用户在<span class="heti-skip"><span class="heti-spacing"> </span>redis.conf<span class="heti-spacing"> </span></span>中设置了<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>配置选项<span class="heti-skip"><span class="heti-spacing"> </span>,redis<span class="heti-spacing"> </span></span>会在<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>选项条件满足之后自动触发一次<span class="heti-skip"><span class="heti-spacing"> </span>BGSAVE<span class="heti-spacing"> </span></span>命令<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>如果设置多个<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>配置选项<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>当任意一个<span class="heti-skip"><span class="heti-spacing"> </span>save<span class="heti-spacing"> </span></span>配置选项条件满足<span class="heti-skip"><span class="heti-spacing"> </span>,redis<span class="heti-spacing"> </span></span>也会触发一次<span class="heti-skip"><span class="heti-spacing"> </span>BGSAVE<span class="heti-spacing"> </span></span>命令</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802337308.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802337308.png"/></a></p>
-<h3 id="_3">优点<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li><span>RDB<span class="heti-spacing"> </span></span>文件紧凑，全量备份，非常适合用于进行备份和灾难恢复。</li>
-<li>生成<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>文件的时候，<span>redis<span class="heti-spacing"> </span></span>主进程会<span class="heti-skip"><span class="heti-spacing"> </span>fork()<span class="heti-spacing"> </span></span>一个子进程来处理所有保存工作，主进程不需要进行任何磁盘<span class="heti-skip"><span class="heti-spacing"> </span>IO<span class="heti-spacing"> </span></span>操作。</li>
-<li><span>RDB<span class="heti-spacing"> </span></span>在恢复大数据集时的速度比<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>的恢复速度要快。</li>
-</ol>
-<h3 id="_4">缺点<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li>需要一定的时间间隔进程操作！如果<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>意外宕机了，这个最后一次修改数据就没有的了！</li>
-<li><span>fork<span class="heti-spacing"> </span></span>进程的时候，会占用一定的内容空间！！</li>
-</ol>
-<h3 id="rdb_1"><span>RDB<span class="heti-spacing"> </span></span>触发机制<a class="headerlink" href="#rdb_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li><span>save<span class="heti-spacing"> </span></span>的规则满足的情况下，会自动触发<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>规则</li>
-<li>执行<span class="heti-skip"><span class="heti-spacing"> </span>flushall<span class="heti-spacing"> </span></span>命令，也会触发我们的<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>规则！</li>
-<li>退出<span><span class="heti-spacing"> </span>redis</span>，也会产生<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>文件！</li>
-</ol>
-<h3 id="_5">配置生成快照名称和位置<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li>修改生成快照名称<span><span class="heti-spacing"> </span>dbfilename dump.rdb</span></li>
-<li>修改生成位置<span><span class="heti-spacing"> </span>dir ./</span></li>
-</ol>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802467233.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802467233.png"/></a></p>
-<h3 id="rdb_2">恢复<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>文件<a class="headerlink" href="#rdb_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li>只需要将<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>文件放在<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>启动目录中，<span>redis<span class="heti-spacing"> </span></span>启动时自动检查<span class="heti-skip"><span class="heti-spacing"> </span>dump.rdb<span class="heti-spacing"> </span></span>恢复其中的数据。</li>
-<li>查看其存在的位置</li>
-</ol>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802829210.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632802829210.png"/></a> 如果<span class="heti-skip"><span class="heti-spacing"> </span>/var/lib/redis<span class="heti-spacing"> </span></span>这个目录存在<span class="heti-skip"><span class="heti-spacing"> </span>dump.rdb<span class="heti-spacing"> </span></span>文件，则启动时自动恢复数据。</p>
-<h2 id="aof">AOF<a class="headerlink" href="#aof" title="Permanent link">¶</a></h2>
-<p>Append Only File</p>
-<p>将我们所有的命令都记录下来，history，恢复的时候就把这个文件全部再执行一遍</p>
-<h3 id="aof_1">什么是<span><span class="heti-spacing"> </span>AOF</span><a class="headerlink" href="#aof_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>快照功能（RDB）并不是非常耐久（durable）： 如果<span class="heti-skip"><span class="heti-spacing"> </span>Redis<span class="heti-spacing"> </span></span>因为某些原因而造成故障停机， 那么服务器将丢失最近写入、以及未保存到快照中的那些数据。 从<span class="heti-skip"><span class="heti-spacing"> </span>1.1<span class="heti-spacing"> </span></span>版本开始， <span>Redis<span class="heti-spacing"> </span></span>增加了一种完全耐久的持久化方式： <span>AOF<span class="heti-spacing"> </span></span>持久化。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632815754859.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632815754859.png"/></a></p>
-<h3 id="_6">特点<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>这种方式可以将所有客户端执行的写命令记录到日志文件中<span class="heti-skip"><span class="heti-spacing"> </span>,AOF<span class="heti-spacing"> </span></span>持久化会将被执行的写命令写到<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>的文件末尾<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>以此来记录数据发生的变化<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>因此只要<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>从头到尾执行一次<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>文件所包含的所有写命令<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>就可以恢复<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>文件的记录的数据集<span><span class="heti-spacing"> </span>.</span></p>
-<h3 id="aof_2">开启<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>持久化<a class="headerlink" href="#aof_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>在<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>的默认配置中<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>持久化机制是没有开启的，需要在配置中开启</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632815844362.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632815844362.png"/></a></p>
-<p><span>appendonly no yes<span class="heti-spacing"> </span></span>则表示启用<span><span class="heti-spacing"> </span>AOF</span></p>
-<p>默认是不开启的，我们需要手动配置，然后重启<span><span class="heti-spacing"> </span>redis</span>，就可以生效了！</p>
-<p>如果这个<span class="heti-skip"><span class="heti-spacing"> </span>aof<span class="heti-spacing"> </span></span>文件有错位，这时候<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>是启动不起来的，我需要修改这个<span class="heti-skip"><span class="heti-spacing"> </span>aof<span class="heti-spacing"> </span></span>文件</p>
-<p><span>redis<span class="heti-spacing"> </span></span>给我们提供了一个工具<span><span class="heti-spacing"> </span>redis-check-aof --fix</span></p>
-<h3 id="_7">日志追加频率<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>修改日志同步频率
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>-<span class="w"> </span>修改appendfsync<span class="w"> </span>everysec<span class="p">|</span>always<span class="p">|</span>no<span class="w"> </span>指定
+<h1 id="_1">三维空间刚体运动<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2126<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>1<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>理解三维空间的刚体运动描述方式：旋转矩阵、变换矩阵、四元数和欧拉角</li>
+<li>掌握<span class="heti-skip"><span class="heti-spacing"> </span>Eigen<span class="heti-spacing"> </span></span>库的矩阵、几何模块的使用方法</li>
+</ul>
+</div>
+<h2 id="_2">旋转矩阵<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">点、向量和坐标系<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>空间中的某点。其位置固定。若采用不同的坐标系描述，其坐标位置具体形式是不同的，但是表达的点是同一个点。</li>
+<li>用线代表示，在一个线性空间中，找到该空间的一组<strong>基</strong><span class="arithmatex">\((\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3)\)</span>，那么，任意向量<span class="arithmatex">\(\mathbf{a}\)</span>在这组基下的坐标为<span class="arithmatex">\(\mathbf{a}=[\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3][a_1,a_2,a_3]^\top=a_1\mathbf{e}_1+a_2\mathbf{e}_2+a_3\mathbf{e}_3\)</span></li>
+<li>坐标系定义时，有右手系和左手系，通常采用右手系</li>
+<li>
+<p>向量有内积和外积。</p>
+<ul>
+<li>内积：<span class="arithmatex">\(\mathbf{a}\mathbf{b}=\mathbf{a}^\top\mathbf{b}=\sum_{i=1}^3a_ib_i=|\mathbf{a}||\mathbf{b}|\cos(\mathbf{a}, \mathbf{b})\)</span></li>
+<li>外积：</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{a} \times \mathbf{b}=
+\begin{bmatrix}
+i &amp; j &amp; k \\
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_2b_3-a_3b_2 \\
+a_3b_1-a_1b_3 \\
+a_1b_2-a_2b_1
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 &amp; -a_3 &amp; a_2 \\
+a_3 &amp; 0 &amp; -a_1 \\
+-a_2 &amp; a_1 &amp; 0
+\end{bmatrix}
+\mathbf{b}
+\overset{\Delta}{=}
+\mathbf{a}^\wedge \mathbf{b}
+\]</div>
+<ul>
+<li>其中符号<span class="arithmatex">\(\wedge\)</span>称为<strong>反对称符号</strong>，<span class="arithmatex">\(\mathbf{a}^\wedge\)</span>为<strong>反对称矩阵</strong>（满足<span class="arithmatex">\(\mathbf{A}^\top=-\mathbf{A}\)</span>），这样做的好处可以奖向量运算变为矩阵运算</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">坐标系间的欧氏变换<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>两个坐标系之间的运动由一个旋转加上一个平移组成，这种运动称为<strong>刚体运动</strong>，例如相机运动</li>
+<li>刚体运动过程中，同一个向量在各个坐标系下的长度和夹角都不变，只会是空间位置和姿态不同，例如相机坐标系到世界坐标系，相差一个<strong>欧氏变换</strong></li>
+<li>
+<p>欧氏变换由旋转和平移组成</p>
+<ul>
+<li>
+<p><strong>旋转</strong></p>
+<ul>
+<li>设某个单位正交基<span class="arithmatex">\((\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3)\)</span>经过一次旋转变成了<span class="arithmatex">\((\mathbf{e}_1^\prime, \mathbf{e}_2^\prime, \mathbf{e}_3^\prime)\)</span>。对于同一个向量<span class="arithmatex">\(\mathbf{a}\)</span>没有随着坐标系的旋转而发生运动，所以</li>
+</ul>
+<div class="arithmatex">\[
+[\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3]\begin{bmatrix}a_1 \\ a_2 \\ a_3 \end{bmatrix}=[\mathbf{e}_1^\prime, \mathbf{e}_2^\prime, \mathbf{e}_3^\prime] \begin{bmatrix} a_1^\prime \\ a_2^\prime \\ a_3^\prime \end{bmatrix} \\
+同时左乘 \begin{bmatrix} \mathbf{e}_1^\top \\ \mathbf{e}_2^\top \\ \mathbf{e}_3^\top \end{bmatrix}得 \ \ \ \begin{bmatrix}a_1 \\ a_2 \\ a_3 \end{bmatrix}=\begin{bmatrix} \mathbf{e}_1^\top \mathbf{e}_1^\prime &amp; \mathbf{e}_1^\top \mathbf{e}_2^\prime &amp; \mathbf{e}_1^\top \mathbf{e}_3^\prime \\ \mathbf{e}_2^\top \mathbf{e}_1^\prime &amp; \mathbf{e}_2^\top \mathbf{e}_2^\prime &amp; \mathbf{e}_2^\top \mathbf{e}_3^\prime \\ \mathbf{e}_3^\top \mathbf{e}_1^\prime &amp; \mathbf{e}_3^\top \mathbf{e}_2^\prime &amp; \mathbf{e}_3^\top \mathbf{e}_3^\prime \end{bmatrix}\begin{bmatrix}a_1^\prime \\ a_2^\prime \\ a_3^\prime \end{bmatrix}\overset{\Delta}{=}\mathbf{R}\mathbf{a}^\prime
+\]</div>
+<ul>
+<li>这里的<span class="arithmatex">\(\mathbf{R}\)</span>是一个行列式为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的正交矩阵，由两组基之间的内积组成，所以矩阵<span class="arithmatex">\(\mathbf{R}\)</span>描述了旋转本身，因此被称为<strong>旋转矩阵</strong>，同时也叫<strong>方向余弦矩阵</strong></li>
+<li>由于旋转矩阵为正交矩阵，它的逆（即转置）描述了一个相反的旋转，即<span class="arithmatex">\(\mathbf{a}^\prime=\mathbf{R}^{-1}\mathbf{a}=\mathbf{R}^\top\mathbf{a}\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>平移</strong></p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{t}\)</span>表示平移向量，其中<span class="arithmatex">\(\mathbf{t}_{12} \ne -\mathbf{t}_{21}\)</span>，和两个系的旋转有关</li>
+</ul>
+</li>
+<li>旋转和平移合到一起：<span class="arithmatex">\(\mathbf{a}^\prime=\mathbf{R}\mathbf{a}+\mathbf{t}\)</span></li>
+<li>实际中，定义坐标系<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>和坐标系<span><span class="heti-spacing"> </span>2</span>，那么向量<span class="arithmatex">\(\mathbf{a}\)</span>在两个坐标系下的坐标为<span class="arithmatex">\(\mathbf{a}_1, \mathbf{a}_2\)</span>，它们之间的关系为<span class="arithmatex">\(\mathbf{a}_1=\mathbf{R}_{12}\mathbf{a}_2+\mathbf{t}_{12}\)</span>，这里的<span class="arithmatex">\(\mathbf{R}_{12}\)</span>是指“把坐标系<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>的向量变换到坐标系<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>中”</li>
+</ul>
+</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/coordinate-transformation.png"><img alt="坐标变换" src="https://cdn.jujimeizuo.cn/note/cv/slam/coordinate-transformation.png"/></a></center>
+<h3 id="_5">变换矩阵与齐次坐标<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>之前的变换关系不是线性关系</li>
+<li>
+<p>假设进行了两次变换，<span class="arithmatex">\(\mathbf{b}=\mathbf{R}_1\mathbf{a}+\mathbf{t}_1\)</span>和<span class="arithmatex">\(\mathbf{c}=\mathbf{R}_2\mathbf{b}+\mathbf{t}_2\)</span>，那么<span class="arithmatex">\(\mathbf{a}\)</span>到<span class="arithmatex">\(\mathbf{c}\)</span>的变换为<span class="arithmatex">\(\mathbf{c}=\mathbf{R}_2(\mathbf{R}_1\mathbf{a}+\mathbf{t}_1)+\mathbf{t}_2\)</span>，如果变换多次会变的非常繁琐，所以引入<strong>齐次坐标和变换矩阵</strong></p>
+<ul>
+<li>
+<p>重写上式：</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\mathbf{a}^\prime \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+\mathbf{R} &amp; \mathbf{t} \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{a} \\
+1
+\end{bmatrix}
+\overset{\Delta}{=}
+\mathbf{T}
+\begin{bmatrix}
+\mathbf{a} \\
+1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p>在三维向量的末尾添加<span><span class="heti-spacing"> </span>1</span>，将其变成了四维向量，称为<strong>齐次坐标</strong>。对于这个四维向量，可以把旋转和平移写在一个矩阵里，使得整个关系变成线性关系。其中矩阵<span class="arithmatex">\(\mathbf{T}\)</span>称为<strong>变换矩阵</strong></p>
+</li>
+<li>用<span class="arithmatex">\(\tilde{\mathbf{a}}\)</span>表示<span class="arithmatex">\(\mathbf{a}\)</span>的齐次坐标。所以通过齐次坐标和变换矩阵，两次变换的叠加就可以写成<span class="arithmatex">\(\tilde{\mathbf{c}}=\mathbf{T}_2\mathbf{T}_1\tilde{\mathbf{a}}\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">旋转向量和欧拉角<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>旋转矩阵和变换矩阵都存在一个问题，就是<strong>变量的冗余</strong>。已知一次旋转仅有三个自由度，但是旋转矩阵有九个量，用九个量表示三个自由度（仅表示旋转）；变换矩阵有<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>个量，用<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>个量表示<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个自由度（包括旋转和平移）。</li>
+<li>其次，旋转矩阵是一个特殊矩阵，即是正交矩阵，且行列式为<span><span class="heti-spacing"> </span>1</span>。且该特殊性也会影响到变换矩阵，所以具有特殊性的矩阵在后续的非线性优化中会带来额外的约束，导致求解困难。</li>
+</ul>
+<h3 id="_7">旋转向量<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>旋转向量<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>一个旋转轴<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>一个旋转角度即：旋转向量的方向为旋转轴，长度为旋转角度。</li>
+<li>旋转向量和矩阵之间存在转换关系，用罗德里格斯公式（Rodrigues's Formula）表示：</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{R}=\cos\theta\mathbf{I}+(1-\cos\theta)\mathbf{n}\mathbf{n}^\top+\sin\theta\mathbf{n}^\wedge
+\]</div>
+<ul>
+<li>反之也可以计算从一个旋转矩阵到旋转向量的转换。对于转角<span class="arithmatex">\(\theta\)</span>，取两边的<strong>迹</strong>，有</li>
+</ul>
+<div class="arithmatex">\[
+tr(\mathbf{R})=\cos \theta \ tr(\mathbf{I})+(1-\cos \theta)tr(\mathbf{n}\mathbf{n}^\top)+\sin\theta \ tr(\mathbf{n}^\wedge) \\
+tr(\mathbf{R})=3\cos\theta+(1-\cos\theta) \\
+tr(\mathbf{R})=1+2\cos\theta \\
+\theta = \arccos\left(\frac{tr(\mathbf{R})-1}{2}\right)
+\]</div>
+<ul>
+<li>关于转轴<span class="arithmatex">\(\mathbf{n}\)</span>，旋转轴上的向量在旋转后不变，即<span class="arithmatex">\(\mathbf{Rn}=\mathbf{n}\)</span>，因此转轴<span class="arithmatex">\(\mathbf{n}\)</span>是矩阵<span class="arithmatex">\(\mathbf{R}\)</span>特征值<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>对应的特征向量。</li>
+<li><a href="https://zhuanlan.zhihu.com/p/298128519">罗德里格斯公式详细推导</a></li>
+</ul>
+<h3 id="_8">欧拉角<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>欧拉角是一种将旋转分解为三个基本旋转的方法，即绕三个坐标轴的旋转。欧拉角的表示方法有很多种，但是最常用的是<strong><span class="heti-skip"><span class="heti-spacing"> </span>Z-Y-X<span class="heti-spacing"> </span></span></strong>的旋转顺序，即先绕<span class="heti-skip"><span class="heti-spacing"> </span>Z<span class="heti-spacing"> </span></span>轴旋转，再绕<span class="heti-skip"><span class="heti-spacing"> </span>Y<span class="heti-spacing"> </span></span>轴旋转，最后绕<span class="heti-skip"><span class="heti-spacing"> </span>X<span class="heti-spacing"> </span></span>轴旋转。这种旋转顺序也叫<strong>航向<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>俯仰<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>滚转</strong>（yaw-pitch-roll）。</li>
+<li>但是存在万向锁现象：<a href="https://www.bilibili.com/video/BV1Nr4y1j7kn/?spm_id_from=333.337.search-card.all.click">万向死锁</a>，所以使欧拉角在特殊情况下会出现奇异性。</li>
+</ul>
+<h2 id="_9">四元数<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_10">四元数的定义<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>四元数是一种扩展复数的方法，复数由实部和虚部组成，而四元数由实部和三个虚部组成，即<span class="arithmatex">\(\mathbf{q}=q_0+q_1i+q_2j+q_3k\)</span>，满足下面关系：</li>
+</ul>
+<div class="arithmatex">\[
+\left\{\begin{matrix}
+i^2 + j^2 + k^2 = -1 \\
+ij = k, ji = -k \\
+jk = i, kj = -i \\
+ki = j, ik = -j
+\end{matrix}\right.
+\]</div>
+<ul>
+<li>用一个标量和一个向量表示：<span class="arithmatex">\(\mathbf{q}=[s,\mathbf{v}],s=q_0 \in R, \mathbf{v}=[q_1,q_2,q_3]^\top \in R^3\)</span>，虚部为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>为实四元数，实部为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>为虚四元数</li>
+</ul>
+<h3 id="_11">四元数的运算<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span class="arithmatex">\(\mathbf{q}_a \pm \mathbf{q}_b = [s_a \pm s_b, \mathbf{v}_a \pm \mathbf{v}_b]\)</span></li>
+<li><span class="arithmatex">\(\mathbf{q}_a \mathbf{q}_b=[s_as_b-\mathbf{v}_a^\top\mathbf{v}_b,s_a\mathbf{v}_b+s_b\mathbf{v}_a+\mathbf{v}_a\times \mathbf{v}_b]^\top\)</span></li>
+<li><span class="arithmatex">\(\parallel \mathbf{q}_a \parallel = \sqrt{s_a^2+x_a^2+y_a^2+z_a^2}\)</span></li>
+<li><span class="arithmatex">\(\mathbf{q}_a^*=s_a-x_ai-y_aj-z_ak=[s_a, -\mathbf{v}_a]^\top\)</span></li>
+<li><span class="arithmatex">\(\mathbf{q}^{-1}=\mathbf{q}^*/\parallel \mathbf{q} \parallel^2\)</span></li>
+<li><span class="arithmatex">\(k\mathbf{q}=[ks, k\mathbf{v}]\)</span></li>
+<li><span class="arithmatex">\(\mathbf{q}_a \cdot \mathbf{q}_b=s_as_b+x_ax_bi+y_ay_bj+z_az_bk\)</span></li>
+</ul>
+<h3 id="_12">用四元数表示旋转<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>三维空间点用一个虚四元数来描述：<span class="arithmatex">\(\mathbf{p}=[0,x,y,z]^\top=[0,\mathbf{v}]^\top\)</span></li>
+<li>旋转后到点<span class="arithmatex">\(\mathbf{p}^\prime\)</span>：<span class="arithmatex">\(\mathbf{p}^\prime=\mathbf{qpq}^{-1}\)</span></li>
+</ul>
+<h3 id="_13">四元数到其他旋转表示的转换<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>轴角到四元数：<span class="arithmatex">\(\mathbf{q}=[\cos \frac{\theta}{2}, n_x \sin \frac{\theta}{2}, n_y \frac{\theta}{2}, n_z \sin \frac{\theta}{2}]^\top\)</span></li>
+<li>四元数到轴角：<span class="arithmatex">\(\left\{\begin{matrix} \theta=2\arccos q_0 \\ [n_x,n_y,n_z]^\top=[q_1, q_2, q_3]^\top / \sin \frac{\theta}{2} \end{matrix}\right.\)</span></li>
+</ul>
+<h2 id="_14">相似、仿射、射影变换<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>见<a href="https://note.jujimeizuo.cn/cv/mvg/pjt2d/#_5">多视图几何</a></p>
+<h2 id="eigen-todo"><span>Eigen<span class="heti-spacing"> </span></span>库<span><span class="heti-spacing"> </span>(TODO)</span><a class="headerlink" href="#eigen-todo" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="install">install<a class="headerlink" href="#install" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libeigen3-dev<span class="w"> </span><span class="c1"># 如果要安装对应版本，请下载源码编译</span>
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632815884193.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632815884193.png"/></a></p>
-<h3 id="aof_3"><span>AOF<span class="heti-spacing"> </span></span>文件的重写<a class="headerlink" href="#aof_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="aof_4"><span>AOF<span class="heti-spacing"> </span></span>带来的问题<a class="headerlink" href="#aof_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><span>AOF<span class="heti-spacing"> </span></span>的方式也同时带来了另一个问题。持久化文件会变的越来越大。例如我们调用<span class="heti-skip"><span class="heti-spacing"> </span>incr test<span class="heti-spacing"> </span></span>命令<span class="heti-skip"><span class="heti-spacing"> </span>100<span class="heti-spacing"> </span></span>次，文件中必须保存全部的<span class="heti-skip"><span class="heti-spacing"> </span>100<span class="heti-spacing"> </span></span>条命令，其实有<span class="heti-skip"><span class="heti-spacing"> </span>99<span class="heti-spacing"> </span></span>条都是多余的。因为要恢复数据库的状态其实文件中保存一条<span class="heti-skip"><span class="heti-spacing"> </span>set test 100<span class="heti-spacing"> </span></span>就够了。为了压缩<span class="heti-skip"><span class="heti-spacing"> </span>aof<span class="heti-spacing"> </span></span>的持久化文件<span class="heti-skip"><span class="heti-spacing"> </span>Redis<span class="heti-spacing"> </span></span>提供了<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>重写<span class="heti-skip"><span class="heti-spacing"> </span>(ReWriter)<span class="heti-spacing"> </span></span>机制。</p>
-<h4 id="aof_5"><span>AOF<span class="heti-spacing"> </span></span>重写<a class="headerlink" href="#aof_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>用来在一定程度上减小<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>文件的体积</p>
-<h4 id="_8">触发机制<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 1.客户端方式触发重写</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>-<span class="w"> </span>执行BGREWRITEAOF命令<span class="w">  </span>不会阻塞redis的服务
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1"># 2.服务器配置方式自动触发</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>-<span class="w"> </span>配置redis.conf中的auto-aof-rewrite-percentage选项<span class="w"> </span>参加下图↓↓↓
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>-<span class="w"> </span>如果设置auto-aof-rewrite-percentage值为100和auto-aof-rewrite-min-size<span class="w"> </span>64mb,并且启用的AOF持久化时,那么当AOF文件体积大于64M,并且AOF文件的体积比上一次重写之后体积大了至少一倍<span class="o">(</span><span class="m">100</span>%<span class="o">)</span>时,会自动触发,如果重写过于频繁,用户可以考虑将auto-aof-rewrite-percentage设置为更大
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632816040606.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632816040606.png"/></a></p>
-<h4 id="_9">重写原理<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><strong>注意：重写<span class="heti-skip"><span class="heti-spacing"> </span>aof<span class="heti-spacing"> </span></span>文件的操作，并没有读取旧的<span class="heti-skip"><span class="heti-spacing"> </span>aof<span class="heti-spacing"> </span></span>文件，而是将整个内存中的数据库内容用命令的方式重写了一个新的<span class="heti-skip"><span class="heti-spacing"> </span>aof<span class="heti-spacing"> </span></span>文件<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>替换原有的文件这点和快照有点类似。</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 重写流程</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>-<span class="w"> </span><span class="m">1</span>.<span class="w"> </span>redis调用fork<span class="w"> </span>，现在有父子两个进程<span class="w"> </span>子进程根据内存中的数据库快照，往临时文件中写入重建数据库状态的命令
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>-<span class="w"> </span><span class="m">2</span>.<span class="w"> </span>父进程继续处理client请求，除了把写命令写入到原来的aof文件中。同时把收到的写命令缓存起来。这样就能保证如果子进程重写失败的话并不会出问题。
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>-<span class="w"> </span><span class="m">3</span>.<span class="w"> </span>当子进程把快照内容写入已命令方式写到临时文件中后，子进程发信号通知父进程。然后父进程把缓存的写命令也写入到临时文件。
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>-<span class="w"> </span><span class="m">4</span>.<span class="w"> </span>现在父进程可以使用临时文件替换老的aof文件，并重命名，后面收到的写命令也开始往新的aof文件中追加。
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632816192423.png"><img alt="file" src="http://cdn.jujimeizuo.cn/blog/2021/09/image-1632816192423.png"/></a></p>
-<h3 id="_10">优点<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li>每一次修改都会同步，文件的完整性会更加好</li>
-<li>没秒同步一次，可能会丢失一秒的数据</li>
-<li>从不同步，效率最高</li>
-</ol>
-<h3 id="_11">缺点<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li>相对于数据文件来说，<span>aof<span class="heti-spacing"> </span></span>远远大于<span><span class="heti-spacing"> </span>rdb</span>，修复速度比<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>慢！</li>
-<li><span>Aof<span class="heti-spacing"> </span></span>运行效率也要比<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>慢，所以我们<span class="heti-skip"><span class="heti-spacing"> </span>redis<span class="heti-spacing"> </span></span>默认的配置就是<span class="heti-skip"><span class="heti-spacing"> </span>rdb<span class="heti-spacing"> </span></span>持久化</li>
-</ol>
-<h2 id="_12">如何选择哪种持久化方式<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>一般来说， 如果想达到足以媲美<span class="heti-skip"><span class="heti-spacing"> </span>PostgreSQL<span class="heti-spacing"> </span></span>的数据安全性， 你应该同时使用两种持久化功能。</p>
-<p>如果你非常关心你的数据， 但仍然可以承受数分钟以内的数据丢失， 那么你可以只使用<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>持久化。</p>
-<p>有很多用户都只使用<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>持久化， 但并不推荐这种方式： 因为定时生成<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>快照（snapshot）非常便于进行数据库备份， 并且<span class="heti-skip"><span class="heti-spacing"> </span>RDB<span class="heti-spacing"> </span></span>恢复数据集的速度也要比<span class="heti-skip"><span class="heti-spacing"> </span>AOF<span class="heti-spacing"> </span></span>恢复的速度要快。</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月17日 19:14:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月3日 20:20:44</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月17日 19:14:43</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月3日 20:20:44</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -1341,7 +1332,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 数据类型" class="md-footer__link md-footer__link--prev" href="../datatype/" rel="prev">
+<a aria-label="上一页: 初识 SLAM" class="md-footer__link md-footer__link--prev" href="../lec1/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1350,17 +1341,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              数据类型
+              初识 SLAM
             </div>
 </div>
 </a>
-<a aria-label="下一页: 事务" class="md-footer__link md-footer__link--next" href="../work/" rel="next">
+<a aria-label="下一页: 数理基础" class="md-footer__link md-footer__link--next" href="../../../../mb/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              事务
+              数理基础
             </div>
 </div>
 <div class="md-footer__button md-icon">

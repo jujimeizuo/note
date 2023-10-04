@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/hpc/vectorizecompute/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/cv/mvg/camera-model/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>向量化计算 - 狙击美佐的笔记本</title>
+<title>摄像机模型 - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -20,6 +20,7 @@
 <link href="../../../css/card.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -75,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              向量化计算
+              摄像机模型
             
           </span>
 </div>
@@ -149,12 +150,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../../cs/">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../cv/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         CV &amp; Robot
       </a>
 </li>
@@ -221,10 +222,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Computer Science</a>
+<a href="../../../cs/">Computer Science</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -238,7 +239,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/">编程语言</a>
+<a href="../../../cs/pl/">编程语言</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -252,7 +253,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/c_cpp/">C/C++</a>
+<a href="../../../cs/pl/c_cpp/">C/C++</a>
 <label for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -264,12 +265,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/system_knowledge/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/system_knowledge/">
         C++ 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
         C++ 各种函数使用
       </a>
 </li>
@@ -279,7 +280,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/python/">Python</a>
+<a href="../../../cs/pl/python/">Python</a>
 <label for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -291,17 +292,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/basic/">
+<a class="md-nav__link" href="../../../cs/pl/python/basic/">
         Python 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/numpy/">
+<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
         Numpy 科学计算库
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/virtual/">
+<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
         Python 虚拟环境
       </a>
 </li>
@@ -311,7 +312,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/go/">Go</a>
+<a href="../../../cs/pl/go/">Go</a>
 <label for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -323,12 +324,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/go/basic/">
+<a class="md-nav__link" href="../../../cs/pl/go/basic/">
         Go 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/go/gin/">
+<a class="md-nav__link" href="../../../cs/pl/go/gin/">
         gin框架 (TODO)
       </a>
 </li>
@@ -338,7 +339,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/java/">Java</a>
+<a href="../../../cs/pl/java/">Java</a>
 </div>
 <nav aria-label="Java" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_5">
@@ -365,12 +366,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
         基础数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
         算法设计与分析
       </a>
 </li>
@@ -390,27 +391,27 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ai/mode-recognition/">
+<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
         模式识别
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ai/ml/">
+<a class="md-nav__link" href="../../../cs/ai/ml/">
         机器学习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ai/dl/">
+<a class="md-nav__link" href="../../../cs/ai/dl/">
         神经网络与深度学习
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">高性能计算</a>
+<a href="../../../cs/hpc/">高性能计算</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -422,33 +423,32 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../outline/">
+<a class="md-nav__link" href="../../../cs/hpc/outline/">
         概论
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
         向量化计算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gpu/">
+<a class="md-nav__link" href="../../../cs/hpc/gpu/">
         GPU 编程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mpi/">
+<a class="md-nav__link" href="../../../cs/hpc/mpi/">
         MPI 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../openmp/">
+<a class="md-nav__link" href="../../../cs/hpc/openmp/">
         OpenMP 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../taichi/">
+<a class="md-nav__link" href="../../../cs/hpc/taichi/">
         Taichi 基础
       </a>
 </li>
@@ -458,7 +458,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../software/">软件相关</a>
+<a href="../../../cs/software/">软件相关</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -470,22 +470,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/design-pattern/">
+<a class="md-nav__link" href="../../../cs/software/design-pattern/">
         设计模式
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/sca/">
+<a class="md-nav__link" href="../../../cs/software/sca/">
         软件构件与体系结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/compa/">
+<a class="md-nav__link" href="../../../cs/software/compa/">
         COM 原理与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/piaserver/">
+<a class="md-nav__link" href="../../../cs/software/piaserver/">
         应用服务器原理与实现
       </a>
 </li>
@@ -505,7 +505,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/mysql/">
+<a class="md-nav__link" href="../../../cs/db/mysql/">
         MySQL
       </a>
 </li>
@@ -522,17 +522,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/datatype/">
+<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/cjh/">
+<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
         持久化
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/work/">
+<a class="md-nav__link" href="../../../cs/db/redis/work/">
         事务
       </a>
 </li>
@@ -555,7 +555,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../others/regex/">
+<a class="md-nav__link" href="../../../cs/others/regex/">
         RegEx 正则表达式
       </a>
 </li>
@@ -565,10 +565,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/">CV &amp; Robot</a>
+<a href="../../">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -582,7 +582,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/ia-ocv/">图像分析 &amp; OpenCV</a>
+<a href="../../ia-ocv/">图像分析 &amp; OpenCV</a>
 <label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -594,22 +594,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/ia-ocv/image-analysis/">
+<a class="md-nav__link" href="../../ia-ocv/image-analysis/">
         图像分析与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/ia-ocv/opencv/">
+<a class="md-nav__link" href="../../ia-ocv/opencv/">
         OpenCV
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/mvg/">多视图几何</a>
+<a href="../">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -621,29 +621,139 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/eval/">
+<a class="md-nav__link" href="../eval/">
         算法评价和误差分析
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          摄像机模型
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         摄像机模型
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    有限摄像机
+  </a>
+<nav aria-label="有限摄像机" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    基本针孔模型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ccd">
+    CCD 摄像机
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    有限射影摄像机
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    射影摄像机
+  </a>
+<nav aria-label="射影摄像机" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    摄像机构造
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    射影摄像机对点的作用
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    点的深度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    摄像机矩阵的分解
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    无穷远摄像机
+  </a>
+<nav aria-label="无穷远摄像机" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    仿射摄像机
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    应用仿射摄像机的误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p_infty">
+    \(P_\infty\) 的分解
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    仿射摄像机的层次
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    仿射摄像机的其他性质
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    一般无穷远摄像机
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    其他摄像机模型
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -651,7 +761,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/slam/">SLAM</a>
+<a href="../../slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -665,7 +775,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../../slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -677,12 +787,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/slam/vslam14/lec1/">
+<a class="md-nav__link" href="../../slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/slam/vslam14/lec2/">
+<a class="md-nav__link" href="../../slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -897,6 +1007,109 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    有限摄像机
+  </a>
+<nav aria-label="有限摄像机" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    基本针孔模型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ccd">
+    CCD 摄像机
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    有限射影摄像机
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    射影摄像机
+  </a>
+<nav aria-label="射影摄像机" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    摄像机构造
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    射影摄像机对点的作用
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    点的深度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    摄像机矩阵的分解
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    无穷远摄像机
+  </a>
+<nav aria-label="无穷远摄像机" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    仿射摄像机
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    应用仿射摄像机的误差
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p_infty">
+    \(P_\infty\) 的分解
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    仿射摄像机的层次
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    仿射摄像机的其他性质
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    一般无穷远摄像机
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    其他摄像机模型
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -905,19 +1118,457 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cs/hpc/vectorizecompute.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/mvg/camera-model.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">向量化计算<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="_1">摄像机模型<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>摄像机是<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>世界（物体空间）和<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>图像之间的映射。多视图中主要关心<strong>中心投影</strong>。</li>
+<li>具体模型主要分成有限中心的摄像机模型和“无穷远”中心的摄像机模型。</li>
+<li>本章主要讨论点的投影。</li>
+</ul>
+</div>
+<h2 id="_2">有限摄像机<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">基本针孔模型<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>令投影中心位于一个欧氏坐标系的原点，而平面<span class="arithmatex">\(Z=f\)</span>被称为<strong>图像平面</strong>或<strong>聚焦平面</strong>。</li>
+<li>在针孔模型下，空间坐标为<span class="arithmatex">\(\mathbf{X}=(X,Y,Z)^\top\)</span>，从世界坐标到图像坐标的中心投影为<span class="arithmatex">\((X,Y,Z)^\top \to (fX/Z,fY/Z)^\top\)</span></li>
+<li>射影中心称为<strong>摄像机中心</strong>，也成<strong>光心</strong>。</li>
+<li>
+<p>摄像机中心到图像平面的垂线称为摄像机的<strong>主轴</strong>或<strong>主射线</strong>，而主轴与图像平面的交点称为<strong>主点</strong>，过摄像机中心平行于图像平面的平面称为摄像机的<strong>主平面</strong>。</p>
+</li>
+<li>
+<p>用齐次坐标表示中心投影：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{bmatrix}
+X \\
+Y \\
+Z \\
+1
+\end{bmatrix}
+\to
+\begin{bmatrix}
+fX \\
+fY \\
+Z
+\end{bmatrix}
+=
+\begin{bmatrix}
+f &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; f &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+X \\
+Y \\
+Z \\
+1
+\end{bmatrix}
+\\
+\\
+上式也可表示为 \ \ \ \mathbf{x}=P\mathbf{X} \ \ \ 其中 \  \mathbf{X}用四维齐次矢量(X,Y,Z,1)^\top 表示  \ P = diag(f,f,1)[\mathbf{I}|\mathbf{0}]
+\]</div>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/mvg/camera-model.jpg"><img alt="针孔摄像机几何" src="https://cdn.jujimeizuo.cn/note/cv/mvg/camera-model.jpg"/></a></center>
+<ul>
+<li>
+<p><strong>主点偏置</strong></p>
+<ul>
+<li>上面讨论的图像平面的坐标原点在主点上，但实际上可能不是，一般情形的映射为<span class="arithmatex">\((X,Y,Z)^\top \to (fX/Z+p_x,fY/Z+p_y)^\top\)</span>，根据上式推导：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{bmatrix}
+X \\
+Y \\
+Z \\
+1
+\end{bmatrix}
+\to
+\begin{bmatrix}
+fX+Zp_x \\
+fY+Zp_y \\
+Z
+\end{bmatrix}
+=
+\begin{bmatrix}
+f &amp; 0 &amp; p_x &amp; 0 \\
+0 &amp; f &amp; p_y &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+X \\
+Y \\
+Z \\
+1
+\\
+\\
+\end{bmatrix}
+\]</div>
+<ul>
+<li>令<span class="arithmatex">\(K = \begin{bmatrix} f &amp; 0 &amp; p_x \\ 0 &amp; f &amp; p_y \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\)</span><span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>则有<span class="arithmatex">\(\mathbf{x}=K[\mathbf{I}|\mathbf{0}]\mathbf{X}_{cam}\)</span>，其中点<span class="arithmatex">\(\mathbf{X}_{cam}\)</span>是摄像机坐标系，矩阵<span class="arithmatex">\(K\)</span>称为<strong>摄像机标定矩阵（内参矩阵）</strong>，<span class="arithmatex">\([\mathbf{I}|\mathbf{0}]\)</span>称为<strong>外参矩阵</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>摄像机旋转与位移</strong></p>
+</li>
+</ul>
+<div class="arithmatex">\[
+X_{cam}=
+\begin{bmatrix}
+R &amp; -R\tilde{\mathbf{C}} \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+X \\
+Y \\
+Z \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+R &amp; -R\tilde{\mathbf{C}} \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\mathbf{X}
+\\
+\mathbf{x}=KR[\mathbf{I}|-\tilde{\mathbf{C}}]\mathbf{X}
+\]</div>
+<ul>
+<li>一般的针孔摄像机<span class="arithmatex">\(P=KR[\mathbf{I}|-\tilde{\mathbf{C}}]\)</span>有<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>个自由度；<span>3<span class="heti-spacing"> </span></span>个来自<span class="arithmatex">\(K\)</span>，<span>3<span class="heti-spacing"> </span></span>个来自<span class="arithmatex">\(R\)</span>，<span>3<span class="heti-spacing"> </span></span>个来自<span class="arithmatex">\(\tilde{\mathbf{C}}\)</span>。<span class="arithmatex">\(K\)</span>中的参数称为摄像机<strong>内部参数</strong>或摄像机的<strong>内部校准</strong>。<span class="arithmatex">\(R\)</span>和<span class="arithmatex">\(\tilde{\mathbf{C}}\)</span>并称为<strong>外部参数</strong>或<strong>外部校准</strong>。摄像机矩阵可简化成：</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{P}=K[R|\mathbf{t}]，其中 \ \mathbf{t}=-R\tilde{\mathbf{C}}
+\]</div>
+<h3 id="ccd"><span>CCD<span class="heti-spacing"> </span></span>摄像机<a class="headerlink" href="#ccd" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>CCD<span class="heti-spacing"> </span></span>摄像机的像素可能不是正方形，如果图像坐标以像素来测量，那么需要在每个方向上引入非等量尺度因子。</li>
+<li>一般形式：</li>
+</ul>
+<div class="arithmatex">\[
+K=
+\begin{bmatrix}
+\alpha_x &amp; 0 &amp; x_0 \\
+0 &amp; \alpha_y &amp; y_0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<ul>
+<li>其中<span class="arithmatex">\(\alpha_x=fm_x, \alpha_y=fm_y,x_0=m_xp_x,y_0=m_yp_y\)</span>。<span class="arithmatex">\(m_x,m_y\)</span>分别是在<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>y<span class="heti-spacing"> </span></span>方向上图像坐标单位矩阵的像素数。</li>
+<li>一个<span class="heti-skip"><span class="heti-spacing"> </span>CCD<span class="heti-spacing"> </span></span>摄像机有<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>个自由度。</li>
+</ul>
+<h3 id="_4">有限射影摄像机<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>考虑形如下面的标定矩阵，增加的参数<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>称为<strong>扭曲参数</strong>，对大多数标准的摄像机来说，其扭曲参数为<span><span class="heti-spacing"> </span>0</span>。</li>
+</ul>
+<div class="arithmatex">\[
+K=
+\begin{bmatrix}
+\alpha_x &amp; s &amp; x_0 \\
+0 &amp; \alpha_y &amp; y_0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<ul>
+<li>一个有限射影摄像机有<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>个自由度。</li>
+</ul>
+<h2 id="_5">射影摄像机<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_6">摄像机构造<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>一般射影摄像机可以按<span class="arithmatex">\(P=[M|\mathbf{p}_4]\)</span>分块，其中<span class="arithmatex">\(M\)</span>是<span class="arithmatex">\(3 \times 3\)</span>矩阵，如果<span class="arithmatex">\(M\)</span>是非奇异的，那么它是有限摄像机，反之则不然</li>
+<li><strong>摄像机中心</strong>：摄像机中心<span class="arithmatex">\(C\)</span>是<span class="arithmatex">\(P\)</span>的一维右零空间，即<span class="arithmatex">\(P \mathbf{C}=\mathbf{0}\)</span><ul>
+<li><strong>有限摄像机</strong>（<span>M<span class="heti-spacing"> </span></span>非奇异）<span class="arithmatex">\(\mathbf{C}=\begin{bmatrix} -M^{-1}\mathbf{p}_4 \\ 1 \end{bmatrix}\)</span></li>
+<li><strong>无穷远摄像机</strong>（<span>M<span class="heti-spacing"> </span></span>奇异）<span class="arithmatex">\(\mathbf{C} = \begin{bmatrix} \mathbf{d} \\ 0 \end{bmatrix}\)</span>，其中，<span class="arithmatex">\(\mathbf{d}\)</span>是<span class="arithmatex">\(M\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>维零矢量，即<span class="arithmatex">\(M \mathbf{d}=\mathbf{0}\)</span></li>
+</ul>
+</li>
+<li><strong>列点</strong>：对于<span class="arithmatex">\(i=1,..,3\)</span>，列矢量<span class="arithmatex">\(\mathbf{p}_i\)</span>分别对应于<span class="arithmatex">\(X,Y,Z\)</span>轴在图像上的消影点。列<span class="arithmatex">\(\mathbf{p}_4\)</span>是坐标原点的图像</li>
+<li><strong>主平面</strong>：摄像机的主平面是<span class="arithmatex">\(P\)</span>的最后一行<span class="arithmatex">\(\mathbf{P}^3\)</span></li>
+<li><strong>轴平面</strong>：平面<span class="arithmatex">\(\mathbf{P}^1\)</span>和<span class="arithmatex">\(\mathbf{P}^2\)</span>（<span class="arithmatex">\(P\)</span>的第一和第二行）表示空间中过摄像机中心的平面，分别对应于映射到图像上直线<span class="arithmatex">\(x=0\)</span>和<span class="arithmatex">\(y=0\)</span>的点</li>
+<li><strong>主点</strong>：图像点<span class="arithmatex">\(\mathbf{x}_0=M\mathbf{m}^3\)</span>是摄像机的主点，其中<span class="arithmatex">\(\mathbf{m}^{3\top}\)</span>是<span class="arithmatex">\(M\)</span>的第三行</li>
+<li><strong>主射线</strong>：摄像机的主射线（主轴）是过摄像机中心<span class="arithmatex">\(\mathbf{C}\)</span>而方向矢量为<span class="arithmatex">\(\mathbf{m}^{3\top}\)</span>的射线。主轴矢量<span class="arithmatex">\(\mathbf{v}=\det(M)\mathbf{m}^3\)</span>指向摄像机的前方</li>
+</ul>
+<h3 id="_7">射影摄像机对点的作用<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong>正向投影</strong>：在无穷远平面上的点<span class="arithmatex">\(\mathbf{D}=(\mathbf{d}^\top,\mathbf{0})^\top\)</span>表示消影点，这些点映射到<span class="arithmatex">\(\mathbf{x}=P\mathbf{D}=[M|\mathbf{p}_4]=M\mathbf{d}\)</span></li>
+<li>
+<p><strong>点到射影的反向投影</strong>：</p>
+<ul>
+<li>给定图像中的一个点<span class="arithmatex">\(\mathbf{x}\)</span>来确定是空间的那些点被映射到该点。这些点交组成过摄像机中心的一条空间射线：<span class="arithmatex">\(\mathbf{X}(\lambda)=P^+\mathbf{x}+\lambda\mathbf{C}\)</span>其中<span class="arithmatex">\(P^+\)</span>是<span class="arithmatex">\(P\)</span>的伪逆。<span class="arithmatex">\(P^+=P^\top(PP^\top)^{-1}\)</span>并且<span class="arithmatex">\(PP^+=I\)</span></li>
+<li>一个图像点<span class="arithmatex">\(\mathbf{x}\)</span>反向投影的射线交无穷远平面于点<span class="arithmatex">\(\mathbf{D}=((M^{-1}\mathbf{x})^\top, 0)^\top\)</span>。将射线写成其与摄像机中心的两点的连接<span><span class="heti-spacing"> </span>:</span></li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{X}(\mu)=\mu\begin{bmatrix}M^{-1}\mathbf{x}\\0\end{bmatrix}+
+\begin{bmatrix}-M^{-1}\mathbf{p}_4\\1\end{bmatrix}=
+\begin{bmatrix}M^{-1}(\mu\mathbf{x}-\mathbf{p}_4)\\1\end{bmatrix}
+\]</div>
+</li>
+</ul>
+<h3 id="_8">点的深度<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>令<span class="arithmatex">\(\mathbf{X}=(X,Y,Z,T)^\top\)</span>是一个<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点而<span class="arithmatex">\(P=[M|\mathbf{p}_4]\)</span>是一个有限摄像机的摄像机矩阵，假定<span class="arithmatex">\(P(X,Y,Z,T)^\top=w(x,y,1)^\top\)</span>，那么<span class="arithmatex">\(depth(\mathbf{X};P)=\frac{sign(\det M)w}{T\parallel \mathbf{m}^3 \parallel}\)</span>是在摄像机主平面前方的点<span class="arithmatex">\(\mathbf{X}\)</span>的深度</li>
+</ul>
+<h3 id="_9">摄像机矩阵的分解<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong>求摄像机中心</strong>：中心<span class="arithmatex">\(\mathbf{C}=(X,Y,Z,T)^\top\)</span>，其中<ul>
+<li><span class="arithmatex">\(X=\det([\mathbf{p}_2, \mathbf{p}_3, \mathbf{p}_4])\)</span></li>
+<li><span class="arithmatex">\(Y=-\det([\mathbf{p}_1, \mathbf{p}_3, \mathbf{p}_4])\)</span></li>
+<li><span class="arithmatex">\(Z=\det([\mathbf{p}_1, \mathbf{p}_2, \mathbf{p}_4])\)</span></li>
+<li><span class="arithmatex">\(T=-\det([\mathbf{p}_1, \mathbf{p}_2, \mathbf{p}_3])\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>求摄像机定向和内部参数</strong>：在有限摄像机的情形：</p>
+<div class="arithmatex">\[
+P=[M|-M\tilde{\mathbf{C}}]=K[R|-R\tilde{\mathbf{C}}] \\
+K=
+\begin{bmatrix}
+\alpha_x &amp; s &amp; x_0 \\
+0 &amp; \alpha_y &amp; y_0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\alpha_x\)</span>是<span class="arithmatex">\(x-\)</span>坐标方向的比例因子</li>
+<li><span class="arithmatex">\(\alpha_y\)</span>是<span class="arithmatex">\(y-\)</span>坐标方向的比例因子</li>
+<li><span class="arithmatex">\(s\)</span>是扭曲参数</li>
+<li><span class="arithmatex">\((x_0,y_0)^\top\)</span>是主点的坐标</li>
+<li><strong>像素长宽比</strong><span class="arithmatex">\(\alpha_x/\alpha_y\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_10">无穷远摄像机<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p>无穷远摄像机是中心在无穷远平面上的摄像机。无穷选摄像机可以分为<strong>仿射摄像机</strong>和<strong>非仿射摄像机</strong></p>
+</blockquote>
+<h3 id="_11">仿射摄像机<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>仿射摄像机是矩阵<span class="arithmatex">\(P\)</span>的最后一行<span class="arithmatex">\(P^{3\top}\)</span>形如<span class="arithmatex">\((0,0,0,1)\)</span>的摄像机</li>
+<li>
+<p>对于有限射影摄像机：</p>
+<div class="arithmatex">\[
+P_0=KR[I|-\tilde{\mathbf{C}}]=K
+\begin{bmatrix}
+\mathbf{r}^{1\top}-\mathbf{r}^{1\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{2\top}-\mathbf{r}^{2\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{3\top}-\mathbf{r}^{3\top}\tilde{\mathbf{C}}
+\end{bmatrix}
+\]</div>
+<ul>
+<li>其中<span class="arithmatex">\(\mathbf{r}^{i\top}\)</span>是旋转矩阵的第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>行。而数值的<span class="arithmatex">\(d_0=-\mathbf{r}^{3\top}\tilde{\mathbf{C}}\)</span>是世界原点到摄像机中心在主射线方向上的距离</li>
+<li>沿主射线跟踪的效果是将矩阵的<span class="arithmatex">\((3,4)\)</span>元素用世界原点到摄像机中心的深度<span class="arithmatex">\(d_t\)</span>替代</li>
+<li>假定使图像大小保持不变的放大因子是<span class="arithmatex">\(k=d_t/d_0\)</span>，在时间<span class="arithmatex">\(t\)</span>所产生的摄像机矩阵是：</li>
+</ul>
+<div class="arithmatex">\[
+P_t=K
+\begin{bmatrix}
+d_t/d_0 &amp; &amp; \\
+&amp; d_t/d_0 &amp; \\
+&amp; &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{r}^{1\top}&amp;-\mathbf{r}^{1\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{2\top}&amp;-\mathbf{r}^{2\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{3\top}&amp;d_t
+\end{bmatrix}=
+\frac{d_t}{d_0}K
+\begin{bmatrix}
+\mathbf{r}^{1\top}&amp;-\mathbf{r}^{1\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{2\top}&amp;-\mathbf{r}^{2\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{3\top}d_0/d_t&amp;d_0
+\end{bmatrix}
+\]</div>
+<ul>
+<li>因子<span class="arithmatex">\(d_t/d_0\)</span>可以忽略，当<span class="arithmatex">\(d_t\)</span>趋向无穷大时，该矩阵变成</li>
+</ul>
+<div class="arithmatex">\[
+P_\infty=\lim_{t \to \infty}P_t=K
+\begin{bmatrix}
+\mathbf{r}^{1\top}&amp;-\mathbf{r}^{1\top}\tilde{\mathbf{C}} \\
+\mathbf{r}^{2\top}&amp;-\mathbf{r}^{2\top}\tilde{\mathbf{C}} \\
+\mathbf{0}^\top&amp;d_0
+\end{bmatrix}
+\]</div>
+</li>
+</ul>
+<h3 id="_12">应用仿射摄像机的误差<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>在过世界原点并垂直子主轴方向的平面上的任何点的图像在这种变焦和运动的复合作用下保持不变。这样的一个点可以记为<span class="arithmatex">\(\mathbf{X}=\begin{bmatrix} \alpha \mathbf{r}^1+\beta \mathbf{r}^2 \\ 1\end{bmatrix}\)</span>，因为<span class="arithmatex">\(\mathbf{r}^{3\top}(\alpha \mathbf{r}^1+\beta \mathbf{r}^2)=0\)</span>，即<span class="arithmatex">\(P_0\mathbf{X}=P_t\mathbf{X}=P_\infty\mathbf{X}\)</span>对所有<span class="arithmatex">\(t\)</span>成立</li>
+<li>
+<p>对不在该平面上的点，设一点<span class="arithmatex">\(\mathbf{X}\)</span>离该平面的垂直距离是<span class="arithmatex">\(\Delta\)</span></p>
+<ul>
+<li>这个<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点可以表示成</li>
+</ul>
+<div class="arithmatex">\[\mathbf{X}=\begin{bmatrix} \alpha \mathbf{r}^1+\beta \mathbf{r}^2 + \Delta\mathbf{r}^3 \\ 1\end{bmatrix}\]</div>
+<ul>
+<li>并分别被摄像机<span class="arithmatex">\(P_0\)</span>和<span class="arithmatex">\(P_\infty\)</span>影像到</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{x}_{proj}=P_0\mathbf{X}=K\begin{bmatrix} \tilde{x} \\ \tilde{y} \\ d_0+\Delta \end{bmatrix} \ \ \
+\mathbf{x}_{affine}=P_\infty\mathbf{X}=K\begin{bmatrix} \tilde{x} \\ \tilde{y} \\ d_0 \end{bmatrix}
+\]</div>
+<ul>
+<li>其中<span class="arithmatex">\(\tilde{x}=\alpha-\mathbf{r}^{1\top}\tilde{\mathbf{C}},\tilde{y}=\beta-\mathbf{r}^{2\top}\tilde{\mathbf{C}}\)</span>，记标定矩阵为：</li>
+</ul>
+<div class="arithmatex">\[
+K=\begin{bmatrix} K_{2 \times 2} &amp; \tilde{\mathbf{x}}_0 \\ \tilde{\mathbf{0}}^\top &amp; 1 \end{bmatrix}
+\]</div>
+<ul>
+<li>因此两点之间的关系是</li>
+</ul>
+<div class="arithmatex">\[
+\tilde{\mathbf{x}}_{affine}-\tilde{\mathbf{x}}_0=
+\frac{d_0+\Delta}{d_0}(\tilde{\mathbf{x}}_{proj}-\tilde{\mathbf{x}}_0)
+\]</div>
+<ul>
+<li>用<span class="arithmatex">\(P_\infty\)</span>仿射近似真实摄像机矩阵<span class="arithmatex">\(P_0\)</span>的效应是把点<span class="arithmatex">\(\mathbf{X}\)</span>的图像径向地靠近或离开主点<span class="arithmatex">\(\tilde{\mathbf{x}}_0\)</span>，其加权因子是<span class="arithmatex">\((d_0+\Delta)/d_0=1+\Delta/d_0\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>仿射影像条件</strong></p>
+<div class="arithmatex">\[
+\tilde{\mathbf{x}}_{affine}-\tilde{\mathbf{x}}_{proj}=\frac{\Delta}{d_0}(\tilde{\mathbf{x}}_{proj}-\tilde{\mathbf{x}}_0)
+\]</div>
+<ul>
+<li>深度的起伏<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span><span class="arithmatex">\(\Delta\)</span><span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>相对平均深度<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span><span class="arithmatex">\(d_0\)</span><span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>较小</li>
+<li>点离主轴的距离较小</li>
+</ul>
+</li>
+</ul>
+<h3 id="p_infty"><span class="arithmatex">\(P_\infty\)</span> 的分解<a class="headerlink" href="#p_infty" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong>摄像机矩阵</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+P_\infty=
+\begin{bmatrix}
+K_{2 \times 2} &amp; \hat{\mathbf{0}} \\
+\hat{\mathbf{0}}^\top &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\hat{R} &amp; \hat{\mathbf{t}} \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}=
+\begin{bmatrix}
+K_{2 \times 2} &amp; \tilde{\mathbf{x}}_0 \\
+\hat{\mathbf{0}}^\top &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\hat{R} &amp; \hat{\mathbf{0}} \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\]</div>
+<ul>
+<li><strong>平行投影</strong><ul>
+<li><strong>平行投影矩阵</strong><span class="arithmatex">\(\begin{bmatrix} 1&amp;0&amp;0&amp;0\\0&amp;1&amp;0&amp;0\\0&amp;0&amp;0&amp;1 \end{bmatrix}\)</span> 代替离有限摄像机的规范射影矩阵<span class="arithmatex">\([\mathbf{I}|\mathbf{0}]\)</span></li>
+<li><strong>标定矩阵</strong><span class="arithmatex">\(\begin{bmatrix}K_{2 \times 2} &amp; \hat{\mathbf{0}} \\\hat{\mathbf{0}}^\top &amp; 1\end{bmatrix}\)</span> 代替了有限摄像机的<span class="arithmatex">\(K\)</span></li>
+<li><strong>主点无定义</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="_13">仿射摄像机的层次<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong>正投影</strong>：正投影摄像机有<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个自由度，即描述旋转矩阵<span class="arithmatex">\(R\)</span>的三个参数，加上两个偏置参数<span class="arithmatex">\(t_1\)</span>和<span class="arithmatex">\(t_2\)</span></li>
+</ul>
+<div class="arithmatex">\[
+P=
+\begin{bmatrix}
+\mathbf{r}^{1\top} &amp; t_1 \\
+\mathbf{r}^{2\top} &amp; t_2 \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\]</div>
+<ul>
+<li><strong>缩放正投影</strong>：缩放正投影是正投影紧接一个均匀缩放，有<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个自由度</li>
+</ul>
+<div class="arithmatex">\[
+P=
+\begin{bmatrix}
+\mathbf{r}^{1\top} &amp; t_1 \\
+\mathbf{r}^{2\top} &amp; t_2 \\
+\mathbf{0}^\top &amp; 1/k
+\end{bmatrix}
+\]</div>
+<ul>
+<li><strong>弱透视投影</strong>：与有限<span class="heti-skip"><span class="heti-spacing"> </span>CCD<span class="heti-spacing"> </span></span>摄像机类似，考虑两根图像轴缩放因子不一样的无穷远摄像机，有<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>个自由度</li>
+</ul>
+<div class="arithmatex">\[
+P=
+\begin{bmatrix}
+\alpha_x &amp; &amp; \\
+&amp; \alpha_y &amp; \\
+&amp; &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{r}^{1\top} &amp; t_1 \\
+\mathbf{r}^{2\top} &amp; t_2 \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\]</div>
+<ul>
+<li><strong>仿射摄像机<span class="arithmatex">\(P_A\)</span></strong>：如<span class="arithmatex">\(P_\infty\)</span>一样，可以认为是有限射影摄像机的平行投影，有<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个自由度</li>
+</ul>
+<div class="arithmatex">\[
+P_A=
+\begin{bmatrix}
+\alpha_x &amp; s &amp; \\
+&amp; \alpha_y &amp; \\
+&amp; &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{r}^{1\top} &amp; t_1 \\
+\mathbf{r}^{2\top} &amp; t_2 \\
+\mathbf{0}^\top &amp; 1
+\end{bmatrix}
+\]</div>
+<h3 id="_14">仿射摄像机的其他性质<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>主平面是无穷远平面的任何射影摄像机矩阵是仿射摄像机矩阵</li>
+<li>平行的世界直线被投影成平行的图像直线</li>
+<li>满足<span class="arithmatex">\(M_{2 \times 3} \mathbf{d}=\mathbf{0}\)</span>的矢量<span class="arithmatex">\(\mathbf{d}\)</span>是平行投影的方向，而<span class="arithmatex">\((\mathbf{d}^\top,0)^\top\)</span>是摄像机中心，因为<span class="arithmatex">\(P_A\begin{bmatrix} \mathbf{d} \\ 0 \end{bmatrix}=\mathbf{0}\)</span></li>
+</ul>
+<h3 id="_15">一般无穷远摄像机<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">仿射摄像机</th>
+<th align="left">非仿射摄像机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">摄像机中心在<span class="arithmatex">\(\pi_\infty\)</span>上</td>
+<td align="left">是</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">主平面是<span class="arithmatex">\(\pi_\infty\)</span></td>
+<td align="left">是</td>
+<td align="left">不是</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\pi_\infty\)</span>的点的图像在<span class="arithmatex">\(\mathbf{l}_\infty\)</span>上</td>
+<td align="left">是</td>
+<td align="left">一般不是</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_16">其他摄像机模型<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>推扫式摄像机</li>
+<li>线阵摄像机</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月20日 21:06:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月4日 16:07:11</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月20日 21:06:07</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月4日 16:07:11</span>
 </small>
 </div>
 </article>
@@ -930,7 +1581,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 概论" class="md-footer__link md-footer__link--prev" href="../outline/" rel="prev">
+<a aria-label="上一页: 算法评价和误差分析" class="md-footer__link md-footer__link--prev" href="../eval/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -939,17 +1590,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              概论
+              算法评价和误差分析
             </div>
 </div>
 </a>
-<a aria-label="下一页: GPU 编程" class="md-footer__link md-footer__link--next" href="../gpu/" rel="next">
+<a aria-label="下一页: SLAM" class="md-footer__link md-footer__link--next" href="../../slam/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              GPU 编程
+              SLAM
             </div>
 </div>
 <div class="md-footer__button md-icon">
