@@ -11,6 +11,7 @@
 - [3D 射影几何和变换](pjt3d/)
 - [估计——2D 射影变换](est2d/)
 - [算法评价和误差分析](eval/)
+- [摄像机模型](camera-model/)
 
 ## Reference
 

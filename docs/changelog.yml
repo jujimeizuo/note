@@ -1,19 +1,22 @@
 - "2023":
   - "2023-10-03":
     - newpage:
+        text: CV & Robot > 多视图几何 > 摄像机模型
+        href: /cv/mvg/camera-model/
+    - newpage:
         text: CV & Robot > 多视图几何 > 算法评价和误差分析
-        href: /cs/cv/mvg/eval/
+        href: /cv/mvg/eval/
   - "2023-10-03":
     - newpage:
         text: CV & Robot > 多视图几何 > 估计——2D 射影变换
-        href: /cs/cv/mvg/est2d/
+        href: /cv/mvg/est2d/
     - newpage:
         text: CV & Robot > SLAM > 视觉 SLAM 十四讲 > 三维空间刚体运动
-        href: /cs/cv/slam/vslam14/lec2/
+        href: /cv/slam/vslam14/lec2/
   - "2023-09-30":
     - newpage:
         text: CV & Robot > 多视图几何 > 3D 射影几何变换
-        href: /cs/cv/mvg/pjt3d/
+        href: /cv/mvg/pjt3d/
   - "2023-09-17":
     - newpage:
         text: 数理基础 > 最优化理论与方法 > 直线搜索
@@ -74,7 +77,7 @@
   - "2023-09-03":
     - newpage:
         text: CV & Robot > 多视图几何 > 2D 射影几何变换
-        href: /cs/cv/mvg/pjt2d/
+        href: /cv/mvg/pjt2d/
   - "2023-09-01":
     - newpage:
         text: Utils > 工具收集
