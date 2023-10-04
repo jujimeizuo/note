@@ -197,9 +197,10 @@ nav:
       - 2D 射影几何和变换: cv/mvg/pjt2d.md
       - 3D 射影几何和变换: cv/mvg/pjt3d.md
       - 估计——2D 射影变换: cv/mvg/est2d.md
+      - 算法评价和误差分析: cv/mvg/eval.md
     - SLAM:
       - cv/slam/index.md
-      - 视觉 SLAM 14 讲:
+      - 视觉 SLAM 十四讲:
         - cv/slam/vslam14/index.md
         - 初识 SLAM: cv/slam/vslam14/lec1.md
         - 三维空间刚体运动: cv/slam/vslam14/lec2.md

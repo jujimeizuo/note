@@ -1,8 +1,15 @@
 - "2023":
   - "2023-10-03":
     - newpage:
+        text: CV & Robot > 多视图几何 > 算法评价和误差分析
+        href: /cs/cv/mvg/eval/
+  - "2023-10-03":
+    - newpage:
         text: CV & Robot > 多视图几何 > 估计——2D 射影变换
         href: /cs/cv/mvg/est2d/
+    - newpage:
+        text: CV & Robot > SLAM > 视觉 SLAM 十四讲 > 三维空间刚体运动
+        href: /cs/cv/slam/vslam14/lec2/
   - "2023-09-30":
     - newpage:
         text: CV & Robot > 多视图几何 > 3D 射影几何变换

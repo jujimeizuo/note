@@ -5,4 +5,4 @@
 
 ## Table of Contents
 
-- [视觉 SLAM 14 讲](vslam14/)
+- [视觉 SLAM 十四讲](vslam14/)
