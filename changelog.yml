@@ -1,5 +1,12 @@
 - "2023":
-  - "2023-10-03":
+  - "2023-10-05":
+    - newpage:
+        text: CV & Robot > 多视图几何 > 计算摄像机矩阵 P
+        href: /cv/mvg/calc-p/
+    - newpage:
+        text: CV & Robot > 多视图几何 > 单视图几何
+        href: /cv/mvg/one-vg/
+  - "2023-10-04":
     - newpage:
         text: CV & Robot > 多视图几何 > 摄像机模型
         href: /cv/mvg/camera-model/

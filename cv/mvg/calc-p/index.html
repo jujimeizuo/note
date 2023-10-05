@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/ai/dl/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/cv/mvg/calc-p/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>神经网络与深度学习 - 狙击美佐的笔记本</title>
+<title>计算摄像机矩阵 P - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#p">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              神经网络与深度学习
+              计算摄像机矩阵 P
             
           </span>
 </div>
@@ -150,12 +150,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../../cs/">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../cv/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         CV &amp; Robot
       </a>
 </li>
@@ -222,10 +222,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Computer Science</a>
+<a href="../../../cs/">Computer Science</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/">编程语言</a>
+<a href="../../../cs/pl/">编程语言</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -253,7 +253,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/c_cpp/">C/C++</a>
+<a href="../../../cs/pl/c_cpp/">C/C++</a>
 <label for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -265,12 +265,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/system_knowledge/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/system_knowledge/">
         C++ 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
         C++ 各种函数使用
       </a>
 </li>
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/python/">Python</a>
+<a href="../../../cs/pl/python/">Python</a>
 <label for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -292,17 +292,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/basic/">
+<a class="md-nav__link" href="../../../cs/pl/python/basic/">
         Python 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/numpy/">
+<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
         Numpy 科学计算库
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/virtual/">
+<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
         Python 虚拟环境
       </a>
 </li>
@@ -312,7 +312,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/go/">Go</a>
+<a href="../../../cs/pl/go/">Go</a>
 <label for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -324,12 +324,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/go/basic/">
+<a class="md-nav__link" href="../../../cs/pl/go/basic/">
         Go 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/go/gin/">
+<a class="md-nav__link" href="../../../cs/pl/go/gin/">
         gin框架 (TODO)
       </a>
 </li>
@@ -339,7 +339,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pl/java/">Java</a>
+<a href="../../../cs/pl/java/">Java</a>
 </div>
 <nav aria-label="Java" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_5">
@@ -366,20 +366,20 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
         基础数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
         算法设计与分析
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_4">
           人工智能基础
           <span class="md-nav__icon md-icon"></span>
@@ -391,71 +391,19 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mode-recognition/">
+<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
         模式识别
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ml/">
+<a class="md-nav__link" href="../../../cs/ai/ml/">
         机器学习
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          神经网络与深度学习
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cs/ai/dl/">
         神经网络与深度学习
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    机器学习概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    线性模型
-  </a>
-<nav aria-label="线性模型" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    应用
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    感知器
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    两类感知器算法
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reference">
-    Reference
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -463,7 +411,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../hpc/">高性能计算</a>
+<a href="../../../cs/hpc/">高性能计算</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -475,32 +423,32 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hpc/outline/">
+<a class="md-nav__link" href="../../../cs/hpc/outline/">
         概论
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hpc/vectorizecompute/">
+<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
         向量化计算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hpc/gpu/">
+<a class="md-nav__link" href="../../../cs/hpc/gpu/">
         GPU 编程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hpc/mpi/">
+<a class="md-nav__link" href="../../../cs/hpc/mpi/">
         MPI 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hpc/openmp/">
+<a class="md-nav__link" href="../../../cs/hpc/openmp/">
         OpenMP 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../hpc/taichi/">
+<a class="md-nav__link" href="../../../cs/hpc/taichi/">
         Taichi 基础
       </a>
 </li>
@@ -510,7 +458,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../software/">软件相关</a>
+<a href="../../../cs/software/">软件相关</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -522,22 +470,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/design-pattern/">
+<a class="md-nav__link" href="../../../cs/software/design-pattern/">
         设计模式
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/sca/">
+<a class="md-nav__link" href="../../../cs/software/sca/">
         软件构件与体系结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/compa/">
+<a class="md-nav__link" href="../../../cs/software/compa/">
         COM 原理与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/piaserver/">
+<a class="md-nav__link" href="../../../cs/software/piaserver/">
         应用服务器原理与实现
       </a>
 </li>
@@ -557,7 +505,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/mysql/">
+<a class="md-nav__link" href="../../../cs/db/mysql/">
         MySQL
       </a>
 </li>
@@ -574,17 +522,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/datatype/">
+<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/cjh/">
+<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
         持久化
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/work/">
+<a class="md-nav__link" href="../../../cs/db/redis/work/">
         事务
       </a>
 </li>
@@ -607,7 +555,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../others/regex/">
+<a class="md-nav__link" href="../../../cs/others/regex/">
         RegEx 正则表达式
       </a>
 </li>
@@ -617,10 +565,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/">CV &amp; Robot</a>
+<a href="../../">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -634,7 +582,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/ia-ocv/">图像分析 &amp; OpenCV</a>
+<a href="../../ia-ocv/">图像分析 &amp; OpenCV</a>
 <label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -646,22 +594,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/ia-ocv/image-analysis/">
+<a class="md-nav__link" href="../../ia-ocv/image-analysis/">
         图像分析与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/ia-ocv/opencv/">
+<a class="md-nav__link" href="../../ia-ocv/opencv/">
         OpenCV
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/mvg/">多视图几何</a>
+<a href="../">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -673,37 +621,84 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/eval/">
+<a class="md-nav__link" href="../eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
+<a class="md-nav__link" href="../camera-model/">
         摄像机模型
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/calc-p/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          计算摄像机矩阵 P
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         计算摄像机矩阵 P
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    基本方程
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/one-vg/">
+<a class="md-nav__link" href="#_2">
+    几何误差
+  </a>
+<nav aria-label="几何误差" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    代数误差的集合解释
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    仿射摄像机的估计
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    受限摄像机估计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    径向失真
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../one-vg/">
         单视图几何
       </a>
 </li>
@@ -713,7 +708,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/slam/">SLAM</a>
+<a href="../../slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -727,7 +722,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../../slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -739,12 +734,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/slam/vslam14/lec1/">
+<a class="md-nav__link" href="../../slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/slam/vslam14/lec2/">
+<a class="md-nav__link" href="../../slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -965,42 +960,37 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    概述
+<a class="md-nav__link" href="#_1">
+    基本方程
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    几何误差
+  </a>
+<nav aria-label="几何误差" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-    机器学习概述
+    代数误差的集合解释
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
-    线性模型
-  </a>
-<nav aria-label="线性模型" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    应用
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    感知器
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    两类感知器算法
+    仿射摄像机的估计
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reference">
-    Reference
+<a class="md-nav__link" href="#_5">
+    受限摄像机估计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    径向失真
   </a>
 </li>
 </ul>
@@ -1012,76 +1002,129 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cs/ai/dl.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/mvg/calc-p.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">神经网络与深度学习<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="p">计算摄像机矩阵<span><span class="heti-spacing"> </span>p</span><a class="headerlink" href="#p" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>191<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1967<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>学习自 <a href="https://nndl.github.io/">邱锡鹏老师</a> 的神经网络与深度学习，归档一些学习笔记。</p>
+<p>本章主要讨论由<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>维空间与图像平面元素间的对应来估计摄像机投影矩阵的数值方法（简称确定摄像机参数）</p>
 </div>
-<h2 id="_2">概述<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>神经网络与深度学习是人工智能的一个子领域</p>
+<h2 id="_1">基本方程<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>神经网络：一种以（人工）神经元为基本单元的模型</li>
-<li>深度学习：一类机器学习问题，主要解决贡献度分配问题。</li>
-</ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cs/ai/dl/summary.jpg"><img alt="总结概括" src="https://cdn.jujimeizuo.cn/note/cs/ai/dl/summary.jpg"/></a></center>
-<h2 id="_3">机器学习概述<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>转移到 <a href="../ml">机器学习</a></p>
-<h2 id="_4">线性模型<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cs/ai/dl/linear-model.jpg"><img alt="线性模型" src="https://cdn.jujimeizuo.cn/note/cs/ai/dl/linear-model.jpg"/></a></center>
-<h3 id="_5">应用<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>图像分类</li>
-<li>文本文类</li>
-</ul>
-<h3 id="_6">感知器<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>模型</li>
+<li>对于每组对应<span class="arithmatex">\(\mathbf{X}_i \leftrightarrow \mathbf{x}_i\)</span>，可以得出下面关系式：</li>
 </ul>
 <div class="arithmatex">\[
-g(x,w)=
-\left\{\begin{matrix}
-+1  &amp; 当w^{\top}x&gt;0  \\
--1  &amp; 当w^{\top}x&lt;0
-\end{matrix}\right.
+\begin{bmatrix}
+\mathbf{0}^\top &amp; -w_i\mathbf{X}_i^\top &amp; y_i\mathbf{X}_i^\top \\
+w_i\mathbf{X}_i^\top &amp; \mathbf{0}^\top &amp; -x_i\mathbf{X}_i^\top
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{p}_1 \\
+\mathbf{p}_2 \\
+\mathbf{p}_3
+\end{bmatrix}
+=
+\mathbf{0}
 \]</div>
 <ul>
-<li>学习准则</li>
+<li><strong>最小配置解</strong>：矩阵<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span>12<span class="heti-spacing"> </span></span>个元素和（忽略缩放因子）<span>11<span class="heti-spacing"> </span></span>个自由度，所以解<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>需要<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>个方程。给定这个最小数目的对应时，解时精确的，即空间的点准确地投影到它们被测量到图像上</li>
+<li><strong>超定解</strong>：如果由于点坐标的噪声导致数据不精确并且给定<span class="arithmatex">\(n \ge 6\)</span>组点对应，那么<span class="arithmatex">\(A\mathbf{p}=\mathbf{0}\)</span>将不存在精确解。<span>P<span class="heti-spacing"> </span></span>的解可以通过最小化一个代数或几何误差来获得。求<span class="arithmatex">\(\parallel A \mathbf{p} \parallel\)</span>的最小值，可能的约束是：<ul>
+<li><span class="arithmatex">\(\parallel \mathbf{p} \parallel = 1\)</span></li>
+<li><span class="arithmatex">\(\parallel \hat{\mathbf{p}}^3 \parallel = 1\)</span>，其中<span class="arithmatex">\(\hat{\mathbf{p}}^3\)</span>是由<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>最后一行的前三个元素组成的矢量<span class="arithmatex">\((p_{31},p_{32},p_{33})^\top\)</span></li>
 </ul>
-<div class="arithmatex">\[
-L(w;x,y)=\max{(0,-yw^{\top}x)}
-\]</div>
-<ul>
-<li>优化：随机梯度下降</li>
+</li>
+<li><strong>退化配置</strong><ul>
+<li>摄像机中心和点都在一条三次绕线上</li>
+<li>这些点都在一张平面和包含摄像机中心的一条直线的并集上</li>
 </ul>
-<div class="arithmatex">\[
-\frac{\partial L(w;x,y)}{\partial w}=
-\left\{\begin{matrix}
-0  &amp; 当yw^{\top}x&gt;0  \\
--yx  &amp; 当yw^{\top}x&lt;0
-\end{matrix}\right.
-\]</div>
-<h3 id="_7">两类感知器算法<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cs/ai/dl/perceptron-flow.jpg"><img alt="两类感知器算法" src="https://cdn.jujimeizuo.cn/note/cs/ai/dl/perceptron-flow.jpg"/></a></center>
-<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+</li>
+<li><strong>数据归一化</strong>：当点到摄像机的深度变化相对比较小时，采用同样类型的归一化。因此，把点的形心平移到原点，并对它们的坐标进行缩放使它们到原点的<span><span class="heti-spacing"> </span>RMS</span>（均方根）距离等于<span class="arithmatex">\(\sqrt{3}\)</span>。适用于点紧致分布的情形</li>
+<li><strong>直线对应</strong>：<span>3D<span class="heti-spacing"> </span></span>中的直线可以用它通过的两点<span class="arithmatex">\(\mathbf{X}_0\)</span>和<span class="arithmatex">\(\mathbf{X}_1\)</span>来表示。由图像直线<span class="arithmatex">\(\mathbf{l}\)</span>反向投影得到的平面为<span class="arithmatex">\(P^\top\mathbf{l}\)</span>。那么点<span class="arithmatex">\(\mathbf{X}_j\)</span>在该平面上的条件是<span class="arithmatex">\(\mathbf{l}^\top P \mathbf{X}_j = 0\)</span>，其中<span class="arithmatex">\(j=0,1\)</span></li>
+</ul>
+<h2 id="_2">几何误差<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li><a href="https://nndl.github.io/">邱锡鹏<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>神经网络与深度学习<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>机械工业出版社<span><span class="heti-spacing"> </span>, 2020</span>，ISBN 9787111649687</a></li>
-<li><a href="https://d2l.ai/">阿斯顿<span class="heti-skip"><span class="heti-spacing"> </span>·<span class="heti-spacing"> </span></span>张等<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>动手学深度学习<span><span class="heti-spacing"> </span>, ISBN: 9787115505835</span></a></li>
+<li><strong>图像中的几何误差</strong><ul>
+<li><span class="arithmatex">\(\underset{i}{\sum}d(\mathbf{x}_i,\hat{\mathbf{x}}_i)^2\)</span>，其中<span class="arithmatex">\(\mathbf{x}_i\)</span>是被测量的点，<span class="arithmatex">\(\hat{\mathbf{x}}_i\)</span>是点<span class="arithmatex">\(P\mathbf{X}_i\)</span>，即<span class="arithmatex">\(\mathbf{X}_i\)</span>在<span class="arithmatex">\(P\)</span>作用下的精确的图像点</li>
+<li>如果测量误差满足高斯分布，那么<span class="arithmatex">\(\underset{P}{\min}\underset{i}{\sum}d(\mathbf{x}_i,P\mathbf{X}_i)^2\)</span>的解是<span class="arithmatex">\(P\)</span>的最大似然估计</li>
+</ul>
+</li>
+<li><strong>世界点有误差</strong><ul>
+<li><span>3D<span class="heti-spacing"> </span></span>几何误差定义为：<span class="arithmatex">\(\underset{i}{\sum}d(\mathbf{X}_i,\hat{\mathbf{X}}_i)^2\)</span></li>
+<li>如果世界和图像点的误差都考虑：<span class="arithmatex">\(\underset{i=1}{\sum}d_{Mah}(\mathbf{x}_i,P\hat{\mathbf{X}}_i)^2+d_{Mah}(\mathbf{X}+\hat{\mathbf{X}}_i)^2\)</span>，<span class="arithmatex">\(d_{Mah}\)</span>表示误差协方差矩阵的<span class="heti-skip"><span class="heti-spacing"> </span>Mahalanobis<span class="heti-spacing"> </span></span>距离</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">代数误差的集合解释<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>假定所有的点<span class="arithmatex">\(\mathbf{X}_i\)</span>在<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>算法中已经归一化，<span>DLT<span class="heti-spacing"> </span></span>算法要最小化的量是：<span class="arithmatex">\(\sum_{i}(\hat{w}_id(\mathbf{x}_i,\hat{\mathbf{x}}_i))^2\)</span>，其中<span class="arithmatex">\(\hat{w}(\hat{x}_i,\hat{y}_i,1)^\top=P\mathbf{X}_i\)</span>，<span class="arithmatex">\(\hat{w}\)</span>可以解释成点<span class="arithmatex">\(\mathbf{X}_i\)</span>沿主轴方向到摄像机的深度，要最小化的代数误差等于<span class="arithmatex">\(f\sum_id(\mathbf{X}_i,\hat{\mathbf{X}}_i)^2\)</span></li>
+<li><strong>变换不变性</strong>：在约束<span class="arithmatex">\(\parallel \hat{\mathbf{p}}^3 \parallel = 1\)</span>下最小化<span class="arithmatex">\(A\mathbf{p}\)</span>可以解释成最小化<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>几何距离。这样既不受<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>空间也不受图像空间的相似变换的影响</li>
+</ul>
+<h3 id="_4">仿射摄像机的估计<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>上面有关射影摄像机推导的方法可以直接用于仿射摄像机。仿射摄像机定义为射影矩阵的最后一行是<span class="arithmatex">\((0,0,0,1)\)</span>的摄像机。仿射摄像机的<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>估计是在<span class="arithmatex">\(P\)</span>的最后一行满足上述条件下最小化<span class="arithmatex">\(\parallel A \mathbf{p} \parallel\)</span></li>
+</ul>
+<h2 id="_5">受限摄像机估计<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>在关于摄像机参数的限制条件下寻求一个最适配的摄像机矩阵<span class="arithmatex">\(P\)</span>，通常的限制有<ul>
+<li>扭曲<span class="arithmatex">\(s\)</span>为<span><span class="heti-spacing"> </span>0</span></li>
+<li>像素是正方形<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(\alpha_x=\alpha_y\)</span></li>
+<li>主点<span class="arithmatex">\((x_0,y_0)^2\)</span>已知</li>
+<li>整个摄像机标定矩阵<span class="arithmatex">\(K\)</span>已知</li>
+</ul>
+</li>
+<li><strong>最小化几何误差</strong>：假定我们强调约束<span class="arithmatex">\(s=0\)</span>和<span class="arithmatex">\(\alpha_x=\alpha_y\)</span>，用余下的<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>个参数来参数化摄像机矩阵。几何误差可以用迭代最小化方法相对于这组参数来最小化</li>
+<li><strong>最小化代数误差</strong>：考虑把参数集<span class="arithmatex">\(\mathbf{q}\)</span>映射到摄像机矩阵<span class="arithmatex">\(P\)</span>的参数化映射<span class="arithmatex">\(g\)</span>，最小化所有点匹配的代数误差等价于最小化<span class="arithmatex">\(\parallel Ag(\mathbf{q}) \parallel\)</span></li>
+<li><strong>简化的测量矩阵</strong>：一般，<span class="arithmatex">\(2n \times 12\)</span>的矩阵<span class="arithmatex">\(A\)</span>可能有很多行。但可用一个<span class="arithmatex">\(12 \times 12\)</span>的矩阵<span class="arithmatex">\(\hat{A}\)</span>来代替<span class="arithmatex">\(A\)</span>，使得对任何矢量<span class="arithmatex">\(\mathbf{p}\)</span>有<span class="arithmatex">\(\parallel A \mathbf{p} \parallel = \mathbf{p}^\top A^\top A \mathbf{p} = \parallel \hat{A} \mathbf{p} \parallel\)</span></li>
+<li><strong>初始化</strong>：求摄像机初始化参数的一种途径：<ul>
+<li>用诸如<span class="heti-skip"><span class="heti-spacing"> </span>DLT<span class="heti-spacing"> </span></span>的线性算法求出一个初始的摄像机矩阵</li>
+<li>把固定参数强制到所希望的取值范围</li>
+<li>把摄像机矩阵分解所获得的初始值赋给参数变量</li>
+</ul>
+</li>
+<li><strong>外部校准</strong>：为了计算外部校准，需对世界坐标位置准确已知的一个配置进行影像。之后求摄像机的姿态。在机器人系统的手眼标定中求摄像机位置就是这样的情形；还有在采用配准技术的基于模型的识别中，需要知道物体相对摄像机的位置</li>
+<li><strong>协方差估计</strong>：假定所有的无擦好仅发生在图像测量中，<span>ML<span class="heti-spacing"> </span></span>残差期望值等于<span class="arithmatex">\(\varepsilon_{res}=\delta(1-d/2n)^{1/2}\)</span>，其中<span class="arithmatex">\(d\)</span>是要拟合的摄像机参数数目（对完整的针孔摄像机模型是<span><span class="heti-spacing"> </span>11</span>）。给定一个残差，该公式也可以用来估计点测量的准确性</li>
+</ul>
+<h2 id="_6">径向失真<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>
+<p>用<span class="arithmatex">\((\tilde{x},\tilde{y})^\top\)</span>标记在理想（非失真）针孔投影下点以焦距为测量单位的坐标。对一点<span class="arithmatex">\(\mathbf{X}\)</span>有：<span class="arithmatex">\((\tilde{x},\tilde{y},1)^\top=[\mathbf{I}|\mathbf{0}]\mathbf{X}_{cam}\)</span>，其中<span class="arithmatex">\(\mathbf{X}_{cam}\)</span>是摄像机坐标下的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点，实际的投影点通过一个径向位移与理想点关联。因此，径向（透镜）失真的模型是：</p>
+<div class="arithmatex">\[\begin{bmatrix} x_d \\ y_d \end{bmatrix}=L(\tilde{r})\begin{bmatrix} \tilde{x} \\ \tilde{y} \end{bmatrix}\]</div>
+<ul>
+<li><span class="arithmatex">\((\tilde{x},\tilde{y})^\top\)</span>是理想图像位置（遵循线性投影）</li>
+<li><span class="arithmatex">\((x_d,y_d)^\top\)</span>是径向失真后的实际图像的位置</li>
+<li><span class="arithmatex">\(\tilde{r}\)</span>为径向失真中心的径向距离<span class="arithmatex">\(\sqrt{\tilde{x}^2+\tilde{y}^2}\)</span></li>
+<li><span class="arithmatex">\(L(\tilde{r})\)</span>是一个失真因子，它仅仅是半径<span class="arithmatex">\(\tilde{r}\)</span>的函数</li>
+</ul>
+</li>
+<li>
+<p><strong>失真矫正</strong>：在像素坐标中，失真矫正记为</p>
+<div class="arithmatex">\[
+\hat{x}=x_c+L(r)(x-x_c) \ \ \ \ \ \ \hat{y}=y_c+L(r)(y-y_c)
+\]</div>
+<ul>
+<li><span class="arithmatex">\((x,y)^\top\)</span>是测量的坐标</li>
+<li><span class="arithmatex">\((\hat{x},\hat{y})^\top\)</span>是矫正后的坐标</li>
+<li><span class="arithmatex">\((x_c,y_c)^\top\)</span>是径向失真的中心且<span class="arithmatex">\(r^2=(x-x_c)^2+(y-y_c)^2\)</span>，注意如果长宽比不是<span><span class="heti-spacing"> </span>1</span>，那么在计算<span class="arithmatex">\(r\)</span>时必须对它进行矫正</li>
+</ul>
+</li>
+<li>
+<p><strong>失真函数和中心的选择</strong>：函数<span class="arithmatex">\(L(r)\)</span>仅当<span class="arithmatex">\(r\)</span>为正值时有定义并且<span class="arithmatex">\(L(0)=1\)</span>。一个任意函数<span class="arithmatex">\(L(r)\)</span>的逼近可以由泰勒展开式<span class="arithmatex">\(L(r)=1+\mathcal{k}_1r+\mathcal{k}_2r^2+\mathcal{k}_3r^3+...\)</span>。<span class="arithmatex">\(\{k_1,k_2,k_3,...,x_c,y_c\}\)</span>是径向矫正的系数。主点经常被用作径向失真的中心，虽然它们未必完全重合</p>
+</li>
+<li><strong>计算失真函数</strong>：函数<span class="arithmatex">\(L(r)\)</span>可以通过最小化一个基于映射的线性偏差的代价函数来计算。失真函数可以作为影像过程的一部分，把参数<span class="arithmatex">\(k_i\)</span>与<span class="arithmatex">\(P\)</span>一起在几何误差的最小化迭代中计算</li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月5日 14:09:15</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月5日 14:09:15</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -1102,7 +1145,7 @@ L(w;x,y)=\max{(0,-yw^{\top}x)}
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 机器学习" class="md-footer__link md-footer__link--prev" href="../ml/" rel="prev">
+<a aria-label="上一页: 摄像机模型" class="md-footer__link md-footer__link--prev" href="../camera-model/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1111,17 +1154,17 @@ L(w;x,y)=\max{(0,-yw^{\top}x)}
 <span class="md-footer__direction">
                 上一页
               </span>
-              机器学习
+              摄像机模型
             </div>
 </div>
 </a>
-<a aria-label="下一页: 高性能计算" class="md-footer__link md-footer__link--next" href="../../hpc/" rel="next">
+<a aria-label="下一页: 单视图几何" class="md-footer__link md-footer__link--next" href="../one-vg/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              高性能计算
+              单视图几何
             </div>
 </div>
 <div class="md-footer__button md-icon">
