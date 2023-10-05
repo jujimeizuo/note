@@ -12,6 +12,7 @@
 - [估计——2D 射影变换](est2d/)
 - [算法评价和误差分析](eval/)
 - [摄像机模型](camera-model/)
+- [计算摄像机矩阵 P](calc-p/)
 
 ## Reference
 
