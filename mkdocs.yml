@@ -200,6 +200,7 @@ nav:
       - 算法评价和误差分析: cv/mvg/eval.md
       - 摄像机模型: cv/mvg/camera-model.md
       - 计算摄像机矩阵 P: cv/mvg/calc-p.md
+      - 单视图几何: cv/mvg/one-vg.md
     - SLAM:
       - cv/slam/index.md
       - 视觉 SLAM 十四讲:
