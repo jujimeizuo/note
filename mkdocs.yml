@@ -202,6 +202,7 @@ nav:
       - 计算摄像机矩阵 P: cv/mvg/calc-p.md
       - 单视图几何: cv/mvg/one-vg.md
       - 对极几何和基本矩阵: cv/mvg/ag-fm.md
+      - 摄像机和结构的 3D 重构: cv/mvg/3dr-camera-structure.md
     - SLAM:
       - cv/slam/index.md
       - 视觉 SLAM 十四讲:
