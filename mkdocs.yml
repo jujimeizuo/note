@@ -144,7 +144,8 @@ nav:
       - cs/pl/index.md
       - C/C++:
         - cs/pl/c_cpp/index.md
-        - C++ 系统知识: cs/pl/c_cpp/system_knowledge.md
+        - C++ 系统知识: cs/pl/c_cpp/basic.md
+        - C++ STL: cs/pl/c_cpp/stl.md
         - C++ 各种函数使用: cs/pl/c_cpp/function.md
       - Python:
         - cs/pl/python/index.md
@@ -157,6 +158,8 @@ nav:
         - gin框架 (TODO): cs/pl/go/gin.md
       - Java:
         - cs/pl/java/index.md
+        - Java 系统知识: cs/pl/java/basic.md
+        - SpringBoot: cs/pl/java/springboot.md
     - 算法相关:
       - 基础数据结构: cs/algorithm/basic-ds.md
       - 算法设计与分析: cs/algorithm/design-analysis.md
