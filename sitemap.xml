@@ -121,17 +121,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/basic/</loc>
+         <lastmod>2023-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/function/</loc>
          <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/stl/</loc>
-         <lastmod>2023-10-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/system_knowledge/</loc>
          <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -152,6 +152,16 @@
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/java/</loc>
+         <lastmod>2023-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/pl/java/basic/</loc>
+         <lastmod>2023-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cs/pl/java/springboot/</loc>
          <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

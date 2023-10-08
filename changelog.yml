@@ -85,12 +85,6 @@
     - newpage:
         text: CS > 编程语言 > Python > Python 语法基础
         href: /cs/pl/python/basic/
-    - newpage:
-        text: CS > 编程语言 > C/C++ > C++ 系统知识
-        href: /cs/pl/c_cpp/system_knowledge/
-    - newpage:
-        text: CS > 编程语言 > C/C++ > C++ STL
-        href: /cs/pl/c_cpp/stl/
   - "2023-09-03":
     - newpage:
         text: CV & Robot > 多视图几何 > 2D 射影几何变换
