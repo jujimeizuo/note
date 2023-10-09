@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-10-09":
+    - newpage:
+        text: 数理基础 > 最优化理论与方法 > 无约束最优化的梯度方法
+        href: /mb/optimization-theory/lec3/
   - "2023-10-06":
     - newpage:
         text: CV & Robot > 多视图几何 > 摄像机和结构的 3D 重构

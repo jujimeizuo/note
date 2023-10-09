@@ -218,6 +218,7 @@ nav:
       - mb/optimization-theory/index.md
       - 最优化问题: mb/optimization-theory/lec1.md
       - 直线搜索: mb/optimization-theory/lec2.md
+      - 无约束最优化的梯度方法: mb/optimization-theory/lec3.md
     - 矩阵分析与应用:
       - mb/maa/index.md
       - 矩阵代数基础: mb/maa/lec1.md
