@@ -211,7 +211,7 @@ $$
 <div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
 <div class="file-body">
 <div class="file-title">机器学习--逻辑回归</div>
-<div class="file-meta">724 KB / 12 P / 2023-10-09</div>
+<div class="file-meta">724 KB / 12 P / 2023-10-10</div>
 </div>
 <a class="down-button" target="_blank" href="/assets/files/机器学习--逻辑回归.pdf" markdown="1">:fontawesome-solid-download: 下载</a>
 </div>
