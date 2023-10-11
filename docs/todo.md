@@ -8,7 +8,7 @@
         - [ ] C++
             - [ ] CMake 基础
         - [ ] Python
-            - [ ] Numpy 科学计算库
+            - [X] Numpy 科学计算库
     - [ ] HPC
         - [ ] 向量化计算
         - [ ] GPU 编程
@@ -16,6 +16,7 @@
         - [ ] OpenMP 基础
         - [ ] Taichi 基础
 - [ ] CV
+    - [ ] OpenCV
     - [ ] mvg
     - [ ] slam
     - [ ] sfm

@@ -191,10 +191,7 @@ nav:
       - RegEx 正则表达式: cs/others/regex.md
   - CV & Robot:
     - cv/index.md
-    - 图像分析 & OpenCV:
-      - cv/ia-ocv/index.md
-      - 图像分析与应用: cv/ia-ocv/image-analysis.md
-      - OpenCV: cv/ia-ocv/opencv.md
+    - OpenCV: cv/opencv.md
     - 多视图几何:
       - cv/mvg/index.md
       - 2D 射影几何和变换: cv/mvg/pjt2d.md

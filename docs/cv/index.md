@@ -7,6 +7,6 @@
 
 ## Table of Contents
 
-- [图像分析 & OpenCV](ia-ocv/)
+- [OpenCV](opencv/)
 - [多视图几何](mvg/)
 - [SLAM](slam/)
