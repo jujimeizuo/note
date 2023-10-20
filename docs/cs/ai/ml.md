@@ -211,7 +211,7 @@ $$
 <div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
 <div class="file-body">
 <div class="file-title">机器学习--逻辑回归</div>
-<div class="file-meta">724 KB / 12 P / 2023-10-10</div>
+<div class="file-meta">938 KB / 9 P / 2023-10-10</div>
 </div>
 <a class="down-button" target="_blank" href="/assets/files/机器学习--逻辑回归.pdf" markdown="1">:fontawesome-solid-download: 下载</a>
 </div>
@@ -223,7 +223,7 @@ $$
 - pyecharts
 - Pandas
 
-## 支持向量机 SVM
+## 支持向量机
 
 - 支持向量机 SVM 是一类按**监督学习**方式对数据进行二元分类的广义线性分类器
 - 决策边界是对学习样本求解的**最大边距超平面**
@@ -264,4 +264,181 @@ $$
 - 如何寻找核函数
 
 
-### 寻找核函数
+### 核函数
+
+- 线性核函数 $K(x,xi)=x \cdot xi$
+- 多项式核 Polynomial kernel $(x^\top l+常量)^{常量}$
+- 径向基核(RBF) $K(x,xi)=\exp(- \parallel x - xi \parallel / 2 \sigma^2)$
+
+### 实验报告
+
+<div class="card file-block" markdown="1">
+<div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
+<div class="file-body">
+<div class="file-title">机器学习--支持向量机</div>
+<div class="file-meta">892 KB / 9 P / 2023-10-20</div>
+</div>
+<a class="down-button" target="_blank" href="/assets/files/机器学习--支持向量机.pdf" markdown="1">:fontawesome-solid-download: 下载</a>
+</div>
+
+## 神经网络
+
+### 神经元模型 MP
+
+- 包含输入输出与计算功能的模型
+
+### 单层神经网络（感知器）
+
+- 与神经元模型不同，感知器中的权值是通过训练得到的
+- 感知器可以做（简单）线性分类任务
+- 用决策边界来表达分类效果
+- XOR 无法解决
+
+### 两层神经网络（多层感知器）
+
+#### 结构
+
+- 两层神经网络除了输入层和输出层，还增加一个中间层
+- 中间层和输出层都是计算层
+- 通过扩展上个单元的单层神经网络，在右边新加一个层次
+
+#### 隐藏层的节点数设计
+
+- 输入层的节点数需要与特征的维度匹配
+- 输出层的节点数需要与目标的维度匹配
+- 中间层的节点数由设计者决定
+- 较好的方法就是预先设定几个可选值，通过切换不同值来看整个模型的预测效果，简称 Grid Search
+
+### 两层神经网络训练
+
+#### 训练与损失函数
+
+- 首先给所有参数赋上随机值，使用这些参数值来预测训练数据中的样本，样本的预测目标为 $y_p$，真实目标为 $y$。那么定义一个值 $loss = (y_p-y)/2$
+- loss 称之为损失，目标就是使对所有训练数据的损失和尽可能的小
+- 如果将先前的神经网络预测的矩阵公式带入到 $y_p$ 中（因为有 $z=y_p$），那么我们可以把损失写为关于参数的函数，这个函数称之为**损失函数(loss function)**
+
+#### 神经网络优化问题
+
+- 一般使用梯度下降法来优化，因为代价很大，所以需要使用反向传播算法
+- 反向传播算法利用神经网络的结构进行的计算，不一次计算所有的梯度，而是从后往前
+- 反向传播的依据：链式法则
+
+#### 框架
+
+- Pytorch
+
+```python
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+...
+loss.backward()
+```
+
+- TensorFlow
+
+```python
+train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(loss)
+```
+
+### 实验报告
+
+<div class="card file-block" markdown="1">
+<div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
+<div class="file-body">
+<div class="file-title">机器学习--神经网络</div>
+<div class="file-meta">855 KB / 7 P / 2023-10-20</div>
+</div>
+<a class="down-button" target="_blank" href="/assets/files/机器学习--神经网络.pdf" markdown="1">:fontawesome-solid-download: 下载</a>
+</div>
+
+
+## 识别系统的模型选择与评估
+
+- 误差很大时
+    - 获取更多的训练数据
+    - 尝试减少特征
+    - 大量时间（>6个月）可能都在做这些调整
+    - 尝试增加多项式特征
+    - 尝试降低/提高 $\lambda$
+
+
+### 训练集、测试集、校验集
+
+- 高阶模型能够很好地拟合，但对不在训练集中的新样本缺乏泛化能力
+- 可以考虑打乱数据，以增强泛化能力
+
+#### 错误率&误差
+
+- 错误率：错分样本的占比
+- 误差：样本真实输出与预测输出之间的差异
+    - 训练（经验）误差：训练集
+    - 测试误差：测试集
+    - 泛化误差：除训练集外所有样本
+
+#### 经验误差与过拟合
+
+- 过拟合
+    - 学习器把所有训练样本学习的“太好”，将训练样本本身的特点当作所有样本的一般性质，导致泛化性能下降
+        - 优化目标加正则项
+        - early stop
+- 欠拟合
+    - 对训练样本的一般性质尚未学好
+        - 决策树：拓展分支
+        - 神经网络：增加训练轮数
+
+
+### 常用评估方法
+
+#### 留出法
+
+- 直接将数据集划分为两个互斥集合
+- 训练/测试集划分要尽可能保持数据分布的一致性
+- 一般若干次随机划分，重复实验取平均值
+- 训练/测试样本比例通常为 2:1-4:1
+
+#### 交叉验证法
+
+- 将数据集划分为 k 个大小相似的互斥子集
+- 每次用 k-1 个子集的并集作为训练集，余下的子集作为测试集
+- 进行 k 次训练和测试，最终返回 k 次测试结果的均值
+- 一般 k 为 10
+
+#### 自助法
+
+- 实际模型与预期模型都使用 m 个训练样本
+- 约有 1/3 的样本没在训练集中出现
+- 从初始数据集中产生多个不同的训练集，对集成学习有很大的好处
+- 自助法在数据集较小，难以有效划分训练/测试集时很有用
+- 自助法产生的数据集改变了初始数据集的分布，会引入估计偏差，在数据量足够时，留出法和交叉验证法更常用
+
+### 性能度量
+
+- 分类任务最常用的是错误率和精度
+    - 错误率：$E(f;D)=\frac{1}{m} \sum_{i=1}^m (f(\mathbf{x}_i) \ne y_i)$
+    - 精度：$acc(f;D)=\frac{1}{m} \sum_{i=1}^m (f(\mathbf{x}_i) = y_i)=1-E(f;D)$
+- 回归任务最常用的是均方误差 $E(f;D)=\frac{1}{m} \sum_{i=1}^m (f(\mathbf{x}_i) - y_i)^2$
+- 混淆矩阵 Confusion matrix
+    - 查准率 Precision：$P=\frac{TP}{TP+FP}$
+    - 查全率 Recall：$P=\frac{TP}{TP+FN}$
+- P-R 曲线：根据学习器的预测结果按正例可能性大小对样例进行排序，并逐个把样本作为正例进行预测，则可以得到查准率-查全率
+- F1 Score：$F1 Score=2\frac{PR}{P+R}$
+    - 更一般的形式 $F_\beta = \frac{(1+\beta^2) \times P \times R}{(\beta^2 \times P) + R}$
+      - $\beta=1$：标准 F1
+      - $\beta<1$：更重视查准率（商品推荐系统）
+      - $\beta>1$：更重视查全率（逃犯信息检索）
+- ROC 曲线：受试者工作特征曲线
+    - 横轴：$FPR=\frac{FP}{FP+TN}$
+    - 纵轴：$TPR=\frac{TP}{TP+FN}$
+    - AUC：ROC 曲线下的面积，越大越好
+- 代价敏感错误率
+
+### 比较校验
+
+- 假设校验
+- 二项校验
+- t 检验
+- 交叉验证 t 检验
+- McNemar 检验
+- Friedman 检验
+- Nemenyi 检验
+
+## 聚类
