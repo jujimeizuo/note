@@ -66,6 +66,73 @@ comment: True
 
 <center><img src="https://cdn.jujimeizuo.cn/note/cs/ai/dl/activation-function.jpg" alt="激活函数"></center>
 
+
+## 卷积神经网络
+
+### 卷积
+
+- 卷积经常用在信号处理中，用于计算信号的延迟累积
+- 假设一个信号发生器每个时刻 t 产生一个信号 $x_t$，其信号的衰减率为 $w_k$，即在 k-1 个时间步长后，信息为原来的 $w_k$ 倍，假设 $w_1=1,w_2=1/2,w_3=1/4$
+- 时刻 t 收到的信号 $y_t$ 为当前时刻产生的信息和以前时刻延迟信息的叠加
+    - 即 $y_t=w_1 \times x_t+w_2 \times x_{t-1}+w_3 \times x_{t-2}=\sum_{k=1}^3w_k \cdot x_{t-k+1}$，$y_t$ 称为滤波器或卷积核
+
+#### 一维卷积
+
+<center><img src="https://cdn.jujimeizuo.cn/note/cs/ai/dl/1Dconv.png" alt="一维卷积"></center>
+
+
+#### 二位卷积
+
+<center><img src="https://cdn.jujimeizuo.cn/note/cs/ai/dl/2Dconv.png" alt="二维卷积"></center>
+
+
+#### 作用
+
+- 卷积作为特征提取器
+- 卷积代替全连接
+- 可以引入多组滤波器
+- 卷积层
+    - 典型的卷积层为 3 维结构
+- 汇聚层
+    - 卷积层虽然可以显著减少连接的个数，但是每一个特征映射的神经元个数并没有显著减少
+
+### 卷积网络结构
+
+- 卷积网络是由卷积层、子采样层、全连接层交叉堆叠而成
+    - 趋向于小卷积、大深度
+    - 趋向于全卷积
+- 一个卷积块为连续个 M 个卷积层和 b 个汇聚层（M 通常设置为 2-5，b 为 0 或 1）。一个卷积网络中可以堆叠 N 个连续的卷积块，然后在接着 K 个全连接层（N 的取值区间比较大，比如 1-100 或者更大；K 一般为 0-2）
+
+### 转置卷积/微步卷积
+
+- 低维特征映射到高维特征
+
+### 空洞卷积
+
+- 如何增加输出单位的感受野
+    - 增加卷积核的大小
+    - 增加层数来实现
+    - 在卷积之前进行汇聚操作
+- 空洞卷积通过给卷积核插入“空洞”来变相地增加其大小
+
+
+### 简单的残差单元结构
+
+$$
+h(\mathbf{x})=\mathbf{x}+(h(\mathbf{x})-\mathbf{x}) \\
+\mathbf{x} 为恒等函数，h(\mathbf{x})-\mathbf{x} 为残差函数 f(\mathbf{x}, \theta)
+$$
+
+### 应用
+
+- AlphaGo
+- Mask RCNN
+- 图像生成
+- Deep Dream
+- 画风迁移
+- 对抗样本
+
+
 ## Reference
 
 - [邱锡鹏,神经网络与深度学习,机械工业出版社, 2020，ISBN 9787111649687](https://nndl.github.io/)
