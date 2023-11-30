@@ -177,7 +177,7 @@ $$
 
 见[多视图几何](https://note.jujimeizuo.cn/cv/mvg/pjt2d/#_5)
 
-## Eigen 库 (TODO)
+## Eigen 库
 
 ### install
 
@@ -185,3 +185,40 @@ $$
 sudo apt-get install libeigen3-dev # 如果要安装对应版本，请下载源码编译
 ```
 
+### Eigen中矩阵的基本操作
+
+```cpp
+Eigen::Matrix<type, row, colon> //typedef: Matrix3d, Vector3d...
+Eigen::MatrixXd //unkown size matrix
+matrix(i, j) //the value of i th row and j th colon
+//the operations
+matrix.transpose(); matrix.trace(); matrix.sum(); matrix.inverse(); matrix.determinant(); 
+//find the proper values and vectors
+Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> solver(matrix.transport()*matrix);
+solver.eigenvalues();
+solver.eigenvectors();
+//solve Matrix_NN * x = v_Nd
+x = matrix_NN.colpivHouseholderQr().solve(v_Nd);
+
+// 旋转向量和旋转矩阵
+Eigen::AngleAxisd rotation_vector(theta, Eigen::Vector3d(x, y, z)); //rotation vector
+rotation_matrix = rotation_vector.toRotationMatrix(); //transform rotation vector to rotation matrix
+x_rotated = rotation_vector*x; //calculate rotated vector x'
+x_rotated = rotation_matrix*x; //calculate rotated vector x'
+
+// 四元数
+q = Eigen::Quaterniond(w, x, y, z) //create a quaternion from four values
+q = Eigen::Quaterniond(rotation_vector) //create a quaternion from rotaion vector
+q = Eigen::Quaterniond(rotation_matrix) //create a quaternion from rotaion matrix
+x_rotated = q * x //calculate rotated vector x'
+
+// 变换矩阵 T
+//create a transform matrix
+Eigen::Isometry3d T = Eigen::Isometry3d::Identity();
+T.rotate(rotation_vector);
+/*
+T.rotate(rotation_matrix);
+T.rotate(quaternion);
+*/
+T.pretranslate(Eigen::Vector3d(x, y, z));
+```
