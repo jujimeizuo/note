@@ -11,3 +11,4 @@
 - [多视图几何](mvg/)
 - [SLAM](slam/)
 - [三维数据场可视化](3d-visualization/)
+- [点云配准](pcr/)
