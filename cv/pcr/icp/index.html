@@ -4,23 +4,24 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/hpc/" rel="canonical"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<link href="https://note.jujimeizuo.cn/cv/pcr/icp/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>高性能计算 - 狙击美佐的笔记本</title>
-<link href="../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
-<link href="../../css/heti.css" rel="stylesheet"/>
-<link href="../../css/timeline.css" rel="stylesheet"/>
+<title>ICP - 狙击美佐的笔记本</title>
+<link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
-<link href="../../css/card.css" rel="stylesheet"/>
-<link href="../../css/flink.css" rel="stylesheet"/>
-<link href="../../css/changelog_extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/card.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -32,7 +33,7 @@ var _hmt = _hmt || [];
 </script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CY82KV89G2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-CY82KV89G2",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CY82KV89G2"></script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -43,15 +44,15 @@ var _hmt = _hmt || [];
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
-<script src="../../js/scheme.js" type="text/javascript"></script>
+<script src="../../../js/scheme.js" type="text/javascript"></script>
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#icp">
             跳转至
           </a>
 </div>
@@ -59,7 +60,7 @@ var _hmt = _hmt || [];
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -75,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              高性能计算
+              ICP
             
           </span>
 </div>
@@ -144,27 +145,27 @@ var _hmt = _hmt || [];
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
         Home
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../../cs/">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../cv/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../mb/">
+<a class="md-tabs__link" href="../../../mb/">
         Math Basis
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../utils/">
+<a class="md-tabs__link" href="../../../utils/">
         Utils
       </a>
 </li>
@@ -178,7 +179,7 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
     狙击美佐的笔记本
@@ -197,7 +198,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../..">Home</a>
+<a href="../../..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -209,22 +210,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../changelog/">
+<a class="md-nav__link" href="../../../changelog/">
         更新记录
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../links/">
+<a class="md-nav__link" href="../../../links/">
         友链
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Computer Science</a>
+<a href="../../../cs/">Computer Science</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -238,7 +239,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../pl/">编程语言</a>
+<a href="../../../cs/pl/">编程语言</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -252,7 +253,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../pl/c_cpp/">C/C++</a>
+<a href="../../../cs/pl/c_cpp/">C/C++</a>
 <label for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -264,17 +265,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/c_cpp/basic/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/basic/">
         C++ 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/c_cpp/stl/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/stl/">
         C++ STL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
         C++ 各种函数使用
       </a>
 </li>
@@ -284,7 +285,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../pl/python/">Python</a>
+<a href="../../../cs/pl/python/">Python</a>
 <label for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -296,17 +297,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/python/basic/">
+<a class="md-nav__link" href="../../../cs/pl/python/basic/">
         Python 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/python/numpy/">
+<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
         Numpy 科学计算库
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/python/virtual/">
+<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
         Python 虚拟环境
       </a>
 </li>
@@ -316,7 +317,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../pl/go/">Go</a>
+<a href="../../../cs/pl/go/">Go</a>
 <label for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -328,12 +329,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/go/basic/">
+<a class="md-nav__link" href="../../../cs/pl/go/basic/">
         Go 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/go/gin/">
+<a class="md-nav__link" href="../../../cs/pl/go/gin/">
         gin框架 (TODO)
       </a>
 </li>
@@ -343,7 +344,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../pl/java/">Java</a>
+<a href="../../../cs/pl/java/">Java</a>
 <label for="__nav_2_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -355,12 +356,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/java/basic/">
+<a class="md-nav__link" href="../../../cs/pl/java/basic/">
         Java 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pl/java/springboot/">
+<a class="md-nav__link" href="../../../cs/pl/java/springboot/">
         SpringBoot
       </a>
 </li>
@@ -383,12 +384,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
         基础数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
         算法设计与分析
       </a>
 </li>
@@ -408,27 +409,27 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ai/mode-recognition/">
+<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
         模式识别
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ai/ml/">
+<a class="md-nav__link" href="../../../cs/ai/ml/">
         机器学习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ai/dl/">
+<a class="md-nav__link" href="../../../cs/ai/dl/">
         神经网络与深度学习
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">高性能计算</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../cs/hpc/">高性能计算</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -440,32 +441,32 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="outline/">
+<a class="md-nav__link" href="../../../cs/hpc/outline/">
         概论
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="vectorizecompute/">
+<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
         向量化计算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="gpu/">
+<a class="md-nav__link" href="../../../cs/hpc/gpu/">
         GPU 编程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="mpi/">
+<a class="md-nav__link" href="../../../cs/hpc/mpi/">
         MPI 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="openmp/">
+<a class="md-nav__link" href="../../../cs/hpc/openmp/">
         OpenMP 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="taichi/">
+<a class="md-nav__link" href="../../../cs/hpc/taichi/">
         Taichi 基础
       </a>
 </li>
@@ -475,7 +476,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../software/">软件相关</a>
+<a href="../../../cs/software/">软件相关</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -487,22 +488,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../software/design-pattern/">
+<a class="md-nav__link" href="../../../cs/software/design-pattern/">
         设计模式
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../software/sca/">
+<a class="md-nav__link" href="../../../cs/software/sca/">
         软件构件与体系结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../software/compa/">
+<a class="md-nav__link" href="../../../cs/software/compa/">
         COM 原理与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../software/piaserver/">
+<a class="md-nav__link" href="../../../cs/software/piaserver/">
         应用服务器原理与实现
       </a>
 </li>
@@ -522,7 +523,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../db/mysql/">
+<a class="md-nav__link" href="../../../cs/db/mysql/">
         MySQL
       </a>
 </li>
@@ -539,17 +540,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../db/redis/datatype/">
+<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../db/redis/cjh/">
+<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
         持久化
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../db/redis/work/">
+<a class="md-nav__link" href="../../../cs/db/redis/work/">
         事务
       </a>
 </li>
@@ -572,7 +573,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/regex/">
+<a class="md-nav__link" href="../../../cs/others/regex/">
         RegEx 正则表达式
       </a>
 </li>
@@ -582,10 +583,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/">CV &amp; Robot</a>
+<a href="../../">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -597,14 +598,14 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/opencv/">
+<a class="md-nav__link" href="../../opencv/">
         OpenCV
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/mvg/">多视图几何</a>
+<a href="../../mvg/">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -616,47 +617,47 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../../mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../../mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../../mvg/est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/eval/">
+<a class="md-nav__link" href="../../mvg/eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/camera-model/">
+<a class="md-nav__link" href="../../mvg/camera-model/">
         摄像机模型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/calc-p/">
+<a class="md-nav__link" href="../../mvg/calc-p/">
         计算摄像机矩阵 P
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/one-vg/">
+<a class="md-nav__link" href="../../mvg/one-vg/">
         单视图几何
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/ag-fm/">
+<a class="md-nav__link" href="../../mvg/ag-fm/">
         对极几何和基本矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/3dr-camera-structure/">
+<a class="md-nav__link" href="../../mvg/3dr-camera-structure/">
         摄像机和结构的 3D 重构
       </a>
 </li>
@@ -666,7 +667,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/slam/">SLAM</a>
+<a href="../../slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -680,7 +681,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../../slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -692,12 +693,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/slam/vslam14/lec1/">
+<a class="md-nav__link" href="../../slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/slam/vslam14/lec2/">
+<a class="md-nav__link" href="../../slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -707,10 +708,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/pcr/">点云配准</a>
+<a href="../">点云配准</a>
 <label for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -722,20 +723,91 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/pcr/prepare/">
+<a class="md-nav__link" href="../prepare/">
         前置知识
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/pcr/icp/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          ICP
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         ICP
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    问题描述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    算法描述
+  </a>
+<nav aria-label="算法描述" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    找最近对应点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    求解最优变换
+  </a>
+<nav aria-label="求解最优变换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    计算最优平移
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    计算最优旋转
+  </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/3d-visualization/">
+<a class="md-nav__link" href="#_7">
+    迭代
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icp_1">
+    ICP 的优缺点及一些改进算法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    实际使用中的一些注意事项
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3d-visualization/">
         三维数据场可视化
       </a>
 </li>
@@ -745,7 +817,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mb/">Math Basis</a>
+<a href="../../../mb/">Math Basis</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -759,7 +831,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mb/optimization-theory/">最优化理论与方法</a>
+<a href="../../../mb/optimization-theory/">最优化理论与方法</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -771,17 +843,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/optimization-theory/lec1/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
         最优化问题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/optimization-theory/lec2/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec2/">
         直线搜索
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/optimization-theory/lec3/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec3/">
         无约束最优化的梯度方法
       </a>
 </li>
@@ -791,7 +863,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mb/maa/">矩阵分析与应用</a>
+<a href="../../../mb/maa/">矩阵分析与应用</a>
 <label for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -803,17 +875,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/maa/lec1/">
+<a class="md-nav__link" href="../../../mb/maa/lec1/">
         矩阵代数基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/maa/lec2/">
+<a class="md-nav__link" href="../../../mb/maa/lec2/">
         特殊矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/maa/lec3/">
+<a class="md-nav__link" href="../../../mb/maa/lec3/">
         矩阵微分
       </a>
 </li>
@@ -821,7 +893,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mb/comb/">
+<a class="md-nav__link" href="../../../mb/comb/">
         组合数学
       </a>
 </li>
@@ -831,7 +903,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../utils/">Utils</a>
+<a href="../../../utils/">Utils</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -843,7 +915,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/utilsbox/">
+<a class="md-nav__link" href="../../../utils/utilsbox/">
         工具收集
       </a>
 </li>
@@ -860,22 +932,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/shell/">
+<a class="md-nav__link" href="../../../utils/shell/">
         Shell 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/git/">
+<a class="md-nav__link" href="../../../utils/git/">
         Git 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/docker/">
+<a class="md-nav__link" href="../../../utils/docker/">
         Docker 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/gdb/">
+<a class="md-nav__link" href="../../../utils/gdb/">
         gdb 命令相关
       </a>
 </li>
@@ -895,7 +967,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/action/">
+<a class="md-nav__link" href="../../../utils/action/">
         Github Action
       </a>
 </li>
@@ -915,22 +987,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/reveal-md/">
+<a class="md-nav__link" href="../../../utils/reveal-md/">
         reveal-md
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/gitbook/">
+<a class="md-nav__link" href="../../../utils/gitbook/">
         gitbook
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/mkdocs/">
+<a class="md-nav__link" href="../../../utils/mkdocs/">
         mkdocs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/hexo/">
+<a class="md-nav__link" href="../../../utils/hexo/">
         hexo
       </a>
 </li>
@@ -955,8 +1027,56 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
-    Table of Contents
+<a class="md-nav__link" href="#_1">
+    问题描述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    算法描述
+  </a>
+<nav aria-label="算法描述" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    找最近对应点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    求解最优变换
+  </a>
+<nav aria-label="求解最优变换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    计算最优平移
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    计算最优旋转
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    迭代
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icp_1">
+    ICP 的优缺点及一些改进算法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    实际使用中的一些注意事项
   </a>
 </li>
 <li class="md-nav__item">
@@ -973,41 +1093,195 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cs/hpc/index.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/pcr/icp.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">高性能计算<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="icp">ICP<a class="headerlink" href="#icp" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2610<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>分钟</p>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>我的<span><span class="heti-spacing"> </span>mentor</span>（大🐮） 就是做<span class="heti-skip"><span class="heti-spacing"> </span>hpc<span class="heti-spacing"> </span></span>的，当初实习时也涉及到一点点知识，所以对<span class="heti-skip"><span class="heti-spacing"> </span>hpc<span class="heti-spacing"> </span></span>也产生了一点点兴趣。虽然说以后应该不会做<span><span class="heti-spacing"> </span>hpc</span>，但是学习相关部分的知识是有必要的。</p>
+<p>ICP（Iterative Closest Point）是一种迭代算法，用于将两组点云进行配准，即找到两组点云之间的最优刚体变换（旋转矩阵和平移向量），使得两组点云之间的误差最小化。</p>
 </div>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
+<h2 id="_1">问题描述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>点云配准（Point Cloud Registration）指的是输入两幅点云 <span class="arithmatex">\(P_s\)</span>（source）和 <span class="arithmatex">\(P_t\)</span>（target），输出一个变换 <span class="arithmatex">\(T\)</span> 使得 <span class="arithmatex">\(T(P_s)\)</span> 和 <span class="arithmatex">\(P_t\)</span> 的重合程度尽可能高。变换 <span class="arithmatex">\(T\)</span> 可以是刚性的<span><span class="heti-spacing"> </span>(rigid)</span>，也可以不是，本文只考虑刚性变换，即变换只包括旋转、平移。</p>
+<p>目前应用最广泛的点云精配准算法是迭代最近点算法（Iterative Closest Point, ICP）及各种变种<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>算法。</p>
+<h2 id="_2">算法描述<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>对于 <span class="arithmatex">\(T\)</span> 是刚性变换的情形，点云配准问题可以描述为：</p>
+<div class="arithmatex">\[
+R^\ast, t^\ast = \argmin_{R, t} \frac{1}{|P_s|} \sum_{i=1}^{|P_s|} \| p_t^i - (R \cdot p_s^i + t) \|^2
+\]</div>
+<p>这里<span class="arithmatex">\(p_s\)</span> 和 <span class="arithmatex">\(p_t\)</span> 是源点云和目标点云一一对应点。 </p>
 <ul>
-<li><a href="outline/">概论</a></li>
-<li><a href="vectorizecompute/">向量化计算</a></li>
-<li><a href="gpu/"><span>GPU<span class="heti-spacing"> </span></span>编程</a></li>
-<li><a href="mpi/"><span>MPI<span class="heti-spacing"> </span></span>基础</a></li>
-<li><a href="openmp/"><span>OpenMP<span class="heti-spacing"> </span></span>基础</a></li>
-<li><a href="taichi/"><span>Taichi<span class="heti-spacing"> </span></span>基础</a></li>
+<li><span>ICP<span class="heti-spacing"> </span></span>算法的直观想法：<ul>
+<li>如果我们知道两幅点云上点的对应关系，那么可以用<span class="heti-skip"><span class="heti-spacing"> </span>Least Squares<span class="heti-spacing"> </span></span>来求解<span><span class="heti-spacing"> </span>R</span>，<span>t<span class="heti-spacing"> </span></span>参数。</li>
+<li>怎么知道点的对应关系呢？如果我们知道了一个大概靠谱的<span><span class="heti-spacing"> </span>R</span>，<span>t<span class="heti-spacing"> </span></span>参数，那么可以通过贪心的方式找两幅点云上的点的对应关系（直接找距离最近的点作为对应点）。</li>
+</ul>
+</li>
+<li><span>ICP<span class="heti-spacing"> </span></span>算法实际上就是交替进行上述两个步骤，迭代进行计算，直到收敛。</li>
+</ul>
+<details class="note">
+<summary><span>ICP<span class="heti-spacing"> </span></span>算法流程</summary>
+<ol>
+<li>点云预处理：滤波、清理数据等</li>
+<li>匹配：应用上一步求解出的变换，找最近点</li>
+<li>加权：调整一些对应点对的权重</li>
+<li>提出不合理的对应点对</li>
+<li>计算<span><span class="heti-spacing"> </span>loss</span></li>
+<li>最小化<span><span class="heti-spacing"> </span>loss</span>，求解当前最优变换</li>
+<li>回到<span><span class="heti-spacing"> </span>2</span>，进行迭代，直到收敛</li>
+</ol>
+</details>
+<ul>
+<li>整体上来看，<span>ICP<span class="heti-spacing"> </span></span>把点云配准问题拆分成两个子问题：<ul>
+<li>找最近点</li>
+<li>找最优变换</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">找最近对应点<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>利用初始 <span class="arithmatex">\(R_0、t_0\)</span> 或上一次迭代得到的 <span class="arithmatex">\(R_{k-1}、t_{k-1}\)</span> 对初始点云进行变换，得到一个临时的变换点云，然后用这个点云和目标点云比较，找出源点云中每一个点在目标点云中的最近邻点。</p>
+<p>如果直接进行比较最近邻点，需要进行两重循环，计算复杂度为 <span class="arithmatex">\(\mathcal{O}(|P_s| \cdot |P_t|)\)</span>，这一步比较耗时，常见的加速方法有：</p>
+<ul>
+<li>设置距离阈值，当点与点距离小于一定阈值就认为找到了对应点，不用遍历完整个点集。</li>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span>ANN<span class="heti-spacing"> </span></span>加速查找，常见的有<span><span class="heti-spacing"> </span>KD-tree</span>。<span>KD-tree<span class="heti-spacing"> </span></span>建树复杂度为 <span class="arithmatex">\(\mathcal{O}(N \log N)\)</span>，查找复杂度为 <span class="arithmatex">\(\mathcal{O}(\log N)\)</span>（最坏情况下为 <span class="arithmatex">\(\mathcal{O}(N)\)</span>）。</li>
+</ul>
+<h3 id="_4">求解最优变换<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>对于<span class="heti-skip"><span class="heti-spacing"> </span>point-to-point ICP<span class="heti-spacing"> </span></span>问题，求最优变换是有闭形式解（closed-form solution）的，可以借助<span class="heti-skip"><span class="heti-spacing"> </span>SVD<span class="heti-spacing"> </span></span>分解来计算。</p>
+<p>结论：在已知点的对应关系的情况下，设 <span class="arithmatex">\(\overline{p}_s, \overline{p}_t\)</span> 分别表示源点云和目标点云的质心，令 <span class="arithmatex">\(\hat{p}_s^i=p_s^i-\overline{p}_s，\hat{p}_t^i=p_t^i-\overline{p}_t\)</span>，令 <span class="arithmatex">\(H=\sum_{i=1}^{|P_s|}\hat{p}_s^i \hat{p}_t^{i^\top}\)</span>，这是一个 <span class="arithmatex">\(3 \times 3\)</span> 的句子，对<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>进行<span class="heti-skip"><span class="heti-spacing"> </span>SVD<span class="heti-spacing"> </span></span>分解得到 <span class="arithmatex">\(H=U\Sigma V^\top\)</span>，则<span class="heti-skip"><span class="heti-spacing"> </span>point-to-point ICP<span class="heti-spacing"> </span></span>问题最优旋转为：</p>
+<div class="arithmatex">\[R^{\ast} = V U^\top\]</div>
+<p>最优平移为：</p>
+<div class="arithmatex">\[t^{\ast} = \overline{p}_t - R^\ast \hat{p}_s\]</div>
+<h4 id="_5">计算最优平移<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>令 <span class="arithmatex">\(N=|P_s|\)</span>，设 <span class="arithmatex">\(F(t)=\sum_{i=1}^N \|(R \cdot p_s^i + t) - p_t^i \|^2\)</span>，对其进行求导，则有：</p>
+<div class="arithmatex">\[
+\begin{aligned} \frac{\partial F}{\partial t} &amp;= \sum_{i=1}^{N} 2 (R \cdot p_s^i + t - p_t^i) \\ &amp;= 2nt + 2R\sum_{i=1}^{N}p_s^i - 2\sum_{i=1}^{N}p_t^i \end{aligned}
+\]</div>
+<p>令导数为<span><span class="heti-spacing"> </span>0</span>，则有：</p>
+<div class="arithmatex">\[
+\begin{aligned} t &amp;= \frac{1}{N} \sum_{i=1}^{N} p_t^i - R \frac{1}{N} \sum_{i=1}^{N} p_s^i \\ &amp;= \bar p_t - R \bar p_s \end{aligned}
+\]</div>
+<p>无论<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>取值如何，根据上式都可以求得最优的<span><span class="heti-spacing"> </span>t</span>，使得<span class="heti-skip"><span class="heti-spacing"> </span>loss<span class="heti-spacing"> </span></span>最小。</p>
+<h4 id="_6">计算最优旋转<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>经过最优平移的推导，知道无论旋转如何取值，都可以通过计算点云的质心来得到最优平移，为了计算方便，不妨不考虑平移的影响，先将源点云和目标点云都转换到质心坐标下，这也就是令 <span class="arithmatex">\(\hat{p}_s^i=p_s^i-\hat{p}_s, \hat{p}_t^i=p_t^i-\hat{p}_t\)</span> 的意义。</p>
+<p>下面用 <span class="arithmatex">\(\hat{p}_s^i\)</span> 和 <span class="arithmatex">\(\hat{p}_t^i\)</span> 进行推导。不考虑平移，则<span class="heti-skip"><span class="heti-spacing"> </span>loss<span class="heti-spacing"> </span></span>可以写成：</p>
+<div class="arithmatex">\[
+F(R) = \sum_{i=1}^{N} \|R \cdot \hat p_s^i - \hat p_t^i \|^2
+\]</div>
+<p>先简化 <span class="arithmatex">\(\|R \cdot \hat p_s^i - \hat p_t^i \|^2\)</span>：</p>
+<div class="arithmatex">\[
+\begin{aligned} \|R \cdot \hat p_s^i - \hat p_t^i\|^2 &amp;= (R \cdot \hat p_s^i - \hat p_t^i)^\top(R \cdot \hat p_s^i - \hat p_t^i) \\ &amp;= ({\hat p_s^i}^\top R^\top - {\hat p_t^i}^\top)(R \cdot \hat p_s^i - \hat p_t^i) \\ &amp;= {\hat p_s^i}^\top R^\top R {\hat p_s^i} - {\hat p_t^i}^\top R {\hat p_s^i} - {\hat p_s^i}^\top R^\top {\hat p_t^i} + {\hat p_t^i}^\top {\hat p_t^i} \\ &amp;= \|{\hat p_s^i}\|^2 + \|{\hat p_t^i}\|^2 - {\hat p_t^i}^\top R {\hat p_s^i} - {\hat p_s^i}^\top R^\top {\hat p_t^i} \\ &amp;= \|{\hat p_s^i}\|^2 + \|{\hat p_t^i}\|^2 - 2{\hat p_t^i}^\top R {\hat p_s^i} \end{aligned}
+\]</div>
+<p>这里利用 <span class="arithmatex">\(R^\top R=I\)</span> 和 <span class="arithmatex">\({\hat p_t^i}^\top R {\hat p_s^i} = {\hat p_s^i}^\top R^\top {\hat p_t^i}\)</span>（标量的转置等于自身）的性质。</p>
+<p>由于点的坐标是确定的（和<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>无关），所以最小化原<span class="heti-skip"><span class="heti-spacing"> </span>loss<span class="heti-spacing"> </span></span>等价于求：</p>
+<div class="arithmatex">\[
+R^{\ast} = \argmin_R (-2 \sum_{i=1}^{N} {\hat p_t^i}^\top R {\hat p_s^i})
+\]</div>
+<p>也即为求：</p>
+<div class="arithmatex">\[
+R^{\ast} = \argmax_R (\sum_{i=1}^{N} {\hat p_t^i}^\top R {\hat p_s^i})
+\]</div>
+<p>注意到 <span class="arithmatex">\(\sum_{i=1}^{N} {\hat p_t^i}^\top R {\hat p_s^i} = trace(P_t^\top R P_s)\)</span>（由矩阵乘法及<span class="heti-skip"><span class="heti-spacing"> </span>trace<span class="heti-spacing"> </span></span>的定义可得），所以问题转化为：</p>
+<div class="arithmatex">\[
+R^{\ast} = \argmax_{R} \ trace(P_t^\top R P_s)
+\]</div>
+<p>根据<span class="heti-skip"><span class="heti-spacing"> </span>trace<span class="heti-spacing"> </span></span>的性质 <span class="arithmatex">\(trace(AB)=trace(BA)\)</span><heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（这里不要求<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>是方阵，只要<span class="heti-skip"><span class="heti-spacing"> </span>A*B<span class="heti-spacing"> </span></span>是方阵即可），有：</p>
+<div class="arithmatex">\[trace(P_t^\top RP_s)=trace(RP_sP_t^\top)\]</div>
+<p>在利用前面定义的矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>和其<span class="heti-skip"><span class="heti-spacing"> </span>SVD<span class="heti-spacing"> </span></span>分解，带入上式得到：</p>
+<div class="arithmatex">\[
+\begin{aligned} trace(P_t^\top R P_s) &amp;= trace(R P_s P_t^\top) \\ &amp;= trace(R H) \\ &amp;= trace(R U \Sigma V^\top) \\ &amp;= trace(\Sigma V^\top R U) \end{aligned}
+\]</div>
+<p>注意这里的 <span class="arithmatex">\(V,U,R\)</span> 都是正交矩阵，所以 <span class="arithmatex">\(V^\top RU\)</span> 也是正交矩阵。</p>
+<p>令 <span class="arithmatex">\(M=V^\top RU=\begin{bmatrix} m_{11} &amp; m_{12} &amp; m_{13} \\ m_{21} &amp; m_{22} &amp; m_{23} \\ m_{31} &amp; m_{32} &amp; m_{33} \end{bmatrix}\)</span>，则有：</p>
+<div class="arithmatex">\[
+\begin{aligned} trace(\Sigma V^\top R U) &amp;= trace(\Sigma M) \\ &amp; = \sigma_1 m_{11} + \sigma_2 m_{22} + \sigma_1 m_{33} \end{aligned}
+\]</div>
+<p>根据奇异值非负的性质和正交矩阵的性质（正交矩阵中的元素绝对值不大于<span><span class="heti-spacing"> </span>1</span>），容易证得只有当 <span class="arithmatex">\(M\)</span> 为单位阵时 <span class="arithmatex">\(trace(\Sigma M)\)</span> 最大，即：</p>
+<div class="arithmatex">\[
+V^\top RU = I \\
+R = VU^\top
+\]</div>
+<p>所以有 <span class="arithmatex">\(R^\ast = VU^\top\)</span>。</p>
+<p>最后还需要进行<span><span class="heti-spacing"> </span>Orientation rectification</span>，即验证 <span class="arithmatex">\(R^\ast = VU^\top\)</span> 是不是一个旋转矩阵（检查是否有 <span class="arithmatex">\(|R|=1\)</span>），因为存在 <span class="arithmatex">\(|R|=-1\)</span> 的可能，此时 <span class="arithmatex">\(R\)</span> 表示的不是旋转而是一个<span><span class="heti-spacing"> </span>reflection</span>，所以还要给上述优化求解加上一个 <span class="arithmatex">\(|R|=1\)</span> 的约束。</p>
+<p>根据矩阵行列式的性质，以及 <span class="arithmatex">\(U,V\)</span> 都是正交矩阵：</p>
+<div class="arithmatex">\[
+\begin{aligned} |M| &amp;= |V^\top| |U| |R| \\ &amp;= |V^\top| |U| = \pm 1 \end{aligned}
+\]</div>
+<p>如果 <span class="arithmatex">\(|VU^\top|=1\)</span>，则 <span class="arithmatex">\(|M|=1，R^\ast = VU^\top\)</span> 已经给出最优旋转；如果 <span class="arithmatex">\(|VU^\top|=-1\)</span>，则 <span class="arithmatex">\(|M|=-1\)</span>，我们需要求解此时的 <span class="arithmatex">\(R\)</span>，也就是分析 <span class="arithmatex">\(M\)</span> 应该具有何种形式。具体的讨论参考<a href="https://www.math.pku.edu.cn/teachers/yaoy/Fall2011/arun.pdf">原论文</a>，这里给出结论：当 <span class="arithmatex">\(|M|=-1\)</span> 时，使得 <span class="arithmatex">\(trace(\Sigma M)\)</span> 最大的 <span class="arithmatex">\(M\)</span> 为：</p>
+<div class="arithmatex">\[M = \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{array} \right]\]</div>
+<p>综合考虑 <span class="arithmatex">\(|M|=1\)</span> 和 <span class="arithmatex">\(|M|=-1\)</span> 两种情况，我们可以得到：</p>
+<div class="arithmatex">\[
+R^{\ast} = V \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; |V U^\top| \end{array} \right] U^\top
+\]</div>
+<p>到此公式推导完全，简单总结一下求解最优变换的步骤：</p>
+<ol>
+<li>计算源点云和目标点云的质心；</li>
+<li>将源点云和目标点云都转换到质心坐标系；</li>
+<li>计算矩阵<span><span class="heti-spacing"> </span>H</span>（形式类似“协方差矩阵”）；</li>
+<li>对<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>进行<span class="heti-skip"><span class="heti-spacing"> </span>SVD<span class="heti-spacing"> </span></span>分解，根据公式求得 <span class="arithmatex">\(R^\ast\)</span>；</li>
+<li>根据公式计算 <span class="arithmatex">\(t^\ast\)</span>；</li>
+</ol>
+<h3 id="_7">迭代<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>每一次迭代都会得到当前的最优变换参数 <span class="arithmatex">\(R_k,t_k\)</span>，然后将该变换作用于当前源点云<heti-adjacent class="heti-adjacent-quarter">；</heti-adjacent>“找最近对应点”和“求解最优变换”这两步不停迭代进行，直到满足迭代终止条件，常用的终止条件有：</p>
+<ul>
+<li><span class="arithmatex">\(R_k,t_k\)</span> 的变化量小于一定值</li>
+<li><span>loss<span class="heti-spacing"> </span></span>变化量小于一定值</li>
+<li>达到最大迭代次数</li>
+</ul>
+<h2 id="icp_1"><span>ICP<span class="heti-spacing"> </span></span>的优缺点及一些改进算法<a class="headerlink" href="#icp_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li><span>ICP<span class="heti-spacing"> </span></span>优点<ul>
+<li>简单，不必对点云进行分割和特征提取</li>
+<li>初值较好情况下，精度和收敛性都不错</li>
+</ul>
+</li>
+<li><span>ICP<span class="heti-spacing"> </span></span>缺点<ul>
+<li>找最近对应点的计算开销较大</li>
+<li>只考虑了点与点距离，缺少对点云结构信息的利用</li>
+</ul>
+</li>
+</ul>
+<p>原始的<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>算法计算开销大，对初始变换敏感，容易陷入局部最优解。自<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>提出以来，有相当多的<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>改进算法，简要列举一些：</p>
+<ul>
+<li>Point-to-Plane ICP，原始<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>算法的代价函数中使用的<span class="heti-skip"><span class="heti-spacing"> </span>point-to-point<span class="heti-spacing"> </span></span>距离，<span>point-to-plane<span class="heti-spacing"> </span></span>则是考虑源顶点到目标顶点所在面的距离，比起直接计算点到点距离，考虑了点云的局部结构，精度更高，不容易陷入局部最优；但要注意<span class="heti-skip"><span class="heti-spacing"> </span>point-to-plane<span class="heti-spacing"> </span></span>的优化是一个非线性问题，速度比较慢，一般使用其线性化近似；</li>
+<li>Plane-to-Plane ICP，<span>point-to-plane<span class="heti-spacing"> </span></span>只考虑目标点云局部结构， <span>plane-to-plane<span class="heti-spacing"> </span></span>顾名思义就是也考虑源点云的局部结构，计算面到面的距离；</li>
+<li>Generalized ICP (GICP)，综合考虑<span><span class="heti-spacing"> </span>point-to-point</span>、<span>point-to-plane<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>plane-to-plane<span class="heti-spacing"> </span></span>策略，精度、鲁棒性都有所提高；</li>
+<li>Normal Iterative Closest Point (NICP)，考虑法向量和局部曲率，更进一步利用了点云的局部结构信息，其论文中实验结果比<span class="heti-skip"><span class="heti-spacing"> </span>GICP<span class="heti-spacing"> </span></span>的性能更好。</li>
+</ul>
+<h2 id="_8">实际使用中的一些注意事项<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li><span>ICP<span class="heti-spacing"> </span></span>比较依赖于变换初值，平移比较简单，直接用点云质心来估计；旋转初值的话可以手动调一个粗略值，或者沿每个轴的旋转进行采样、组合来尝试（不适合实时性应用）；</li>
+<li>点太多的话可以先降采样；</li>
+<li>找到一些<span class="heti-skip"><span class="heti-spacing"> </span>anchor<span class="heti-spacing"> </span></span>点对（比如先用特征点匹配），可以帮助加速收敛；</li>
+<li>对应用场景引入一些合理假设，比如限制旋转、平移的范围，变换自由度数量等。</li>
 </ul>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://note.tonycrane.cc/cs/hpc/hpc101/"><span>HPC 101<span class="heti-spacing"> </span></span>超算小学期</a></li>
-<li><a href="https://www.bilibili.com/video/BV1814y1g7YC/?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click&amp;vd_source=5e048b202705330980eefcc9a56cc5d0">北大未名超算队 高性能计算入门</a></li>
-<li><a href="https://docs.nvidia.com/cuda/index.html">CUDA docs</a></li>
-<li><a href="https://mpitutorial.com/tutorials/">MPI Tutorials</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/137441104">点云配准学习笔记<span><span class="heti-spacing"> </span>-ICP</span>（1）</a></li>
+<li><a href="https://yilingui.xyz/2019/11/20/191120_point_cloud_registration_icp/">三维点云配准<span class="heti-skip"><span class="heti-spacing"> </span>-- ICP<span class="heti-spacing"> </span></span>算法</a></li>
+<li><a href="https://igl.ethz.ch/projects/ARAP/svd_rot.pdf">https://igl.ethz.ch/projects/ARAP/svd_rot.pdf</a></li>
+<li><a href="https://courses.cs.duke.edu//spring07/cps296.2/scribe_notes/lecture24.pdf">https://courses.cs.duke.edu//spring07/cps296.2/scribe_notes/lecture24.pdf</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月5日 15:36:11</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月20日 21:06:07</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月5日 15:36:11</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -1018,7 +1292,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 神经网络与深度学习" class="md-footer__link md-footer__link--prev" href="../ai/dl/" rel="prev">
+<a aria-label="上一页: 前置知识" class="md-footer__link md-footer__link--prev" href="../prepare/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1027,17 +1301,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              神经网络与深度学习
+              前置知识
             </div>
 </div>
 </a>
-<a aria-label="下一页: 概论" class="md-footer__link md-footer__link--next" href="outline/" rel="next">
+<a aria-label="下一页: 三维数据场可视化" class="md-footer__link md-footer__link--next" href="../../3d-visualization/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              概论
+              三维数据场可视化
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1084,9 +1358,9 @@ var _hmt = _hmt || [];
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.289a2a4b.min.js"></script>
 <script src="https://cdn.jujimeizuo.cn/utils/katex.min.js"></script>
-<script src="../../js/katex.js"></script>
+<script src="../../../js/katex.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
