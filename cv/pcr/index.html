@@ -4,24 +4,23 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/mb/maa/lec3/" rel="canonical"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://note.jujimeizuo.cn/cv/pcr/" rel="canonical"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>矩阵微分 - 狙击美佐的笔记本</title>
-<link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../css/timeline.css" rel="stylesheet"/>
+<title>点云配准 - 狙击美佐的笔记本</title>
+<link href="../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<link href="../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/card.css" rel="stylesheet"/>
-<link href="../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
-<link href="/css/counter.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<link href="../../css/card.css" rel="stylesheet"/>
+<link href="../../css/flink.css" rel="stylesheet"/>
+<link href="../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -33,7 +32,7 @@ var _hmt = _hmt || [];
 </script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CY82KV89G2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-CY82KV89G2",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CY82KV89G2"></script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -44,9 +43,9 @@ var _hmt = _hmt || [];
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
-<script src="../../../js/scheme.js" type="text/javascript"></script>
+<script src="../../js/scheme.js" type="text/javascript"></script>
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -60,7 +59,7 @@ var _hmt = _hmt || [];
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -76,7 +75,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              矩阵微分
+              点云配准
             
           </span>
 </div>
@@ -145,27 +144,27 @@ var _hmt = _hmt || [];
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
         Home
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../cs/">
+<a class="md-tabs__link" href="../../cs/">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../cv/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../mb/">
         Math Basis
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../utils/">
+<a class="md-tabs__link" href="../../utils/">
         Utils
       </a>
 </li>
@@ -179,7 +178,7 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
     狙击美佐的笔记本
@@ -198,7 +197,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../..">Home</a>
+<a href="../..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -210,12 +209,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../changelog/">
+<a class="md-nav__link" href="../../changelog/">
         更新记录
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../links/">
+<a class="md-nav__link" href="../../links/">
         友链
       </a>
 </li>
@@ -225,7 +224,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/">Computer Science</a>
+<a href="../../cs/">Computer Science</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -239,7 +238,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/pl/">编程语言</a>
+<a href="../../cs/pl/">编程语言</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -253,7 +252,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/pl/c_cpp/">C/C++</a>
+<a href="../../cs/pl/c_cpp/">C/C++</a>
 <label for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -265,17 +264,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/basic/">
+<a class="md-nav__link" href="../../cs/pl/c_cpp/basic/">
         C++ 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/stl/">
+<a class="md-nav__link" href="../../cs/pl/c_cpp/stl/">
         C++ STL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
+<a class="md-nav__link" href="../../cs/pl/c_cpp/function/">
         C++ 各种函数使用
       </a>
 </li>
@@ -285,7 +284,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/pl/python/">Python</a>
+<a href="../../cs/pl/python/">Python</a>
 <label for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -297,17 +296,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/python/basic/">
+<a class="md-nav__link" href="../../cs/pl/python/basic/">
         Python 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
+<a class="md-nav__link" href="../../cs/pl/python/numpy/">
         Numpy 科学计算库
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
+<a class="md-nav__link" href="../../cs/pl/python/virtual/">
         Python 虚拟环境
       </a>
 </li>
@@ -317,7 +316,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/pl/go/">Go</a>
+<a href="../../cs/pl/go/">Go</a>
 <label for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -329,12 +328,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/go/basic/">
+<a class="md-nav__link" href="../../cs/pl/go/basic/">
         Go 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/go/gin/">
+<a class="md-nav__link" href="../../cs/pl/go/gin/">
         gin框架 (TODO)
       </a>
 </li>
@@ -344,7 +343,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/pl/java/">Java</a>
+<a href="../../cs/pl/java/">Java</a>
 <label for="__nav_2_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -356,12 +355,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/java/basic/">
+<a class="md-nav__link" href="../../cs/pl/java/basic/">
         Java 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/java/springboot/">
+<a class="md-nav__link" href="../../cs/pl/java/springboot/">
         SpringBoot
       </a>
 </li>
@@ -384,12 +383,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
+<a class="md-nav__link" href="../../cs/algorithm/basic-ds/">
         基础数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
+<a class="md-nav__link" href="../../cs/algorithm/design-analysis/">
         算法设计与分析
       </a>
 </li>
@@ -409,17 +408,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
+<a class="md-nav__link" href="../../cs/ai/mode-recognition/">
         模式识别
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/ai/ml/">
+<a class="md-nav__link" href="../../cs/ai/ml/">
         机器学习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/ai/dl/">
+<a class="md-nav__link" href="../../cs/ai/dl/">
         神经网络与深度学习
       </a>
 </li>
@@ -429,7 +428,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/hpc/">高性能计算</a>
+<a href="../../cs/hpc/">高性能计算</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -441,32 +440,32 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/outline/">
+<a class="md-nav__link" href="../../cs/hpc/outline/">
         概论
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
+<a class="md-nav__link" href="../../cs/hpc/vectorizecompute/">
         向量化计算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/gpu/">
+<a class="md-nav__link" href="../../cs/hpc/gpu/">
         GPU 编程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/mpi/">
+<a class="md-nav__link" href="../../cs/hpc/mpi/">
         MPI 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/openmp/">
+<a class="md-nav__link" href="../../cs/hpc/openmp/">
         OpenMP 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/taichi/">
+<a class="md-nav__link" href="../../cs/hpc/taichi/">
         Taichi 基础
       </a>
 </li>
@@ -476,7 +475,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cs/software/">软件相关</a>
+<a href="../../cs/software/">软件相关</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -488,22 +487,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/design-pattern/">
+<a class="md-nav__link" href="../../cs/software/design-pattern/">
         设计模式
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/sca/">
+<a class="md-nav__link" href="../../cs/software/sca/">
         软件构件与体系结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/compa/">
+<a class="md-nav__link" href="../../cs/software/compa/">
         COM 原理与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/piaserver/">
+<a class="md-nav__link" href="../../cs/software/piaserver/">
         应用服务器原理与实现
       </a>
 </li>
@@ -523,7 +522,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/mysql/">
+<a class="md-nav__link" href="../../cs/db/mysql/">
         MySQL
       </a>
 </li>
@@ -540,17 +539,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
+<a class="md-nav__link" href="../../cs/db/redis/datatype/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
+<a class="md-nav__link" href="../../cs/db/redis/cjh/">
         持久化
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/redis/work/">
+<a class="md-nav__link" href="../../cs/db/redis/work/">
         事务
       </a>
 </li>
@@ -573,7 +572,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/others/regex/">
+<a class="md-nav__link" href="../../cs/others/regex/">
         RegEx 正则表达式
       </a>
 </li>
@@ -583,10 +582,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/">CV &amp; Robot</a>
+<a href="../">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -598,14 +597,14 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/opencv/">
+<a class="md-nav__link" href="../opencv/">
         OpenCV
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/mvg/">多视图几何</a>
+<a href="../mvg/">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -617,47 +616,47 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../mvg/est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/eval/">
+<a class="md-nav__link" href="../mvg/eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
+<a class="md-nav__link" href="../mvg/camera-model/">
         摄像机模型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/calc-p/">
+<a class="md-nav__link" href="../mvg/calc-p/">
         计算摄像机矩阵 P
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/one-vg/">
+<a class="md-nav__link" href="../mvg/one-vg/">
         单视图几何
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/ag-fm/">
+<a class="md-nav__link" href="../mvg/ag-fm/">
         对极几何和基本矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/3dr-camera-structure/">
+<a class="md-nav__link" href="../mvg/3dr-camera-structure/">
         摄像机和结构的 3D 重构
       </a>
 </li>
@@ -667,7 +666,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/slam/">SLAM</a>
+<a href="../slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -681,7 +680,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -693,12 +692,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/slam/vslam14/lec1/">
+<a class="md-nav__link" href="../slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/slam/vslam14/lec2/">
+<a class="md-nav__link" href="../slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -708,10 +707,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../cv/pcr/">点云配准</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">点云配准</a>
 <label for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -723,7 +722,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/pcr/prepare/">
+<a class="md-nav__link" href="prepare/">
         前置知识
       </a>
 </li>
@@ -731,17 +730,17 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/3d-visualization/">
+<a class="md-nav__link" href="../3d-visualization/">
         三维数据场可视化
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Math Basis</a>
+<a href="../../mb/">Math Basis</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -755,7 +754,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../optimization-theory/">最优化理论与方法</a>
+<a href="../../mb/optimization-theory/">最优化理论与方法</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -767,27 +766,27 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../optimization-theory/lec1/">
+<a class="md-nav__link" href="../../mb/optimization-theory/lec1/">
         最优化问题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../optimization-theory/lec2/">
+<a class="md-nav__link" href="../../mb/optimization-theory/lec2/">
         直线搜索
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../optimization-theory/lec3/">
+<a class="md-nav__link" href="../../mb/optimization-theory/lec3/">
         无约束最优化的梯度方法
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">矩阵分析与应用</a>
+<a href="../../mb/maa/">矩阵分析与应用</a>
 <label for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -799,105 +798,25 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../lec1/">
+<a class="md-nav__link" href="../../mb/maa/lec1/">
         矩阵代数基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../lec2/">
+<a class="md-nav__link" href="../../mb/maa/lec2/">
         特殊矩阵
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          矩阵微分
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mb/maa/lec3/">
         矩阵微分
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jacobian">
-    Jacobian 矩阵与梯度矩阵
-  </a>
-<nav aria-label="Jacobian 矩阵与梯度矩阵" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jacobian_1">
-    Jacobian 矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    梯度矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    偏导和梯度计算
-  </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jacobian_2">
-    一阶实矩阵微分与 Jacobian 矩阵辨识
-  </a>
-<nav aria-label="一阶实矩阵微分与 Jacobian 矩阵辨识" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    一阶实矩阵微分
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian">
-    二阶实矩阵微分与 Hessian 矩阵辨识
-  </a>
-<nav aria-label="二阶实矩阵微分与 Hessian 矩阵辨识" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_1">
-    Hessian 矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_2">
-    Hessian 矩阵的辨识原理
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_3">
-    Hessian 矩阵的辨识方法
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_4">
-    共轭梯度与复 Hessian 矩阵
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../comb/">
+<a class="md-nav__link" href="../../mb/comb/">
         组合数学
       </a>
 </li>
@@ -907,7 +826,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../utils/">Utils</a>
+<a href="../../utils/">Utils</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -919,7 +838,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/utilsbox/">
+<a class="md-nav__link" href="../../utils/utilsbox/">
         工具收集
       </a>
 </li>
@@ -936,22 +855,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/shell/">
+<a class="md-nav__link" href="../../utils/shell/">
         Shell 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/git/">
+<a class="md-nav__link" href="../../utils/git/">
         Git 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/docker/">
+<a class="md-nav__link" href="../../utils/docker/">
         Docker 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/gdb/">
+<a class="md-nav__link" href="../../utils/gdb/">
         gdb 命令相关
       </a>
 </li>
@@ -971,7 +890,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/action/">
+<a class="md-nav__link" href="../../utils/action/">
         Github Action
       </a>
 </li>
@@ -991,22 +910,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/reveal-md/">
+<a class="md-nav__link" href="../../utils/reveal-md/">
         reveal-md
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/gitbook/">
+<a class="md-nav__link" href="../../utils/gitbook/">
         gitbook
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/mkdocs/">
+<a class="md-nav__link" href="../../utils/mkdocs/">
         mkdocs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/hexo/">
+<a class="md-nav__link" href="../../utils/hexo/">
         hexo
       </a>
 </li>
@@ -1031,70 +950,13 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jacobian">
-    Jacobian 矩阵与梯度矩阵
-  </a>
-<nav aria-label="Jacobian 矩阵与梯度矩阵" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jacobian_1">
-    Jacobian 矩阵
+<a class="md-nav__link" href="#table-of-contents">
+    Table of Contents
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    梯度矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    偏导和梯度计算
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jacobian_2">
-    一阶实矩阵微分与 Jacobian 矩阵辨识
-  </a>
-<nav aria-label="一阶实矩阵微分与 Jacobian 矩阵辨识" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    一阶实矩阵微分
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian">
-    二阶实矩阵微分与 Hessian 矩阵辨识
-  </a>
-<nav aria-label="二阶实矩阵微分与 Hessian 矩阵辨识" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_1">
-    Hessian 矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_2">
-    Hessian 矩阵的辨识原理
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_3">
-    Hessian 矩阵的辨识方法
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hessian_4">
-    共轭梯度与复 Hessian 矩阵
+<a class="md-nav__link" href="#reference">
+    Reference
   </a>
 </li>
 </ul>
@@ -1106,119 +968,36 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/mb/maa/lec3.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/pcr/index.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">矩阵微分<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="_1">点云配准<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
+<p>点云配准是我读研时的研究方向，主要为自监督以及用于腔内环境</p>
+<p>除了传统方法<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>之外，主要方法有两种：</p>
 <ul>
-<li>
-<p>矩阵微分是多变量函数微分的推广，包括矩阵偏导和梯度。</p>
-</li>
-<li>
-<p>概念巨多且繁琐（还是建议看书吧</p>
-</li>
+<li>端到端</li>
+<li>提取特征点</li>
 </ul>
 </div>
-<h2 id="jacobian"><span>Jacobian<span class="heti-spacing"> </span></span>矩阵与梯度矩阵<a class="headerlink" href="#jacobian" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="jacobian_1"><span>Jacobian<span class="heti-spacing"> </span></span>矩阵<a class="headerlink" href="#jacobian_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
 <ul>
-<li><span class="arithmatex">\(pq \times mn\)</span>维<span class="heti-skip"><span class="heti-spacing"> </span>Jacobian<span class="heti-spacing"> </span></span>矩阵</li>
+<li><a href="prepare/">前置知识</a></li>
 </ul>
-<div class="arithmatex">\[
-D_{X}F(\mathbf{X}) \overset{def}{=}
-\frac{\partial vec(F(\mathbf{X}))}{\partial (vec \mathbf{X})^\top} \in R^{pq \times mn}
-\]</div>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
 <ul>
-<li>具体表达式为</li>
+<li><a href="https://www.zhihu.com/question/34170804">学习三维点云配准</a></li>
 </ul>
-<div class="arithmatex">\[
-D_{X}F(\mathbf{X})=
-\begin{bmatrix}
-\frac{\partial f_{11}}{\partial (vec \mathbf{X})^\top} \\
-... \\
-\frac{\partial f_{p1}}{\partial (vec \mathbf{X})^\top} \\
-...\\
-\frac{\partial f_{1q}}{\partial (vec \mathbf{X})^\top} \\
-...\\
-\frac{\partial f_{pq}}{\partial (vec \mathbf{X})^\top} \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-\frac{\partial f_{11}}{\partial x_{11}} &amp; .. &amp; \frac{\partial f_{11}}{\partial x_{m1}} &amp; .. &amp; \frac{\partial f_{11}}{\partial x_{1n}} &amp; .. &amp; \frac{\partial f_{11}}{\partial x_{mn}} \\
-... &amp; .. &amp; ... &amp; .. &amp; ... &amp; .. &amp; ... \\
-\frac{\partial f_{p1}}{\partial x_{11}} &amp; .. &amp; \frac{\partial f_{p1}}{\partial x_{m1}} &amp; .. &amp; \frac{\partial f_{p1}}{\partial x_{1n}} &amp; .. &amp; \frac{\partial f_{p1}}{\partial x_{mn}} \\
-... &amp; .. &amp; ... &amp; .. &amp; ... &amp; .. &amp; ... \\
-\frac{\partial f_{1q}}{\partial x_{11}} &amp; .. &amp; \frac{\partial f_{1q}}{\partial x_{m1}} &amp; .. &amp; \frac{\partial f_{1q}}{\partial x_{1n}} &amp; .. &amp; \frac{\partial f_{1q}}{\partial x_{mn}} \\
-... &amp; .. &amp; ... &amp; .. &amp; ... &amp; .. &amp; ... \\
-\frac{\partial f_{pq}}{\partial x_{11}} &amp; .. &amp; \frac{\partial f_{pq}}{\partial x_{m1}} &amp; .. &amp; \frac{\partial f_{pq}}{\partial x_{1n}} &amp; .. &amp; \frac{\partial f_{pq}}{\partial x_{mn}} \\
-\end{bmatrix}
-\]</div>
-<h3 id="_2">梯度矩阵<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>定义梯度矩阵</li>
-</ul>
-<div class="arithmatex">\[
-\nabla_\mathbf{X} f(\mathbf{X})=
-\begin{bmatrix}
-\frac{\partial f(\mathbf{X})}{\partial x_{11}} &amp; ... &amp; \frac{\partial f(\mathbf{X})}{\partial x_{1n}} \\
-... &amp; ... &amp; ... \\
-\frac{\partial f(\mathbf{X})}{\partial x_{m1}} &amp; ... &amp; \frac{\partial f(\mathbf{X})}{\partial x_{mn}} \\
-\end{bmatrix}
-=
-\frac{\partial f(\mathbf{X})}{\partial \mathbf{X}}
-\]</div>
-<ul>
-<li>矩阵函数的梯度矩阵是其<span class="heti-skip"><span class="heti-spacing"> </span>Jacobian<span class="heti-spacing"> </span></span>矩阵的转置：<span class="arithmatex">\(\nabla_\mathbf{X} F(\mathbf{X})=(D_\mathbf{X} F(\mathbf{X}))^\top\)</span></li>
-</ul>
-<h3 id="_3">偏导和梯度计算<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>矩阵变元的梯度计算和标量变元的梯度计算类似，只是矩阵变元的梯度是矩阵，而标量变元的梯度是向量，都满足线性、乘积、商、链式法则</li>
-</ul>
-<h2 id="jacobian_2">一阶实矩阵微分与<span class="heti-skip"><span class="heti-spacing"> </span>Jacobian<span class="heti-spacing"> </span></span>矩阵辨识<a class="headerlink" href="#jacobian_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_4">一阶实矩阵微分<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>
-<p>矩阵微分用符号<span class="arithmatex">\(d\mathbf{X}\)</span>表示，定义为<span class="arithmatex">\(d\mathbf{X}=[dX_{ij}]_{i=1,j=1}^{m,n}\)</span></p>
-</li>
-<li>
-<p>标量函数的<span class="heti-skip"><span class="heti-spacing"> </span>Jacobian<span class="heti-spacing"> </span></span>矩阵辨识</p>
-</li>
-<li>实值矩阵函数的<span class="heti-skip"><span class="heti-spacing"> </span>Jacobian<span class="heti-spacing"> </span></span>矩阵辨识</li>
-</ul>
-<h2 id="hessian">二阶实矩阵微分与<span class="heti-skip"><span class="heti-spacing"> </span>Hessian<span class="heti-spacing"> </span></span>矩阵辨识<a class="headerlink" href="#hessian" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="hessian_1"><span>Hessian<span class="heti-spacing"> </span></span>矩阵<a class="headerlink" href="#hessian_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>实值函数<span class="arithmatex">\(f(x)\)</span>相对于<span class="arithmatex">\(m \times 1\)</span>实向量<span class="arithmatex">\(x\)</span>的二阶偏导称为<span class="heti-skip"><span class="heti-spacing"> </span>Hessian<span class="heti-spacing"> </span></span>矩阵，记作<span class="arithmatex">\(H[f(x)]\)</span>，定义为</li>
-</ul>
-<div class="arithmatex">\[
-H[f(x)]=\frac{\partial^2 f(x)}{\partial x \partial x^\top}=\frac{\partial}{\partial x}[\frac{\partial f(x)}{\partial x^\top}] \in R^{m \times m} \\
-或 \\
-H[f(x)]=\frac{\partial^2 f(x)}{\partial x \partial x^\top}=
-\begin{bmatrix}
-\frac{\partial^2 f}{\partial x_1 \partial x_1} &amp; ... &amp; \frac{\partial^2 f}{\partial x_1 \partial x_m} \\
-... &amp; ... &amp; ... \\
-\frac{\partial^2 f}{\partial x_m \partial x_1} &amp; ... &amp; \frac{\partial^2 f}{\partial x_m \partial x_m} \\
-\end{bmatrix}
-\in R^{m \times m}
-\]</div>
-<h3 id="hessian_2"><span>Hessian<span class="heti-spacing"> </span></span>矩阵的辨识原理<a class="headerlink" href="#hessian_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>标量函数 <span class="arithmatex">\(f(x)\)</span> 的<span class="heti-skip"><span class="heti-spacing"> </span>Hessian<span class="heti-spacing"> </span></span>矩阵辨识</li>
-<li>标量函数 <span class="arithmatex">\(f(\mathbf{X})\)</span> 的<span class="heti-skip"><span class="heti-spacing"> </span>Hessian<span class="heti-spacing"> </span></span>矩阵辨识</li>
-</ul>
-<h3 id="hessian_3"><span>Hessian<span class="heti-spacing"> </span></span>矩阵的辨识方法<a class="headerlink" href="#hessian_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="hessian_4">共轭梯度与复<span class="heti-skip"><span class="heti-spacing"> </span>Hessian<span class="heti-spacing"> </span></span>矩阵<a class="headerlink" href="#hessian_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月7日 20:01:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月3日 15:35:04</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月28日 22:28:16</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月3日 15:35:04</span>
 </small>
 </div>
 </article>
@@ -1231,7 +1010,7 @@ H[f(x)]=\frac{\partial^2 f(x)}{\partial x \partial x^\top}=
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 特殊矩阵" class="md-footer__link md-footer__link--prev" href="../lec2/" rel="prev">
+<a aria-label="上一页: 三维空间刚体运动" class="md-footer__link md-footer__link--prev" href="../slam/vslam14/lec2/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1240,17 +1019,17 @@ H[f(x)]=\frac{\partial^2 f(x)}{\partial x \partial x^\top}=
 <span class="md-footer__direction">
                 上一页
               </span>
-              特殊矩阵
+              三维空间刚体运动
             </div>
 </div>
 </a>
-<a aria-label="下一页: 组合数学" class="md-footer__link md-footer__link--next" href="../../comb/" rel="next">
+<a aria-label="下一页: 前置知识" class="md-footer__link md-footer__link--next" href="prepare/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              组合数学
+              前置知识
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1297,9 +1076,9 @@ H[f(x)]=\frac{\partial^2 f(x)}{\partial x \partial x^\top}=
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
 <script src="https://cdn.jujimeizuo.cn/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
+<script src="../../js/katex.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
