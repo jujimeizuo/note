@@ -12,6 +12,7 @@
 ## Table of Contents
 
 - [前置知识](prepare/)
+- [ICP](icp/)
 
 ## Reference
 

@@ -212,6 +212,7 @@ nav:
     - 点云配准:
         - cv/pcr/index.md
         - 前置知识: cv/pcr/prepare.md
+        - ICP: cv/pcr/icp.md
     - 三维数据场可视化: cv/3d-visualization.md
   - Math Basis:
     - mb/index.md

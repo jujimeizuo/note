@@ -1,4 +1,12 @@
 - "2023":
+  - "2023-12-05":
+    - newpage:
+        text: CV & Robot > 点云配准 > ICP
+        href: /cv/pcr/icp/
+  - "2023-12-04":
+    - newpage:
+        text: CV & Robot > 点云配准 > 前置知识
+        href: /cv/pcr/prepare/
   - "2023-12-03":
     - newpage:
         text: CV & Robot > 三维数据场可视化
