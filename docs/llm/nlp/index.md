@@ -7,3 +7,4 @@
 ## Table of Contents
 
 - [Word2Vec](word2vec/)
+- [RNN](rnns/)

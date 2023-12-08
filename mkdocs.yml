@@ -219,6 +219,7 @@ nav:
     - NLP:
       - llm/nlp/index.md
       - Word2Vec: llm/nlp/word2vec.md
+      - RNN: llm/nlp/rnns.md
   - Math Basis:
     - mb/index.md
     - 最优化理论与方法:
