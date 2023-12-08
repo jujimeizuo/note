@@ -216,7 +216,9 @@ nav:
     - 三维数据场可视化: cv/3d-visualization.md
   - LLM:
     - llm/index.md
-    - Word2Vec: llm/word2vec.md
+    - NLP:
+      - llm/nlp/index.md
+      - Word2Vec: llm/nlp/word2vec.md
   - Math Basis:
     - mb/index.md
     - 最优化理论与方法:

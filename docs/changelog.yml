@@ -1,8 +1,8 @@
 - "2023":
   - "2023-12-07":
     - newpage:
-        text: LLM > Word2Vec
-        href: /llm/word2vec/
+        text: LLM > NLP > Word2Vec
+        href: /llm/nlp/word2vec/
   - "2023-12-05":
     - newpage:
         text: CV & Robot > 点云配准 > ICP
