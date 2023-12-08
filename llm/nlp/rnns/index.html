@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/mb/maa/lec1/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/llm/nlp/rnns/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>矩阵代数基础 - 狙击美佐的笔记本</title>
+<title>RNN - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#rnns">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              矩阵代数基础
+              RNN
             
           </span>
 </div>
@@ -160,12 +160,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../llm/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         LLM
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../../mb/">
         Math Basis
       </a>
 </li>
@@ -748,10 +748,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/">LLM</a>
+<a href="../../">LLM</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -762,10 +762,10 @@ var _hmt = _hmt || [];
           LLM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/nlp/">NLP</a>
+<a href="../">NLP</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -777,14 +777,82 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/word2vec/">
+<a class="md-nav__link" href="../word2vec/">
         Word2Vec
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/rnns/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          RNN
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         RNN
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    基本循环神经网络
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    双向循环神经网络
+  </a>
+<nav aria-label="双向循环神经网络" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    梯度爆炸和梯度消失
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lstm">
+    长短期记忆网络 LSTM
+  </a>
+<nav aria-label="长短期记忆网络 LSTM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    遗忘门
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    输入门
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    输出门
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gru">
+    门控循环单元 GRU
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
 </li>
 </ul>
 </nav>
@@ -792,10 +860,13 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Math Basis</a>
+<a href="../../../mb/">Math Basis</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -809,7 +880,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../optimization-theory/">最优化理论与方法</a>
+<a href="../../../mb/optimization-theory/">最优化理论与方法</a>
 <label for="__nav_5_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -821,27 +892,27 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../optimization-theory/lec1/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
         最优化问题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../optimization-theory/lec2/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec2/">
         直线搜索
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../optimization-theory/lec3/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec3/">
         无约束最优化的梯度方法
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">矩阵分析与应用</a>
+<a href="../../../mb/maa/">矩阵分析与应用</a>
 <label for="__nav_5_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -852,180 +923,18 @@ var _hmt = _hmt || [];
           矩阵分析与应用
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          矩阵代数基础
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/maa/lec1/">
         矩阵代数基础
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    矩阵的基本运算
-  </a>
-<nav aria-label="矩阵的基本运算" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    矩阵与向量
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    矩阵的基本运算
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    向量的线性无关性与非奇异矩阵
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hilbert">
-    向量空间、线性映射与 Hilbert 空间
-  </a>
-<nav aria-label="向量空间、线性映射与 Hilbert 空间" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    向量空间
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    线性映射
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hilbert_1">
-    内积空间、赋范空问与Hilbert 空间
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    内积与范数
-  </a>
-<nav aria-label="内积与范数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    向量的内积与范数
-  </a>
-<nav aria-label="向量的内积与范数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    常数向量的典范内积与范数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    函数向量的内积与范数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    随机向量的内积与范数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-    矩阵的内积与范数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-    随机向量
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
-    矩阵的性能指标
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
-    逆矩阵与伪逆矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moore-penrose">
-    Moore-Penrose 逆矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hadamard">
-    矩阵的直和与Hadamard 积
-  </a>
-<nav aria-label="矩阵的直和与Hadamard 积" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
-    矩阵的直和
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hadamard_1">
-    Hadamard 积
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#kronecker-khatri-rao">
-    Kronecker 积与Khatri-Rao 积
-  </a>
-<nav aria-label="Kronecker 积与Khatri-Rao 积" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#kronecker">
-    Kronecker 积
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#khatri-rao">
-    Khatri-Rao 积
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-    向量化与矩阵化
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../lec2/">
+<a class="md-nav__link" href="../../../mb/maa/lec2/">
         特殊矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../lec3/">
+<a class="md-nav__link" href="../../../mb/maa/lec3/">
         矩阵微分
       </a>
 </li>
@@ -1033,7 +942,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../comb/">
+<a class="md-nav__link" href="../../../mb/comb/">
         组合数学
       </a>
 </li>
@@ -1167,152 +1076,61 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    矩阵的基本运算
+<a class="md-nav__link" href="#_1">
+    概述
   </a>
-<nav aria-label="矩阵的基本运算" class="md-nav">
-<ul class="md-nav__list">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    基本循环神经网络
+  </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-    矩阵与向量
+    双向循环神经网络
   </a>
-</li>
+<nav aria-label="双向循环神经网络" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
-    矩阵的基本运算
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    向量的线性无关性与非奇异矩阵
+    梯度爆炸和梯度消失
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hilbert">
-    向量空间、线性映射与 Hilbert 空间
+<a class="md-nav__link" href="#lstm">
+    长短期记忆网络 LSTM
   </a>
-<nav aria-label="向量空间、线性映射与 Hilbert 空间" class="md-nav">
+<nav aria-label="长短期记忆网络 LSTM" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    遗忘门
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_6">
-    向量空间
+    输入门
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
-    线性映射
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hilbert_1">
-    内积空间、赋范空问与Hilbert 空间
+    输出门
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    内积与范数
-  </a>
-<nav aria-label="内积与范数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    向量的内积与范数
-  </a>
-<nav aria-label="向量的内积与范数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    常数向量的典范内积与范数
+<a class="md-nav__link" href="#gru">
+    门控循环单元 GRU
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    函数向量的内积与范数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    随机向量的内积与范数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-    矩阵的内积与范数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-    随机向量
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
-    矩阵的性能指标
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
-    逆矩阵与伪逆矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moore-penrose">
-    Moore-Penrose 逆矩阵
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hadamard">
-    矩阵的直和与Hadamard 积
-  </a>
-<nav aria-label="矩阵的直和与Hadamard 积" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
-    矩阵的直和
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hadamard_1">
-    Hadamard 积
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#kronecker-khatri-rao">
-    Kronecker 积与Khatri-Rao 积
-  </a>
-<nav aria-label="Kronecker 积与Khatri-Rao 积" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#kronecker">
-    Kronecker 积
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#khatri-rao">
-    Khatri-Rao 积
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-    向量化与矩阵化
+<a class="md-nav__link" href="#reference">
+    Reference
   </a>
 </li>
 </ul>
@@ -1324,245 +1142,186 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/mb/maa/lec1.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/nlp/rnns.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">矩阵代数基础<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="rnns">RNNs<a class="headerlink" href="#rnns" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2841<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>13<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>分钟</p>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>矩阵是描述和求解线性方程组最基本和最有用的数学工具</p>
-<ul>
-<li>数学运算<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>转置、内积、外积、逆矩阵、广义逆矩阵等</li>
-<li>标量函数：范数、二次型、行列式、特征值、秩和迹</li>
-<li>特殊运算<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>直和、直积、<span>Hadamard<span class="heti-spacing"> </span></span>积、<span>Kronecker<span class="heti-spacing"> </span></span>积、向量化</li>
-</ul>
+<p><span>NLP<span class="heti-spacing"> </span></span>里最常用、最传统的深度学习模型就是 <strong>循环神经网络<span><span class="heti-spacing"> </span>RNN</span>（Recurrent Neural Network）</strong>。</p>
+<p><span>RNN<span class="heti-spacing"> </span></span>有很多变种，其中最常用的就是<strong><span><span class="heti-spacing"> </span>LSTM</span>（Long Short-Term Memory）</strong> 和<strong><span><span class="heti-spacing"> </span>GRU</span>（Gated Recurrent Unit）</strong>。本文将介绍<span><span class="heti-spacing"> </span>RNN</span>、<span>LSTM<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>GRU<span class="heti-spacing"> </span></span>的原理。</p>
 </div>
-<h2 id="_2">矩阵的基本运算<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_3">矩阵与向量<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(m \times n\)</span>的线性方程组，使用<span class="arithmatex">\(m\)</span>个方程描述<span class="arithmatex">\(n\)</span>个未知量之间的线性关系。用矩阵<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>向量形式表示为<span class="arithmatex">\(Ax = b\)</span>，称为<span class="arithmatex">\(m \times n\)</span>矩阵。特殊的有行向量和列向量（包括实数和复数）。</p>
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p>全连接神经网络<span class="heti-skip"><span class="heti-spacing"> </span>DNN<span class="heti-spacing"> </span></span>和 卷积神经网络<span><span class="heti-spacing"> </span>CNN</span>，它们的前一个输入和后一个输入是没有关系的。当我们处理<strong>序列信息</strong>时，某些前面的输入和后面的输入是有关系的，比如：当我们在理解一句话的意思时，孤立的理解这句话的每个词是不够的，我们需要处理这些词连接起来的整个<strong>序列</strong>；这个时候我们就需要使用到<strong>循环神经网络（Recurrent Neural Network）</strong>。</p>
+</blockquote>
+<p><span>RNN<span class="heti-spacing"> </span></span>在自然语言处理领域最先被使用起来，<span>RNN<span class="heti-spacing"> </span></span>可以为语言模型进行建模：</p>
+<p><strong>我没有完成上级布置给我的任务，所以<u> </u>被开除了</strong></p>
+<p>让电脑来填写下划线的词最有可能的是『我』，而不太可能是『小明』，甚至是『吃饭』。</p>
+<p>语言模型就是这样的东西：给定一个一句话前面的部分，预测接下来最有可能的一个词是什么。</p>
+<h2 id="_2">基本循环神经网络<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>基本的<span><span class="heti-spacing"> </span>RNN</span>，结构由<strong>输入层、一个隐藏层和输出层</strong>组成。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-structure.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-structure.png" width="30%"/></a></center>
 <ul>
-<li><span class="arithmatex">\(n \times n\)</span>矩阵的主对角线是指从左上角到右下角相连接的线段，次对角线（交叉对角线）是从右上角到左下角。</li>
-<li>主对角线以外元素全部为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的<span class="arithmatex">\(n \times n\)</span>的矩阵称为对角矩阵。</li>
-<li>对角矩阵主对角线元素全部位<span><span class="heti-spacing"> </span>1</span>，称为单位矩阵<span class="arithmatex">\(I_{n \times n}\)</span>。</li>
-<li>所有元素为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的<span class="arithmatex">\(m \times n\)</span>矩阵称为零矩阵<span class="arithmatex">\(O_{m \times n}\)</span>。</li>
-<li>一个全部元素为零的向量称为零向量。</li>
+<li><span>x<span class="heti-spacing"> </span></span>是输入向量</li>
+<li><span>o<span class="heti-spacing"> </span></span>是输出向量</li>
+<li><span>s<span class="heti-spacing"> </span></span>表示隐藏层的值</li>
+<li><span>U<span class="heti-spacing"> </span></span>是输入层到隐藏层的权重矩阵</li>
+<li><span>V<span class="heti-spacing"> </span></span>时隐藏层到输出层的权重矩阵</li>
 </ul>
-<h3 id="_4">矩阵的基本运算<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><span class="arithmatex">\(A=[a_{ij}]\)</span>的转置记作<span class="arithmatex">\(A^{\top}\)</span>，元素定义为<span class="arithmatex">\([A^{\top}]_{i,j}=a_{ji}\)</span></li>
-<li><span class="arithmatex">\(A=[a_{ij}]\)</span>的复数共轭记作<span class="arithmatex">\(A^*\)</span>，元素定义为<span class="arithmatex">\([A^*]_{ij}=a_{ij}^*\)</span></li>
-<li><span class="arithmatex">\(A=[a_{ij}]\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>复<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>共轭转置记作<span class="arithmatex">\(A^H\)</span>，元素定义为<span class="arithmatex">\([A^H]_{ij}=a_{ji}^*\)</span><heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（共轭转置又叫<span class="heti-skip"><span class="heti-spacing"> </span>Hlermitian<span class="heti-spacing"> </span></span>伴随<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>转置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>共轭）</li>
-<li>满足<span class="arithmatex">\(A^{\top}=A\)</span>的正方实矩阵和<span class="arithmatex">\(A^H=A\)</span>的正方复矩阵分别称为对称矩阵和<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>复共轭对称矩阵<span><span class="heti-spacing"> </span>)</span>，共轭转置和转置的关系<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(A^H=(A^*)^{\top}=(A^{\top})^*\)</span></li>
-<li>矩阵满足与标量<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>矩阵<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>向量之间的加法、乘法（<strong>矩阵乘法不满足交换律</strong>）</li>
-<li>矩阵与向量的乘法<span class="arithmatex">\(Ax=y\)</span>可视为向量<span class="arithmatex">\(x\)</span>的线性变换，<span class="arithmatex">\(A\)</span>称为线性变换矩阵</li>
-<li>如果<span class="arithmatex">\(A\)</span>可逆，则存在<span class="arithmatex">\(A^{-1}\)</span>使得<span class="arithmatex">\(A^{-1}A=I\)</span>，称<span class="arithmatex">\(A^{-1}\)</span>是<span class="arithmatex">\(A\)</span>的逆矩阵</li>
-<li>矩阵的共轭、转罝和共轭转置满足分配律：<span class="arithmatex">\((A+B)^x=A^x+B^x，x \in (*,T,H)\)</span></li>
-<li>矩阵乘积的转置、共轭转置和逆矩阵满足关系式：<span class="arithmatex">\((AB)^x=B^xA^x，x \in (T,H,-1)\)</span></li>
-<li>共轭、转置和共轭转置等符号均可与求逆符号交换：<span class="arithmatex">\((A^x)^{-1}=(A^{-1})^x，x \in (*,T,H)\)</span></li>
-<li>若<span class="arithmatex">\(A\)</span>可逆，对于<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵<span class="arithmatex">\(B=A^HA\)</span>，有<span class="arithmatex">\(A^{-H}BA^{-1}=A^{-H}A^HAA^{-1}=I\)</span></li>
-<li>若<span class="heti-skip"><span class="heti-spacing"> </span>$A_{n \time n}<span class="heti-spacing"> </span></span>为幂等矩阵，则<ul>
-<li><span class="arithmatex">\(A^n = A\)</span></li>
-<li><span class="arithmatex">\(I-A\)</span>为幂等矩阵（<span class="arithmatex">\(A-I\)</span>不一定是幂等矩阵）</li>
-<li><span class="arithmatex">\(A^H\)</span>为幂等矩阵</li>
-<li><span class="arithmatex">\(I-A^H\)</span>为幂等矩阵</li>
-<li>若<span class="arithmatex">\(B\)</span>也为幂等矩阵，并且<span class="arithmatex">\(AB=BA\)</span>，则<span class="arithmatex">\(AB\)</span>为幂等矩阵</li>
-<li><span class="arithmatex">\(A(I-A)=O\)</span>（零矩阵）</li>
-<li><span class="arithmatex">\((I-A)A=O\)</span>（零矩阵）</li>
-<li>函数<span class="arithmatex">\(f(sI+tA)=(I-A)f(s)+Af(s+t)\)</span></li>
-</ul>
-</li>
-<li>若<span class="arithmatex">\(A_{n \times n}\)</span>为对合矩阵或幂单矩阵，则<ul>
-<li><span class="arithmatex">\(f(sI=tA)=\frac{1}{2}[(I+A)f(s+t)+(I-A)f(s-t)]\)</span></li>
-<li>矩阵<span class="arithmatex">\(A\)</span>是对合矩阵，当且仅当<span class="arithmatex">\(\frac{1}{2}(A+I)\)</span>为幂等矩阵</li>
-</ul>
-</li>
-<li>若<span class="arithmatex">\(A_{n \times n}\)</span>为幂零矩阵，则<ul>
-<li><span class="arithmatex">\(f(sI+tA)=If(s)+tAf^\prime(s)\)</span></li>
-</ul>
-</li>
-<li>除了矩阵的基本运算，还有矩阵<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>三角<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>指数<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>对数函数、导数、积分等等</li>
-</ul>
-<h3 id="_5">向量的线性无关性与非奇异矩阵<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>一组<span class="arithmatex">\(m\)</span>维向量<span class="arithmatex">\(\{u_1, ..., u_n\}\)</span>称为线性无关，则方程<span class="arithmatex">\(c_1u_1+...+c_nu_n=0\)</span>只有零解<span class="arithmatex">\(c_1=...=c_n=0\)</span>，反之线性相关。矩阵<span class="arithmatex">\(A\)</span>是非奇异的，当且仅当<span class="arithmatex">\(Ax=0\)</span>只有零解，反之矩阵是奇异的</li>
-<li><span class="arithmatex">\(A_{n \times n}=[a_1,...,a_n]\)</span>是非奇异的，当且仅当它的<span class="arithmatex">\(n\)</span>个列向量<span class="arithmatex">\(a_1,...,a_n\)</span>线性无关。</li>
-</ul>
-<h2 id="hilbert">向量空间、线性映射与<span class="heti-skip"><span class="heti-spacing"> </span>Hilbert<span class="heti-spacing"> </span></span>空间<a class="headerlink" href="#hilbert" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_6">向量空间<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>以向量为元素的集合<span class="arithmatex">\(V\)</span>称为向量空间。如果<span class="arithmatex">\(V\)</span>是一个向量空间，则：<ul>
-<li>零向量<span class="arithmatex">\(0\)</span>是唯一的</li>
-<li>对每一个向量<span class="arithmatex">\(y\)</span>，加法的逆运算<span class="arithmatex">\(-y\)</span>是唯一的</li>
-<li>对每一个向量<span class="arithmatex">\(y\)</span>，恒有<span class="arithmatex">\(0y=0\)</span></li>
-<li>对每一个标量<span><span class="heti-spacing"> </span>a</span>，恒有<span class="arithmatex">\(a0=0\)</span></li>
-<li>若<span class="arithmatex">\(ay=0\)</span>，则<span class="arithmatex">\(a=0\)</span>或者<span class="arithmatex">\(y=0\)</span></li>
-<li><span class="arithmatex">\((-1)y=-y\)</span></li>
-</ul>
-</li>
-<li>令<span class="arithmatex">\(V\)</span>和<span class="arithmatex">\(W\)</span>是两个向量空间，若<span class="arithmatex">\(W\)</span>是<span class="arithmatex">\(V\)</span>中一个非空的子集合，则称子集合<span class="arithmatex">\(W\)</span>是<span class="arithmatex">\(V\)</span>的一个子空间</li>
-<li><span class="arithmatex">\(R^n\)</span>的子集合<span class="arithmatex">\(W\)</span>是<span class="arithmatex">\(R^n\)</span>的一个字空间，当且仅当满足以下条件：<ul>
-<li>当向量<span class="arithmatex">\(x,y\)</span>属于<span class="arithmatex">\(W\)</span>，则<span class="arithmatex">\(x+y\)</span>也属于<span class="arithmatex">\(W\)</span>，即满足加法的闭合性</li>
-<li>当<span class="arithmatex">\(x \in W\)</span>，且<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>为标量，则<span class="arithmatex">\(ax\)</span>也属于<span class="arithmatex">\(W\)</span>，即满足与标量乘积的闭合性</li>
-<li>零向量<span class="arithmatex">\(0\)</span>是<span class="arithmatex">\(W\)</span>的元素</li>
-</ul>
-</li>
-<li>若<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>是向量空间<span class="arithmatex">\(V\)</span>的两个子空问，并满足<span class="arithmatex">\(V=A+B\)</span>和<span class="arithmatex">\(A \cap B=\{0\}\)</span> ，则称<span class="arithmatex">\(V\)</span>是子空间<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>的直接求和，简称直和<span><span class="heti-spacing"> </span>(direetsum)</span>，记作<span class="arithmatex">\(V=A \oplus B\)</span>。</li>
-</ul>
-<h3 id="_7">线性映射<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(T:\ V \to W\)</span>称为子空间<span class="arithmatex">\(V\)</span>到子空间<span class="arithmatex">\(W\)</span>的映射。它表示将子空间<span class="arithmatex">\(V\)</span>的每一个向量变成子空间<span class="arithmatex">\(W\)</span>的一个相对应向量的一种规则。于是，若<span class="arithmatex">\(v \in V\)</span>和<span class="arithmatex">\(w \in W\)</span>，则向量<span class="arithmatex">\(w\)</span>是<span class="arithmatex">\(v\)</span>的映射或变换，即有<span class="arithmatex">\(w = T(v)\)</span>，并称子空间<span class="arithmatex">\(V\)</span>是映射<span class="arithmatex">\(T\)</span>的始集或丁一宇，称<span class="arithmatex">\(W\)</span>是映射的终集或上域。</p>
-<p>令<span class="arithmatex">\(V\)</span>和以是两个向量空间，<span class="arithmatex">\(T:V \to W\)</span>为一线性变换<span><span class="heti-spacing"> </span>:</span></p>
-<ol>
-<li>若<span class="arithmatex">\(M\)</span>是<span class="arithmatex">\(V\)</span>的线性子空间，则<span class="arithmatex">\(T(M)\)</span>是<span class="arithmatex">\(W\)</span>的线性子空间；</li>
-<li>若<span class="arithmatex">\(N\)</span>是<span class="arithmatex">\(W\)</span>的线性子空间，則线性反变换<span class="arithmatex">\(T^{-1}(N)\)</span>是<span class="arithmatex">\(V\)</span>的线性子空间。</li>
-</ol>
-<h3 id="hilbert_1">内积空间、赋范空问与<span class="heti-skip"><span class="heti-spacing"> </span>Hilbert<span class="heti-spacing"> </span></span>空间<a class="headerlink" href="#hilbert_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>（内积与内积向量空间）若对所有<span class="arithmatex">\(x,y,z \in V\)</span>和<span class="arithmatex">\(\alpha,\beta \in K\)</span>，映射函数<span class="arithmatex">\(&lt;\cdot,\cdot&gt;:V \times V \to K\)</span>满足一下三条公理：<ul>
-<li>共轭对称性 <span class="arithmatex">\(&lt;x,y&gt;=&lt;y,x&gt;^*\)</span></li>
-<li>第一变元的线性性 <span class="arithmatex">\(&lt;\alpha x+\beta y,z&gt;=\alpha &lt;x,z&gt; + \beta &lt;y,z&gt;\)</span></li>
-<li>非负性 <span class="arithmatex">\(&lt;x,x&gt; \ge 0\)</span>，并且<span class="arithmatex">\(&lt;x,x&gt; = 0 \leftrightarrow x=0\)</span>（严格正性）</li>
-</ul>
-</li>
-</ul>
-<p>两个向量的内积可以度量它们之问的夹角：<span class="arithmatex">\(\cos \theta = \frac{&lt;x,y&gt;}{\sqrt{&lt;x,x&gt;}\sqrt{&lt;y,y&gt;}}\)</span></p>
-<ul>
-<li>
-<p>（范数和赋范向量空间）令<span class="arithmatex">\(V\)</span>是一<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>实或复<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>向量空间。向量<span class="arithmatex">\(x\)</span>的范数是一实函数<span class="arithmatex">\(p(x):V \to R\)</span>，若对所有向量<span class="arithmatex">\(x,y \in V\)</span>和任意一个标量<span class="arithmatex">\(c \in K\)</span><span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>其中<span class="arithmatex">\(K\)</span>表示<span class="arithmatex">\(R\)</span>或<span class="arithmatex">\(C\)</span><span><span class="heti-spacing"> </span>)</span>，则：</p>
-<ul>
-<li>非负性：<span class="arithmatex">\(p(x) \ge 0\)</span>，并且<span class="arithmatex">\(p(x)=0 \Leftrightarrow  x = 0\)</span></li>
-<li>齐次性：<span class="arithmatex">\(p(cx)=|c|\cdot p(x)\)</span>对所有复常数<span class="arithmatex">\(c\)</span>成立</li>
-<li>三角不等式：<span class="arithmatex">\(p(x+y) \le p(x)+p(y)\)</span></li>
-<li>
-<p>最常用的向量范数为<span class="heti-skip"><span class="heti-spacing"> </span>Euclidean<span class="heti-spacing"> </span></span>范数或者<span class="arithmatex">\(L_2\)</span>范数，记作<span class="arithmatex">\(\parallel \cdot \parallel_2\)</span>，定义为</p>
+<p>循环神经网络的隐藏层的值<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>不仅仅取决于当前这次的输入<span><span class="heti-spacing"> </span>x</span>，还取决于上一次隐藏层的值<span><span class="heti-spacing"> </span>s</span>。权重矩阵<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>就是隐藏层上一次的值作为这一次的输入的权重。</p>
+<p>将上图的基本<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>结构在时间维度展开（<span>RNN<span class="heti-spacing"> </span></span>是一个链式结构，每个时间片使用的都是相同的参数）</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-time-expansion.png"><img alt="RNN 时间展开图" src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-time-expansion.png"/></a></center>
+<p>这个网络在<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>时刻接收到输入 <span class="arithmatex">\(x_t\)</span> 之后，隐藏层的值是 <span class="arithmatex">\(s_t\)</span>，输出层的值是 <span class="arithmatex">\(o_t\)</span>，<strong>关键的是，<span class="arithmatex">\(s_t\)</span> 的值不仅仅取决于 <span class="arithmatex">\(x_t\)</span>，还取决于 <span class="arithmatex">\(s_{t-1}\)</span></strong>。</p>
 <div class="arithmatex">\[
-\parallel x \parallel _E = \parallel x \parallel _2 = \sqrt{x_1^2+...+x_m^2}
+s_t=f(U * x_t + W * s_{t-1}) \\
+o_t=g(V * s_t)
 \]</div>
-</li>
-<li>
-<p><span class="arithmatex">\(L_2\)</span>范数可以直接度量一个向量<span class="arithmatex">\(x\)</span>的长度<span class="arithmatex">\(size(x)=\parallel x \parallel_2\)</span>，两个向量之间的距离<span class="arithmatex">\(d(x,y)=\parallel x-y \parallel_2\)</span></p>
-</li>
-<li>（向量<span class="arithmatex">\(x \in V\)</span>的半范数<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>伪范数）若对所有向量<span class="arithmatex">\(x,y \in V\)</span>和一个标量<span class="arithmatex">\(c\)</span>，满足</li>
-<li><span class="arithmatex">\(p(x) \ge 0\)</span></li>
-<li><span class="arithmatex">\(p(cx)=|c| \cdot p(x)\)</span></li>
-<li><span class="arithmatex">\(p(x+y) \le p(x)+p(y)\)</span></li>
-<li>（向量<span class="arithmatex">\(x \in V\)</span>的拟范数）若对所有向量<span class="arithmatex">\(x,y \in V\)</span>和一个标量<span class="arithmatex">\(c\)</span>，满足</li>
-<li><span class="arithmatex">\(p(x) \ge 0\)</span>，且<span class="arithmatex">\(p(x) = 0 \Leftrightarrow  x = 0\)</span></li>
-<li><span class="arithmatex">\(p(cx)=|c| \cdot p(x)\)</span></li>
-<li><span class="arithmatex">\(p(x+y) \le C(p(x)+p(y))\)</span>，其中<span class="arithmatex">\(C \ne 1\)</span>为某个正实数</li>
-<li>（完备性）一个向量空间<span class="arithmatex">\(V\)</span>称为完备向量空间，若对于<span class="arithmatex">\(V\)</span>中的每一个<span class="heti-skip"><span class="heti-spacing"> </span>Cauchy<span class="heti-spacing"> </span></span>序列<span class="arithmatex">\(\{ v_n \}_{n=1}^{\infty} \subset V\)</span>，在向量空间<span class="arithmatex">\(V\)</span>内存在一个元素<span class="arithmatex">\(v\)</span>，使得<span class="arithmatex">\(\lim_{n \to \infty} v_n \to v\)</span>，即<span class="arithmatex">\(V\)</span>内的每一个<span class="heti-skip"><span class="heti-spacing"> </span>Cauchy<span class="heti-spacing"> </span></span>序列都收敛在向量空间<span class="arithmatex">\(V\)</span>内。 </li>
-</ul>
-</li>
-</ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/mb/maa/compare.jpg"><img alt="几种向量空间的比较" src="https://cdn.jujimeizuo.cn/note/mb/maa/compare.jpg"/></a></center>
 <ul>
-<li>（伴随算子）令<span class="arithmatex">\(T\)</span>是<span class="heti-skip"><span class="heti-spacing"> </span>Hilbert<span class="heti-spacing"> </span></span>空间<span class="arithmatex">\(H\)</span>内的有界线性算子。若<span class="arithmatex">\(&lt;Tx,y&gt;=&lt;x,T^*y&gt;\)</span>对所有向量<span class="arithmatex">\(x,y \in H\)</span>成立，则称<span class="arithmatex">\(T^*\)</span>是<span class="arithmatex">\(T\)</span>的伴随算子<span><span class="heti-spacing"> </span>(adjoint operator)</span>。</li>
+<li>公式<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>是隐藏层的计算公式，它是循环层。<span>U<span class="heti-spacing"> </span></span>是输入<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>的权重矩阵，<span>W<span class="heti-spacing"> </span></span>是 上一次隐藏层值 <span class="arithmatex">\(s_{t-1}\)</span> 作为则一次的输入的权重矩阵，<span>f<span class="heti-spacing"> </span></span>是激活函数。</li>
+<li>公式<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>是输出层的计算公式，<span>V<span class="heti-spacing"> </span></span>是输出层的权重矩阵，<span>g<span class="heti-spacing"> </span></span>是激活函数。</li>
+<li>隐藏层有两个输入，第一是<span class="heti-skip"><span class="heti-spacing"> </span>U<span class="heti-spacing"> </span></span>与 <span class="arithmatex">\(x_t\)</span> 向量的乘积，第二是上一隐藏层输出的状态 <span class="arithmatex">\(s_{t-1}\)</span> 与<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>的乘积。等于上一个时刻计算的 <span class="arithmatex">\(s_{t-1}\)</span> 需要缓存一下，在本次输入 <span class="arithmatex">\(x_t\)</span> 一起计算，共同输出最后的 <span class="arithmatex">\(o_t\)</span>。</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/mb/maa/adjoint-operator.jpg"><img alt="几种常用算子及伴随算子" src="https://cdn.jujimeizuo.cn/note/mb/maa/adjoint-operator.jpg"/></a></center>
-<h2 id="_8">内积与范数<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_9">向量的内积与范数<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(n\)</span>阶复向量<span class="arithmatex">\(x=[x_1,...,x_n]^{\top},y=[y_1,...,y_n]^{\top}\)</span>之间的内积<span class="arithmatex">\(&lt;x,y&gt;=x^Hy=\sum_{i=1}^n x_i^*y_i\)</span>称为典范内积。加权内积<span class="arithmatex">\(&lt;x,y&gt;=x^HGy\)</span>，其中<span class="arithmatex">\(G\)</span>为正定的<span class="heti-skip"><span class="heti-spacing"> </span>Hermitian<span class="heti-spacing"> </span></span>矩阵。</p>
-<p>在实和复内积空间里，范数具有以下性质：</p>
-<ol>
-<li><span class="arithmatex">\(\parallel 0 \parallel = 0\)</span>，并且<span class="arithmatex">\(\parallel x \parallel &gt; 0，\forall x \ne 0\)</span></li>
-<li><span class="arithmatex">\(\parallel cx \parallel = |c| \cdot \parallel x \parallel\)</span>对所有向量<span class="arithmatex">\(x\)</span>和标量<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>成立</li>
-<li>
-<p>范数服从极化恒等式：</p>
+<p>如果反复把公式<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>带入公式<span><span class="heti-spacing"> </span>2</span>，可以得到：</p>
 <div class="arithmatex">\[
-&lt;x,y&gt; =\frac{1}{4}(\parallel x + y \parallel^2-\parallel x - y \parallel^2), \forall x,y（实内积空间）\\
-&lt;x,y&gt; =\frac{1}{4}(\parallel x + y \parallel^2-\parallel x - y \parallel^2 - j \parallel x+jy \parallel^2+j \parallel x-jy \parallel^2), \forall x,y（复内积空间）
+\begin{aligned}
+o_t&amp;=g(Vs_t)\\
+&amp;=Vf(Ux_t+Ws_{t-1})\\
+&amp;=Vf(Ux_t+Wf(Ux_{t-1}+Ws_{t-2}))\\
+&amp;=Vf(Ux_t+Wf(Ux_{t-1}+Wf(Ux_{t-2}+Ws_{t-3})))\\
+&amp;=Vf(Ux_t+Wf(Ux_{t-1}+Wf(Ux_{t-2}+Wf(Ux_{t-3}+...))))
+\end{aligned}
 \]</div>
-</li>
-<li>
-<p>范数服从平行四边形法则<span><span class="heti-spacing"> </span>:</span></p>
+<p>从上面可以看出，循环神经网络的输出值，是受前面历次输入值 <span class="arithmatex">\(x_t、x_{t-1}、x_{t-2}、x_{t-3}、...\)</span> 影响的，这就是为什么循环神经网络可以往前看任意多个输入值的原因。这样其实不好，因为如果太前面的值和后面的值已经没有关系了，循环神经网络还考虑前面的值的话，就会影响后面值的判断。</p>
+<h2 id="_3">双向循环神经网络<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>对于语言模型来说，很多时候光看前面的词是不够的，比如下面这句话：<strong>我的手机坏了，我打算<u> </u>一部新的手机</strong>。 我们这个时候就需要双向循环神经网络。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/brnn-structure.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/brnn-structure.png"/></a></center>
+<p>从上图可以看出，双向循环神经网络的隐藏层需要保存两个值，一个 <span class="arithmatex">\(A\)</span> 参与正向计算，另一个值 <span class="arithmatex">\(A^\prime\)</span> 参与反向计算。最终的输出值 <span class="arithmatex">\(y_2\)</span> 取决于 <span class="arithmatex">\(A_2\)</span> 和 <span class="arithmatex">\(A_2^\prime\)</span>。其计算方法为：</p>
 <div class="arithmatex">\[
-\parallel x+y \parallel^2 + \parallel x - y \parallel^2 = 2(\parallel x \parallel^2+\parallel y \parallel^2), \forall x,y
+y_2=g(VA_2+V\prime A_2^\prime)
 \]</div>
-</li>
-<li>
-<p>范数满足三角不等式<span class="arithmatex">\(\parallel x+y \parallel \le \parallel x \parallel + \parallel y \parallel, \forall x,y\)</span></p>
-</li>
-<li>范数服从<span class="heti-skip"><span class="heti-spacing"> </span>Cauchy-Schwartz<span class="heti-spacing"> </span></span>不等式<span class="arithmatex">\(|&lt;x,y&gt;| \le \parallel x \parallel \cdot \parallel y \parallel\)</span></li>
-</ol>
-<h4 id="_10">常数向量的典范内积与范数<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ol>
-<li><span class="arithmatex">\(L_0\)</span>范数 <span class="arithmatex">\(\parallel x \parallel_0 \overset{def}{=}\)</span>非零元素的个数</li>
-<li><span class="arithmatex">\(L_1\)</span>范数 <span class="arithmatex">\(\parallel x \parallel_1 \overset{def}{=} \sum_{i=1}^m |x_i|\)</span></li>
-<li><span class="arithmatex">\(L_2\)</span>范数 <span class="arithmatex">\(\parallel x \parallel_2 = (|x_1|^2+...+|x_m|^2)^{\frac{1}{2}}\)</span></li>
-<li><span class="arithmatex">\(L_\infty\)</span>范数 <span class="arithmatex">\(\parallel x \parallel_\infty = \max\{|x_1|, ..., |x_m|\}\)</span></li>
-<li><span class="arithmatex">\(L_p\)</span>范数 <span class="arithmatex">\(\parallel x \parallel_p = (\sum_{i=1}^m |x_i|^p)^{\frac{1}{p}}\)</span></li>
-</ol>
-<h4 id="_11">函数向量的内积与范数<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>若<span class="arithmatex">\(x(t)\)</span>和<span class="arithmatex">\(y(t)\)</span>分别是变量<span class="arithmatex">\(t\)</span>的函数变量，则内积定义为</p>
+<p><span class="arithmatex">\(A_2\)</span> 和 <span class="arithmatex">\(A_2^\prime\)</span> 的计算方法为：</p>
 <div class="arithmatex">\[
-&lt;x(t),y(t)&gt; \overset{def}{=} \int_{a}^{b} x^H(t)y(t)dt
+\begin{aligned}
+A_2&amp;=f(WA_1+Ux_2)\\
+A_2^\prime&amp;=f(W^\prime A_3^\prime + U^\prime x_2)
+\end{aligned}
 \]</div>
-<h4 id="_12">随机向量的内积与范数<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>若<span class="arithmatex">\(x(\xi)\)</span>和<span class="arithmatex">\(y(\xi)\)</span>分别是样本变量<span class="arithmatex">\(\xi\)</span>随机变量，则内积定义为</p>
+<p>现在可以看出一般的规律：正向计算时，隐藏层的值 <span class="arithmatex">\(S_t\)</span> 与 <span class="arithmatex">\(S_{t-1}\)</span> 有关；反向计算时，隐藏层的值 <span class="arithmatex">\(S_t^\prime\)</span> 与 <span class="arithmatex">\(S_{t+1}^\prime\)</span> 有关；最终的输出取决于正向和反向计算的加和。现在，仿照公式<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>和公式<span><span class="heti-spacing"> </span>2</span>，写出<span class="heti-skip"><span class="heti-spacing"> </span>BRNN<span class="heti-spacing"> </span></span>的计算公式：</p>
 <div class="arithmatex">\[
-&lt;x(\xi),y(\xi)&gt; \overset{def}{=} E\{x^H(\xi)y(\xi)\}
+\begin{aligned}
+o_t=g(Vs_t+V^\prime s_t^\prime)\\
+s_t=f(Ux_t+Ws_{t-1})\\
+s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
+\end{aligned}
 \]</div>
-<h3 id="_13">矩阵的内积与范数<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>将向量的内积与范数加以推广。</p>
-<p>矩阵的范数有三种主要类型<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>诱导范数、元素形式范数和<span class="heti-skip"><span class="heti-spacing"> </span>Schatten<span class="heti-spacing"> </span></span>范数。</p>
-<h2 id="_14">随机向量<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>概率论知识。</p>
-<h2 id="_15">矩阵的性能指标<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>从上面三个公式可以看到，正向计算和反向计算不共享权重，也就是说 <span class="arithmatex">\(U\)</span> 和 <span class="arithmatex">\(U^\prime\)</span>、<span class="arithmatex">\(W\)</span> 和 <span class="arithmatex">\(W^\prime\)</span>、<span class="arithmatex">\(V\)</span> 和 <span class="arithmatex">\(V^\prime\)</span> 是不同的权重矩阵。</p>
+<h3 id="_4">梯度爆炸和梯度消失<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>上文介绍的几种<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>并不能很好地处理较长的序列，<span>RNN<span class="heti-spacing"> </span></span>在训练中很容易发生梯度爆炸和梯度消失，这导致梯度不能在较长序列中一直传递下去，从而使<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>无法捕捉到长距离的影响。</p>
+<p>通常来说，梯度爆炸更容易处理一些。因为梯度爆炸的时候，我们的程序会收到<span class="heti-skip"><span class="heti-spacing"> </span>NaN<span class="heti-spacing"> </span></span>错误。我们也可以设置一个梯度阈值，当梯度超过这个阈值的时候可以直接截取。</p>
+<p>梯度消失更难检测，而且也更难处理一些。总的来说，我们有三种方法应对梯度消失问题：</p>
+<p>1、合理的初始化权重值。初始化权重，使每个神经元尽可能不要取极大或极小值，以躲开梯度消失的区域。</p>
+<p>2、使用<span class="heti-skip"><span class="heti-spacing"> </span>relu<span class="heti-spacing"> </span></span>代替<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>tanh<span class="heti-spacing"> </span></span>作为激活函数。</p>
+<p>3、使用其他结构的<span><span class="heti-spacing"> </span>RNNs</span>，比如长短时记忆网络（LTSM）和<span><span class="heti-spacing"> </span>Gated Recurrent Unit</span>（GRU），这是最流行的做法。</p>
+<h2 id="lstm">长短期记忆网络<span><span class="heti-spacing"> </span>LSTM</span><a class="headerlink" href="#lstm" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>原始<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>的隐藏层只有一个状态，即<span><span class="heti-spacing"> </span>h</span>，它对短期的输入非常敏感。那么如果我们再加一个门（gate）机制用于控制特征的流通和损失，即<span><span class="heti-spacing"> </span>c</span>，让它来保存长期的状态，这就是<strong>长短时记忆网络（Long Short Term Memory，LSTM）</strong>。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-structure.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-structure.png" width="50%"/></a></center>
+<p>新增加的状态<span><span class="heti-spacing"> </span>c</span>，称为单元状态。把<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>按照时间维度展开：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-time-expansion.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-time-expansion.png" width="50%"/></a></center>
+<p>可以看到在<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>时刻</p>
 <ul>
-<li>二次型</li>
-<li>特征值</li>
-<li>迹</li>
-<li>秩</li>
+<li><strong><span>LSTM<span class="heti-spacing"> </span></span>的输入有三个</strong>：当前时刻网络的输入值 <span class="arithmatex">\(x_t\)</span>、上一时刻<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的输出值 <span class="arithmatex">\(h_{t-1}\)</span>、以及上一时刻的记忆单元向量 <span class="arithmatex">\(c_{t-1}\)</span>。</li>
+<li><strong><span>LSTM<span class="heti-spacing"> </span></span>的输出有两个</strong>：当前时刻的<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>输出值 <span class="arithmatex">\(h_t\)</span>、和当前时刻的记忆单元向量 <span class="arithmatex">\(c_t\)</span>。</li>
 </ul>
-<h2 id="_16">逆矩阵与伪逆矩阵<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>主要讨论非奇异的正方矩阵<span class="arithmatex">\(A\)</span>的逆矩阵<span class="arithmatex">\(A^{-1}\)</span></p>
-<h2 id="moore-penrose"><span>Moore-Penrose<span class="heti-spacing"> </span></span>逆矩阵<a class="headerlink" href="#moore-penrose" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>主要讨论一个秩稀缺的矩阵是否存在逆矩阵，如果存在需要满足什么条件。</p>
-<h2 id="hadamard">矩阵的直和与<span class="heti-skip"><span class="heti-spacing"> </span>Hadamard<span class="heti-spacing"> </span></span>积<a class="headerlink" href="#hadamard" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_17">矩阵的直和<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(m \times m\)</span>矩阵的<span class="arithmatex">\(A\)</span>与<span class="arithmatex">\(n \times n\)</span>矩阵的<span class="arithmatex">\(B\)</span>的直和记作<span class="arithmatex">\(A \oplus B\)</span>，即</p>
-<div class="arithmatex">\[
-A \oplus B =
-\begin{bmatrix}
-A  &amp; O_{m \times n} \\
-O_{n \times m}  &amp; B
-\end{bmatrix}
-\]</div>
-<h3 id="hadamard_1"><span>Hadamard<span class="heti-spacing"> </span></span>积<a class="headerlink" href="#hadamard_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(m \times n\)</span>矩阵的<span class="arithmatex">\(A=[a_{ij}]\)</span>与<span class="arithmatex">\(m \times n\)</span>矩阵的<span class="arithmatex">\(B=[b_{ij}]\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>Hadamard<span class="heti-spacing"> </span></span>积记作<span class="arithmatex">\(A * B\)</span>，元素定义为<span class="arithmatex">\((A*B)_{ij}=a_{ij}b_{ij}\)</span>。即<span class="heti-skip"><span class="heti-spacing"> </span>Hadamard<span class="heti-spacing"> </span></span>积食一种映射<span class="arithmatex">\(R^{m \times n} \times R^{m \times n} \to R^{m \times n}\)</span></p>
-<h2 id="kronecker-khatri-rao"><span>Kronecker<span class="heti-spacing"> </span></span>积与<span class="heti-skip"><span class="heti-spacing"> </span>Khatri-Rao<span class="heti-spacing"> </span></span>积<a class="headerlink" href="#kronecker-khatri-rao" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="kronecker"><span>Kronecker<span class="heti-spacing"> </span></span>积<a class="headerlink" href="#kronecker" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span>Kronecker<span class="heti-spacing"> </span></span>积分为右和左两种<span class="heti-skip"><span class="heti-spacing"> </span>Kronecker<span class="heti-spacing"> </span></span>积。</p>
-<p>例如右<span class="heti-skip"><span class="heti-spacing"> </span>Kronecker<span class="heti-spacing"> </span></span>积记作<span class="arithmatex">\(A \oplus B\)</span>，定义为：</p>
-<div class="arithmatex">\[
-A \oplus B = [a_1B, ..., a_nB]=[a_{ij}B]_{i=1,j=1}^{m,n}=
-\begin{bmatrix}
-a_{11}B  &amp;a_{12}B  &amp;...  &amp;a_{1n}B \\
-a_{21}B  &amp;a_{22}B  &amp;...  &amp;a_{2n}B \\
-...  &amp; ... &amp; ... &amp;... \\
-a_{m1}B  &amp;a_{m2}B  &amp; ... &amp;a_{mn}B
-\end{bmatrix}
-\]</div>
-<p><span>Kronecker<span class="heti-spacing"> </span></span>积也称直积<span class="heti-skip"><span class="heti-spacing"> </span>(direct product)<span class="heti-spacing"> </span></span>或者张量积<span><span class="heti-spacing"> </span>(tensor product)1</span></p>
-<h3 id="khatri-rao"><span>Khatri-Rao<span class="heti-spacing"> </span></span>积<a class="headerlink" href="#khatri-rao" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>两个具有相同列数的矩阵<span class="arithmatex">\(G \in R^{p \times n}\)</span>和<span class="arithmatex">\(F \in R^{q\times n}\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>Khatri-Rao<span class="heti-spacing"> </span></span>积记作<span class="arithmatex">\(F \odot G\)</span>，定义为</p>
-<div class="arithmatex">\[
-F \odot G = [f_1 \oplus g_1, f_2 \oplus g_2, ..., f_n \oplus g_n] \in R^{pq \times n}
-\]</div>
-<p>它由两个矩阵的对应列向量的<span class="heti-skip"><span class="heti-spacing"> </span>Kronecker<span class="heti-spacing"> </span></span>积排列而成。因此，<span>Khatri-Rao<span class="heti-spacing"> </span></span>积又叫对应列<span class="heti-skip"><span class="heti-spacing"> </span>Kronecker<span class="heti-spacing"> </span></span>积。</p>
-<h2 id="_18">向量化与矩阵化<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>矩阵的向量化<span class="arithmatex">\(vec(A)\)</span>是一线性变换，将<span class="arithmatex">\(A\)</span>按列堆栈（当然也可以按行堆栈）排列成一个<span class="arithmatex">\(mn \times 1\)</span>向量。即</p>
-<div class="arithmatex">\[vec(A)=[a_{11},...,a_{m1},...,a_{1n},...,a_{mn}]^{\top}\]</div>
+<blockquote>
+<p>记忆单元<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>层内部结束工作，不向其他层输出。<span>LSTM<span class="heti-spacing"> </span></span>的输出仅有隐藏状态向量<span><span class="heti-spacing"> </span>h</span>。</p>
+</blockquote>
+<p><span>LSTM<span class="heti-spacing"> </span></span>的关键是单元状态，即贯穿图表顶部的水平线，有点像传送带。这一部分一般叫做单元状态（cell state），它自始至终存在于<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的整个链式系统中。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-cell-state.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-cell-state.png" width="50%"/></a></center>
+<p>记忆单元状态的计算公式：<span class="arithmatex">\(公式1：c_{t}=f_{t} \odot c_{t-1}+i_{t} \odot g_t\)</span></p>
+<h3 id="_5">遗忘门<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><span class="arithmatex">\(f_t\)</span> 叫做<strong>遗忘门</strong>，表示 <span class="arithmatex">\(C_{t-1}\)</span> 的哪些特征被用于计算 <span class="arithmatex">\(C_t\)</span>。<span class="arithmatex">\(f_t\)</span> 是一个向量，向量的每个元素均位于<span class="heti-skip"><span class="heti-spacing"> </span>(0~1)<span class="heti-spacing"> </span></span>范围内。通常我们使用<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>作为激活函数，<span>sigmoid<span class="heti-spacing"> </span></span>的输出是一个介于<span class="heti-skip"><span class="heti-spacing"> </span>(0~1)<span class="heti-spacing"> </span></span>区间内的值，但是当你观察一个训练好的<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>时，你会发现门的值绝大多数都非常接近<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>1</span>，其余的值少之又少。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-forget-gate.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-forget-gate.png" width="50%"/></a></center>
+<p>遗忘门的计算公式：<span class="arithmatex">\(公式2：f_t=\sigma (x_tW_x^{(f)}+h_{h-1}W_h^{(f)}+b^{(f)})\)</span></p>
+<h3 id="_6">输入门<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><span class="arithmatex">\(\tilde{C}_t\)</span> 表示单元状态更新值，有输入数据 <span class="arithmatex">\(x_t\)</span> 和隐节点 <span class="arithmatex">\(h_{t-1}\)</span> 经由一个神经网络层得到，单元状态更新值的激活函数通常使用<span><span class="heti-spacing"> </span>tanh</span>。<span class="arithmatex">\(i_t\)</span> 叫做输入门，同 <span class="arithmatex">\(f_t\)</span> 一样也是一个元素介于<span class="heti-skip"><span class="heti-spacing"> </span>(0~1)<span class="heti-spacing"> </span></span>区间内的向量，同样由 <span class="arithmatex">\(x_t\)</span> 和 <span class="arithmatex">\(h_{t-1}\)</span> 经由<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>激活函数计算而成。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-input-gate.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-input-gate.png" width="50%"/></a></center>
+<p>输入门和单元更新值的计算方式：</p>
+<ul>
+<li><span class="arithmatex">\(公式3：i_t=\sigma (x_tW_x^{(i)}+h_{t-1}W_h^{i}+b^{(i)})\)</span></li>
+<li><span class="arithmatex">\(公式4：g_t=tanh(x_tW_x^{(g)}+h_{t-1}W_h^{(g)}+b^{(g)})\)</span></li>
+</ul>
+<h3 id="_7">输出门<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>最后，为了计算预测值 <span class="arithmatex">\(\hat{y}_t\)</span> 和生成下个时间片完整的输入，我们需要计算隐节点的输出 <span class="arithmatex">\(h_t\)</span>。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-output-gate.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-output-gate.png" width="50%"/></a></center>
+<p>输出门和隐节点的计算公式</p>
+<ul>
+<li><span class="arithmatex">\(公式5：o_t=\sigma (x_tW_x^{(o)}+h_{t-1}W_h^{(o)}+b^{(o)})\)</span></li>
+<li><span class="arithmatex">\(公式6：h_t=o_t\odot tanh(c_t)\)</span></li>
+</ul>
+<p>我们来看公式<span><span class="heti-spacing"> </span>2</span>、3、4、5，都是型如 <span class="arithmatex">\(xW_x+hW_h+b\)</span> 的格式，因此可以整合为通过一个式子进行，如下图所示：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-eq.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-eq.png" width="50%"/></a></center>
+<p><span>4<span class="heti-spacing"> </span></span>个权重（或偏置）被整合为了<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>个。如此，原本单独执行<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>次的仿射变换通过<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>次计算即可完成，可以加快计算速度。这是因为矩阵库计算“大矩阵”时通常会更快，而且通过将权重整合到一起管理，源代码也会更简洁。</p>
+<p>假设 <span class="arithmatex">\(W_x、W_h\)</span> 和 <span class="arithmatex">\(b\)</span> 分别包含<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个权重（或偏置），此时<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的计算图如下所示。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-compute-graph.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-compute-graph.png" width="50%"/></a></center>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">((</span><span class="mi">64</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">LSTM_layer</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">return_state</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">outputs</span><span class="p">,</span> <span class="n">final_memory_state</span><span class="p">,</span> <span class="n">final_carry_state</span> <span class="o">=</span> <span class="n">LSTM_layer</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">outputs</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">final_memory_state</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">final_carry_state</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># (64, 6, 20) (64, 20) (64, 20)</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">))</span>  <span class="c1"># 3</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Wx (10, 80)</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Wh (20, 80)</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># bias (80,)</span>
+</code></pre></div>
+<h2 id="gru">门控循环单元<span><span class="heti-spacing"> </span>GRU</span><a class="headerlink" href="#gru" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><span>LSTM<span class="heti-spacing"> </span></span>的参数太多，计算需要很长时间。因此，最近业界又提出了<span><span class="heti-spacing"> </span>GRU</span>（Gated RecurrentUnit，门控循环单元）。<span>GRU<span class="heti-spacing"> </span></span>保留了<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>使用门的理念，但是减少了参数，缩短了计算时间。</p>
+<p>相对于<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>使用隐藏状态和记忆单元两条线，<span>GRU<span class="heti-spacing"> </span></span>只使用隐藏状态。异同点如下：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-lstm.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-lstm.png" width="50%"/></a></center>
+<p><span>GRU<span class="heti-spacing"> </span></span>的计算图如下所示。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-compute-graph.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-compute-graph.png" width="50%"/></a></center>
+<p><span>GRU<span class="heti-spacing"> </span></span>计算图中，<span class="arithmatex">\(\sigma\)</span> 节点和<span class="heti-skip"><span class="heti-spacing"> </span>tanh<span class="heti-spacing"> </span></span>节点有专用的权重，节点内部进行仿射变换（“1−”节点输入<span><span class="heti-spacing"> </span>x</span>，输出<span><span class="heti-spacing"> </span>1</span> − x）</p>
+<p><span class="arithmatex">\(公式2.1：z=\sigma(x_t W_x^{(z)}+h_{t-1} W_h^{(z)}+b^{(z)})\)</span></p>
+<p><span class="arithmatex">\(公式2.2：r=\sigma(x_t W_x^{(r)}+h_{t-1} W_h^{(r)}+b^{(r)})\)</span></p>
+<p><span class="arithmatex">\(公式2.3：\tilde{h}=\tanh (x_t W_x+(r \odot h_{t-1}) W_h+b)\)</span></p>
+<p><span class="arithmatex">\(公式2.4：h_t=(1-z) \odot h_{t-1}+z \odot \tilde{h}\)</span></p>
+<p><span>GRU<span class="heti-spacing"> </span></span>中进行的计算由上述<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个式子表示（这里 <span class="arithmatex">\(x_t\)</span> 和 <span class="arithmatex">\(h_{t−1}\)</span> 都是行向量），如图所示，<span>GRU<span class="heti-spacing"> </span></span>没有记忆单元，只有一个隐藏状态<span class="heti-skip"><span class="heti-spacing"> </span>h<span class="heti-spacing"> </span></span>在时间方向上传播。这里使用<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>共两个门（<span>LSTM<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个门），<span>r<span class="heti-spacing"> </span></span>称为<span class="heti-skip"><span class="heti-spacing"> </span>reset<span class="heti-spacing"> </span></span>门，<span>z<span class="heti-spacing"> </span></span>称为<span class="heti-skip"><span class="heti-spacing"> </span>update<span class="heti-spacing"> </span></span>门。</p>
+<ul>
+<li><strong>r（<span>reset<span class="heti-spacing"> </span></span>门）</strong> 决定在多大程度上“忽略”过去的隐藏状态。根据公式<span><span class="heti-spacing"> </span>2.3</span>，如果<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>是<span><span class="heti-spacing"> </span>0</span>，则新的隐藏状态 <span class="arithmatex">\(\tilde{h}\)</span> 仅取决于输入 <span class="arithmatex">\(x_t\)</span>。也就是说，此时过去的隐藏状态将完全被忽略。</li>
+<li><strong>z（<span>update<span class="heti-spacing"> </span></span>门）</strong> 是更新隐藏状态的门，它扮演了<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>forget<span class="heti-spacing"> </span></span>门和<span class="heti-skip"><span class="heti-spacing"> </span>input<span class="heti-spacing"> </span></span>门两个角色。公式<span class="heti-skip"><span class="heti-spacing"> </span>2.4<span class="heti-spacing"> </span></span>的 <span class="arithmatex">\((1-z) \odot h_{t-1}\)</span> 部分充当<span class="heti-skip"><span class="heti-spacing"> </span>forget<span class="heti-spacing"> </span></span>门的功能，从过去的隐藏状态中删除应该被遗忘的信息。<span class="arithmatex">\(z \odot \tilde{h}\)</span> 的部分充当<span class="heti-skip"><span class="heti-spacing"> </span>input<span class="heti-spacing"> </span></span>门的功能，对新增的信息进行加权。</li>
+</ul>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/30844905">一文搞懂<span><span class="heti-spacing"> </span>RNN</span>（循环神经网络）基础篇</a></li>
+<li><a href="https://www.jiqizhixin.com/articles/2018-12-14-4"><span>RNN<span class="heti-spacing"> </span></span>结构详解</a></li>
+<li><a href="https://www.cnblogs.com/LXP-Never/p/10391308.html">循环神经网络<span class="heti-skip"><span class="heti-spacing"> </span>(RNN)<span class="heti-spacing"> </span></span>及衍生<span><span class="heti-spacing"> </span>LSTM</span>、<span>GRU<span class="heti-spacing"> </span></span>详解</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:20:49</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月8日 17:49:04</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月16日 14:22:57</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月8日 17:49:04</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -1573,7 +1332,7 @@ F \odot G = [f_1 \oplus g_1, f_2 \oplus g_2, ..., f_n \oplus g_n] \in R^{pq \tim
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 矩阵分析与应用" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<a aria-label="上一页: Word2Vec" class="md-footer__link md-footer__link--prev" href="../word2vec/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1582,17 +1341,17 @@ F \odot G = [f_1 \oplus g_1, f_2 \oplus g_2, ..., f_n \oplus g_n] \in R^{pq \tim
 <span class="md-footer__direction">
                 上一页
               </span>
-              矩阵分析与应用
+              Word2Vec
             </div>
 </div>
 </a>
-<a aria-label="下一页: 特殊矩阵" class="md-footer__link md-footer__link--next" href="../lec2/" rel="next">
+<a aria-label="下一页: 数理基础" class="md-footer__link md-footer__link--next" href="../../../mb/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              特殊矩阵
+              数理基础
             </div>
 </div>
 <div class="md-footer__button md-icon">

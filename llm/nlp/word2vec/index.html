@@ -4,24 +4,24 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/mb/comb/" rel="canonical"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<link href="https://note.jujimeizuo.cn/llm/nlp/word2vec/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>组合数学 - 狙击美佐的笔记本</title>
-<link href="../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
-<link href="../../css/heti.css" rel="stylesheet"/>
-<link href="../../css/timeline.css" rel="stylesheet"/>
+<title>Word2Vec - 狙击美佐的笔记本</title>
+<link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
-<link href="../../css/card.css" rel="stylesheet"/>
-<link href="../../css/flink.css" rel="stylesheet"/>
-<link href="../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/card.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
 <link href="/css/counter.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -33,7 +33,7 @@ var _hmt = _hmt || [];
 </script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CY82KV89G2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-CY82KV89G2",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CY82KV89G2"></script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -44,15 +44,15 @@ var _hmt = _hmt || [];
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
-<script src="../../js/scheme.js" type="text/javascript"></script>
+<script src="../../../js/scheme.js" type="text/javascript"></script>
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#word2vec">
             跳转至
           </a>
 </div>
@@ -60,7 +60,7 @@ var _hmt = _hmt || [];
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              组合数学
+              Word2Vec
             
           </span>
 </div>
@@ -145,32 +145,32 @@ var _hmt = _hmt || [];
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
         Home
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../cs/">
+<a class="md-tabs__link" href="../../../cs/">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../cv/">
+<a class="md-tabs__link" href="../../../cv/">
         CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../llm/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         LLM
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../../mb/">
         Math Basis
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../utils/">
+<a class="md-tabs__link" href="../../../utils/">
         Utils
       </a>
 </li>
@@ -184,7 +184,7 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2z"></path></svg>
 </a>
     狙击美佐的笔记本
@@ -203,7 +203,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../..">Home</a>
+<a href="../../..">Home</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -215,12 +215,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../changelog/">
+<a class="md-nav__link" href="../../../changelog/">
         更新记录
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../links/">
+<a class="md-nav__link" href="../../../links/">
         友链
       </a>
 </li>
@@ -230,7 +230,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/">Computer Science</a>
+<a href="../../../cs/">Computer Science</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -244,7 +244,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/pl/">编程语言</a>
+<a href="../../../cs/pl/">编程语言</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -258,7 +258,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/pl/c_cpp/">C/C++</a>
+<a href="../../../cs/pl/c_cpp/">C/C++</a>
 <label for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -270,17 +270,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/c_cpp/basic/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/basic/">
         C++ 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/c_cpp/stl/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/stl/">
         C++ STL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
         C++ 各种函数使用
       </a>
 </li>
@@ -290,7 +290,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/pl/python/">Python</a>
+<a href="../../../cs/pl/python/">Python</a>
 <label for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -302,17 +302,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/python/basic/">
+<a class="md-nav__link" href="../../../cs/pl/python/basic/">
         Python 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/python/numpy/">
+<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
         Numpy 科学计算库
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/python/virtual/">
+<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
         Python 虚拟环境
       </a>
 </li>
@@ -322,7 +322,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/pl/go/">Go</a>
+<a href="../../../cs/pl/go/">Go</a>
 <label for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -334,12 +334,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/go/basic/">
+<a class="md-nav__link" href="../../../cs/pl/go/basic/">
         Go 语法基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/go/gin/">
+<a class="md-nav__link" href="../../../cs/pl/go/gin/">
         gin框架 (TODO)
       </a>
 </li>
@@ -349,7 +349,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/pl/java/">Java</a>
+<a href="../../../cs/pl/java/">Java</a>
 <label for="__nav_2_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -361,12 +361,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/java/basic/">
+<a class="md-nav__link" href="../../../cs/pl/java/basic/">
         Java 系统知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/pl/java/springboot/">
+<a class="md-nav__link" href="../../../cs/pl/java/springboot/">
         SpringBoot
       </a>
 </li>
@@ -389,12 +389,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
         基础数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
         算法设计与分析
       </a>
 </li>
@@ -414,17 +414,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/ai/mode-recognition/">
+<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
         模式识别
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/ai/ml/">
+<a class="md-nav__link" href="../../../cs/ai/ml/">
         机器学习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/ai/dl/">
+<a class="md-nav__link" href="../../../cs/ai/dl/">
         神经网络与深度学习
       </a>
 </li>
@@ -434,7 +434,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/hpc/">高性能计算</a>
+<a href="../../../cs/hpc/">高性能计算</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -446,32 +446,32 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/hpc/outline/">
+<a class="md-nav__link" href="../../../cs/hpc/outline/">
         概论
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/hpc/vectorizecompute/">
+<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
         向量化计算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/hpc/gpu/">
+<a class="md-nav__link" href="../../../cs/hpc/gpu/">
         GPU 编程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/hpc/mpi/">
+<a class="md-nav__link" href="../../../cs/hpc/mpi/">
         MPI 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/hpc/openmp/">
+<a class="md-nav__link" href="../../../cs/hpc/openmp/">
         OpenMP 基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/hpc/taichi/">
+<a class="md-nav__link" href="../../../cs/hpc/taichi/">
         Taichi 基础
       </a>
 </li>
@@ -481,7 +481,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cs/software/">软件相关</a>
+<a href="../../../cs/software/">软件相关</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -493,22 +493,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/software/design-pattern/">
+<a class="md-nav__link" href="../../../cs/software/design-pattern/">
         设计模式
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/software/sca/">
+<a class="md-nav__link" href="../../../cs/software/sca/">
         软件构件与体系结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/software/compa/">
+<a class="md-nav__link" href="../../../cs/software/compa/">
         COM 原理与应用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/software/piaserver/">
+<a class="md-nav__link" href="../../../cs/software/piaserver/">
         应用服务器原理与实现
       </a>
 </li>
@@ -528,7 +528,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/db/mysql/">
+<a class="md-nav__link" href="../../../cs/db/mysql/">
         MySQL
       </a>
 </li>
@@ -545,17 +545,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/db/redis/datatype/">
+<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/db/redis/cjh/">
+<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
         持久化
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/db/redis/work/">
+<a class="md-nav__link" href="../../../cs/db/redis/work/">
         事务
       </a>
 </li>
@@ -578,7 +578,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cs/others/regex/">
+<a class="md-nav__link" href="../../../cs/others/regex/">
         RegEx 正则表达式
       </a>
 </li>
@@ -591,7 +591,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/">CV &amp; Robot</a>
+<a href="../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -603,14 +603,14 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/opencv/">
+<a class="md-nav__link" href="../../../cv/opencv/">
         OpenCV
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/mvg/">多视图几何</a>
+<a href="../../../cv/mvg/">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -622,47 +622,47 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../../../cv/mvg/est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/eval/">
+<a class="md-nav__link" href="../../../cv/mvg/eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/camera-model/">
+<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
         摄像机模型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/calc-p/">
+<a class="md-nav__link" href="../../../cv/mvg/calc-p/">
         计算摄像机矩阵 P
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/one-vg/">
+<a class="md-nav__link" href="../../../cv/mvg/one-vg/">
         单视图几何
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/ag-fm/">
+<a class="md-nav__link" href="../../../cv/mvg/ag-fm/">
         对极几何和基本矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/mvg/3dr-camera-structure/">
+<a class="md-nav__link" href="../../../cv/mvg/3dr-camera-structure/">
         摄像机和结构的 3D 重构
       </a>
 </li>
@@ -672,7 +672,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/slam/">SLAM</a>
+<a href="../../../cv/slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -686,7 +686,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -698,12 +698,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/slam/vslam14/lec1/">
+<a class="md-nav__link" href="../../../cv/slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/slam/vslam14/lec2/">
+<a class="md-nav__link" href="../../../cv/slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -716,7 +716,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../cv/pcr/">点云配准</a>
+<a href="../../../cv/pcr/">点云配准</a>
 <label for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -728,12 +728,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/pcr/prepare/">
+<a class="md-nav__link" href="../../../cv/pcr/prepare/">
         前置知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/pcr/icp/">
+<a class="md-nav__link" href="../../../cv/pcr/icp/">
         ICP
       </a>
 </li>
@@ -741,17 +741,17 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../cv/3d-visualization/">
+<a class="md-nav__link" href="../../../cv/3d-visualization/">
         三维数据场可视化
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../llm/">LLM</a>
+<a href="../../">LLM</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -762,10 +762,10 @@ var _hmt = _hmt || [];
           LLM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../llm/nlp/">NLP</a>
+<a href="../">NLP</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -776,13 +776,61 @@ var _hmt = _hmt || [];
           NLP
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/nlp/word2vec/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Word2Vec
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Word2Vec
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#word2vec_1">
+    Word2Vec 基本思想
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/nlp/rnns/">
+<a class="md-nav__link" href="#word2vec_2">
+    Word2Vec 原理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cbow">
+    CBOW
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skip-gram">
+    Skip-gram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hierarchical-softmax">
+    Hierarchical Softmax
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#negative-sampling">
+    Negative Sampling
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rnns/">
         RNN
       </a>
 </li>
@@ -792,10 +840,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Math Basis</a>
+<a href="../../../mb/">Math Basis</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -809,7 +857,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../optimization-theory/">最优化理论与方法</a>
+<a href="../../../mb/optimization-theory/">最优化理论与方法</a>
 <label for="__nav_5_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -821,17 +869,17 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../optimization-theory/lec1/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
         最优化问题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../optimization-theory/lec2/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec2/">
         直线搜索
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../optimization-theory/lec3/">
+<a class="md-nav__link" href="../../../mb/optimization-theory/lec3/">
         无约束最优化的梯度方法
       </a>
 </li>
@@ -841,7 +889,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../maa/">矩阵分析与应用</a>
+<a href="../../../mb/maa/">矩阵分析与应用</a>
 <label for="__nav_5_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -853,112 +901,27 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../maa/lec1/">
+<a class="md-nav__link" href="../../../mb/maa/lec1/">
         矩阵代数基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../maa/lec2/">
+<a class="md-nav__link" href="../../../mb/maa/lec2/">
         特殊矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../maa/lec3/">
+<a class="md-nav__link" href="../../../mb/maa/lec3/">
         矩阵微分
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          组合数学
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mb/comb/">
         组合数学
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    排列组合
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    母函数
-  </a>
-<nav aria-label="母函数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    普通型母函数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    指数型母函数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    特殊的数
-  </a>
-<nav aria-label="特殊的数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    斐波那契数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    卡特兰数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    斯特林数
-  </a>
-<nav aria-label="斯特林数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stirling">
-    第一类Stirling数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stirling_1">
-    第二类Stirling数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    贝尔数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    伯努利数
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -966,7 +929,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../utils/">Utils</a>
+<a href="../../../utils/">Utils</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -978,7 +941,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/utilsbox/">
+<a class="md-nav__link" href="../../../utils/utilsbox/">
         工具收集
       </a>
 </li>
@@ -995,22 +958,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/shell/">
+<a class="md-nav__link" href="../../../utils/shell/">
         Shell 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/git/">
+<a class="md-nav__link" href="../../../utils/git/">
         Git 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/docker/">
+<a class="md-nav__link" href="../../../utils/docker/">
         Docker 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/gdb/">
+<a class="md-nav__link" href="../../../utils/gdb/">
         gdb 命令相关
       </a>
 </li>
@@ -1030,7 +993,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/action/">
+<a class="md-nav__link" href="../../../utils/action/">
         Github Action
       </a>
 </li>
@@ -1050,22 +1013,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/reveal-md/">
+<a class="md-nav__link" href="../../../utils/reveal-md/">
         reveal-md
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/gitbook/">
+<a class="md-nav__link" href="../../../utils/gitbook/">
         gitbook
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/mkdocs/">
+<a class="md-nav__link" href="../../../utils/mkdocs/">
         mkdocs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/hexo/">
+<a class="md-nav__link" href="../../../utils/hexo/">
         hexo
       </a>
 </li>
@@ -1090,75 +1053,38 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    排列组合
+<a class="md-nav__link" href="#word2vec_1">
+    Word2Vec 基本思想
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    母函数
-  </a>
-<nav aria-label="母函数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    普通型母函数
+<a class="md-nav__link" href="#word2vec_2">
+    Word2Vec 原理
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    指数型母函数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    特殊的数
-  </a>
-<nav aria-label="特殊的数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    斐波那契数
+<a class="md-nav__link" href="#cbow">
+    CBOW
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    卡特兰数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    斯特林数
-  </a>
-<nav aria-label="斯特林数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stirling">
-    第一类Stirling数
+<a class="md-nav__link" href="#skip-gram">
+    Skip-gram
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#stirling_1">
-    第二类Stirling数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    贝尔数
+<a class="md-nav__link" href="#hierarchical-softmax">
+    Hierarchical Softmax
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    伯努利数
+<a class="md-nav__link" href="#negative-sampling">
+    Negative Sampling
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
   </a>
 </li>
 </ul>
@@ -1170,107 +1096,97 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/mb/comb.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/nlp/word2vec.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">组合数学<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<h2 id="_2">排列组合<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h1 id="word2vec">Word2Vec<a class="headerlink" href="#word2vec" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2803<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/summary.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/summary.png"/></a></center>
+<p><span>Word2Vec<span class="heti-spacing"> </span></span>的特点是能够将单词转化为向量来表示，这样词与词之间就可以定量地去度量它们之间的关系，挖掘词之间的联系。</p>
+<p>最早的词向量采用<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码，又称一位有效编码，每个词向量维度大小为整个词汇表的大小，对于每个具体的词汇表中的词，将对应的位置置为<span><span class="heti-spacing"> </span>1.</span></p>
+</div>
+<h2 id="word2vec_1"><span>Word2Vec<span class="heti-spacing"> </span></span>基本思想<a class="headerlink" href="#word2vec_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>采用<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码方式来表示词向量非常简单，但缺点也是显而易见的，一方面我们实际使用的词汇表很大，经常是百万级以上，这么高维的数据处理起来会消耗大量的计算资源与时间。另一方面，<span>One-Hot<span class="heti-spacing"> </span></span>编码中所有词向量之间彼此正交，没有体现词与词之间的相似关系。</p>
+<p><span>Distributed representation<span class="heti-spacing"> </span></span>可以解决<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码存在的问题，它的思路是通过训练，将原来<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码的每个词都映射到一个较短的词向量上来，而这个较短的词向量的维度可以由我们自己在训练时根据任务需要来自己指定。</p>
+<p>下图是采用<span class="heti-skip"><span class="heti-spacing"> </span>Distributed representation<span class="heti-spacing"> </span></span>的一个例子，我们将词汇表里的词用<span class="heti-skip"><span class="heti-spacing"> </span>"Royalty","Masculinity", "Femininity"<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>"Age"4<span class="heti-spacing"> </span></span>个维度来表示，<span>King<span class="heti-spacing"> </span></span>这个词对应的词向量可能是<span><span class="heti-spacing"> </span>(0.99,0.99,0.05,0.7)</span>。当然在实际情况中，我们并不能对词向量的每个维度做一个很好的解释。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/dr.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/dr.png"/></a></center>
+<p>有了用<span class="heti-skip"><span class="heti-spacing"> </span>Distributed Representation<span class="heti-spacing"> </span></span>表示的较短的词向量，我们就可以较容易的分析词之间的关系了，比如我们将词的维度降维到<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>维，有一个有趣的研究表明，用下图的词向量表示我们的词时，我们可以发现：</p>
+<div class="arithmatex">\[
+\vec{King} - \vec{Man} + \vec{Woman} \approx \vec{Queen}
+\]</div>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/kmwq.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/kmwq.png"/></a></center>
+<p>可见我们只要得到了词汇表里所有词对应的词向量，那么我们就可以做很多有趣的事情了。不过，怎么训练才能得到合适的词向量呢？针对这个问题，<span>Google<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Tomas Mikolov<span class="heti-spacing"> </span></span>在他的论文中提出了<span class="heti-skip"><span class="heti-spacing"> </span>CBOW<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Skip-gram<span class="heti-spacing"> </span></span>两种神经网络模型。</p>
+<h2 id="word2vec_2"><span>Word2Vec<span class="heti-spacing"> </span></span>原理<a class="headerlink" href="#word2vec_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><span>Word2Vec<span class="heti-spacing"> </span></span>的训练模型本质上是只具有一个隐含层的神经元网络。</p>
+<p>它的输入采用<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码的词汇表向量，它的输出也是<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码的词汇表向量。使用所有的样本，训练这个神经网络，等到收敛之后，从输入层到隐含层的那些权重，便是每一个词的采用<span class="heti-skip"><span class="heti-spacing"> </span>Distributed Representation<span class="heti-spacing"> </span></span>的词向量。比如，上图中单词的<span class="heti-skip"><span class="heti-spacing"> </span>Word embedding<span class="heti-spacing"> </span></span>后的向量便是矩阵 <span class="arithmatex">\(W_{V \times N}\)</span> 的第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>行的转置。这样我们就把原本维数为<span class="heti-skip"><span class="heti-spacing"> </span>V<span class="heti-spacing"> </span></span>的词向量变成了维数为<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>的词向量（<span>N<span class="heti-spacing"> </span></span>远小于<span><span class="heti-spacing"> </span>V</span>），并且词向量间保留了一定的相关关系。</p>
+<p><span>Google<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Mikolov<span class="heti-spacing"> </span></span>在关于<span class="heti-skip"><span class="heti-spacing"> </span>Word2Vec<span class="heti-spacing"> </span></span>的论文中提出了<span class="heti-skip"><span class="heti-spacing"> </span>CBOW<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Skip-gram<span class="heti-spacing"> </span></span>两种模型，<span>CBOW<span class="heti-spacing"> </span></span>适合于数据集较小的情况，而<span class="heti-skip"><span class="heti-spacing"> </span>Skip-Gram<span class="heti-spacing"> </span></span>在大型语料中表现更好。其中<span class="heti-skip"><span class="heti-spacing"> </span>CBOW<span class="heti-spacing"> </span></span>如下图左部分所示，使用围绕目标单词的其他单词（语境）作为输入，在映射层做加权处理后输出目标单词。与<span class="heti-skip"><span class="heti-spacing"> </span>CBOW<span class="heti-spacing"> </span></span>根据语境预测目标单词不同，<span>Skip-gram<span class="heti-spacing"> </span></span>根据当前单词预测语境，如下图右部分所示。假如我们有一个句子“There is an apple on the table”作为训练数据，<span>CBOW<span class="heti-spacing"> </span></span>的输入为（is,an,on,the），输出为<span><span class="heti-spacing"> </span>apple</span>。而<span class="heti-skip"><span class="heti-spacing"> </span>Skip-gram<span class="heti-spacing"> </span></span>的输入为<span><span class="heti-spacing"> </span>apple</span>，输出为（is,an,on,the）。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/cbow-skipgram.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/cbow-skipgram.png"/></a></center>
+<h2 id="cbow">CBOW<a class="headerlink" href="#cbow" title="Permanent link">¶</a></h2>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/cbow-net.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/cbow-net.png"/></a></center>
+<ol>
+<li>输入层：上下文单词的<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码词向量，<span>V<span class="heti-spacing"> </span></span>为词汇表单词个数，<span>C<span class="heti-spacing"> </span></span>为上下文单词个数。以 “There is an apple on the table” 为例，C=4，所以模型输入是（is,an,on,the）<span>4<span class="heti-spacing"> </span></span>个单词的<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码词向量。</li>
+<li>初始化一个权重矩阵 <span class="arithmatex">\(W_{V \times N}\)</span>，然后用所有输入的<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码词向量左乘该矩阵，得到维数为<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>的向量 <span class="arithmatex">\(w_1,w_2,...,w_c\)</span>，这里的<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>由自己根据任务需要设置。</li>
+<li>将所得的向量 <span class="arithmatex">\(w_1,w_2,...,w_c\)</span> 求和取平均作为隐藏层向量<span><span class="heti-spacing"> </span>h</span>。</li>
+<li>初始化另一个权重矩阵 <span class="arithmatex">\(W_{N \times V}^\prime\)</span>，用隐藏层向量<span class="heti-skip"><span class="heti-spacing"> </span>h<span class="heti-spacing"> </span></span>左乘 <span class="arithmatex">\(W_{N \times V}^\prime\)</span>，在经激活函数处理得到<span class="heti-skip"><span class="heti-spacing"> </span>V<span class="heti-spacing"> </span></span>维的向量<span><span class="heti-spacing"> </span>y</span>，<span>y<span class="heti-spacing"> </span></span>的每一个元素代表相对应的每个单词的概率分布。</li>
+<li><span>y<span class="heti-spacing"> </span></span>中概率最大的元素所指示的单词为预测出的中间词（target word）与<span class="heti-skip"><span class="heti-spacing"> </span>true label<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码词向量做比较，误差越小越好（根据误差更新两个权重矩阵）。</li>
+</ol>
+<p>在训练前需要定义好损失函数（一般为交叉熵代价函数），采用梯度下降算法更新 <span class="arithmatex">\(W\)</span> 和 <span class="arithmatex">\(W^\prime\)</span>。训练完毕后，输入层的每个单词与矩阵<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>相乘得到的向量就是我们想要的<span class="heti-skip"><span class="heti-spacing"> </span>Distributed Representation<span class="heti-spacing"> </span></span>表示的词向量，也叫<span><span class="heti-spacing"> </span>word embedding</span>。因为<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>编码词向量中只有一个元素为<span><span class="heti-spacing"> </span>1</span>，其他都为<span><span class="heti-spacing"> </span>0</span>，所以第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>个词向量乘以矩阵<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>后，得到的就是矩阵的第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>行，所以这个矩阵也叫做<span><span class="heti-spacing"> </span>look up table</span>，有了<span class="heti-skip"><span class="heti-spacing"> </span>look up table<span class="heti-spacing"> </span></span>就可以免去训练过程，直接查表得到单词的词向量。</p>
+<h2 id="skip-gram">Skip-gram<a class="headerlink" href="#skip-gram" title="Permanent link">¶</a></h2>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/skip-gram-net.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/skip-gram-net.png"/></a></center>
+<p><span>Skip-Gram<span class="heti-spacing"> </span></span>是给定<span class="heti-skip"><span class="heti-spacing"> </span>input word<span class="heti-spacing"> </span></span>来预测上下文，其模型结构如上图所示。它的做法是，将一个词所在的上下文中的词作为输出，而那个词本身作为输入，也就是说，给出一个词，希望预测可能出现的上下文的词。通过在一个大的语料库训练，得到一个从输入层到隐含层的权重模型<heti-adjacent class="heti-adjacent-quarter">。</heti-adjacent>“apple”的上下文词是（’there’<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>’is’<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>’an’<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>’on’,’the’,’table’）<span>.<span class="heti-spacing"> </span></span>那么以<span class="heti-skip"><span class="heti-spacing"> </span>apple<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>词向量作为输入，输出则是（’there’<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>’is’<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>’an’<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>’on’,’the’,’table’）的<span class="heti-skip"><span class="heti-spacing"> </span>One-Hot<span class="heti-spacing"> </span></span>词向量。训练完成后，就得到了每个词到隐含层的每个维度的权重，就是每个词的向量（和<span class="heti-skip"><span class="heti-spacing"> </span>CBOW<span class="heti-spacing"> </span></span>中一样）。</p>
+<p>假如我们有一个句子“There is an apple on the table”。</p>
+<ol>
+<li>首先选句子中间的一个词作为输入词，比如选取“apple”作为<span><span class="heti-spacing"> </span>input word</span>。</li>
+<li>有了<span class="heti-skip"><span class="heti-spacing"> </span>input word<span class="heti-spacing"> </span></span>以后，再定义一个叫做<span class="heti-skip"><span class="heti-spacing"> </span>skip_window<span class="heti-spacing"> </span></span>的参数，它代表着从当前<span class="heti-skip"><span class="heti-spacing"> </span>input word<span class="heti-spacing"> </span></span>的一侧（左边或右边）选取词的数量。如果设置<span><span class="heti-spacing"> </span>skip_window=2</span>，那么最终获得窗口中的词（包括<span class="heti-skip"><span class="heti-spacing"> </span>input word<span class="heti-spacing"> </span></span>在内）就是<span><span class="heti-spacing"> </span>[</span>‘is’,’an’,’apple’,’on’,’the’ ]。<span>skip_window=2<span class="heti-spacing"> </span></span>代表着选取左<span class="heti-skip"><span class="heti-spacing"> </span>input word<span class="heti-spacing"> </span></span>左侧<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>个词和右侧<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>个词进入我们的窗口，所以整个窗口大小<span><span class="heti-spacing"> </span>span=2x2=4</span>。另一个参数叫<span><span class="heti-spacing"> </span>num_skips</span>，它代表着我们从整个窗口中选取多少个不同的词作为我们的<span><span class="heti-spacing"> </span>output word</span>，当<span><span class="heti-spacing"> </span>skip_window=2</span>，<span>num_skips=2<span class="heti-spacing"> </span></span>时，我们将会得到两组<span class="heti-skip"><span class="heti-spacing"> </span>(input word, output word)<span class="heti-spacing"> </span></span>形式的训练数据，即<span><span class="heti-spacing"> </span>('apple', 'an')</span>，('apple', 'one')。</li>
+<li>神经网络基于这些训练数据中每对单词出现的次数习得统计结果，并输出一个概率分布，这个概率分布代表着到我们词典中每个词有多大可能性跟<span class="heti-skip"><span class="heti-spacing"> </span>input word<span class="heti-spacing"> </span></span>同时出现。举个例子，如果我们向神经网络模型中输入一个单词“中国“，那么最终模型的输出概率中，像“英国”， ”俄罗斯“这种相关词的概率将远高于像”苹果“<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>”蝈蝈“非相关词的概率。因为”英国“<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>”俄罗斯“在文本中更大可能在”中国“的窗口中出现。我们将通过给神经网络输入文本中成对的单词来训练它完成上面所说的概率计算。</li>
+<li>通过梯度下降和反向传播更新矩阵<span><span class="heti-spacing"> </span>W</span></li>
+<li><span>W<span class="heti-spacing"> </span></span>中的行向量即为每个单词的<span class="heti-skip"><span class="heti-spacing"> </span>Word embedding<span class="heti-spacing"> </span></span>表示</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">总结</p>
+<p><span>CBOW<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Skip-gram<span class="heti-spacing"> </span></span>最理想情况下的实现，即训练迭代两个矩阵 <span class="arithmatex">\(W\)</span> 和 <span class="arithmatex">\(W^\prime\)</span>，之后再输出层采用<span class="heti-skip"><span class="heti-spacing"> </span>softmax<span class="heti-spacing"> </span></span>函数来计算输出各个词的概率。但在实际应用中这种方法的训练开销很大，不具有很强的实用性，为了使得模型便于训练，有学者提出了<span class="heti-skip"><span class="heti-spacing"> </span>Hierarchical Softmax<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Negative Sampling<span class="heti-spacing"> </span></span>两种改进方法。</p>
+</div>
+<h2 id="hierarchical-softmax">Hierarchical Softmax<a class="headerlink" href="#hierarchical-softmax" title="Permanent link">¶</a></h2>
+<p><span>Hierarchical Softmax<span class="heti-spacing"> </span></span>对原模型的改进主要有两点</p>
 <ul>
-<li>圆排列<span class="heti-skip"><span class="heti-spacing"> </span>:n<span class="heti-spacing"> </span></span>个中选<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个组成一个圈的方案数：<span class="arithmatex">\(\frac{A_{n}^k}{k}\)</span></li>
-<li>项链排列<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({\frac{A_{n}^k}{2k}}\)</span></li>
-<li>错位排列<span class="heti-skip"><span class="heti-spacing"> </span>:n<span class="heti-spacing"> </span></span>个数的所有错排方案数的递推公式为<span class="arithmatex">\({f(n)=(n-1)*(f(n-1)+f(n-2))}\)</span><span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>前几项为<span class="arithmatex">\(0、1、2、9、44、265\)</span></li>
-<li>多重排列<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>设<span class="arithmatex">\(S=\{n1*a1,n2*a2,...,nk*ak\}\)</span>，则所有的方案数为<span class="arithmatex">\(\frac{n!}{n1!*n2!*...*nk!}\)</span></li>
-<li>不相邻组合<span class="heti-skip"><span class="heti-spacing"> </span>:[1,n]<span class="heti-spacing"> </span></span>个中选<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个组成不相邻的排列的方案数为：<span class="arithmatex">\(C_{n-k+1}^k\)</span></li>
-<li>可重组合<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>设<span><span class="heti-spacing"> </span>S=</span><span class="arithmatex">\(\{n1*a1,n2*a2,...,nk*ak\}\)</span>，在<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>中选<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>个，则所有的方案数为<span class="arithmatex">\({C_{r+k-1}^{k-1}}\)</span></li>
+<li>第一点是从输入层到隐藏层的映射，没有采用原先的与矩阵<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>相乘然后相加求平均的方法，而是直接对所有输入的词向量求和。假设输入的词向量为（0，1，0，0）和（0，0，0，1），那么隐藏层的向量为（0，1，0，1）。</li>
+<li><span>Hierarchical Softmax<span class="heti-spacing"> </span></span>的第二点改进是采用哈夫曼树来替换了原先的从隐藏层到输出层的矩阵 <span class="arithmatex">\(W^\prime\)</span>。哈夫曼树的叶节点个数为词汇表的单词个数<span><span class="heti-spacing"> </span>V</span>，一个叶节点代表一个单词，而从根结点到叶节点的路径确定了这个单词最终输出的词向量。</li>
 </ul>
-<p>方法：隔板法，捆绑法<span><span class="heti-spacing"> </span>...</span></p>
-<p>扩展<span><span class="heti-spacing"> </span>:</span></p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/hs-huffman.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/word2vec/hs-huffman.png"/></a></center>
+<p>具体来说，这棵哈夫曼树除了根节点以外的所有非叶节点中都含有一个由参数 <span class="arithmatex">\(\theta\)</span> 确定的<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>函数，不同节点的 <span class="arithmatex">\(\theta\)</span> 不一样。训练时隐藏层的向量与这个<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>函数进行运算，根据结果进行分类，若分类为负类则沿左子树向下传递，编码为<span><span class="heti-spacing"> </span>0</span>；若分类为正类则沿右子树向下传递，编码为<span><span class="heti-spacing"> </span>1</span>。最终到达叶节点，叶节点的向量即为输出的词向量。</p>
+<h2 id="negative-sampling">Negative Sampling<a class="headerlink" href="#negative-sampling" title="Permanent link">¶</a></h2>
+<p>尽管哈夫曼树的引入为模型的训练缩短了许多开销，但对于一些不常见、较生僻的词汇，哈夫曼树在计算它们的词向量时仍然需要做大量的运算。</p>
+<p>负采样是另一种提高<span class="heti-skip"><span class="heti-spacing"> </span>Word2Vec<span class="heti-spacing"> </span></span>效率的方法，它是基于这样的观察：训练一个神经网络意味着使用一个训练样本就要稍微调整一下神经网络中所有的权重，这样才能确保预测训练样本更加精确，如果能设计一种方法每次只更新一部分权重，那么计算复杂度将大大降低。</p>
+<p>将以上观察引入<span class="heti-skip"><span class="heti-spacing"> </span>Word2Vec<span class="heti-spacing"> </span></span>就是：当通过（”fox”, “quick”）词对来训练神经网络时，我们回想起这个神经网络的“标签”或者是“正确的输出”是一个<span class="heti-skip"><span class="heti-spacing"> </span>one-hot<span class="heti-spacing"> </span></span>向量。也就是说，对于神经网络中对应于”quick”这个单词的神经元对应为<span><span class="heti-spacing"> </span>1</span>，而其他上千个的输出神经元则对应为<span><span class="heti-spacing"> </span>0</span>。使用负采样，我们通过随机选择一个较少数目（比如说<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个）的“负”样本来更新对应的权重<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（在这个条件下<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>“负”单词就是我们希望神经网络输出为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的神经元对应的单词）。并且我们仍然为我们的“正”单词更新对应的权重（也就是当前样本下”quick”对应的神经元仍然输出为<span><span class="heti-spacing"> </span>1</span>）。</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
 <ul>
-<li>二项式定理<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\((a+b)^n=\sum_{k=0}^nC_n^ka^{n-k}b^k\)</span></li>
-<li>多项式定理<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\((x1+x2+...+xk)^n=\sum_{n1+n2+...+nk=n}\frac{n!}{n1!n2!...nk!}\prod_{i=1}^kx_i^{ni}\)</span></li>
-<li>格路问题<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span><span class="arithmatex">\((0,0)\)</span>点走到<span class="arithmatex">\((m,n)\)</span>点的方案数为<span class="arithmatex">\(C_{m+n}^n\)</span></li>
+<li><a href="https://zhuanlan.zhihu.com/p/61635013"><span>Word2Vec<span class="heti-spacing"> </span></span>详解</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/114538417">深入浅出<span class="heti-skip"><span class="heti-spacing"> </span>Word2Vec<span class="heti-spacing"> </span></span>原理解析</a></li>
+<li><a href="https://www.cnblogs.com/guoyaohua/p/9240336.html"><span>NLP<span class="heti-spacing"> </span></span>之——<span>Word2Vec<span class="heti-spacing"> </span></span>详解</a></li>
 </ul>
-<h2 id="_3">母函数<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_4">普通型母函数<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>主要求组合的方案数。
-形如<span class="arithmatex">\({a_0+a_1x^1+a_2x^2+...+a_nx^n}\)</span></p>
-<h3 id="_5">指数型母函数<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>主要求多重排列数。
-形如<span class="arithmatex">\({a_0+\frac{a_1x}{1!}+\frac{a_2x^2}{2!}+...\frac{a_nx^n}{n!}}\)</span></p>
-<h2 id="_6">特殊的数<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_7">斐波那契数<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>递推式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(f(n)=f(n-1)+f(n-2)\)</span></li>
-<li>二阶常系数递归公式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(f(n)=\frac{1}{\sqrt 5}[(\frac{1+\sqrt 5}{2})^n-(\frac{1-\sqrt 5}{2})^n]\)</span></li>
-</ul>
-<p>前几项为<span><span class="heti-spacing"> </span>1</span>、1、2、3、5、8...</p>
-<h3 id="_8">卡特兰数<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>
-<p>常见公式：</p>
-</li>
-<li>
-<p><span class="arithmatex">\(H_n=\frac{C_{2n}^n}{n+1}\)</span></p>
-</li>
-<li><span class="arithmatex">\(H_n=\frac{H_{n-1}(4n-2)}{n+1}\)</span></li>
-<li><span class="arithmatex">\(H_n=1 \;\;(n=0||n=1)\)</span>
-<span class="arithmatex">\(H_n=\sum_{i=1}^nH_{n-i}H_{i-1} (n\geq 2)\)</span></li>
-<li><span class="arithmatex">\(H_n=C_{2n}^n-C_{2n}^{n-1}\)</span></li>
-</ul>
-<p>前几项为：1、1、2、5、14、42、132...</p>
-<h2 id="_9">斯特林数<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="stirling">第一类<span class="heti-skip"><span class="heti-spacing"> </span>Stirling<span class="heti-spacing"> </span></span>数<a class="headerlink" href="#stirling" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>递推式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({S_u(n,k)=S_u(n-1,k-1)+(n-1)*S_u(n-1,k)}\;\;\;S_u(0,0)=1\)</span></li>
-</ul>
-<h3 id="stirling_1">第二类<span class="heti-skip"><span class="heti-spacing"> </span>Stirling<span class="heti-spacing"> </span></span>数<a class="headerlink" href="#stirling_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>
-<p>递推式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({S(n,k)=S(n-1,k-1)+k*S(n-1.k)}\;\;\;S(0,0)=1\)</span></p>
-</li>
-<li>
-<p>线性公式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({S(n,k)=\frac{1}{k!}\sum_{i=0}^k(-1)^iC_k^i(k-i)^n}\)</span></p>
-</li>
-</ul>
-<h2 id="_10">贝尔数<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li>
-<p>递推式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({B_{n+1}=\sum_{k=0}^nC_n^kB_k}\)</span></p>
-</li>
-<li>
-<p>根据第二类斯特林数<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({B_n=\sum_{k=0}^nS(n,k)}\)</span></p>
-</li>
-</ul>
-<p>拓展：贝尔三角形求解。</p>
-<p>前几项为：1、1、2、5、15、52、203...</p>
-<h2 id="_11">伯努利数<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li>等幂求和<span><span class="heti-spacing"> </span>:</span></li>
-</ul>
-<p><span class="arithmatex">\(S_mn=\frac{1}{m+1}\sum_{k=0}^mC_{m+1}^kn^{m-k+1}\)</span></p>
-<ul>
-<li>
-<p><span class="arithmatex">\(\sum_{i=1}^ni^k=\frac{1}{k+1}\sum_{i=1}^{k+1}C_{k+1}^iB_{k-i+1}(n+1)^i\)</span></p>
-</li>
-<li>
-<p>递推式<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\({\sum_{k=0}^nB_kC_{n+1}^k=0}\;\;\;(B_0=1)\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(B_n=-\frac{1}{n+1}[C_{n+1}^0B0+C_{n+1}^1B1+...+C_{n+1}^{n-1}B_{n-1}]\)</span></p>
-</li>
-</ul>
-<p>前几项为：<span class="arithmatex">\(1、-\frac{1}{2}、\frac{1}{6}、0、\frac{1}{30}...\)</span></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月19日 10:16:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月8日 17:49:04</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月19日 10:16:43</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月8日 15:50:52</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -1281,7 +1197,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 矩阵微分" class="md-footer__link md-footer__link--prev" href="../maa/lec3/" rel="prev">
+<a aria-label="上一页: NLP" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1290,17 +1206,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              矩阵微分
+              NLP
             </div>
 </div>
 </a>
-<a aria-label="下一页: 工具相关" class="md-footer__link md-footer__link--next" href="../../utils/" rel="next">
+<a aria-label="下一页: RNN" class="md-footer__link md-footer__link--next" href="../rnns/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              工具相关
+              RNN
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1347,9 +1263,9 @@ var _hmt = _hmt || [];
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.361d90f1.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.289a2a4b.min.js"></script>
 <script src="https://cdn.jujimeizuo.cn/utils/katex.min.js"></script>
-<script src="../../js/katex.js"></script>
+<script src="../../../js/katex.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
