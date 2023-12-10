@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cv/pcr/prepare/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/llm/transformer/attention/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>前置知识 - 狙击美佐的笔记本</title>
+<title>Attention - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#attention">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              前置知识
+              Attention
             
           </span>
 </div>
@@ -155,12 +155,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../../cv/">
         CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../llm/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         LLM
       </a>
 </li>
@@ -588,10 +588,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">CV &amp; Robot</a>
+<a href="../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -603,14 +603,14 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../opencv/">
+<a class="md-nav__link" href="../../../cv/opencv/">
         OpenCV
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../mvg/">多视图几何</a>
+<a href="../../../cv/mvg/">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -622,47 +622,47 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/pjt2d/">
+<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/pjt3d/">
+<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/est2d/">
+<a class="md-nav__link" href="../../../cv/mvg/est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/eval/">
+<a class="md-nav__link" href="../../../cv/mvg/eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/camera-model/">
+<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
         摄像机模型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/calc-p/">
+<a class="md-nav__link" href="../../../cv/mvg/calc-p/">
         计算摄像机矩阵 P
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/one-vg/">
+<a class="md-nav__link" href="../../../cv/mvg/one-vg/">
         单视图几何
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/ag-fm/">
+<a class="md-nav__link" href="../../../cv/mvg/ag-fm/">
         对极几何和基本矩阵
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/3dr-camera-structure/">
+<a class="md-nav__link" href="../../../cv/mvg/3dr-camera-structure/">
         摄像机和结构的 3D 重构
       </a>
 </li>
@@ -672,7 +672,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../slam/">SLAM</a>
+<a href="../../../cv/slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -686,7 +686,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -698,12 +698,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../slam/vslam14/lec1/">
+<a class="md-nav__link" href="../../../cv/slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../slam/vslam14/lec2/">
+<a class="md-nav__link" href="../../../cv/slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -713,10 +713,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">点云配准</a>
+<a href="../../../cv/pcr/">点云配准</a>
 <label for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -727,60 +727,13 @@ var _hmt = _hmt || [];
           点云配准
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          前置知识
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cv/pcr/prepare/">
         前置知识
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    点云基础
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    点云处理
-  </a>
-<nav aria-label="点云处理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    低层次处理方法
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    中层次处理方法
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    高层次处理方法
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    点云配准
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../icp/">
+<a class="md-nav__link" href="../../../cv/pcr/icp/">
         ICP
       </a>
 </li>
@@ -788,17 +741,17 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3d-visualization/">
+<a class="md-nav__link" href="../../../cv/3d-visualization/">
         三维数据场可视化
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/">LLM</a>
+<a href="../../">LLM</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -812,7 +765,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/nlp/">NLP</a>
+<a href="../../nlp/">NLP</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -824,22 +777,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/word2vec/">
+<a class="md-nav__link" href="../../nlp/word2vec/">
         Word2Vec
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/rnns/">
+<a class="md-nav__link" href="../../nlp/rnns/">
         RNN
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/transformer/">Transformer</a>
+<a href="../">Transformer</a>
 <label for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -850,13 +803,113 @@ var _hmt = _hmt || [];
           Transformer
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/attention/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Attention
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Attention
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encoder-decoder">
+    Encoder-Decoder
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/transformer/">
+<a class="md-nav__link" href="#seq2seq">
+    Seq2Seq
+  </a>
+<nav aria-label="Seq2Seq" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seq2seq-encoder-decoder">
+    Seq2Seq 和 Encoder-Decoder 的关系
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attention_1">
+    Attention
+  </a>
+<nav aria-label="Attention" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    本质
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    三大优点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    原理
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#n">
+    N 种类型
+  </a>
+<nav aria-label="N 种类型" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    计算区域
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    所用信息
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    结构层次
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    模型方面
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    相似度计算方式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../transformer/">
         Transformer
       </a>
 </li>
@@ -1079,37 +1132,90 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    点云基础
+<a class="md-nav__link" href="#encoder-decoder">
+    Encoder-Decoder
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    点云处理
+<a class="md-nav__link" href="#seq2seq">
+    Seq2Seq
   </a>
-<nav aria-label="点云处理" class="md-nav">
+<nav aria-label="Seq2Seq" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    低层次处理方法
+<a class="md-nav__link" href="#_1">
+    概述
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    中层次处理方法
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    高层次处理方法
+<a class="md-nav__link" href="#seq2seq-encoder-decoder">
+    Seq2Seq 和 Encoder-Decoder 的关系
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#attention_1">
+    Attention
+  </a>
+<nav aria-label="Attention" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    本质
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    三大优点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    原理
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#n">
+    N 种类型
+  </a>
+<nav aria-label="N 种类型" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    计算区域
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    所用信息
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
-    点云配准
+    结构层次
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    模型方面
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    相似度计算方式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
   </a>
 </li>
 </ul>
@@ -1121,113 +1227,171 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/pcr/prepare.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/transformer/attention.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">前置知识<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="attention"><span>Attention<span class="heti-spacing"> </span></span>机制<a class="headerlink" href="#attention" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2032<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2743<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>点云配准基础知识，主要为点云基础、处理方法和点云配准方法的介绍和比较等</p>
+<ul>
+<li>对于<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>中存在的信息瓶颈问题，注意力机制可以很好地解决这个问题。</li>
+<li>本文将介绍<span><span class="heti-spacing"> </span>Encoder-Decoder</span>、<span>Seq2Seq<span class="heti-spacing"> </span></span>以及<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>机制。</li>
+</ul>
 </div>
-<h2 id="_2">点云基础<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="encoder-decoder">Encoder-Decoder<a class="headerlink" href="#encoder-decoder" title="Permanent link">¶</a></h2>
+<p><span>Encoder-Decoder<span class="heti-spacing"> </span></span>模型主要是<span class="heti-skip"><span class="heti-spacing"> </span>NLP<span class="heti-spacing"> </span></span>领域里的概念。它并不特值某种具体的算法，而是一类算法的统称。<span>Encoder-Decoder<span class="heti-spacing"> </span></span>算是一个通用的框架，在这个框架下可以使用不同的算法来解决不同的任务。</p>
+<p><span>Encoder-Decoder<span class="heti-spacing"> </span></span>框架很好地诠释了机器学习的核心思路：</p>
+<p></p><center><strong>将现实问题转化为数学问题，通过求解数学问题，从而解决现实问题</strong></center>
 <ul>
-<li>点云概念：点云是同一空间参考系下表达目标空间分布和目标表面特性的海量点集合，在获取物体表面每个采样点的空间坐标后，得到的是点的集合，称之为“点云”（Point Cloud）。</li>
-<li>点云图像是最基础也是最常见的三维图像：三维图像是一种特殊的图像信息表达形式，相较于常见的二维图像，其最大的特征是表达了空间中三个维度（长度宽度和深度）的数据。</li>
-<li>三维图像的表现形式：深度图（以灰度表达物体与相机的距离），几何模型（由<span class="heti-skip"><span class="heti-spacing"> </span>CAD<span class="heti-spacing"> </span></span>软件建立），点云模型（所有逆向工程设备都将物体采样成点云）。</li>
-<li>点云根据测量原理主要分为两种<ul>
-<li>根据激光测量原理得到的点云，包括三维坐标<span class="heti-skip"><span class="heti-spacing"> </span>XYZ<span class="heti-spacing"> </span></span>和激光反射强度<span><span class="heti-spacing"> </span>I</span>。强度信息与目标的表面材质、粗糙度、入射角方向，以及仪器的发射能量，激光波长有关。</li>
-<li>根据摄影测量原理得到的点云，包括三维坐标<span class="heti-skip"><span class="heti-spacing"> </span>XYZ<span class="heti-spacing"> </span></span>和颜色信息<span><span class="heti-spacing"> </span>RGB</span>。</li>
-<li>还有激光和摄影相结合在一起的多传感器融合技术，这种得到的包括三维坐标<span><span class="heti-spacing"> </span>XYZ</span>、颜色信息<span class="heti-skip"><span class="heti-spacing"> </span>RGB<span class="heti-spacing"> </span></span>和激光反射强度<span><span class="heti-spacing"> </span>I</span>。</li>
+<li><span>Encoder<span class="heti-spacing"> </span></span>又称编码器，它的作用就是『将现实问题转化为数学问题』。</li>
+<li><span>Decoder<span class="heti-spacing"> </span></span>又称解码器，它的作用就是『求解数学问题，并转化为现实世界的解决方案』。</li>
 </ul>
-</li>
-<li>点云的获取设备（只针对摄影）：<span>RGBD<span class="heti-spacing"> </span></span>设备（深度摄像机）。</li>
-<li>点云的属性：空间分辨率、点云精度、表面法向量等。</li>
-<li>点云存储格式 <code>.pts; .asc; .dat; .stl; .imw; .xyz; .las;</code></li>
-<li>点云的数据类型（以<span class="heti-skip"><span class="heti-spacing"> </span>PCL<span class="heti-spacing"> </span></span>库为例）：<ul>
-<li><code>pcl::PointXYZ</code>：<span>float x, y, z;<span class="heti-spacing"> </span></span>表示了<span class="heti-skip"><span class="heti-spacing"> </span>xyz3D<span class="heti-spacing"> </span></span>信息，可以通过<span class="heti-skip"><span class="heti-spacing"> </span>points[i].data[0]<span class="heti-spacing"> </span></span>或<span class="heti-skip"><span class="heti-spacing"> </span>points[i].x<span class="heti-spacing"> </span></span>访问<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>坐标值。</li>
-<li><code>pcl::PointXYZI</code>：<span>float x, y, z, intensity;<span class="heti-spacing"> </span></span>表示了<span class="heti-skip"><span class="heti-spacing"> </span>XYZ<span class="heti-spacing"> </span></span>信息加上强度信息的类型。</li>
-<li><code>pcl::PointXYZRGB</code>：<span>float x, y, z, rgb;<span class="heti-spacing"> </span></span>表示了<span class="heti-skip"><span class="heti-spacing"> </span>XYZ<span class="heti-spacing"> </span></span>信息加上<span class="heti-skip"><span class="heti-spacing"> </span>RGB<span class="heti-spacing"> </span></span>信息，<span>RGB<span class="heti-spacing"> </span></span>存储为一个<span><span class="heti-spacing"> </span>float</span>。</li>
-<li><code>pcl::PointXYZRGBA</code>：<span>float x, y, z; uint32_t rgba;<span class="heti-spacing"> </span></span>表示了<span class="heti-skip"><span class="heti-spacing"> </span>XYZ<span class="heti-spacing"> </span></span>信息加上<span class="heti-skip"><span class="heti-spacing"> </span>RGBA<span class="heti-spacing"> </span></span>信息，<span>RGBA<span class="heti-spacing"> </span></span>用<span class="heti-skip"><span class="heti-spacing"> </span>32bit<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>int<span class="heti-spacing"> </span></span>型存储的。</li>
-<li><code>pcl::PointXY</code>：<span>float x, y;<span class="heti-spacing"> </span></span>表示了<span class="heti-skip"><span class="heti-spacing"> </span>XY<span class="heti-spacing"> </span></span>信息。</li>
-<li><code>pcl::Normal</code>：表示给定点所在样本曲面上的法线方向，以及对应曲率的测量值，用第四个元素来占位，兼容<span class="heti-skip"><span class="heti-spacing"> </span>SSE<span class="heti-spacing"> </span></span>和高效计算</li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">点云处理<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note">
-<p class="admonition-title">图像处理的三个层次</p>
-<ul>
-<li>低层次：图像强化，滤波，关键点<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>边缘检测等基本操作</li>
-<li>中层次：连通域标记，图像分割等操作</li>
-<li>高层次：物体识别，场景分析等操作</li>
-<li><span>PCL<span class="heti-spacing"> </span></span>对点云处理方法给出较为明晰的层次划分，如下图所示：</li>
-</ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/pcr/pc-processing.png"><img alt="点云处理方法" src="https://cdn.jujimeizuo.cn/note/cv/pcr/pc-processing.png"/></a></center>
-</div>
-<h3 id="_4">低层次处理方法<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>滤波方法：双边滤波、高斯滤波、条件滤波、直通滤波、随机采样一致性滤波</li>
-<li>关键点：ISS3D、Harris3D、NARF、SIFT3D</li>
-</ul>
-<h3 id="_5">中层次处理方法<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>特征描述：法线和曲率的计算、特征值分析、SHOT、PFH、FPFH、3D Shape Context、Spin Image</li>
-<li>分割与分类：<ul>
-<li>分割：区域生长、<span>Ransac<span class="heti-spacing"> </span></span>线面提取、全局优化平面提取、K-Means、Normalize Cut （Context based）、3D Hough Transform（线、面提取）、连通分析</li>
-<li>分类：基于点的分类、基于分割的分类、基于深度学习的分类（PointNet、OctNet）</li>
-</ul>
-</li>
-</ul>
-<h3 id="_6">高层次处理方法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>配准：点云配准分为粗配准（Coarse Registration）和精配准（Fine Registration）两个阶段。<ul>
-<li><strong>粗配准</strong>是指在点云相对位姿完全位置的情况下对点云进行配准，可以为精配准提供良好的初始值。当前较为普遍的点云自动粗配准算法包括穷举搜索的配准算法和基于特征匹配的配准算法<ul>
-<li><strong>基于穷举搜索的配准算法</strong>：遍历整个变换空间以选取使误差函数最小化的变换关系或者列举出使最多点对满足的变换关系。如<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>配准算法、四点一致集配准算法（4-Point Congruent Set，4PCS）、<span>Super4PCS<span class="heti-spacing"> </span></span>算法等</li>
-<li><strong>基于特征匹配的配准算法</strong>：通过被测物体本身所具备的形态特性构建点云间的匹配对应，然后采用相关算法对变换关系进行估计。如基于点<span class="heti-skip"><span class="heti-spacing"> </span>FPFH<span class="heti-spacing"> </span></span>特征的<span><span class="heti-spacing"> </span>SAC-IA</span>、<span>FGR<span class="heti-spacing"> </span></span>等算法、基于点<span class="heti-skip"><span class="heti-spacing"> </span>SHOT<span class="heti-spacing"> </span></span>特征的<span class="heti-skip"><span class="heti-spacing"> </span>AO<span class="heti-spacing"> </span></span>算法以及基于线特征的<span class="heti-skip"><span class="heti-spacing"> </span>ICL<span class="heti-spacing"> </span></span>等</li>
-</ul>
-</li>
-<li><strong>精配准</strong>的目的是在粗配准的基础上让点云之间的空间位置差别最小化。应用最为广泛的精配准算法应该是<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>以及<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>的各种变种（稳健<span><span class="heti-spacing"> </span>ICP</span>、point to plane ICP、Point to line ICP、MBICP、GICP、NICP）</li>
-</ul>
-</li>
-<li><span>SLAM<span class="heti-spacing"> </span></span>图优化<ul>
-<li>Ceres、g2o、LUM、ELCH、Toro、SPA</li>
-<li><span>SLAM<span class="heti-spacing"> </span></span>方法：ICP、MBICP、IDC、likehood Field、NDT</li>
-</ul>
-</li>
-<li>三维重建<ul>
-<li>柏松重建、Delaunay triangulations、表面重建、人体重建、建筑物重建、树木重建</li>
-<li>结构化重建：不是简单的构建一个<span class="heti-skip"><span class="heti-spacing"> </span>Mesh<span class="heti-spacing"> </span></span>网格，而是为场景进行分割，为场景结构赋予语义信息。场景结构有层次之分，在几何层次就是点线面</li>
-<li>实时重建：重建植被或者农作物的<span><span class="heti-spacing"> </span>4D</span>（<span>3D+<span class="heti-spacing"> </span></span>时间）生长态势；人体姿态识别；表情识别</li>
-</ul>
-</li>
-<li>点云数据管理：点云压缩，点云索引（KD、Octree），点云<span><span class="heti-spacing"> </span>LOD</span>（金字塔），海量点云的渲染</li>
-</ul>
-<h2 id="_7">点云配准<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<blockquote>
-<p>点云配准（Point Cloud Registration），又名点云拼接、点云注册，对于两帧有重叠信息的点云，通过求解变换矩阵（旋转矩阵<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>和平移矩阵<span><span class="heti-spacing"> </span>T</span>），使得重叠部分点云变换到同一个统一的坐标系下。</p>
-</blockquote>
-<p>前期以传统方法为主，<span>2018<span class="heti-spacing"> </span></span>年及以后基于深度学习的配准方法居上。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/pcr/pcr-development-sequence.png"><img alt="点云配准的发展脉络图" src="https://cdn.jujimeizuo.cn/note/cv/pcr/pcr-development-sequence.png"/></a></center>
-<p>点云配准可以基于以下<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个方面学习和进阶：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/encoder-decoder.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/encoder-decoder.png"/></a></center>
+<p>关于<span><span class="heti-spacing"> </span>Encoder-Decoder</span>：</p>
 <ol>
-<li><strong><span>ICP<span class="heti-spacing"> </span></span>算法</strong>：点云配准领域最为经典的算法，<a href="https://www.researchgate.net/publication/224378053_Least-squares_fitting_of_two_3-D_point_sets_IEEE_T_Pattern_Anal">Least-squares fitting of two 3-D point sets</a>，证明了如何在已知点对的关系时用<span class="heti-skip"><span class="heti-spacing"> </span>SVD<span class="heti-spacing"> </span></span>求解变换矩阵。</li>
-<li><strong><span>PFH<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>FPFH<span class="heti-spacing"> </span></span>特征和基于<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>的配准算法</strong>：<span>ICP<span class="heti-spacing"> </span></span>算法的缺点很明显，寻找点对应关系时是基于距离的，当初始位姿很差时，<span>ICP<span class="heti-spacing"> </span></span>算法基本失效。基于特征<span class="heti-skip"><span class="heti-spacing"> </span>+ RANSAC<span class="heti-spacing"> </span></span>的算法此时发挥优势，它通过点的特征寻找对应点对，只要点的特征表达能力够强，即使初始位姿很差，也可以找到正确的点对应关系，从而实现点云配准；但点的特征在大多数情况下是不鲁棒的，所以结合<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>算法是不错的选择。特征描述子建议查看<span><span class="heti-spacing"> </span>FPFH</span>，对应论文为<a href="https://www.cvl.iis.u-tokyo.ac.jp/class2016/2016w/papers/6.3DdataProcessing/Rusu_FPFH_ICRA2009.pdf"><span><span class="heti-spacing"> </span>Fast point feature histograms (FPFH) for 3D registration (ICRA 2009)</span></a></li>
-<li><strong>端到端的深度学习配准模型</strong>：最近两三年的时间基于深度学习的配准模型出现很多，包括基于<span class="heti-skip"><span class="heti-spacing"> </span>global features-based<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>correspongence-based</span>，两种模式。<span>Global features-based<span class="heti-spacing"> </span></span>方法包括<a href="https://arxiv.org/pdf/1903.05711.pdf"><span class="heti-skip"><span class="heti-spacing"> </span>PointNetLK: Point Cloud Registration using PointNet (CVPR2019)<span class="heti-spacing"> </span></span></a>和<a href="https://arxiv.org/pdf/1908.07906.pdf"><span><span class="heti-spacing"> </span>PCRNet: Point Cloud Registration Network using PointNet Encoding (arXiv2019)</span></a>。 这里可以优先看<span class="heti-skip"><span class="heti-spacing"> </span>PCRNet,<span class="heti-spacing"> </span></span>因为其算法和实现较为简单<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>容易<span><span class="heti-spacing"> </span>follow</span>。<span>Correspondence-based<span class="heti-spacing"> </span></span>方法的典型代表包括<a href="https://arxiv.org/pdf/1905.03304.pdf"><span class="heti-skip"><span class="heti-spacing"> </span>DCP (ICCV2019)<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span><a href="http://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf"><span class="heti-skip"><span class="heti-spacing"> </span>PRNet (NeurIPS)<span class="heti-spacing"> </span></span></a>和<a href="https://arxiv.org/pdf/2003.13479.pdf"><span class="heti-skip"><span class="heti-spacing"> </span>RPMNet (CVPR2020)<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>这些方法都是开源的<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>除了<span class="heti-skip"><span class="heti-spacing"> </span>PRNet<span class="heti-spacing"> </span></span>的代码在训练时容易崩溃外，其它的代码都是不错的。</li>
-<li><strong>基于<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>的深度学习配准模型</strong>：端到端的深度学习配准模型大多只在<span class="heti-skip"><span class="heti-spacing"> </span>ModelNet40<span class="heti-spacing"> </span></span>上是有效的，面对真实的数据集如<span class="heti-skip"><span class="heti-spacing"> </span>3DMatch<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>KITTI<span class="heti-spacing"> </span></span>时则效果表现不好。一部分原因是真实数据集较为复杂，另一部分原因是网络结构不足以准确学习大部分点的特征。由此就会导致<span class="heti-skip"><span class="heti-spacing"> </span>Inlier ratio<span class="heti-spacing"> </span></span>较低，端到端的配准网络不能发挥很好的效果。基于<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>的深度学习配准主要代表包括<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.pdf"><span class="heti-skip"><span class="heti-spacing"> </span>FCGF (ICCV 2019)<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span><a href="https://arxiv.org/pdf/2003.03164.pdf"><span class="heti-skip"><span class="heti-spacing"> </span>D3Feat (CVPR2020)<span class="heti-spacing"> </span></span></a>和<a href="https://arxiv.org/pdf/2011.13005.pdf"><span><span class="heti-spacing"> </span>PREDATOR (CVPR2021)</span></a><span><span class="heti-spacing"> </span>.</span></li>
-<li><strong><span>Open3D<span class="heti-spacing"> </span></span>的使用</strong>：最后但也是很重要的一环，一个高效处理点云的工具，推荐<a href="http://www.open3d.org/docs/release/"><span><span class="heti-spacing"> </span>Open3D</span></a>。<span>Open3D<span class="heti-spacing"> </span></span>提供了<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个和配准有关的函数，包括<span class="heti-skip"><span class="heti-spacing"> </span>ICP<span class="heti-spacing"> </span></span>及其变种，基于<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>的算法和<span class="heti-skip"><span class="heti-spacing"> </span>FGR<span class="heti-spacing"> </span></span>算法等。</li>
+<li>不论输入和输出的长度是什么，中间的<strong>向量<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span></strong>的长度都是固定的（这也是它的缺陷）。</li>
+<li>根据不同的任务可以选择不同的编码器和解码器（可以是一个<span><span class="heti-spacing"> </span>RNN</span>，但通常是其变种<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>GRU</span>）。</li>
 </ol>
+<div class="admonition error">
+<p class="admonition-title"><span>Encoder-Decoder<span class="heti-spacing"> </span></span>的缺陷</p>
+<p>为了便于理解，我们类比为「压缩<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>解压」的过程：</p>
+<p>将一张<span class="heti-skip"><span class="heti-spacing"> </span>800X800<span class="heti-spacing"> </span></span>像素的图片压缩成<span><span class="heti-spacing"> </span>100KB</span>，看上去还比较清晰。再将一张<span class="heti-skip"><span class="heti-spacing"> </span>3000X3000<span class="heti-spacing"> </span></span>像素的图片也压缩到<span><span class="heti-spacing"> </span>100KB</span>，看上去就模糊了。</p>
+<p><strong><span>Encoder-Decoder<span class="heti-spacing"> </span></span>就是类似的问题：当输入信息太长时，会丢失掉一些信息。</strong></p>
+</div>
+<h2 id="seq2seq">Seq2Seq<a class="headerlink" href="#seq2seq" title="Permanent link">¶</a></h2>
+<h3 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>Seq2Seq（是<span class="heti-skip"><span class="heti-spacing"> </span>Sequence to Sequence<span class="heti-spacing"> </span></span>的缩写），字面意思就是输入一个序列，输出另一个序列。这种结构最重要的地方在于输入序列和输出序列的长度可以可变的。例如下图：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/seq2seq.gif"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/seq2seq.gif"/></a></center>
+<p>如上图：输入了<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个汉字，输出了<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个英文单词。输入和输出的长度不同。</p>
+<h3 id="seq2seq-encoder-decoder"><span>Seq2Seq<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Encoder-Decoder<span class="heti-spacing"> </span></span>的关系<a class="headerlink" href="#seq2seq-encoder-decoder" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>Seq2Seq（强调目的）不特指具体方法，满足「输入序列、输出序列」的目的，都可以统称为<span class="heti-skip"><span class="heti-spacing"> </span>Seq2Seq<span class="heti-spacing"> </span></span>模型。</p>
+<p>而<span class="heti-skip"><span class="heti-spacing"> </span>Seq2Seq<span class="heti-spacing"> </span></span>使用的具体方法基本都属于<span class="heti-skip"><span class="heti-spacing"> </span>Encoder-Decoder<span class="heti-spacing"> </span></span>模型（强调方法）的范畴。</p>
+<p>总结一下的话：</p>
+<ul>
+<li><span>Seq2Seq<span class="heti-spacing"> </span></span>属于<span class="heti-skip"><span class="heti-spacing"> </span>Encoder-Decoder<span class="heti-spacing"> </span></span>的大范畴</li>
+<li><span>Seq2Seq<span class="heti-spacing"> </span></span>更强调目的，<span>Encoder-Decoder<span class="heti-spacing"> </span></span>更强调方法</li>
+</ul>
+<h2 id="attention_1">Attention<a class="headerlink" href="#attention_1" title="Permanent link">¶</a></h2>
+<h3 id="_2">本质<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>Attention（注意力）机制如果浅层的理解，跟他的名字非常匹配。他的核心逻辑就是「从关注全部到关注重点」。我们的视觉系统就是一种<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>机制，将有限的注意力集中在重点信息上，从而节省资源，快速获得最有效的信息。</p>
+<p><span>Attention<span class="heti-spacing"> </span></span>机制最早是在计算机视觉里应用的，随后在<span class="heti-skip"><span class="heti-spacing"> </span>NLP<span class="heti-spacing"> </span></span>领域也开始应用了，真正发扬光大是在<span class="heti-skip"><span class="heti-spacing"> </span>NLP<span class="heti-spacing"> </span></span>领域，因为<span class="heti-skip"><span class="heti-spacing"> </span>2018<span class="heti-spacing"> </span></span>年<span class="heti-skip"><span class="heti-spacing"> </span>BERT<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>GPT<span class="heti-spacing"> </span></span>的效果出奇的好，进而走红。而<span class="heti-skip"><span class="heti-spacing"> </span>Transformer<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>这些核心开始被大家重点关注。</p>
+<p>如果用图来表达<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>的位置大致是下面的样子：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/attention-in-nlp.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/attention-in-nlp.png"/></a></center>
+<h3 id="_3">三大优点<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>之所以要引入<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>机制，主要是<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个原因：</p>
+<ol>
+<li><strong>参数少</strong>：模型复杂度更<span><span class="heti-spacing"> </span>CNN</span>、<span>RNN<span class="heti-spacing"> </span></span>相比，复杂度更小，参数也更少。对算力的要求也就更少。</li>
+<li><strong>速度快</strong>：<span>Attention<span class="heti-spacing"> </span></span>解决了<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>不能并行计算的问题。<span>Attention<span class="heti-spacing"> </span></span>机制每一步计算不依赖于上一步的计算结果，因此可以和<span class="heti-skip"><span class="heti-spacing"> </span>CNN<span class="heti-spacing"> </span></span>一样并行处理。</li>
+<li><strong>效果好</strong>：在<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>机制引入之前，有一个问题大家一直很苦恼：长距离的信息会被弱化，就好像记忆能力弱的人，记不住过去的事情是一样的。</li>
+</ol>
+<h3 id="_4">原理<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>下面的动图演示了<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>引入<span class="heti-skip"><span class="heti-spacing"> </span>Encoder-Decoder<span class="heti-spacing"> </span></span>框架下，完成机器翻译任务的大致流程。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*5_OtX2-iwgDDXT49.gif"><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*5_OtX2-iwgDDXT49.gif"/></a></center>
+<p>但是，<span>Attention<span class="heti-spacing"> </span></span>并不一定要在<span class="heti-skip"><span class="heti-spacing"> </span>Encoder-Decoder<span class="heti-spacing"> </span></span>框架下使用的，他是可以脱离<span class="heti-skip"><span class="heti-spacing"> </span>Encoder-Decoder<span class="heti-spacing"> </span></span>框架的。</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/detach-encoder-decoder.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/detach-encoder-decoder.png"/></a></center>
+<p><span>Attention<span class="heti-spacing"> </span></span>原理分为<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>步：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/attention-step.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/attention-step.png"/></a></center>
+<ol>
+<li><span>query<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>进行相似度计算，得到权值</li>
+<li>将权值进行归一化，得到直接可用的权重</li>
+<li>将权重和<span class="heti-skip"><span class="heti-spacing"> </span>value<span class="heti-spacing"> </span></span>进行加权求和</li>
+</ol>
+<blockquote>
+<p>从上面的建模，可以大致感受到<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>的思路简单，<strong>四个字“带权求和”</strong>，大道至简。</p>
+</blockquote>
+<h2 id="n"><span>N<span class="heti-spacing"> </span></span>种类型<a class="headerlink" href="#n" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/n-types.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/attention/n-types.png"/></a></center>
+<h3 id="_5">计算区域<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ol>
+<li><strong>Soft Attention</strong>，这是比较常见的<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>方式，对所有<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>求权重概率，每个<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>都有一个对应的权重，是一种全局的计算方式（也可以叫<span><span class="heti-spacing"> </span>Global Attention</span>）。这种方式比较理性，参考了所有<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>的内容，再进行加权。但是计算量可能会比较大一些。</li>
+<li><strong>Hard Attention</strong>，这种方式是直接精准定位到某个<span><span class="heti-spacing"> </span>key</span>，其余<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>就都不管了，相当于这个<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>的概率是<span><span class="heti-spacing"> </span>1</span>，其余<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>的概率全部是<span><span class="heti-spacing"> </span>0</span>。因此这种对齐方式要求很高，要求一步到位，如果没有正确对齐，会带来很大的影响。另一方面，因为不可导，一般需要用强化学习的方法进行训练<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（或者使用<span class="heti-skip"><span class="heti-spacing"> </span>gumbel softmax<span class="heti-spacing"> </span></span>之类的）</li>
+<li><strong>Local Attention</strong>，这种方式其实是以上两种方式的一个折中，对一个窗口区域进行计算。先用<span class="heti-skip"><span class="heti-spacing"> </span>Hard<span class="heti-spacing"> </span></span>方式定位到某个地方，以这个点为中心可以得到一个窗口区域，在这个小区域内用<span class="heti-skip"><span class="heti-spacing"> </span>Soft<span class="heti-spacing"> </span></span>方式来算<span><span class="heti-spacing"> </span>Attention</span>。</li>
+</ol>
+<h3 id="_6">所用信息<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>假设我们要对一段原文计算<span><span class="heti-spacing"> </span>Attention</span>，这里原文指的是我们要做<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>的文本，那么所用信息包括内部信息和外部信息，内部信息指的是原文本身的信息，而外部信息指的是除原文以外的额外信息。</p>
+<ol>
+<li><strong>General Attention</strong>，这种方式利用到了外部信息，常用于需要构建两段文本关系的任务，<span>query<span class="heti-spacing"> </span></span>一般包含了额外信息，根据外部<span class="heti-skip"><span class="heti-spacing"> </span>query<span class="heti-spacing"> </span></span>对原文进行对齐。</li>
+</ol>
+<details class="examle">
+<summary>General Attention</summary>
+<p>比如在阅读理解任务中，需要构建问题和文章的关联，假设现在<span class="heti-skip"><span class="heti-spacing"> </span>baseline<span class="heti-spacing"> </span></span>是，对问题计算出一个问题向量<span><span class="heti-spacing"> </span>q</span>，把这个<span class="heti-skip"><span class="heti-spacing"> </span>q<span class="heti-spacing"> </span></span>和所有的文章词向量拼接起来，输入到<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>中进行建模。那么在这个模型中，文章所有词向量共享同一个问题向量，现在我们想让文章每一步的词向量都有一个不同的问题向量，也就是，在每一步使用文章在该步下的词向量对问题来算<span><span class="heti-spacing"> </span>attention</span>，这里问题属于原文，文章词向量就属于外部信息。</p>
+</details>
+<ol start="2">
+<li><strong>Local Attention</strong>，这种方式只使用内部信息，<span>key<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>value<span class="heti-spacing"> </span></span>以及<span class="heti-skip"><span class="heti-spacing"> </span>query<span class="heti-spacing"> </span></span>只和输入原文有关，在<span class="heti-skip"><span class="heti-spacing"> </span>self attention<span class="heti-spacing"> </span></span>中，key=value=query。既然没有外部信息，那么在原文中的每个词可以跟该句子中的所有词进行<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>计算，相当于寻找原文内部的关系。</li>
+</ol>
+<details class="examle">
+<summary>Local Attention</summary>
+<p>还是举阅读理解任务的例子，上面的<span class="heti-skip"><span class="heti-spacing"> </span>baseline<span class="heti-spacing"> </span></span>中提到，对问题计算出一个向量<span><span class="heti-spacing"> </span>q</span>，那么这里也可以用上<span><span class="heti-spacing"> </span>attention</span>，只用问题自身的信息去做<span><span class="heti-spacing"> </span>attention</span>，而不引入文章信息。</p>
+</details>
+<h3 id="_7">结构层次<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>结构方面根据是否划分层次关系，分为单层<span><span class="heti-spacing"> </span>attention</span>，多层<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>和 多头<span><span class="heti-spacing"> </span>attention</span>：</p>
+<ol>
+<li>
+<p><strong>单层<span><span class="heti-spacing"> </span>Attention</span></strong>，这是比较普遍的做法，用一个<span class="heti-skip"><span class="heti-spacing"> </span>query<span class="heti-spacing"> </span></span>对一段原文进行一次<span><span class="heti-spacing"> </span>attention</span>。</p>
+</li>
+<li>
+<p><strong>多层<span><span class="heti-spacing"> </span>Attention</span></strong>，一般用于文本具有层次关系的模型，假设我们把一个<span class="heti-skip"><span class="heti-spacing"> </span>document<span class="heti-spacing"> </span></span>划分成多个句子，在第一层，我们分别对每个句子使用<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>计算出一个句向量（也就是单层<span><span class="heti-spacing"> </span>attention</span>）；在第二层，我们对所有句向量再做<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>计算出一个文档向量（也是一个单层<span><span class="heti-spacing"> </span>attention</span>），最后再用这个文档向量去做任务。</p>
+</li>
+<li>
+<p><strong>多头<span><span class="heti-spacing"> </span>Attention</span></strong>，这是<span class="heti-skip"><span class="heti-spacing"> </span>Attention is All You Need<span class="heti-spacing"> </span></span>中提到的<span><span class="heti-spacing"> </span>multi-head attention</span>，用到了多个<span class="heti-skip"><span class="heti-spacing"> </span>query<span class="heti-spacing"> </span></span>对一段原文进行了多次<span><span class="heti-spacing"> </span>attention</span>，每个<span class="heti-skip"><span class="heti-spacing"> </span>query<span class="heti-spacing"> </span></span>都关注到原文的不同部分，相当于重复做多次单层<span><span class="heti-spacing"> </span>attention</span>：</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+head_i = Attention(q_i, K, V)
+\]</div>
+<p>最后再把这些结果拼接起来：</p>
+<div class="arithmatex">\[
+MultiHead(Q, K, V) = Concat(head_1, ..., head_h)W^O
+\]</div>
+<h3 id="_8">模型方面<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>从模型上看，<span>Attention<span class="heti-spacing"> </span></span>一般用在<span class="heti-skip"><span class="heti-spacing"> </span>CNN<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>上，也可以直接进行纯<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>计算。</p>
+<ol>
+<li><strong>CNN + Attention</strong></li>
+</ol>
+<p><span>CNN<span class="heti-spacing"> </span></span>的卷积操作可以提取重要特征，我觉得这也算是<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>的思想，但是<span class="heti-skip"><span class="heti-spacing"> </span>CNN<span class="heti-spacing"> </span></span>的卷积感受视野是局部的，需要通过叠加多层卷积区去扩大视野。另外，<span>Max Pooling<span class="heti-spacing"> </span></span>直接提取数值最大的特征，也像是<span class="heti-skip"><span class="heti-spacing"> </span>hard attention<span class="heti-spacing"> </span></span>的思想，直接选中某个特征。</p>
+<p><span>CNN<span class="heti-spacing"> </span></span>上加<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>可以加在这几方面：</p>
+<p><span>a.<span class="heti-spacing"> </span></span>在卷积操作前做<span><span class="heti-spacing"> </span>attention</span>，比如<span><span class="heti-spacing"> </span>Attention-Based BCNN-1</span>，这个任务是文本蕴含任务需要处理两段文本，同时对两段输入的序列向量进行<span><span class="heti-spacing"> </span>attention</span>，计算出特征向量，再拼接到原始向量中，作为卷积层的输入。
+b. 在卷积操作后做attention，比如Attention-Based BCNN-2，对两段文本的卷积层的输出做attention，作为pooling层的输入。
+c. 在pooling层做attention，代替max pooling。比如Attention pooling，首先我们用LSTM学到一个比较好的句向量，作为query，然后用CNN先学习到一个特征矩阵作为key，再用query对key产生权重，进行attention，得到最后的句向量。</p>
+<ol start="2">
+<li><strong>LSTM+Attention</strong></li>
+</ol>
+<p><span>LSTM<span class="heti-spacing"> </span></span>内部有<span class="heti-skip"><span class="heti-spacing"> </span>Gate<span class="heti-spacing"> </span></span>机制，其中<span class="heti-skip"><span class="heti-spacing"> </span>input gate<span class="heti-spacing"> </span></span>选择哪些当前信息进行输入，<span>forget gate<span class="heti-spacing"> </span></span>选择遗忘哪些过去信息，我觉得这算是一定程度的<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>了，而且号称可以解决长期依赖问题，实际上<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>需要一步一步去捕捉序列信息，在长文本上的表现是会随着<span class="heti-skip"><span class="heti-spacing"> </span>step<span class="heti-spacing"> </span></span>增加而慢慢衰减，难以保留全部的有用信息。</p>
+<p><span>LSTM<span class="heti-spacing"> </span></span>通常需要得到一个向量，再去做任务，常用方式有：</p>
+<p><span>a.<span class="heti-spacing"> </span></span>直接使用最后的<span><span class="heti-spacing"> </span>hidden state</span>（可能会损失一定的前文信息，难以表达全文）
+b. 对所有step下的hidden state进行等权平均（对所有step一视同仁）。
+c. Attention机制，对所有step的hidden state进行加权，把注意力集中到整段文本中比较重要的hidden state信息。性能比前面两种要好一点，而方便可视化观察哪些step是重要的，但是要小心过拟合，而且也增加了计算量。</p>
+<ol start="3">
+<li><strong>纯<span><span class="heti-spacing"> </span>Attention</span></strong></li>
+</ol>
+<p>Attention is all you need，没有用到<span><span class="heti-spacing"> </span>CNN/RNN</span>，乍一听也是一股清流了，但是仔细一看，本质上还是一堆向量去计算<span><span class="heti-spacing"> </span>attention</span>。</p>
+<h3 id="_9">相似度计算方式<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>在做<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>的时候，我们需要计算<span class="heti-skip"><span class="heti-spacing"> </span>query<span class="heti-spacing"> </span></span>和某个<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>的分数（相似度），常用方法有：</p>
+<ol>
+<li>点乘：<span class="arithmatex">\(score(q,k)=q^\top k\)</span></li>
+<li>矩阵相乘：<span class="arithmatex">\(score(q,k)=q^\top Wk\)</span></li>
+<li>余弦相似度：<span class="arithmatex">\(score(q,k)=\frac{q^\top k}{\|q\| \cdot \|k\|}\)</span></li>
+<li>串联方式，把<span class="heti-skip"><span class="heti-spacing"> </span>q<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>拼接起来：<span class="arithmatex">\(score(q,k)=W[q;k]\)</span></li>
+<li>多层感知机：<span class="arithmatex">\(score(q,k)=v_a^\top tanh(Wq+Uk)\)</span></li>
+</ol>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://easyai.tech/ai-definition/encoder-decoder-seq2seq/"><span>Encoder-Decoder<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Seq2Seq</span></a></li>
+<li><a href="https://easyaitech.medium.com/%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82-attention-%E6%9C%AC%E8%B4%A8%E5%8E%9F%E7%90%86-3%E5%A4%A7%E4%BC%98%E7%82%B9-5%E5%A4%A7%E7%B1%BB%E5%9E%8B-e4fbe4b6d030">一文看懂<span><span class="heti-spacing"> </span>Attention</span>（本质原理<span class="heti-skip"><span class="heti-spacing"> </span>+3<span class="heti-spacing"> </span></span>大优点<span class="heti-skip"><span class="heti-spacing"> </span>+5<span class="heti-spacing"> </span></span>大类型）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/77307258">遍地开花的<span><span class="heti-spacing"> </span>Attention</span>，你真的懂吗？</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月4日 14:26:32</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月9日 20:24:31</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月9日 20:24:31</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -1248,7 +1412,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 点云配准" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<a aria-label="上一页: Transformer" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1257,17 +1421,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              点云配准
+              Transformer
             </div>
 </div>
 </a>
-<a aria-label="下一页: ICP" class="md-footer__link md-footer__link--next" href="../icp/" rel="next">
+<a aria-label="下一页: Transformer" class="md-footer__link md-footer__link--next" href="../transformer/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              ICP
+              Transformer
             </div>
 </div>
 <div class="md-footer__button md-icon">
