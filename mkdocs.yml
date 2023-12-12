@@ -223,6 +223,7 @@ nav:
     - Transformer:
       - llm/transformer/index.md
       - Attention: llm/transformer/attention.md
+      - Transformer: llm/transformer/transformer.md
   - Math Basis:
     - mb/index.md
     - 最优化理论与方法:
