@@ -8,3 +8,4 @@
 
 - [Attention](attention/)
 - [Transformer](transformer/)
+- [BERT](bert/)
