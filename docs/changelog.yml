@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-12-14":
+    - newpage:
+        text: LLM > Prompt
+        href: /llm/prompt/
   - "2023-12-13":
     - newpage:
         text: LLM > Transformer > BERT
