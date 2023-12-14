@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/utils/utilsbox/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/llm/prompt/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>工具收集 - 狙击美佐的笔记本</title>
+<title>Prompt - 狙击美佐的笔记本</title>
 <link href="../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#prompt">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              工具收集
+              Prompt
             
           </span>
 </div>
@@ -160,7 +160,7 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../llm/">
+<a class="md-tabs__link md-tabs__link--active" href="../">
         LLM
       </a>
 </li>
@@ -170,7 +170,7 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+<a class="md-tabs__link" href="../../utils/">
         Utils
       </a>
 </li>
@@ -748,10 +748,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../llm/">LLM</a>
+<a href="../">LLM</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -765,7 +765,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../llm/nlp/">NLP</a>
+<a href="../nlp/">NLP</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -777,12 +777,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/nlp/word2vec/">
+<a class="md-nav__link" href="../nlp/word2vec/">
         Word2Vec
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/nlp/rnns/">
+<a class="md-nav__link" href="../nlp/rnns/">
         RNN
       </a>
 </li>
@@ -792,7 +792,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../llm/transformer/">Transformer</a>
+<a href="../transformer/">Transformer</a>
 <label for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -804,27 +804,60 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/transformer/attention/">
+<a class="md-nav__link" href="../transformer/attention/">
         Attention
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/transformer/transformer/">
+<a class="md-nav__link" href="../transformer/transformer/">
         Transformer
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/transformer/bert/">
+<a class="md-nav__link" href="../transformer/bert/">
         BERT
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../llm/prompt/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Prompt
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Prompt
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guidelines-for-prompting">
+    Guidelines for Prompting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+    Setup
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+    Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prompting-for-tasks">
+    Prompting for Tasks
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -915,10 +948,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Utils</a>
+<a href="../../utils/">Utils</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -929,105 +962,10 @@ var _hmt = _hmt || [];
           Utils
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          工具收集
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../utils/utilsbox/">
         工具收集
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    图像类
-  </a>
-<nav aria-label="图像类" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    作图
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    识图
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    修图
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    设计类
-  </a>
-<nav aria-label="设计类" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    配色
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    图标
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    代码类
-  </a>
-<nav aria-label="代码类" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    可视化
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    插件
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    学习工具
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-    数学类
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-    其他
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reference">
-    Reference
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
@@ -1042,22 +980,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../shell/">
+<a class="md-nav__link" href="../../utils/shell/">
         Shell 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../git/">
+<a class="md-nav__link" href="../../utils/git/">
         Git 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../docker/">
+<a class="md-nav__link" href="../../utils/docker/">
         Docker 命令相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gdb/">
+<a class="md-nav__link" href="../../utils/gdb/">
         gdb 命令相关
       </a>
 </li>
@@ -1077,7 +1015,7 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../action/">
+<a class="md-nav__link" href="../../utils/action/">
         Github Action
       </a>
 </li>
@@ -1097,22 +1035,22 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reveal-md/">
+<a class="md-nav__link" href="../../utils/reveal-md/">
         reveal-md
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gitbook/">
+<a class="md-nav__link" href="../../utils/gitbook/">
         gitbook
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs/">
+<a class="md-nav__link" href="../../utils/mkdocs/">
         mkdocs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hexo/">
+<a class="md-nav__link" href="../../utils/hexo/">
         hexo
       </a>
 </li>
@@ -1137,85 +1075,23 @@ var _hmt = _hmt || [];
       </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    图像类
-  </a>
-<nav aria-label="图像类" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    作图
+<a class="md-nav__link" href="#guidelines-for-prompting">
+    Guidelines for Prompting
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    识图
+<a class="md-nav__link" href="#setup">
+    Setup
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    修图
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    设计类
-  </a>
-<nav aria-label="设计类" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    配色
+<a class="md-nav__link" href="#example">
+    Example
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    图标
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    代码类
-  </a>
-<nav aria-label="代码类" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    可视化
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    插件
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    学习工具
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-    数学类
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-    其他
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reference">
-    Reference
+<a class="md-nav__link" href="#prompting-for-tasks">
+    Prompting for Tasks
   </a>
 </li>
 </ul>
@@ -1227,116 +1103,138 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/utils/utilsbox.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/prompt.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="_1">工具收集<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="prompt">Prompt<a class="headerlink" href="#prompt" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>428<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>145<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>57<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>各种稀奇古怪的工具，包括设计、图像和学习工具等等</p>
-<p>持续更新中<span><span class="heti-spacing"> </span>...</span></p>
+<p>Learn from <a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"><strong>ChatGPT Prompt Engineering for Developers</strong></a> in  <a href="https://learn.deeplearning.ai/"><strong>DeepLearning.AI</strong></a></p>
 </div>
-<style>
-.md-typeset a:is(:focus,:hover) {
-    opacity: 1;
-}
-.md-typeset a {
-    color: var(--md-accent-fg-color);
-    opacity: 0.8;
-}
-</style>
-<h2 id="_2">图像类<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_3">作图<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="guidelines-for-prompting">Guidelines for Prompting<a class="headerlink" href="#guidelines-for-prompting" title="Permanent link">¶</a></h2>
 <ul>
-<li>风格头像制作<a href="https://notion-avatar.vercel.app/zh"><span><span class="heti-spacing"> </span>Notion-avatar</span></a></li>
-<li>在线手写风格作图白板<a href="https://excalidraw.com/"><span><span class="heti-spacing"> </span>Excalidraw</span></a></li>
-<li>在线矢量图作图软件（draw.io）<a href="https://app.diagrams.net/">app.diagrams.net</a></li>
-<li>在线图论作图网站<a href="https://csacademy.com/app/graph_editor/"><span><span class="heti-spacing"> </span>Graph Editor</span></a></li>
-<li><span>tikz<span class="heti-spacing"> </span></span>有限状态机可视化制作<a href="https://madebyevan.com/fsm/"><span><span class="heti-spacing"> </span>Finite State Machine Designer</span></a></li>
+<li><strong>Principle 1: Write clear and specific instructions</strong><ul>
+<li><strong>Tactic 1: Use delimiters to clearly indicate disinct parts of the input</strong><ul>
+<li>Delimiters can be anything like: ```,""",&lt;&gt;,<code>&lt;tag&gt;</code>,<code>&lt;/tag&gt;</code>,<code>:</code></li>
 </ul>
-<h3 id="_4">识图<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://saucenao.com/">SauceNAO</a></li>
+</li>
+<li><strong>Tactic 2: Ask for a structureed output</strong><ul>
+<li>JSON, HTML</li>
 </ul>
-<h3 id="_5">修图<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>移除背景（完全免费）<a href="https://www.remove.bg/">RemoveBg</a></li>
-<li>纯前端免费图片压缩<a href="https://www.picdiet.com/zh-cn"><span><span class="heti-spacing"> </span>PicDiet</span></a></li>
-<li>图片压缩（需上传）<a href="https://docsmall.com/image-compress">DocSmall</a></li>
-<li>擦除图片上物品（免费功能受限）<a href="https://cleanup.pictures/">cleanup.pictures</a></li>
+</li>
+<li><strong>Tactic 3: Ask the modell to check whether conditions are satisfied</strong></li>
+<li><strong>Tactic 4: "Few-shot" prompting</strong></li>
 </ul>
-<h2 id="_6">设计类<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_7">配色<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>配色方案网站<a href="https://colorhunt.co/"><span><span class="heti-spacing"> </span>Color Hunt</span></a></li>
-<li>配色方案网站（带<span class="heti-skip"><span class="heti-spacing"> </span>Figma<span class="heti-spacing"> </span></span>插件） <a href="https://coolors.co/">Coolors</a></li>
-<li>颜色查找及转换工具<a href="https://hexcolor16.com/"><span><span class="heti-spacing"> </span>HexColor16</span></a></li>
-<li>日式传统颜色列表<a href="https://nipponcolors.com/"><span><span class="heti-spacing"> </span>Nippon Colors</span></a></li>
-<li>日系颜色名称列表（<del>色图网站</del>） <a href="https://colorsite.librian.net/">Color Site</a></li>
-<li><span>Flat UI<span class="heti-spacing"> </span></span>配色方案<a href="https://flatuicolors.com/"><span><span class="heti-spacing"> </span>Flat UI Colors</span></a></li>
+</li>
+<li><strong>Principle 2: Give the model time to "think"</strong><ul>
+<li><strong>Tactic 1: Specify the steps required to complete a task, Ask for output in a specified format</strong></li>
+<li><strong>Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion</strong></li>
 </ul>
-<h3 id="_8">图标<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li></li>
-<li>徽章<a href="https://shields.io/"><span><span class="heti-spacing"> </span>shields.io</span></a></li>
-<li>各系列图标合集<a href="https://icones.netlify.app/"><span><span class="heti-spacing"> </span>icones</span></a></li>
-<li>图标、插图、照片、音乐和设计工具<a href="https://icons8.com/"><span><span class="heti-spacing"> </span>icons8</span></a></li>
+</li>
 </ul>
-<h2 id="_9">代码类<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_10">可视化<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h2>
+<p>Load the API key and relevant Python libaries.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">openai</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">os</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">_</span> <span class="o">=</span> <span class="n">load_dotenv</span><span class="p">(</span><span class="n">find_dotenv</span><span class="p">())</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">openai</span><span class="o">.</span><span class="n">api_key</span>  <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">'OPENAI_API_KEY'</span><span class="p">)</span>
+</code></pre></div>
+<p>using <code>helper function</code>, model is <code>gpt-3.5-turbo</code>.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">):</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="c1"># this is the degree of randomness of the model's output</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="p">)</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s2">"content"</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h2>
 <ul>
-<li>数据结构<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>图的可视化<a href="https://csacademy.com/app/graph_editor/"><span><span class="heti-spacing"> </span>graph_editor</span></a></li>
-<li>正则表达式可视化<a href="https://jex.im/regulex/"><span><span class="heti-spacing"> </span>Regulex</span></a></li>
-<li><span>Python<span class="heti-spacing"> </span></span>执行过程可视化<a href="https://pythontutor.com/visualize.html#mode=edit"><span><span class="heti-spacing"> </span>PythonTutor</span></a></li>
-<li><span>GLSL<span class="heti-spacing"> </span></span>流体场可视化<a href="https://anvaka.github.io/fieldplay/"><span><span class="heti-spacing"> </span>Field Play</span></a></li>
+<li>simple</li>
 </ul>
-<h3 id="_11">插件<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="s2">You should express what you want a model to do by \ </span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="s2">providing instructions that are as clear and \ </span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="s2">specific as you can possibly make them. \ </span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="s2">This will guide the model towards the desired output, \ </span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="s2">and reduce the chances of receiving irrelevant \ </span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="s2">or incorrect responses. Don't confuse writing a \ </span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="s2">clear prompt with writing a short prompt. \ </span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="s2">In many cases, longer prompts provide more clarity \ </span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="s2">and context for the model, which can lead to \ </span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="s2">more detailed and relevant outputs.</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="s2">"""</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="s2">Summarize the text delimited by triple backticks \ </span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="s2">into a single sentence.</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="s2">```</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">```</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="s2">"""</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="n">response</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div>
 <ul>
-<li><span>sublime<span class="heti-spacing"> </span></span>算法插件<a href="https://codeforces.com/blog/entry/91409"><span><span class="heti-spacing"> </span>FastOlympicCoding</span></a></li>
+<li>chatbot</li>
 </ul>
-<h3 id="_12">学习工具<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">):</span> <span class="c1"># Andrew mentioned that the prompt/ completion paradigm is preferable for this class</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="c1"># this is the degree of randomness of the model's output</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="p">)</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s2">"content"</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">prod_review</span> <span class="o">=</span> <span class="s2">"""</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="s2">Got this panda plush toy for my daughter's birthday, </span><span class="se">\</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="s2">who loves it and takes it everywhere. It's soft and \ </span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="s2">super cute, and its face has a friendly look. It's \ </span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="s2">a bit small for what I paid though. I think there \ </span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="s2">might be other options that are bigger for the \ </span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="s2">same price. It arrived a day earlier than expected, \ </span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="s2">so I got to play with it myself before I gave it \ </span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="s2">to her.</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="s2">"""</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="s2">Your task is to generate a short summary of a product </span><span class="se">\</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="s2">review from an ecommerce site. </span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="s2">Summarize the review below, delimited by triple </span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="s2">backticks, in at most 30 words. </span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="s2">Review: ```</span><span class="si">{</span><span class="n">prod_review</span><span class="si">}</span><span class="s2">```</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="s2">"""</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="n">response</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="prompting-for-tasks">Prompting for Tasks<a class="headerlink" href="#prompting-for-tasks" title="Permanent link">¶</a></h2>
 <ul>
-<li>编译器资源管理器<a href="https://gcc.godbolt.org/"><span><span class="heti-spacing"> </span>comple explorer</span></a></li>
-<li>缓动曲线<a href="https://easings.net/"><span><span class="heti-spacing"> </span>Easing Function Cheat Sheet</span></a></li>
-<li>大<span class="heti-skip"><span class="heti-spacing"> </span>O<span class="heti-spacing"> </span></span>复杂度比较查询<a href="https://www.bigocheatsheet.com/"><span><span class="heti-spacing"> </span>Big O Cheat Sheet</span></a></li>
-<li><span>C<span class="heti-spacing"> </span></span>类型声明转英文描述<a href="https://cdecl.org/"><span><span class="heti-spacing"> </span>cdecl</span></a></li>
-</ul>
-<h2 id="_13">数学类<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li>数列查找<a href="http://oeis.org/"><span><span class="heti-spacing"> </span>OEIS</span></a></li>
-<li>数学公式<a href="https://www.latexlive.com/"><span><span class="heti-spacing"> </span>Latex</span></a></li>
-<li>质数检测<a href="https://zh.numberempire.com/primenumbers.php"><span><span class="heti-spacing"> </span>primenumbers</span></a></li>
-<li>数学图像<a href="https://www.desmos.com/calculator?lang=zh-CN"><span><span class="heti-spacing"> </span>desmos</span></a></li>
-<li>互动几何谜题<a href="https://www.euclidea.xyz/en/game/packs/Alpha"><span><span class="heti-spacing"> </span>euclidea</span></a></li>
-<li>数学教学软件<a href="https://www.geogebra.org/"><span><span class="heti-spacing"> </span>GeoGebra</span></a></li>
-</ul>
-<h2 id="_14">其他<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><span>git<span class="heti-spacing"> </span></span>提交信息中的<span><span class="heti-spacing"> </span>emoji</span><a href="https://gitmoji.js.org/"><span><span class="heti-spacing"> </span>gitmoji</span></a></li>
-<li><span>Emoji<span class="heti-spacing"> </span></span>查询<a href="https://www.emojiall.com/zh-hans"><span><span class="heti-spacing"> </span>EmojiAll</span></a></li>
-<li>表情图标百科<a href="https://emojipedia.org/zh"><span><span class="heti-spacing"> </span>emojipedia.org</span></a></li>
-<li>工具集合<a href="https://tools.miku.ac/"><span><span class="heti-spacing"> </span>MikuTools</span></a></li>
-<li><span>Unicode<span class="heti-spacing"> </span></span>编码<a href="https://home.unicode.org/"><span><span class="heti-spacing"> </span>Unicode</span></a></li>
-<li><span>Youtube<span class="heti-spacing"> </span></span>下载器<a href="https://yt1s.com/zh-tw19"><span><span class="heti-spacing"> </span>yt1s</span></a></li>
-<li>打字训练<a href="https://monkeytype.com/"><span><span class="heti-spacing"> </span>monkeytype</span></a></li>
-<li>PDFToPPT <a href="https://smallpdf.com/cn/pdf-to-ppt">smallpdf</a></li>
-</ul>
-<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="https://note.tonycrane.cc/cs/tools/toolbox/"><span>TonyCrane<span class="heti-spacing"> </span></span>工具收集</a></li>
+<li><a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/3/iterative">Iterative</a></li>
+<li><a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/4/summarizing">Summarizing</a></li>
+<li><a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/5/inferring">Inferring</a></li>
+<li><a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/6/transforming">Transforming</a></li>
+<li><a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/7/expanding">Expanding</a></li>
+<li><a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/8/chatbot">Chatbot</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月19日 10:16:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月14日 18:46:12</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月30日 22:16:27</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月14日 18:46:12</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -1357,7 +1255,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 工具相关" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<a aria-label="上一页: BERT" class="md-footer__link md-footer__link--prev" href="../transformer/bert/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1366,17 +1264,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              工具相关
+              BERT
             </div>
 </div>
 </a>
-<a aria-label="下一页: Shell 命令相关" class="md-footer__link md-footer__link--next" href="../shell/" rel="next">
+<a aria-label="下一页: 数理基础" class="md-footer__link md-footer__link--next" href="../../mb/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              Shell 命令相关
+              数理基础
             </div>
 </div>
 <div class="md-footer__button md-icon">
