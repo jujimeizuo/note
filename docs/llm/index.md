@@ -11,3 +11,4 @@
 - [NLP](nlp/)
 - [Transformer](transformer/)
 - [Prompt](prompt/)
+- [分布式训练](dt/)

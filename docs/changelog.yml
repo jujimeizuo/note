@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-12-18":
+    - newpage:
+        text: LLM > 分布式训练
+        href: /llm/dt/
   - "2023-12-14":
     - newpage:
         text: LLM > Prompt
