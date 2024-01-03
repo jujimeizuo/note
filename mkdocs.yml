@@ -4,7 +4,7 @@ repo_name: jujimeizuo/note
 repo_url: https://github.com/jujimeizuo/note/
 edit_uri: tree/master/docs
 site_description: 狙击美佐（jujimeizuo）的笔记本
-copyright: Copyright &copy; 2023-2023 <a href="https://github.com/jujimeizuo" target="_blank" rel="noopener">jujimeizuo</a>
+copyright: Copyright &copy; 2023-2024 <a href="https://github.com/jujimeizuo" target="_blank" rel="noopener">jujimeizuo</a>
 
 theme: 
   name: 'material'
@@ -60,7 +60,7 @@ extra:
     - icon: fontawesome/solid/rss
       link: http://www.jujimeizuo.cn/blog/
     - icon: fontawesome/solid/home
-      link: http://www.jujimeizuo.cn/
+      link: https://jujimeizuo.cn/
   analytics:
     provider: custom
     property: G-CY82KV89G2
@@ -225,6 +225,9 @@ nav:
       - Attention: llm/transformer/attention.md
       - Transformer: llm/transformer/transformer.md
       - BERT: llm/transformer/bert.md
+    - 书生浦语大模型实战营:
+      - llm/internlm/index.md
+      - 第一节: llm/internlm/lec1.md
     - Prompt: llm/prompt.md
     - 分布式训练: llm/dt.md
   - Math Basis:
