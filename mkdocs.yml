@@ -228,6 +228,7 @@ nav:
     - 书生浦语大模型实战营:
       - llm/internlm/index.md
       - 第一节: llm/internlm/lec1.md
+      - 第二节: llm/internlm/lec2.md
     - Prompt: llm/prompt.md
     - 分布式训练: llm/dt.md
   - Math Basis:
