@@ -225,10 +225,11 @@ nav:
       - Attention: llm/transformer/attention.md
       - Transformer: llm/transformer/transformer.md
       - BERT: llm/transformer/bert.md
-    - 书生浦语大模型实战营:
+    - 书生·浦语大模型实战营:
       - llm/internlm/index.md
       - 第一节: llm/internlm/lec1.md
       - 第二节: llm/internlm/lec2.md
+      - 第三节: llm/internlm/lec3.md
     - Prompt: llm/prompt.md
     - 分布式训练: llm/dt.md
   - Math Basis:

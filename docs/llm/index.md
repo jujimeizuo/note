@@ -10,5 +10,6 @@
 
 - [NLP](nlp/)
 - [Transformer](transformer/)
+- [书生·浦语大模型实战营](internlm/)
 - [Prompt](prompt/)
 - [分布式训练](dt/)
