@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/llm/nlp/rnns/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/llm/internlm/lec3/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>RNN - 狙击美佐的笔记本</title>
+<title>第三节 - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#rnns">
+<a class="md-skip" href="#internlm-langchain">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              RNN
+              第三节
             
           </span>
 </div>
@@ -762,10 +762,10 @@ var _hmt = _hmt || [];
           LLM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">NLP</a>
+<a href="../../nlp/">NLP</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -777,80 +777,14 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../word2vec/">
+<a class="md-nav__link" href="../../nlp/word2vec/">
         Word2Vec
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          RNN
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../nlp/rnns/">
         RNN
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    基本循环神经网络
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    双向循环神经网络
-  </a>
-<nav aria-label="双向循环神经网络" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    梯度爆炸和梯度消失
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lstm">
-    长短期记忆网络 LSTM
-  </a>
-<nav aria-label="长短期记忆网络 LSTM" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    遗忘门
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    输入门
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    输出门
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gru">
-    门控循环单元 GRU
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -887,10 +821,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../internlm/">书生·浦语大模型实战营</a>
+<a href="../">书生·浦语大模型实战营</a>
 <label for="__nav_4_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -902,17 +836,18 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../internlm/lec1/">
+<a class="md-nav__link" href="../lec1/">
         第一节
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../internlm/lec2/">
+<a class="md-nav__link" href="../lec2/">
         第二节
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../internlm/lec3/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         第三节
       </a>
 </li>
@@ -1139,65 +1074,6 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    基本循环神经网络
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    双向循环神经网络
-  </a>
-<nav aria-label="双向循环神经网络" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    梯度爆炸和梯度消失
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lstm">
-    长短期记忆网络 LSTM
-  </a>
-<nav aria-label="长短期记忆网络 LSTM" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    遗忘门
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    输入门
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    输出门
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gru">
-    门控循环单元 GRU
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -1206,170 +1082,22 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/nlp/rnns.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/internlm/lec3.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="rnns">RNNs<a class="headerlink" href="#rnns" title="Permanent link">¶</a></h1>
+<h1 id="internlm-langchain">基于<span class="heti-skip"><span class="heti-spacing"> </span>InternLM<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>LangChain<span class="heti-spacing"> </span></span>搭建你的知识库<a class="headerlink" href="#internlm-langchain" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2807<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>13<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>12<span class="heti-spacing"> </span></span>个字 </p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p><span>NLP<span class="heti-spacing"> </span></span>里最常用、最传统的深度学习模型就是 <strong>循环神经网络<span><span class="heti-spacing"> </span>RNN</span>（Recurrent Neural Network）</strong>。</p>
-<p><span>RNN<span class="heti-spacing"> </span></span>有很多变种，其中最常用的就是<strong><span><span class="heti-spacing"> </span>LSTM</span>（Long Short-Term Memory）</strong> 和<strong><span><span class="heti-spacing"> </span>GRU</span>（Gated Recurrent Unit）</strong>。本文将介绍<span><span class="heti-spacing"> </span>RNN</span>、<span>LSTM<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>GRU<span class="heti-spacing"> </span></span>的原理。</p>
-</div>
-<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<blockquote>
-<p>全连接神经网络<span class="heti-skip"><span class="heti-spacing"> </span>DNN<span class="heti-spacing"> </span></span>和 卷积神经网络<span><span class="heti-spacing"> </span>CNN</span>，它们的前一个输入和后一个输入是没有关系的。当我们处理<strong>序列信息</strong>时，某些前面的输入和后面的输入是有关系的，比如：当我们在理解一句话的意思时，孤立的理解这句话的每个词是不够的，我们需要处理这些词连接起来的整个<strong>序列</strong>；这个时候我们就需要使用到<strong>循环神经网络（Recurrent Neural Network）</strong>。</p>
-</blockquote>
-<p><span>RNN<span class="heti-spacing"> </span></span>在自然语言处理领域最先被使用起来，<span>RNN<span class="heti-spacing"> </span></span>可以为语言模型进行建模：</p>
-<p><strong>我没有完成上级布置给我的任务，所以<u> </u>被开除了</strong></p>
-<p>让电脑来填写下划线的词最有可能的是『我』，而不太可能是『小明』，甚至是『吃饭』。</p>
-<p>语言模型就是这样的东西：给定一个一句话前面的部分，预测接下来最有可能的一个词是什么。</p>
-<h2 id="_2">基本循环神经网络<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>基本的<span><span class="heti-spacing"> </span>RNN</span>，结构由<strong>输入层、一个隐藏层和输出层</strong>组成。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-structure.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-structure.png" width="30%"/></a></center>
-<ul>
-<li><span>x<span class="heti-spacing"> </span></span>是输入向量</li>
-<li><span>o<span class="heti-spacing"> </span></span>是输出向量</li>
-<li><span>s<span class="heti-spacing"> </span></span>表示隐藏层的值</li>
-<li><span>U<span class="heti-spacing"> </span></span>是输入层到隐藏层的权重矩阵</li>
-<li><span>V<span class="heti-spacing"> </span></span>时隐藏层到输出层的权重矩阵</li>
-</ul>
-<p>循环神经网络的隐藏层的值<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>不仅仅取决于当前这次的输入<span><span class="heti-spacing"> </span>x</span>，还取决于上一次隐藏层的值<span><span class="heti-spacing"> </span>s</span>。权重矩阵<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>就是隐藏层上一次的值作为这一次的输入的权重。</p>
-<p>将上图的基本<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>结构在时间维度展开（<span>RNN<span class="heti-spacing"> </span></span>是一个链式结构，每个时间片使用的都是相同的参数）</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-time-expansion.png"><img alt="RNN 时间展开图" src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/rnn-time-expansion.png"/></a></center>
-<p>这个网络在<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>时刻接收到输入 <span class="arithmatex">\(x_t\)</span> 之后，隐藏层的值是 <span class="arithmatex">\(s_t\)</span>，输出层的值是 <span class="arithmatex">\(o_t\)</span>，<strong>关键的是，<span class="arithmatex">\(s_t\)</span> 的值不仅仅取决于 <span class="arithmatex">\(x_t\)</span>，还取决于 <span class="arithmatex">\(s_{t-1}\)</span></strong>。</p>
-<div class="arithmatex">\[
-s_t=f(U * x_t + W * s_{t-1}) \\
-o_t=g(V * s_t)
-\]</div>
-<ul>
-<li>公式<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>是隐藏层的计算公式，它是循环层。<span>U<span class="heti-spacing"> </span></span>是输入<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>的权重矩阵，<span>W<span class="heti-spacing"> </span></span>是 上一次隐藏层值 <span class="arithmatex">\(s_{t-1}\)</span> 作为则一次的输入的权重矩阵，<span>f<span class="heti-spacing"> </span></span>是激活函数。</li>
-<li>公式<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>是输出层的计算公式，<span>V<span class="heti-spacing"> </span></span>是输出层的权重矩阵，<span>g<span class="heti-spacing"> </span></span>是激活函数。</li>
-<li>隐藏层有两个输入，第一是<span class="heti-skip"><span class="heti-spacing"> </span>U<span class="heti-spacing"> </span></span>与 <span class="arithmatex">\(x_t\)</span> 向量的乘积，第二是上一隐藏层输出的状态 <span class="arithmatex">\(s_{t-1}\)</span> 与<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>的乘积。等于上一个时刻计算的 <span class="arithmatex">\(s_{t-1}\)</span> 需要缓存一下，在本次输入 <span class="arithmatex">\(x_t\)</span> 一起计算，共同输出最后的 <span class="arithmatex">\(o_t\)</span>。</li>
-</ul>
-<p>如果反复把公式<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>带入公式<span><span class="heti-spacing"> </span>2</span>，可以得到：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-o_t&amp;=g(Vs_t)\\
-&amp;=Vf(Ux_t+Ws_{t-1})\\
-&amp;=Vf(Ux_t+Wf(Ux_{t-1}+Ws_{t-2}))\\
-&amp;=Vf(Ux_t+Wf(Ux_{t-1}+Wf(Ux_{t-2}+Ws_{t-3})))\\
-&amp;=Vf(Ux_t+Wf(Ux_{t-1}+Wf(Ux_{t-2}+Wf(Ux_{t-3}+...))))
-\end{aligned}
-\]</div>
-<p>从上面可以看出，循环神经网络的输出值，是受前面历次输入值 <span class="arithmatex">\(x_t、x_{t-1}、x_{t-2}、x_{t-3}、...\)</span> 影响的，这就是为什么循环神经网络可以往前看任意多个输入值的原因。这样其实不好，因为如果太前面的值和后面的值已经没有关系了，循环神经网络还考虑前面的值的话，就会影响后面值的判断。</p>
-<h2 id="_3">双向循环神经网络<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>对于语言模型来说，很多时候光看前面的词是不够的，比如下面这句话：<strong>我的手机坏了，我打算<u> </u>一部新的手机</strong>。 我们这个时候就需要双向循环神经网络。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/brnn-structure.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/brnn-structure.png"/></a></center>
-<p>从上图可以看出，双向循环神经网络的隐藏层需要保存两个值，一个 <span class="arithmatex">\(A\)</span> 参与正向计算，另一个值 <span class="arithmatex">\(A^\prime\)</span> 参与反向计算。最终的输出值 <span class="arithmatex">\(y_2\)</span> 取决于 <span class="arithmatex">\(A_2\)</span> 和 <span class="arithmatex">\(A_2^\prime\)</span>。其计算方法为：</p>
-<div class="arithmatex">\[
-y_2=g(VA_2+V\prime A_2^\prime)
-\]</div>
-<p><span class="arithmatex">\(A_2\)</span> 和 <span class="arithmatex">\(A_2^\prime\)</span> 的计算方法为：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-A_2&amp;=f(WA_1+Ux_2)\\
-A_2^\prime&amp;=f(W^\prime A_3^\prime + U^\prime x_2)
-\end{aligned}
-\]</div>
-<p>现在可以看出一般的规律：正向计算时，隐藏层的值 <span class="arithmatex">\(S_t\)</span> 与 <span class="arithmatex">\(S_{t-1}\)</span> 有关；反向计算时，隐藏层的值 <span class="arithmatex">\(S_t^\prime\)</span> 与 <span class="arithmatex">\(S_{t+1}^\prime\)</span> 有关；最终的输出取决于正向和反向计算的加和。现在，仿照公式<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>和公式<span><span class="heti-spacing"> </span>2</span>，写出<span class="heti-skip"><span class="heti-spacing"> </span>BRNN<span class="heti-spacing"> </span></span>的计算公式：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-o_t=g(Vs_t+V^\prime s_t^\prime)\\
-s_t=f(Ux_t+Ws_{t-1})\\
-s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
-\end{aligned}
-\]</div>
-<p>从上面三个公式可以看到，正向计算和反向计算不共享权重，也就是说 <span class="arithmatex">\(U\)</span> 和 <span class="arithmatex">\(U^\prime\)</span>、<span class="arithmatex">\(W\)</span> 和 <span class="arithmatex">\(W^\prime\)</span>、<span class="arithmatex">\(V\)</span> 和 <span class="arithmatex">\(V^\prime\)</span> 是不同的权重矩阵。</p>
-<h3 id="_4">梯度爆炸和梯度消失<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>上文介绍的几种<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>并不能很好地处理较长的序列，<span>RNN<span class="heti-spacing"> </span></span>在训练中很容易发生梯度爆炸和梯度消失，这导致梯度不能在较长序列中一直传递下去，从而使<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>无法捕捉到长距离的影响。</p>
-<p>通常来说，梯度爆炸更容易处理一些。因为梯度爆炸的时候，我们的程序会收到<span class="heti-skip"><span class="heti-spacing"> </span>NaN<span class="heti-spacing"> </span></span>错误。我们也可以设置一个梯度阈值，当梯度超过这个阈值的时候可以直接截取。</p>
-<p>梯度消失更难检测，而且也更难处理一些。总的来说，我们有三种方法应对梯度消失问题：</p>
-<p>1、合理的初始化权重值。初始化权重，使每个神经元尽可能不要取极大或极小值，以躲开梯度消失的区域。</p>
-<p>2、使用<span class="heti-skip"><span class="heti-spacing"> </span>relu<span class="heti-spacing"> </span></span>代替<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>tanh<span class="heti-spacing"> </span></span>作为激活函数。</p>
-<p>3、使用其他结构的<span><span class="heti-spacing"> </span>RNNs</span>，比如长短时记忆网络（LTSM）和<span><span class="heti-spacing"> </span>Gated Recurrent Unit</span>（GRU），这是最流行的做法。</p>
-<h2 id="lstm">长短期记忆网络<span><span class="heti-spacing"> </span>LSTM</span><a class="headerlink" href="#lstm" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>原始<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>的隐藏层只有一个状态，即<span><span class="heti-spacing"> </span>h</span>，它对短期的输入非常敏感。那么如果我们再加一个门（gate）机制用于控制特征的流通和损失，即<span><span class="heti-spacing"> </span>c</span>，让它来保存长期的状态，这就是<strong>长短时记忆网络（Long Short Term Memory，LSTM）</strong>。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-structure.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-structure.png" width="50%"/></a></center>
-<p>新增加的状态<span><span class="heti-spacing"> </span>c</span>，称为单元状态。把<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>按照时间维度展开：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-time-expansion.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-time-expansion.png" width="50%"/></a></center>
-<p>可以看到在<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>时刻</p>
-<ul>
-<li><strong><span>LSTM<span class="heti-spacing"> </span></span>的输入有三个</strong>：当前时刻网络的输入值 <span class="arithmatex">\(x_t\)</span>、上一时刻<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的输出值 <span class="arithmatex">\(h_{t-1}\)</span>、以及上一时刻的记忆单元向量 <span class="arithmatex">\(c_{t-1}\)</span>。</li>
-<li><strong><span>LSTM<span class="heti-spacing"> </span></span>的输出有两个</strong>：当前时刻的<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>输出值 <span class="arithmatex">\(h_t\)</span>、和当前时刻的记忆单元向量 <span class="arithmatex">\(c_t\)</span>。</li>
-</ul>
-<blockquote>
-<p>记忆单元<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>层内部结束工作，不向其他层输出。<span>LSTM<span class="heti-spacing"> </span></span>的输出仅有隐藏状态向量<span><span class="heti-spacing"> </span>h</span>。</p>
-</blockquote>
-<p><span>LSTM<span class="heti-spacing"> </span></span>的关键是单元状态，即贯穿图表顶部的水平线，有点像传送带。这一部分一般叫做单元状态（cell state），它自始至终存在于<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的整个链式系统中。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-cell-state.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-cell-state.png" width="50%"/></a></center>
-<p>记忆单元状态的计算公式：<span class="arithmatex">\(公式1：c_{t}=f_{t} \odot c_{t-1}+i_{t} \odot g_t\)</span></p>
-<h3 id="_5">遗忘门<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(f_t\)</span> 叫做<strong>遗忘门</strong>，表示 <span class="arithmatex">\(C_{t-1}\)</span> 的哪些特征被用于计算 <span class="arithmatex">\(C_t\)</span>。<span class="arithmatex">\(f_t\)</span> 是一个向量，向量的每个元素均位于<span class="heti-skip"><span class="heti-spacing"> </span>(0~1)<span class="heti-spacing"> </span></span>范围内。通常我们使用<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>作为激活函数，<span>sigmoid<span class="heti-spacing"> </span></span>的输出是一个介于<span class="heti-skip"><span class="heti-spacing"> </span>(0~1)<span class="heti-spacing"> </span></span>区间内的值，但是当你观察一个训练好的<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>时，你会发现门的值绝大多数都非常接近<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>1</span>，其余的值少之又少。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-forget-gate.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-forget-gate.png" width="50%"/></a></center>
-<p>遗忘门的计算公式：<span class="arithmatex">\(公式2：f_t=\sigma (x_tW_x^{(f)}+h_{h-1}W_h^{(f)}+b^{(f)})\)</span></p>
-<h3 id="_6">输入门<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><span class="arithmatex">\(\tilde{C}_t\)</span> 表示单元状态更新值，有输入数据 <span class="arithmatex">\(x_t\)</span> 和隐节点 <span class="arithmatex">\(h_{t-1}\)</span> 经由一个神经网络层得到，单元状态更新值的激活函数通常使用<span><span class="heti-spacing"> </span>tanh</span>。<span class="arithmatex">\(i_t\)</span> 叫做输入门，同 <span class="arithmatex">\(f_t\)</span> 一样也是一个元素介于<span class="heti-skip"><span class="heti-spacing"> </span>(0~1)<span class="heti-spacing"> </span></span>区间内的向量，同样由 <span class="arithmatex">\(x_t\)</span> 和 <span class="arithmatex">\(h_{t-1}\)</span> 经由<span class="heti-skip"><span class="heti-spacing"> </span>sigmoid<span class="heti-spacing"> </span></span>激活函数计算而成。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-input-gate.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-input-gate.png" width="50%"/></a></center>
-<p>输入门和单元更新值的计算方式：</p>
-<ul>
-<li><span class="arithmatex">\(公式3：i_t=\sigma (x_tW_x^{(i)}+h_{t-1}W_h^{i}+b^{(i)})\)</span></li>
-<li><span class="arithmatex">\(公式4：g_t=tanh(x_tW_x^{(g)}+h_{t-1}W_h^{(g)}+b^{(g)})\)</span></li>
-</ul>
-<h3 id="_7">输出门<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>最后，为了计算预测值 <span class="arithmatex">\(\hat{y}_t\)</span> 和生成下个时间片完整的输入，我们需要计算隐节点的输出 <span class="arithmatex">\(h_t\)</span>。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-output-gate.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-output-gate.png" width="50%"/></a></center>
-<p>输出门和隐节点的计算公式</p>
-<ul>
-<li><span class="arithmatex">\(公式5：o_t=\sigma (x_tW_x^{(o)}+h_{t-1}W_h^{(o)}+b^{(o)})\)</span></li>
-<li><span class="arithmatex">\(公式6：h_t=o_t\odot tanh(c_t)\)</span></li>
-</ul>
-<p>我们来看公式<span><span class="heti-spacing"> </span>2</span>、3、4、5，都是型如 <span class="arithmatex">\(xW_x+hW_h+b\)</span> 的格式，因此可以整合为通过一个式子进行，如下图所示：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-eq.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-eq.png" width="50%"/></a></center>
-<p><span>4<span class="heti-spacing"> </span></span>个权重（或偏置）被整合为了<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>个。如此，原本单独执行<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>次的仿射变换通过<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>次计算即可完成，可以加快计算速度。这是因为矩阵库计算“大矩阵”时通常会更快，而且通过将权重整合到一起管理，源代码也会更简洁。</p>
-<p>假设 <span class="arithmatex">\(W_x、W_h\)</span> 和 <span class="arithmatex">\(b\)</span> 分别包含<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个权重（或偏置），此时<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的计算图如下所示。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-compute-graph.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/lstm-compute-graph.png" width="50%"/></a></center>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">((</span><span class="mi">64</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">LSTM_layer</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">return_state</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">outputs</span><span class="p">,</span> <span class="n">final_memory_state</span><span class="p">,</span> <span class="n">final_carry_state</span> <span class="o">=</span> <span class="n">LSTM_layer</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">outputs</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">final_memory_state</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">final_carry_state</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># (64, 6, 20) (64, 20) (64, 20)</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">))</span>  <span class="c1"># 3</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Wx (10, 80)</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Wh (20, 80)</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">LSTM_layer</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># bias (80,)</span>
-</code></pre></div>
-<h2 id="gru">门控循环单元<span><span class="heti-spacing"> </span>GRU</span><a class="headerlink" href="#gru" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><span>LSTM<span class="heti-spacing"> </span></span>的参数太多，计算需要很长时间。因此，最近业界又提出了<span><span class="heti-spacing"> </span>GRU</span>（Gated RecurrentUnit，门控循环单元）。<span>GRU<span class="heti-spacing"> </span></span>保留了<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>使用门的理念，但是减少了参数，缩短了计算时间。</p>
-<p>相对于<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>使用隐藏状态和记忆单元两条线，<span>GRU<span class="heti-spacing"> </span></span>只使用隐藏状态。异同点如下：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-lstm.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-lstm.png" width="50%"/></a></center>
-<p><span>GRU<span class="heti-spacing"> </span></span>的计算图如下所示。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-compute-graph.png"><img src="https://cdn.jujimeizuo.cn/note/llm/nlp/rnn/gru-compute-graph.png" width="50%"/></a></center>
-<p><span>GRU<span class="heti-spacing"> </span></span>计算图中，<span class="arithmatex">\(\sigma\)</span> 节点和<span class="heti-skip"><span class="heti-spacing"> </span>tanh<span class="heti-spacing"> </span></span>节点有专用的权重，节点内部进行仿射变换（“1−”节点输入<span><span class="heti-spacing"> </span>x</span>，输出<span><span class="heti-spacing"> </span>1</span> − x）</p>
-<p><span class="arithmatex">\(公式2.1：z=\sigma(x_t W_x^{(z)}+h_{t-1} W_h^{(z)}+b^{(z)})\)</span></p>
-<p><span class="arithmatex">\(公式2.2：r=\sigma(x_t W_x^{(r)}+h_{t-1} W_h^{(r)}+b^{(r)})\)</span></p>
-<p><span class="arithmatex">\(公式2.3：\tilde{h}=\tanh (x_t W_x+(r \odot h_{t-1}) W_h+b)\)</span></p>
-<p><span class="arithmatex">\(公式2.4：h_t=(1-z) \odot h_{t-1}+z \odot \tilde{h}\)</span></p>
-<p><span>GRU<span class="heti-spacing"> </span></span>中进行的计算由上述<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个式子表示（这里 <span class="arithmatex">\(x_t\)</span> 和 <span class="arithmatex">\(h_{t−1}\)</span> 都是行向量），如图所示，<span>GRU<span class="heti-spacing"> </span></span>没有记忆单元，只有一个隐藏状态<span class="heti-skip"><span class="heti-spacing"> </span>h<span class="heti-spacing"> </span></span>在时间方向上传播。这里使用<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>共两个门（<span>LSTM<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个门），<span>r<span class="heti-spacing"> </span></span>称为<span class="heti-skip"><span class="heti-spacing"> </span>reset<span class="heti-spacing"> </span></span>门，<span>z<span class="heti-spacing"> </span></span>称为<span class="heti-skip"><span class="heti-spacing"> </span>update<span class="heti-spacing"> </span></span>门。</p>
-<ul>
-<li><strong>r（<span>reset<span class="heti-spacing"> </span></span>门）</strong> 决定在多大程度上“忽略”过去的隐藏状态。根据公式<span><span class="heti-spacing"> </span>2.3</span>，如果<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>是<span><span class="heti-spacing"> </span>0</span>，则新的隐藏状态 <span class="arithmatex">\(\tilde{h}\)</span> 仅取决于输入 <span class="arithmatex">\(x_t\)</span>。也就是说，此时过去的隐藏状态将完全被忽略。</li>
-<li><strong>z（<span>update<span class="heti-spacing"> </span></span>门）</strong> 是更新隐藏状态的门，它扮演了<span class="heti-skip"><span class="heti-spacing"> </span>LSTM<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>forget<span class="heti-spacing"> </span></span>门和<span class="heti-skip"><span class="heti-spacing"> </span>input<span class="heti-spacing"> </span></span>门两个角色。公式<span class="heti-skip"><span class="heti-spacing"> </span>2.4<span class="heti-spacing"> </span></span>的 <span class="arithmatex">\((1-z) \odot h_{t-1}\)</span> 部分充当<span class="heti-skip"><span class="heti-spacing"> </span>forget<span class="heti-spacing"> </span></span>门的功能，从过去的隐藏状态中删除应该被遗忘的信息。<span class="arithmatex">\(z \odot \tilde{h}\)</span> 的部分充当<span class="heti-skip"><span class="heti-spacing"> </span>input<span class="heti-spacing"> </span></span>门的功能，对新增的信息进行加权。</li>
-</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月8日 17:49:04</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月6日 16:23:53</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月8日 17:49:04</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月6日 16:23:53</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -1390,7 +1118,7 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Word2Vec" class="md-footer__link md-footer__link--prev" href="../word2vec/" rel="prev">
+<a aria-label="上一页: 第二节" class="md-footer__link md-footer__link--prev" href="../lec2/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1399,17 +1127,17 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
 <span class="md-footer__direction">
                 上一页
               </span>
-              Word2Vec
+              第二节
             </div>
 </div>
 </a>
-<a aria-label="下一页: Transformer" class="md-footer__link md-footer__link--next" href="../../transformer/" rel="next">
+<a aria-label="下一页: Prompt" class="md-footer__link md-footer__link--next" href="../../prompt/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              Transformer
+              Prompt
             </div>
 </div>
 <div class="md-footer__button md-icon">
