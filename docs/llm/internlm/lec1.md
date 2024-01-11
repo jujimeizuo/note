@@ -6,6 +6,9 @@ comment: true
 
 # 书生·浦语大模型全链路开源开放体系
 
+!!! abstract
+    学习自 [书生·浦语大模型全链路开源开放体系](https://www.bilibili.com/video/BV1Rc411b7ns/)
+
 ## 书生·浦语大模型系列
 
 - 轻量级：InternLM-7B

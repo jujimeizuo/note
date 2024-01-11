@@ -5,6 +5,9 @@ comment: true
 
 # 轻松分钟玩转书生·浦语大模型趣味 Demo
 
+!!! abstract
+    学习自 [轻松分钟玩转书生·浦语大模型趣味 Demo](https://github.com/InternLM/tutorial/blob/main/helloworld/hello_world.md)
+
 ## InternLM-Chat-7B 智能对话
 
 ### Terminal Demo
