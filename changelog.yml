@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-1-8":
+    - newpage:
+        text: LLM > InternLM > 基于 InternLM 和 LangChain 搭建你的知识库
+        href: /llm/internlm/lec3/
   - "2024-1-4":
     - newpage:
         text: LLM > InternLM > 轻松分钟玩转书生·浦语大模型趣味 Demo
