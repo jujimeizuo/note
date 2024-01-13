@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-1-11":
+    - newpage:
+        text: LLM > InternLM > XTuner 大模型单卡低成本微调实战
+        href: /llm/internlm/lec4/
   - "2024-1-8":
     - newpage:
         text: LLM > InternLM > 基于 InternLM 和 LangChain 搭建你的知识库
