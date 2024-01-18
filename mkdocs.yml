@@ -231,6 +231,7 @@ nav:
       - 第二节: llm/internlm/lec2.md
       - 第三节: llm/internlm/lec3.md
       - 第四节: llm/internlm/lec4.md
+      - 第五节: llm/internlm/lec5.md
     - Prompt: llm/prompt.md
     - 分布式训练: llm/dt.md
   - Math Basis:

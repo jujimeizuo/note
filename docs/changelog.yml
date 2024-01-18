@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-1-18":
+    - newpage:
+        text: LLM > InternLM > XTuner LMDeploy 大模型量化部署实践
+        href: /llm/internlm/lec5/
   - "2024-1-11":
     - newpage:
         text: LLM > InternLM > XTuner 大模型单卡低成本微调实战
