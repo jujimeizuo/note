@@ -7,8 +7,31 @@
 
 ## Table of Contents
 
-- [OpenCV](opencv/)
+{{ BEGIN_TOC }}
+
+- 多视图几何:
+    - index: mvg/
+    - 2D 射影几何和变换: mvg/pjt2d/
+    - 3D 射影几何和变换: mvg/pjt3d/
+    - 估计——2D 射影变换: mvg/est2d/
+    - 算法评价和误差分析: mvg/eval/
+    - 摄像机模型: mvg/camera-model/
+    - 计算摄像机矩阵 P: mvg/calc-p/
+    - 单视图几何: mvg/one-vg/
+    - 对极几何和基本矩阵: mvg/ag-fm/
+    - 摄像机和结构的 3D 重构: mvg/3dr-camera-structure/
+- SLAM:
+    - index: slam/
+    - 视觉 SLAM 14 讲: slam/vslam14/
+- 点云配准:
+    - index: pcr/
+    - 前置知识: pcr/prepare/
+    - ICP: pcr/icp/
+
+{{ END_TOC }}
+
+<!-- 
 - [多视图几何](mvg/)
 - [SLAM](slam/)
 - [点云配准](pcr/)
-- [三维数据场可视化](3d-visualization/)
+- [三维数据场可视化](3d-visualization/) -->

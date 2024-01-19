@@ -53,6 +53,16 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
+
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -109,9 +119,8 @@ plugins:
   - changelog
   - statistics:
       page_check_metadata: comment
-  - heti:
-      extra_skipped_class:
-        - arithmatex
+  - toc
+  - heti
   - linkbackward:
       wait_time: 0
       redirections:
@@ -132,6 +141,8 @@ plugins:
         # - /hpc/hpc101/openmp/ -> /cs/hpc/hpc101/openmp/
         # - /hpc/hpc101/mpi/ -> /cs/hpc/hpc101/mpi/
         # - /hpc/hpc101/ml/ -> /cs/hpc/hpc101/ml/
+
+not_in_nav: todo.md
 
 nav:
   - Home:
@@ -191,7 +202,6 @@ nav:
       - RegEx 正则表达式: cs/others/regex.md
   - CV & Robot:
     - cv/index.md
-    - OpenCV: cv/opencv.md
     - 多视图几何:
       - cv/mvg/index.md
       - 2D 射影几何和变换: cv/mvg/pjt2d.md
@@ -232,8 +242,9 @@ nav:
       - 第三节: llm/internlm/lec3.md
       - 第四节: llm/internlm/lec4.md
       - 第五节: llm/internlm/lec5.md
-    - Prompt: llm/prompt.md
-    - 分布式训练: llm/dt.md
+    - 杂项:
+      - Prompt: llm/others/prompt.md
+      - 分布式训练: llm/others/dt.md
   - Math Basis:
     - mb/index.md
     - 最优化理论与方法:
