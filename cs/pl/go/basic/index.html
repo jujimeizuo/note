@@ -6,11 +6,12 @@
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
 <link href="https://note.jujimeizuo.cn/cs/pl/go/basic/" rel="canonical"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.1.4" name="generator"/>
 <title>Go 语法基础 - 狙击美佐的笔记本</title>
 <link href="../../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../css/toc_extra.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
@@ -900,21 +901,16 @@ var _hmt = _hmt || [];
           CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../cv/opencv/">
-        OpenCV
-      </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../../cv/mvg/">多视图几何</a>
-<label for="__nav_3_3">
+<label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="多视图几何" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
+<label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
           多视图几何
         </label>
@@ -968,29 +964,29 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../../cv/slam/">SLAM</a>
-<label for="__nav_3_4">
+<label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="SLAM" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           SLAM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" id="__nav_3_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
-<label for="__nav_3_4_2">
+<label for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="视觉 SLAM 十四讲" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_4_2">
+<label class="md-nav__title" for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
           视觉 SLAM 十四讲
         </label>
@@ -1012,15 +1008,15 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../../cv/pcr/">点云配准</a>
-<label for="__nav_3_5">
+<label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="点云配准" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_5">
+<label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
           点云配准
         </label>
@@ -1161,15 +1157,30 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          杂项
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="杂项" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          杂项
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../llm/prompt/">
+<a class="md-nav__link" href="../../../../llm/others/prompt/">
         Prompt
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../llm/dt/">
+<a class="md-nav__link" href="../../../../llm/others/dt/">
         分布式训练
       </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1736,7 +1747,7 @@ var _hmt = _hmt || [];
 </div>
 <h2 id="go_3">怎么编写、运行<span><span class="heti-spacing"> </span>Go</span><a class="headerlink" href="#go_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <blockquote>
-<p>  任何编辑器都可以编写<span><span class="heti-spacing"> </span>Go</span>（包括记事本），这里推荐用<span><span class="heti-spacing"> </span>VsCode</span>（需安装<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>扩展），当然也可以用<span><span class="heti-spacing"> </span>Sublime</span>，<span>JB<span class="heti-spacing"> </span></span>的全家桶等等</p>
+<p>  任何编辑器都可以编写<span><span class="heti-spacing"> </span>Go</span>（包括记事本<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这里推荐用<span><span class="heti-spacing"> </span>VsCode</span>（需安装<span class="heti-skip"><span class="heti-spacing"> </span>Go<span class="heti-spacing"> </span></span>扩展<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，当然也可以用<span><span class="heti-spacing"> </span>Sublime</span>，<span>JB<span class="heti-spacing"> </span></span>的全家桶等等</p>
 </blockquote>
 <h3 id="go-mod-init">go mod init<a class="headerlink" href="#go-mod-init" title="Permanent link">¶</a></h3>
 <p>使用<code>go module</code>模式新建项目时，我们需要通过<code>go mod init</code> 项目名命令对项目进行初始化，该命令会在项目根目录下生成<code>go.mod</code>文件。执行如下命令
@@ -1776,7 +1787,7 @@ var _hmt = _hmt || [];
 <li>需要显式声明，并且在函数调用等情况下，编译器会检查其类型的正确性</li>
 <li><code>var</code> 声明<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>个或多个变量，<span>Go<span class="heti-spacing"> </span></span>会自动推断已经有初始值的变量类型</li>
 <li>声明后却没有给出对应的初始值时，变量将会初始化为 零值 。 例如，<span>int<span class="heti-spacing"> </span></span>的零值是<span><span class="heti-spacing"> </span>0</span></li>
-<li><span>:=<span class="heti-spacing"> </span></span>语法是声明并初始化变量的简写（不能在函数外使用）， 例如 <code>var f string = "short"</code> 可以简写为<code>f := "short"</code></li>
+<li><span>:=<span class="heti-spacing"> </span></span>语法是声明并初始化变量的简写（不能在函数外使用<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>， 例如 <code>var f string = "short"</code> 可以简写为<code>f := "short"</code></li>
 <li>在使用多重赋值时，如果想要忽略某个值，可以使用匿名变量，一个下划线<code>_</code>表示</li>
 </ul>
 </li>
@@ -1839,7 +1850,7 @@ var _hmt = _hmt || [];
 <li><span>for<span class="heti-spacing"> </span></span>循环的初始语句可以被忽略，但是初始语句后的分号必须要写</li>
 <li><span>for<span class="heti-spacing"> </span></span>循环的初始语句和结束语句都可以省略</li>
 <li><span>for<span class="heti-spacing"> </span></span>循环可以通过<span><span class="heti-spacing"> </span>break</span>、goto、return、<span>panic<span class="heti-spacing"> </span></span>语句强制退出循环</li>
-<li><span>Go<span class="heti-spacing"> </span></span>语言中可以使用<span class="heti-skip"><span class="heti-spacing"> </span>for range<span class="heti-spacing"> </span></span>遍历数组、切片、字符串、<span>map<span class="heti-spacing"> </span></span>及通道（channel）。 通过<span class="heti-skip"><span class="heti-spacing"> </span>for range<span class="heti-spacing"> </span></span>遍历的返回值有以下规律<ul>
+<li><span>Go<span class="heti-spacing"> </span></span>语言中可以使用<span class="heti-skip"><span class="heti-spacing"> </span>for range<span class="heti-spacing"> </span></span>遍历数组、切片、字符串、<span>map<span class="heti-spacing"> </span></span>及通道（channel<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。 通过<span class="heti-skip"><span class="heti-spacing"> </span>for range<span class="heti-spacing"> </span></span>遍历的返回值有以下规律<ul>
 <li>数组、切片、字符串返回索引和值。</li>
 <li><span>map<span class="heti-spacing"> </span></span>返回键和值。</li>
 <li>通道（channel）只返回通道内的值</li>
@@ -1956,7 +1967,7 @@ var _hmt = _hmt || [];
 <li>切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容</li>
 <li>切片声明：<code>var name []T</code>，<span>name<span class="heti-spacing"> </span></span>表示变量名，<span>T<span class="heti-spacing"> </span></span>表示切片中的元素类型</li>
 <li>切片拥有自己的长度和容量，我们可以通过使用内置的<span class="heti-skip"><span class="heti-spacing"> </span>len()<span class="heti-spacing"> </span></span>函数求长度，使用内置的<span class="heti-skip"><span class="heti-spacing"> </span>cap()<span class="heti-spacing"> </span></span>函数求切片的容量</li>
-<li>切片的底层就是数组，和<span class="heti-skip"><span class="heti-spacing"> </span>Python<span class="heti-spacing"> </span></span>一样，可以使用<code>b := a[1:3]</code>，表示从数组<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>中选出 索引值在<span class="arithmatex">\([1,3)\)</span>中的元素组成切片<span><span class="heti-spacing"> </span>b</span></li>
+<li>切片的底层就是数组，和<span class="heti-skip"><span class="heti-spacing"> </span>Python<span class="heti-spacing"> </span></span>一样，可以使用<code>b := a[1:3]</code>，表示从数组<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>中选出 索引值在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([1,3)\)</span><span class="heti-spacing"> </span></span>中的元素组成切片<span><span class="heti-spacing"> </span>b</span></li>
 <li>完整的切片表达式：<code>a[low: high: max]</code>，得到的结果切片的容量设置为<code>max - low</code>，<span>low<span class="heti-spacing"> </span></span>可以省略，默认为<span><span class="heti-spacing"> </span>0</span></li>
 <li>使用内置<code>make函数</code>构造切片，<code>make([]T, size, cap)</code>，<span>T<span class="heti-spacing"> </span></span>表示元素类型，<span>size<span class="heti-spacing"> </span></span>表示元素数量，<span>cap<span class="heti-spacing"> </span></span>表示切片容量</li>
 <li>判断切片是否为空，请使用<code>len(s) == 0</code>，不要使用<code>s == nil</code></li>
@@ -2086,7 +2097,7 @@ var _hmt = _hmt || [];
 </details>
 <h3 id="_17">方法<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>方法（Method）是一种作用于特定类型变量的函数。这种特定类型变量叫做接收者（Receiver）。接收者的概念就类似于其他语言中的<span class="heti-skip"><span class="heti-spacing"> </span>this<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>self</span>，当然还可以有指针类型的接收者
+<li>方法（Method）是一种作用于特定类型变量的函数。这种特定类型变量叫做接收者（Receiver<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。接收者的概念就类似于其他语言中的<span class="heti-skip"><span class="heti-spacing"> </span>this<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>self</span>，当然还可以有指针类型的接收者
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">接收者变量</span><span class="w"> </span><span class="nx">接收者类型</span><span class="p">)</span><span class="w"> </span><span class="nx">方法名</span><span class="p">(</span><span class="nx">参数列表</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">返回参数</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="nx">函数体</span>
 <a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">}</span>

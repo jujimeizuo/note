@@ -6,11 +6,12 @@
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
 <link href="https://note.jujimeizuo.cn/cv/mvg/3dr-camera-structure/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.1.4" name="generator"/>
 <title>摄像机和结构的 3D 重构 - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/toc_extra.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
@@ -602,21 +603,16 @@ var _hmt = _hmt || [];
           CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../opencv/">
-        OpenCV
-      </a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../">多视图几何</a>
-<label for="__nav_3_3">
+<label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="多视图几何" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
+<label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
           多视图几何
         </label>
@@ -727,29 +723,29 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../slam/">SLAM</a>
-<label for="__nav_3_4">
+<label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="SLAM" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           SLAM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" id="__nav_3_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../slam/vslam14/">视觉 SLAM 十四讲</a>
-<label for="__nav_3_4_2">
+<label for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="视觉 SLAM 十四讲" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_4_2">
+<label class="md-nav__title" for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
           视觉 SLAM 十四讲
         </label>
@@ -771,15 +767,15 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../pcr/">点云配准</a>
-<label for="__nav_3_5">
+<label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="点云配准" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_5">
+<label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
           点云配准
         </label>
@@ -920,15 +916,30 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          杂项
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="杂项" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          杂项
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/prompt/">
+<a class="md-nav__link" href="../../../llm/others/prompt/">
         Prompt
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/dt/">
+<a class="md-nav__link" href="../../../llm/others/dt/">
         分布式训练
       </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1207,7 +1218,7 @@ var _hmt = _hmt || [];
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>重构的任务是求摄像机矩阵<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(P^\prime\)</span>，以及<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>中的点<span class="arithmatex">\(\mathbf{X}_i\)</span>，使得对所有<span><span class="heti-spacing"> </span>i</span>，有</p>
+<p>重构的任务是求摄像机矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(P^\prime\)</span></span>，以及<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>中的点<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}_i\)</span></span>，使得对所有<span><span class="heti-spacing"> </span>i</span>，有</p>
 <div class="arithmatex">\[
 \mathbf{x}_i=P \mathbf{X}_i \ \ \ \ \ \ \mathbf{x}_i^\prime=P^\prime \mathbf{X}_i
 \]</div>
@@ -1217,7 +1228,7 @@ var _hmt = _hmt || [];
 <li>由两视图重构的一种方法：<ol>
 <li>由对应点计算基本矩阵</li>
 <li>由基本矩阵计算摄像机矩阵</li>
-<li>针对每组对应点<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>，计算空间中映射到这两个图像点到点</li>
+<li>针对每组对应点<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span></span>，计算空间中映射到这两个图像点到点</li>
 </ol>
 </li>
 </ul>
@@ -1233,47 +1244,47 @@ var _hmt = _hmt || [];
 <h2 id="_3">射影重构定理<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li>如果两幅视图的一个点对应集唯一地确定了基本矩阵，则景物和摄像机可以仅由这些对应重构，而且由这些对应产生的任何两个重构都是射影等价的</li>
-<li><span>*<span class="heti-spacing"> </span></span><em>射影重构定定理</em>：假定<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>是两幅图像点之间对应的集合而且基本矩阵<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>由条件<span class="arithmatex">\(\mathbf{x}_i^{\prime \top} F \mathbf{x}_i=0\)</span>（对所有<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>成立）唯一地确定。令<span class="arithmatex">\((P_1,P_1^\prime,\{\mathbf{X}_{1i}\})\)</span>和<span class="arithmatex">\((P_2,P_2^\prime,\{\mathbf{X}_{2i}\})\)</span>为对应<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>的两个重构，则存在一个非奇异矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>使得<span class="arithmatex">\(P_2=P_1H^{-1},P_2^\prime=P_1^\prime H^{-1}\)</span>并且除了使得<span class="arithmatex">\(F\mathbf{x}_i=F^\top \mathbf{x}_i^\prime=\mathbf{0}\)</span>的那些<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>外，对其余每个<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>都有<span class="arithmatex">\(\mathbf{X}_{2i}=H\mathbf{X}_{1i}\)</span></li>
+<li>*<em>射影重构定定理</em>：假定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span><span class="heti-spacing"> </span></span>是两幅图像点之间对应的集合而且基本矩阵<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>由条件<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{x}_i^{\prime \top} F \mathbf{x}_i=0\)</span></span>（对所有<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>成立）唯一地确定。令<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((P_1,P_1^\prime,\{\mathbf{X}_{1i}\})\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((P_2,P_2^\prime,\{\mathbf{X}_{2i}\})\)</span><span class="heti-spacing"> </span></span>为对应<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span><span class="heti-spacing"> </span></span>的两个重构，则存在一个非奇异矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>使得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P_2=P_1H^{-1},P_2^\prime=P_1^\prime H^{-1}\)</span><span class="heti-spacing"> </span></span>并且除了使得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\mathbf{x}_i=F^\top \mathbf{x}_i^\prime=\mathbf{0}\)</span><span class="heti-spacing"> </span></span>的那些<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>外，对其余每个<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>都有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}_{2i}=H\mathbf{X}_{1i}\)</span></span></li>
 </ul>
 <h2 id="_4">分层重构<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_5">仿射重构<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>仿射重构的本质是用某些方法定位无穷远平面，因为定位无穷远平面等价于仿射重构。寻找使<span class="arithmatex">\(\pi\)</span>映射到<span class="arithmatex">\((0,0,0,1)^\top\)</span>，可以把<span class="arithmatex">\(H^{-\top}\)</span>作为<span class="heti-skip"><span class="heti-spacing"> </span>Houscholder<span class="heti-spacing"> </span></span>矩阵来计算</li>
+<li>仿射重构的本质是用某些方法定位无穷远平面，因为定位无穷远平面等价于仿射重构。寻找使<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\pi\)</span><span class="heti-spacing"> </span></span>映射到<span><span class="heti-spacing"> </span><span class="arithmatex">\((0,0,0,1)^\top\)</span></span>，可以把<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H^{-\top}\)</span><span class="heti-spacing"> </span></span>作为<span class="heti-skip"><span class="heti-spacing"> </span>Houscholder<span class="heti-spacing"> </span></span>矩阵来计算</li>
 <li><strong>平移运动</strong><ul>
-<li>摄像机作纯平移运动时，可以由两幅视图实现仿射重构。无穷远平面上一点<span class="arithmatex">\(\mathbf{X}\)</span>在由摄像机平移所产生的两幅图像上的像是同一点。给定一个射影重构，可以重构对应于匹配<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>的点<span class="arithmatex">\(\mathbf{X}_i\)</span>。点<span class="arithmatex">\(\mathbf{X}_i\)</span>将在无穷远平面上。从三组这样的点我们可以得到在无穷远平面上的三个点——足够唯一地把它确定</li>
-<li>假设摄像机的运动是没有旋转且内参保持不变的一个纯平移运动，则<span class="arithmatex">\(F=[\mathbf{e}]_\times = [\mathbf{e}^\prime]_\times\)</span>，并且作为仿射重构可选的两个摄像机为<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>和<span class="arithmatex">\(P^\prime=[I|\mathbf{e}^\prime]\)</span></li>
+<li>摄像机作纯平移运动时，可以由两幅视图实现仿射重构。无穷远平面上一点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}\)</span><span class="heti-spacing"> </span></span>在由摄像机平移所产生的两幅图像上的像是同一点。给定一个射影重构，可以重构对应于匹配<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span><span class="heti-spacing"> </span></span>的点<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}_i\)</span></span>。点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}_i\)</span><span class="heti-spacing"> </span></span>将在无穷远平面上。从三组这样的点我们可以得到在无穷远平面上的三个点——足够唯一地把它确定</li>
+<li>假设摄像机的运动是没有旋转且内参保持不变的一个纯平移运动，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(F=[\mathbf{e}]_\times = [\mathbf{e}^\prime]_\times\)</span></span>，并且作为仿射重构可选的两个摄像机为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P=[I|\mathbf{0}]\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(P^\prime=[I|\mathbf{e}^\prime]\)</span></span></li>
 </ul>
 </li>
 <li><strong>景物约束</strong>：景物约束或条件也可以用来获得仿射重构，只要能够辨认在无穷远平面上的三个点，该平面就可以辨认，并且该重构可以变换到仿射重构</li>
-<li><strong>平行直线</strong>：最明显的条件是知道某些<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>直线实际是平行的。空间两条平行直线的交点给出无穷远平面上的一个点，该交点的图像是这对平行线的消影点，而且是两条像直线的交点。假设在景物中能够确定三对平行直线。每对相交于无穷远平而上的一点，如果每对有不同的方向，则三点将不同。因为三点确定一张平面，故这个信息足够确定平面<span class="arithmatex">\(\pi\)</span></li>
+<li><strong>平行直线</strong>：最明显的条件是知道某些<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>直线实际是平行的。空间两条平行直线的交点给出无穷远平面上的一个点，该交点的图像是这对平行线的消影点，而且是两条像直线的交点。假设在景物中能够确定三对平行直线。每对相交于无穷远平而上的一点，如果每对有不同的方向，则三点将不同。因为三点确定一张平面，故这个信息足够确定平面<span><span class="heti-spacing"> </span><span class="arithmatex">\(\pi\)</span></span></li>
 <li><strong>直线上的距离比率</strong>：运动景物仿射长度比率不变的知识计算消影点</li>
-<li><strong>无穷单应</strong>：如果一个仿射重构已得到并且其中的摄像机矩阵是<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>和<span class="arithmatex">\(P^\prime=[M^\prime|\mathbf{e}^\prime]\)</span>，则无穷单应是<span class="arithmatex">\(H_\infty=M^\prime\)</span>。反过来，如果已得到无穷单应<span class="arithmatex">\(H_\infty\)</span>，则仿射重构的摄像机可以取为<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>和<span class="arithmatex">\(P^\prime=[H_\infty|\mathbf{e}^\prime]\)</span></li>
-<li><strong>其中一个是仿射摄像机的情形</strong>：若<span class="arithmatex">\((P,P^\prime,\{\mathbf{X}_i\})\)</span>是从一点对应集得到的射影重构且<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>。若已知<span class="arithmatex">\(P\)</span>事实上是一个仿射摄像机，则可以通过交换<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(P^\prime\)</span>的最后两个列和每一个<span class="arithmatex">\(\mathbf{X}_i\)</span>的最后两个坐标而得到一个仿射重构</li>
+<li><strong>无穷单应</strong>：如果一个仿射重构已得到并且其中的摄像机矩阵是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P=[I|\mathbf{0}]\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(P^\prime=[M^\prime|\mathbf{e}^\prime]\)</span></span>，则无穷单应是<span><span class="heti-spacing"> </span><span class="arithmatex">\(H_\infty=M^\prime\)</span></span>。反过来，如果已得到无穷单应<span><span class="heti-spacing"> </span><span class="arithmatex">\(H_\infty\)</span></span>，则仿射重构的摄像机可以取为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P=[I|\mathbf{0}]\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(P^\prime=[H_\infty|\mathbf{e}^\prime]\)</span></span></li>
+<li><strong>其中一个是仿射摄像机的情形</strong>：若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((P,P^\prime,\{\mathbf{X}_i\})\)</span><span class="heti-spacing"> </span></span>是从一点对应集得到的射影重构且<span><span class="heti-spacing"> </span><span class="arithmatex">\(P=[I|\mathbf{0}]\)</span></span>。若已知<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span><span class="heti-spacing"> </span></span>事实上是一个仿射摄像机，则可以通过交换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P^\prime\)</span><span class="heti-spacing"> </span></span>的最后两个列和每一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}_i\)</span><span class="heti-spacing"> </span></span>的最后两个坐标而得到一个仿射重构</li>
 </ul>
 <h3 id="_6">度量重构<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li>仿射重构的关键是辨认无穷远平面，而度最重构的关键是辨认绝对二次曲线</li>
-<li>若已知绝对二次曲线在某幅图像中的像是<span class="arithmatex">\(\omega\)</span>，且已知仿射重构中的摄像机矩阵是<span class="arithmatex">\(P=[M|\mathbf{m}]\)</span>，则用形如<span class="arithmatex">\(H=\begin{bmatrix} A^{-1} &amp; \\ &amp; 1 \end{bmatrix}\)</span> 的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>变换，可以把仿射重构变换到度量重构，其中<span class="arithmatex">\(A\)</span>由方程<span class="arithmatex">\(AA^\top=(M^\top \omega M)^{-1}\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>Cholesky<span class="heti-spacing"> </span></span>分解得到</li>
+<li>若已知绝对二次曲线在某幅图像中的像是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\omega\)</span></span>，且已知仿射重构中的摄像机矩阵是<span><span class="heti-spacing"> </span><span class="arithmatex">\(P=[M|\mathbf{m}]\)</span></span>，则用形如<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H=\begin{bmatrix} A^{-1} &amp; \\ &amp; 1 \end{bmatrix}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>变换，可以把仿射重构变换到度量重构，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>由方程<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(AA^\top=(M^\top \omega M)^{-1}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Cholesky<span class="heti-spacing"> </span></span>分解得到</li>
 </ul>
 <details class="note">
 <summary><span>Cholesky<span class="heti-spacing"> </span></span>分解</summary>
-<p><span>Cholesky<span class="heti-spacing"> </span></span>分解是把一个对称正定的矩阵表示成一个下三角矩阵<span class="arithmatex">\(L\)</span>和其转置的乘积的分解。它要求矩阵的所有特征值必须大于零，故分解的下三角的对角元也是大于零的。<span>Cholesky<span class="heti-spacing"> </span></span>分解法又称平方根法，是当<span class="arithmatex">\(A\)</span>为实对称正定矩阵时，<span class="arithmatex">\(LU\)</span>三角分解法的变形。</p>
+<p><span>Cholesky<span class="heti-spacing"> </span></span>分解是把一个对称正定的矩阵表示成一个下三角矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>和其转置的乘积的分解。它要求矩阵的所有特征值必须大于零，故分解的下三角的对角元也是大于零的。<span>Cholesky<span class="heti-spacing"> </span></span>分解法又称平方根法，是当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>为实对称正定矩阵时，<span><span class="arithmatex">\(LU\)</span><span class="heti-spacing"> </span></span>三角分解法的变形。</p>
 </details>
 <ul>
-<li><strong>景物正交的约束</strong>：景物的正交直线的一对消影点<span class="arithmatex">\(\mathbf{v}_1,\mathbf{v}_2\)</span>对<span class="arithmatex">\(\omega\)</span>提供一个线性约束<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(\mathbf{v}_1^\top \omega \mathbf{v}_2 = 0\)</span>。类似地，来自一个方向的消影点<span class="arithmatex">\(\mathbf{v}\)</span>和与之垂直的平面的消影直线<span class="arithmatex">\(\mathbf{l}\)</span>对<span class="arithmatex">\(\omega\)</span>提供两个约束<span class="arithmatex">\(\mathbf{l}=\omega \mathbf{v}\)</span>，一个常用的例子是垂直方向的消影点和水平地平面的消影直线</li>
-<li><strong>已知内参数的约束</strong>：如果摄像机矩阵的标定矩阵等于<span class="arithmatex">\(K\)</span>，则绝对二次曲线的像是<span class="arithmatex">\(\omega=K^{-\top}K^{-1}\)</span>。因此包括在<span class="arithmatex">\(K\)</span>中的摄像机内参数信息可以用来约束或确定<span class="arithmatex">\(\omega\)</span>的元素。在已知<span class="arithmatex">\(K\)</span>的扭曲因子为零（<span class="arithmatex">\(s=0\)</span>）时有<span class="arithmatex">\(\omega_{12}=\omega_{21}=0\)</span>，若像素还是正方形（零扭曲参数且<span class="arithmatex">\(\alpha_x=\alpha_y\)</span>），则<span class="arithmatex">\(\omega_{11}=\omega_{22}\)</span></li>
-<li><strong>同一摄像机在多幅图像中的约束</strong>：绝对二次曲线的一个性质是它在图像上的投影只依赖于摄像机的标定矩阵，而不依赖于摄像机的位置和方向。当两个摄像机具有相同的标定矩阵时<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>通常意味着同一摄像机在不同位置拍摄的两幅图像<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>则有<span class="arithmatex">\(\omega=\omega^\prime\)</span>，即绝对二次曲线在两幅图像上的像是相同的，给定足够多的图像，可以利用这个性质从仿射重构得到度量重构</li>
+<li><strong>景物正交的约束</strong>：景物的正交直线的一对消影点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{v}_1,\mathbf{v}_2\)</span><span class="heti-spacing"> </span></span>对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega\)</span><span class="heti-spacing"> </span></span>提供一个线性约束<span><span class="heti-spacing"> </span>:<span class="arithmatex">\(\mathbf{v}_1^\top \omega \mathbf{v}_2 = 0\)</span></span>。类似地，来自一个方向的消影点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{v}\)</span><span class="heti-spacing"> </span></span>和与之垂直的平面的消影直线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{l}\)</span><span class="heti-spacing"> </span></span>对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega\)</span><span class="heti-spacing"> </span></span>提供两个约束<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{l}=\omega \mathbf{v}\)</span></span>，一个常用的例子是垂直方向的消影点和水平地平面的消影直线</li>
+<li><strong>已知内参数的约束</strong>：如果摄像机矩阵的标定矩阵等于<span><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span></span>，则绝对二次曲线的像是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\omega=K^{-\top}K^{-1}\)</span></span>。因此包括在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span><span class="heti-spacing"> </span></span>中的摄像机内参数信息可以用来约束或确定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega\)</span><span class="heti-spacing"> </span></span>的元素。在已知<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(K\)</span><span class="heti-spacing"> </span></span>的扭曲因子为零（<span class="arithmatex">\(s=0\)</span>）时有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\omega_{12}=\omega_{21}=0\)</span></span>，若像素还是正方形（零扭曲参数且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha_x=\alpha_y\)</span></span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(\omega_{11}=\omega_{22}\)</span></span></li>
+<li><strong>同一摄像机在多幅图像中的约束</strong>：绝对二次曲线的一个性质是它在图像上的投影只依赖于摄像机的标定矩阵，而不依赖于摄像机的位置和方向。当两个摄像机具有相同的标定矩阵时<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>通常意味着同一摄像机在不同位置拍摄的两幅图像<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>则有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\omega=\omega^\prime\)</span></span>，即绝对二次曲线在两幅图像上的像是相同的，给定足够多的图像，可以利用这个性质从仿射重构得到度量重构</li>
 </ul>
-<h3 id="omega">利用<span class="arithmatex">\(\omega\)</span>直接度量重构<a class="headerlink" href="#omega" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="omega">利用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega\)</span><span class="heti-spacing"> </span></span>直接度量重构<a class="headerlink" href="#omega" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li>最明显的方法是利用<span><span class="heti-spacing"> </span>IAC</span>（绝对二次曲线）来计算每个摄像机的标定，然后再进行己知标定下的重构</li>
 <li>另一个更概念性的方法是运用<span class="heti-skip"><span class="heti-spacing"> </span>IAC<span class="heti-spacing"> </span></span>的信息直接确定无穷远平面和绝对二次曲线</li>
 </ul>
 <h2 id="_7">直接重构——利用地面知识<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>在射影重构下，控制点<span class="arithmatex">\(\{\mathbf{X}_i\}\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>位置可以有它们图像对应点<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>来计算。因为该射影重构通过一个单应联系于真正的重构：<span class="arithmatex">\(\mathbf{X}_{Ei}=H\mathbf{X}_i, i=1,...,n\)</span></li>
-<li>每组点对应提供关于<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>元素的三个独立线性方程。因为<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>个自由度，故若提供<span class="arithmatex">\(n \ge 5\)</span>组（且没有四个控制点是共面的）点对应，便可以得到一个线性解</li>
-<li>另一种方法可以不计算<span class="arithmatex">\(\mathbf{X}_i\)</span>而通过把已知的地面控制点直接与图像的度量相联系的途径来计算<span><span class="heti-spacing"> </span>H</span>。因此类似于计算摄像机矩阵的<span class="arithmatex">\(DLT\)</span>算法：<span class="arithmatex">\(\mathbf{x}_i = PH^{-1} \mathbf{X}_{Ei}\)</span></li>
+<li>在射影重构下，控制点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{\mathbf{X}_i\}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>位置可以有它们图像对应点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span><span class="heti-spacing"> </span></span>来计算。因为该射影重构通过一个单应联系于真正的重构：<span class="arithmatex">\(\mathbf{X}_{Ei}=H\mathbf{X}_i, i=1,...,n\)</span></li>
+<li>每组点对应提供关于<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>元素的三个独立线性方程。因为<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>个自由度，故若提供<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n \ge 5\)</span><span class="heti-spacing"> </span></span>组（且没有四个控制点是共面的）点对应，便可以得到一个线性解</li>
+<li>另一种方法可以不计算<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{X}_i\)</span><span class="heti-spacing"> </span></span>而通过把已知的地面控制点直接与图像的度量相联系的途径来计算<span><span class="heti-spacing"> </span>H</span>。因此类似于计算摄像机矩阵的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(DLT\)</span><span class="heti-spacing"> </span></span>算法：<span class="arithmatex">\(\mathbf{x}_i = PH^{-1} \mathbf{X}_{Ei}\)</span></li>
 </ul>
 <hr/>
 <div class="md-source-file">

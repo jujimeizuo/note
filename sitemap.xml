@@ -221,11 +221,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/cv/opencv/</loc>
-         <lastmod>2024-01-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/</loc>
          <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
@@ -316,16 +311,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/llm/dt/</loc>
-         <lastmod>2024-01-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://note.jujimeizuo.cn/llm/prompt/</loc>
-         <lastmod>2024-01-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/</loc>
          <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
@@ -367,6 +352,16 @@
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/nlp/word2vec/</loc>
+         <lastmod>2024-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/llm/others/dt/</loc>
+         <lastmod>2024-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/llm/others/prompt/</loc>
          <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -6,11 +6,12 @@
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
 <link href="https://note.jujimeizuo.cn/mb/optimization-theory/lec2/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-8.1.4" name="generator"/>
 <title>直线搜索 - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/toc_extra.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css" rel="stylesheet"/>
@@ -602,21 +603,16 @@ var _hmt = _hmt || [];
           CV &amp; Robot
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/opencv/">
-        OpenCV
-      </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../cv/mvg/">多视图几何</a>
-<label for="__nav_3_3">
+<label for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="多视图几何" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
+<label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
           多视图几何
         </label>
@@ -670,29 +666,29 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../cv/slam/">SLAM</a>
-<label for="__nav_3_4">
+<label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="SLAM" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           SLAM
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" id="__nav_3_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
-<label for="__nav_3_4_2">
+<label for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="视觉 SLAM 十四讲" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_4_2">
+<label class="md-nav__title" for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
           视觉 SLAM 十四讲
         </label>
@@ -714,15 +710,15 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../cv/pcr/">点云配准</a>
-<label for="__nav_3_5">
+<label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
 <nav aria-label="点云配准" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_5">
+<label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
           点云配准
         </label>
@@ -863,15 +859,30 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          杂项
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="杂项" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          杂项
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/prompt/">
+<a class="md-nav__link" href="../../../llm/others/prompt/">
         Prompt
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/dt/">
+<a class="md-nav__link" href="../../../llm/others/dt/">
         分布式训练
       </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1156,54 +1167,54 @@ var _hmt = _hmt || [];
 <h1 id="_1">直线搜索<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>本章主要讨论的问题是<span class="arithmatex">\(\min{(\varphi (t))}，\varphi: R^1 \to R^1\)</span>，这种迭代方法称为直线<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>一维搜索。并且在多维问题也能用到。</p>
+<p>本章主要讨论的问题是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\min{(\varphi (t))}，\varphi: R^1 \to R^1\)</span></span>，这种迭代方法称为直线<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>一维搜索。并且在多维问题也能用到。</p>
 </div>
 <h2 id="_2">搜索区间的确定<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li>
-<p>假设一元函数<span class="arithmatex">\(\varphi (t)\)</span>是单谷函数</p>
+<p>假设一元函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi (t)\)</span><span class="heti-spacing"> </span></span>是单谷函数</p>
 <ul>
-<li>设<span class="arithmatex">\(\varphi \subset R^1 \to R^1\)</span>，<span class="arithmatex">\(t^*\)</span>是<span class="arithmatex">\(\varphi (t)\)</span>在<span class="arithmatex">\(L\)</span>上的全局最小点。如果对于<span class="arithmatex">\(L\)</span>上任取的两点<span class="arithmatex">\(t_1, t_2\)</span>且<span class="arithmatex">\(t_1 &lt; t_2\)</span>都有</li>
+<li>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi \subset R^1 \to R^1\)</span></span>，<span><span class="arithmatex">\(t^*\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi (t)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>上的全局最小点。如果对于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>上任取的两点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_1, t_2\)</span><span class="heti-spacing"> </span></span>且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_1 &lt; t_2\)</span><span class="heti-spacing"> </span></span>都有</li>
 </ul>
 <div class="arithmatex">\[
 当t_2 \le t^*时，\varphi(t_1) &gt; \varphi(t_2) \\
 当t_1 \ge t^*时，\varphi(t_1) &lt; \varphi(t_2)
 \]</div>
-<p>则称<span class="arithmatex">\(\varphi(t)\)</span>是区间<span class="arithmatex">\(L\)</span>上的单谷函数。</p>
+<p>则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>是区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>上的单谷函数。</p>
 <ul>
-<li>设<span class="arithmatex">\(\varphi \subset R^1 \to R^1\)</span>，<span class="arithmatex">\(t^*\)</span>是<span class="arithmatex">\(\varphi (t)\)</span>在<span class="arithmatex">\(L\)</span>上的全局最小点。如果找到<span class="arithmatex">\(t_1 \in L\)</span>和<span class="arithmatex">\(t_2 \in L\)</span>使得 <span class="arithmatex">\(t_1 &lt; t^* &lt; t_2\)</span>，则<span class="arithmatex">\([t_1, t_2]\)</span>为<span class="arithmatex">\(\varphi(t)\)</span>极小点的一个搜索区间，记为<span class="arithmatex">\(\{t_1, t_2\}\)</span>。</li>
-<li>设<span class="arithmatex">\(\{a,b\}\)</span>是单谷函数<span class="arithmatex">\(\varphi(t)\)</span>极小点的一个搜索区间。在<span class="arithmatex">\((a,b)\)</span>上任取两点<span class="arithmatex">\(t_1\)</span>和<span class="arithmatex">\(t_2\)</span>且<span class="arithmatex">\(t_1&lt;t_2\)</span>。若<span class="arithmatex">\(\varphi(t_1) &lt; \varphi(t_2)\)</span>，则<span class="arithmatex">\(\{a,t_2\}\)</span>是<span class="arithmatex">\(\varphi(t)\)</span>极小点的一个搜索空间；若<span class="arithmatex">\(\varphi(t_1) &gt; \varphi(t_2)\)</span>，则<span class="arithmatex">\(\{t_1, b\}\)</span>是<span class="arithmatex">\(\varphi(t)\)</span>极小点的一个搜索空间。</li>
+<li>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi \subset R^1 \to R^1\)</span></span>，<span><span class="arithmatex">\(t^*\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi (t)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>上的全局最小点。如果找到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_1 \in L\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_2 \in L\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(t_1 &lt; t^* &lt; t_2\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([t_1, t_2]\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>极小点的一个搜索区间，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\{t_1, t_2\}\)</span></span>。</li>
+<li>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,b\}\)</span><span class="heti-spacing"> </span></span>是单谷函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>极小点的一个搜索区间。在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((a,b)\)</span><span class="heti-spacing"> </span></span>上任取两点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_1\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_2\)</span><span class="heti-spacing"> </span></span>且<span><span class="heti-spacing"> </span><span class="arithmatex">\(t_1&lt;t_2\)</span></span>。若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_1) &lt; \varphi(t_2)\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,t_2\}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>极小点的一个搜索空间；若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_1) &gt; \varphi(t_2)\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{t_1, b\}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>极小点的一个搜索空间。</li>
 </ul>
 </li>
 <li>
 <p>搜索区间的确定</p>
 <ol>
-<li>选定初始点<span class="arithmatex">\(t_0\)</span>和步长<span class="arithmatex">\(h\)</span></li>
-<li>计算并比较<span class="arithmatex">\(\varphi(t_0)\)</span>和<span class="arithmatex">\(\varphi(t_0+h)\)</span>，有<span><span class="heti-spacing"> </span>3</span>，<span>4<span class="heti-spacing"> </span></span>两种情况</li>
-<li>当<span class="arithmatex">\(\varphi(t_0)&lt;\varphi(t_0+h)\)</span>时，比较<span class="arithmatex">\(\varphi(t_0)\)</span>和<span class="arithmatex">\(\varphi(t_0-h)\)</span>，有<span><span class="heti-spacing"> </span>5</span>，<span>6<span class="heti-spacing"> </span></span>两种情况</li>
-<li>当<span class="arithmatex">\(\varphi(t_0)\ge\varphi(t_0+h)\)</span>时，比较<span class="arithmatex">\(\varphi(t_0+(2^k-1)^h), k=1,2,...\)</span>，直到对于某个<span class="arithmatex">\(m(m \ge 1)\)</span>使得</li>
+<li>选定初始点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_0\)</span><span class="heti-spacing"> </span></span>和步长<span><span class="heti-spacing"> </span><span class="arithmatex">\(h\)</span></span></li>
+<li>计算并比较<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0)\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0+h)\)</span></span>，有<span><span class="heti-spacing"> </span>3</span>，<span>4<span class="heti-spacing"> </span></span>两种情况</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0)&lt;\varphi(t_0+h)\)</span><span class="heti-spacing"> </span></span>时，比较<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0)\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0-h)\)</span></span>，有<span><span class="heti-spacing"> </span>5</span>，<span>6<span class="heti-spacing"> </span></span>两种情况</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0)\ge\varphi(t_0+h)\)</span><span class="heti-spacing"> </span></span>时，比较<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0+(2^k-1)^h), k=1,2,...\)</span></span>，直到对于某个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m(m \ge 1)\)</span><span class="heti-spacing"> </span></span>使得</li>
 </ol>
 <div class="arithmatex">\[
 \varphi(t_0+(2^{m-1}-1)^h) \ge \varphi(t_0+(2^m-1)^h) &lt; \varphi(t_0+(2^{m+1}-1)^h) \\
 设 \ \ u=\varphi(t_0+(2^{m-1}-1)^h), v=\varphi(t_0+(2^{m}-1)^h), w=\varphi(t_0+(2^{m+1}-1)^h)
 \]</div>
-<p>此时得到搜索区间<span class="arithmatex">\(\{u,v,w\}\)</span>，因为区间<span class="arithmatex">\([v,w]\)</span>是<span class="arithmatex">\([u,v]\)</span>的两倍长，所以只要比较<span class="arithmatex">\(v\)</span>和区间<span class="arithmatex">\([v,w]\)</span>中点<span class="arithmatex">\(r=\frac{v+w}{2}\)</span>的函数值，立刻可以将<span class="arithmatex">\([u,w]\)</span>缩短<span class="arithmatex">\(\frac{1}{3}\)</span></p>
+<p>此时得到搜索区间<span><span class="heti-spacing"> </span><span class="arithmatex">\(\{u,v,w\}\)</span></span>，因为区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([v,w]\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([u,v]\)</span><span class="heti-spacing"> </span></span>的两倍长，所以只要比较<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(v\)</span><span class="heti-spacing"> </span></span>和区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([v,w]\)</span><span class="heti-spacing"> </span></span>中点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r=\frac{v+w}{2}\)</span><span class="heti-spacing"> </span></span>的函数值，立刻可以将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([u,w]\)</span><span class="heti-spacing"> </span></span>缩短<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{1}{3}\)</span></span></p>
 <ul>
-<li>当<span class="arithmatex">\(\varphi(v) &lt; \varphi(r)\)</span>时，取<span class="arithmatex">\(\{u,v,r\}\)</span>为搜索区间</li>
-<li>当<span class="arithmatex">\(\varphi(v) \ge \varphi(r)\)</span>时，取<span class="arithmatex">\(\{v,r,w\}\)</span>为搜索区间</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(v) &lt; \varphi(r)\)</span><span class="heti-spacing"> </span></span>时，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{u,v,r\}\)</span><span class="heti-spacing"> </span></span>为搜索区间</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(v) \ge \varphi(r)\)</span><span class="heti-spacing"> </span></span>时，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{v,r,w\}\)</span><span class="heti-spacing"> </span></span>为搜索区间</li>
 </ul>
 <ol start="5">
-<li>当<span class="arithmatex">\(\varphi(t_0-h) &gt; \varphi(t_0)\)</span>时，取<span class="arithmatex">\(\{t_0-h,t_0,t_0+h\}\)</span>为搜索区间</li>
-<li>当<span class="arithmatex">\(\varphi(t_0-h)\le\varphi(t_0)\)</span>时，比较<span class="arithmatex">\(\varphi(t_0-(2^k-1)^h), k=1,2,...\)</span>，直到对于某个<span class="arithmatex">\(m(m \ge 1)\)</span>使得</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0-h) &gt; \varphi(t_0)\)</span><span class="heti-spacing"> </span></span>时，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{t_0-h,t_0,t_0+h\}\)</span><span class="heti-spacing"> </span></span>为搜索区间</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0-h)\le\varphi(t_0)\)</span><span class="heti-spacing"> </span></span>时，比较<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t_0-(2^k-1)^h), k=1,2,...\)</span></span>，直到对于某个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m(m \ge 1)\)</span><span class="heti-spacing"> </span></span>使得</li>
 </ol>
 <div class="arithmatex">\[
 \varphi(t_0-(2^{m-1}-1)^h) \ge \varphi(t_0-(2^m-1)^h) &lt; \varphi(t_0-(2^{m+1}-1)^h) \\
 设 \ \ u=\varphi(t_0-(2^{m-1}-1)^h), v=\varphi(t_0-(2^{m}-1)^h), w=\varphi(t_0-(2^{m+1}-1)^h)
 \]</div>
-<p>此时得到搜索区间<span class="arithmatex">\(\{u,v,w\}\)</span>，因为区间<span class="arithmatex">\([v,w]\)</span>是<span class="arithmatex">\([u,v]\)</span>的两倍长，所以只要比较<span class="arithmatex">\(v\)</span>和区间<span class="arithmatex">\([v,w]\)</span>中点<span class="arithmatex">\(r=\frac{v+w}{2}\)</span>的函数值，立刻可以将<span class="arithmatex">\([u,w]\)</span>缩短<span class="arithmatex">\(\frac{1}{3}\)</span></p>
+<p>此时得到搜索区间<span><span class="heti-spacing"> </span><span class="arithmatex">\(\{u,v,w\}\)</span></span>，因为区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([v,w]\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([u,v]\)</span><span class="heti-spacing"> </span></span>的两倍长，所以只要比较<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(v\)</span><span class="heti-spacing"> </span></span>和区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([v,w]\)</span><span class="heti-spacing"> </span></span>中点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r=\frac{v+w}{2}\)</span><span class="heti-spacing"> </span></span>的函数值，立刻可以将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([u,w]\)</span><span class="heti-spacing"> </span></span>缩短<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{1}{3}\)</span></span></p>
 <ul>
-<li>当<span class="arithmatex">\(\varphi(v) \ge \varphi(r)\)</span>时，取<span class="arithmatex">\(\{w,r,v\}\)</span>为搜索区间</li>
-<li>当<span class="arithmatex">\(\varphi(v) &lt; \varphi(r)\)</span>时，取<span class="arithmatex">\(\{r,v,u\}\)</span>为搜索区间</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(v) \ge \varphi(r)\)</span><span class="heti-spacing"> </span></span>时，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{w,r,v\}\)</span><span class="heti-spacing"> </span></span>为搜索区间</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(v) &lt; \varphi(r)\)</span><span class="heti-spacing"> </span></span>时，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{r,v,u\}\)</span><span class="heti-spacing"> </span></span>为搜索区间</li>
 </ul>
 </li>
 <li>
@@ -1212,29 +1223,29 @@ var _hmt = _hmt || [];
 </ul>
 <h2 id="_3">对分法<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>适用于<span class="arithmatex">\(\varphi: R^1 \to R^1\)</span>在已获得的搜索区间<span class="arithmatex">\(\{a,b\}\)</span>内具有连续的一阶导数，并且已导出它的表达式</li>
-<li>算法流程（已知<span class="arithmatex">\(\varphi(t)\)</span>和<span class="arithmatex">\(\varphi^\prime(t)\)</span>的表达式，终止限<span class="arithmatex">\(\varepsilon\)</span>）<ol>
-<li>确定初始搜索区间<span class="arithmatex">\(\{a,b\}\)</span>，要求<span class="arithmatex">\(\varphi^\prime(a)&lt;0,\varphi^\prime(b)&gt;0\)</span></li>
-<li>计算<span class="arithmatex">\(\{a,b\}\)</span>的中点<span class="arithmatex">\(c=0.5(a+b)\)</span></li>
-<li>若<span class="arithmatex">\(\varphi^\prime(c)&lt;0\)</span>，则<span class="arithmatex">\(a=c\)</span>，转<span><span class="heti-spacing"> </span>4</span>；若<span class="arithmatex">\(\varphi^\prime(c)=0\)</span>，则<span class="arithmatex">\(t^*=c\)</span>，转<span><span class="heti-spacing"> </span>5</span>；若<span class="arithmatex">\(\varphi^\prime(c)&gt;0\)</span>，则<span class="arithmatex">\(b=c\)</span>，转<span><span class="heti-spacing"> </span>4</span></li>
-<li>若<span class="arithmatex">\(|a-b|&lt;\varepsilon\)</span>，则<span class="arithmatex">\(t^*=0.5(a+b)\)</span>，转<span><span class="heti-spacing"> </span>5</span>，否则转<span><span class="heti-spacing"> </span>2</span></li>
-<li>打印<span class="arithmatex">\(t^*\)</span>，停机</li>
+<li>适用于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi: R^1 \to R^1\)</span><span class="heti-spacing"> </span></span>在已获得的搜索区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,b\}\)</span><span class="heti-spacing"> </span></span>内具有连续的一阶导数，并且已导出它的表达式</li>
+<li>算法流程（已知<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi^\prime(t)\)</span><span class="heti-spacing"> </span></span>的表达式，终止限<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon\)</span></span>）<ol>
+<li>确定初始搜索区间<span><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,b\}\)</span></span>，要求<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi^\prime(a)&lt;0,\varphi^\prime(b)&gt;0\)</span></span></li>
+<li>计算<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,b\}\)</span><span class="heti-spacing"> </span></span>的中点<span><span class="heti-spacing"> </span><span class="arithmatex">\(c=0.5(a+b)\)</span></span></li>
+<li>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi^\prime(c)&lt;0\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(a=c\)</span></span>，转<span><span class="heti-spacing"> </span>4</span>；若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi^\prime(c)=0\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(t^*=c\)</span></span>，转<span><span class="heti-spacing"> </span>5</span>；若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi^\prime(c)&gt;0\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(b=c\)</span></span>，转<span><span class="heti-spacing"> </span>4</span></li>
+<li>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(|a-b|&lt;\varepsilon\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(t^*=0.5(a+b)\)</span></span>，转<span><span class="heti-spacing"> </span>5</span>，否则转<span><span class="heti-spacing"> </span>2</span></li>
+<li>打印<span><span class="heti-spacing"> </span><span class="arithmatex">\(t^*\)</span></span>，停机</li>
 </ol>
 </li>
 </ul>
 <h2 id="newton"><span>Newton<span class="heti-spacing"> </span></span>切线法<a class="headerlink" href="#newton" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>适用于<span class="arithmatex">\(\varphi: R^1 \to R^1\)</span>在已获得的搜索区间<span class="arithmatex">\(\{a,b\}\)</span>内具有连续的二阶导数，并且已导出一阶和二阶导数的表达式</li>
+<li>适用于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi: R^1 \to R^1\)</span><span class="heti-spacing"> </span></span>在已获得的搜索区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,b\}\)</span><span class="heti-spacing"> </span></span>内具有连续的二阶导数，并且已导出一阶和二阶导数的表达式</li>
 <li>
 <p>算法流程</p>
 <ol>
-<li>设在区间<span class="arithmatex">\([a,b]\)</span>中经过<span class="arithmatex">\(k\)</span>次迭代已求到方程<span class="arithmatex">\(\varphi^\prime(t)=0\)</span>的一个近根似<span class="arithmatex">\(t_k\)</span>。过<span class="arithmatex">\((t_k,\varphi^\prime(t_k))\)</span>作曲线<span class="arithmatex">\(y=\varphi^\prime(t)\)</span>的切线，其方程是</li>
+<li>设在区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>中经过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>次迭代已求到方程<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi^\prime(t)=0\)</span><span class="heti-spacing"> </span></span>的一个近根似<span><span class="heti-spacing"> </span><span class="arithmatex">\(t_k\)</span></span>。过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((t_k,\varphi^\prime(t_k))\)</span><span class="heti-spacing"> </span></span>作曲线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y=\varphi^\prime(t)\)</span><span class="heti-spacing"> </span></span>的切线，其方程是</li>
 </ol>
 <div class="arithmatex">\[
 y-\varphi^\prime(t_k)=\varphi^{\prime\prime}(t_k)(t-t_k)
 \]</div>
 <ol start="2">
-<li>然后用这条切线与横轴交点的横坐标<span class="arithmatex">\(t_{k+1}\)</span>作为根的新的近似，令<span class="arithmatex">\(y=0\)</span>解出</li>
+<li>然后用这条切线与横轴交点的横坐标<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_{k+1}\)</span><span class="heti-spacing"> </span></span>作为根的新的近似，令<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y=0\)</span><span class="heti-spacing"> </span></span>解出</li>
 </ol>
 <div class="arithmatex">\[
 t_{k+1}=t_k-\varphi^\prime(t_k)/\varphi^{\prime\prime}(t_k)
@@ -1243,13 +1254,13 @@ t_{k+1}=t_k-\varphi^\prime(t_k)/\varphi^{\prime\prime}(t_k)
 </ul>
 <h2 id="_4">黄金分割法<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>适用于<span class="arithmatex">\([a,b]\)</span>区间上的任何单谷函数<span class="arithmatex">\(\varphi(t)\)</span>求极小点问题</li>
-<li>算法流程（已知<span class="arithmatex">\(\varphi(t)\)</span>，终止限<span class="arithmatex">\(\varepsilon\)</span>）<ol>
-<li>确定<span class="arithmatex">\(\varphi(t)\)</span>的初始搜索区间<span class="arithmatex">\(\{a,b\}\)</span></li>
-<li>计算<span class="arithmatex">\(t_2=a+\beta(b-a), \varphi_2=\varphi(t_2)\)</span></li>
-<li>计算<span class="arithmatex">\(t_1=a+b-t_2, \varphi_1=\varphi(t_1)\)</span></li>
-<li>若<span class="arithmatex">\(|t_1-t_2|&lt;\varepsilon\)</span>，则打印<span class="arithmatex">\(t^\prime=\frac{t_1+t_2}{2}\)</span>，停机；都则，若<span class="arithmatex">\(|t_1-t_2| \ge \varepsilon\)</span>，转<span><span class="heti-spacing"> </span>5</span></li>
-<li>判别<span class="arithmatex">\(\varphi_1 \le \varphi_2\)</span>是否满足：若满足，则置<span class="arithmatex">\(b=t_2,t_2=t_1,\varphi_2=\varphi_1\)</span>，然后转<span><span class="heti-spacing"> </span>3</span>；否则，若<span class="arithmatex">\(\varphi_1&gt;\varphi_2\)</span>，则置<span class="arithmatex">\(a=t_1,t_1=t_2,\varphi_1=\varphi_2,t_2=a+\beta(b-a),\varphi_2=\varphi(t_2)\)</span>，然后转<span><span class="heti-spacing"> </span>4</span></li>
+<li>适用于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([a,b]\)</span><span class="heti-spacing"> </span></span>区间上的任何单谷函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>求极小点问题</li>
+<li>算法流程（已知<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span></span>，终止限<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon\)</span></span>）<ol>
+<li>确定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi(t)\)</span><span class="heti-spacing"> </span></span>的初始搜索区间<span><span class="heti-spacing"> </span><span class="arithmatex">\(\{a,b\}\)</span></span></li>
+<li>计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(t_2=a+\beta(b-a), \varphi_2=\varphi(t_2)\)</span></span></li>
+<li>计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(t_1=a+b-t_2, \varphi_1=\varphi(t_1)\)</span></span></li>
+<li>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(|t_1-t_2|&lt;\varepsilon\)</span></span>，则打印<span><span class="heti-spacing"> </span><span class="arithmatex">\(t^\prime=\frac{t_1+t_2}{2}\)</span></span>，停机；都则，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(|t_1-t_2| \ge \varepsilon\)</span></span>，转<span><span class="heti-spacing"> </span>5</span></li>
+<li>判别<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi_1 \le \varphi_2\)</span><span class="heti-spacing"> </span></span>是否满足：若满足，则置<span><span class="heti-spacing"> </span><span class="arithmatex">\(b=t_2,t_2=t_1,\varphi_2=\varphi_1\)</span></span>，然后转<span><span class="heti-spacing"> </span>3</span>；否则，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi_1&gt;\varphi_2\)</span></span>，则置<span><span class="heti-spacing"> </span><span class="arithmatex">\(a=t_1,t_1=t_2,\varphi_1=\varphi_2,t_2=a+\beta(b-a),\varphi_2=\varphi(t_2)\)</span></span>，然后转<span><span class="heti-spacing"> </span>4</span></li>
 </ol>
 </li>
 </ul>

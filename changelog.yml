@@ -22,12 +22,12 @@
 - "2023":
   - "2023-12-18":
     - newpage:
-        text: LLM > 分布式训练
-        href: /llm/dt/
+        text: LLM > 杂项 > 分布式训练
+        href: /llm/others/dt/
   - "2023-12-14":
     - newpage:
-        text: LLM > Prompt
-        href: /llm/prompt/
+        text: LLM > 杂项 > Prompt
+        href: /llm/others/prompt/
   - "2023-12-13":
     - newpage:
         text: LLM > Transformer > BERT
