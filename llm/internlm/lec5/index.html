@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cv/mvg/3dr-camera-structure/" rel="canonical"/>
+<link href="https://note.jujimeizuo.cn/llm/internlm/lec5/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.1.4" name="generator"/>
-<title>摄像机和结构的 3D 重构 - 狙击美佐的笔记本</title>
+<title>第五节 - 狙击美佐的笔记本</title>
 <link href="../../../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#3d">
+<a class="md-skip" href="#lmdeploy">
             跳转至
           </a>
 </div>
@@ -76,7 +76,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              摄像机和结构的 3D 重构
+              第五节
             
           </span>
 </div>
@@ -155,12 +155,12 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../../../cv/">
         CV &amp; Robot
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../llm/">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         LLM
       </a>
 </li>
@@ -588,10 +588,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">CV &amp; Robot</a>
+<a href="../../../cv/">CV &amp; Robot</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -603,14 +603,14 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../opencv/">
+<a class="md-nav__link" href="../../../cv/opencv/">
         OpenCV
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">多视图几何</a>
+<a href="../../../cv/mvg/">多视图几何</a>
 <label for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -622,106 +622,49 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pjt2d/">
+<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
         2D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pjt3d/">
+<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
         3D 射影几何和变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../est2d/">
+<a class="md-nav__link" href="../../../cv/mvg/est2d/">
         估计——2D 射影变换
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../eval/">
+<a class="md-nav__link" href="../../../cv/mvg/eval/">
         算法评价和误差分析
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../camera-model/">
+<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
         摄像机模型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../calc-p/">
+<a class="md-nav__link" href="../../../cv/mvg/calc-p/">
         计算摄像机矩阵 P
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../one-vg/">
+<a class="md-nav__link" href="../../../cv/mvg/one-vg/">
         单视图几何
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ag-fm/">
+<a class="md-nav__link" href="../../../cv/mvg/ag-fm/">
         对极几何和基本矩阵
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          摄像机和结构的 3D 重构
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../cv/mvg/3dr-camera-structure/">
         摄像机和结构的 3D 重构
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-        目录
-      </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    重构方法概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    重构的多义性
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    射影重构定理
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    分层重构
-  </a>
-<nav aria-label="分层重构" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    仿射重构
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    度量重构
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#omega">
-    利用\(\omega\)直接度量重构
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    直接重构——利用地面知识
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -729,7 +672,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../slam/">SLAM</a>
+<a href="../../../cv/slam/">SLAM</a>
 <label for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -743,7 +686,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../slam/vslam14/">视觉 SLAM 十四讲</a>
+<a href="../../../cv/slam/vslam14/">视觉 SLAM 十四讲</a>
 <label for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -755,12 +698,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../slam/vslam14/lec1/">
+<a class="md-nav__link" href="../../../cv/slam/vslam14/lec1/">
         初识 SLAM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../slam/vslam14/lec2/">
+<a class="md-nav__link" href="../../../cv/slam/vslam14/lec2/">
         三维空间刚体运动
       </a>
 </li>
@@ -773,7 +716,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../pcr/">点云配准</a>
+<a href="../../../cv/pcr/">点云配准</a>
 <label for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -785,12 +728,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pcr/prepare/">
+<a class="md-nav__link" href="../../../cv/pcr/prepare/">
         前置知识
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pcr/icp/">
+<a class="md-nav__link" href="../../../cv/pcr/icp/">
         ICP
       </a>
 </li>
@@ -798,17 +741,17 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3d-visualization/">
+<a class="md-nav__link" href="../../../cv/3d-visualization/">
         三维数据场可视化
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/">LLM</a>
+<a href="../../">LLM</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -822,7 +765,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/nlp/">NLP</a>
+<a href="../../nlp/">NLP</a>
 <label for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -834,12 +777,12 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/word2vec/">
+<a class="md-nav__link" href="../../nlp/word2vec/">
         Word2Vec
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/rnns/">
+<a class="md-nav__link" href="../../nlp/rnns/">
         RNN
       </a>
 </li>
@@ -849,7 +792,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/transformer/">Transformer</a>
+<a href="../../transformer/">Transformer</a>
 <label for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -861,27 +804,27 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/attention/">
+<a class="md-nav__link" href="../../transformer/attention/">
         Attention
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/transformer/">
+<a class="md-nav__link" href="../../transformer/transformer/">
         Transformer
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/bert/">
+<a class="md-nav__link" href="../../transformer/bert/">
         BERT
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../llm/internlm/">书生·浦语大模型实战营</a>
+<a href="../">书生·浦语大模型实战营</a>
 <label for="__nav_4_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -893,40 +836,201 @@ var _hmt = _hmt || [];
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec1/">
+<a class="md-nav__link" href="../lec1/">
         第一节
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec2/">
+<a class="md-nav__link" href="../lec2/">
         第二节
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec3/">
+<a class="md-nav__link" href="../lec3/">
         第三节
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec4/">
+<a class="md-nav__link" href="../lec4/">
         第四节
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec5/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          第五节
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         第五节
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    大模型部署背景
+  </a>
+<nav aria-label="大模型部署背景" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    模型部署
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    大模型特点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    大模型部署挑战
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    大模型部署方案
+  </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/prompt/">
+<a class="md-nav__link" href="#lmdeploy_1">
+    LMDeploy 简介
+  </a>
+<nav aria-label="LMDeploy 简介" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    核心功能
+  </a>
+<nav aria-label="核心功能" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    量化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind">
+    推理引擎 TurboMind
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api-server">
+    推理服务 api server
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    服务部署
+  </a>
+<nav aria-label="服务部署" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    模型转换
+  </a>
+<nav aria-label="模型转换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    在线转换
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    离线转换
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind_1">
+    TurboMind 推理+命令行本地对话
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind-api">
+    TurboMind 推理+API服务
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#web-demo">
+    Web Demo 对话
+  </a>
+<nav aria-label="Web Demo 对话" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind_2">
+    TurboMind 服务作为后端
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind_3">
+    TurboMind 推理作为后端
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind-python">
+    TurboMind 推理+Python 代码集成
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    模型量化
+  </a>
+<nav aria-label="模型量化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kv-cache">
+    KV Cache 量化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#w4a16">
+    W4A16 量化
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    作业
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prompt/">
         Prompt
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/dt/">
+<a class="md-nav__link" href="../../dt/">
         分布式训练
       </a>
 </li>
@@ -1147,46 +1251,150 @@ var _hmt = _hmt || [];
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
-    重构方法概述
+    大模型部署背景
   </a>
-</li>
+<nav aria-label="大模型部署背景" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-    重构的多义性
+    模型部署
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-    射影重构定理
+    大模型特点
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
-    分层重构
+    大模型部署挑战
   </a>
-<nav aria-label="分层重构" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-    仿射重构
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    度量重构
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#omega">
-    利用\(\omega\)直接度量重构
+    大模型部署方案
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#lmdeploy_1">
+    LMDeploy 简介
+  </a>
+<nav aria-label="LMDeploy 简介" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    核心功能
+  </a>
+<nav aria-label="核心功能" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
-    直接重构——利用地面知识
+    量化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind">
+    推理引擎 TurboMind
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api-server">
+    推理服务 api server
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    服务部署
+  </a>
+<nav aria-label="服务部署" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    模型转换
+  </a>
+<nav aria-label="模型转换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    在线转换
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    离线转换
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind_1">
+    TurboMind 推理+命令行本地对话
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind-api">
+    TurboMind 推理+API服务
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#web-demo">
+    Web Demo 对话
+  </a>
+<nav aria-label="Web Demo 对话" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind_2">
+    TurboMind 服务作为后端
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind_3">
+    TurboMind 推理作为后端
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turbomind-python">
+    TurboMind 推理+Python 代码集成
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    模型量化
+  </a>
+<nav aria-label="模型量化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kv-cache">
+    KV Cache 量化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#w4a16">
+    W4A16 量化
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    作业
   </a>
 </li>
 </ul>
@@ -1198,92 +1406,294 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/mvg/3dr-camera-structure.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/llm/internlm/lec5.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1 id="3d">摄像机和结构的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>重构<a class="headerlink" href="#3d" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="lmdeploy"><span>LMDeploy<span class="heti-spacing"> </span></span>大模型量化部署实践<a class="headerlink" href="#lmdeploy" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2125<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1172<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>66<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>分钟</p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>重构的任务是求摄像机矩阵<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(P^\prime\)</span>，以及<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>中的点<span class="arithmatex">\(\mathbf{X}_i\)</span>，使得对所有<span><span class="heti-spacing"> </span>i</span>，有</p>
-<div class="arithmatex">\[
-\mathbf{x}_i=P \mathbf{X}_i \ \ \ \ \ \ \mathbf{x}_i^\prime=P^\prime \mathbf{X}_i
-\]</div>
-</div>
-<h2 id="_1">重构方法概述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_1">大模型部署背景<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_2">模型部署<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>由两视图重构的一种方法：<ol>
-<li>由对应点计算基本矩阵</li>
-<li>由基本矩阵计算摄像机矩阵</li>
-<li>针对每组对应点<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>，计算空间中映射到这两个图像点到点</li>
+<li>定义<ul>
+<li>将训练好的模型在特定软硬件环境中启动的过程，使模型能够接受输入并返回预测结果</li>
+<li>为了满足性能和效率的需求，常常需要对模型进行优化，例如模型压缩和硬件加速</li>
+</ul>
+</li>
+<li>产品形态<ul>
+<li>云端、边缘计算端、移动端</li>
+</ul>
+</li>
+<li>计算设备<ul>
+<li>CPU、GPU、TPU、<span>NPU<span class="heti-spacing"> </span></span>等</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">大模型特点<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>内存开销巨大<ul>
+<li>庞大参数量，<span>7B<span class="heti-spacing"> </span></span>模型仅权重就需要<span class="heti-skip"><span class="heti-spacing"> </span>14+G<span class="heti-spacing"> </span></span>内存</li>
+<li>采用自回归生成<span><span class="heti-spacing"> </span>token</span>，需要缓存<span class="heti-skip"><span class="heti-spacing"> </span>Attention<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>k/v</span>，带来巨大的内存开销</li>
+</ul>
+</li>
+<li>动态<span><span class="heti-spacing"> </span>shape</span><ul>
+<li>请求数不固定</li>
+<li><span>Token<span class="heti-spacing"> </span></span>逐个生成，且数量不定</li>
+</ul>
+</li>
+<li>相对视觉模型，<span>LLM<span class="heti-spacing"> </span></span>结构简单<ul>
+<li><span>Transformers<span class="heti-spacing"> </span></span>结构，大部分是<span><span class="heti-spacing"> </span>decoder-only</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">大模型部署挑战<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>设备<ul>
+<li>如何应对巨大的存储问题？低存储设备（消费级显卡、手机等）如何部署？</li>
+</ul>
+</li>
+<li>推理<ul>
+<li>如何加速<span class="heti-skip"><span class="heti-spacing"> </span>token<span class="heti-spacing"> </span></span>的生成速度</li>
+<li>如何解决动态<span><span class="heti-spacing"> </span>shape</span>，让推理可以不间断</li>
+<li>如何有效监督和利用内存</li>
+</ul>
+</li>
+<li>服务<ul>
+<li>如何提升系统整体吞吐量？</li>
+<li>对于个体用户，如何降低响应时间？</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">大模型部署方案<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>技术点<ul>
+<li>模型并行</li>
+<li>低比特量化</li>
+<li>Page Attention</li>
+<li><span>transformer<span class="heti-spacing"> </span></span>计算和访存优化</li>
+<li>Continuous Batch</li>
+<li>...</li>
+</ul>
+</li>
+<li>方案<ul>
+<li>huggingface Transformers</li>
+<li>专门的推理加速框架</li>
+<li>云端<ul>
+<li>lmdeploy</li>
+<li>vllm</li>
+<li>tensorrt-llm</li>
+<li>deepspeed</li>
+</ul>
+</li>
+<li>移动端<ul>
+<li>llama.cpp</li>
+<li>mlc-llm</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="lmdeploy_1"><span>LMDeploy<span class="heti-spacing"> </span></span>简介<a class="headerlink" href="#lmdeploy_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p><span>LMDeploy<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>LLM<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>Nvidia<span class="heti-spacing"> </span></span>设备上部署的全流程解决方案，包括模型轻量化、推理、服务。</p>
+</blockquote>
+<h3 id="_6">核心功能<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="_7">量化<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>为什么<span class="heti-skip"><span class="heti-spacing"> </span>Weight Only<span class="heti-spacing"> </span></span>量化？<ul>
+<li><span>4bit Weight Only<span class="heti-spacing"> </span></span>量化，将<span class="heti-skip"><span class="heti-spacing"> </span>FP16<span class="heti-spacing"> </span></span>的模型权重量化为<span><span class="heti-spacing"> </span>INT4</span>，访存量直接降为<span class="heti-skip"><span class="heti-spacing"> </span>FP16<span class="heti-spacing"> </span></span>的模型<span><span class="heti-spacing"> </span>1/4</span>，大幅降低了访存成本，提高<span class="heti-skip"><span class="heti-spacing"> </span>Decoding<span class="heti-spacing"> </span></span>的速度。</li>
+<li>加速的同时还节省显存，同样的设备能够支持更大的模型以及更长的对话长度。</li>
+</ul>
+</li>
+<li>如何做<span class="heti-skip"><span class="heti-spacing"> </span>Weight Only<span class="heti-spacing"> </span></span>量化？<ul>
+<li><span>LMDeploy<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>MIT HAN LAB<span class="heti-spacing"> </span></span>开源的<span class="heti-skip"><span class="heti-spacing"> </span>AWQ<span class="heti-spacing"> </span></span>算法，量化为<span class="heti-skip"><span class="heti-spacing"> </span>4bit<span class="heti-spacing"> </span></span>模型</li>
+<li>推理时，先把<span class="heti-skip"><span class="heti-spacing"> </span>4bit<span class="heti-spacing"> </span></span>权重，<strong>反量化回<span><span class="heti-spacing"> </span>FP16</span></strong>（在<span class="heti-skip"><span class="heti-spacing"> </span>Kernel<span class="heti-spacing"> </span></span>内部进行，从<span class="heti-skip"><span class="heti-spacing"> </span>Global Memory<span class="heti-spacing"> </span></span>读取时仍是<span><span class="heti-spacing"> </span>4bit</span>），依旧使用的是<span class="heti-skip"><span class="heti-spacing"> </span>FP16<span class="heti-spacing"> </span></span>计算</li>
+<li>想较于社区使用最多的<span class="heti-skip"><span class="heti-spacing"> </span>GPTQ<span class="heti-spacing"> </span></span>算法，<span>AWQ<span class="heti-spacing"> </span></span>的推理速度更快，量化时间更短</li>
+</ul>
+</li>
+</ul>
+<h4 id="turbomind">推理引擎<span><span class="heti-spacing"> </span>TurboMind</span><a class="headerlink" href="#turbomind" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>持续批处理</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_1.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_1.jpg"/></a></center>
+<ul>
+<li>有状态的推理</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_2.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_2.jpg"/></a></center>
+<ul>
+<li>高性能<span><span class="heti-spacing"> </span>cuda Kernel</span></li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_3.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_3.jpg"/></a></center>
+<ul>
+<li>Blocked k/v cache</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_4.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_4.jpg"/></a></center>
+<h4 id="api-server">推理服务<span><span class="heti-spacing"> </span>api server</span><a class="headerlink" href="#api-server" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>lmdeploy<span class="w"> </span>serve<span class="w"> </span>api_server<span class="w"> </span>InternLM/internlm-chat-7b<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>--model-name<span class="w"> </span>internlm-chat-7b<span class="w"> </span>--server-port<span class="w"> </span><span class="m">8080</span>
+</code></pre></div>
+<h2 id="_8">服务部署<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_9">模型转换<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<blockquote>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>TurboMind<span class="heti-spacing"> </span></span>推理模型需要先将模型转化为<span class="heti-skip"><span class="heti-spacing"> </span>TurboMind<span class="heti-spacing"> </span></span>的格式，目前支持在线转换和离线转换两种形式。在线转换可以直接加载<span class="heti-skip"><span class="heti-spacing"> </span>Huggingface<span class="heti-spacing"> </span></span>模型，离线转换需需要先保存模型再加载。</p>
+</blockquote>
+<h4 id="_10">在线转换<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p><span>lmdeploy<span class="heti-spacing"> </span></span>支持直接读取<span class="heti-skip"><span class="heti-spacing"> </span>Huggingface<span class="heti-spacing"> </span></span>模型权重，目前共支持三种类型：</p>
+<ul>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>huggingface.co<span class="heti-spacing"> </span></span>上面通过<span class="heti-skip"><span class="heti-spacing"> </span>lmdeploy<span class="heti-spacing"> </span></span>量化的模型，如<span><span class="heti-spacing"> </span>llama2-70b-4bit, internlm-chat-20b-4bit</span></li>
+<li><span>huggingface.co<span class="heti-spacing"> </span></span>上面其他<span class="heti-skip"><span class="heti-spacing"> </span>LM<span class="heti-spacing"> </span></span>模型，如<span><span class="heti-spacing"> </span>Qwen/Qwen-7B-Chat</span></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">在线转换</p>
+<ul>
+<li>加载<span class="heti-skip"><span class="heti-spacing"> </span>Huggingface<span class="heti-spacing"> </span></span>模型</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 需要能访问 Huggingface 的网络环境</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>lmdeploy<span class="w"> </span>chat<span class="w"> </span>turbomind<span class="w"> </span>internlm/internlm-chat-20b-4bit<span class="w"> </span>--model-name<span class="w"> </span>internlm-chat-20b
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>lmdeploy<span class="w"> </span>chat<span class="w"> </span>turbomind<span class="w"> </span>Qwen/Qwen-7B-Chat<span class="w"> </span>--model-name<span class="w"> </span>qwen-7b
+</code></pre></div>
+<ul>
+<li>直接启动本地的<span class="heti-skip"><span class="heti-spacing"> </span>Huggingface<span class="heti-spacing"> </span></span>模型</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>lmdeploy<span class="w"> </span>chat<span class="w"> </span>turbomind<span class="w"> </span>/share/temp/model_repos/internlm-chat-7b/<span class="w">  </span>--model-name<span class="w"> </span>internlm-chat-7b
+</code></pre></div>
+</div>
+<h4 id="_11">离线转换<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>离线转换需要在启动服务之前，将模型转为<span class="heti-skip"><span class="heti-spacing"> </span>lmdeploy TurboMind<span class="heti-spacing"> </span></span>的格式，执行完成后将会在当前目录生成一个<span class="heti-skip"><span class="heti-spacing"> </span>workspace<span class="heti-spacing"> </span></span>的文件夹。这里面包含的就是<span class="heti-skip"><span class="heti-spacing"> </span>TurboMind<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Triton</span> “模型推理”需要到的文件。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>lmdeploy<span class="w"> </span>convert<span class="w"> </span>internlm-chat-7b<span class="w"> </span>/path/to/internlm-chat-7b
+</code></pre></div>
+<h3 id="turbomind_1"><span>TurboMind<span class="heti-spacing"> </span></span>推理<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>命令行本地对话<a class="headerlink" href="#turbomind_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>模型转换完成后，我们就具备了使用模型推理的条件，接下来就可以进行真正的模型推理环节。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>lmdeploy<span class="w"> </span>chat<span class="w"> </span>turbomind<span class="w"> </span>./workspace
+</code></pre></div>
+<h3 id="turbomind-api"><span>TurboMind<span class="heti-spacing"> </span></span>推理<span class="heti-skip"><span class="heti-spacing"> </span>+API<span class="heti-spacing"> </span></span>服务<a class="headerlink" href="#turbomind-api" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>上面直接用命令行启动<span><span class="heti-spacing"> </span>Client</span>，接下来运用<span class="heti-skip"><span class="heti-spacing"> </span>lmdepoy<span class="heti-spacing"> </span></span>进行服务化。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># ApiServer+Turbomind   api_server =&gt; AsyncEngine =&gt; TurboMind</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>lmdeploy<span class="w"> </span>serve<span class="w"> </span>api_server<span class="w"> </span>./workspace<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span>--server_name<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span>--server_port<span class="w"> </span><span class="m">23333</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span>--instance_num<span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span>--tp<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>新开一个窗口，执行下面的命令或直接打开<span><span class="heti-spacing"> </span>http://{host}:23333</span></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># ChatApiClient+ApiServer（注意是http协议，需要加http）</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>lmdeploy<span class="w"> </span>serve<span class="w"> </span>api_client<span class="w"> </span>http://localhost:23333
+</code></pre></div>
+<h3 id="web-demo"><span>Web Demo<span class="heti-spacing"> </span></span>对话<a class="headerlink" href="#web-demo" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="turbomind_2"><span>TurboMind<span class="heti-spacing"> </span></span>服务作为后端<a class="headerlink" href="#turbomind_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>启动作为前端的<span><span class="heti-spacing"> </span>Gradio</span></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># Gradio+ApiServer。必须先开启 Server，此时 Gradio 为 Client</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>lmdeploy<span class="w"> </span>serve<span class="w"> </span>gradio<span class="w"> </span>http://0.0.0.0:23333<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span>--server_name<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span>--server_port<span class="w"> </span><span class="m">6006</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span>--restful_api<span class="w"> </span>True
+</code></pre></div>
+<h4 id="turbomind_3"><span>TurboMind<span class="heti-spacing"> </span></span>推理作为后端<a class="headerlink" href="#turbomind_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Gradio+Turbomind(local)</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>lmdeploy<span class="w"> </span>serve<span class="w"> </span>gradio<span class="w"> </span>./workspace
+</code></pre></div>
+<h3 id="turbomind-python"><span>TurboMind<span class="heti-spacing"> </span></span>推理<span class="heti-skip"><span class="heti-spacing"> </span>+Python<span class="heti-spacing"> </span></span>代码集成<a class="headerlink" href="#turbomind-python" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">lmdeploy</span> <span class="kn">import</span> <span class="n">turbomind</span> <span class="k">as</span> <span class="n">tm</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1"># load model</span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">model_path</span> <span class="o">=</span> <span class="s2">"/root/share/temp/model_repos/internlm-chat-7b/"</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">tm_model</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">TurboMind</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s1">'internlm-chat-20b'</span><span class="p">)</span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">generator</span> <span class="o">=</span> <span class="n">tm_model</span><span class="o">.</span><span class="n">create_instance</span><span class="p">()</span>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="c1"># process query</span>
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="n">query</span> <span class="o">=</span> <span class="s2">"你好啊兄嘚"</span>
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="n">prompt</span> <span class="o">=</span> <span class="n">tm_model</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">get_prompt</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="n">input_ids</span> <span class="o">=</span> <span class="n">tm_model</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="c1"># inference</span>
+<a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="k">for</span> <span class="n">outputs</span> <span class="ow">in</span> <span class="n">generator</span><span class="o">.</span><span class="n">stream_infer</span><span class="p">(</span>
+<a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="n">session_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-9-16" id="__codelineno-9-16" name="__codelineno-9-16"></a>        <span class="n">input_ids</span><span class="o">=</span><span class="p">[</span><span class="n">input_ids</span><span class="p">]):</span>
+<a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a>    <span class="n">res</span><span class="p">,</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a href="#__codelineno-9-18" id="__codelineno-9-18" name="__codelineno-9-18"></a>
+<a href="#__codelineno-9-19" id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="n">response</span> <span class="o">=</span> <span class="n">tm_model</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+<a href="#__codelineno-9-20" id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_12">模型量化<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p>量化是一种以参数或计算中间结果精度下降换空间节省（以及同时带来的性能提升）的策略。</p>
+</blockquote>
+<h3 id="kv-cache"><span>KV Cache<span class="heti-spacing"> </span></span>量化<a class="headerlink" href="#kv-cache" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ol>
+<li>计算<span><span class="heti-spacing"> </span>minmax</span>。通过计算给定输入样本在每一层不同位置计算结果的统计情况。</li>
 </ol>
-</li>
-</ul>
-<h2 id="_2">重构的多义性<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 计算 minmax</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>lmdeploy<span class="w"> </span>lite<span class="w"> </span>calibrate<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span>--model<span class="w">  </span>/root/share/temp/model_repos/internlm-chat-7b/<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span>--calib_dataset<span class="w"> </span><span class="s2">"c4"</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span>--calib_samples<span class="w"> </span><span class="m">128</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">  </span>--calib_seqlen<span class="w"> </span><span class="m">2048</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">  </span>--work_dir<span class="w"> </span>./quant_output
+</code></pre></div>
+<ol start="2">
+<li>通过<span class="heti-skip"><span class="heti-spacing"> </span>minmax<span class="heti-spacing"> </span></span>获取量化参数。获取每一层的<span class="heti-skip"><span class="heti-spacing"> </span>KV<span class="heti-spacing"> </span></span>中心值（zp）和缩放值（scale）。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1"># 通过 minmax 获取量化参数</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>lmdeploy<span class="w"> </span>lite<span class="w"> </span>kv_qparams<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span>--work_dir<span class="w"> </span>./quant_output<span class="w">  </span><span class="se">\</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span>--turbomind_dir<span class="w"> </span>workspace/triton_models/weights/<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">  </span>--kv_sym<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">  </span>--num_tp<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<ol start="3">
+<li>修改配置。修改 <code>weights/config.ini</code> 文件。</li>
+</ol>
+<h3 id="w4a16"><span>W4A16<span class="heti-spacing"> </span></span>量化<a class="headerlink" href="#w4a16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<blockquote>
+<p><span>W4A16<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>指<span><span class="heti-spacing"> </span>Activation</span>，保持<span><span class="heti-spacing"> </span>FP16</span>，只对参数进行<span class="heti-skip"><span class="heti-spacing"> </span>4bits<span class="heti-spacing"> </span></span>量化。</p>
+</blockquote>
+<ol>
+<li>同<span class="heti-skip"><span class="heti-spacing"> </span>KV Cache<span class="heti-spacing"> </span></span>量化，计算<span><span class="heti-spacing"> </span>minmax</span>。</li>
+<li>量化权重参数。利用第一步得到的统计值对参数进行量化。</li>
+<li>缩放参数</li>
+<li>整体量化</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># 量化权重模型</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>lmdeploy<span class="w"> </span>lite<span class="w"> </span>auto_awq<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span>--model<span class="w">  </span>/root/share/temp/model_repos/internlm-chat-7b/<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span>--w_bits<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span>--w_group_size<span class="w"> </span><span class="m">128</span><span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">  </span>--work_dir<span class="w"> </span>./quant_output<span class="w"> </span>
+</code></pre></div>
+<ol start="3">
+<li>转换成<span class="heti-skip"><span class="heti-spacing"> </span>TurboMind<span class="heti-spacing"> </span></span>格式。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1"># 转换模型的layout，存放在默认路径 ./workspace 下</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>lmdeploy<span class="w"> </span>convert<span class="w">  </span>internlm-chat-7b<span class="w"> </span>./quant_output<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span>--model-format<span class="w"> </span>awq<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span>--group-size<span class="w"> </span><span class="m">128</span>
+</code></pre></div>
+<h2 id="_13">作业<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>LMDeploy<span class="heti-spacing"> </span></span>以本地对话、网页<span><span class="heti-spacing"> </span>Gradio</span>、<span>API<span class="heti-spacing"> </span></span>服务中的一种方式部署<span class="heti-skip"><span class="heti-spacing"> </span>InternLM-Chat-7B<span class="heti-spacing"> </span></span>模型，生成<span class="heti-skip"><span class="heti-spacing"> </span>300<span class="heti-spacing"> </span></span>字的小故事（需截图）</p>
 <ul>
-<li>若没有景物在某个<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>坐标系下位置的信息，一般不可能从一对视图（或事实上从任意数目的视图）重构该景物的绝对位置和朝向。仅由图像来确定景物就要相差一个相似变换（旋转、平移和缩放）</li>
-<li><strong>射影多义性</strong>：如果既不知道任何一个摄像机的标定，也不知道一个摄像机与另一个的相对位置，那么重构的多义性由一个任意射影变换表示<ul>
-<li>如果两个摄像机之间有平移运动，但标定不变，则可在相差一个仿射变换下重构</li>
-<li>如果两个摄像机除了焦距外都以标定，则仍然可在相差一个相似变换下重构</li>
+<li>本地对话</li>
 </ul>
-</li>
-</ul>
-<h2 id="_3">射影重构定理<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_5_1.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_5_1.jpg"/></a></center>
 <ul>
-<li>如果两幅视图的一个点对应集唯一地确定了基本矩阵，则景物和摄像机可以仅由这些对应重构，而且由这些对应产生的任何两个重构都是射影等价的</li>
-<li><span>*<span class="heti-spacing"> </span></span><em>射影重构定定理</em>：假定<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>是两幅图像点之间对应的集合而且基本矩阵<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>由条件<span class="arithmatex">\(\mathbf{x}_i^{\prime \top} F \mathbf{x}_i=0\)</span>（对所有<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>成立）唯一地确定。令<span class="arithmatex">\((P_1,P_1^\prime,\{\mathbf{X}_{1i}\})\)</span>和<span class="arithmatex">\((P_2,P_2^\prime,\{\mathbf{X}_{2i}\})\)</span>为对应<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>的两个重构，则存在一个非奇异矩阵<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>使得<span class="arithmatex">\(P_2=P_1H^{-1},P_2^\prime=P_1^\prime H^{-1}\)</span>并且除了使得<span class="arithmatex">\(F\mathbf{x}_i=F^\top \mathbf{x}_i^\prime=\mathbf{0}\)</span>的那些<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>外，对其余每个<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>都有<span class="arithmatex">\(\mathbf{X}_{2i}=H\mathbf{X}_{1i}\)</span></li>
+<li>Web Gradio</li>
 </ul>
-<h2 id="_4">分层重构<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_5">仿射重构<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_5_2.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_5_2.jpg"/></a></center>
 <ul>
-<li>仿射重构的本质是用某些方法定位无穷远平面，因为定位无穷远平面等价于仿射重构。寻找使<span class="arithmatex">\(\pi\)</span>映射到<span class="arithmatex">\((0,0,0,1)^\top\)</span>，可以把<span class="arithmatex">\(H^{-\top}\)</span>作为<span class="heti-skip"><span class="heti-spacing"> </span>Houscholder<span class="heti-spacing"> </span></span>矩阵来计算</li>
-<li><strong>平移运动</strong><ul>
-<li>摄像机作纯平移运动时，可以由两幅视图实现仿射重构。无穷远平面上一点<span class="arithmatex">\(\mathbf{X}\)</span>在由摄像机平移所产生的两幅图像上的像是同一点。给定一个射影重构，可以重构对应于匹配<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>的点<span class="arithmatex">\(\mathbf{X}_i\)</span>。点<span class="arithmatex">\(\mathbf{X}_i\)</span>将在无穷远平面上。从三组这样的点我们可以得到在无穷远平面上的三个点——足够唯一地把它确定</li>
-<li>假设摄像机的运动是没有旋转且内参保持不变的一个纯平移运动，则<span class="arithmatex">\(F=[\mathbf{e}]_\times = [\mathbf{e}^\prime]_\times\)</span>，并且作为仿射重构可选的两个摄像机为<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>和<span class="arithmatex">\(P^\prime=[I|\mathbf{e}^\prime]\)</span></li>
+<li><span>API<span class="heti-spacing"> </span></span>服务</li>
 </ul>
-</li>
-<li><strong>景物约束</strong>：景物约束或条件也可以用来获得仿射重构，只要能够辨认在无穷远平面上的三个点，该平面就可以辨认，并且该重构可以变换到仿射重构</li>
-<li><strong>平行直线</strong>：最明显的条件是知道某些<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>直线实际是平行的。空间两条平行直线的交点给出无穷远平面上的一个点，该交点的图像是这对平行线的消影点，而且是两条像直线的交点。假设在景物中能够确定三对平行直线。每对相交于无穷远平而上的一点，如果每对有不同的方向，则三点将不同。因为三点确定一张平面，故这个信息足够确定平面<span class="arithmatex">\(\pi\)</span></li>
-<li><strong>直线上的距离比率</strong>：运动景物仿射长度比率不变的知识计算消影点</li>
-<li><strong>无穷单应</strong>：如果一个仿射重构已得到并且其中的摄像机矩阵是<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>和<span class="arithmatex">\(P^\prime=[M^\prime|\mathbf{e}^\prime]\)</span>，则无穷单应是<span class="arithmatex">\(H_\infty=M^\prime\)</span>。反过来，如果已得到无穷单应<span class="arithmatex">\(H_\infty\)</span>，则仿射重构的摄像机可以取为<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>和<span class="arithmatex">\(P^\prime=[H_\infty|\mathbf{e}^\prime]\)</span></li>
-<li><strong>其中一个是仿射摄像机的情形</strong>：若<span class="arithmatex">\((P,P^\prime,\{\mathbf{X}_i\})\)</span>是从一点对应集得到的射影重构且<span class="arithmatex">\(P=[I|\mathbf{0}]\)</span>。若已知<span class="arithmatex">\(P\)</span>事实上是一个仿射摄像机，则可以通过交换<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(P^\prime\)</span>的最后两个列和每一个<span class="arithmatex">\(\mathbf{X}_i\)</span>的最后两个坐标而得到一个仿射重构</li>
-</ul>
-<h3 id="_6">度量重构<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>仿射重构的关键是辨认无穷远平面，而度最重构的关键是辨认绝对二次曲线</li>
-<li>若已知绝对二次曲线在某幅图像中的像是<span class="arithmatex">\(\omega\)</span>，且已知仿射重构中的摄像机矩阵是<span class="arithmatex">\(P=[M|\mathbf{m}]\)</span>，则用形如<span class="arithmatex">\(H=\begin{bmatrix} A^{-1} &amp; \\ &amp; 1 \end{bmatrix}\)</span> 的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>变换，可以把仿射重构变换到度量重构，其中<span class="arithmatex">\(A\)</span>由方程<span class="arithmatex">\(AA^\top=(M^\top \omega M)^{-1}\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>Cholesky<span class="heti-spacing"> </span></span>分解得到</li>
-</ul>
-<details class="note">
-<summary><span>Cholesky<span class="heti-spacing"> </span></span>分解</summary>
-<p><span>Cholesky<span class="heti-spacing"> </span></span>分解是把一个对称正定的矩阵表示成一个下三角矩阵<span class="arithmatex">\(L\)</span>和其转置的乘积的分解。它要求矩阵的所有特征值必须大于零，故分解的下三角的对角元也是大于零的。<span>Cholesky<span class="heti-spacing"> </span></span>分解法又称平方根法，是当<span class="arithmatex">\(A\)</span>为实对称正定矩阵时，<span class="arithmatex">\(LU\)</span>三角分解法的变形。</p>
-</details>
-<ul>
-<li><strong>景物正交的约束</strong>：景物的正交直线的一对消影点<span class="arithmatex">\(\mathbf{v}_1,\mathbf{v}_2\)</span>对<span class="arithmatex">\(\omega\)</span>提供一个线性约束<span><span class="heti-spacing"> </span>:</span><span class="arithmatex">\(\mathbf{v}_1^\top \omega \mathbf{v}_2 = 0\)</span>。类似地，来自一个方向的消影点<span class="arithmatex">\(\mathbf{v}\)</span>和与之垂直的平面的消影直线<span class="arithmatex">\(\mathbf{l}\)</span>对<span class="arithmatex">\(\omega\)</span>提供两个约束<span class="arithmatex">\(\mathbf{l}=\omega \mathbf{v}\)</span>，一个常用的例子是垂直方向的消影点和水平地平面的消影直线</li>
-<li><strong>已知内参数的约束</strong>：如果摄像机矩阵的标定矩阵等于<span class="arithmatex">\(K\)</span>，则绝对二次曲线的像是<span class="arithmatex">\(\omega=K^{-\top}K^{-1}\)</span>。因此包括在<span class="arithmatex">\(K\)</span>中的摄像机内参数信息可以用来约束或确定<span class="arithmatex">\(\omega\)</span>的元素。在已知<span class="arithmatex">\(K\)</span>的扭曲因子为零（<span class="arithmatex">\(s=0\)</span>）时有<span class="arithmatex">\(\omega_{12}=\omega_{21}=0\)</span>，若像素还是正方形（零扭曲参数且<span class="arithmatex">\(\alpha_x=\alpha_y\)</span>），则<span class="arithmatex">\(\omega_{11}=\omega_{22}\)</span></li>
-<li><strong>同一摄像机在多幅图像中的约束</strong>：绝对二次曲线的一个性质是它在图像上的投影只依赖于摄像机的标定矩阵，而不依赖于摄像机的位置和方向。当两个摄像机具有相同的标定矩阵时<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>通常意味着同一摄像机在不同位置拍摄的两幅图像<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>则有<span class="arithmatex">\(\omega=\omega^\prime\)</span>，即绝对二次曲线在两幅图像上的像是相同的，给定足够多的图像，可以利用这个性质从仿射重构得到度量重构</li>
-</ul>
-<h3 id="omega">利用<span class="arithmatex">\(\omega\)</span>直接度量重构<a class="headerlink" href="#omega" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>最明显的方法是利用<span><span class="heti-spacing"> </span>IAC</span>（绝对二次曲线）来计算每个摄像机的标定，然后再进行己知标定下的重构</li>
-<li>另一个更概念性的方法是运用<span class="heti-skip"><span class="heti-spacing"> </span>IAC<span class="heti-spacing"> </span></span>的信息直接确定无穷远平面和绝对二次曲线</li>
-</ul>
-<h2 id="_7">直接重构——利用地面知识<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li>在射影重构下，控制点<span class="arithmatex">\(\{\mathbf{X}_i\}\)</span>的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>位置可以有它们图像对应点<span class="arithmatex">\(\mathbf{x}_i \leftrightarrow \mathbf{x}_i^\prime\)</span>来计算。因为该射影重构通过一个单应联系于真正的重构：<span class="arithmatex">\(\mathbf{X}_{Ei}=H\mathbf{X}_i, i=1,...,n\)</span></li>
-<li>每组点对应提供关于<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>元素的三个独立线性方程。因为<span class="heti-skip"><span class="heti-spacing"> </span>H<span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>个自由度，故若提供<span class="arithmatex">\(n \ge 5\)</span>组（且没有四个控制点是共面的）点对应，便可以得到一个线性解</li>
-<li>另一种方法可以不计算<span class="arithmatex">\(\mathbf{X}_i\)</span>而通过把已知的地面控制点直接与图像的度量相联系的途径来计算<span><span class="heti-spacing"> </span>H</span>。因此类似于计算摄像机矩阵的<span class="arithmatex">\(DLT\)</span>算法：<span class="arithmatex">\(\mathbf{x}_i = PH^{-1} \mathbf{X}_{Ei}\)</span></li>
-</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_5_3.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_5_3.jpg"/></a></center>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月6日 10:48:29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月18日 10:21:30</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月6日 10:48:29</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月18日 10:21:30</span>
 </small>
 </div>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -1304,7 +1714,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 对极几何和基本矩阵" class="md-footer__link md-footer__link--prev" href="../ag-fm/" rel="prev">
+<a aria-label="上一页: 第四节" class="md-footer__link md-footer__link--prev" href="../lec4/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1313,17 +1723,17 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              对极几何和基本矩阵
+              第四节
             </div>
 </div>
 </a>
-<a aria-label="下一页: SLAM" class="md-footer__link md-footer__link--next" href="../../slam/" rel="next">
+<a aria-label="下一页: Prompt" class="md-footer__link md-footer__link--next" href="../../prompt/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              SLAM
+              Prompt
             </div>
 </div>
 <div class="md-footer__button md-icon">
