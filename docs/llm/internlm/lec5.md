@@ -5,6 +5,9 @@ comment: true
 
 # LMDeploy 大模型量化部署实践
 
+!!! abstract
+    学习自 [LMDeploy 大模型量化部署实践](https://www.bilibili.com/video/BV1iW4y1A77P/)
+
 ## 大模型部署背景
 
 ### 模型部署

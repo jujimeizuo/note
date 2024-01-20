@@ -242,6 +242,7 @@ nav:
       - 第三节: llm/internlm/lec3.md
       - 第四节: llm/internlm/lec4.md
       - 第五节: llm/internlm/lec5.md
+      - 第六节: llm/internlm/lec6.md
     - 杂项:
       - Prompt: llm/others/prompt.md
       - 分布式训练: llm/others/dt.md

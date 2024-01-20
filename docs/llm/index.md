@@ -26,6 +26,7 @@
     - 基于 InternLM 和 LangChain 搭建你的知识库: internlm/lec3/
     - XTuner 大模型单卡低成本微调实战: internlm/lec4/
     - LMDeploy 大模型量化部署实践: internlm/lec5/
+    - OpenCompass 大模型评测: internlm/lec6/
 - 杂项:
     - Prompt: others/prompt/
     - 分布式训练: others/dt/
