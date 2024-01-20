@@ -21,6 +21,7 @@
 <link href="../../../css/card.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -467,9 +468,176 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          OpenMP 基础
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         OpenMP 基础
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openmp_1">
+    什么是 OpenMP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    并行性
+  </a>
+<nav aria-label="并行性" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    进程和线程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    线程的硬件调度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    硬件的内存模型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fork-join">
+    Fork-Join 模型
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openmp_2">
+    OpenMP 编程
+  </a>
+<nav aria-label="OpenMP 编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    编译使用
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    库函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    制导语句
+  </a>
+<nav aria-label="制导语句" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parallel">
+    parallel 线程并行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for">
+    for 循环并行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if">
+    if 条件并行
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reduction">
+    reduction 执行过程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    同步构造
+  </a>
+<nav aria-label="同步构造" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-sections">
+    #pragma omp sections
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-barrier">
+    #pragma omp barrier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-single">
+    #pragma omp single
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-master">
+    #pragma omp master
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-critical">
+    #pragma omp critical
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-atomic">
+    #pragma omp atomic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#false-sharing">
+    False Sharing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    更多特性
+  </a>
+<nav aria-label="更多特性" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    任务构造
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    向量化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpu">
+    GPU 支持
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../taichi/">
@@ -1099,6 +1267,167 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openmp_1">
+    什么是 OpenMP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    并行性
+  </a>
+<nav aria-label="并行性" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    进程和线程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    线程的硬件调度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    硬件的内存模型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fork-join">
+    Fork-Join 模型
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openmp_2">
+    OpenMP 编程
+  </a>
+<nav aria-label="OpenMP 编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    编译使用
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    库函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    制导语句
+  </a>
+<nav aria-label="制导语句" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parallel">
+    parallel 线程并行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for">
+    for 循环并行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#if">
+    if 条件并行
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reduction">
+    reduction 执行过程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    同步构造
+  </a>
+<nav aria-label="同步构造" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-sections">
+    #pragma omp sections
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-barrier">
+    #pragma omp barrier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-single">
+    #pragma omp single
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-master">
+    #pragma omp master
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-critical">
+    #pragma omp critical
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pragma-omp-atomic">
+    #pragma omp atomic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#false-sharing">
+    False Sharing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    更多特性
+  </a>
+<nav aria-label="更多特性" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    任务构造
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    向量化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpu">
+    GPU 支持
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -1111,17 +1440,288 @@ var _hmt = _hmt || [];
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1 id="openmp"><span>OpenMP<span class="heti-spacing"> </span></span>基础<a class="headerlink" href="#openmp" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1763<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg></span> <span>38<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<h2 id="openmp_1">什么是<span><span class="heti-spacing"> </span>OpenMP</span><a class="headerlink" href="#openmp_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>Open Multi-Processing</li>
+<li><span>OpenMP<span class="heti-spacing"> </span></span>是一个应用程序接口（API<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，可以简单理解为一个库</li>
+<li>支持<span><span class="heti-spacing"> </span>C</span>、<span>C++<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Fortran</span></li>
+<li>支持多种指令集和操作系统</li>
+</ul>
+<p><span>OpenMP<span class="heti-spacing"> </span></span>的适用范围：多线程、共享内存</p>
+<ul>
+<li>共享存储体系结构上的一个并行编程模型</li>
+<li>适用于<span><span class="heti-spacing"> </span>SMP</span>（Symmetric Multi-Processor）共享内存多处理系统和多核处理器体系结构</li>
+</ul>
+<p>三类主要<span><span class="heti-spacing"> </span>API</span>（表现为编译制导指令，但实际上仍为<span><span class="heti-spacing"> </span>API</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：编译器指令、运行时库函数、环境变量</p>
+<p>传统上，我们利用<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>进行单机器<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>优化（可跨处理器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，不过在较新的<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>版本的中，你甚至可以直接使用<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>将代码优化到<span class="heti-skip"><span class="heti-spacing"> </span>GPU<span class="heti-spacing"> </span></span>等异构计算设备上</p>
+<h2 id="_1">并行性<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_2">进程和线程<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>进程<ul>
+<li>每个进程有自己独立的地址空间</li>
+<li><span>CPU<span class="heti-spacing"> </span></span>在进程之间切换需要进行上下文切换</li>
+</ul>
+</li>
+<li>线程<ul>
+<li>一个进程下的线程共享地址空间</li>
+<li><span>CPU<span class="heti-spacing"> </span></span>在线程之间切换开销小</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">线程的硬件调度<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>硬件和操作系统会自动将线程调度到<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>核心运行</li>
+<li>当线程数目超过核心数，会出现多个线程抢占一个<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>核心，导致性能下降</li>
+<li>超线程（hyper-threading）将单个<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>物理核心抽象为多个（目前通常为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>个）逻辑核心，共享物理核心的计算资源</li>
+</ul>
+<h3 id="_4">硬件的内存模型<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>CPU<span class="heti-spacing"> </span></span>核心在主存之上有<span class="heti-skip"><span class="heti-spacing"> </span>L1,L2,L3<span class="heti-spacing"> </span></span>多级缓存</li>
+<li><span>L1,L2<span class="heti-spacing"> </span></span>缓存是核心私有的</li>
+<li>硬件和操作系统保证不同核心的缓存一致性（coherence）</li>
+<li>被称为<span><span class="heti-spacing"> </span>cache coherence non-uniform memory access</span>（ccNUMA）</li>
+<li>缓存一致性会带来<span class="heti-skip"><span class="heti-spacing"> </span>False Sharing<span class="heti-spacing"> </span></span>的问题</li>
+</ul>
+<h3 id="fork-join"><span>Fork-Join<span class="heti-spacing"> </span></span>模型<a class="headerlink" href="#fork-join" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>单线程（initial thread）开始执行</li>
+<li>进入并行区（parallel region）开始并行执行</li>
+<li>在并行区结尾<strong>进行同步</strong>和结束线程，继续单线程执行程序</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cs/hpc/fork-join.jpg"><img src="https://cdn.jujimeizuo.cn/note/cs/hpc/fork-join.jpg"/></a></center>
+<h2 id="openmp_2"><span>OpenMP<span class="heti-spacing"> </span></span>编程<a class="headerlink" href="#openmp_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_5">安装<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>含在<span class="heti-skip"><span class="heti-spacing"> </span>Ubuntu<span class="heti-spacing"> </span></span>提供的<span class="heti-skip"><span class="heti-spacing"> </span>build-essential<span class="heti-spacing"> </span></span>包中</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">echo</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cpp<span class="w"> </span>-fopenmp<span class="w"> </span>-dM<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>open
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># #define _OPENMP 201511</span>
+</code></pre></div>
+<h3 id="_6">编译使用<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>可以直接在编译语句添加 <code>-fopenmp</code>，如</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>g++<span class="w"> </span>-O2<span class="w"> </span>-std<span class="o">=</span>c++14<span class="w"> </span>-fopenmp<span class="w"> </span>hello.cp<span class="w"> </span>-o<span class="w"> </span>hello
+</code></pre></div>
+<ul>
+<li>如果用<span class="heti-skip"><span class="heti-spacing"> </span>cmake<span class="heti-spacing"> </span></span>构建项目，<span>gcc<span class="heti-spacing"> </span></span>加入 <code>-Wunknown-pragmas</code> 会在编译时报告没有处理的 <code>#pragma</code>，可以用来检查是否有遗漏的<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>指令</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">OpenMP</span><span class="p">)</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-Wunknown-pragmas</span><span class="p">)</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">hello</span><span class="w"> </span><span class="s">src/hello.cpp</span><span class="p">)</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">hello</span><span class="w"> </span><span class="s">OpenMP::OpenMP_CXX</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_7">库函数<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>使用时要 <code class="highlight"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span></code>，一些常用函数：</p>
+<ul>
+<li><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">omp_set_num_threads</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span></code>：设置并行区运行的线程数</li>
+<li><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获取当前线程号</li>
+<li><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">omp_get_num_threads</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获取总线程数</li>
+<li><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">omp_get_wtime</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获取时间，常用于计算线程内语句执行时间</li>
+<li><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">opm_get_wtick</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获得 <code>omp_get_wtime</code> 时间精度</li>
+</ul>
+<p><span>OpenMP<span class="heti-spacing"> </span></span>会读取环境变量 <strong>OMP_NUM_THREADS</strong> 来决定创建的线程数</p>
+<h3 id="_8">制导语句<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li>同一类 <code>openmp</code> 制导语句称为一种构造（construct）</li>
+<li>形式为 <code class="highlight"><span class="cp">#pragma omp &lt;directive&gt; &lt;clause&gt;</span></code></li>
+<li>使用 <code>{}</code> 标记作用的代码块</li>
+<li>支持的从句<ul>
+<li><code>default(shared|none)</code>：指定默认<ul>
+<li><code>shared</code>：默认为共享变量</li>
+<li><code>none</code>：无默认变量类型，每个变量都需要另外指定</li>
+</ul>
+</li>
+<li><code>shared(list)</code>：指定共享变量列表变量类型<ul>
+<li>共享变量在内存中只有一份，所有线程都可以访问</li>
+<li>请保证共享访问不会冲突</li>
+<li>不特别指定并行区变量<strong>默认为<span><span class="heti-spacing"> </span>shared</span></strong></li>
+</ul>
+</li>
+<li><code>private(list)</code>：指定私有变量列表<ul>
+<li>每个线程生成一份与该私有变量同类型的数据对象</li>
+<li>变量需要<strong>重新初始化</strong></li>
+</ul>
+</li>
+<li><code>firstprivate(list)</code><ul>
+<li>同<span><span class="heti-spacing"> </span>private</span></li>
+<li>对变量根据祝线程中的数据进行初始化</li>
+</ul>
+</li>
+<li><code>lastprivate(list)</code><ul>
+<li>同<span><span class="heti-spacing"> </span>private</span></li>
+<li>执行最后一个循环的线程的私有数据取出赋值给主线程的变量</li>
+</ul>
+</li>
+<li><code>nowait</code>：取消代码块结束的栅栏同步（barrier）</li>
+<li><code>collapse(n)</code>：应用于<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>重循环，合并（展开）循环并行<ul>
+<li>注意循环之间是否有数据依赖</li>
+</ul>
+</li>
+<li><code>ordered</code>：声明有潜在的顺序执行部分<ul>
+<li>使用 <code class="highlight"><span class="cp">#pragma omp ordered</span></code> 标记顺序执行代码（搭配使用）</li>
+<li><span>ordered<span class="heti-spacing"> </span></span>区内的语句任意时刻仅由最多一个线程执行</li>
+</ul>
+</li>
+<li><code>schedule(type [, chuck])</code>：控制调度方式<ul>
+<li><code>static</code>：<span>chunk<span class="heti-spacing"> </span></span>大小固定（默认<span><span class="heti-spacing"> </span>n/p</span>）</li>
+<li><code>dynamic</code>：动态调度，<span>chunk<span class="heti-spacing"> </span></span>大小固定（默认<span><span class="heti-spacing"> </span>1</span>）</li>
+<li><code>guided</code>：<span>chunk<span class="heti-spacing"> </span></span>大小动态递减</li>
+<li><code>runtime</code>：由系统环境 <code>OMP_SCHEDULE</code> 决定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="parallel"><span>parallel<span class="heti-spacing"> </span></span>线程并行<a class="headerlink" href="#parallel" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>使用 <code class="highlight"><span class="cp">#pragma omp parallel</span></code> 创建并行块来并行运行同一段程序：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="cp">#pragma omp parallel</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">();</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"thread #%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">ID</span><span class="p">);</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="for"><span>for<span class="heti-spacing"> </span></span>循环并行<a class="headerlink" href="#for" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p><span>parallel<span class="heti-spacing"> </span></span>块内可以使用 <code class="highlight"><span class="cp">#pragma omp for</span></code> 来对<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>循环进行并行，相当于将循环拆成不同部分分配给多个线程</p>
+<ul>
+<li>格式要求<ul>
+<li><span>init-expr:<span class="heti-spacing"> </span></span>需要是 <code>var=lb</code> 形式，类型也有限制</li>
+<li><span>test-expr:<span class="heti-spacing"> </span></span>限制为 <code>var reational-opb</code> 或者 <code>b relational-opb var</code></li>
+<li><span>incr-expr:<span class="heti-spacing"> </span></span>限制为 <code>var=var +/- incr</code> 或者 <code>var=var +/- incr</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">#pragma omp parallel</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">{</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="cp">#pragma omp for</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div>
+<p><span>parallel<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>可以合起来写作一行 <code class="highlight"><span class="cp">#pragma omp parallel for</span></code></p>
+<h4 id="if"><span>if<span class="heti-spacing"> </span></span>条件并行<a class="headerlink" href="#if" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>可以在制导语句后面加<span class="heti-skip"><span class="heti-spacing"> </span>if<span class="heti-spacing"> </span></span>子句来决定是否进行并行：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">#pragma omp parallel if(x) num_threads(4)</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="p">{</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="p">...</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>不为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>则分为四个线程执行块内内容</li>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>则由主线程串行执行</li>
+</ul>
+<h3 id="reduction"><span>reduction<span class="heti-spacing"> </span></span>执行过程<a class="headerlink" href="#reduction" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><span>fork<span class="heti-spacing"> </span></span>线程并分配任务</li>
+<li>每一个线程定义一个私有变量 <code>omp_private</code>，同 <code>private</code></li>
+<li>各个线程执行计算</li>
+<li>所有 <code>omp_priv</code> 和 <code>omp_in</code> 一起顺序进行<span><span class="heti-spacing"> </span>reduction</span>，写回原变量</li>
+</ul>
+<h3 id="_9">同步构造<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="pragma-omp-sections">#pragma omp sections<a class="headerlink" href="#pragma-omp-sections" title="Permanent link">¶</a></h4>
+<ul>
+<li>将并行区内的代码块划分为多个 <code>section</code> 分配执行</li>
+<li>可以搭配 <code>parallel</code> 合并为 <code class="highlight"><span class="cp">#pragma omp parallel sections</span></code> 构造</li>
+<li>每个 <code>section</code> 由一个线程执行<ul>
+<li>线程数大于 <code>section</code> 数目：部分线程空闲</li>
+<li>线程数小于 <code>section</code> 数目，部分线程分配多个 <code>section</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">#pragma omp parallel sections</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">{</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="cp">#pragma omp section</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="n">code1</span><span class="p">();</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="cp">#pragma omp section</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="n">code2</span><span class="p">();</span>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="pragma-omp-barrier">#pragma omp barrier<a class="headerlink" href="#pragma-omp-barrier" title="Permanent link">¶</a></h4>
+<ul>
+<li>在特定位置进行栅栏同步</li>
+<li>每个并行块都含有隐式的<span><span class="heti-spacing"> </span>barrier</span>，也就是在所有线程都结束后才能继续向下运行
+在并行块内也可以利用 <code class="highlight"><span class="cp">#pragma omp barrier</span></code> 来同步各线程，即所有线程都触碰到 barrier 时再继续</li>
+<li>可以利用<span class="heti-skip"><span class="heti-spacing"> </span>nowait<span class="heti-spacing"> </span></span>子句来取消并行块结尾的隐式<span><span class="heti-spacing"> </span>barrier</span>，避免同步产生的开销</li>
+</ul>
+<h4 id="pragma-omp-single">#pragma omp single<a class="headerlink" href="#pragma-omp-single" title="Permanent link">¶</a></h4>
+<ul>
+<li>某段代码单线程执行，带隐式同步（使用<span class="heti-skip"><span class="heti-spacing"> </span>nowait<span class="heti-spacing"> </span></span>去掉）</li>
+<li><span>single<span class="heti-spacing"> </span></span>用来序列化一段代码，即在一个进程中执行（处理非线程安全的代码，例如<span><span class="heti-spacing"> </span>IO</span>）</li>
+</ul>
+<h4 id="pragma-omp-master">#pragma omp master<a class="headerlink" href="#pragma-omp-master" title="Permanent link">¶</a></h4>
+<ul>
+<li>采用主线程执行，无隐式同步</li>
+</ul>
+<h4 id="pragma-omp-critical">#pragma omp critical<a class="headerlink" href="#pragma-omp-critical" title="Permanent link">¶</a></h4>
+<ul>
+<li>某段代码线程互斥执行</li>
+</ul>
+<h4 id="pragma-omp-atomic">#pragma omp atomic<a class="headerlink" href="#pragma-omp-atomic" title="Permanent link">¶</a></h4>
+<ul>
+<li>单个特定格式的语句或语句组中某个变量进行原子操作</li>
+</ul>
+<h3 id="false-sharing">False Sharing<a class="headerlink" href="#false-sharing" title="Permanent link">¶</a></h3>
+<ul>
+<li>耗时增加<span><span class="heti-spacing"> </span>24%</span></li>
+<li>不同核心对同一<span class="heti-skip"><span class="heti-spacing"> </span>cache line<span class="heti-spacing"> </span></span>的同时读写会造成严重的冲突，导致该级缓存失效</li>
+</ul>
+<h3 id="_10">更多特性<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="_11">任务构造<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>前述的构造都遵循<span class="heti-skip"><span class="heti-spacing"> </span>Fork-Join<span class="heti-spacing"> </span></span>模式，对任务类型有限制</li>
+<li>任务（task）构造允许定义任务以及依赖关系，动态调度执行</li>
+<li>即动态管理线程池（thread pool）和任务池（task pool）</li>
+</ul>
+<h4 id="_12">向量化<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>将循环转换为<span class="heti-skip"><span class="heti-spacing"> </span>SIMD<span class="heti-spacing"> </span></span>循环</li>
+<li><code>aligned</code> 用于列出内存对齐的指针</li>
+<li><code>safelen</code> 用于标记循环展开时的数据依赖</li>
+<li>编译器也自带向量化功能，例如<span><span class="heti-spacing"> </span>gcc</span><ul>
+<li>-O3</li>
+<li>-ffast-math</li>
+<li>-fivopts</li>
+<li>-march=native</li>
+<li>-fopt-info-vec</li>
+<li>-fopt-info-vec-missed</li>
+</ul>
+</li>
+</ul>
+<h4 id="gpu"><span>GPU<span class="heti-spacing"> </span></span>支持<a class="headerlink" href="#gpu" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<ul>
+<li>从<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP API 4.0<span class="heti-spacing"> </span></span>开始支持<span class="heti-skip"><span class="heti-spacing"> </span>GPU<span class="heti-spacing"> </span></span>加速</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月20日 21:06:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月20日 21:54:24</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月20日 21:06:07</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
