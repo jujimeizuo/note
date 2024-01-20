@@ -1,6 +1,10 @@
 - "2024":
   - "2024-1-20":
     - newpage:
+        text: CS > HPC > OpenMP
+        href: /cs/hpc/openmp/
+  - "2024-1-20":
+    - newpage:
         text: LLM > InternLM > OpenCompass 大模型评测
         href: /llm/internlm/lec6/
   - "2024-1-18":
