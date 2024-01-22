@@ -185,7 +185,6 @@ nav:
       - GPU 编程: cs/hpc/gpu.md
       - MPI 基础: cs/hpc/mpi.md
       - OpenMP 基础: cs/hpc/openmp.md
-      - Taichi 基础: cs/hpc/taichi.md
     - 软件相关:
       - cs/software/index.md
       - 设计模式: cs/software/design-pattern.md

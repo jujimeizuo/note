@@ -28,7 +28,6 @@
     - GPU 编程: hpc/gpu/
     - MPI 基础: hpc/mpi/
     - OpenMP 基础: hpc/openmp/
-    - Taichi 基础: hpc/taichi/
 - 软件相关:
     - index: software/
     - 设计模式: software/design-pattern/
