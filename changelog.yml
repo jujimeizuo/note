@@ -1,7 +1,11 @@
 - "2024":
+  - "2024-1-22":
+    - newpage:
+        text: CS > HPC > MPI 基础
+        href: /cs/hpc/mpi/
   - "2024-1-20":
     - newpage:
-        text: CS > HPC > OpenMP
+        text: CS > HPC > OpenMP 基础
         href: /cs/hpc/openmp/
   - "2024-1-20":
     - newpage:
