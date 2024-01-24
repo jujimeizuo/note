@@ -223,7 +223,7 @@ nav:
         - 前置知识: cv/pcr/prepare.md
         - ICP: cv/pcr/icp.md
     - 三维数据场可视化: cv/3d-visualization.md
-  - LLM:
+  - LLM & LVM:
     - llm/index.md
     - NLP:
       - llm/nlp/index.md
@@ -234,6 +234,7 @@ nav:
       - Attention: llm/transformer/attention.md
       - Transformer: llm/transformer/transformer.md
       - BERT: llm/transformer/bert.md
+      - ViT: llm/transformer/vit.md
     - 书生·浦语大模型实战营:
       - llm/internlm/index.md
       - 第一节: llm/internlm/lec1.md

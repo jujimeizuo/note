@@ -1,4 +1,4 @@
-# 大语言模型
+# 大模型
 
 !!! abstract
     归档一些大模型相关内容的笔记
@@ -19,6 +19,7 @@
     - Attention: transformer/attention/
     - Transformer: transformer/transformer/
     - BERT: transformer/bert/
+    - ViT: transformer/vit/
 - 书生·浦语大模型实战营:
     - index: internlm/
     - 书生·浦语大模型全链路开源开放体系: internlm/lec1/
