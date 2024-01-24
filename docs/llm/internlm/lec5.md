@@ -97,7 +97,7 @@ comment: true
 
 - Blocked k/v cache
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/turbomind_4.jpg"></center>
+<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/turbmind_4.jpg"></center>
 
 
 #### 推理服务 api server

@@ -9,3 +9,4 @@
 - [Attention](attention/)
 - [Transformer](transformer/)
 - [BERT](bert/)
+- [ViT](vit/)

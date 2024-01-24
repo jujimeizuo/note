@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-1-24":
+    - newpage:
+        text: LLM & LVM > Transformer > ViT
+        href: /llm/transformer/vit/
   - "2024-1-22":
     - newpage:
         text: CS > HPC > MPI 基础
@@ -9,56 +13,56 @@
         href: /cs/hpc/openmp/
   - "2024-1-20":
     - newpage:
-        text: LLM > InternLM > OpenCompass 大模型评测
+        text: LLM & LVM > InternLM > OpenCompass 大模型评测
         href: /llm/internlm/lec6/
   - "2024-1-18":
     - newpage:
-        text: LLM > InternLM > LMDeploy 大模型量化部署实践
+        text: LLM & LVM > InternLM > LMDeploy 大模型量化部署实践
         href: /llm/internlm/lec5/
   - "2024-1-11":
     - newpage:
-        text: LLM > InternLM > XTuner 大模型单卡低成本微调实战
+        text: LLM & LVM > InternLM > XTuner 大模型单卡低成本微调实战
         href: /llm/internlm/lec4/
   - "2024-1-8":
     - newpage:
-        text: LLM > InternLM > 基于 InternLM 和 LangChain 搭建你的知识库
+        text: LLM & LVM > InternLM > 基于 InternLM 和 LangChain 搭建你的知识库
         href: /llm/internlm/lec3/
   - "2024-1-4":
     - newpage:
-        text: LLM > InternLM > 轻松分钟玩转书生·浦语大模型趣味 Demo
+        text: LLM & LVM > InternLM > 轻松分钟玩转书生·浦语大模型趣味 Demo
         href: /llm/internlm/lec2/
   - "2024-1-3":
     - newpage:
-        text: LLM > InternLM > 书生·浦语大模型全链路开源开放体系
+        text: LLM & LVM > InternLM > 书生·浦语大模型全链路开源开放体系
         href: /llm/internlm/lec1/
 - "2023":
   - "2023-12-18":
     - newpage:
-        text: LLM > 杂项 > 分布式训练
+        text: LLM & LVM > 杂项 > 分布式训练
         href: /llm/others/dt/
   - "2023-12-14":
     - newpage:
-        text: LLM > 杂项 > Prompt
+        text: LLM & LVM > 杂项 > Prompt
         href: /llm/others/prompt/
   - "2023-12-13":
     - newpage:
-        text: LLM > Transformer > BERT
+        text: LLM & LVM > Transformer > BERT
         href: /llm/transformer/bert/
   - "2023-12-10":
     - newpage:
-        text: LLM > Transformer > Transformer
+        text: LLM & LVM > Transformer > Transformer
         href: /llm/transformer/transformer/
   - "2023-12-09":
     - newpage:
-        text: LLM > Transformer > attention
+        text: LLM & LVM > Transformer > attention
         href: /llm/transformer/attention/
   - "2023-12-08":
     - newpage:
-        text: LLM > NLP > RNNs
+        text: LLM & LVM > NLP > RNNs
         href: /llm/nlp/rnns/
   - "2023-12-07":
     - newpage:
-        text: LLM > NLP > Word2Vec
+        text: LLM & LVM > NLP > Word2Vec
         href: /llm/nlp/word2vec/
   - "2023-12-05":
     - newpage:
