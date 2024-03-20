@@ -23,6 +23,7 @@
 - SLAM:
     - index: slam/
     - 视觉 SLAM 14 讲: slam/vslam14/
+    - DynaSLAM: slam/dynaslam/
 - 点云配准:
     - index: pcr/
     - 前置知识: pcr/prepare/

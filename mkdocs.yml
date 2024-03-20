@@ -218,6 +218,7 @@ nav:
         - cv/slam/vslam14/index.md
         - 初识 SLAM: cv/slam/vslam14/lec1.md
         - 三维空间刚体运动: cv/slam/vslam14/lec2.md
+      - DynaSLAM: cv/slam/dynaslam.md
     - 点云配准:
         - cv/pcr/index.md
         - 前置知识: cv/pcr/prepare.md
