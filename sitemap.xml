@@ -296,6 +296,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.jujimeizuo.cn/cv/slam/ds-slam/</loc>
+         <lastmod>2024-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.jujimeizuo.cn/cv/slam/dynaslam/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>

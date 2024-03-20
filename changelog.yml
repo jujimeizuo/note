@@ -1,6 +1,10 @@
 - "2024":
   - "2024-3-20":
     - newpage:
+        text: CV > SLAM > DS-SLAM
+        href: /cv/slam/ds-slam/
+  - "2024-3-20":
+    - newpage:
         text: CV > SLAM > DynaSLAM
         href: /cv/slam/dynaslam/
   - "2024-3-20":
