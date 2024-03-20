@@ -27,6 +27,9 @@
     - index: pcr/
     - 前置知识: pcr/prepare/
     - ICP: pcr/icp/
+- 数据集:
+    - index: dataset/
+    - TUM: dataset/tum/
 
 {{ END_TOC }}
 

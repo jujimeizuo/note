@@ -199,7 +199,7 @@ nav:
         - 事务: cs/db/redis/work.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
-  - CV & Robot:
+  - 3dCV:
     - cv/index.md
     - 多视图几何:
       - cv/mvg/index.md
@@ -222,8 +222,11 @@ nav:
         - cv/pcr/index.md
         - 前置知识: cv/pcr/prepare.md
         - ICP: cv/pcr/icp.md
+    - 数据集:
+        - cv/dataset/index.md
+        - TUM: cv/dataset/tum.md
     - 三维数据场可视化: cv/3d-visualization.md
-  - LLM & LVM:
+  - LLM:
     - llm/index.md
     - NLP:
       - llm/nlp/index.md
