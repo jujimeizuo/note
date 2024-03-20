@@ -1,9 +1,9 @@
 # 计算机视觉
 
 !!! abstract
-    归档一些计算机视觉（掺点机器人，例如 ROS）相关内容的笔记
+    归档一些计算机视觉（SLAM、SfM、掺点机器人，例如 ROS）相关内容的笔记
 
-    大多都是自学，理解 CV 的本质（雾
+    大多都是自学，理解 CV（数学） 的本质（雾
 
 ## Table of Contents
 
@@ -25,6 +25,7 @@
     - 视觉 SLAM 14 讲: slam/vslam14/
     - ORB-SLAM2: slam/orbslam2/
     - DynaSLAM: slam/dynaslam/
+    - DS-SLAM: slam/ds-slam/
 - 点云配准:
     - index: pcr/
     - 前置知识: pcr/prepare/
@@ -34,9 +35,3 @@
     - TUM: dataset/tum/
 
 {{ END_TOC }}
-
-<!-- 
-- [多视图几何](mvg/)
-- [SLAM](slam/)
-- [点云配准](pcr/)
-- [三维数据场可视化](3d-visualization/) -->

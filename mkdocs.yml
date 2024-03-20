@@ -220,6 +220,7 @@ nav:
         - 三维空间刚体运动: cv/slam/vslam14/lec2.md
       - ORB-SLAM2: cv/slam/orbslam2.md
       - DynaSLAM: cv/slam/dynaslam.md
+      - DS-SLAM: cv/slam/ds-slam.md
     - 点云配准:
         - cv/pcr/index.md
         - 前置知识: cv/pcr/prepare.md

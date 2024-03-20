@@ -6,8 +6,8 @@ comment: true
 # DynaSLAM
 
 !!! abstract
-    - paper：[DynaSLAM: Tracking, Mapping and Inpainting in Dynamic Scenes](https://arxiv.org/abs/1806.05620)
-    - code：https://github.com/BertaBescos/DynaSLAM
+    - paper：[:book: DynaSLAM: Tracking, Mapping and Inpainting in Dynamic Scenes](https://arxiv.org/abs/1806.05620)
+    - code：[:material-github: DynaSLAM](https://github.com/BertaBescos/DynaSLAM)
 
 
 ## INTRUDUCTION
