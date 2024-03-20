@@ -5,6 +5,10 @@
         href: /cv/slam/dynaslam/
   - "2024-3-20":
     - newpage:
+        text: CV > SLAM > ORB-SLAM2
+        href: /cv/slam/orbslam2/
+  - "2024-3-20":
+    - newpage:
         text: CV > Dataset > TUM
         href: /cv/dataset/tum/
   - "2024-1-24":
