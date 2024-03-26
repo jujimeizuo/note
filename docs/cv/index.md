@@ -26,6 +26,7 @@
     - ORB-SLAM2: slam/orbslam2/
     - DynaSLAM: slam/dynaslam/
     - DS-SLAM: slam/ds-slam/
+    - FlowFusion: slam/flowfusion/
 - 点云配准:
     - index: pcr/
     - 前置知识: pcr/prepare/
