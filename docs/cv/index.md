@@ -26,6 +26,7 @@
     - ORB-SLAM2: slam/orbslam2/
     - DynaSLAM: slam/dynaslam/
     - DS-SLAM: slam/ds-slam/
+    - Detect-SLAM: slam/detect-slam/
     - FlowFusion: slam/flowfusion/
 - 点云配准:
     - index: pcr/

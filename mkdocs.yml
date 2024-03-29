@@ -99,6 +99,7 @@ extra_javascript:
 plugins:
   - rss
   - search
+  - callouts
   - glightbox:
       width: 80%
   - encryptcontent:  # now just for one page, need to be improved
@@ -221,6 +222,7 @@ nav:
       - ORB-SLAM2: cv/slam/orbslam2.md
       - DynaSLAM: cv/slam/dynaslam.md
       - DS-SLAM: cv/slam/ds-slam.md
+      - Detect-SLAM: cv/slam/detect-slam.md
       - FlowFusion: cv/slam/flowfusion.md
     - 点云配准:
         - cv/pcr/index.md

@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-3-27":
+    - newpage:
+        text: CV > SLAM > Detect-SLAM
+        href: /cv/slam/detect-slam/
   - "2024-3-26":
     - newpage:
         text: CV > SLAM > FlowFusion

@@ -9,8 +9,8 @@
 - [ORB-SLAM2](orbslam2/)
 - [DynaSLAM](dynaslam/)
 - [DS-SLAM](ds-slam/)
+- [Detect-SLAM](detect-slam/)
 - [FlowFusion](flowfusion/)
-
 
 ## Reference
 
