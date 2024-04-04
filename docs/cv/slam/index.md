@@ -11,6 +11,7 @@
 - [DS-SLAM](ds-slam/)
 - [Detect-SLAM](detect-slam/)
 - [FlowFusion](flowfusion/)
+- [RigidFusion](rigidfusion/)
 
 ## Reference
 
