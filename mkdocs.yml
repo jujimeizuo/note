@@ -225,6 +225,7 @@ nav:
       - Detect-SLAM: cv/slam/detect-slam.md
       - FlowFusion: cv/slam/flowfusion.md
       - RigidFusion: cv/slam/rigidfusion.md
+      - Crowd-SLAM: cv/slam/crowd-slam.md
     - 点云配准:
         - cv/pcr/index.md
         - 前置知识: cv/pcr/prepare.md

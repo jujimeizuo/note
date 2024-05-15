@@ -12,6 +12,7 @@
 - [Detect-SLAM](detect-slam/)
 - [FlowFusion](flowfusion/)
 - [RigidFusion](rigidfusion/)
+- [Crowd-SLAM](crowd-slam/)
 
 ## Reference
 

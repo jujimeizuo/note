@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-5-15":
+    - newpage:
+        text: CV > SLAM > Crowd-SLAM
+        href: /cv/slam/crowd-slam/
   - "2024-4-4":
     - newpage:
         text: CV > SLAM > RigidFusion

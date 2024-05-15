@@ -29,6 +29,7 @@
     - Detect-SLAM: slam/detect-slam/
     - FlowFusion: slam/flowfusion/
     - RigidFusion: slam/rigidfusion/
+    - Crowd-SLAM: slam/crowd-slam/
 - 点云配准:
     - index: pcr/
     - 前置知识: pcr/prepare/
