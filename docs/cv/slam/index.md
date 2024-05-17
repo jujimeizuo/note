@@ -13,6 +13,7 @@
 - [FlowFusion](flowfusion/)
 - [RigidFusion](rigidfusion/)
 - [Crowd-SLAM](crowd-slam/)
+- [LET-NET](let-net/)
 
 ## Reference
 

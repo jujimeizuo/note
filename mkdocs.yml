@@ -226,6 +226,7 @@ nav:
       - FlowFusion: cv/slam/flowfusion.md
       - RigidFusion: cv/slam/rigidfusion.md
       - Crowd-SLAM: cv/slam/crowd-slam.md
+      - LET-NET: cv/slam/let-net.md
     - 点云配准:
         - cv/pcr/index.md
         - 前置知识: cv/pcr/prepare.md

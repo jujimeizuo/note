@@ -30,6 +30,7 @@
     - FlowFusion: slam/flowfusion/
     - RigidFusion: slam/rigidfusion/
     - Crowd-SLAM: slam/crowd-slam/
+    - LET-NET: slam/let-net/
 - 点云配准:
     - index: pcr/
     - 前置知识: pcr/prepare/
