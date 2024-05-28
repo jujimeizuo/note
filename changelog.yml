@@ -1,4 +1,6 @@
 - "2024":
+  - "2024-5-28":
+    - refactor: cp -r pcr prd/
   - "2024-5-17":
     - newpage:
         text: CV > SLAM > LET-NET
