@@ -31,10 +31,9 @@
     - RigidFusion: slam/rigidfusion/
     - Crowd-SLAM: slam/crowd-slam/
     - LET-NET: slam/let-net/
-- 点云配准:
-    - index: pcr/
-    - 前置知识: pcr/prepare/
-    - ICP: pcr/icp/
+- 三维点云:
+    - index: pcd/
+    - 点云配准: pcd/pcr/
 - 数据集:
     - index: dataset/
     - TUM: dataset/tum/

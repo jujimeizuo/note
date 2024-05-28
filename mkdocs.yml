@@ -227,10 +227,12 @@ nav:
       - RigidFusion: cv/slam/rigidfusion.md
       - Crowd-SLAM: cv/slam/crowd-slam.md
       - LET-NET: cv/slam/let-net.md
-    - 点云配准:
-        - cv/pcr/index.md
-        - 前置知识: cv/pcr/prepare.md
-        - ICP: cv/pcr/icp.md
+    - 三维点云:
+        - cv/pcd/index.md
+        - 点云配准:
+            - cv/pcr/index.md
+            - 前置知识: cv/pcr/prepare.md
+            - ICP: cv/pcr/icp.md
     - 数据集:
         - cv/dataset/index.md
         - TUM: cv/dataset/tum.md
