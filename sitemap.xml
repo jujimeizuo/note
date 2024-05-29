@@ -231,6 +231,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.jujimeizuo.cn/cv/dataset/waymo/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/</loc>
          <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>

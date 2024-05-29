@@ -1,6 +1,10 @@
 - "2024":
   - "2024-5-29":
     - newpage:
+        text: CV > Dataset > Waymo
+        href: /cv/dataset/waymo/
+  - "2024-5-29":
+    - newpage:
         text: CV > Dataset > KITTI
         href: /cv/dataset/kitti/
   - "2024-5-28":
