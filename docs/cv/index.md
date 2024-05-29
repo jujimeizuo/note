@@ -37,5 +37,7 @@
 - 数据集:
     - index: dataset/
     - TUM: dataset/tum/
+    - KITTI: dataset/kitti/
+    - Waymo: dataset/waymo/
 
 {{ END_TOC }}
