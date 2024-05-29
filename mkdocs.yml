@@ -230,12 +230,13 @@ nav:
     - 三维点云:
         - cv/pcd/index.md
         - 点云配准:
-            - cv/pcr/index.md
-            - 前置知识: cv/pcr/prepare.md
-            - ICP: cv/pcr/icp.md
+            - cv/pcd/pcr/index.md
+            - 前置知识: cv/pcd/pcr/prepare.md
+            - ICP: cv/pcd/pcr/icp.md
     - 数据集:
         - cv/dataset/index.md
         - TUM: cv/dataset/tum.md
+        - KITTI: cv/dataset/kitti.md
     - 三维数据场可视化: cv/3d-visualization.md
   - LLM:
     - llm/index.md
