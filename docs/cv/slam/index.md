@@ -14,6 +14,7 @@
 - [RigidFusion](rigidfusion/)
 - [Crowd-SLAM](crowd-slam/)
 - [LET-NET](let-net/)
+- [DDN-SLAM](ddn-slam/)
 
 ## Reference
 
