@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-6-6":
+    - newpage:
+        text: CV > SLAM > DDN-SLAM
+        href: /cv/slam/ddn-slam/
   - "2024-5-29":
     - newpage:
         text: CV > Dataset > Waymo
