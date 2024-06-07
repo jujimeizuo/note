@@ -1305,13 +1305,13 @@ var _hmt = _hmt || [];
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1402<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>分钟</p>
 </div>
-<details class="abstract" open="open">
-<summary>Abstract</summary>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
 <ul>
 <li>paper：<a href="http://www.jdl.link/doc/2011/2018122715554767015_fangwei%20zhong%20et%20al.%202018%20-%20detect-slam%20-%20wacv.pdf"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/>Detect-SLAM: Making Object Detection and SLAM Mutually Beneficial</a></li>
 <li>code：<a href="https://github.com/liadbiz/detect-slam"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg></span> Detect-SLAM</a></li>
 </ul>
-</details>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <ul>
 <li>将视觉<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>与深度神经网络<span class="heti-skip"><span class="heti-spacing"> </span>DNN<span class="heti-spacing"> </span></span>的目标检测结合。</li>
@@ -1326,28 +1326,38 @@ var _hmt = _hmt || [];
 </ul>
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-1.jpg"/></a></center>
 <h2 id="related-work">Related Work<a class="headerlink" href="#related-work" title="Permanent link">¶</a></h2>
-<p><strong>SLAM</strong>
-- Paschalis 等人专注于 3D 点云，Sun 等人在 2D Patch 上。它们都包括分割和额外获取移动对象的掩码。
-- Detect SLAM 省略了这些操作并通过更新特征的移动概率来过滤属于移动对象的特征，是基于特征级表示的，并且可以更加鲁棒和高效的。</p>
-<p><strong>DNN Based Object Detection</strong>
-- Faster R-CNN、YOLOv2、SSD
-- Detect-SLAM 中部署 SSD 作为检测器模块
-- 为了克服 SLAM 和检测器之间的延迟，避免逐帧检测，并考虑连续帧的时空一致性</p>
-<p><strong>Combining SLAM and Object Detection</strong>
-- Pillai 设计了一个支持 SLAM 的物体识别系统
-- McCormac 将 SLAM 和 CNN 结合起来，高效生成语义 3D 地图
-- Bowman 将离散识别和数据关联问题与连续 SLAM 优化整合到一个优化问题，得到更精确的轨迹
-- Duncan 创建一种基于单目的方法，使用目标检测器来解决传统单目的方法，使用目标检测器来解决传统单目 SLAM 系统中尺度模糊和漂移问题
-- Sucar 将基于卡尔曼滤波的单目 SLAM 与检测器提供的语义信息相结合，以贝叶斯方案估计 3D 模型的全局规模</p>
+<p><strong>SLAM</strong></p>
+<ul>
+<li><span>Paschalis<span class="heti-spacing"> </span></span>等人专注于<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点云，<span>Sun<span class="heti-spacing"> </span></span>等人在<span class="heti-skip"><span class="heti-spacing"> </span>2D Patch<span class="heti-spacing"> </span></span>上。它们都包括分割和额外获取移动对象的掩码。</li>
+<li><span>Detect SLAM<span class="heti-spacing"> </span></span>省略了这些操作并通过更新特征的移动概率来过滤属于移动对象的特征，是基于特征级表示的，并且可以更加鲁棒和高效的。</li>
+</ul>
+<p><strong>DNN Based Object Detection</strong></p>
+<ul>
+<li>Faster R-CNN、YOLOv2、SSD</li>
+<li><span>Detect-SLAM<span class="heti-spacing"> </span></span>中部署<span class="heti-skip"><span class="heti-spacing"> </span>SSD<span class="heti-spacing"> </span></span>作为检测器模块</li>
+<li>为了克服<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>和检测器之间的延迟，避免逐帧检测，并考虑连续帧的时空一致性</li>
+</ul>
+<p><strong>Combining SLAM and Object Detection</strong></p>
+<ul>
+<li><span>Pillai<span class="heti-spacing"> </span></span>设计了一个支持<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>的物体识别系统</li>
+<li><span>McCormac<span class="heti-spacing"> </span></span>将<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>CNN<span class="heti-spacing"> </span></span>结合起来，高效生成语义<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>地图</li>
+<li><span>Bowman<span class="heti-spacing"> </span></span>将离散识别和数据关联问题与连续<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>优化整合到一个优化问题，得到更精确的轨迹</li>
+<li><span>Duncan<span class="heti-spacing"> </span></span>创建一种基于单目的方法，使用目标检测器来解决传统单目的方法，使用目标检测器来解决传统单目<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>系统中尺度模糊和漂移问题</li>
+<li><span>Sucar<span class="heti-spacing"> </span></span>将基于卡尔曼滤波的单目<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>与检测器提供的语义信息相结合，以贝叶斯方案估计<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>模型的全局规模</li>
+</ul>
 <h2 id="detect-slam_1">Detect-SLAM<a class="headerlink" href="#detect-slam_1" title="Permanent link">¶</a></h2>
-<p><span>Detect-SLAM<span class="heti-spacing"> </span></span>以<span class="heti-skip"><span class="heti-spacing"> </span>ORB-SLAM2<span class="heti-spacing"> </span></span>为基，与之相比，包括三个新流程：
-1. 动态物体去除，过滤掉与动态物体相关的特征；
-2. 对象建图，重建在关键帧中被检测到的静态物体，由分配有对象 ID 的稠密点云组成；
-3. SLAM 增强检测器，利用对象地图作为先验知识来提高在具有挑战性的环境中的检测性能；</p>
+<p><span>Detect-SLAM<span class="heti-spacing"> </span></span>以<span class="heti-skip"><span class="heti-spacing"> </span>ORB-SLAM2<span class="heti-spacing"> </span></span>为基，与之相比，包括三个新流程：</p>
+<ol>
+<li>动态物体去除，过滤掉与动态物体相关的特征；</li>
+<li>对象建图，重建在关键帧中被检测到的静态物体，由分配有对象<span class="heti-skip"><span class="heti-spacing"> </span>ID<span class="heti-spacing"> </span></span>的稠密点云组成；</li>
+<li><span>SLAM<span class="heti-spacing"> </span></span>增强检测器，利用对象地图作为先验知识来提高在具有挑战性的环境中的检测性能；</li>
+</ol>
 <h3 id="moving-objects-removal">Moving Objects Removal<a class="headerlink" href="#moving-objects-removal" title="Permanent link">¶</a></h3>
-<p>针对逐帧使用<span class="heti-skip"><span class="heti-spacing"> </span>SSD<span class="heti-spacing"> </span></span>目标检测整个系统的速度也只有<span><span class="heti-spacing"> </span>3FPS</span>，这一部分提出两个策略解决：
-1. 仅在关键帧中做目标检测，然后更新局部地图中点的移动概率以加速线程；
-2. 在相机位姿估计前，通过特征匹配和匹配点扩展在跟踪线程中传播运动概率，有效地去除动态物体上提取的特征；</p>
+<p>针对逐帧使用<span class="heti-skip"><span class="heti-spacing"> </span>SSD<span class="heti-spacing"> </span></span>目标检测整个系统的速度也只有<span><span class="heti-spacing"> </span>3FPS</span>，这一部分提出两个策略解决：</p>
+<ol>
+<li>仅在关键帧中做目标检测，然后更新局部地图中点的移动概率以加速线程；</li>
+<li>在相机位姿估计前，通过特征匹配和匹配点扩展在跟踪线程中传播运动概率，有效地去除动态物体上提取的特征；</li>
+</ol>
 <p>把属于运动物体的特征点的概率称为运动概率。如下图所示，我们根据移动概率将这些关键点区分为四种状态。在匹配点扩展中使用两个高置信度点将移动概率传播到相邻的不匹配点。在每个点通过传播获得移动概率后，我们移除所有动态点，并使用<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>过滤其他异常值以进行姿态估计。</p>
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM2.jpg"/></a></center>
 <p><strong>Updating Moving Probability</strong></p>
@@ -1357,9 +1367,11 @@ P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \qua
 \]</div>
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM3.jpg"/></a></center>
 <p><strong>Moving Probability Propagation</strong></p>
-<p>在跟踪线程中，通过两个操作逐帧估计每个关键点的移动概率：
-1. 特征匹配
-2. 匹配点扩展（移动概率传播）</p>
+<p>在跟踪线程中，通过两个操作逐帧估计每个关键点的移动概率：</p>
+<ol>
+<li>特征匹配</li>
+<li>匹配点扩展（移动概率传播）</li>
+</ol>
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-4.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-4.jpg"/></a></center>
 <h3 id="mapping-objects">Mapping Objects<a class="headerlink" href="#mapping-objects" title="Permanent link">¶</a></h3>
 <p><strong>Predicting Region ID</strong></p>
@@ -1385,7 +1397,7 @@ P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \qua
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月29日 14:24:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月7日 10:46:16</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月29日 14:24:52</span>
