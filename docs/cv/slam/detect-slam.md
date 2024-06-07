@@ -4,9 +4,9 @@ counter: true
 ---
 # Detect-SLAM
 
-> [!abstract]+
- > - paper：[:book:Detect-SLAM: Making Object Detection and SLAM Mutually Beneficial](http://www.jdl.link/doc/2011/2018122715554767015_fangwei%20zhong%20et%20al.%202018%20-%20detect-slam%20-%20wacv.pdf)
- > - code：[:material-github: Detect-SLAM](https://github.com/liadbiz/detect-slam)
+> [!abstract]
+> - paper：[:book:Detect-SLAM: Making Object Detection and SLAM Mutually Beneficial](http://www.jdl.link/doc/2011/2018122715554767015_fangwei%20zhong%20et%20al.%202018%20-%20detect-slam%20-%20wacv.pdf)
+> - code：[:material-github: Detect-SLAM](https://github.com/liadbiz/detect-slam)
 
 ## Introduction
 
@@ -23,15 +23,18 @@ counter: true
 ## Related Work
 
 **SLAM**
+
 - Paschalis 等人专注于 3D 点云，Sun 等人在 2D Patch 上。它们都包括分割和额外获取移动对象的掩码。
 - Detect SLAM 省略了这些操作并通过更新特征的移动概率来过滤属于移动对象的特征，是基于特征级表示的，并且可以更加鲁棒和高效的。
 
 **DNN Based Object Detection**
+
 - Faster R-CNN、YOLOv2、SSD
 - Detect-SLAM 中部署 SSD 作为检测器模块
 - 为了克服 SLAM 和检测器之间的延迟，避免逐帧检测，并考虑连续帧的时空一致性
 
 **Combining SLAM and Object Detection**
+
 - Pillai 设计了一个支持 SLAM 的物体识别系统
 - McCormac 将 SLAM 和 CNN 结合起来，高效生成语义 3D 地图
 - Bowman 将离散识别和数据关联问题与连续 SLAM 优化整合到一个优化问题，得到更精确的轨迹
@@ -41,6 +44,7 @@ counter: true
 ## Detect-SLAM
 
 Detect-SLAM 以 ORB-SLAM2 为基，与之相比，包括三个新流程：
+
 1. 动态物体去除，过滤掉与动态物体相关的特征；
 2. 对象建图，重建在关键帧中被检测到的静态物体，由分配有对象 ID 的稠密点云组成；
 3. SLAM 增强检测器，利用对象地图作为先验知识来提高在具有挑战性的环境中的检测性能；
@@ -48,6 +52,7 @@ Detect-SLAM 以 ORB-SLAM2 为基，与之相比，包括三个新流程：
 ### Moving Objects Removal
 
 针对逐帧使用 SSD 目标检测整个系统的速度也只有 3FPS，这一部分提出两个策略解决：
+
 1. 仅在关键帧中做目标检测，然后更新局部地图中点的移动概率以加速线程；
 2. 在相机位姿估计前，通过特征匹配和匹配点扩展在跟踪线程中传播运动概率，有效地去除动态物体上提取的特征；
 
@@ -70,6 +75,7 @@ $$
 **Moving Probability Propagation**
 
 在跟踪线程中，通过两个操作逐帧估计每个关键点的移动概率：
+
 1. 特征匹配
 2. 匹配点扩展（移动概率传播）
 
