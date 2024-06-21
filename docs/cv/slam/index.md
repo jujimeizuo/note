@@ -15,6 +15,7 @@
 - [Crowd-SLAM](crowd-slam/)
 - [LET-NET](let-net/)
 - [DDN-SLAM](ddn-slam/)
+- [Co-SLAM](co-slam/)
 
 ## Reference
 

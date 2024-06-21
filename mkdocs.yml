@@ -228,6 +228,7 @@ nav:
       - Crowd-SLAM: cv/slam/crowd-slam.md
       - LET-NET: cv/slam/let-net.md
       - DDN-SLAM: cv/slam/ddn-slam.md
+      - Co-SLAM: cv/slam/co-slam.md
     - 三维点云:
         - cv/pcd/index.md
         - 点云配准:
