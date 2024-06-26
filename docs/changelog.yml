@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-6-26":
+    - newpage:
+        text: CV > SLAM > DeepV2D
+        href: /cv/slam/deepv2d/
   - "2024-6-21":
     - newpage:
         text: CV > SLAM > Co-SLAM

@@ -16,6 +16,7 @@
 - [LET-NET](let-net/)
 - [DDN-SLAM](ddn-slam/)
 - [Co-SLAM](co-slam/)
+- [DeepV2D](deepv2d/)
 
 ## Reference
 
