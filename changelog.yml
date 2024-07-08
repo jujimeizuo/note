@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-7-8":
+    - newpage:
+        text: CV > SLAM > EndoscpoyDepthEstimation
+        href: /cv/slam/endoscopy-depth-estimation/
   - "2024-6-26":
     - newpage:
         text: CV > SLAM > DeepV2D
