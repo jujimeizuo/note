@@ -35,6 +35,7 @@
     - Co-SLAM: slam/co-slam/
     - DeepV2D: slam/deepv2d/
     - EndoscopyDepthEstimation: slam/endoscopy-depth-estimation/
+    - NID-SLAM: slam/nid-slam/
 - 三维点云:
     - index: pcd/
     - 点云配准: pcd/pcr/

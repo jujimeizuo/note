@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-7-29":
+    - newpage:
+        text: CV > SLAM > NID-SLAM
+        href: /cv/slam/nid-slam/
   - "2024-7-8":
     - newpage:
         text: CV > SLAM > EndoscpoyDepthEstimation
