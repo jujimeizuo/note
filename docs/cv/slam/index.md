@@ -19,6 +19,7 @@
 - [DeepV2D](deepv2d/)
 - [EndoscopyDepthEstimation](endoscopy-depth-estimation/)
 - [NID-SLAM](nid-slam/)
+- [iMAP](imap/)
 
 ## Reference
 

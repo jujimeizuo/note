@@ -232,6 +232,7 @@ nav:
       - DeepV2D: cv/slam/deepv2d.md
       - EndoscopyDepthEstimation: cv/slam/endoscopy-depth-estimation.md
       - NID-SLAM: cv/slam/nid-slam.md
+      - iMAP: cv/slam/imap.md
     - 三维点云:
         - cv/pcd/index.md
         - 点云配准:
