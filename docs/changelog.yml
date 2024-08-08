@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-8-8":
+    - newpage:
+        text: CV > SLAM > NICE-SLAM
+        href: /cv/slam/nice-slam/
   - "2024-8-3":
     - newpage:
         text: CV > SLAM > iMAP

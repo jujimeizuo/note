@@ -37,6 +37,7 @@
     - EndoscopyDepthEstimation: slam/endoscopy-depth-estimation/
     - NID-SLAM: slam/nid-slam/
     - iMAP: slam/imap/
+    - NICE-SLAM: slam/nice-slam/
 - 三维点云:
     - index: pcd/
     - 点云配准: pcd/pcr/

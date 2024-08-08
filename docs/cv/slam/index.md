@@ -20,6 +20,7 @@
 - [EndoscopyDepthEstimation](endoscopy-depth-estimation/)
 - [NID-SLAM](nid-slam/)
 - [iMAP](imap/)
+- [NICE-SLAM](nice-slam/)
 
 ## Reference
 
@@ -30,3 +31,5 @@
 - [动态环境下的slam问题如何解决？](https://www.zhihu.com/question/47817909)
 - [SLAM中去除动态物体的部分方法（主要是视觉SLAM）](https://blog.csdn.net/catpico/article/details/120897957)
 - [SLAM中的动态物体去除问题](https://blog.csdn.net/zhaoliang38/article/details/129054732)
+- [基于神经辐射场的（NeRF-based） SLAM 综述](https://zhuanlan.zhihu.com/p/555996624)
+- [解锁SLAM新纪元！基于NeRF和3D GS方法综述](https://gfkjgy.com/cms/show-5157.html?p_uid=)
