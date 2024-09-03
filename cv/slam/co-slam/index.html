@@ -1354,15 +1354,19 @@ var _hmt = _hmt || [];
 <p><span>iMAP<span class="heti-spacing"> </span></span>采用<span class="heti-skip"><span class="heti-spacing"> </span>MLP<span class="heti-spacing"> </span></span>在接近实时内同时追踪和建图，从而实现了<span class="heti-skip"><span class="heti-spacing"> </span>10 Hz tracking<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>2 Hz<span class="heti-spacing"> </span></span>建图。为了减少计算开销并提高可扩展性，<span>NICE-SLAM<span class="heti-spacing"> </span></span>采用了多层特征网格来表示场景。然而，由于特征网格只进行局部更新，因此无法实现合理的<span><span class="heti-spacing"> </span>hole-filling</span>。</p>
 <h2 id="idea">Idea<a class="headerlink" href="#idea" title="Permanent link">¶</a></h2>
 <ol>
-<li><strong>Joint Corrdinate and Parametric Encoding</strong></li>
+<li><strong>Joint Corrdinate and Parametric Encoding</strong><ol>
 <li>基于坐标的表示方法受益于<span class="heti-skip"><span class="heti-spacing"> </span>MLP<span class="heti-spacing"> </span></span>的平滑一致性实验，能够得到高保真的重建结果，但是收敛太慢，而且会发生灾难性遗忘。</li>
 <li>基于参数的表示方法提高了计算效率，但在平滑性和<span class="heti-skip"><span class="heti-spacing"> </span>hole-filling<span class="heti-spacing"> </span></span>上表现不好。</li>
 <li><span>Co-SLAM<span class="heti-spacing"> </span></span>采用了联合坐标和参数编码，适用<span class="heti-skip"><span class="heti-spacing"> </span>One-blob<span class="heti-spacing"> </span></span>编码，而不是将空间坐标嵌入多个频段，在<span class="heti-skip"><span class="heti-spacing"> </span>hashGrid<span class="heti-spacing"> </span></span>的多分辨率特征网络表征中使用<span class="heti-skip"><span class="heti-spacing"> </span>One-blob<span class="heti-spacing"> </span></span>编码，可以实现快速收敛和<span class="heti-skip"><span class="heti-spacing"> </span>online-slam<span class="heti-spacing"> </span></span>所需的<span><span class="heti-spacing"> </span>hole-filling</span>。</li>
+</ol>
+</li>
 <li><strong>Depth and Color Rendering</strong>：通过对沿采样射线的预测值进行积分，呈现深度和色彩。</li>
-<li><strong>Tracking and BA</strong></li>
+<li><strong>Tracking and BA</strong><ol>
 <li>目标函数：颜色和深度<span class="heti-skip"><span class="heti-spacing"> </span>loss<span class="heti-spacing"> </span></span>通过平方误差计算，</li>
 <li>Camera Tracking：相机到世界的变换矩阵<span><span class="heti-spacing"> </span>T</span>，基于匀速恒定运动模型，然后选取当前帧内的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N_t\)</span> (1024)<span class="heti-spacing"> </span></span>个像素，通过最小化目标函数优化位姿，而目标函数与相机外参有关。</li>
 <li>BA：在<span class="heti-skip"><span class="heti-spacing"> </span>Co-SLAM<span class="heti-spacing"> </span></span>中，不再需要存储完整的关键帧图像或关键帧选择。相反只存储代表每个关键帧的像素子集（约<span><span class="heti-spacing"> </span>5%</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。为了进行联合优化，我们从全局关键帧列表中随机抽取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N_g\)</span><span class="heti-spacing"> </span></span>条射线，以优化场景表示和相机位姿。</li>
+</ol>
+</li>
 </ol>
 <p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Co-SLAM-1.png"><img alt="Framework of Co-SLAM" src="https://cdn.jujimeizuo.cn/note/cv/slam/Co-SLAM-1.png"/></a></center>
 <h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">¶</a></h2>
@@ -1372,7 +1376,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月21日 21:14:10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年9月3日 18:51:01</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月21日 21:14:10</span>
