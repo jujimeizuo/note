@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-9-15":
+    - newpage:
+        text: CV > SLAM > NeRF-Evaluation
+        href: /cv/slam/nerf-evaluation/
   - "2024-8-8":
     - newpage:
         text: CV > SLAM > NICE-SLAM
