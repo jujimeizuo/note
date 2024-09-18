@@ -21,6 +21,7 @@
 - [NID-SLAM](nid-slam/)
 - [iMAP](imap/)
 - [NICE-SLAM](nice-slam/)
+- [NeRF-Evaluation](nerf-evaluation/)
 
 ## Reference
 

@@ -234,6 +234,7 @@ nav:
       - NID-SLAM: cv/slam/nid-slam.md
       - iMAP: cv/slam/imap.md
       - NICE-SLAM: cv/slam/nice-slam.md
+      - NeRF-Evaluation: cv/slam/nerf-evaluation.md
     - 三维点云:
         - cv/pcd/index.md
         - 点云配准:
