@@ -14,6 +14,7 @@
 - [RigidFusion](rigidfusion/)
 - [Crowd-SLAM](crowd-slam/)
 - [LET-NET](let-net/)
+- [NeRF](nerf/)
 - [DDN-SLAM](ddn-slam/)
 - [Co-SLAM](co-slam/)
 - [DeepV2D](deepv2d/)

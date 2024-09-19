@@ -31,6 +31,7 @@
     - RigidFusion: slam/rigidfusion/
     - Crowd-SLAM: slam/crowd-slam/
     - LET-NET: slam/let-net/
+    - NeRF: slam/nerf/
     - DDN-SLAM: slam/ddn-slam/
     - Co-SLAM: slam/co-slam/
     - DeepV2D: slam/deepv2d/
