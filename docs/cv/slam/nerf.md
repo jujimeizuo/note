@@ -44,8 +44,7 @@ comment: true
 
 #### 光线的数学表示与光线采样
 
-> [!question]
-> 一条光线上所有位置上的颜色和密度的合成，就是成像图上的像素 RGB 值，那么这条光线怎么表示？以及怎么在光线上取一些点？
+> [!Question] 一条光线上所有位置上的颜色和密度的合成，就是成像图上的像素 RGB 值，那么这条光线怎么表示？以及怎么在光线上取一些点？
 
 ##### nerf 的光线表示
 
@@ -97,8 +96,7 @@ $$
 
 #### 光线成像模型
 
-> [!question]
-> 怎么合成一条光线上的所有粒子的图像?
+> [!Question] 怎么合成一条光线上的所有粒子的图像?
 
 1. 分析单点 P 对成像的贡献。P 距离线起点的距离是 t，然后能得出 P 点坐标 $\bold{r}(t)$
     - <img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-10.png">
@@ -128,8 +126,7 @@ $$
 
 #### Positional encoding
 
-> [!question]
-> 对神经网络直接输入 5D 会导致渲染效果较差，不能很好地表示颜色和几何中高频变化。
+> [!Question] 对神经网络直接输入 5D 会导致渲染效果较差，不能很好地表示颜色和几何中高频变化。
 
 - 将输入的三维坐标进行位置编码：
 
@@ -215,4 +212,5 @@ $$
 
 - [nerf-learn](https://github.com/yangkang2021/nerf-learn)
 - [NeRF开篇论文解读 NeRF](https://wx.zsxq.com/topic/188588114145522)
+- [【较真系列】讲人话-NeRF全解（原理+代码+公式）](https://www.bilibili.com/video/BV1CC411V7oq/?vd_source=5e048b202705330980eefcc9a56cc5d0)
 - https://cloud.baidu.com/article/2741971

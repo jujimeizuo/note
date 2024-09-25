@@ -23,6 +23,7 @@
 - [iMAP](imap/)
 - [NICE-SLAM](nice-slam/)
 - [NeRF-Evaluation](nerf-evaluation/)
+- [3DGS](3dgs/)
 
 ## Reference
 
@@ -35,3 +36,4 @@
 - [SLAM中的动态物体去除问题](https://blog.csdn.net/zhaoliang38/article/details/129054732)
 - [基于神经辐射场的（NeRF-based） SLAM 综述](https://zhuanlan.zhihu.com/p/555996624)
 - [解锁SLAM新纪元！基于NeRF和3D GS方法综述](https://gfkjgy.com/cms/show-5157.html?p_uid=)
+- [学习笔记之——NeRF SLAM（基于神经辐射场的SLAM）](https://blog.csdn.net/gwplovekimi/article/details/135083274)

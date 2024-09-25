@@ -236,6 +236,7 @@ nav:
       - iMAP: cv/slam/imap.md
       - NICE-SLAM: cv/slam/nice-slam.md
       - NeRF-Evaluation: cv/slam/nerf-evaluation.md
+      - 3DGS: cv/slam/3dgs.md
     - 三维点云:
         - cv/pcd/index.md
         - 点云配准:

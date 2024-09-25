@@ -40,6 +40,7 @@
     - iMAP: slam/imap/
     - NICE-SLAM: slam/nice-slam/
     - NeRF-Evaluation: slam/nerf-evaluation/
+    - 3DGS: slam/3dgs/
 - 三维点云:
     - index: pcd/
     - 点云配准: pcd/pcr/
