@@ -20,27 +20,6 @@
     - 单视图几何: mvg/one-vg/
     - 对极几何和基本矩阵: mvg/ag-fm/
     - 摄像机和结构的 3D 重构: mvg/3dr-camera-structure/
-- SLAM:
-    - index: slam/
-    - 视觉 SLAM 14 讲: slam/vslam14/
-    - ORB-SLAM2: slam/orbslam2/
-    - DynaSLAM: slam/dynaslam/
-    - DS-SLAM: slam/ds-slam/
-    - Detect-SLAM: slam/detect-slam/
-    - FlowFusion: slam/flowfusion/
-    - RigidFusion: slam/rigidfusion/
-    - Crowd-SLAM: slam/crowd-slam/
-    - LET-NET: slam/let-net/
-    - NeRF: slam/nerf/
-    - DDN-SLAM: slam/ddn-slam/
-    - Co-SLAM: slam/co-slam/
-    - DeepV2D: slam/deepv2d/
-    - EndoscopyDepthEstimation: slam/endoscopy-depth-estimation/
-    - NID-SLAM: slam/nid-slam/
-    - iMAP: slam/imap/
-    - NICE-SLAM: slam/nice-slam/
-    - NeRF-Evaluation: slam/nerf-evaluation/
-    - 3DGS: slam/3dgs/
 - 三维点云:
     - index: pcd/
     - 点云配准: pcd/pcr/
@@ -49,5 +28,13 @@
     - TUM: dataset/tum/
     - KITTI: dataset/kitti/
     - Waymo: dataset/waymo/
+    - index: 3d-visualization/
+- 论文:
+    - index: papers/
+    - Dynamic SLAM 系列: papers/dynamic-slam/
+    - NeRF 系列: papers/nerf/
+    - 3DGS 系列: papers/3dgs/
+    - Others: papers/others/
+
 
 {{ END_TOC }}

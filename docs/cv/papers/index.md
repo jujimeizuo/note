@@ -1,29 +1,36 @@
 # SLAM
 
 !!! abstract
-    归档一些学习 SLAM 的相关笔记
+    归档一些学习三维视觉的相关笔记
 
 ## Table of Contents
 
-- [视觉 SLAM 十四讲](vslam14/)
-- [ORB-SLAM2](orbslam2/)
-- [DynaSLAM](dynaslam/)
-- [DS-SLAM](ds-slam/)
-- [Detect-SLAM](detect-slam/)
-- [FlowFusion](flowfusion/)
-- [RigidFusion](rigidfusion/)
-- [Crowd-SLAM](crowd-slam/)
-- [LET-NET](let-net/)
-- [NeRF](nerf/)
-- [DDN-SLAM](ddn-slam/)
-- [Co-SLAM](co-slam/)
-- [DeepV2D](deepv2d/)
-- [EndoscopyDepthEstimation](endoscopy-depth-estimation/)
-- [NID-SLAM](nid-slam/)
-- [iMAP](imap/)
-- [NICE-SLAM](nice-slam/)
-- [NeRF-Evaluation](nerf-evaluation/)
-- [3DGS](3dgs/)
+- Dynamic-SLAM 系列
+    - [DynaSLAM](dynamic-slam/dynaslam/)
+    - [DS-SLAM](dynamic-slam/ds-slam/)
+    - [Detect-SLAM](dynamic-slam/detect-slam/)
+    - [FlowFusion](dynamic-slam/flowfusion/)
+    - [RigidFusion](dynamic-slam/rigidfusion/)
+    - [Crowd-SLAM](dynamic-slam/crowd-slam/)
+
+- NeRF 系列
+    - [NeRF](nerf/nerf/)
+    - [DDN-SLAM](nerf/ddn-slam/)
+    - [Co-SLAM](nerf/co-slam/)
+    - [NID-SLAM](nerf/nid-slam/)
+    - [iMAP](nerf/imap/)
+    - [NICE-SLAM](nerf/nice-slam/)
+    - [NeRF-Evaluation](nerf/nerf-evaluation/)
+
+- 3DGS 系列
+    - [3DGS](3dgs/3dgs)
+
+- Other
+    - [SLAM 14 讲](others/vslam14)
+    - [ORB-SLAM2](others/orbslam2)
+    - [LET-NET](others/let-net)
+    - [DeepV2D](others/deepv2d)
+    - [EndoscopyDepthEstimation](others/endoscopy-depth-estimation)
 
 ## Reference
 
