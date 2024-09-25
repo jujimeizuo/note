@@ -219,12 +219,12 @@ nav:
             - cv/pcd/pcr/index.md
             - 前置知识: cv/pcd/pcr/prepare.md
             - ICP: cv/pcd/pcr/icp.md
-    - 数据集:
+    - 数据集相关:
         - cv/dataset/index.md
         - TUM: cv/dataset/tum.md
         - KITTI: cv/dataset/kitti.md
         - Waymo: cv/dataset/waymo.md
-    - 论文:
+    - 论文相关:
       - cv/papers/index.md
       - Dynamic SLAM 系列:
         - cv/papers/dynamic-slam/index.md
@@ -246,7 +246,7 @@ nav:
       - 3DGS 系列:
         - cv/papers/3dgs/index.md
         - 3DGS: cv/papers/3dgs/3dgs.md
-      - Others:
+      - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:
           - cv/papers/others/vslam14/index.md
@@ -256,6 +256,9 @@ nav:
         - LET-NET: cv/papers/others/let-net.md
         - DeepV2D: cv/papers/others/deepv2d.md
         - EndoscopyDepthEstimation: cv/papers/others/endoscopy-depth-estimation.md
+    - 工具相关:
+      - cv/utils/index.md
+      - COLMAP: cv/utils/colmap.md
     - 三维数据场可视化: cv/3d-visualization.md
   - LLM:
     - llm/index.md

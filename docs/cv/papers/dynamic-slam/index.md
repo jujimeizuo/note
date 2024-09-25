@@ -1,4 +1,4 @@
-# 多视图几何
+# 动态 SLAM 系列
 
 !!! abstract
     动态 SLAM 系列相关内容

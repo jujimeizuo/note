@@ -23,18 +23,20 @@
 - 三维点云:
     - index: pcd/
     - 点云配准: pcd/pcr/
-- 数据集:
+- 数据集相关:
     - index: dataset/
     - TUM: dataset/tum/
     - KITTI: dataset/kitti/
     - Waymo: dataset/waymo/
     - index: 3d-visualization/
-- 论文:
+- 论文相关:
     - index: papers/
     - Dynamic SLAM 系列: papers/dynamic-slam/
     - NeRF 系列: papers/nerf/
     - 3DGS 系列: papers/3dgs/
     - Others: papers/others/
-
+- 工具相关:
+    - index: utils/
+    - COLMAP: utils/colmap/
 
 {{ END_TOC }}

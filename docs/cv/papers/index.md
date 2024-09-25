@@ -25,7 +25,7 @@
 - 3DGS 系列
     - [3DGS](3dgs/3dgs)
 
-- Other
+- 杂项
     - [SLAM 14 讲](others/vslam14)
     - [ORB-SLAM2](others/orbslam2)
     - [LET-NET](others/let-net)
