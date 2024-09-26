@@ -1,7 +1,10 @@
 - "2024":
+  - "2024-9-26":
+    - pageupdate:
+        text: add Experiments Section
+        href: /cv/papers/3dgs/3dgs/
   - "2024-9-25":
     - refactor: adjust the structure of slam
-  - "2024-9-25":
     - newpage:
         text: CV > SLAM > 3DGS
         href: /cv/slam/3dgs/
