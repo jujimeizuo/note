@@ -427,15 +427,26 @@ $$
 
 ## Source Code Review
 
-
-## Pipeline
-
-
+学习自 [学习笔记之——3D Gaussian Splatting源码解读\_gaussian splatting源码分析-CSDN博客](https://blog.csdn.net/gwplovekimi/article/details/135500438?csdn_share_tail=%7B%22type%22:%22blog%22,%22rType%22:%22article%22,%22rId%22:%22135500438%22,%22source%22:%222201_75451272%22%7D&fromshare=blogdetail)
 
 ## Experiment
 
+> [!info] 硬件配置
+> - Ubuntu 20.04 + 4060Ti + CUDA 11.8
+> - 跑在 Docker 11.8.0-cudnn8-devel-ubuntu22.04（镜像）
 
 
+### Office Scenes
+<center>
+<video src="https://cdn.jujimeizuo.cn/note/cv/slam/3dgs-office-scenes-train.mp4" controls width="100%">
+</video>
+</center>
+
+### Own Scenes
+
+<center>
+<img src="https://cdn.jujimeizuo.cn/note/cv/slam/3dgs-own-scenes-fzt-computer.png" width="100%">
+</center>
 
 ## Reference
 
@@ -447,3 +458,6 @@ $$
 - [（干货）《雅可比矩阵是什么东西》3Blue1Brown，搬自可汗学院。 【自制中文字幕】](https://www.bilibili.com/video/BV1NJ411r7ja/?share_source=copy_web&vd_source=1c40518818373e585c08ba3456deee48)
 - [学习笔记之——3D Gaussian Splatting源码解读](https://blog.csdn.net/gwplovekimi/article/details/135500438?csdn_share_tail=%7B%22type%22:%22blog%22,%22rType%22:%22article%22,%22rId%22:%22135500438%22,%22source%22:%222201_75451272%22%7D&fromshare=blogdetail)
 - [3dgs\_蜡笔小新配吉良吉影的博客-CSDN博客](https://blog.csdn.net/m0_63843473/category_12585206.html)
+- [（三维重建学习）3D Gaussian Splatting & Instant-NGP环境配置\_3d gaussian splatting 环境搭建-CSDN博客](https://blog.csdn.net/Wu_JingYi0829/article/details/134865985)
+- [Gaussian Splatting代码安装部署（windows）\_gaussian splatting github-CSDN博客](https://blog.csdn.net/koukutou_mikiya/article/details/135137181)
+- [3D Gaussian Splatting入门指南 - 哔哩哔哩](https://www.bilibili.com/read/cv26465887/)

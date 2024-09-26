@@ -7,7 +7,7 @@ comment: true
 
 > [!abstract]
 > - COLMAP 是一种通用的运动结构(SfM) 和多视图立体(MVS) 管道，具有图形和命令行界面。
-> - 以下的实验环境：Ubuntu 20.04（宿主机 ）、Docker Ubuntu 20.04（镜像）、CUDA 11.3
+> - 以下的实验环境：Ubuntu 20.04（宿主机 ）、Docker 11.8.0-cudnn8-devel-ubuntu22.04（镜像）、CUDA 11.8
 
 
 ## Installation
@@ -60,13 +60,14 @@ ninja
 sudo ninja install
 ```
 
-> [!error] 使用 Ubuntu 的默认 CUDA 软件包和 GCC 进行编译时会出现问题，并且必须针对 GCC 10 进行编译
-> ```bash
-> sudo apt-get install gcc-10 g++-10
-> export CC=/usr/bin/gcc-10
-> export CXX=/usr/bin/g++-10
-> export CUDAHOSTCXX=/usr/bin/g++-10
-> # ... and then run CMake against COLMAP's sources.
+> [!error] nvcc fatal : unsupported gpu architecture ‘compute_native’
+> ```text
+> # 在 colmap/cmake/FindDependencies.cmake 中添加一句 `set(CMAKE_CUDA_ARCHITECTURES "80")`，如下所示：
+> set(CMAKE_CUDA_ARCHITECTURES "80")
+> if(CUDA_ENABLED AND CUDA_FOUND)
+>     if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
+>         set(CMAKE_CUDA_ARCHITECTURES "native")
+>     endif()
 > ```
 
 ## Experiment
@@ -116,11 +117,12 @@ colmap gui
 
 
 > [!question] 生成的文件夹不能直接用于 `NGP` 或 `3DGS`
-> 在 `3DGS` 中，已经有脚本转换
-> ```bash
-> python convert.py -s location [--resize] #If not resizing, ImageMagick is not needed
->  ```
-> > [!example]
+> > [!success]- 3DGS
+> > 在 `3DGS` 中，有脚本转换
+> > ```bash
+> > python convert.py -s location [--resize] #If not resizing, ImageMagick is not needed
+> > ```
+> >
 > > 将图片打包成如下再执行脚本
 > > ```text
 > > location
@@ -129,7 +131,17 @@ colmap gui
 > >    |---<image 1>
 > >    |---...
 > > ```
-
+> >
+> > 如果是视频，先用 `ffmpeg` 抽帧
+> > ```bash
+> > ffmpeg -i ./data/data_classroom/classroom.mov -qscale:v 1 -qmin 1 -vf fps=8 /path/to/data/input/%04d.jpg
+> > ```
+> ---
+> > [!success]- instant-NGP
+> > 在 `instant-NGP` 中，有脚本转换
+> > ```bash
+> > python scripts\colmap2nerf.py --video_in [mp4]  --run_colmap --colmap_db data\data_classroom\colmap.db --text data\data_classroom\text_colmap   --aabb_scale 16 --out data\data_classroom\transforms.json  --colmap_matcher exhaustive  --video_fps 8
+> > ```
 
 ## Picture Capture Process
 
@@ -145,3 +157,4 @@ colmap gui
 - [Installation — COLMAP 3.11.0.dev0 documentation](https://colmap.github.io/install.html)
 - [实验笔记之——Linux实现COLMAP\_linux colmap-CSDN博客](https://blog.csdn.net/gwplovekimi/article/details/135389922)
 - [ColMap使用 | 悠闲の小屋](https://keepjolly.com/archives/colmap-use/)
+- [三维重建instant-ngp环境部署与colmap、ffmpeg的脚本参数使用 - lefree - 博客园](https://www.cnblogs.com/lefree/articles/17055075.html)
