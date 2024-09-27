@@ -6,9 +6,9 @@
 ## Table of Contents
 
 - [NeRF](nerf/)
-- [DDN-SLAM](ddn-slam/)
-- [Co-SLAM](co-slam/)
-- [NID-SLAM](nid-slam/)
+- [NeRF-Evaluation](nerf-evaluation/)
 - [iMAP](imap/)
 - [NICE-SLAM](nice-slam/)
-- [NeRF-Evaluation](nerf-evaluation/)
+- [Co-SLAM](co-slam/)
+- [NID-SLAM](nid-slam/)
+- [DDN-SLAM](ddn-slam/)

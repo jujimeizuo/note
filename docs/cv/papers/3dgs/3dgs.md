@@ -445,7 +445,7 @@ $$
 ### Own Scenes
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/3dgs-own-scenes-fzt-computer.png" width="100%">
+<img src="https://cdn.jujimeizuo.cn/note/cv/slam/3dgs-own-scenes-fzt-duck.png" width="100%">
 </center>
 
 ## Reference

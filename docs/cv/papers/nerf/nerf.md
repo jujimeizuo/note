@@ -206,7 +206,11 @@ $$
 
 ## Experiment
 
+下图是 `Instant-NGP` 实验：
 
+<center>
+<img src="https://cdn.jujimeizuo.cn/note/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%">
+</center>
 
 ## Reference
 
