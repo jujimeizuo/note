@@ -19,6 +19,9 @@
   - gitbook: gitbook/
   - mkdocs（**TODO**）: mkdocs/
   - hexo（**TODO**）: hexo/
+- 视频图像处理工具:
+  - ffmpeg: ffmpeg/
+  - ImageMagick（**TODO**）: imagemagick/
 
 {{ END_TOC }}
 

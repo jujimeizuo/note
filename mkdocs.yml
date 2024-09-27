@@ -311,3 +311,6 @@ nav:
       - gitbook: utils/gitbook.md
       - mkdocs: utils/mkdocs.md
       - hexo: utils/hexo.md
+    - 视频图像处理工具:
+      - ffmpeg: utils/ffmpeg.md
+      - ImageMagick: utils/imagemagick.md
