@@ -23,14 +23,15 @@
     - [NeRF-Evaluation](nerf/nerf-evaluation/)
 
 - 3DGS 系列
-    - [3DGS](3dgs/3dgs)
+    - [3DGS](3dgs/3dgs/)
+    - [SplaTAM](3dgs/splatam/)
 
 - 杂项
-    - [SLAM 14 讲](others/vslam14)
-    - [ORB-SLAM2](others/orbslam2)
-    - [LET-NET](others/let-net)
-    - [DeepV2D](others/deepv2d)
-    - [EndoscopyDepthEstimation](others/endoscopy-depth-estimation)
+    - [SLAM 14 讲](others/vslam14/)
+    - [ORB-SLAM2](others/orbslam2/)
+    - [LET-NET](others/let-net/)
+    - [DeepV2D](others/deepv2d/)
+    - [EndoscopyDepthEstimation](others/endoscopy-depth-estimation/)
 
 ## Reference
 

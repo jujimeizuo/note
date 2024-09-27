@@ -6,3 +6,4 @@
 ## Table of Contents
 
 - [3DGS](3dgs/)
+- [SplaTAM](splatam/)
