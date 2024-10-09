@@ -7,3 +7,4 @@
 
 - [3DGS](3dgs/)
 - [SplaTAM](splatam/)
+- [4DGS](4dgs/)
