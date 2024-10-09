@@ -1,4 +1,12 @@
 - "2024":
+  - "2024-10-9":
+    - newpage:
+        text: CV > SLAM > 4DGS
+        href: /cv/slam/4dgs/
+  - "2024-10-5":
+    - newpage:
+        text: CV > SLAM > SplaTAM
+        href: /cv/slam/splatam/
   - "2024-9-27":
     - pageupdate:
         text: Utils > ffmpeg
