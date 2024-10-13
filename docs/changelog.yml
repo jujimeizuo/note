@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-10-13":
+    - newpage:
+        text: CV > SLAM > Gaussian Splatting SLAM
+        href: /cv/slam/gaussian-splatting-slam/
   - "2024-10-9":
     - newpage:
         text: CV > SLAM > 4DGS

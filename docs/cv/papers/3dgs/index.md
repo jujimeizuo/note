@@ -6,5 +6,6 @@
 ## Table of Contents
 
 - [3DGS](3dgs/)
-- [SplaTAM](splatam/)
 - [4DGS](4dgs/)
+- [SplaTAM](splatam/)
+- [Gaussian Splatting SLAM](gaussian-splatting-slam/)

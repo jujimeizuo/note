@@ -246,8 +246,9 @@ nav:
       - 3DGS 系列:
         - cv/papers/3dgs/index.md
         - 3DGS: cv/papers/3dgs/3dgs.md
-        - SplaTAM: cv/papers/3dgs/splatam.md
         - 4DGS: cv/papers/3dgs/4dgs.md
+        - SplaTAM: cv/papers/3dgs/splatam.md
+        - Gaussian Splatting SLAM: cv/papers/3dgs/gaussian-splatting-slam.md 
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

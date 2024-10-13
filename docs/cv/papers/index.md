@@ -24,8 +24,9 @@
 
 - 3DGS 系列
     - [3DGS](3dgs/3dgs/)
-    - [SplaTAM](3dgs/splatam/)
     - [4DGS](3dgs/4dgs/)
+    - [SplaTAM](3dgs/splatam/)
+    - [Gaussian Splatting SLAM](3dgs/gaussian-splatting-slam/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)
