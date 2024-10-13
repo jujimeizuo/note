@@ -33,9 +33,9 @@ comment: True
 - `git reset --soft HEAD^` 撤销 commit（不更改文件）
 - `git reset --hard HEAD^` 撤销 commit（文件回退到上一版本）
 - `git rm --cached <file>` 已 add 未 commit 的文件退回未 add 状态
-- `git checkout .` 取消本次未被commit的修改
+- `git checkout .` 取消本次未被 commit 的修改
 - `git rebase <commit_name>` 变基
-- `git rebase -i <commit_name>` 合并/修改提交，**最好用fetch+rebase的方式来合并**
+- `git rebase -i <commit_name>` 合并/修改提交，**最好用 fetch + rebase 的方式来合并**
 
 
 
@@ -46,11 +46,19 @@ comment: True
 - `git tag -a <tag_name>` 添加注解标签
 - `git tag -d <tag_name>` 删除标签
 
+
+## 子模块
+
+- `git submodule` 查看子模块
+- `git submodule add <repo_url>` 添加子模块
+- `git submodule deinit <submodule_name>` 删除特定子模块
+- `git clone <repo_url> --recursive` clone 前拉取子模块
+- `git submodule update --init --recursive` clone 后拉取子模块
+
+
 ## awesome_git_log
 
 为了方便查看`commit`相关信息，用`alias`来简化操作，将下面代码粘贴到`bashrc`中，然后在终端中直接`awe+tab`即可。
-
-  
 
 ```shell
 # git
@@ -68,7 +76,10 @@ alias __git_awesome_log="git log --oneline --decorate --all --graph"
 alias awesome_git_log="git log --oneline --decorate --all --graph"
 ```
 
+
+
 ## Reference
 
 - [猴子都能懂的GIT入门](https://backlog.com/git-tutorial/cn/intro/intro1_1.html)
 - [Git命令备忘](https://note.tonycrane.cc/cs/tools/git/)
+- [Git submodule 知识总结](https://knightyun.github.io/2021/03/21/git-submodule)

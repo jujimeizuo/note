@@ -3,6 +3,9 @@
     - newpage:
         text: CV > SLAM > Gaussian Splatting SLAM
         href: /cv/slam/gaussian-splatting-slam/
+    - pageupdate:
+        text: add `git submodules`
+        href: /utils/git/
   - "2024-10-9":
     - newpage:
         text: CV > SLAM > 4DGS
