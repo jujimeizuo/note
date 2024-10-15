@@ -22,6 +22,8 @@
 - 视频图像处理工具:
   - ffmpeg: ffmpeg/
   - ImageMagick（**TODO**）: imagemagick/
+- AI 工具:
+  - wandb: wandb/
 
 {{ END_TOC }}
 

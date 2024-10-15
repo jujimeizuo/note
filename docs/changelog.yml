@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-10-15":
+    - newpage:
+        text: Utils > AI > Weights & Biases
+        href: /utils/wandb/
   - "2024-10-13":
     - newpage:
         text: CV > SLAM > Gaussian Splatting SLAM

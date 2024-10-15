@@ -317,3 +317,5 @@ nav:
     - 视频图像处理工具:
       - ffmpeg: utils/ffmpeg.md
       - ImageMagick: utils/imagemagick.md
+    - AI 工具:
+      - Weights & Biases: utils/wandb.md
