@@ -283,6 +283,9 @@ nav:
       - 第四节: llm/internlm/lec4.md
       - 第五节: llm/internlm/lec5.md
       - 第六节: llm/internlm/lec6.md
+    - 2025 AI 冬令营:
+      - llm/dw2025winter/index.md
+      - 速通AI辅助番茄时钟开发: llm/dw2025winter/lec1.md
     - 杂项:
       - Prompt: llm/others/prompt.md
       - 分布式训练: llm/others/dt.md
