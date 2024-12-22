@@ -14,4 +14,4 @@ counter: true
 
 ## Table of Contents
 
-<!-- - [速通AI辅助番茄时钟开发](lec1.md) -->
+- [速通AI辅助番茄时钟开发](lec1.md)

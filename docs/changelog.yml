@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-12-22":
+    - newpage:
+        text: LLM > DataWhale 2025 AI 冬令营 > 速通AI辅助番茄时钟开发
+        href: /llm/dw2025winter/lec1/
   - "2024-10-15":
     - newpage:
         text: Utils > AI > Weights & Biases
