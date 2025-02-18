@@ -1,3 +1,8 @@
+- "2025":
+  - "2025-02-18":
+    - newpage:
+        text: CV > Paper > PointCloud > GeoTransformer
+        href: /cv/papers/pcd/geotransformer/
 - "2024":
   - "2024-12-22":
     - newpage:
@@ -9,19 +14,19 @@
         href: /utils/wandb/
   - "2024-10-13":
     - newpage:
-        text: CV > SLAM > Gaussian Splatting SLAM
-        href: /cv/slam/gaussian-splatting-slam/
+        text: CV > Papers > 3DGS > Gaussian Splatting SLAM
+        href: /cv/papers/3dgs/gaussian-splatting-slam/
     - pageupdate:
         text: add `git submodules`
         href: /utils/git/
   - "2024-10-9":
     - newpage:
-        text: CV > SLAM > 4DGS
-        href: /cv/slam/4dgs/
+        text: CV > Papers > 3DGS > 4DGS
+        href: /cv/papers/3dgs/4dgs/
   - "2024-10-5":
     - newpage:
-        text: CV > SLAM > SplaTAM
-        href: /cv/slam/splatam/
+        text: CV > Papers > 3DGS > SplaTAM
+        href: /cv/papers/3dgs/splatam/
   - "2024-9-27":
     - pageupdate:
         text: Utils > ffmpeg
@@ -33,44 +38,44 @@
   - "2024-9-25":
     - refactor: adjust the structure of slam
     - newpage:
-        text: CV > SLAM > 3DGS
-        href: /cv/slam/3dgs/
+        text: CV > Papers > 3DGS > 3DGS
+        href: /cv/papers/3dgs/3dgs/
   - "2024-9-19":
     - newpage:
-        text: CV > SLAM > NeRF
-        href: /cv/slam/nerf/
+        text: CV > Papers > NERF > NeRF
+        href: /cv/papers/nerf/nerf/
   - "2024-9-18":
     - newpage:
-        text: CV > SLAM > NeRF-Evaluation
-        href: /cv/slam/nerf-evaluation/
+        text: CV > Papers > NERF > NeRF-Evaluation
+        href: /cv/papers/nerf/nerf-evaluation/
   - "2024-8-8":
     - newpage:
-        text: CV > SLAM > NICE-SLAM
-        href: /cv/slam/nice-slam/
+        text: CV > Papers > NERF > NICE-SLAM
+        href: /cv/papers/nerf/nice-slam/
   - "2024-8-3":
     - newpage:
-        text: CV > SLAM > iMAP
-        href: /cv/slam/imap/
+        text: CV > Papers > NERF > iMAP
+        href: /cv/papers/nerf/imap/
   - "2024-7-29":
     - newpage:
-        text: CV > SLAM > NID-SLAM
-        href: /cv/slam/nid-slam/
+        text: CV > Papers > NERF > NID-SLAM
+        href: /cv/papers/nerf/nid-slam/
   - "2024-7-8":
     - newpage:
-        text: CV > SLAM > EndoscpoyDepthEstimation
-        href: /cv/slam/endoscopy-depth-estimation/
+        text: CV > Papers > Others > EndoscpoyDepthEstimation
+        href: /cv/papers/others/endoscopy-depth-estimation/
   - "2024-6-26":
     - newpage:
-        text: CV > SLAM > DeepV2D
-        href: /cv/slam/deepv2d/
+        text: CV > Papers > Others > DeepV2D
+        href: /cv/papers/others/deepv2d/
   - "2024-6-21":
     - newpage:
-        text: CV > SLAM > Co-SLAM
-        href: /cv/slam/co-slam/
+        text: CV > Papers > NERF > Co-SLAM
+        href: /cv/papers/nerf/co-slam/
   - "2024-6-6":
     - newpage:
-        text: CV > SLAM > DDN-SLAM
-        href: /cv/slam/ddn-slam/
+        text: CV > Papers > NERF > DDN-SLAM
+        href: /cv/papers/nerf/ddn-slam/
   - "2024-5-29":
     - newpage:
         text: CV > Dataset > Waymo
@@ -83,36 +88,36 @@
     - refactor: cp -r pcr prd/
   - "2024-5-17":
     - newpage:
-        text: CV > SLAM > LET-NET
-        href: /cv/slam/let-net/
+        text: CV > Papers > Others > LET-NET
+        href: /cv/papers/others/let-net/
   - "2024-5-15":
     - newpage:
-        text: CV > SLAM > Crowd-SLAM
-        href: /cv/slam/crowd-slam/
+        text: CV > Papers > Dynamic SLAM > Crowd-SLAM
+        href: /cv/papers/dynamic-slam/crowd-slam/
   - "2024-4-4":
     - newpage:
-        text: CV > SLAM > RigidFusion
-        href: /cv/slam/rigidfusion/
+        text: CV > Papers > Dynamic SLAM > RigidFusion
+        href: /cv/papers/dynamic-slam/rigidfusion/
   - "2024-3-27":
     - newpage:
-        text: CV > SLAM > Detect-SLAM
-        href: /cv/slam/detect-slam/
+        text: CV > Papers > Dynamic SLAM > Detect-SLAM
+        href: /cv/papers/dynamic-slam/detect-slam/
   - "2024-3-26":
     - newpage:
-        text: CV > SLAM > FlowFusion
-        href: /cv/slam/flowfusion/
+        text: CV > Papers > Dynamic SLAM > FlowFusion
+        href: /cv/papers/dynamic-slam/flowfusion/
   - "2024-3-20":
     - newpage:
-        text: CV > SLAM > DS-SLAM
-        href: /cv/slam/ds-slam/
+        text: CV > Papers > Dynamic SLAM > DS-SLAM
+        href: /cv/papers/dynamic-slam/ds-slam/
   - "2024-3-20":
     - newpage:
-        text: CV > SLAM > DynaSLAM
-        href: /cv/slam/dynaslam/
+        text: CV > Papers > Dynamic SLAM > DynaSLAM
+        href: /cv/papers/dynamic-slam/dynaslam/
   - "2024-3-20":
     - newpage:
-        text: CV > SLAM > ORB-SLAM2
-        href: /cv/slam/orbslam2/
+        text: CV > Papers > Others > ORB-SLAM2
+        href: /cv/papers/others/orbslam2/
   - "2024-3-20":
     - newpage:
         text: CV > Dataset > TUM
@@ -225,7 +230,7 @@
         href: /cv/mvg/est2d/
     - newpage:
         text: CV & Robot > SLAM > 视觉 SLAM 十四讲 > 三维空间刚体运动
-        href: /cv/slam/vslam14/lec2/
+        href: /cv/papers/slam/vslam14/lec2/
   - "2023-09-30":
     - newpage:
         text: CV & Robot > 多视图几何 > 3D 射影几何变换

@@ -4,7 +4,7 @@ repo_name: jujimeizuo/note
 repo_url: https://github.com/jujimeizuo/note/
 edit_uri: tree/master/docs
 site_description: 狙击美佐（jujimeizuo）的笔记本
-copyright: Copyright &copy; 2023-2024 <a href="https://github.com/jujimeizuo" target="_blank" rel="noopener">jujimeizuo</a>
+copyright: Copyright &copy; 2023-2025 <a href="https://github.com/jujimeizuo" target="_blank" rel="noopener">jujimeizuo</a>
 
 theme: 
   name: 'material'
@@ -226,6 +226,9 @@ nav:
         - Waymo: cv/dataset/waymo.md
     - 论文相关:
       - cv/papers/index.md
+      - PointCloud 系列:
+        - cv/papers/pcd/index.md
+        - GeoTransformer: cv/papers/pcd/geotransformer.md
       - Dynamic SLAM 系列:
         - cv/papers/dynamic-slam/index.md
         - DynaSLAM: cv/papers/dynamic-slam/dynaslam.md
@@ -248,7 +251,7 @@ nav:
         - 3DGS: cv/papers/3dgs/3dgs.md
         - 4DGS: cv/papers/3dgs/4dgs.md
         - SplaTAM: cv/papers/3dgs/splatam.md
-        - Gaussian Splatting SLAM: cv/papers/3dgs/gaussian-splatting-slam.md 
+        - Gaussian Splatting SLAM: cv/papers/3dgs/gaussian-splatting-slam.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

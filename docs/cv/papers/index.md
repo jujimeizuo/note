@@ -5,6 +5,9 @@
 
 ## Table of Contents
 
+- Point Cloud 系列
+    - [GeoTransformer](pcd/geotransformer/)
+
 - Dynamic-SLAM 系列
     - [DynaSLAM](dynamic-slam/dynaslam/)
     - [DS-SLAM](dynamic-slam/ds-slam/)

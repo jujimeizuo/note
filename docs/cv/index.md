@@ -34,6 +34,7 @@
     - Dynamic SLAM 系列: papers/dynamic-slam/
     - NeRF 系列: papers/nerf/
     - 3DGS 系列: papers/3dgs/
+    - PointCloud 系列: papers/pcd/
     - Others: papers/others/
 - 工具相关:
     - index: utils/
