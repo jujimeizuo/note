@@ -8,6 +8,7 @@ comment: true
 > [!abstract]
 > - paper：[:book: Geometric Transformer for Fast and Robust Point Cloud Registration](https://arxiv.org/abs/2202.06688)
 > - code：[:material-github: GeoTransformer](https://github.com/qinzheng93/GeoTransformer?tab=readme-ov-file)
+
 > - Pre Knowledge
 >    - SuperPoint
 >    - KPConv
@@ -138,5 +139,6 @@ $$
 
 ## Reference
 
-- [GeoTransformer：Geometric Transformer for Fast and Robust Point Cloud Registration 论文解读](https://blog.csdn.net/m0_60177079/article/details/140522887)
 - [KPConv：点云核心点卷积 (ICCV 2019)](https://zhuanlan.zhihu.com/p/92244933)
+- [GeoTransformer：Geometric Transformer for Fast and Robust Point Cloud Registration 论文解读](https://blog.csdn.net/m0_60177079/article/details/140522887)
+- [论文阅读笔记(16)---2022 CVPR Geometric Transformer for Fast and Robust Point Cloud Registration](https://blog.csdn.net/qq_39594939/article/details/126503503)

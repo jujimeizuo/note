@@ -229,6 +229,7 @@ nav:
       - PointCloud 系列:
         - cv/papers/pcd/index.md
         - GeoTransformer: cv/papers/pcd/geotransformer.md
+        - MAC: cv/papers/pcd/mac.md
       - Dynamic SLAM 系列:
         - cv/papers/dynamic-slam/index.md
         - DynaSLAM: cv/papers/dynamic-slam/dynaslam.md
