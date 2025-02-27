@@ -1,4 +1,8 @@
 - "2025":
+  - "2025-02-27":
+    - newpage:
+        text: CV > Papers > PointCloud > MAC
+        href: /cv/papers/pcd/mac/
   - "2025-02-18":
     - newpage:
         text: CV > Paper > PointCloud > GeoTransformer
