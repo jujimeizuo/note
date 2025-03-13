@@ -3,7 +3,7 @@ counter: true
 comment: true
 ---
 
-# GeoTransformer
+# MAC
 
 
 > [!abstract]

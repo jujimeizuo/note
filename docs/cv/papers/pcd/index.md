@@ -7,3 +7,4 @@
 
 - [GeoTransformer](geotransformer/)
 - [MAC](mac/)
+- [FastMAC](fastmac/)

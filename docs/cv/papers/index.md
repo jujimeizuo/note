@@ -7,6 +7,8 @@
 
 - Point Cloud 系列
     - [GeoTransformer](pcd/geotransformer/)
+    - [MAC](pcd/mac/)
+    - [FastMAC](pcd/fastmac/)
 
 - Dynamic-SLAM 系列
     - [DynaSLAM](dynamic-slam/dynaslam/)
