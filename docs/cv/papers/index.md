@@ -32,6 +32,13 @@
     - [4DGS](3dgs/4dgs/)
     - [SplaTAM](3dgs/splatam/)
     - [Gaussian Splatting SLAM](3dgs/gaussian-splatting-slam/)
+- DUSt3R 系列
+    - [DUSt3R](dust3r/dust3r/)
+    - [MASt3R](dustr3r/mast3r/)
+    - [Spann3R](dustr3r/spann3r/)
+    - [MonST3R](dustr3r/monst3r/)
+    - [Easi3R](dustr3r/easi3r/)
+    - [MASt3R-SLAM](dustr3r/mast3r-slam/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)

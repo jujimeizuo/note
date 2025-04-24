@@ -35,6 +35,7 @@
     - NeRF 系列: papers/nerf/
     - 3DGS 系列: papers/3dgs/
     - PointCloud 系列: papers/pcd/
+    - DUSt3R 系列: papers/dust3r/
     - Others: papers/others/
 - 工具相关:
     - index: utils/
