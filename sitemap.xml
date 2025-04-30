@@ -331,6 +331,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.jujimeizuo.cn/cv/papers/dust3r/instant-splat/</loc>
+         <lastmod>2025-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dust3r/mast3r-slam/</loc>
          <lastmod>2025-04-30</lastmod>
          <changefreq>daily</changefreq>
