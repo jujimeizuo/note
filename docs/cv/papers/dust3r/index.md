@@ -6,7 +6,7 @@
 ## Table of Contents
 
 - [DUSt3R](dust3r/)
-- [MASt3R](mastar/)
+- [MASt3R](mast3r/)
 - [Spann3R](spanner/)
 - [InstantSplat](instant-splat/)
 - [MonST3R](monster/)
