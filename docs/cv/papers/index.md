@@ -36,6 +36,7 @@
     - [DUSt3R](dust3r/dust3r/)
     - [MASt3R](dustr3r/mast3r/)
     - [Spann3R](dustr3r/spann3r/)
+    - [InstantSplat3D](dustr3r/instant-splat/)
     - [MonST3R](dustr3r/monst3r/)
     - [Easi3R](dustr3r/easi3r/)
     - [MASt3R-SLAM](dustr3r/mast3r-slam/)
