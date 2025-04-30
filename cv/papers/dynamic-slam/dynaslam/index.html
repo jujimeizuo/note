@@ -1670,7 +1670,7 @@ var _hmt = _hmt || [];
 </ol>
 <p><strong>而<span class="heti-skip"><span class="heti-spacing"> </span>DynaSLAM<span class="heti-spacing"> </span></span>不仅可以检测出正在移动的物体，还可以检测出一些“可被移动”的物体。</strong></p>
 <h2 id="system-description">SYSTEM DESCRIPTION<a class="headerlink" href="#system-description" title="Permanent link">¶</a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-1.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-1.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-1.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-1.png"/></a></center>
 <h3 id="segmentation-of-potentially-dynamic-content-using-a-cnn">Segmentation of Potentially Dynamic Content using a CNN<a class="headerlink" href="#segmentation-of-potentially-dynamic-content-using-a-cnn" title="Permanent link">¶</a></h3>
 <p>使用<span class="heti-skip"><span class="heti-spacing"> </span>MASK-RCNN<span class="heti-spacing"> </span></span>进行像素级分割，只用到语义信息。</p>
 <h3 id="low-cost-tracking">Low-Cost Tracking<a class="headerlink" href="#low-cost-tracking" title="Permanent link">¶</a></h3>
@@ -1683,12 +1683,12 @@ var _hmt = _hmt || [];
 <li>对于每个关键点，它对应的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点是<span><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span></span>。然后，计算<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x^\prime\)</span><span class="heti-spacing"> </span></span>反投影之间的夹角，即视差角<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span></span>。<strong>如果角度大于<span class="heti-skip"><span class="heti-spacing"> </span>30<span class="heti-spacing"> </span></span>度，这个点就有可能被遮挡</strong>，之后就会被忽略。比如在<span class="heti-skip"><span class="heti-spacing"> </span>TUM<span class="heti-spacing"> </span></span>数据集中，如果视差角大于<span class="heti-skip"><span class="heti-spacing"> </span>30<span class="heti-spacing"> </span></span>度，由于视角的不同，静态点就会被视为动态。</li>
 <li>计算出关羽深度的<strong>重投影误差：<span class="arithmatex">\(\Delta z = z_{proj} - z^\prime\)</span></strong>，<span><span class="arithmatex">\(z^\prime\)</span><span class="heti-spacing"> </span></span>是当前帧中还有的关键点的深度（测量值<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。如果<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta z &gt; \tau_z\)</span></span>，关键点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x^\prime\)</span><span class="heti-spacing"> </span></span>就会被视为动态物体。为了一个好的精度和召回率，通过最大化<span><span class="heti-spacing"> </span><span class="arithmatex">\(0.7 * Presion + 0.3 * Recall\)</span></span>，将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\tau_z\)</span><span class="heti-spacing"> </span></span>定为<span><span class="heti-spacing"> </span>0.4m</span>。</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-3.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-3.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-3.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-3.png"/></a></center>
 <ul>
 <li>有一些被标记为动态的关键点位于移动物体的边界上，这可能会引起问题。为了避免这种情况，可以使用深度图像所提供的信息。<strong>如果一个关键点被设定为动态，但在深度图中它周围的区域有很大的方差，我们就把标签改为静态。</strong></li>
 <li>为了找到动态物体的所有像素点，在深度图的动态点周围进行区域增长算法。</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-2.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-2.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-2.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-2.png"/></a></center>
 <p><strong>这两种方法呈现出功能上的互补，所以最终取了两个<span class="heti-skip"><span class="heti-spacing"> </span>Mask<span class="heti-spacing"> </span></span>的并集，被分割的动态部分被从当前帧和地图中移除：</strong></p>
 <ul>
 <li><strong>多视图几何</strong>：能识别出“可以被移动”的物体，但需要有多视图才能进行初始化。在图<span class="heti-skip"><span class="heti-spacing"> </span>4a<span class="heti-spacing"> </span></span>中看到，不仅检测到了图像前面的人，而且还检测到了他所拿的书和他所坐的椅子；但是远处的人并没有被检测到，原因有二：<span>RGB-D<span class="heti-spacing"> </span></span>相机在测量远处物体的深度时会有困难；其次，可靠的特征位于确定的，因此是附近的图像部分。</li>
@@ -1706,7 +1706,7 @@ var _hmt = _hmt || [];
 <li>如果它出现了，但没有有效的深度信息。这些空隙也不能用几何方法来重建，而需要一种更复杂的涂抹技术。</li>
 </ul>
 <p>从下面的图<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>可以看到大部分被分割的部分已经用来自静态背景的信息进行了适当的补全。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-4.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DynaSLAM-4.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-4.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DynaSLAM-4.png"/></a></center>
 <h2 id="experimental-results">EXPERIMENTAL RESULTS<a class="headerlink" href="#experimental-results" title="Permanent link">¶</a></h2>
 <p>略。</p>
 <hr/>

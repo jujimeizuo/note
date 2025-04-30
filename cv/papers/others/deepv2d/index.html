@@ -1555,7 +1555,7 @@ var _hmt = _hmt || [];
 <li>通过视频序列预测进行深度估计，分为两模块：<strong>深度模块</strong>和<strong>运动模块</strong>；</li>
 <li>深度模块将相机运动作为输入，输出更新的深度预测；运动模块将深度作为输入，输出运动矫正项；</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DeepV2D-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DeepV2D-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DeepV2D-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DeepV2D-1.jpg"/></a></center>
 <ul>
 <li>深度模块：<ul>
 <li><strong><span>2D<span class="heti-spacing"> </span></span>特征提取</strong>：提取从输入图片学习到的特征；</li>
@@ -1564,7 +1564,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DeepV2D-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DeepV2D-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DeepV2D-2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DeepV2D-2.jpg"/></a></center>
 <ul>
 <li>运动模块：<ul>
 <li><strong>初始化</strong>：使用一个网络预测初始姿态估计，选择一帧作为关键帧。通过将关键帧姿态设置为单位矩阵来初始化姿态，然后预测关键帧与视频中每个其他帧之间的相对运动；</li>
@@ -1577,7 +1577,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DeepV2D-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DeepV2D-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/DeepV2D-3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DeepV2D-3.jpg"/></a></center>
 <ul>
 <li>总系统：采用两种初始化策略，自初始化使用恒定深度图初始化<span><span class="heti-spacing"> </span>DeepV2D</span>；单幅图像初始化使用单幅图像深度网络的输出进行初始化；</li>
 <li>监督损失函数：<ul>

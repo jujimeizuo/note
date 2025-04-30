@@ -2070,7 +2070,7 @@ h_7 &amp; h_8 &amp; h_9
 </li>
 <li>退化的定义既涉及配置也涉及变换类型，而且退化问题不仅限于最小配置解。如果多出来的（精确的，即无误差的）点对应也共线，那么退化问题仍没有解决。</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/mvg/dot-line-config.jpg"><img alt="点-线配置的几何等价性" src="https://note.jujimeizuo.cn/assets/images/cv/mvg/dot-line-config.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/mvg/dot-line-config.jpg"><img alt="点-线配置的几何等价性" src="https://cdn.jujimeizuo.cn/note/cv/mvg/dot-line-config.jpg"/></a></center>
 <h3 id="_4">由线和其他实体求解<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li>前面只讨论由点对应来计算单应，然而线对应和二次曲线的对应也可以计算单应，所以就产生计算一个单应（或任何其他关系）需要多少组对应的问题。一般的原则是约束数必须等于或大于变换的自由度数。</li>
@@ -2365,7 +2365,7 @@ f: \mathbf{h} \to (H^{-1}\mathbf{x}_1^\prime, ..., H^{-1}\mathbf{x}_n^\prime, H\
 <li>其中最常用的有<span class="heti-skip"><span class="heti-spacing"> </span>Newton<span class="heti-spacing"> </span></span>迭代和<span class="heti-skip"><span class="heti-spacing"> </span>Levenberg-Marquardt<span class="heti-spacing"> </span></span>方法。<span>Newton<span class="heti-spacing"> </span></span>迭代是最快的，但是它需要计算代价函数的二阶导数，而且在某些情况下可能会发散。<span>Levenberg-Marquardt<span class="heti-spacing"> </span></span>方法是一种更稳定的方法，但是它的收敛速度比<span class="heti-skip"><span class="heti-spacing"> </span>Newton<span class="heti-spacing"> </span></span>迭代慢。</li>
 </ul>
 <h3 id="_30">算法的实验比较<a class="headerlink" href="#_30" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/mvg/cpi-func-of-ptm.jpg"><img alt="图像对应点计算射影变换方法" src="https://note.jujimeizuo.cn/assets/images/cv/mvg/cpi-func-of-ptm.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/mvg/cpi-func-of-ptm.jpg"><img alt="图像对应点计算射影变换方法" src="https://cdn.jujimeizuo.cn/note/cv/mvg/cpi-func-of-ptm.jpg"/></a></center>
 <h2 id="_31">鲁棒估计<a class="headerlink" href="#_31" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li>之前讨论的对应集的唯一误差源来自点的位置测量，在许多实际运行中，还存在着点被错配的情况。错配点对高斯误差分布而言是<strong>野值</strong>。</li>

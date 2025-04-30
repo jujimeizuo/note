@@ -1623,10 +1623,10 @@ var _hmt = _hmt || [];
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <p><span>BERT<span class="heti-spacing"> </span></span>首先在大规模无监督语料上进行预训练，然后在预训练好的参数基础上增加一个与任务相关的神经网络层，并在该任务的数据上进行微调，最终取得很好的效果。</p>
 <p><span>BERT<span class="heti-spacing"> </span></span>的训练过程可以简述为：预训练<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>微调（finetune<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这是近几年<span class="heti-skip"><span class="heti-spacing"> </span>NLP<span class="heti-spacing"> </span></span>解决方案的主流范式。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/tf.png"><img alt="预训练+微调" src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/tf.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/tf.png"><img alt="预训练+微调" src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/tf.png"/></a></center>
 <h2 id="_1">模型结构<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><span>BERT<span class="heti-spacing"> </span></span>模型的结构如下图最左：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/bert-structure.png"><img alt="BERT模型结构" src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/bert-structure.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/bert-structure.png"><img alt="BERT模型结构" src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/bert-structure.png"/></a></center>
 <ul>
 <li>对比<span><span class="heti-spacing"> </span>OpenAI GPT</span>，<span>BERT<span class="heti-spacing"> </span></span>是双向的<span class="heti-skip"><span class="heti-spacing"> </span>Transformer block<span class="heti-spacing"> </span></span>连接，就像单向<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>和双向<span class="heti-skip"><span class="heti-spacing"> </span>RNN<span class="heti-spacing"> </span></span>的区别，效果会更好。</li>
 <li>对比<span><span class="heti-spacing"> </span>ELMo</span>，虽然都是“双向”，但目标函数不同。<ul>
@@ -1642,7 +1642,7 @@ var _hmt = _hmt || [];
 </ul>
 <h2 id="embedding">Embedding<a class="headerlink" href="#embedding" title="Permanent link">¶</a></h2>
 <p>这里的<span class="heti-skip"><span class="heti-spacing"> </span>Embedding<span class="heti-spacing"> </span></span>由三种<span class="heti-skip"><span class="heti-spacing"> </span>Embedding<span class="heti-spacing"> </span></span>求和组成：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/embedding.png"><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/embedding.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/embedding.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/embedding.png"/></a></center>
 <ul>
 <li><code>Token Embedding</code>：词向量，第一个单词是<span class="heti-skip"><span class="heti-spacing"> </span>CLS<span class="heti-spacing"> </span></span>标志，可以用于之后的分类任务</li>
 <li><code>Segment Embedding</code>：句子向量，用于区分两个句子，因为预训练不光做<span class="heti-skip"><span class="heti-spacing"> </span>LM<span class="heti-spacing"> </span></span>还要做以两个句子为输入的分类任务</li>
@@ -1686,7 +1686,7 @@ var _hmt = _hmt || [];
 <li>命名实体识别<span><span class="heti-spacing"> </span>NER</span></li>
 </ul>
 <p>下图展示了<span class="heti-skip"><span class="heti-spacing"> </span>BERT<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>个不同任务中的模型，它们只需要在<span class="heti-skip"><span class="heti-spacing"> </span>BERT<span class="heti-spacing"> </span></span>的基础上再添加一个输出层便可以完成对特定任务的微调。这些任务类似于我们做过的文科试卷，其中有选择题，简答题等等。图<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>中其中<span class="heti-skip"><span class="heti-spacing"> </span>Tok<span class="heti-spacing"> </span></span>表示不同的<span><span class="heti-spacing"> </span>Token</span>，<span>E<span class="heti-spacing"> </span></span>表示嵌入向量，<span><span class="arithmatex">\(T_i\)</span><span class="heti-spacing"> </span></span>表示第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>个<span class="heti-skip"><span class="heti-spacing"> </span>Token<span class="heti-spacing"> </span></span>在经过<span class="heti-skip"><span class="heti-spacing"> </span>BERT<span class="heti-spacing"> </span></span>处理之后得到的特征向量。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/fine-tuning.png"><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/fine-tuning.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/fine-tuning.png"><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/fine-tuning.png"/></a></center>
 <p>整体<span class="heti-skip"><span class="heti-spacing"> </span>Fine-Tuning<span class="heti-spacing"> </span></span>过程：</p>
 <ol>
 <li>构建图结构，截取目标张量，添加新层</li>
