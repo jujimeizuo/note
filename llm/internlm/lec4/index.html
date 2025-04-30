@@ -2246,13 +2246,13 @@ var _hmt = _hmt || [];
 <ul>
 <li>对话模版</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-1-chat-template.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-1-chat-template.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-1-chat-template.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-1-chat-template.jpg"/></a></center>
 <ul>
 <li>不同于增量预训练微调，数据中会有<span class="heti-skip"><span class="heti-spacing"> </span>Input<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Output<span class="heti-spacing"> </span></span>希望模型学会的是答案（Output<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而不是问题（Input<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，训练时只会对答案（Output）部分计算<span><span class="heti-spacing"> </span>Loss</span></li>
 <li>训练时，会和推理时保持一致，对数据添加相对应的对话模版</li>
 </ul>
 <h2 id="lora-qlora">LoRA &amp; QLoRA<a class="headerlink" href="#lora-qlora" title="Permanent link">¶</a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/LoRA-QLoRA.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/LoRA-QLoRA.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/LoRA-QLoRA.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/LoRA-QLoRA.jpg"/></a></center>
 <h2 id="xtuner_1">Xtuner<a class="headerlink" href="#xtuner_1" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>傻瓜化</strong>：以 配置文件 的形式封装了大部分微调场景</li>
@@ -2365,7 +2365,7 @@ var _hmt = _hmt || [];
 <p>同时，<span>Xtuner<span class="heti-spacing"> </span></span>还支持工具类模型的对话</p>
 <h3 id="xtuner_2"><span>XTuner<span class="heti-spacing"> </span></span>数据引擎<a class="headerlink" href="#xtuner_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_7">数据处理流程<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/xunter-pipe-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/xunter-pipe-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/xunter-pipe-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/xunter-pipe-1.jpg"/></a></center>
 <h4 id="pack-dataset">多数据样本拼接（Pack Dataset）<a class="headerlink" href="#pack-dataset" title="Permanent link">¶</a></h4>
 <p>增强并行性，充分利用<span class="heti-skip"><span class="heti-spacing"> </span>GPU<span class="heti-spacing"> </span></span>资源！</p>
 <h2 id="8-gb-llm"><span>8 GB<span class="heti-spacing"> </span></span>显卡玩转<span><span class="heti-spacing"> </span>LLM</span><a class="headerlink" href="#8-gb-llm" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
@@ -2382,7 +2382,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/fa-dz.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/fa-dz.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/fa-dz.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/fa-dz.jpg"/></a></center>
 <p><code>DeepSpeed</code> 与 <code>Flash Attention</code> 虽然能够大幅降低训练成本，但使用门槛相对较高，需要复杂的配置，甚至修改代码，为了让开发者专注于数据，<span>XTuner<span class="heti-spacing"> </span></span>会自动 <code>dispatch Flash Attention</code>，并一键启动 <code>DeepSpeed ZeRO</code></p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>xtuner<span class="w"> </span>train<span class="w"> </span>internlm_20b_qlora_oasst1_512_e3<span class="w"> </span><span class="se">\</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span>--deepspeed<span class="w"> </span>deepspeed_zero3
@@ -2494,8 +2494,8 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
-<td><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-before.png"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-before.png"/></a></center></td>
-<td><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-after.png"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-after.png"/></a></center></td>
+<td><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-before.png"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-before.png"/></a></center></td>
+<td><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-after.png"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-after.png"/></a></center></td>
 </tr>
 </tbody>
 </table>
@@ -2647,7 +2647,7 @@ var _hmt = _hmt || [];
 </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>python<span class="w"> </span>xlsx2jsonl.py
 </code></pre></div>
 <p><strong>格式化后的数据集长这样：</strong></p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/data-processed.png"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/data-processed.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/data-processed.png"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/data-processed.png"/></a></center>
 <p>此时，当然也可以对数据进行训练集和测试集的分割，同样可以让<span class="heti-skip"><span class="heti-spacing"> </span>ChatGPT<span class="heti-spacing"> </span></span>写<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>代码。当然如果你没有严格的科研需求、不在乎“训练集泄露”的问题，也可以不做训练集与测试集的分割。</p>
 <h4 id="_23">划分训练集和测试集<a class="headerlink" href="#_23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>my .jsonL file looks like:
@@ -2785,7 +2785,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>一条调用网页搜索插件查询“上海明天天气”的数据样本示例如下图所示：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/msagent_data.png"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/msagent_data.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/msagent_data.png"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/msagent_data.png"/></a></center>
 <h3 id="_28">微调步骤<a class="headerlink" href="#_28" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_29">准备工作<a class="headerlink" href="#_29" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
@@ -3164,11 +3164,11 @@ var _hmt = _hmt || [];
 <ul>
 <li><strong>微调前</strong>（回答比较官方）</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_1.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_1.jpg"/></a></center>
 <ul>
 <li><strong>微调后</strong>（对自己的身份有了清晰的认知）</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_2.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_2.jpg"/></a></center>
 <h2 id="_38">进阶作业<a class="headerlink" href="#_38" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li>
@@ -3176,14 +3176,14 @@ var _hmt = _hmt || [];
 <ol>
 <li>通过<span class="heti-skip"><span class="heti-spacing"> </span>scp<span class="heti-spacing"> </span></span>将<span class="heti-skip"><span class="heti-spacing"> </span>hf<span class="heti-spacing"> </span></span>文件夹下载到本地，进入<span class="heti-skip"><span class="heti-spacing"> </span>HuggingFace<span class="heti-spacing"> </span></span>新建<span><span class="heti-spacing"> </span>model</span>，上传模型文件。<span>Adapter<span class="heti-spacing"> </span></span>权重地址：<a href="https://huggingface.co/jujimeizuo/assistant-jujimeizuo/tree/main">https://huggingface.co/jujimeizuo/assistant-jujimeizuo/tree/main</a></li>
 </ol>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_3.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_3.jpg"/></a></center>
 </li>
 <li>
 <p>将训练好后的模型应用部署到<span class="heti-skip"><span class="heti-spacing"> </span>OpenXLab<span class="heti-spacing"> </span></span>平台，参考部署文档请访问：<a href="https://aicarrier.feishu.cn/docx/MQH6dygcKolG37x0ekcc4oZhnCe">https://aicarrier.feishu.cn/docx/MQH6dygcKolG37x0ekcc4oZhnCe</a></p>
 <ol>
 <li>通过<span class="heti-skip"><span class="heti-spacing"> </span>openxlab<span class="heti-spacing"> </span></span>库上传模型文件</li>
 </ol>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_4.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_4.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_4.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_4.jpg"/></a></center>
 <ol start="2">
 <li>
 <p>新建<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>repo(</span><a href="https://github.com/jujimeizuo/assistant_jujimeizuo"><span><span class="heti-spacing"> </span>assistant_jujimeizuo</span></a><span><span class="heti-spacing"> </span>)</span>，从<span class="heti-skip"><span class="heti-spacing"> </span>OpenXLab<span class="heti-spacing"> </span></span>上拉取上传的模型，构建<span class="heti-skip"><span class="heti-spacing"> </span>streamlit<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>app</span>，同步到<span class="heti-skip"><span class="heti-spacing"> </span>OpenXLab<span class="heti-spacing"> </span></span>上。</p>
@@ -3192,7 +3192,7 @@ var _hmt = _hmt || [];
 <p>应用服务地址：<a href="https://openxlab.org.cn/apps/detail/jujimeizuo/assistant_jujimeizuo">https://openxlab.org.cn/apps/detail/jujimeizuo/assistant_jujimeizuo</a></p>
 </li>
 </ol>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_5.jpg"><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_5.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_5.jpg"><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_5.jpg"/></a></center>
 </li>
 </ul>
 <hr/>
