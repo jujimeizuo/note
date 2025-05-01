@@ -7,7 +7,7 @@
 
 - [DUSt3R](dust3r/)
 - [MASt3R](mast3r/)
-- [Spann3R](spanner/)
+- [Spann3R](spann3r/)
 - [InstantSplat](instant-splat/)
 - [MonST3R](monster/)
 - [Easi3R](easier/)
