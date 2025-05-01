@@ -3,10 +3,10 @@ counter: true
 comment: true
 ---
 
-# DUSt3R
+# Spann3R
 
 > [!abstract]
-> - paper：[:book: DUSt3R: 3D Reconstruction with Spatial Memory](https://arxiv.org/pdf/2408.16061)
+> - paper：[:book: Spann3R: 3D Reconstruction with Spatial Memory](https://arxiv.org/abs/2408.16061)
 > - code：[:material-github: spann3r](https://github.com/HengyiWang/spann3r)
 
 ## Introduction

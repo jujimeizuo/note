@@ -1,6 +1,10 @@
 - "2025":
   - "2025-05-01":
     - newpage:
+        text: CV > Papers > DUSt3R > InstantSplat
+        href: /cv/papers/dust3r/instant-splat/
+  - "2025-05-01":
+    - newpage:
         text: CV > Papers > DUSt3R > Spann3R
         href: /cv/papers/dust3r/spann3r/
   - "2025-04-30":
