@@ -1,13 +1,14 @@
 - "2025":
   - "2025-05-01":
     - newpage:
+        text: CV > Papers > DUSt3R > Fast3R
+        href: /cv/papers/dust3r/fast3r/
+    - newpage:
         text: CV > Papers > DUSt3R > MonST3R
         href: /cv/papers/dust3r/monst3r/
-  - "2025-05-01":
     - newpage:
         text: CV > Papers > DUSt3R > InstantSplat
         href: /cv/papers/dust3r/instant-splat/
-  - "2025-05-01":
     - newpage:
         text: CV > Papers > DUSt3R > Spann3R
         href: /cv/papers/dust3r/spann3r/
