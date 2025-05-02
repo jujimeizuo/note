@@ -21,6 +21,7 @@
 <link href="../../../../css/card.css" rel="stylesheet"/>
 <link href="../../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -52,6 +53,9 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#easi3r-estimating-disentangled-motion-from-dust3r-without-training">
+            跳转至
+          </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -958,11 +962,72 @@ var _hmt = _hmt || [];
         MonST3R
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cut3r/">
+        CUT3R
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../das3r/">
+        DAS3R
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Easi3R
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Easi3R
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method">
+    Method
+  </a>
+<nav aria-label="Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#network-architecture">
+    Network Architecture
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-object-segmentation">
+    dynamic Object Segmentation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4d-reconstruction">
+    4D Reconstruction
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiments">
+    Experiments
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../mast3r-slam/">
@@ -1492,23 +1557,148 @@ var _hmt = _hmt || [];
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method">
+    Method
+  </a>
+<nav aria-label="Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#network-architecture">
+    Network Architecture
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-object-segmentation">
+    dynamic Object Segmentation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4d-reconstruction">
+    4D Reconstruction
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiments">
+    Experiments
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/papers/dust3r/easi3r.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1>Easi3R</h1>
+<h1 id="easi3r-estimating-disentangled-motion-from-dust3r-without-training">Easi3R: Estimating Disentangled Motion from DUSt3R Without Training<a class="headerlink" href="#easi3r-estimating-disentangled-motion-from-dust3r-without-training" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>629<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>paper：<a href="https://arxiv.org/abs/2503.24391"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/> Easi3R: Estimating Disentangled Motion from DUSt3R Without Training</a></li>
+<li>code：<a href="https://github.com/Inception3D/Easi3R"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg></span> Easi3R</a></li>
+</ul>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">问题导向</p>
+<ul>
+<li><span>DUSt3R<span class="heti-spacing"> </span></span>无法适用于静态场景。</li>
+<li><span>MonST3R<span class="heti-spacing"> </span></span>用动态场景的数据集重新训练，但是数据有限，很难保证训练模型的泛化能力，且增大复杂度。</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">解决方案</p>
+<p>通过对推理阶段的<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>的调整来实现将<span class="heti-skip"><span class="heti-spacing"> </span>DUSt3R<span class="heti-spacing"> </span></span>直接用到<span class="heti-skip"><span class="heti-spacing"> </span>dynamic<span class="heti-spacing"> </span></span>场景，避免预训练或<span><span class="heti-spacing"> </span>fine-tune</span>。
+</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-0.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-0.jpg"/></a></center>
+</div>
+<h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
+<h3 id="network-architecture">Network Architecture<a class="headerlink" href="#network-architecture" title="Permanent link">¶</a></h3>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-1.jpg"/></a></center>
+<ul>
+<li><strong>Insight</strong>： <span>DUSt3R<span class="heti-spacing"> </span></span>隐式学习刚性视图变换，违反极几何约束（无纹理、观测不足、动态区域）的<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>值都比较小，通过在空间和时间维度上<span class="heti-skip"><span class="heti-spacing"> </span>aggregate cross-attention<span class="heti-spacing"> </span></span>的输出，很简单地将<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>值较小的区域分割开来实现动态物体分割。</li>
+<li><strong>Spaital attention maps</strong><ul>
+<li>图像特征<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>可以通过可训练的线性函数投影到各自分支的<span><span class="heti-spacing"> </span><span class="arithmatex">\(Q、K\)</span></span>，然后计算<span class="heti-skip"><span class="heti-spacing"> </span>corss-attention map<span class="heti-spacing"> </span></span>得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{A}_{l}^{a\leftarrow b}=\mathbf{Q}_{l}^{a}\mathbf{K}_{l}^{b^{T}}/\sqrt{c},\quad\mathbf{A}_{l}^{b\leftarrow a}=\mathbf{Q}_{l}^{b}\mathbf{K}_{l}^{aT}/\sqrt{c}\)</span></span>。紧接着<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{A}_{l}^{a\leftarrow b}\)</span><span class="heti-spacing"> </span></span>可以<span><span class="heti-spacing"> </span>warp <span class="arithmatex">\(V\)</span></span>，<span><span class="arithmatex">\(\mathbf{A}_{l}^{a\leftarrow b}\)</span><span class="heti-spacing"> </span></span>决定在第<span class="heti-skip"><span class="heti-spacing"> </span>l<span class="heti-spacing"> </span></span>个解码器中的信息如何从<span><span class="heti-spacing"> </span>b aggregate to a</span>。</li>
+<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>token<span class="heti-spacing"> </span></span>的空间贡献不同，所以对<span class="heti-skip"><span class="heti-spacing"> </span>attention maps<span class="heti-spacing"> </span></span>进行加权平均。</li>
+</ul>
+</li>
+<li>
+<p><strong>Temporal attention maps</strong>：</p>
+<ul>
+<li>将单对图像扩展到多对图像，需要考虑时间<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>相关性，将上一步的<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>计算均值和方差。</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-4.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-4.jpg"/></a></center>
+</li>
+<li>
+<p>最终的时间交叉注意力图：</p>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-2.jpg"/></a></center>
+</li>
+</ul>
+<h3 id="dynamic-object-segmentation">dynamic Object Segmentation<a class="headerlink" href="#dynamic-object-segmentation" title="Permanent link">¶</a></h3>
+<p>使用下面公式得到每帧动态目标分割<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{M}^t=\begin{bmatrix}\mathbf{A}^{t=\mathrm{dyn}}&gt;\alpha\end{bmatrix}\)</span></span>（分割是逐帧的，为了增强时间一致性，作者应用了一种特征聚类方法，融合所有帧的信息<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
+<div class="arithmatex">\[
+\mathbf{A}^{a=\mathrm{dyn}}=(1-\mathbf{A}_{\mu}^{a=\mathrm{src}})\cdot\mathbf{A}_{\sigma}^{a=\mathrm{src}}\cdot\mathbf{A}_{\mu}^{a=\mathrm{ref}}\cdot(1-\mathbf{A}_{\sigma}^{a=\mathrm{ref}})
+\]</div>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/easi3r-3.jpg"/></a></center>
+<h3 id="4d-reconstruction">4D Reconstruction<a class="headerlink" href="#4d-reconstruction" title="Permanent link">¶</a></h3>
+<ul>
+<li>经过动态物体分割后，如果用黑色像素替换动态区域，这种方法会显著降低重建性能，原因是黑色像素和<span class="heti-skip"><span class="heti-spacing"> </span>mask token<span class="heti-spacing"> </span></span>会导致分布外的输入，解决方案是在<span class="heti-skip"><span class="heti-spacing"> </span>attention layers<span class="heti-spacing"> </span></span>中应用<span><span class="heti-spacing"> </span>mask</span>。</li>
+<li><strong>Attention re-weighting</strong>：通过削弱与动态区域相关的<span class="heti-skip"><span class="heti-spacing"> </span>attetnion value<span class="heti-spacing"> </span></span>来修改<span><span class="heti-spacing"> </span>corss-attention map</span>，对网络进行二次推理，对分配的动态区域的<span class="heti-skip"><span class="heti-spacing"> </span>attention map<span class="heti-spacing"> </span></span>进行<span><span class="heti-spacing"> </span>mask</span>，使其<span><span class="heti-spacing"> </span>attention value = 0</span>，其余区域不变。</li>
+<li>同时将光流也结合进动态区域分割。</li>
+</ul>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">¶</a></h2>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://kwanwaipang.github.io/Easi3R/">论文复现之——《Easi3R: Estimating Disentangled Motion from DUSt3R Without Training》</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年4月24日 16:24:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月2日 10:22:06</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
@@ -1519,7 +1709,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: MonST3R" class="md-footer__link md-footer__link--prev" href="../monst3r/" rel="prev">
+<a aria-label="上一页: DAS3R" class="md-footer__link md-footer__link--prev" href="../das3r/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -1528,7 +1718,7 @@ var _hmt = _hmt || [];
 <span class="md-footer__direction">
                 上一页
               </span>
-              MonST3R
+              DAS3R
             </div>
 </div>
 </a>
