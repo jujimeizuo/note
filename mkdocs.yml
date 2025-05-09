@@ -262,8 +262,8 @@ nav:
         - Fast3R: cv/papers/dust3r/fast3r.md
         - InstantSplat: cv/papers/dust3r/instant-splat.md
         - MonST3R: cv/papers/dust3r/monst3r.md
-        - CUT3R: cv/papers/dust3r/cut3r.md
         - DAS3R: cv/papers/dust3r/das3r.md
+        - CUT3R: cv/papers/dust3r/cut3r.md
         - Easi3R: cv/papers/dust3r/easi3r.md
         - MASt3R-SLAM: cv/papers/dust3r/mast3r-slam.md
       - 杂项:

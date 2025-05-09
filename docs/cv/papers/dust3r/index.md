@@ -11,7 +11,7 @@
 - [Fast3R](fast3r/)
 - [InstantSplat](instant-splat/)
 - [MonST3R](monst3r/)
-- [CUT3R](cut3r/)
 - [DAS3R](das3r/)
+- [CUT3R](cut3r/)
 - [Easi3R](easi3r/)
 - [MASt3R-SLAM](mast3r-slam/)
