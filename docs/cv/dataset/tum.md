@@ -47,16 +47,16 @@ comment: true
 
 研究动态 SALM 时用的是 TUM 的 Dynamic Objects 数据集（9个）以及 Validation Files 对应的部分，如下图所示：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/dynadataset.png" alt="动态数据集"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/dynadataset.png" alt="动态数据集"></center>
 
 - fr2/desk_with_person 记录了一个人坐在办公桌前的典型办公室场景，在录制过程中，该人移动并与一些物体（屏幕、电话等）互动。
 - 对于其他 8 个序列，sitting 类别的序列中两个人坐在办公桌前，交谈，并稍微打手势，序列旨在评估视觉 SLAM 和里程计算法对缓慢移动的动态对象的鲁棒性；walking 类别的序列中两个人走过一个办公室场景，旨在评估视觉 SLAM 在大部分可见场景中快速移动动态对象的鲁棒性。xyz，rpy，halfsphere，static 则对应了相机的移动方式。具体的 sitting 与 walking 数据集中的区别如下：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/sitting_and_walking.png" alt="sitting and walking"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/sitting_and_walking.png" alt="sitting and walking"></center>
 
 相机运动轨迹的区别如下：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/camera_track.png" alt="相机运动轨迹"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/camera_track.png" alt="相机运动轨迹"></center>
 
 
 ### 数据集分析

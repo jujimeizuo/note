@@ -11,7 +11,7 @@ counter: true
     - 仓库地址：[:material-github: InternLM/tutorial](https://github.com/InternLM/tutorial?tab=readme-ov-file)
     - 算力平台：[InternStudio](https://studio.intern-ai.org.cn/console/dashboard)
 
-    <center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/camp.png"></center>
+    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/camp.png"></center>
 
 ## Table of Contents
 

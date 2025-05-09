@@ -16,7 +16,7 @@ comment: True
 - 神经网络：一种以（人工）神经元为基本单元的模型
 - 深度学习：一类机器学习问题，主要解决贡献度分配问题。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/summary.jpg" alt="总结概括"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/summary.jpg" alt="总结概括"></center>
 
 ## 人工神经网络
 
@@ -26,7 +26,7 @@ comment: True
     - **学习算法**：通过训练数据来学习神经网络的参数
 - 人工神经网络由神经元模型构成，这种由许多神经元组成的信息处理网络具有并行分布结构
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/ANN.jpg" alt="人工神经网络"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/ANN.jpg" alt="人工神经网络"></center>
 
 ## 前馈神经网络
 
@@ -34,7 +34,7 @@ comment: True
 
 - 在前馈神经网络中，各神经元分别属于不同的层。整个网络中无反馈，信号从输入层向输出层单向传播，可用一个有向无环图表示
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/FNN.jpg" alt="前馈神经网络"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/FNN.jpg" alt="前馈神经网络"></center>
 
 ### 通用近似定理
 
@@ -51,7 +51,7 @@ comment: True
 - 复合函数 $f(x;w,b)=\sigma(wx+b)$ 的计算图
 - 链式法则：$\frac{\partial f(x;w,b)}{\partial w}=\frac{\partial f(x;w,b)}{\partial h_6} \frac{\partial h_6}{\partial h_5} \frac{\partial h_5}{\partial h_4} \frac{\partial h_4}{\partial h_3} \frac{\partial h_3}{\partial h_2} \frac{\partial h_2}{\partial h_1} \frac{\partial h_1}{\partial w}$
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/fnn-compute-graph.jpg" alt="计算图"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/fnn-compute-graph.jpg" alt="计算图"></center>
 
 - **反向传播算法只是自动微分的一种特殊形式**
 
@@ -64,7 +64,7 @@ comment: True
 
 - 有效减轻梯度消失问题
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/activation-function.jpg" alt="激活函数"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/activation-function.jpg" alt="激活函数"></center>
 
 
 ## 卷积神经网络
@@ -78,12 +78,12 @@ comment: True
 
 #### 一维卷积
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/1Dconv.png" alt="一维卷积"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/1Dconv.png" alt="一维卷积"></center>
 
 
 #### 二位卷积
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/dl/2Dconv.png" alt="二维卷积"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/dl/2Dconv.png" alt="二维卷积"></center>
 
 
 #### 作用

@@ -17,7 +17,7 @@ comment: true
 > [!Done] 解决方案
 > DUSt3R 解决的任务是**基于图像的密集 3D 重建**。利用端到端的思想，将传统 SfM 点云构建的多类子任务综合为一个统一的 ViT 神经网络模型，**从 2D 图像直接估计 3D 点云**。
 > 同时利用 Croco 的预训练范式，能够在不校准相机信息以及 Pose 的情况下，重建两张图像的空间稠密点云，而针对三张图像及以上，经过全局对齐的方式，统一多图的视点并重建三维模型。
-> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/dust3r-2.png"></center>
+> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/dust3r-2.png"></center>
 
 ## Method
 
@@ -32,16 +32,16 @@ comment: true
 
 ### Model
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/dust3r-1.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/dust3r-1.png"></center>
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/dust3r-3.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/dust3r-3.png"></center>
 
 - 输入的两张图像 $I^1$、$I^2$ 会用同一个 ViT 模型进行编码得到对应的 $F^1$、$F^2$ 特征图，然后基于 Transformer 和 Cross-Attention 来融合两帧的信息进行解码，最后把所有解码器的输出用 DPT head 来融合并输出最终每一帧图像的 PointMap 和 ConfidenceMap。（代码里的 head 有 linear 和 dpt 两种，先用 linear 进行低分辨率训练，然后dpt在更高分辨率上训练从而节省时间）
 - 为了避免后续配准，直接以第一张图像作为基准标准系，网络输出的第二张图像的 PointMap 直接位于基准标准系下。
 - 整个过程完全不带有任何几何约束，输出的 PointMap 是不带尺度信息，所以 PointMap 对应于每个像素的连线不一定会交于同一点（光心）。
 - 模型输出结果：
 
-    <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/dust3r-4.png"></center>
+    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/dust3r-4.png"></center>
 
 ### Loss
 
@@ -124,9 +124,9 @@ if __name__ == '__main__':
     scene.show()
 ```
 
-|                                         two images                                          |                                        mutli images                                         |
-| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
-| <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/dust3r-5.jpeg"></center> | <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/dust3r-6.jpeg"></center> |
+|                                                      two images                                                       |                                                     mutli images                                                      |
+| :-------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------: |
+| <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/dust3r-5.jpeg"></center> | <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/dust3r-6.jpeg"></center> |
 
 ## Reference
 

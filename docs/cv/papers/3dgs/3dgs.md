@@ -21,7 +21,7 @@ comment: true
 - **快速光栅化**：使用高速 GPU，支持各向异性抛雪球，保证高质量实时渲染
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3DGS-1.jpg" alt="3dgs-overview">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3DGS-1.jpg" alt="3dgs-overview">
 </center>
 
 
@@ -46,13 +46,13 @@ comment: true
 - 椭球高斯 $G(x;\mu,\sum)=\frac{1}{\sqrt{(2\pi)^k \left | \sum \right |}} \exp^{-\frac{1}{2}(x-\mu)^\top\sum^{-1}(x-\mu)}$，$\mu$ 表示均值，$\sum$ 表示协方差矩阵，半正定（高维时从方差变成协方差矩阵）
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-2.jpg">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-2.jpg">
 </center>
 
 
 >[!Question]- 为什么 3DGS 是椭球？
 > 
-> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-3.png"></center>
+> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-3.png"></center>
 
 
 > [!tip] 各向同性和各向异性
@@ -127,21 +127,21 @@ comment: true
 > 	- 从世界坐标系到相机坐标系
 > 	- 仿射变换
 > 	- $\mathcal{w}=A \mathcal{x} + b$
-> 	<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-4.jpg" width="50%"></center>
+> 	<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-4.jpg" width="50%"></center>
 > - 投影变换
 > 	- 3D 到 2D
 > 	- 正交投影，与 z 无关，平移到原点，立方体缩放到 $\left [-1,1 \right ]^3$ 的正方体，仿射变换
 > 	- 透视投影，与 z 有关，先把锥体压成立方体，在正交投影
-> 	<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-5.jpg" width="50%"></center>
+> 	<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-5.jpg" width="50%"></center>
 > - 视口变换
 > 	- 与 z 无关
 > 	- 将 $[-1, 1]^2$ 的矩形变换至 $[0, w] \times [0, h]$
-> 	<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-6.jpg" width="50%"></center>
+> 	<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-6.jpg" width="50%"></center>
 > - 光栅化
 > 	- 把东西画在屏幕上
 > 	- 连续转离散
 > 	- 方法：采样
-> 	<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-7.jpg" width="50%"></center>
+> 	<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-7.jpg" width="50%"></center>
 
 
 > [!question] 为什么不能直接使用投影变换？
@@ -153,7 +153,7 @@ comment: true
 > > [!success]- 引入雅可比近似矩阵
 > > - 泰勒展开、线性逼近
 > > - 对非线性变换的局部线性近似
-> > <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-8.jpg" width="50%"></center>
+> > <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-8.jpg" width="50%"></center>
 > > - 可计算得 $J = \frac{\partial m(u_k)}{\partial u}$ 协方差矩阵 $V_k = J V_k^\prime j^\top = JWV_k^{\prime \prime} W^\top J^\top$
 
 > [!warning] 视口变换
@@ -222,7 +222,7 @@ comment: true
 	- 任何一个球面坐标的函数都可以用多个球谐函数来近似
 	- $f(t) \approx \sum_l \sum_{m=-l}^l c_l^m y_l^m (\theta, \phi)$
 	- 其中，$c_l^m$ 各项系数，$y^m$ 基函数
-	<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-9.jpg" width="50%"></center>
+	<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-9.jpg" width="50%"></center>
 	- 论文中的 $n=4$，共有 16 个参数（本质上是1+3+5+7）
 
 > [!example]- 球谐函数 Code
@@ -298,13 +298,13 @@ $$
 > 1. 使用图像块来代替像素级别的精度，每个块包含 $16 \times 16$ 个像素，对于覆盖多个块的高斯，作者复制高斯并为它们分配标识符
 > 2. 每个块独立排序并计算颜色值，可并行执行
 > 
-> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-11.png" width="50%"></center>
+> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-11.png" width="50%"></center>
 
 ### 自适应高斯密度控制
 
 > [!question] 初始化的点云的初始形状是一个球，**强依赖 SfM 生成的初始点云**，可能导致生成高斯在空间密度过大或过小？
 > 
-> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-10.jpg" width="50%"></center>
+> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-10.jpg" width="50%"></center>
 > 
 > 具体方法有**点密集化**和**点剪枝**。
 
@@ -438,14 +438,14 @@ $$
 
 ### Office Scenes
 <center>
-<video src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-office-scenes-train.mp4" controls width="100%">
+<video src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-office-scenes-train.mp4" controls width="100%">
 </video>
 </center>
 
 ### Own Scenes
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/3dgs-own-scenes-fzt-duck.png" width="100%">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-own-scenes-fzt-duck.png" width="100%">
 </center>
 
 ## Reference

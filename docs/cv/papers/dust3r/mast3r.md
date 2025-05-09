@@ -21,7 +21,7 @@ comment: true
 
 ### MASt3R Matching
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-1.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-1.png"></center>
 
 - matching 的网络结构和 DUSt3R 基本一致，蓝色的部分是新增的模块。比较明显的是新增了一个 head 用来提取 local features。然后多了两个最近邻匹配模块用来构建匹配。
 - 对于 loss，对 DUSt3R 的 $\mathcal{l}_{\mathrm{regr~}}$ 做了修改，然后新增了匹配 loss。
@@ -46,11 +46,11 @@ comment: true
     - 先对两个图像对应的特征点进行降采样，先得到图像 1 的特征点对于图像 2 的正向 NN 匹配，在从已经匹配上的图像 2 特征点反向 NN 匹配到图像 1，能够形成闭环的 NN 匹配关系便成为最终的匹配。**一次迭代同时包含正向和反向 NN 匹配，这样可以快速收敛。**
     - 优化：降采样之后的最近邻不一定是真的最近邻，所以要回到原分辨率的图像上，重新分块再来一遍匹配（无论是分块还是降采样肯定都比直接全局NN快得多）。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-2.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-2.png"></center>
 
 ### MASt3R SfM
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-3.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-3.png"></center>
 
 - MASt3R SfM 在 pipeline 里集成了多帧输入，但是一次只能处理两张图片，MASt3R SfM 基于 MASt3R matching，只用到了 encoder 的输出作为 tokenFeature（不是 head 输出的 LocalFeature），而不需要像素级别的匹配关系。
 - 类似于 DUSt3R，先基于重叠视角构建一个 Graph：
@@ -63,7 +63,7 @@ comment: true
 
 ## Experiments
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-3.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-3.png"></center>
 
 ## Reference
 

@@ -70,7 +70,7 @@ comment: true
     - 旋转和平移合到一起：$\mathbf{a}^\prime=\mathbf{R}\mathbf{a}+\mathbf{t}$
     - 实际中，定义坐标系 1和坐标系 2，那么向量$\mathbf{a}$在两个坐标系下的坐标为$\mathbf{a}_1, \mathbf{a}_2$，它们之间的关系为$\mathbf{a}_1=\mathbf{R}_{12}\mathbf{a}_2+\mathbf{t}_{12}$，这里的$\mathbf{R}_{12}$是指“把坐标系 2 的向量变换到坐标系 1 中”
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/coordinate-transformation.png" alt="坐标变换"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/coordinate-transformation.png" alt="坐标变换"></center>
 
 
 ### 变换矩阵与齐次坐标
@@ -175,7 +175,7 @@ $$
 
 ## 相似、仿射、射影变换
 
-见[多视图几何](https://note.jujimeizuo.cn/assets/images/cv/mvg/pjt2d/#_5)
+见[多视图几何](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/pjt2d/#_5)
 
 ## Eigen 库
 

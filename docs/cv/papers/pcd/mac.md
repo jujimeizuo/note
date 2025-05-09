@@ -23,7 +23,7 @@ comment: true
 
 为了对齐两个点云 $P_s$ 和 $P_t$，**首先使用几何或学习到的描述符提取它们的局部特征**。假设 $p^s$ 和 $p^t$ 分别表示点云 $P^s$ 和 $P^t$ 中的点。通过**匹配特征描述符，形成初始对应集合 $C_{initial}=\{C\}$**，其中 $c=(p^s, p^t)$。**MAC 从 $C_{initial}$ 中估计 $P^s$ 和 $P^t$ 之间的 6-DoF 位姿变换。**
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/pcd/MAC-1.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/pcd/MAC-1.jpg"></center>
 
 ### Graph Construction
 

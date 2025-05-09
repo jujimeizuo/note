@@ -27,7 +27,7 @@ RNN在自然语言处理领域最先被使用起来，RNN可以为语言模型�
 
 基本的 RNN，结构由**输入层、一个隐藏层和输出层**组成。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/rnn-structure.png" width="30%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/rnn-structure.png" width="30%"></center>
 
 - x 是输入向量
 - o 是输出向量
@@ -39,7 +39,7 @@ RNN在自然语言处理领域最先被使用起来，RNN可以为语言模型�
 
 将上图的基本 RNN 结构在时间维度展开（RNN 是一个链式结构，每个时间片使用的都是相同的参数）
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/rnn-time-expansion.png" alt="RNN 时间展开图"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/rnn-time-expansion.png" alt="RNN 时间展开图"></center>
 
 这个网络在 t 时刻接收到输入 $x_t$ 之后，隐藏层的值是 $s_t$，输出层的值是 $o_t$，**关键的是，$s_t$ 的值不仅仅取决于 $x_t$，还取决于 $s_{t-1}$**。
 
@@ -70,7 +70,7 @@ $$
 
 对于语言模型来说，很多时候光看前面的词是不够的，比如下面这句话：**我的手机坏了，我打算<u>  </u>一部新的手机**。 我们这个时候就需要双向循环神经网络。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/brnn-structure.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/brnn-structure.png"></center>
 
 从上图可以看出，双向循环神经网络的隐藏层需要保存两个值，一个 $A$ 参与正向计算，另一个值 $A^\prime$ 参与反向计算。最终的输出值 $y_2$ 取决于 $A_2$ 和 $A_2^\prime$。其计算方法为：
 
@@ -117,11 +117,11 @@ $$
 
 原始 RNN 的隐藏层只有一个状态，即 h，它对短期的输入非常敏感。那么如果我们再加一个门（gate）机制用于控制特征的流通和损失，即 c，让它来保存长期的状态，这就是**长短时记忆网络（Long Short Term Memory，LSTM）**。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-structure.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-structure.png" width="50%"></center>
 
 新增加的状态 c，称为单元状态。把 LSTM 按照时间维度展开：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-time-expansion.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-time-expansion.png" width="50%"></center>
 
 可以看到在 t 时刻
 
@@ -132,7 +132,7 @@ $$
 
 LSTM 的关键是单元状态，即贯穿图表顶部的水平线，有点像传送带。这一部分一般叫做单元状态（cell state），它自始至终存在于 LSTM 的整个链式系统中。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-cell-state.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-cell-state.png" width="50%"></center>
 
 记忆单元状态的计算公式：$公式1：c_{t}=f_{t} \odot c_{t-1}+i_{t} \odot g_t$
 
@@ -140,7 +140,7 @@ LSTM 的关键是单元状态，即贯穿图表顶部的水平线，有点像传
 
 $f_t$ 叫做**遗忘门**，表示 $C_{t-1}$ 的哪些特征被用于计算 $C_t$。$f_t$ 是一个向量，向量的每个元素均位于(0~1)范围内。通常我们使用 sigmoid 作为激活函数，sigmoid 的输出是一个介于(0~1)区间内的值，但是当你观察一个训练好的 LSTM 时，你会发现门的值绝大多数都非常接近 0 或 1，其余的值少之又少。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-forget-gate.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-forget-gate.png" width="50%"></center>
 
 遗忘门的计算公式：$公式2：f_t=\sigma (x_tW_x^{(f)}+h_{h-1}W_h^{(f)}+b^{(f)})$
 
@@ -148,7 +148,7 @@ $f_t$ 叫做**遗忘门**，表示 $C_{t-1}$ 的哪些特征被用于计算 $C_t
 
 $\tilde{C}_t$ 表示单元状态更新值，有输入数据 $x_t$ 和隐节点 $h_{t-1}$ 经由一个神经网络层得到，单元状态更新值的激活函数通常使用 tanh。$i_t$ 叫做输入门，同 $f_t$ 一样也是一个元素介于(0~1)区间内的向量，同样由 $x_t$ 和 $h_{t-1}$ 经由 sigmoid 激活函数计算而成。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-input-gate.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-input-gate.png" width="50%"></center>
 
 输入门和单元更新值的计算方式：
 
@@ -159,7 +159,7 @@ $\tilde{C}_t$ 表示单元状态更新值，有输入数据 $x_t$ 和隐节点 $
 
 最后，为了计算预测值 $\hat{y}_t$ 和生成下个时间片完整的输入，我们需要计算隐节点的输出 $h_t$。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-output-gate.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-output-gate.png" width="50%"></center>
 
 输出门和隐节点的计算公式
 
@@ -168,13 +168,13 @@ $\tilde{C}_t$ 表示单元状态更新值，有输入数据 $x_t$ 和隐节点 $
 
 我们来看公式2、3、4、5，都是型如 $xW_x+hW_h+b$ 的格式，因此可以整合为通过一个式子进行，如下图所示：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-eq.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-eq.png" width="50%"></center>
 
 4 个权重（或偏置）被整合为了 1 个。如此，原本单独执行4 次的仿射变换通过1 次计算即可完成，可以加快计算速度。这是因为矩阵库计算“大矩阵”时通常会更快，而且通过将权重整合到一起管理，源代码也会更简洁。
 
 假设 $W_x、W_h$ 和 $b$ 分别包含 4 个权重（或偏置），此时 LSTM 的计算图如下所示。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/lstm-compute-graph.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-compute-graph.png" width="50%"></center>
 
 ```python
 import tensorflow as tf
@@ -198,11 +198,11 @@ LSTM 的参数太多，计算需要很长时间。因此，最近业界又提出
 
 相对于 LSTM 使用隐藏状态和记忆单元两条线，GRU只使用隐藏状态。异同点如下：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/gru-lstm.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/gru-lstm.png" width="50%"></center>
 
 GRU 的计算图如下所示。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/rnn/gru-compute-graph.png" width="50%"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/gru-compute-graph.png" width="50%"></center>
 
 GRU 计算图中，$\sigma$ 节点和 tanh 节点有专用的权重，节点内部进行仿射变换（“1−”节点输入x，输出1 − x）
 

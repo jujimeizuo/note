@@ -25,7 +25,7 @@ comment: true
 
 ## OPTICAL FLOW BASED JOINT DYNAMIC SEGMENTATION AND DENSE FUSION
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-1.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-1.jpg"></center>
 
 ### Visual Odometry in Dense RGB-D Fusion
 
@@ -47,11 +47,11 @@ comment: true
     - 绿色箭头 $x^{sf}$ 是图像平面中投影的 2D 场景流
     - $x^e$ 是摄像机自身运动产生的流
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-2.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-2.jpg"></center>
 
 - 下图是迭代估计动态场景中的2D场景流.(a)是机器人向左移动而人类向右移动的场景.(b)是根据(a)的图像对估计的光流.颜色表示流动方向,强度表示像素位移.蓝色的流动是相机自我运动的结果.我们从光流中减去自我流,得到像平面上的场景流分量,如(c)所示.在(b)中迭代地移除场景流和 $x^e$ 在7次迭代之后就可以获得更好的2D场景流结果,如(d).
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-3.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-3.jpg"></center>
 
 ### Dynamic Clusters Segmentation
 

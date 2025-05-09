@@ -33,7 +33,7 @@ comment: true
 
 ### 光线投射体绘制技术
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/3dv/ray-casting.jpg" width="50%" alt="光线投射体绘制算法"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/3dv/ray-casting.jpg" width="50%" alt="光线投射体绘制算法"></center>
 
 - 三维数据场的分类问题
     - 阈值法
@@ -41,13 +41,13 @@ comment: true
 
 - 改进后的光线投射体绘制算法
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/3dv/promote-ray-casting.jpg" width="50%" alt="改进光线投射体绘制算法"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/3dv/promote-ray-casting.jpg" width="50%" alt="改进光线投射体绘制算法"></center>
 
 ### 物体空间扫描的体绘制技术
 
 - 足迹表法：逐层、逐行、逐个地计算每一个数据点对屏幕像素的贡献，并加以合成，形成最后的图像
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/3dv/footprint-table-method.jpg" width="50%" alt="足迹表法"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/3dv/footprint-table-method.jpg" width="50%" alt="足迹表法"></center>
 
 - 基于错切-变形技术的体绘制算法
 
@@ -58,7 +58,7 @@ comment: true
 
 
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/3dv/miscut-deformed.jpg" width="50%" alt="错切-变形算法"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/3dv/miscut-deformed.jpg" width="50%" alt="错切-变形算法"></center>
 
 - 体元投射法
 
@@ -71,7 +71,7 @@ comment: true
     - 频域体绘制基本算法
 - 基于物质分类的颜色赋值的频域体绘制算法
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/3dv/casc.jpg" width="50%" alt="基于物质分类的颜色赋值的频域体绘制算法"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/3dv/casc.jpg" width="50%" alt="基于物质分类的颜色赋值的频域体绘制算法"></center>
 
 - 重构核阶次的自适应选择
 - 进一步减少计算量和存储空间

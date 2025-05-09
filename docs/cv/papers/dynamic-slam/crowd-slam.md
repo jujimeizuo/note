@@ -17,14 +17,14 @@ comment: true
 - 将边界框里的关键点（人的特征点）全部视为外点，进行去除
 - 检查过滤区域并更新特征点数量，特征点的个数从给定的初始值开始，随着滤波面积增加而增大，300/30%，500/60%，700/90%，1200/95%。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Crowd-SLAM.jpg" alt="Framework of Crowd-SLAM"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Crowd-SLAM.jpg" alt="Framework of Crowd-SLAM"></center>
 
 
 ## Experiments
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Crowd-SLAM-2.jpeg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Crowd-SLAM-2.jpeg"></center>
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Crowd-SLAM-3.jpeg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Crowd-SLAM-3.jpeg"></center>
 
 
 ## Drawbacks

@@ -17,7 +17,7 @@ comment: true
 
 ## 数据集格式
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/kitti-1.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/kitti-1.png"></center>
 
 ### 结构
 
@@ -61,7 +61,7 @@ KITTI 提供了三种标定文件，不需人工转换。
 
 image 文件以 8 位 PNG 格式存储，如下所示：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/kitti-2.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/kitti-2.png"></center>
 
 ### velodyne 文件
 
@@ -86,7 +86,7 @@ dbf9 3742 a69b b641 c3f5 f83f ec51 383e
 
 点云数据以浮点二进制文件格式存储，每行包含8个数据，每个数据由四位十六进制数表示（浮点数），每个数据通过空格隔开。一个点云数据由四个浮点数数据构成，分别表示点云的x、y、z、r（强度 or 反射值），点云的存储方式如下表所示：
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/kitti-3.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/kitti-3.png"></center>
 
 ### calib 文件
 

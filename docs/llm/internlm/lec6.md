@@ -70,4 +70,4 @@ winograd   b6c7ed     accuracy  ppl         51.23      49.82
 
 - 使用 OpenCompass 评测 InternLM2-Chat-7B 模型在 C-Eval 数据集上的性能
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_6_1.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_6_1.jpg"></center>

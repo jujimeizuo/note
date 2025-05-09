@@ -17,13 +17,13 @@ comment: true
 
 > [!Done] 解决方案
 > 通过对推理阶段的 attention 的调整来实现将 DUSt3R 直接用到 dynamic 场景，避免预训练或 fine-tune。
-> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-0.jpg"></center>
+> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-0.jpg"></center>
 
 ## Method
 
 ### Network Architecture
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-1.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-1.jpg"></center>
 
 - **Insight**： DUSt3R 隐式学习刚性视图变换，违反极几何约束（无纹理、观测不足、动态区域）的 attention 值都比较小，通过在空间和时间维度上 aggregate cross-attention 的输出，很简单地将 attention 值较小的区域分割开来实现动态物体分割。
 - **Spaital attention maps**
@@ -32,11 +32,11 @@ comment: true
 - **Temporal attention maps**：
     - 将单对图像扩展到多对图像，需要考虑时间 attention 相关性，将上一步的 A 计算均值和方差。
 
-    <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-4.jpg"></center>
+    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-4.jpg"></center>
 
 - 最终的时间交叉注意力图：
 
-    <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-2.jpg"></center>
+    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-2.jpg"></center>
 
 ### dynamic Object Segmentation
 
@@ -46,7 +46,7 @@ $$
 \mathbf{A}^{a=\mathrm{dyn}}=(1-\mathbf{A}_{\mu}^{a=\mathrm{src}})\cdot\mathbf{A}_{\sigma}^{a=\mathrm{src}}\cdot\mathbf{A}_{\mu}^{a=\mathrm{ref}}\cdot(1-\mathbf{A}_{\sigma}^{a=\mathrm{ref}})
 $$
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-3.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-3.jpg"></center>
 
 ### 4D Reconstruction
 

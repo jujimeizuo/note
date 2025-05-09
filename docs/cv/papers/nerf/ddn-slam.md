@@ -18,7 +18,7 @@ counter: true
 4. 提出一种由**静态稀疏点云引导的采样策略**，以增强对静态表面的重建；
 5. 提出一种基于**动态掩码的渲染损失**，包括运动一致性损失、深度损失和颜色损失，以约束动态物体的渲染鬼影并消除遮挡。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DDN-SLAM-1.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DDN-SLAM-1.jpg"></center>
 
 
 

@@ -19,7 +19,7 @@ comment: true
 - 最大的创新点：**multilevel grid-based features（基于网格的多层特征）**，其余的 idea 就是优化方法，如何 mapping、tracking、如何加速，联合训练+分层训练，nerf 采样方法等等
 - 采用了三维栅格地图，每个栅格保存局部特征，用 decoder 将特征解码即可恢复出场景，因此即使场景面积很大也不存在网络遗忘的问题
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/NICE-SLAM-1.jpg"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/NICE-SLAM-1.jpg"></center>
 
 ### Hierarchical Scene Representation
 

@@ -399,7 +399,7 @@ histogram应用于数组的NumPy 函数返回一对向量：数组的直方图�
 >>> plt.show()
 ```
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/pl/python/quickstart-2_00_00.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/pl/python/quickstart-2_00_00.png"></center>
 
 ```python
 >>> # Compute the histogram with numpy and then plot it
@@ -408,7 +408,7 @@ histogram应用于数组的NumPy 函数返回一对向量：数组的直方图�
 >>> plt.show()
 ```
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cs/pl/python/quickstart-2_01_00.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/pl/python/quickstart-2_01_00.png"></center>
 
 
 

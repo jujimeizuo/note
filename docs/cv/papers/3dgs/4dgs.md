@@ -21,7 +21,7 @@ comment: true
 - 4DGS 模型中，将一个点的 $(x,y,z,t)$ 坐标先代入一个时空结构编码器，随后输出带入一个多头的高斯变形解码器进行解码，得到 $(x,y,z,r,s)$ 的变形值，与原值相加后，按照 3DGS 的方法得到不透明度和 SH 系数进行渲染
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/4DGS-1.jpg" alt="4dgs-pipeline">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4DGS-1.jpg" alt="4dgs-pipeline">
 </center>
 
 ### 4D Gaussian Splatting Framework
@@ -40,7 +40,7 @@ comment: true
 > - 新视角图像 $\hat{I} = \mathcal{S}(M, \mathcal{G}^\prime)$
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/4DGS-2.jpg" width="70%">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4DGS-2.jpg" width="70%">
 </center>
 
 
@@ -57,7 +57,7 @@ comment: true
 
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/4DGS-4.png">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4DGS-4.png">
 </center>
 
 - 如上图所示，空间相邻的高斯在运动和形变上具有相似的特征，同一个高斯在相邻时间也会呈现相似的变化特征，并且相隔较远的高斯之间也会具有一定的关联。
@@ -91,7 +91,7 @@ $$
 	- 微调阶段：主要学习变形场的表示，即优化多分辨率神经体素和 MLP；
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/4DGS-5.jpg">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4DGS-5.jpg">
 </center>
 
 #### Loss Function
@@ -105,7 +105,7 @@ $$
 ## Experiments
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/4DGS-3.png" alt="4dgs-experiment">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4DGS-3.png" alt="4dgs-experiment">
 </center>
 
 

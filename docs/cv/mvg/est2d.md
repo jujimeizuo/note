@@ -98,7 +98,7 @@ $$
     - 出现某种配置不能确定唯一解的情形称为**退化**。
 - 退化的定义既涉及配置也涉及变换类型，而且退化问题不仅限于最小配置解。如果多出来的（精确的，即无误差的）点对应也共线，那么退化问题仍没有解决。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/dot-line-config.jpg" alt="点-线配置的几何等价性"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/dot-line-config.jpg" alt="点-线配置的几何等价性"></center>
 
 
 ### 由线和其他实体求解
@@ -393,7 +393,7 @@ $$
 ### 算法的实验比较
 
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/cpi-func-of-ptm.jpg" alt="图像对应点计算射影变换方法"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/cpi-func-of-ptm.jpg" alt="图像对应点计算射影变换方法"></center>
 
 
 ## 鲁棒估计

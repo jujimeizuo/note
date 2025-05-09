@@ -22,7 +22,7 @@ comment: true
 
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Gaussian-Splatting-SLAM-1.jpg">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Gaussian-Splatting-SLAM-1.jpg">
 </center>
 
 
@@ -96,7 +96,7 @@ $$
 ## Experiments
 
 <center>
-<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Gaussian-Splatting-SLAM-2.jpg">
+<img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Gaussian-Splatting-SLAM-2.jpg">
 </center>
 
 ## Reference

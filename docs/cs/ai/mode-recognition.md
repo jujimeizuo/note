@@ -19,7 +19,7 @@ comment: True
 
 ### 模式识别系统组成
 
-<center>![模式识别系统组成](https://note.jujimeizuo.cn/assets/images/cs/ai/mr/mr-system-composition.png)</center>
+<center>![模式识别系统组成](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/ai/mr/mr-system-composition.png)</center>
 
 **注意“处理”与“识别”两个概念的区别**
 

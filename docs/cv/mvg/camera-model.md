@@ -52,7 +52,7 @@ Z \\
 上式也可表示为 \ \ \ \mathbf{x}=P\mathbf{X} \ \ \ 其中 \  \mathbf{X}用四维齐次矢量(X,Y,Z,1)^\top 表示  \ P = diag(f,f,1)[\mathbf{I}|\mathbf{0}]
 $$
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/camera-model.jpg" alt="针孔摄像机几何"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/camera-model.jpg" alt="针孔摄像机几何"></center>
 
 - **主点偏置**
     - 上面讨论的图像平面的坐标原点在主点上，但实际上可能不是，一般情形的映射为$(X,Y,Z)^\top \to (fX/Z+p_x,fY/Z+p_y)^\top$，根据上式推导：

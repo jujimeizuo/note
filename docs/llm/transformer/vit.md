@@ -14,9 +14,9 @@ comment: true
 
 ## Vit 模型介绍
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/vit/vit-1.gif"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/vit/vit-1.gif"></center>
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/vit/vit-2.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/vit/vit-2.png"></center>
 
 - 在 CV 中，卷积架构仍占主导地位，受 NLP 的启发，尝试将 Attention + CNN 或 Attention 替换 CNN components（保持 CNN 的整体结构）。
 - 通过 Transformer 的放缩/扩展，尝试将 Transformer 直接应用于图像，为此，我们**将图像拆分为块 (patch)，并将这些图像块的线性嵌入序列作为 Transformer 的输入。图像块 (patches) 的处理方式同 NLP 的标记 (tokens) (故经过线性嵌入后又叫 patch token)。**我们以有监督方式训练图像分类模型。
@@ -206,7 +206,7 @@ comment: true
 - 用比预训练时更高的图像分辨率进行微调通常效率更高。当提供更高分辨率的图像时，需保持图像 patchs 大小相同，此时有效图像 patchs 数变多，从而有效序列长度会更长。
 - ViT 可以处理任意序列长度，但预训练的位置嵌入不再有意义，因此根据它们在原图中的位置，对预训练的位置嵌入执行 2D 插值，以扩展到微调尺寸。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/vit/p-e-in.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/vit/p-e-in.png"></center>
 
 ??? example "resize_pos_embed"
     ```python

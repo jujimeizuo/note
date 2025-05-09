@@ -7,7 +7,7 @@ comment: true
 
 !!! abstract
 
-    <center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/summary.png"></center>
+    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/summary.png"></center>
 
 
     Word2Vec 的特点是能够将单词转化为向量来表示，这样词与词之间就可以定量地去度量它们之间的关系，挖掘词之间的联系。
@@ -24,7 +24,7 @@ comment: true
 
 　　下图是采用Distributed representation的一个例子，我们将词汇表里的词用"Royalty","Masculinity", "Femininity"和"Age"4个维度来表示，King这个词对应的词向量可能是(0.99,0.99,0.05,0.7)。当然在实际情况中，我们并不能对词向量的每个维度做一个很好的解释。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/dr.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/dr.png"></center>
 
 有了用Distributed Representation表示的较短的词向量，我们就可以较容易的分析词之间的关系了，比如我们将词的维度降维到2维，有一个有趣的研究表明，用下图的词向量表示我们的词时，我们可以发现：
 
@@ -32,7 +32,7 @@ $$
 \vec{King} - \vec{Man} + \vec{Woman} \approx \vec{Queen}
 $$
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/kmwq.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/kmwq.png"></center>
 
 可见我们只要得到了词汇表里所有词对应的词向量，那么我们就可以做很多有趣的事情了。不过，怎么训练才能得到合适的词向量呢？针对这个问题，Google的Tomas Mikolov在他的论文中提出了CBOW和Skip-gram两种神经网络模型。
 
@@ -44,11 +44,11 @@ Word2Vec 的训练模型本质上是只具有一个隐含层的神经元网络�
 
 Google的Mikolov在关于Word2Vec的论文中提出了CBOW和Skip-gram两种模型，CBOW适合于数据集较小的情况，而Skip-Gram在大型语料中表现更好。其中CBOW如下图左部分所示，使用围绕目标单词的其他单词（语境）作为输入，在映射层做加权处理后输出目标单词。与CBOW根据语境预测目标单词不同，Skip-gram根据当前单词预测语境，如下图右部分所示。假如我们有一个句子“There is an apple on the table”作为训练数据，CBOW的输入为（is,an,on,the），输出为apple。而Skip-gram的输入为apple，输出为（is,an,on,the）。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/cbow-skipgram.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/cbow-skipgram.png"></center>
 
 ## CBOW
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/cbow-net.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/cbow-net.png"></center>
 
 1. 输入层：上下文单词的 One-Hot 编码词向量，V 为词汇表单词个数，C 为上下文单词个数。以 “There is an apple on the table” 为例，C=4，所以模型输入是（is,an,on,the）4 个单词的 One-Hot 编码词向量。
 2. 初始化一个权重矩阵 $W_{V \times N}$，然后用所有输入的 One-Hot 编码词向量左乘该矩阵，得到维数为 N 的向量 $w_1,w_2,...,w_c$，这里的 N 由自己根据任务需要设置。
@@ -60,7 +60,7 @@ Google的Mikolov在关于Word2Vec的论文中提出了CBOW和Skip-gram两种模�
 
 ## Skip-gram
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/skip-gram-net.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/skip-gram-net.png"></center>
 
 Skip-Gram 是给定 input word 来预测上下文，其模型结构如上图所示。它的做法是，将一个词所在的上下文中的词作为输出，而那个词本身作为输入，也就是说，给出一个词，希望预测可能出现的上下文的词。通过在一个大的语料库训练，得到一个从输入层到隐含层的权重模型。“apple”的上下文词是（’there’，’is’，’an’，’on’,’the’,’table’）.那么以apple的One-Hot词向量作为输入，输出则是（’there’，’is’，’an’，’on’,’the’,’table’）的One-Hot词向量。训练完成后，就得到了每个词到隐含层的每个维度的权重，就是每个词的向量（和CBOW中一样）。
 
@@ -82,7 +82,7 @@ Hierarchical Softmax 对原模型的改进主要有两点
 - 第一点是从输入层到隐藏层的映射，没有采用原先的与矩阵 W 相乘然后相加求平均的方法，而是直接对所有输入的词向量求和。假设输入的词向量为（0，1，0，0）和（0，0，0，1），那么隐藏层的向量为（0，1，0，1）。
 - Hierarchical Softmax 的第二点改进是采用哈夫曼树来替换了原先的从隐藏层到输出层的矩阵 $W^\prime$。哈夫曼树的叶节点个数为词汇表的单词个数 V，一个叶节点代表一个单词，而从根结点到叶节点的路径确定了这个单词最终输出的词向量。
 
-<center><img src="https://note.jujimeizuo.cn/assets/images/llm/nlp/word2vec/hs-huffman.png"></center>
+<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/hs-huffman.png"></center>
 
 具体来说，这棵哈夫曼树除了根节点以外的所有非叶节点中都含有一个由参数 $\theta$ 确定的 sigmoid 函数，不同节点的 $\theta$ 不一样。训练时隐藏层的向量与这个 sigmoid 函数进行运算，根据结果进行分类，若分类为负类则沿左子树向下传递，编码为 0；若分类为正类则沿右子树向下传递，编码为 1。最终到达叶节点，叶节点的向量即为输出的词向量。
 

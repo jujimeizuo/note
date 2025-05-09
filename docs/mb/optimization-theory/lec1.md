@@ -124,7 +124,7 @@ $$
 
 用平面$L$去截曲面$S$得到的是一个圆，这个圆又一个重要的性质：**圆上任何一点的目标函数都等于$f_0$**。像这样的曲线，其上任何一点的目标函数值都等于同一常数，称为目标函数的**等值线**。
 
-<center>![等值线](https://note.jujimeizuo.cn/assets/images/mb/optimization-theory/isoline.jpg)</center>
+<center>![等值线](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/mb/optimization-theory/isoline.jpg)</center>
 
 ??? exmaple "图解法"
     $$
@@ -136,7 +136,7 @@ $$
 
     将无约束问题和约束问题的几何图形合在一起，如下右图所示。
 
-    <center>![等值线](https://note.jujimeizuo.cn/assets/images/mb/optimization-theory/graphic-method.jpg)</center>
+    <center>![等值线](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/mb/optimization-theory/graphic-method.jpg)</center>
 
 对于二维最优化问题，可以用图解法求解。
 
@@ -149,7 +149,7 @@ $$
 3. 等值面稠密的地方，目标函数值变化得比较快；稀疏的地方变化得比较慢。
 4. 在极值点附近，等值面（线）近似地呈现为同心椭球面族。
 
-<center>![等值线](https://note.jujimeizuo.cn/assets/images/mb/optimization-theory/isosurface.jpg)</center>
+<center>![等值线](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/mb/optimization-theory/isosurface.jpg)</center>
 
 
 ## 二次函数

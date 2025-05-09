@@ -119,11 +119,11 @@ $T:\ V \to W$称为子空间$V$到子空间$W$的映射。它表示将子空间$
     - $p(x+y) \le C(p(x)+p(y))$，其中$C \ne 1$为某个正实数
 - （完备性）一个向量空间$V$称为完备向量空间，若对于$V$中的每一个 Cauchy 序列$\{ v_n \}_{n=1}^{\infty} \subset V$，在向量空间$V$内存在一个元素$v$，使得$\lim_{n \to \infty} v_n \to v$，即$V$内的每一个 Cauchy 序列都收敛在向量空间$V$内。 
 
-<center>![几种向量空间的比较](https://note.jujimeizuo.cn/assets/images/mb/maa/compare.jpg)</center>
+<center>![几种向量空间的比较](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/mb/maa/compare.jpg)</center>
 
 - （伴随算子）令$T$是 Hilbert 空间$H$内的有界线性算子。若$<Tx,y>=<x,T^*y>$对所有向量$x,y \in H$成立，则称$T^*$是$T$的伴随算子(adjoint operator)。
 
-<center>![几种常用算子及伴随算子](https://note.jujimeizuo.cn/assets/images/mb/maa/adjoint-operator.jpg)</center>
+<center>![几种常用算子及伴随算子](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/mb/maa/adjoint-operator.jpg)</center>
 
 
 ## 内积与范数
