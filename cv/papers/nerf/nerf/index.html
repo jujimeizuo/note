@@ -1714,20 +1714,20 @@ var _hmt = _hmt || [];
 <li>一种<strong>位置编码</strong>，将每个输入的<span class="heti-skip"><span class="heti-spacing"> </span>5D<span class="heti-spacing"> </span></span>坐标映射到更高维度的空间，以便网络可以学习表示具有更高频率的场景内容</li>
 </ul>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-1.jpg"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-1.jpg"/></a>
 </center>
 <h3 id="nerf-scene-representation">NeRF Scene Representation<a class="headerlink" href="#nerf-scene-representation" title="Permanent link">¶</a></h3>
 <ul>
 <li>下图中间的函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>就是图当中的神经网络，用来表示<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>场景，这种表示方法是<strong>隐式</strong>的</li>
 </ul>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-3.jpg" width="50%"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-3.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-3.jpg" width="50%"/></a>
 </center>
 <ul>
 <li>输入<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x,y,z,\theta,\phi\)</span><span class="heti-spacing"> </span></span>是空间位置和观察方向，输出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(RGB, \sigma\)</span><span class="heti-spacing"> </span></span>是颜色和密度，就能算出场景中的颜色和密度</li>
 </ul>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-2.jpg"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-2.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-2.jpg"/></a>
 </center>
 <h3 id="volume-rendering">Volume Rendering<a class="headerlink" href="#volume-rendering" title="Permanent link">¶</a></h3>
 <h4 id="_1">光线的数学表示与光线采样<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
@@ -1782,7 +1782,7 @@ var _hmt = _hmt || [];
 </div>
 <ol>
 <li>分析单点<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>对成像的贡献。<span>P<span class="heti-spacing"> </span></span>距离线起点的距离是<span><span class="heti-spacing"> </span>t</span>，然后能得出<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>点坐标<span><span class="heti-spacing"> </span><span class="arithmatex">\(\bold{r}(t)\)</span></span><ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-10.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-10.png"/></a></li>
+<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-10.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-10.png"/></a></li>
 <li>密度越高，透明度越低，所以单看<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>点，它的成像颜色就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(c \cdot \sigma\)</span></span><ul>
 <li><span class="arithmatex">\(\sigma = 1.0\)</span>：完全不透明，它的成像颜色就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(c \cdot 1.0=c\)</span></span></li>
 <li><span class="arithmatex">\(\sigma = 0.0\)</span>：完成透明，它的成像颜色就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(c \cdot 0.0=0\)</span></span></li>
@@ -1842,44 +1842,44 @@ F_\mathcal{\theta} = F_{\mathcal{\theta}}^\prime \gamma
 \mathcal{L} = \sum_{r \in R} \left [ \left \|   \hat{C}_c(r) - C(r)  \right \|_2^2 - \left \| \hat{C}_f(r) - C(r)  \right \|_2^2 \right ] 
 \]</div>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-11.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-11.jpg"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-11.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-11.jpg"/></a>
 </center>
 <h2 id="pipeline">Pipeline<a class="headerlink" href="#pipeline" title="Permanent link">¶</a></h2>
 <ol>
 <li>已知相机在不同的位置拍摄了一组目标场景的照片<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（如果你是手机拍摄的一段视频可以用<span class="heti-skip"><span class="heti-spacing"> </span>colormap<span class="heti-spacing"> </span></span>转）</li>
 </ol>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-4.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-4.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-4.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-4.png"/></a>
 </center>
 <ol start="2">
 <li>从相机中心开始，沿着某个像素方向发射一条光线。<span>(<span class="heti-spacing"> </span></span>注意：跟真实的相机成像模型光线方向是相反的，但不影响<span><span class="heti-spacing"> </span>)</span>。</li>
 </ol>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-5.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-5.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-5.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-5.png"/></a>
 </center>
 <ol start="3">
 <li>建立一个神经网络<span><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span></span>，输入<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((x,y,z,\theta,\phi)\)</span><span class="heti-spacing"> </span></span>是空间位置和观察方向，输出<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(RGB,\sigma\)</span><span class="heti-spacing"> </span></span>颜色和密度。就能算出场景中每个位置的颜色和密度。</li>
 </ol>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-6.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-6.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-6.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-6.png"/></a>
 </center>
 <ol start="4">
 <li>把这条光线上所有位置上的颜色和密度合成，就能算出图上的像素<span class="heti-skip"><span class="heti-spacing"> </span>RGB<span class="heti-spacing"> </span></span>值。</li>
 </ol>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-7.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-7.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-7.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-7.png"/></a>
 </center>
 <ol start="5">
 <li>根据输入的一组图像上的像素<span class="heti-skip"><span class="heti-spacing"> </span>RGB<span class="heti-spacing"> </span></span>值，生成无数条光线，不断去优化可微函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span></span>。当优化次数足够，就可以直接使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>算出所有视角下图像的像素<span class="heti-skip"><span class="heti-spacing"> </span>RGB<span class="heti-spacing"> </span></span>值。</li>
 </ol>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-8.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-8.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-8.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-8.png"/></a>
 </center>
 <ol start="6">
 <li>知道每个位置的颜色和密度，就用<span class="heti-skip"><span class="heti-spacing"> </span>Marching Cubes<span class="heti-spacing"> </span></span>算法转换为三角网三维模型。完成三维重建。</li>
 </ol>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-9.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-9.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-9.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-9.png"/></a>
 </center>
 <ol start="7">
 <li>求得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>就实现了三维重建，后面都是合成新视角和转换。</li>
@@ -1896,7 +1896,7 @@ F_\mathcal{\theta} = F_{\mathcal{\theta}}^\prime \gamma
 <h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">¶</a></h2>
 <p>下图是 <code>Instant-NGP</code> 实验：</p>
 <p></p><center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%"/></a>
 </center>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
 <ul>
@@ -1910,7 +1910,7 @@ F_\mathcal{\theta} = F_{\mathcal{\theta}}^\prime \gamma
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:51:31</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年9月19日 16:15:56</span>

@@ -1643,7 +1643,7 @@ var _hmt = _hmt || [];
 <li>将环境动态属性定义为语义概念，并利用<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>工具解决。例如一种基于深度学习的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>场景流估计方法，该方法结合了两个深度学习网络。</li>
 </ul>
 <h2 id="optical-flow-based-joint-dynamic-segmentation-and-dense-fusion">OPTICAL FLOW BASED JOINT DYNAMIC SEGMENTATION AND DENSE FUSION<a class="headerlink" href="#optical-flow-based-joint-dynamic-segmentation-and-dense-fusion" title="Permanent link">¶</a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-1.jpg"/></a></center>
 <h3 id="visual-odometry-in-dense-rgb-d-fusion">Visual Odometry in Dense RGB-D Fusion<a class="headerlink" href="#visual-odometry-in-dense-rgb-d-fusion" title="Permanent link">¶</a></h3>
 <ul>
 <li>输入两个连续的<span class="heti-skip"><span class="heti-spacing"> </span>RGB-D<span class="heti-spacing"> </span></span>帧<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>B</span>，<span>RGB<span class="heti-spacing"> </span></span>图像首先被馈送到<span class="heti-skip"><span class="heti-spacing"> </span>PWC-net<span class="heti-spacing"> </span></span>用于光流估计。</li>
@@ -1668,11 +1668,11 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-2.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-2.jpg"/></a></center>
 <ul>
 <li>下图是迭代估计动态场景中的<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>场景流<span class="heti-skip"><span class="heti-spacing"> </span>.(a)<span class="heti-spacing"> </span></span>是机器人向左移动而人类向右移动的场景<span class="heti-skip"><span class="heti-spacing"> </span>.(b)<span class="heti-spacing"> </span></span>是根据<span class="heti-skip"><span class="heti-spacing"> </span>(a)<span class="heti-spacing"> </span></span>的图像对估计的光流<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>颜色表示流动方向<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>强度表示像素位移<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>蓝色的流动是相机自我运动的结果<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>我们从光流中减去自我流<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>得到像平面上的场景流分量<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>如<span class="heti-skip"><span class="heti-spacing"> </span>(c)<span class="heti-spacing"> </span></span>所示<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>(b)<span class="heti-spacing"> </span></span>中迭代地移除场景流和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x^e\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>次迭代之后就可以获得更好的<span class="heti-skip"><span class="heti-spacing"> </span>2D<span class="heti-spacing"> </span></span>场景流结果<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>如<span><span class="heti-spacing"> </span>(d).</span></li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/FlowFusion-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-3.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/FlowFusion-3.jpg"/></a></center>
 <h3 id="dynamic-clusters-segmentation">Dynamic Clusters Segmentation<a class="headerlink" href="#dynamic-clusters-segmentation" title="Permanent link">¶</a></h3>
 <ul>
 <li>已经定义了三个残差<span><span class="heti-spacing"> </span><span class="arithmatex">\(r_I, r_D, r_F\)</span></span>，分别表示为强度、深度和光流</li>
@@ -1689,7 +1689,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:51:31</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月26日 15:36:00</span>

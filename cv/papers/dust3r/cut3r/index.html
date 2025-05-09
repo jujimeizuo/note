@@ -1632,11 +1632,11 @@ var _hmt = _hmt || [];
 <li>3D Reconstruction(Photo Collection)</li>
 <li>Inferring Unseen Structure</li>
 <li><strong>该方法具有一个状态的循环模型，能随着每次新的观察不断更新其状态表示，读取信息以预测视图的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>属性（点图、相机参数）</strong>
-<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/cut3r-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/cut3r-1.jpg"/></a></center></li>
+<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-1.jpg"/></a></center></li>
 </ul>
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/cut3r-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/cut3r-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-2.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-2.jpg"/></a></center>
 <h3 id="state-input-interaction-mechanism">State-Input Interaction Mechanism<a class="headerlink" href="#state-input-interaction-mechanism" title="Permanent link">¶</a></h3>
 <ul>
 <li>将图像流作为输入，对于当前图像<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_t\)</span></span>，首先用<span class="heti-skip"><span class="heti-spacing"> </span>ViT<span class="heti-spacing"> </span></span>进行编码为<span><span class="heti-spacing"> </span>token <span class="arithmatex">\(F_t = Encoder_i(I_t)\)</span></span>（状态也表示为一组<span><span class="heti-spacing"> </span>tokens</span>，状态初始化为所有场景共享的一组可学习的<span><span class="heti-spacing"> </span>token</span>）</li>
@@ -1656,7 +1656,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h3 id="querying-the-state-with-unseen-views">Querying the State with Unseen Views<a class="headerlink" href="#querying-the-state-with-unseen-views" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/cut3r-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/cut3r-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-3.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-3.jpg"/></a></center>
 <ul>
 <li>使用虚拟相机作为查询，从状态中提取信息。虚拟相机的内参和外参表示为一个光线映射<span><span class="heti-spacing"> </span>R</span>，对每个像素处光线的起点和方向进行编码<span><span class="heti-spacing"> </span><span class="arithmatex">\(F_r = Encoder_r(\blod{R})\)</span></span>，后续步骤和上面相同</li>
 <li>用相同的<span class="heti-skip"><span class="heti-spacing"> </span>head<span class="heti-spacing"> </span></span>将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_r^\prime\)</span><span class="heti-spacing"> </span></span>解析为显式表示</li>
@@ -1672,7 +1672,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:51:31</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

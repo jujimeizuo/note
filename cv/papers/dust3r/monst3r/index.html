@@ -1597,17 +1597,17 @@ var _hmt = _hmt || [];
 <ol>
 <li><span>DUSt3R<span class="heti-spacing"> </span></span>对齐了移动的前景物体，但由于只在静态场景中进行训练，导致静态背景元素的对齐出现不正确的对齐。</li>
 <li><span>DUSt3R<span class="heti-spacing"> </span></span>无法估计前景物体的几何形状和深度，并将它们放在背景中。
-<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-1.jpg"/></a></center></li>
+<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/monst3r-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/monst3r-1.jpg"/></a></center></li>
 </ol>
 </div>
 <div class="admonition success">
 <p class="admonition-title">解决方案</p>
 <p><span>MonST3R<span class="heti-spacing"> </span></span>直接从动态场景中估计每个<span class="heti-skip"><span class="heti-spacing"> </span>timestep<span class="heti-spacing"> </span></span>下的的<span><span class="heti-spacing"> </span>pointmap</span>。然而缺乏适合的训练数据（带深度标签的动态视频<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，作者将该问题视为微调任务，识别多个适合的数据集，并在有限的数据上训练模型，即使没有明确的运动表示也能处理动态场景。
-</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-3.jpg"/></a></center>
+</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/monst3r-3.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/monst3r-3.jpg"/></a></center>
 从动态场景中估算的 pointmap，则是根据物体的移动把动态物体的点云也显示出来。而静态部分的场景则需要实现 Multi-frame alignment。
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/monst3r-2.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/monst3r-2.jpg"/></a></center>
 <ul>
 <li>对于<span class="heti-skip"><span class="heti-spacing"> </span>finetune<span class="heti-spacing"> </span></span>过程，只微调了<span class="heti-skip"><span class="heti-spacing"> </span>prediction head<span class="heti-spacing"> </span></span>以及<span><span class="heti-spacing"> </span>decoder</span>，而<span class="heti-skip"><span class="heti-spacing"> </span>encoder<span class="heti-spacing"> </span></span>固定不变。</li>
 <li>额外增加了<span class="heti-skip"><span class="heti-spacing"> </span>RAFT<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>SAM2<span class="heti-spacing"> </span></span>用来分离动态和静态。</li>
@@ -1626,7 +1626,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:51:31</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

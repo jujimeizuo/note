@@ -1639,11 +1639,11 @@ var _hmt = _hmt || [];
 <div class="admonition success">
 <p class="admonition-title">解决方案</p>
 <p>通过对推理阶段的<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>的调整来实现将<span class="heti-skip"><span class="heti-spacing"> </span>DUSt3R<span class="heti-spacing"> </span></span>直接用到<span class="heti-skip"><span class="heti-spacing"> </span>dynamic<span class="heti-spacing"> </span></span>场景，避免预训练或<span><span class="heti-spacing"> </span>fine-tune</span>。
-</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-0.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-0.jpg"/></a></center>
+</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-0.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-0.jpg"/></a></center>
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
 <h3 id="network-architecture">Network Architecture<a class="headerlink" href="#network-architecture" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-1.jpg"/></a></center>
 <ul>
 <li><strong>Insight</strong>： <span>DUSt3R<span class="heti-spacing"> </span></span>隐式学习刚性视图变换，违反极几何约束（无纹理、观测不足、动态区域）的<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>值都比较小，通过在空间和时间维度上<span class="heti-skip"><span class="heti-spacing"> </span>aggregate cross-attention<span class="heti-spacing"> </span></span>的输出，很简单地将<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>值较小的区域分割开来实现动态物体分割。</li>
 <li><strong>Spaital attention maps</strong><ul>
@@ -1656,11 +1656,11 @@ var _hmt = _hmt || [];
 <ul>
 <li>将单对图像扩展到多对图像，需要考虑时间<span class="heti-skip"><span class="heti-spacing"> </span>attention<span class="heti-spacing"> </span></span>相关性，将上一步的<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>计算均值和方差。</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-4.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-4.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-4.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-4.jpg"/></a></center>
 </li>
 <li>
 <p>最终的时间交叉注意力图：</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-2.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-2.jpg"/></a></center>
 </li>
 </ul>
 <h3 id="dynamic-object-segmentation">dynamic Object Segmentation<a class="headerlink" href="#dynamic-object-segmentation" title="Permanent link">¶</a></h3>
@@ -1668,7 +1668,7 @@ var _hmt = _hmt || [];
 <div class="arithmatex">\[
 \mathbf{A}^{a=\mathrm{dyn}}=(1-\mathbf{A}_{\mu}^{a=\mathrm{src}})\cdot\mathbf{A}_{\sigma}^{a=\mathrm{src}}\cdot\mathbf{A}_{\mu}^{a=\mathrm{ref}}\cdot(1-\mathbf{A}_{\sigma}^{a=\mathrm{ref}})
 \]</div>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/easi3r-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-3.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/easi3r-3.jpg"/></a></center>
 <h3 id="4d-reconstruction">4D Reconstruction<a class="headerlink" href="#4d-reconstruction" title="Permanent link">¶</a></h3>
 <ul>
 <li>经过动态物体分割后，如果用黑色像素替换动态区域，这种方法会显著降低重建性能，原因是黑色像素和<span class="heti-skip"><span class="heti-spacing"> </span>mask token<span class="heti-spacing"> </span></span>会导致分布外的输入，解决方案是在<span class="heti-skip"><span class="heti-spacing"> </span>attention layers<span class="heti-spacing"> </span></span>中应用<span><span class="heti-spacing"> </span>mask</span>。</li>
@@ -1685,7 +1685,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:51:31</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

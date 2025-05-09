@@ -1663,7 +1663,7 @@ var _hmt = _hmt || [];
 <h2 id="system-intruduction">SYSTEM INTRUDUCTION<a class="headerlink" href="#system-intruduction" title="Permanent link">¶</a></h2>
 <h3 id="framework-of-ds-slam">Framework of DS-SLAM<a class="headerlink" href="#framework-of-ds-slam" title="Permanent link">¶</a></h3>
 <p><span>Kinect2<span class="heti-spacing"> </span></span>捕获的原始<span class="heti-skip"><span class="heti-spacing"> </span>RGB<span class="heti-spacing"> </span></span>图像在跟踪线程和语义分割线程中同时进行处理。跟踪线程首先提取<span class="heti-skip"><span class="heti-spacing"> </span>ORB<span class="heti-spacing"> </span></span>特征点，然后粗略检查特征点的移动一致性并保存潜在的异常值。然后跟踪线程等待具有由语义分割线程预测的像素级语义标签的图像。分割结果到达后，将根据分割结果和之前检测到的潜在异常值，丢弃位于运动物体中的<span class="heti-skip"><span class="heti-spacing"> </span>ORB<span class="heti-spacing"> </span></span>特征点异常值。然后，通过匹配其余的稳定特征点来计算变换矩阵。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/DS-SLAM-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DS-SLAM-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DS-SLAM-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DS-SLAM-1.jpg"/></a></center>
 <h3 id="semantic-segmentation">Semantic Segmentation<a class="headerlink" href="#semantic-segmentation" title="Permanent link">¶</a></h3>
 <p><span>DS-SLAM<span class="heti-spacing"> </span></span>采用<span class="heti-skip"><span class="heti-spacing"> </span>SegNet<span class="heti-spacing"> </span></span>提供基于<span class="heti-skip"><span class="heti-spacing"> </span>caffe<span class="heti-spacing"> </span></span>的像素级实时语义分割。在<span class="heti-skip"><span class="heti-spacing"> </span>PASCAL VOC<span class="heti-spacing"> </span></span>数据集上训练的<span class="heti-skip"><span class="heti-spacing"> </span>SegNet<span class="heti-spacing"> </span></span>总共可以分割<span class="heti-skip"><span class="heti-spacing"> </span>20<span class="heti-spacing"> </span></span>个类。在实际应用中，人最有可能是动态对象，因此我们假设位于人身上的特征点最有可能是异常值。</p>
 <h3 id="moving-consistency-check">Moving Consistency Check<a class="headerlink" href="#moving-consistency-check" title="Permanent link">¶</a></h3>
@@ -1721,7 +1721,7 @@ L(n | z_{1:t+1}) = L(n | z_{1:t-1}) + L(n | z_t)
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:51:31</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月20日 21:20:49</span>
