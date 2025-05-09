@@ -1,4 +1,11 @@
 - "2025":
+  - "2025-05-09":
+    - newpage:
+        text: CV > Papers > DUSt3R > DAS3R
+        href: /cv/papers/dust3r/das3r/
+    - newpage:
+        text: CV > Papers > DUSt3R > CUT3R
+        href: /cv/papers/dust3r/cut3r/
   - "2025-05-02":
     - newpage:
         text: CV > Papers > DUSt3R > Easi3R
