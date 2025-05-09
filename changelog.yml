@@ -6,6 +6,7 @@
     - newpage:
         text: CV > Papers > DUSt3R > CUT3R
         href: /cv/papers/dust3r/cut3r/
+    - refactor: update images links
   - "2025-05-02":
     - newpage:
         text: CV > Papers > DUSt3R > Easi3R

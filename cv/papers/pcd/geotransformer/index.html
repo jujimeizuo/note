@@ -1788,7 +1788,7 @@ var _hmt = _hmt || [];
 <details class="info" open="open">
 <summary><span>GeoTransformer<span class="heti-spacing"> </span></span>整体框架</summary>
 <p><span>GeoTransformer<span class="heti-spacing"> </span></span>的步骤分为<strong>特征提取</strong>、<strong>超点匹配</strong>、<strong>点云匹配</strong>和<strong>局部全局配准</strong>四个过程。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/pcd/GeoTransformer-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/pcd/GeoTransformer-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/pcd/GeoTransformer-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/pcd/GeoTransformer-1.jpg"/></a></center>
 </details>
 <h4 id="_4">特征提取<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>特征提取利用<span class="heti-skip"><span class="heti-spacing"> </span>KPConv+FPN<span class="heti-spacing"> </span></span>的结构提取多层次特征，输入源点云和目标点云，输出<span class="heti-skip"><span class="heti-spacing"> </span>KPConv<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>output<span class="heti-spacing"> </span></span>的两个点云特征，以及输出<span class="heti-skip"><span class="heti-spacing"> </span>FPN<span class="heti-spacing"> </span></span>后的<span class="heti-skip"><span class="heti-spacing"> </span>output<span class="heti-spacing"> </span></span>的两个点云特征。</p>
@@ -1800,8 +1800,8 @@ var _hmt = _hmt || [];
 <div class="arithmatex">\[e_{i,j}=\frac{(x_iW^Q)(x_jW^K+r_{i,j}W^R)^\top}{\sqrt{d_t}}\]</div>
 <p>几何自注意力机制中 更多考虑了几何关系，比如引入超点特征向量<span><span class="heti-spacing"> </span><span class="arithmatex">\(x_i,x_j\)</span></span>，几何结构嵌入向量<span><span class="heti-spacing"> </span><span class="arithmatex">\(r_{i,j}\)</span></span>，作为注意力机制中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Q、K、R\)</span><span class="heti-spacing"> </span></span>的权重系数，通过几何关系来影响注意力机制。</p>
 <blockquote>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/pcd/GeoTransformer-2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/pcd/GeoTransformer-2.jpg"/></a></center>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/pcd/GeoTransformer-3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/pcd/GeoTransformer-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/pcd/GeoTransformer-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/pcd/GeoTransformer-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/pcd/GeoTransformer-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/pcd/GeoTransformer-3.jpg"/></a></center>
 </blockquote>
 <div class="arithmatex">\[r_{i,j} = r_{i,j}^DW^D + \max_x\{r_{i,j,x}^AW^A\}\]</div>
 <h4 id="_7">特征交叉注意力模块<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
@@ -1865,7 +1865,7 @@ R, t = \underset{R_i,t_i}{\max} \sum_{(\tilde{p}_{x_j}, \tilde{q}_{y_j}) \in C} 
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年2月27日 16:24:31</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年2月18日 10:23:48</span>

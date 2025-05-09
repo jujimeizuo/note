@@ -1646,7 +1646,7 @@ var _hmt = _hmt || [];
 <li>隐式场景表征可以用来做相机位姿估计，但都是离线形式，计算量大，<span>iMAP<span class="heti-spacing"> </span></span>使用深度图像能达到实时效果</li>
 <li>持续学习会遇到<strong>灾难性遗忘</strong>，<span>iMAP<span class="heti-spacing"> </span></span>采用<span><span class="heti-spacing"> </span>replay-based approach</span>，将先前的结果缓存</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/iMAP-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/iMAP-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/iMAP-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/iMAP-1.jpg"/></a></center>
 <h3 id="implicit-scene-neural-network">Implicit Scene Neural Network<a class="headerlink" href="#implicit-scene-neural-network" title="Permanent link">¶</a></h3>
 <ul>
 <li>借鉴<span><span class="heti-spacing"> </span>NeRF</span>，用<span class="heti-skip"><span class="heti-spacing"> </span>MLP<span class="heti-spacing"> </span></span>将<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>坐标点转换成颜色和体积密度值：<span class="arithmatex">\(\bold{p}=(x,y,z),F_\theta(\bold{p})=(\bold{c}, \rho)\)</span></li>
@@ -1739,11 +1739,11 @@ P=\frac{1}{\left | s \right | } \sum_{(u,v) \in s} (\frac{\left | D[u,v] - \hat{
 <ul>
 <li>image active sampling：对图像随机选点，选取方法是先分块，先均匀采样，分块求<span><span class="heti-spacing"> </span>loss</span>，计算每一块的权重，然后根据权重采样</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/iMAP-2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/iMAP-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/iMAP-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/iMAP-2.jpg"/></a></center>
 <ul>
 <li>keyframe active sampling：为了限制联合优化的计算复杂度，每次迭代只选三个关键帧。同上，也是计算<span class="heti-skip"><span class="heti-spacing"> </span>loss<span class="heti-spacing"> </span></span>在分配权重</li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/iMAP-3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/iMAP-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/iMAP-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/iMAP-3.jpg"/></a></center>
 </li>
 </ul>
 <h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">¶</a></h2>
@@ -1757,7 +1757,7 @@ P=\frac{1}{\left | s \right | } \sum_{(u,v) \in s} (\frac{\left | D[u,v] - \hat{
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年9月25日 15:58:57</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年8月3日 16:38:09</span>

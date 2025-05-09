@@ -1640,7 +1640,7 @@ var _hmt = _hmt || [];
 </ol>
 </li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-1.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM-1.jpg"/></a></center>
 <h2 id="related-work">Related Work<a class="headerlink" href="#related-work" title="Permanent link">¶</a></h2>
 <p><strong>SLAM</strong></p>
 <ul>
@@ -1675,20 +1675,20 @@ var _hmt = _hmt || [];
 <li>在相机位姿估计前，通过特征匹配和匹配点扩展在跟踪线程中传播运动概率，有效地去除动态物体上提取的特征；</li>
 </ol>
 <p>把属于运动物体的特征点的概率称为运动概率。如下图所示，我们根据移动概率将这些关键点区分为四种状态。在匹配点扩展中使用两个高置信度点将移动概率传播到相邻的不匹配点。在每个点通过传播获得移动概率后，我们移除所有动态点，并使用<span class="heti-skip"><span class="heti-spacing"> </span>RANSAC<span class="heti-spacing"> </span></span>过滤其他异常值以进行姿态估计。</p>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM2.jpg"/></a></center>
 <p><strong>Updating Moving Probability</strong></p>
 <p>考虑到检测的延迟和连续帧的时空一致性，只选择关键帧的彩色图像，通过<span class="heti-skip"><span class="heti-spacing"> </span>DNN<span class="heti-spacing"> </span></span>对图像进行预处理和前向传播，在跟踪线程中逐帧传播运动概率。一旦获得检测结果，我们将关键帧插入本地地图并更新本地地图中的移动概率。更新在关键帧中找到匹配关键点的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点的概率：</p>
 <div class="arithmatex">\[
 P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \quad \alpha = 0.3
 \]</div>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM3.jpg"/></a></center>
 <p><strong>Moving Probability Propagation</strong></p>
 <p>在跟踪线程中，通过两个操作逐帧估计每个关键点的移动概率：</p>
 <ol>
 <li>特征匹配</li>
 <li>匹配点扩展（移动概率传播）</li>
 </ol>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-4.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/Detect-SLAM-4.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM-4.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/Detect-SLAM-4.jpg"/></a></center>
 <h3 id="mapping-objects">Mapping Objects<a class="headerlink" href="#mapping-objects" title="Permanent link">¶</a></h3>
 <p><strong>Predicting Region ID</strong></p>
 <ul>
@@ -1713,7 +1713,7 @@ P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \qua
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年9月25日 15:58:57</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月29日 14:24:52</span>

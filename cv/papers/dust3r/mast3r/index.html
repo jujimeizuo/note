@@ -1629,7 +1629,7 @@ var _hmt = _hmt || [];
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
 <h3 id="mast3r-matching">MASt3R Matching<a class="headerlink" href="#mast3r-matching" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-1.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-1.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-1.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-1.png"/></a></center>
 <ul>
 <li><span>matching<span class="heti-spacing"> </span></span>的网络结构和<span class="heti-skip"><span class="heti-spacing"> </span>DUSt3R<span class="heti-spacing"> </span></span>基本一致，蓝色的部分是新增的模块。比较明显的是新增了一个<span class="heti-skip"><span class="heti-spacing"> </span>head<span class="heti-spacing"> </span></span>用来提取<span><span class="heti-spacing"> </span>local features</span>。然后多了两个最近邻匹配模块用来构建匹配。</li>
 <li>
@@ -1658,9 +1658,9 @@ s_\tau(i,j)=exp[-\tau {D_i^1}^\top D_j^2],\mathcal{P}^1=\{i|(i,j)\in\hat{\mathca
 </ul>
 </li>
 </ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-2.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-2.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-2.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-2.png"/></a></center>
 <h3 id="mast3r-sfm">MASt3R SfM<a class="headerlink" href="#mast3r-sfm" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-3.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-3.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-3.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-3.png"/></a></center>
 <ul>
 <li><span>MASt3R SfM<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>pipeline<span class="heti-spacing"> </span></span>里集成了多帧输入，但是一次只能处理两张图片，<span>MASt3R SfM<span class="heti-spacing"> </span></span>基于<span><span class="heti-spacing"> </span>MASt3R matching</span>，只用到了<span class="heti-skip"><span class="heti-spacing"> </span>encoder<span class="heti-spacing"> </span></span>的输出作为<span><span class="heti-spacing"> </span>tokenFeature</span>（不是<span class="heti-skip"><span class="heti-spacing"> </span>head<span class="heti-spacing"> </span></span>输出的<span><span class="heti-spacing"> </span>LocalFeature</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而不需要像素级别的匹配关系。</li>
 <li>类似于<span><span class="heti-spacing"> </span>DUSt3R</span>，先基于重叠视角构建一个<span><span class="heti-spacing"> </span>Graph</span>：<ul>
@@ -1674,7 +1674,7 @@ s_\tau(i,j)=exp[-\tau {D_i^1}^\top D_j^2],\mathcal{P}^1=\{i|(i,j)\in\hat{\mathca
 <li><strong>匹配与标准点图、<span>BA<span class="heti-spacing"> </span></span>优化</strong></li>
 </ul>
 <h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">¶</a></h2>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-3.png"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/mast3r-3.png"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-3.png"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/mast3r-3.png"/></a></center>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://blog.csdn.net/yorkhunter/article/details/141274989"><span>MASt3R<span class="heti-spacing"> </span></span>落地<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>的图像匹配</a></li>
@@ -1687,7 +1687,7 @@ s_\tau(i,j)=exp[-\tau {D_i^1}^\top D_j^2],\mathcal{P}^1=\{i|(i,j)\in\hat{\mathca
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年4月30日 19:10:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

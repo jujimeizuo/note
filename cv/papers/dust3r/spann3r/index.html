@@ -1636,11 +1636,11 @@ var _hmt = _hmt || [];
 <div class="admonition success">
 <p class="admonition-title">解决方案</p>
 <p><span>Spann3R<span class="heti-spacing"> </span></span>管理一个外部空间记忆，该记忆学习跟踪所有先前相关的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>信息，并查询 这个空间记忆来预测下一帧的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>结构。并且与<span class="heti-skip"><span class="heti-spacing"> </span>DUSt3R<span class="heti-spacing"> </span></span>不同的是，<span>Spann3R<span class="heti-spacing"> </span></span>能够预测在全局坐标系中表达的每幅图像的点云图，从而消除基于优化的全局对齐的需求。50 FPS！
-</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-1.jpg"/></a></center>
+</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-1.jpg"/></a></center>
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
 <h3 id="network-architecture">Network Architecture<a class="headerlink" href="#network-architecture" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-2.jpg"/></a></center>
 <ul>
 <li>相比于<span><span class="heti-spacing"> </span>DUSt3R</span>，<span>Spann3R<span class="heti-spacing"> </span></span>多了一个内存编码器和两个<span><span class="heti-spacing"> </span>MLP head</span>。</li>
 <li><strong>Feature encoding</strong>：每次前向传播中，将当前帧<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_t\)</span><span class="heti-spacing"> </span></span>和上一个查询<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^Q\)</span><span class="heti-spacing"> </span></span>作为输入，用<span class="heti-skip"><span class="heti-spacing"> </span>ViT<span class="heti-spacing"> </span></span>将其编码为视觉特征<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_t^I\)</span></span>。其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^Q\)</span><span class="heti-spacing"> </span></span>用于记忆中检索特征，以输出融合特征<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^G\)</span></span>。</li>
@@ -1653,7 +1653,7 @@ var _hmt = _hmt || [];
 <li><strong>Memory encoding</strong>：将几何特征<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^H\)</span></span>、视觉特征<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^I\)</span><span class="heti-spacing"> </span></span>和预测点图<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_{t-1}\)</span><span class="heti-spacing"> </span></span>进行编码得到内存键值特征<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^K, f_{t-1}^V\)</span></span>。由于内存键值特征同时包含几何特征和视觉特征的信息，所以能基于外观和距离进行内存读取。</li>
 </ul>
 <h3 id="spatial-memory">Spatial Memory<a class="headerlink" href="#spatial-memory" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-3.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-3.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-3.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-3.jpg"/></a></center>
 <ul>
 <li>由一个密集的<span><span class="heti-spacing"> </span>working memory</span> 、一个稀疏的<span class="heti-skip"><span class="heti-spacing"> </span>long-term memory<span class="heti-spacing"> </span></span>以及从<span class="heti-skip"><span class="heti-spacing"> </span>memory<span class="heti-spacing"> </span></span>中提取特征的记忆查询机制组成</li>
 <li><strong>Memory query</strong>：<span>Spatial Memory<span class="heti-spacing"> </span></span>存储所有的<span class="heti-skip"><span class="heti-spacing"> </span>key <span class="arithmatex">\(f^K\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>value <span class="arithmatex">\(f^V\)</span></span>。为了计算融合特征<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^G\)</span></span>，使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_{t-1}^Q\)</span><span class="heti-spacing"> </span></span>应用于交叉注意力，<span class="arithmatex">\(f_{t-1}^G = A_{t-1}f^V + f_{t-1}^Q\)</span>。其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_{t-1} = \mathrm{Softmax}(\frac{f_{t-1}^Q(f_K)^\top}{\sqrt{C}})\)</span><span class="heti-spacing"> </span></span>是一个<span><span class="heti-spacing"> </span>attention map</span>。</li>
@@ -1674,7 +1674,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月1日 19:35:00</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>

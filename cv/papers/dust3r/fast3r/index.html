@@ -1626,11 +1626,11 @@ var _hmt = _hmt || [];
 <div class="admonition success">
 <p class="admonition-title">解决方案</p>
 <p>类似于<span><span class="heti-spacing"> </span>Spann3R</span>，并行处理多个视角。<strong>在一次前向传播中处理<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>张图像，避免迭代对齐的需求。</strong> DUSt3R 0.78 FPS, Spann3R 75.49 FPS, Fast3R 250 FPS。
-</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/fast3r-1.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/fast3r-1.jpg"/></a></center>
+</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/fast3r-1.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/fast3r-1.jpg"/></a></center>
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
 <h3 id="network-architecture">Network Architecture<a class="headerlink" href="#network-architecture" title="Permanent link">¶</a></h3>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jujimeizuo.cn/note/cv/slam/fast3r-2.jpg"><img src="https://cdn.jujimeizuo.cn/note/cv/slam/fast3r-2.jpg"/></a></center>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://note.jujimeizuo.cn/assets/images/cv/slam/fast3r-2.jpg"><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/fast3r-2.jpg"/></a></center>
 <ul>
 <li><strong>Image Encoder</strong>：和<span class="heti-skip"><span class="heti-spacing"> </span>DUSt3R<span class="heti-spacing"> </span></span>一样采用<span><span class="heti-spacing"> </span>CroCo ViT</span>（作者说<span class="heti-skip"><span class="heti-spacing"> </span>DINOv2<span class="heti-spacing"> </span></span>类似也可以）在将图像块特征传递给<span class="heti-skip"><span class="heti-spacing"> </span>Fusion Transformer<span class="heti-spacing"> </span></span>前，添加一个一维的<span><span class="heti-spacing"> </span>image index positional embeddings</span>。</li>
 <li><strong>Fusion Transformer</strong>：计算量最大的部分。采用类似<span class="heti-skip"><span class="heti-spacing"> </span>ViT-L<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>24<span class="heti-spacing"> </span></span>层的<span><span class="heti-spacing"> </span>Transformer</span>，接收来自所有视图的<span><span class="heti-spacing"> </span>concatenated encoded image patches</span>，并执行<span><span class="heti-spacing"> </span>all-to-all self-attention</span>。</li>
@@ -1653,7 +1653,7 @@ var _hmt = _hmt || [];
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月1日 20:42:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月9日 15:23:14</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
