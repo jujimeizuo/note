@@ -43,7 +43,7 @@ comment: true
 
 ### SIMT: CUDA/ROCM/OPENCL
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/hpc/simt.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/hpc/simt.jpg"></center>
 
 > CUDA（Compute Unified Device Architecture, 统一计算架构）是由英伟达 NVIDIA 所推出的一种集成技术，是该公司对于 GPU 的正式名称。
 > ROCm 是 Advanced Micro Devices（AMD）的软件栈，用于图形处理单元 GPGPU 编程。
@@ -96,7 +96,7 @@ _kernel void vectorAdd(global const float* a, global const float* b, global cons
     - 内存预取
     - ...
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/hpc/l1-l2-l3.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/hpc/l1-l2-l3.jpg"></center>
 
 - CPU 本身是一个流水线结构，执行每一条指令分为多个阶段，流水线地执行。
 - 在出现分支的地方可能导致流水线无法正常被填充
@@ -112,7 +112,7 @@ _kernel void vectorAdd(global const float* a, global const float* b, global cons
     - ...
 
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/hpc/gpu-model.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/hpc/gpu-model.jpg"></center>
 
 ### RDMA
 

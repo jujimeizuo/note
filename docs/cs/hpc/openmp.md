@@ -52,7 +52,7 @@ OpenMP 的适用范围：多线程、共享内存
 - 进入并行区（parallel region）开始并行执行
 - 在并行区结尾**进行同步**和结束线程，继续单线程执行程序
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/hpc/fork-join.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/hpc/fork-join.jpg"></center>
 
 
 ## OpenMP 编程

@@ -10,7 +10,7 @@ counter: true
     
     - 活动地址：https://www.datawhale.cn/activity/116
 
-    <center><img src="https://cdn.jujimeizuo.cn/note/llm/dw2025winter/dw2025w-0-1.png"></center>
+    <center><img src="https://note.jujimeizuo.cn/assets/images/llm/dw2025winter/dw2025w-0-1.png"></center>
 
 ## Table of Contents
 

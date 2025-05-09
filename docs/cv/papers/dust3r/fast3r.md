@@ -16,13 +16,13 @@ comment: true
 
 > [!Done] 解决方案
 > 类似于 Spann3R，并行处理多个视角。**在一次前向传播中处理 N 张图像，避免迭代对齐的需求。** DUSt3R 0.78 FPS, Spann3R 75.49 FPS, Fast3R 250 FPS。
-> <center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/fast3r-1.jpg"></center>
+> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/fast3r-1.jpg"></center>
 
 ## Method
 
 ### Network Architecture
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/fast3r-2.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/fast3r-2.jpg"></center>
 
 - **Image Encoder**：和 DUSt3R 一样采用 CroCo ViT（作者说 DINOv2 类似也可以）在将图像块特征传递给 Fusion Transformer 前，添加一个一维的 image index positional embeddings。
 - **Fusion Transformer**：计算量最大的部分。采用类似 ViT-L 的 24 层的 Transformer，接收来自所有视图的 concatenated encoded image patches，并执行 all-to-all self-attention。

@@ -16,13 +16,13 @@ comment: true
 
 > [!Done] 解决方案
 > Spann3R 管理一个外部空间记忆，该记忆学习跟踪所有先前相关的 3D 信息，并查询 这个空间记忆来预测下一帧的 3D 结构。并且与 DUSt3R 不同的是，Spann3R 能够预测在全局坐标系中表达的每幅图像的点云图，从而消除基于优化的全局对齐的需求。50 FPS！
-> <center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-1.jpg"></center>
+> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-1.jpg"></center>
 
 ## Method
 
 ### Network Architecture
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-2.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-2.jpg"></center>
 
 - 相比于 DUSt3R，Spann3R 多了一个内存编码器和两个 MLP head。
 - **Feature encoding**：每次前向传播中，将当前帧 $I_t$ 和上一个查询 $f_{t-1}^Q$ 作为输入，用 ViT 将其编码为视觉特征 $f_t^I$。其中 $f_{t-1}^Q$ 用于记忆中检索特征，以输出融合特征 $f_{t-1}^G$。
@@ -34,7 +34,7 @@ comment: true
 
 ### Spatial Memory
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/spann3r-3.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/spann3r-3.jpg"></center>
 
 - 由一个密集的 working memory 、一个稀疏的 long-term memory 以及从 memory 中提取特征的记忆查询机制组成
 - **Memory query**：Spatial Memory 存储所有的 key $f^K$ 和 value $f^V$。为了计算融合特征 $f_{t-1}^G$，使用 $f_{t-1}^Q$ 应用于交叉注意力，$f_{t-1}^G = A_{t-1}f^V + f_{t-1}^Q$。其中 $A_{t-1} = \mathrm{Softmax}(\frac{f_{t-1}^Q(f_K)^\top}{\sqrt{C}})$ 是一个 attention map。

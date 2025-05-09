@@ -21,7 +21,7 @@ comment: true
 
 ## Method
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/pcd/FastMAC-1.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/pcd/FastMAC-1.jpg"></center>
 
 > [!summary] FastMAC（基于 MAC）一共 4 个步骤：
 > 1. Graph Construction
@@ -51,7 +51,7 @@ comment: true
 	3. 考虑节点之间的连接表示兼容性，所选的对应关系不仅与其所属团内的对应关系兼容，还与其他一些对应关系兼容，表明这些对应关系更可靠，从而生成更好的假设
 - 在一个典型的图中，团要么相互连接要么不相互连接。相互连接的团保持着连通洞穴图的相似局部属性，而孤立的团表现出不同的特征。然而，孤立的团在配准中可以忽略不计。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/pcd/FastMAC-2.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/pcd/FastMAC-2.jpg"></center>
 
 ### Graph Filtering: Formulation
 

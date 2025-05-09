@@ -35,7 +35,7 @@ comment: true
 
 重建流程如下图所示，首先需要连续两个 RGB-D 关键帧 A 和 B，以及静态和动态物体的先验信息，静态和动态物体的先验信息及 $\widetilde{\xi}_s$ 和 $\widetilde{\xi}_d$ 是属于 $se(3)$ 的，此外还需要前一帧的语义分割信息 $\widetilde{\Gamma}_A \in \mathbb{R}^{W \times H}$。首先根据运动先验信息检测物体是否为动态物体；然后当物体运动时，基于帧间对其，我们联合估计分割 $\widetilde{\Gamma}_B$ 和 刚体运动 $\widetilde{\xi}_s$ 和 $\widetilde{\xi}_d$。这些片段用于重建静态环境和动态对象，并利用帧与模型的对其实现摄像机的定位。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/RigidFusion-1.jpg" alt="RigidFusion Pipeline"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/RigidFusion-1.jpg" alt="RigidFusion Pipeline"></center>
 
 ### 图像聚合
 
@@ -52,4 +52,4 @@ comment: true
 
 在本文中，静态运动先验 $\widetilde{\xi}_s$ 是通过车轮里程计或通过在相机地面真值轨迹上添加模拟漂移来计算。通过模拟对象真值轨迹上的漂移来生成 $\widetilde{\xi}_d$。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/RigidFusion-2.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/RigidFusion-2.jpg"></center>

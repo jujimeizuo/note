@@ -21,7 +21,7 @@ comment: true
 -  一种**位置编码**，将每个输入的 5D 坐标映射到更高维度的空间，以便网络可以学习表示具有更高频率的场景内容
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-1.jpg">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-1.jpg">
 </center>
 
 
@@ -30,14 +30,14 @@ comment: true
 - 下图中间的函数 $F$ 就是图当中的神经网络，用来表示 3D 场景，这种表示方法是**隐式**的
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-3.jpg" width="50%">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-3.jpg" width="50%">
 </center>
 
 - 输入 $x,y,z,\theta,\phi$ 是空间位置和观察方向，输出 $RGB, \sigma$ 是颜色和密度，就能算出场景中的颜色和密度
 
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-2.jpg">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-2.jpg">
 </center>
 
 ###  Volume Rendering
@@ -99,7 +99,7 @@ $$
 > [!Question] 怎么合成一条光线上的所有粒子的图像?
 
 1. 分析单点 P 对成像的贡献。P 距离线起点的距离是 t，然后能得出 P 点坐标 $\bold{r}(t)$
-    - <img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-10.png">
+    - <img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-10.png">
     - 密度越高，透明度越低，所以单看P点，它的成像颜色就是 $c \cdot \sigma$
         - $\sigma = 1.0$：完全不透明，它的成像颜色就是$c \cdot 1.0=c$
         - $\sigma = 0.0$：完成透明，它的成像颜色就是$c \cdot 0.0=0$
@@ -154,7 +154,7 @@ $$
 $$
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-11.jpg">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-11.jpg">
 </center>
 
 ## Pipeline
@@ -162,37 +162,37 @@ $$
 1. 已知相机在不同的位置拍摄了一组目标场景的照片。（如果你是手机拍摄的一段视频可以用 colormap 转）
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-4.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-4.png">
 </center>
 
 2. 从相机中心开始，沿着某个像素方向发射一条光线。(注意：跟真实的相机成像模型光线方向是相反的，但不影响)。
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-5.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-5.png">
 </center>
 
 3. 建立一个神经网络 $F$，输入 $(x,y,z,\theta,\phi)$ 是空间位置和观察方向，输出 $RGB,\sigma$ 颜色和密度。就能算出场景中每个位置的颜色和密度。
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-6.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-6.png">
 </center>
 
 4. 把这条光线上所有位置上的颜色和密度合成，就能算出图上的像素 RGB 值。
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-7.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-7.png">
 </center>
 
 5. 根据输入的一组图像上的像素 RGB 值，生成无数条光线，不断去优化可微函数 $F$。当优化次数足够，就可以直接使用 $F$ 算出所有视角下图像的像素 RGB 值。
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-8.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-8.png">
 </center>
 
 6. 知道每个位置的颜色和密度，就用 Marching Cubes 算法转换为三角网三维模型。完成三维重建。
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/nerf-9.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-9.png">
 </center>
 
 7. 求得 $F$ 就实现了三维重建，后面都是合成新视角和转换。
@@ -209,7 +209,7 @@ $$
 下图是 `Instant-NGP` 实验：
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%">
 </center>
 
 ## Reference

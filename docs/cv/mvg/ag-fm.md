@@ -19,7 +19,7 @@ comment: true
 - **平行于图像平面的运动**：对于平行于图像平面作平移以及旋转轴垂直图像平面的特殊运动情形，基线与图像平面的交点位于无穷远，因此，对极点是无穷远点而对极线是平行线
 
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/mvg/ag.jpg" alt="对极几何"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/ag.jpg" alt="对极几何"></center>
 
 
 ## 基本矩阵 F

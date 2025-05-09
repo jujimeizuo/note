@@ -32,7 +32,7 @@ comment: true
 
 Kinect2捕获的原始RGB图像在跟踪线程和语义分割线程中同时进行处理。跟踪线程首先提取ORB特征点，然后粗略检查特征点的移动一致性并保存潜在的异常值。然后跟踪线程等待具有由语义分割线程预测的像素级语义标签的图像。分割结果到达后，将根据分割结果和之前检测到的潜在异常值，丢弃位于运动物体中的ORB特征点异常值。然后，通过匹配其余的稳定特征点来计算变换矩阵。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/DS-SLAM-1.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/DS-SLAM-1.jpg"></center>
 
 ### Semantic Segmentation
 

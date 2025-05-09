@@ -12,19 +12,19 @@ comment: true
 
 ## 整体架构
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/transformer.png" width="70%" alt="transformer 架构"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/transformer.png" width="70%" alt="transformer 架构"></center>
 
 transformer 总体为一个编码组件、解码组件以及二者之间连接。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/simple-structure.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/simple-structure.png"></center>
 
 编码部分和解码部分都为编码器、解码器的堆叠，最后一层编码器的输出是各个解码器的输入之一。第一个编码器的输入为单词的嵌入向量，后面编码器输入为前一层的输出。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/encoder-decoder.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/encoder-decoder.png"></center>
 
 编码器均由两个子层组成：`self-attention` 与 `feed forward neural network`。`self-attention` 用于帮助编码器在编码特定单词时查看输入中的其他单词。解码器也有这两个子层，中间有一个注意力层，帮助解码器查看输入句子的相关部分。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/full-encoder-decoder.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/full-encoder-decoder.png"></center>
 
 
 ## 输入处理
@@ -49,7 +49,7 @@ $$
 
 上面表达式中的 $pos$ 代表词的位置，$d_{model}$ 代表位置向量的维度，$i \in [0, d_{model})$ 代表位置 $d_{model}$ 维位置向量第 $i$ 维。于是根据上述公式，我们可以得到第 $pos$ 位置的 $d_{model}$ 维位置向量。在下图中，我们画出了一种位置向量在第4、5、6、7维度、不同位置的的数值大小。横坐标表示位置下标，纵坐标表示数值大小。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/pe.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/pe.png"></center>
 
 当然，上述公式不是唯一生成位置编码向量的方法。但这种方法的优点是：可以扩展到未知的序列长度。例如：当我们的模型需要翻译一个句子，而这个句子的长度大于训练集中所有句子的长度，这时，这种位置编码的方法也可以生成一样长的位置编码向量。
 
@@ -59,7 +59,7 @@ $$
 
 各个词向量均进入编码器的两个子层，`self-attention` 层中各个词向量的路径具有一定关联，而 `FFNN` 层中各个词向量参与的计算过程独立。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/multi-encoder.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/multi-encoder.png"></center>
 
 `self-attention` 使得模型在处理一个词向量时，能够将其与相关的词关联起来，以更好地对该词向量编码。`RNN` 通过维护隐藏状态以将先前处理的词向量同当前词向量合并，transformer 则使用 `self-attention` 将对相关词的“理解”融入当前处理的词。
 
@@ -67,7 +67,7 @@ $$
 
 1. 为每个词向量创建三个向量：`Query`、`Key`、`Value`。这三个向量是通过将每个词向量乘以三个带训练的矩阵创建的（对后面的编码器，则是上一个编码器的输出乘以三个新的待训练矩阵）。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/sa-1.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/sa-1.png"></center>
 
 2. 计算当前词向量与输入句子所有词向量的分数，分数会决定将多少注意力放在这些词上。分数通过将当前词向量对应的 `Query` 向量与各个单词的 `key` 向量点积得到，第一个分数是 `q1` 与 `k1` 点积，第二个分数是 `q1` 与 `k2` 点积，以此类推。
 
@@ -76,30 +76,30 @@ $$
 5. 归一化的得分与各个单词的 `Value` 向量相乘，此做法的直觉是保持想要关注的单词的值不变，而且消除不相关的单词，即对各个单词的 `Value` 向量加权。
 6. 对所有加权后的 `Value` 向量求和，即为当前词向量在 `self-attention` 层的输出。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/sa-2.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/sa-2.png"></center>
 
 上述过程的矩阵形式为：
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/sa-3.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/sa-3.png"></center>
 
 
 ### 多头注意力
 
 进一步优化 `Self-attention`：使用 `multi-headed attention`。提高了模型关注不同位置的能力，为注意力层提供了多个表示子空间（`representation subspaces`）—— 可以有多组 `Query`、`Key`、`Value` 权重矩阵，每一组都是随机初始化，因此训练完成后每一组都可以将输入投射到不同的子空间，具体可以类比 CNN 中的多个卷积核。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/mha-1.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/mha-1.png"></center>
 
 最终将得到多个当前词向量在 `self-attention` 下的输出向量，即输入句子经过 `self-attention` 后，将有多个输出矩阵。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/mha-2.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/mha-2.png"></center>
 
 由于 FFNN 子层需要一个矩阵（每个单词由一个向量表示）作为输入，因此需要将以上输出矩阵与一个额外的待训练权重矩阵相乘。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/mha-3.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/mha-3.png"></center>
 
 一个多头注意力的例子：
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/mha-4.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/mha-4.png"></center>
 
 ### Attention 代码实例
 
@@ -196,25 +196,25 @@ print(output.shape)
 
 编码器中每个子层都进行残差连接，并归一化。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/residual.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/residual.png"></center>
 
 将 Self-Attention 层的层标准化（layer-normalization）和涉及的向量计算细节都进行可视化，如下所示：
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/layer-norm.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/layer-norm.png"></center>
 
 编码器和和解码器的子层里面都有层标准化（layer-normalization）。假设一个 Transformer 是由 2 层编码器和两层解码器组成的，将全部内部细节展示起来如下图所示。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/residual-layer-norm.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/residual-layer-norm.png"></center>
 
 ## 解码器
 
 编码器一般有多层，第一个编码器的输入是一个序列文本，最后一个编码器输出是一组序列向量，这组序列向量会作为解码器的 K、V 输入，其中 K=V=解码器输出的序列向量表示。这些注意力向量将会输入到每个解码器的 Encoder-Decoder Attention 层，这有助于解码器把注意力集中到输入序列的合适位置，如下图所示。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/decoder-1.gif"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/decoder-1.gif"></center>
 
 解码（decoding）阶段的每一个时间步都输出一个翻译后的单词（这里的例子是英语翻译），解码器当前时间步的输出又重新作为输出 Q 和编码器的输出 K、V 共同作为下一个时间步解码器的输入。然后重复这个过程，直到输出一个结束符。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/transformer/decoder-2.gif"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/transformer/decoder-2.gif"></center>
 
 解码器中的 Self Attention 层，和编码器中的 Self Attention 层的区别：
 

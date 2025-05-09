@@ -23,7 +23,7 @@ comment: true
 ### 种类
 
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/ai/ml/variety.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/ml/variety.jpg"></center>
 
 
 ### 监督学习
@@ -99,7 +99,7 @@ $x_j^{(i)}$ 表示第 $i$ 个样本中第 $j$ 个特征。
 
 建议选择策略：...,0.001,0.003,0.01,0.03,0.1,0.3,... 通过代价收敛图，分析选择合适的 $\alpha$
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/ai/ml/learn_alpha.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/ai/ml/learn_alpha.jpg"></center>
 
 ### 对比
 

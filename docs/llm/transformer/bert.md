@@ -17,13 +17,13 @@ BERT 首先在大规模无监督语料上进行预训练，然后在预训练好
 
 BERT的训练过程可以简述为：预训练+微调（finetune），这是近几年 NLP 解决方案的主流范式。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/tf.png" alt="预训练+微调"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/tf.png" alt="预训练+微调"></center>
 
 ## 模型结构
 
 BERT模型的结构如下图最左：
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/bert-structure.png" alt="BERT模型结构"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/bert-structure.png" alt="BERT模型结构"></center>
 
 - 对比 OpenAI GPT，BERT 是双向的 Transformer block 连接，就像单向 RNN 和双向 RNN 的区别，效果会更好。
 - 对比 ELMo，虽然都是“双向”，但目标函数不同。
@@ -39,7 +39,7 @@ BERT模型的结构如下图最左：
 
 这里的 Embedding 由三种 Embedding 求和组成：
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/embedding.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/embedding.png"></center>
 
 - `Token Embedding`：词向量，第一个单词是 CLS 标志，可以用于之后的分类任务
 - `Segment Embedding`：句子向量，用于区分两个句子，因为预训练不光做 LM 还要做以两个句子为输入的分类任务
@@ -85,7 +85,7 @@ BERT模型的结构如下图最左：
 
 下图展示了BERT在11个不同任务中的模型，它们只需要在BERT的基础上再添加一个输出层便可以完成对特定任务的微调。这些任务类似于我们做过的文科试卷，其中有选择题，简答题等等。图3中其中Tok表示不同的Token，E 表示嵌入向量，$T_i$ 表示第 i 个Token在经过BERT处理之后得到的特征向量。
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/transformer/bert/fine-tuning.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/transformer/bert/fine-tuning.png"></center>
 
 整体 Fine-Tuning 过程：
 

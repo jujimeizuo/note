@@ -59,7 +59,7 @@ $$
 ### SLAM 系统
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/SplaTAM-2.jpg">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/SplaTAM-2.jpg">
 </center>
 
 
@@ -117,7 +117,7 @@ $$
 ## Experiment
 
 <center>
-<img src="https://cdn.jujimeizuo.cn/note/cv/slam/SplaTAM-1.png">
+<img src="https://note.jujimeizuo.cn/assets/images/cv/slam/SplaTAM-1.png">
 </center>
 
 ## Reference

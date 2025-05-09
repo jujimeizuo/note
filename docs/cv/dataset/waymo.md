@@ -14,7 +14,7 @@ comment: true
     - github: https://github.com/waymo-research/waymo-open-dataset
     - 主页：https://waymo.com/open
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/dataset/waymo-1.gif"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/dataset/waymo-1.gif"></center>
 
 
 ## 数据集格式

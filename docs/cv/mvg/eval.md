@@ -87,7 +87,7 @@ $$
 \sum_{\mathbf{P}}=(J^\top \sum_{\mathbf{x}}\nolimits^{-1} J)^{*}
 $$
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/mvg/hyperparameterization.jpg" alt="反向输送（超参数）"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/hyperparameterization.jpg" alt="反向输送（超参数）"></center>
 
 
 ## 协方差估计的蒙特卡洛法

@@ -95,7 +95,7 @@ comment: True
 
 - 对角矩阵$D$的符号差，记为$\sigma(D)$，定义为$D$中 +1 的个数与 -1 的个数的差值
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/mvg/classification-of-point-quadric-surfaces.jpg" alt="点二次曲面的分类"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/classification-of-point-quadric-surfaces.jpg" alt="点二次曲面的分类"></center>
 
 
 ## 三次绕线
@@ -138,7 +138,7 @@ $$
 - **转动分解**
     - 任何具体的平移加旋转运动都等价于绕一根转动轴的旋转加沿该转动轴的平移。该转动轴平行于原来的旋转轴。
     - 平移加绕正交轴的旋转运动(称平面运动)等价于仅仅绕某转动轴的旋转。
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/mvg/3d-geometric-invariant-property.jpg" alt="点二次曲面的分类"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/mvg/3d-geometric-invariant-property.jpg" alt="点二次曲面的分类"></center>
 
 ## 无穷远平面
 

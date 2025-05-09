@@ -7,7 +7,7 @@ comment: true
 
 > [!abstract]
 > <center>**NeRF 常用评价指标**</center>
-> ![](https://cdn.jujimeizuo.cn/note/cv/slam/nerf-evaluation-1.jpg)
+> ![](https://note.jujimeizuo.cn/assets/images/cv/slam/nerf-evaluation-1.jpg)
 
 ## PSNR
 

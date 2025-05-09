@@ -120,14 +120,14 @@ comment: True
 
 使用中间件，也可以使构件之间进行更好地通信。如构件之间直接进行通信，当构成系统的构件数量庞大时，其复杂程度迅速提高；如能引人中介层 (中间件)，则可很好地避免构件间复杂的交互。如下图所示：
 
-<center>![中间件](https://cdn.jujimeizuo.cn/note/cs/software/sca/middleware.jpg)</center>
+<center>![中间件](https://note.jujimeizuo.cn/assets/images/cs/software/sca/middleware.jpg)</center>
 
 #### 青鸟软件构件模型
 
 青鸟软件构件模型国内许多学者在构件模型的研究方面做了不少的工作，其中较为突出的是北京大学杨芙清院士等人提出的“青鸟软件构件模型(JBCOM)”。它由外部接又与内部结构两部分组成。如下图所示：
 
 
-<center>![青鸟软件构件模型](https://cdn.jujimeizuo.cn/note/cs/software/sca/Bluebird-model.jpg)</center>
+<center>![青鸟软件构件模型](https://note.jujimeizuo.cn/assets/images/cs/software/sca/Bluebird-model.jpg)</center>
 
 构件的外部接口是指构件向其复用者提供的基本信息，包括:构件名称、功能描述、对外功能接口，所需服务的构件和参数化属性等。外部接口是构件与外界的一组交互点，说明了构件所提供的那些服务(消息、操作和变量)。
 
@@ -233,7 +233,7 @@ eg. 编译器复合构件实例。
 
 构件库理论研究的重点是构件分类与检索，即研究构件分类策略、组织模式、检索手段和构件相似性分析等。
 
-<center>![构件库的组织关系图](https://cdn.jujimeizuo.cn/note/cs/software/sca/organization-diagram.jpg)</center>
+<center>![构件库的组织关系图](https://note.jujimeizuo.cn/assets/images/cs/software/sca/organization-diagram.jpg)</center>
 
 领域上构件库满足的条件：
 
@@ -305,7 +305,7 @@ eg. 编译器复合构件实例。
 构件之间的关系类型包括拥有关系和外部关系。但从关系的表示角度来看，可分为直接链接和间接链接。
 
 
-<center>![构件之间的关系类型与表示](https://cdn.jujimeizuo.cn/note/cs/software/sca/goujian-relationship.jpg)</center>
+<center>![构件之间的关系类型与表示](https://note.jujimeizuo.cn/assets/images/cs/software/sca/goujian-relationship.jpg)</center>
 
 ### 构件部署
 
@@ -344,7 +344,7 @@ eg. 编译器复合构件实例。
 
 #### 领域工程与应用工程的关系
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/software/sca/domain-engineering-application-engineering.jpg" alt="领域工程与应用工程的关系"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/software/sca/domain-engineering-application-engineering.jpg" alt="领域工程与应用工程的关系"></center>
 
 
 ### 领域共性与变化性
@@ -461,7 +461,7 @@ eg. 编译器复合构件实例。
 
 #### 设计模式分类
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/software/sca/design-pattern-classification.jpg" alt="设计模式分类"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/software/sca/design-pattern-classification.jpg" alt="设计模式分类"></center>
 
 ### 体系结构模式
 
@@ -527,7 +527,7 @@ eg. 编译器复合构件实例。
 #### 模式系统的全局分类视图
 
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cs/software/sca/global-classification-of-pattern-systems.jpg" alt="模式系统的全局分类"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cs/software/sca/global-classification-of-pattern-systems.jpg" alt="模式系统的全局分类"></center>
 
 #### 面向问题的模式选择步骤
 

@@ -37,7 +37,7 @@ comment: true
 
 - 对话模版
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-1-chat-template.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-1-chat-template.jpg"></center>
 
 - 不同于增量预训练微调，数据中会有 Input 和 Output 希望模型学会的是答案（Output），而不是问题（Input），训练时只会对答案（Output）部分计算 Loss
 - 训练时，会和推理时保持一致，对数据添加相对应的对话模版
@@ -45,7 +45,7 @@ comment: true
 
 ## LoRA & QLoRA
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/LoRA-QLoRA.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/LoRA-QLoRA.jpg"></center>
 
 ## Xtuner
 
@@ -125,7 +125,7 @@ xtuner chat internlm/internlm-chat-20b --adapter $ADAPTER_DIR
 
 #### 数据处理流程
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/xunter-pipe-1.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/xunter-pipe-1.jpg"></center>
 
 #### 多数据样本拼接（Pack Dataset）
 
@@ -141,7 +141,7 @@ xtuner chat internlm/internlm-chat-20b --adapter $ADAPTER_DIR
     - `ZeRO` 优化，通过将训练过程中的参数、梯度和优化器状态切片保存，能够在多 GPU 训练时显著节省显存
     - 除了将训练中间状态切片外，`DeepSpeed` 训练时使用 FP16 的权重，相较于 `Pytorch` 的 `AMP` 训练，在单 GPU 上也能大幅节省显存
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/fa-dz.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/fa-dz.jpg"></center>
 
 `DeepSpeed` 与 `Flash Attention` 虽然能够大幅降低训练成本，但使用门槛相对较高，需要复杂的配置，甚至修改代码，为了让开发者专注于数据，XTuner 会自动 `dispatch Flash Attention`，并一键启动 `DeepSpeed ZeRO`
 
@@ -279,9 +279,9 @@ xtuner chat ./merged --prompt-template internlm_chat
 ```
 
 
-| 微调前                                                                                 | 微调后                                                                                |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| <center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-before.png"></center> | <center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/ft-after.png"></center> |
+| 微调前                                                                                           | 微调后                                                                                          |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| <center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-before.png"></center> | <center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/ft-after.png"></center> |
 
 ## 自定义微调
 
@@ -413,7 +413,7 @@ python xlsx2jsonl.py
 
 **格式化后的数据集长这样：**
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/data-processed.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/data-processed.png"></center>
 
 此时，当然也可以对数据进行训练集和测试集的分割，同样可以让 ChatGPT 写 python 代码。当然如果你没有严格的科研需求、不在乎“训练集泄露”的问题，也可以不做训练集与测试集的分割。
 
@@ -576,7 +576,7 @@ MSAgent 数据集每条样本包含一个对话列表（conversations），其�
 
 一条调用网页搜索插件查询“上海明天天气”的数据样本示例如下图所示：
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/msagent_data.png"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/msagent_data.png"></center>
 
 
 ### 微调步骤
@@ -996,11 +996,11 @@ streamlit run /root/personal_assistant/code/InternLM/web_demo.py --server.addres
 
 - **微调前**（回答比较官方）
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_1.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_1.jpg"></center>
 
 - **微调后**（对自己的身份有了清晰的认知）
 
-<center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_2.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_2.jpg"></center>
 
 ## 进阶作业
 
@@ -1008,17 +1008,17 @@ streamlit run /root/personal_assistant/code/InternLM/web_demo.py --server.addres
 
     1. 通过 scp 将 hf 文件夹下载到本地，进入 HuggingFace 新建 model，上传模型文件。Adapter 权重地址：https://huggingface.co/jujimeizuo/assistant-jujimeizuo/tree/main
 
-    <center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_3.jpg"></center>
+    <center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_3.jpg"></center>
 
 
 - 将训练好后的模型应用部署到 OpenXLab 平台，参考部署文档请访问：https://aicarrier.feishu.cn/docx/MQH6dygcKolG37x0ekcc4oZhnCe
 
     1. 通过 openxlab 库上传模型文件
 
-    <center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_4.jpg"></center>
+    <center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_4.jpg"></center>
 
     2. 新建 github 的 repo([assistant_jujimeizuo](https://github.com/jujimeizuo/assistant_jujimeizuo))，从 OpenXLab 上拉取上传的模型，构建 streamlit 的 app，同步到 OpenXLab 上。
 
     3. 应用服务地址：https://openxlab.org.cn/apps/detail/jujimeizuo/assistant_jujimeizuo
 
-    <center><img src="https://cdn.jujimeizuo.cn/note/llm/internlm/hw_4_5.jpg"></center>
+    <center><img src="https://note.jujimeizuo.cn/assets/images/llm/internlm/hw_4_5.jpg"></center>

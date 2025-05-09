@@ -44,7 +44,7 @@ COM不仅仅提供了组件之间的接口标准，它还引人了面向对象�
 
 下面是 COM 使用客户/服务器模型的几种灵活用法：
 
-<center>![总结概括](https://cdn.jujimeizuo.cn/note/cs/software/compa/usage-cs-of-com.jpg)</center>
+<center>![总结概括](https://note.jujimeizuo.cn/assets/images/cs/software/compa/usage-cs-of-com.jpg)</center>
 
 #### COM 库
 

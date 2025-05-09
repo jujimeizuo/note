@@ -50,7 +50,7 @@ $$
 - 一复值正方矩阵$\mathbf{U}\in C^{n \times n}$称为酉矩阵，若$\mathbf{U}\mathbf{U}^{\top}=\mathbf{U}^{\top}\mathbf{U}=\mathbf{I}$
 
 
-<center><img src="https://cdn.jujimeizuo.cn/note/mb/maa/matrix-property-comparison.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/mb/maa/matrix-property-comparison.jpg"></center>
 
 - 若$n \times n$矩阵$\mathbf{A}=[a_{ij}]$和$\mathbf{B}=[b_{ij}]$是酉等价的，则$\sum_{i=1}^n\sum_{j=1}^n|b_{ij}|^2=\sum_{i=1}^n\sum_{j=1}^n|a_{ij}|^2$
 - 矩阵$\mathbf{A} \in C^{n \times n}$称为正规矩，若$\mathbf{A}^H\mathbf{A}=\mathbf{A}\mathbf{A}^{\top}$

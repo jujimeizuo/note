@@ -15,17 +15,17 @@ comment: true
 > DUSt3R 在动态场景中的局限性：
 > 1. DUSt3R 对齐了移动的前景物体，但由于只在静态场景中进行训练，导致静态背景元素的对齐出现不正确的对齐。
 > 2. DUSt3R 无法估计前景物体的几何形状和深度，并将它们放在背景中。
-> <center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/monst3r-1.jpg"></center>
+> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-1.jpg"></center>
 
 > [!Done] 解决方案
 > MonST3R 直接从动态场景中估计每个 timestep 下的的 pointmap。然而缺乏适合的训练数据（带深度标签的动态视频），作者将该问题视为微调任务，识别多个适合的数据集，并在有限的数据上训练模型，即使没有明确的运动表示也能处理动态场景。
-> <center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/monst3r-3.jpg"></center>
+> <center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-3.jpg"></center>
 > 从动态场景中估算的 pointmap，则是根据物体的移动把动态物体的点云也显示出来。而静态部分的场景则需要实现 Multi-frame alignment。
 
 
 ## Method
 
-<center><img src="https://cdn.jujimeizuo.cn/note/cv/slam/monst3r-2.jpg"></center>
+<center><img src="https://note.jujimeizuo.cn/assets/images/cv/slam/monst3r-2.jpg"></center>
 
 - 对于 finetune 过程，只微调了 prediction head 以及 decoder，而 encoder 固定不变。
 - 额外增加了 RAFT 和 SAM2 用来分离动态和静态。
