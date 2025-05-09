@@ -94,7 +94,7 @@ $ echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 ## Reference
 
-- [jujimeizuo的Linux GDB调试](http://www.jujimeizuo.cn/blog/index.php/2022/12/31/linux-gdb-debug/)
+- [jujimeizuo的Linux GDB调试](https://blog.jujimeizuo.cn/2022/12/31/linux-gdb-debug/)
 - [gdb相关备忘](https://note.tonycrane.cc/cs/tools/gdb/)
 - [维基百科-gdb](https://en.wikipedia.org/wiki/GNU_Debugger)
 - [GDB实用插件(peda, gef, gdbinit)全解](https://blog.csdn.net/gatieme/article/details/63254211)

@@ -68,7 +68,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/jujimeizuo/
     - icon: fontawesome/solid/rss
-      link: http://www.jujimeizuo.cn/blog/
+      link: https://blog.jujimeizuo.cn/
     - icon: fontawesome/solid/home
       link: https://jujimeizuo.cn/
   analytics:

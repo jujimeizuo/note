@@ -95,7 +95,7 @@ eg：快速幂、二分、归并排序、线段树、cdq分治、FFT等
 
 有两个超过 long long 类型的大整数$X$和$Y$，用较低的复杂度求解$X*Y$。
 
-解决这个问题至少有 6 种方法，可以看之前写过的文章：[大整数相乘 – 模拟/分治/FFT/CRT/网络流/Furer](http://www.jujimeizuo.cn/blog/index.php/2022/12/06/bigintegermultiply/)
+解决这个问题至少有 6 种方法，可以看之前写过的文章：[大整数相乘 – 模拟/分治/FFT/CRT/网络流/Furer](https://blog.jujimeizuo.cn/2022/12/06/bigintegermultiply/)
 
 
 ## Reference
