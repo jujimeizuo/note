@@ -3,7 +3,7 @@ counter: true
 comment: true
 ---
 
-# Easi3R: Estimating Disentangled Motion from DUSt3R Without Training
+# Easi3R
 
 > [!abstract]
 > - paper：[:book: Easi3R: Estimating Disentangled Motion from DUSt3R Without Training](https://arxiv.org/abs/2503.24391)
