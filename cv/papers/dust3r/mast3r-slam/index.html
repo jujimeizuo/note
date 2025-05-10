@@ -21,6 +21,7 @@
 <link href="../../../../css/card.css" rel="stylesheet"/>
 <link href="../../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -52,6 +53,9 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#mast3r-slam">
+            跳转至
+          </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -975,9 +979,70 @@ var _hmt = _hmt || [];
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          MASt3R-SLAM
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         MASt3R-SLAM
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method">
+    Method
+  </a>
+<nav aria-label="Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pointmap-matching">
+    Pointmap Matching
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tracking-and-pointmap-fusion">
+    Tracking and Pointmap Fusion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graph-construction-and-loop-closure">
+    Graph Construction and Loop Closure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend-optimisation">
+    Backend Optimisation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relocalisation">
+    Relocalisation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiments">
+    Experiments
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1502,23 +1567,164 @@ var _hmt = _hmt || [];
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method">
+    Method
+  </a>
+<nav aria-label="Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pointmap-matching">
+    Pointmap Matching
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tracking-and-pointmap-fusion">
+    Tracking and Pointmap Fusion
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graph-construction-and-loop-closure">
+    Graph Construction and Loop Closure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend-optimisation">
+    Backend Optimisation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relocalisation">
+    Relocalisation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiments">
+    Experiments
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    Reference
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script defer="" src="/js/toc.js"></script>
+<link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <a class="md-content__button md-icon" href="https://github.com/jujimeizuo/note/tree/master/docs/cv/papers/dust3r/mast3r-slam.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1>MASt3R-SLAM</h1>
+<h1 id="mast3r-slam">MASt3R-SLAM<a class="headerlink" href="#mast3r-slam" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1169<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>paper：<a href="https://arxiv.org/abs/2412.12392"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/> MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors</a></li>
+<li>code：<a href="https://github.com/rmurai0610/MASt3R-SLAM"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg></span> MASt3R-SLAM</a></li>
+<li>video: <a href="https://youtu.be/wozt71NBFTQ"><img alt="🎬" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f3ac.svg" title=":clapper:"/> MASt3R-SLAM</a></li>
+</ul>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">问题导向</p>
+<p><span>SLAM<span class="heti-spacing"> </span></span>并未成为一种即插即用的算法，因为需要硬件专业知识和校准，即使不配备<span class="heti-skip"><span class="heti-spacing"> </span>IMU<span class="heti-spacing"> </span></span>或其他额外传感器设备的最简单摄像头参数，也不存在一种能在实际场景中同时提供精确位姿和稠密地图的<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>方案。</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">解决方案</p>
+<p>提出一个即插即用的单目<span class="heti-skip"><span class="heti-spacing"> </span>SLAM<span class="heti-spacing"> </span></span>系统，除了假设相机中心，不假设其他（固定或相机参数模型等等<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，能获取全局统一的<span class="heti-skip"><span class="heti-spacing"> </span>pose<span class="heti-spacing"> </span></span>和密集的几何形状。(15 FPS)
+</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-slam-2.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-slam-2.jpg"/></a></center>
+</div>
+<h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
+<h3 id="pointmap-matching">Pointmap Matching<a class="headerlink" href="#pointmap-matching" title="Permanent link">¶</a></h3>
+<ul>
+<li>解决<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R<span class="heti-spacing"> </span></span>输出的点图和特征基础上，寻找两幅图像间像素匹配集合的问题。</li>
+<li>暴力匹配、kd-tree，包括<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R<span class="heti-spacing"> </span></span>提出的方案，在密集像素匹配的运行时间都在秒级，所以<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R-SLAM<span class="heti-spacing"> </span></span>不专注于全局匹配搜索的有效方法，而是<strong>基于迭代投影的匹配方法</strong>。</li>
+<li><strong>基于投影的匹配方法</strong>：基于<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R<span class="heti-spacing"> </span></span>输出的点图<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_i^i, X_i^j\)</span></span>，通过迭代优化参考帧中的像素坐标<span><span class="heti-spacing"> </span><span class="arithmatex">\(p\)</span></span>，使<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_i^i\)</span><span class="heti-spacing"> </span></span>投影的<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([X_i^i]_p\)</span><span class="heti-spacing"> </span></span>对应的光线误差最小化：<span class="arithmatex">\(\mathbf{p}^*=\arg\min_\mathbf{p}\left\|\psi\left([\mathbf{X}_i^i]_\mathbf{p}\right)-\psi\left(\mathbf{x}\right)\right\|^2\)</span></li>
+<li>该过程对每个点单独进行，<span>10<span class="heti-spacing"> </span></span>次迭代内收敛。没有投影坐标<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(p\)</span><span class="heti-spacing"> </span></span>的初始化时，所有像素初始化为单位映射，跟踪时利用上一帧的匹配结果作为初始化，加快收敛。</li>
+<li>为处理遮挡和异常值，会剔除<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>空间中距离过大的匹配。</li>
+<li><strong>基于特征的匹配优化</strong>：利用几何信息得到的像素匹配只是初始估计，通过在局部<span class="heti-skip"><span class="heti-spacing"> </span>patch<span class="heti-spacing"> </span></span>窗口内更新像素位置，使其达到最大特征相似度，进行基于图像的<strong>coarse-to-fine search</strong>。</li>
+<li><span>CUDA<span class="heti-spacing"> </span></span>加速。</li>
+</ul>
+<h3 id="tracking-and-pointmap-fusion">Tracking and Pointmap Fusion<a class="headerlink" href="#tracking-and-pointmap-fusion" title="Permanent link">¶</a></h3>
+<ul>
+<li>需要估计当前帧<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_f\)</span><span class="heti-spacing"> </span></span>和上一帧<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_k\)</span><span class="heti-spacing"> </span></span>的相对变换<span><span class="heti-spacing"> </span><span class="arithmatex">\(T_{kf}\)</span></span>，并且只使用网络的单词前向传播来估计变换。</li>
+<li>由于<span class="heti-skip"><span class="heti-spacing"> </span>Pointmap<span class="heti-spacing"> </span></span>预测中深度不一致的问题，导致跟踪误差会降低<span class="heti-skip"><span class="heti-spacing"> </span>KeyFrame Pointmap<span class="heti-spacing"> </span></span>的质量，影响后端处理，所以将最终的预测<span class="heti-skip"><span class="heti-spacing"> </span>fusion<span class="heti-spacing"> </span></span>成一个单一的<span><span class="heti-spacing"> </span>Pointmap</span>（平均所有预测<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，会降低误差。</li>
+<li><strong>基于光线误差的跟踪优化</strong>：<strong>利用在中心相机假设下<span class="heti-skip"><span class="heti-spacing"> </span>Pointmap<span class="heti-spacing"> </span></span>预测可转化为光线的特性</strong>，计算方向射线误差。同时防止系统在纯旋转情况下退化，添加一个相机中心距离差异的小权重误差项，如下图所示。</li>
+</ul>
+<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="80%" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-slam-1.jpg"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-slam-1.jpg"/></a></center>
+<ul>
+<li><strong><span>Pointmap Fusion<span class="heti-spacing"> </span></span>策略</strong>：系统不仅对几何估计进行滤波，还对光线定义的相机模型进行滤波，求解相对变换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T_{kf}\)</span><span class="heti-spacing"> </span></span>后通过滑动加权平均滤波器更新<span><span class="heti-spacing"> </span>Pointmap</span>。利用滤波融合所有帧的信息，无需在后端对所有相机位姿进行优化。</li>
+</ul>
+<h3 id="graph-construction-and-loop-closure">Graph Construction and Loop Closure<a class="headerlink" href="#graph-construction-and-loop-closure" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>关键帧添加与图构建</strong>：当前帧与关键帧之间的有效匹配数量或唯一关键帧像素数量低于阈值，会降当前帧添加为新的关键帧，并且在图中添加一条从新关键帧到上一关键帧的双向边到<span class="heti-skip"><span class="heti-spacing"> </span>list<span class="heti-spacing"> </span></span>中，这样系统能够按时间顺序对估计的位姿进行约束。</li>
+<li><strong>回环检测机制</strong>：借鉴<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R-SfM<span class="heti-spacing"> </span></span>中的<strong>聚合选择性匹配核<span><span class="heti-spacing"> </span>ASMK</span></strong> 进行图像检索，来检测回环。</li>
+<li><strong>数据库更新</strong>：完成回环检测和添加新的回环边后，将新关键帧的编码特征添加到倒排索引中。</li>
+</ul>
+<h3 id="backend-optimisation">Backend Optimisation<a class="headerlink" href="#backend-optimisation" title="Permanent link">¶</a></h3>
+<ul>
+<li>实现所有关键帧位姿和场景几何的全局一致性。</li>
+<li>系统引入高效的<strong>二阶优化方案，固定前<span class="heti-skip"><span class="heti-spacing"> </span>7<span class="heti-spacing"> </span></span>自由度的<span class="heti-skip"><span class="heti-spacing"> </span>Sim(3)<span class="heti-spacing"> </span></span>位姿来处理尺度和位姿的不确定性</strong>。</li>
+</ul>
+<h3 id="relocalisation">Relocalisation<a class="headerlink" href="#relocalisation" title="Permanent link">¶</a></h3>
+<ul>
+<li>在系统运行时，如果场景出现特征变化、遮挡等因素导致匹配数不足，系统会进行重定位。</li>
+<li>pipeline：检索数据库以更严格的阈值查询。一旦检索到的图像与当前帧有足够数量的匹配，然后将其作为一个新关键帧添加到图中，并恢复<span><span class="heti-spacing"> </span>track</span>。</li>
+</ul>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">¶</a></h2>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://kwanwaipang.github.io/File/Blogs/Poster/MASt3R-SLAM.html#dust3r:-geometric-3d-vision-made-easy">论文阅读笔记之《MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors》</a></li>
+<li><a href="https://kwanwaipang.github.io/MASt3R-SLAM/">实验笔记之——MASt3R-SLAM</a></li>
+<li><a href="https://kwanwaipang.github.io/Dynamic-MASt3R/">实验笔记之——动态场景下<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R<span class="heti-spacing"> </span></span>及<span class="heti-skip"><span class="heti-spacing"> </span>MASt3R-SLAM<span class="heti-spacing"> </span></span>的测试</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/17982445115"><span>SLAM-3DGS<span class="heti-spacing"> </span></span>算法研究之路：<span>MASt3R-SLAM<span class="heti-spacing"> </span></span>论文深入研读</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/14345405887">杀疯了！帝国理工开源<span><span class="heti-spacing"> </span>MASt3R-SLAM</span>：实时、鲁棒、全局一致的稠密<span><span class="heti-spacing"> </span>SLAM</span></a></li>
+<li><a href="https://github.com/KwanWaiPang/MASt3R-SLAM_comment">MASt3R-SLAM_comment</a></li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年4月24日 16:24:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年5月10日 15:41:56</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月26日 15:00:56</span>
 </small>
 </div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                        var giscus = document.querySelector("script[src*=giscus]")
+                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
+                      }
+                    </script>
 </article>
 </div>
 </div>
