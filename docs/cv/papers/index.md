@@ -42,6 +42,7 @@
     - [CUT3R](dustr3r/cut3r/)
     - [Easi3R](dustr3r/easi3r/)
     - [MASt3R-SLAM](dustr3r/mast3r-slam/)
+    - [SLAM3R](dustr3r/slam3r/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)

@@ -266,6 +266,7 @@ nav:
         - CUT3R: cv/papers/dust3r/cut3r.md
         - Easi3R: cv/papers/dust3r/easi3r.md
         - MASt3R-SLAM: cv/papers/dust3r/mast3r-slam.md
+        - SLAM3R: cv/papers/dust3r/slam3r.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

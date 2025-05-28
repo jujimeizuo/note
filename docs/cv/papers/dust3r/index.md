@@ -15,3 +15,4 @@
 - [CUT3R](cut3r/)
 - [Easi3R](easi3r/)
 - [MASt3R-SLAM](mast3r-slam/)
+- [SLAM3R](slam3r/)
