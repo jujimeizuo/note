@@ -9,4 +9,5 @@
 - [4DGS](4dgs/)
 - [SplaTAM](splatam/)
 - [MonoGS](monogs/)
+- [Splat-SLAM](splat-slam/)
 - [WildGS-SLAM](wildgs-slam/)

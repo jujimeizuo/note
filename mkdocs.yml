@@ -254,6 +254,7 @@ nav:
         - 4DGS: cv/papers/3dgs/4dgs.md
         - SplaTAM: cv/papers/3dgs/splatam.md
         - MonoGS: cv/papers/3dgs/monogs.md
+        - Splat-SLAM: cv/papers/3dgs/splat-slam.md
         - WildGS-SLAM: cv/papers/3dgs/wildgs-slam.md
       - DUSt3R 系列:
         - cv/papers/dust3r/index.md

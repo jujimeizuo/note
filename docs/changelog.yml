@@ -3,6 +3,9 @@
     - newpage:
         text: CV > Papers > 3DGS > WildGS-SLAM
         href: /cv/papers/3dgs/wildgs-slam/
+    - newpage:
+        text: CV > Papers > 3DGS > Splat-SLAM
+        href: /cv/papers/3dgs/splat-slam/
   - "2025-05-28":
     - newpage:
         text: CV > Papers > DUSt3R > SLAM3R

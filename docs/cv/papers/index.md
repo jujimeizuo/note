@@ -32,6 +32,7 @@
     - [4DGS](3dgs/4dgs/)
     - [SplaTAM](3dgs/splatam/)
     - [MonoGS](3dgs/monogs/)
+    - [Splat-SLAM](3dgs/splat-slam/)
     - [WildGS-SLAM](3dgs/wildgs-slam/)
 - DUSt3R 系列
     - [DUSt3R](dust3r/dust3r/)
