@@ -31,7 +31,8 @@
     - [3DGS](3dgs/3dgs/)
     - [4DGS](3dgs/4dgs/)
     - [SplaTAM](3dgs/splatam/)
-    - [Gaussian Splatting SLAM](3dgs/gaussian-splatting-slam/)
+    - [MonoGS](3dgs/monogs/)
+    - [WildGS-SLAM](3dgs/wildgs-slam/)
 - DUSt3R 系列
     - [DUSt3R](dust3r/dust3r/)
     - [MASt3R](dustr3r/mast3r/)

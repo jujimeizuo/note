@@ -8,4 +8,5 @@
 - [3DGS](3dgs/)
 - [4DGS](4dgs/)
 - [SplaTAM](splatam/)
-- [Gaussian Splatting SLAM](gaussian-splatting-slam/)
+- [MonoGS](monogs/)
+- [WildGS-SLAM](wildgs-slam/)

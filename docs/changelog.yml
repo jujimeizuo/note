@@ -1,4 +1,8 @@
 - "2025":
+  - "2025-06-05":
+    - newpage:
+        text: CV > Papers > 3DGS > WildGS-SLAM
+        href: /cv/papers/3dgs/wildgs-slam/
   - "2025-05-28":
     - newpage:
         text: CV > Papers > DUSt3R > SLAM3R
@@ -63,8 +67,8 @@
         href: /utils/wandb/
   - "2024-10-13":
     - newpage:
-        text: CV > Papers > 3DGS > Gaussian Splatting SLAM
-        href: /cv/papers/3dgs/gaussian-splatting-slam/
+        text: CV > Papers > 3DGS > MonoGS
+        href: /cv/papers/3dgs/monogs/
     - pageupdate:
         text: add `git submodules`
         href: /utils/git/

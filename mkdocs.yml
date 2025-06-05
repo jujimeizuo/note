@@ -253,7 +253,8 @@ nav:
         - 3DGS: cv/papers/3dgs/3dgs.md
         - 4DGS: cv/papers/3dgs/4dgs.md
         - SplaTAM: cv/papers/3dgs/splatam.md
-        - Gaussian Splatting SLAM: cv/papers/3dgs/gaussian-splatting-slam.md
+        - MonoGS: cv/papers/3dgs/monogs.md
+        - WildGS-SLAM: cv/papers/3dgs/wildgs-slam.md
       - DUSt3R 系列:
         - cv/papers/dust3r/index.md
         - DUSt3R: cv/papers/dust3r/dust3r.md
