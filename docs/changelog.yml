@@ -1,6 +1,9 @@
 - "2025":
   - "2025-06-06":
-      - newpage:
+    - newpage:
+        text: CV > Papers > 3DGS > LoopSplat
+        href: /cv/papers/3dgs/loop-splat/
+    - newpage:
         text: CV > Papers > 3DGS > 4DTAM
         href: /cv/papers/3dgs/4dtam/
   - "2025-06-05":

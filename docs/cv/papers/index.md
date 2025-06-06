@@ -32,6 +32,7 @@
     - [4DGS](3dgs/4dgs/)
     - [SplaTAM](3dgs/splatam/)
     - [MonoGS](3dgs/monogs/)
+    - [LoopSplat](3dgs/loop-splat/)
     - [Splat-SLAM](3dgs/splat-slam/)
     - [WildGS-SLAM](3dgs/wildgs-slam/)
     - [4DTAM](3dgs/4dtam/)
