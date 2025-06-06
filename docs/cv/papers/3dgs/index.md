@@ -11,3 +11,4 @@
 - [MonoGS](monogs/)
 - [Splat-SLAM](splat-slam/)
 - [WildGS-SLAM](wildgs-slam/)
+- [4DTAM](4dtam/)
