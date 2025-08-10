@@ -258,6 +258,7 @@ nav:
         - Splat-SLAM: cv/papers/3dgs/splat-slam.md
         - WildGS-SLAM: cv/papers/3dgs/wildgs-slam.md
         - 4DTAM: cv/papers/3dgs/4dtam.md
+        - 4DGS-SLAM: cv/papers/3dgs/4dgs-slam.md
       - DUSt3R 系列:
         - cv/papers/dust3r/index.md
         - DUSt3R: cv/papers/dust3r/dust3r.md
