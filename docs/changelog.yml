@@ -3,6 +3,9 @@
     - newpage:
         text: CV > Papers > DUST3R > VGGT
         href: /cv/papers/dust3r/vggt/
+    - newpage:
+        text: CV > Papers > DUST3R > VGGT-SLAM
+        href: /cv/papers/dust3r/vggt-slam/
   - "2025-08-09":
     - newpage:
         text: CV > Papers > 3DGS > 4DGS-SLAM

@@ -17,3 +17,4 @@
 - [MASt3R-SLAM](mast3r-slam/)
 - [SLAM3R](slam3r/)
 - [VGGT](vggt/)
+- [VGGT-SLAM](vggt-slam/)
