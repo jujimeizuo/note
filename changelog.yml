@@ -1,4 +1,8 @@
 - "2025":
+  - "2025-08-12":
+    - newpage:
+        text: CV > Papers > DUST3R > VGGT
+        href: /cv/papers/dust3r/vggt/
   - "2025-08-09":
     - newpage:
         text: CV > Papers > 3DGS > 4DGS-SLAM
