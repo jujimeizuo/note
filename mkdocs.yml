@@ -200,7 +200,7 @@ nav:
         - 事务: cs/db/redis/work.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
-  - 3dCV:
+  - 3DV:
     - cv/index.md
     - 多视图几何:
       - cv/mvg/index.md
@@ -274,6 +274,7 @@ nav:
         - SLAM3R: cv/papers/dust3r/slam3r.md
         - VGGT: cv/papers/dust3r/vggt.md
         - VGGT-SLAM: cv/papers/dust3r/vggt-slam.md
+        - VGGT-Long: cv/papers/dust3r/vggt-long.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

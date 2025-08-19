@@ -18,3 +18,4 @@
 - [SLAM3R](slam3r/)
 - [VGGT](vggt/)
 - [VGGT-SLAM](vggt-slam/)
+- [VGGT-Long](vggt-long/)
