@@ -275,6 +275,7 @@ nav:
         - VGGT: cv/papers/dust3r/vggt.md
         - VGGT-SLAM: cv/papers/dust3r/vggt-slam.md
         - VGGT-Long: cv/papers/dust3r/vggt-long.md
+        - AnyCam: cv/papers/dust3r/anycam.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

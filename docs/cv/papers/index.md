@@ -49,6 +49,10 @@
     - [Easi3R](dustr3r/easi3r/)
     - [MASt3R-SLAM](dustr3r/mast3r-slam/)
     - [SLAM3R](dustr3r/slam3r/)
+    - [VGGT](dust3r/vggt/)
+    - [VGGT-SLAM](dust3r/vggt-slam/)
+    - [VGGT-Long](dust3r/vggt-long/)
+    - [AnyCam](dust3r/anycam/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)
