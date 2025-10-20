@@ -1,4 +1,6 @@
 - "2025":
+  - "2025-10-20":
+    - refactor: others/EndoscopyDepthEstimation > Endo/EndoscopyDepthEstimation
   - "2025-08-27":
     - newpage:
         text: CV > Papers > DUST3R > AnyCam
