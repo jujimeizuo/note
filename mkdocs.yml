@@ -276,6 +276,9 @@ nav:
         - VGGT-SLAM: cv/papers/dust3r/vggt-slam.md
         - VGGT-Long: cv/papers/dust3r/vggt-long.md
         - AnyCam: cv/papers/dust3r/anycam.md
+      - Endo 系列:
+        - cv/papers/endo/index.md
+        - EndoscopyDepthEstimation: cv/papers/endo/endoscopy-depth-estimation.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:
@@ -285,7 +288,6 @@ nav:
         - ORB-SLAM2: cv/papers/others/orbslam2.md
         - LET-NET: cv/papers/others/let-net.md
         - DeepV2D: cv/papers/others/deepv2d.md
-        - EndoscopyDepthEstimation: cv/papers/others/endoscopy-depth-estimation.md
     - 工具相关:
       - cv/utils/index.md
       - COLMAP: cv/utils/colmap.md

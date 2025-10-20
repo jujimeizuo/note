@@ -54,12 +54,14 @@
     - [VGGT-Long](dust3r/vggt-long/)
     - [AnyCam](dust3r/anycam/)
 
+- Endo 系列
+  - [EndoscopyDepthEstimation](endo/endoscopy-depth-estimation/)
+
 - 杂项
     - [SLAM 14 讲](others/vslam14/)
     - [ORB-SLAM2](others/orbslam2/)
     - [LET-NET](others/let-net/)
     - [DeepV2D](others/deepv2d/)
-    - [EndoscopyDepthEstimation](others/endoscopy-depth-estimation/)
 
 ## Reference
 
