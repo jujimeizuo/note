@@ -6,3 +6,4 @@
 ## Table of Contents
 
 - [EndoscopyDepthEstimation](endoscopy-depth-estimation/)
+- [Endo-4DGS](endo-4dgs/)

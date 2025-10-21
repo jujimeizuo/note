@@ -279,6 +279,7 @@ nav:
       - Endo 系列:
         - cv/papers/endo/index.md
         - EndoscopyDepthEstimation: cv/papers/endo/endoscopy-depth-estimation.md
+        - Endo-4DGS: cv/papers/endo/endo-4dgs.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

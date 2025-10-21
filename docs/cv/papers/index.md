@@ -56,6 +56,7 @@
 
 - Endo 系列
   - [EndoscopyDepthEstimation](endo/endoscopy-depth-estimation/)
+  - [Endo-4DGS](endo/endo-4dgs/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)
