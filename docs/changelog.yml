@@ -1,9 +1,13 @@
 - "2025":
   - "2025-10-21":
-    - refactor: others/EndoscopyDepthEstimation > Endo/EndoscopyDepthEstimation
     - newpage:
         text: CV > Papers > Endo > Endo-4DGS
         href: /cv/papers/endo/endo-4dgs/
+    - newpage:
+        text: CV > Papers > Endo > ST-Endo4DGS
+        href: /cv/papers/endo/st-endo4dgs/
+  - "2025-10-20":
+    - refactor: others/EndoscopyDepthEstimation > Endo/EndoscopyDepthEstimation
   - "2025-08-27":
     - newpage:
         text: CV > Papers > DUSt3R > AnyCam
