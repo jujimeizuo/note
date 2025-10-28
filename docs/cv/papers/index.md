@@ -58,6 +58,7 @@
   - [EndoscopyDepthEstimation](endo/endoscopy-depth-estimation/)
   - [Endo-4DGS](endo/endo-4dgs/)
   - [ST-Endo4DGS](endo/st-endo4dgs/)
+  - [EndoGaussian](endo/endogaussian/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)

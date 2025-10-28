@@ -4,7 +4,7 @@
 
 ### Endo
 
-- [ ] EndoGaussian
 - [ ] LGS
 - [ ] EndoGS
 - [ ] Endo-4DGX
+- [ ] ColorGS
