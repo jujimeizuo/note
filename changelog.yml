@@ -1,4 +1,8 @@
 - "2025":
+  - "2025-11-04":
+    - newpage:
+        text: CV > Papers > Endo > EndoGS
+        href: /cv/papers/endo/endogs/
   - "2025-10-28":
     - newpage:
         text: CV > Papers > Endo > EndoGaussian
