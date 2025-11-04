@@ -7,5 +7,6 @@
 
 - [EndoscopyDepthEstimation](endoscopy-depth-estimation/)
 - [Endo-4DGS](endo-4dgs/)
-- [ST-Endo4DGS](st-endo4dgs/)
 - [EndoGaussian](endogaussian/)
+- [EndoGS](endogs/)
+- [ST-Endo4DGS](st-endo4dgs/)

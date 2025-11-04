@@ -8,3 +8,4 @@
 - [ ] EndoGS
 - [ ] Endo-4DGX
 - [ ] ColorGS
+- [ ] EndoWave
