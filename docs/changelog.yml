@@ -3,6 +3,9 @@
     - newpage:
         text: CV > Papers > Endo > EndoGS
         href: /cv/papers/endo/endogs/
+    - newpage:
+        text: CV > Papers > Endo > LGS
+        href: /cv/papers/endo/lgs/
   - "2025-10-28":
     - newpage:
         text: CV > Papers > Endo > EndoGaussian

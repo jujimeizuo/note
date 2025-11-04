@@ -9,4 +9,5 @@
 - [Endo-4DGS](endo-4dgs/)
 - [EndoGaussian](endogaussian/)
 - [EndoGS](endogs/)
+- [LGS](lgs/)
 - [ST-Endo4DGS](st-endo4dgs/)

@@ -59,6 +59,7 @@
   - [Endo-4DGS](endo/endo-4dgs/)
   - [EndoGaussian](endo/endogaussian/)
   - [EndoGS](endo/endogs/)
+  - [LGS](endo/lgs/)
   - [ST-Endo4DGS](endo/st-endo4dgs/)
 
 - 杂项
