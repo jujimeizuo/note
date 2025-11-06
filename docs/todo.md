@@ -4,6 +4,5 @@
 
 ### Endo
 
-- [ ] Endo-4DGX
 - [ ] ColorGS
 - [ ] EndoWave

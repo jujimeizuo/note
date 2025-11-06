@@ -284,6 +284,7 @@ nav:
         - EndoGS: cv/papers/endo/endogs.md
         - LGS: cv/papers/endo/lgs.md
         - ST-Endo4DGS: cv/papers/endo/st-endo4dgs.md
+        - Endo-4DGX: cv/papers/endo/endo-4dgx.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:
