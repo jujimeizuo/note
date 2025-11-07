@@ -3,7 +3,7 @@ counter: true
 comment: true
 ---
 
-# LGS
+# Endo-4DGX
 
 > [!abstract]
 > - paper：[:book: Endo-4DGX: Robust Endoscopic Scene Reconstruction and Illumination Correction with Gaussian Splatting](https://arxiv.org/abs/2506.23308)

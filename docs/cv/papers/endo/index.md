@@ -12,3 +12,4 @@
 - [LGS](lgs/)
 - [ST-Endo4DGS](st-endo4dgs/)
 - [Endo-4DGX](endo-4dgx/)
+- [ColorGS](colorgs/)

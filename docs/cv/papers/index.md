@@ -62,6 +62,7 @@
   - [LGS](endo/lgs/)
   - [ST-Endo4DGS](endo/st-endo4dgs/)
   - [Endo-4DGX](endo/endo-4dgx/)
+  - [ColorGS](endo/colorgs/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)

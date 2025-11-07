@@ -5,4 +5,3 @@
 ### Endo
 
 - [ ] ColorGS
-- [ ] EndoWave
