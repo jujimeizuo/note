@@ -20,3 +20,4 @@
 - [VGGT-SLAM](vggt-slam/)
 - [VGGT-Long](vggt-long/)
 - [AnyCam](anycam/)
+- [PAGE-4D](page-4d/)

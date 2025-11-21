@@ -53,6 +53,7 @@
     - [VGGT-SLAM](dust3r/vggt-slam/)
     - [VGGT-Long](dust3r/vggt-long/)
     - [AnyCam](dust3r/anycam/)
+    - [PAGE-4D](dust3r/page-4d/)
 
 - Endo 系列
   - [EndoscopyDepthEstimation](endo/endoscopy-depth-estimation/)

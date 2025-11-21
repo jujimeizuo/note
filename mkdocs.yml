@@ -276,6 +276,7 @@ nav:
         - VGGT-SLAM: cv/papers/dust3r/vggt-slam.md
         - VGGT-Long: cv/papers/dust3r/vggt-long.md
         - AnyCam: cv/papers/dust3r/anycam.md
+        - PAGE-4D: cv/papers/dust3r/page-4d.md
       - Endo 系列:
         - cv/papers/endo/index.md
         - EndoscopyDepthEstimation: cv/papers/endo/endoscopy-depth-estimation.md
