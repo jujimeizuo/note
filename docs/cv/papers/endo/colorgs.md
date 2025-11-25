@@ -7,7 +7,6 @@ comment: true
 
 > [!abstract]
 > - paper：[:book: ColorGS: High-fidelity Surgical Scene Reconstruction with Colored Gaussian Splatting](https://arxiv.org/abs/2508.18696)
-> - code：[:material-github: EndoWave](https://github.com/lastbasket/Endo-Wave)
 
 ## Introduction
 
