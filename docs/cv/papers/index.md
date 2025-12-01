@@ -62,6 +62,7 @@
   - [EndoGS](endo/endogs/)
   - [LGS](endo/lgs/)
   - [ST-Endo4DGS](endo/st-endo4dgs/)
+  - [Deform3DGS](endo/deform3dgs/)
   - [Endo-4DGX](endo/endo-4dgx/)
   - [ColorGS](endo/colorgs/)
 

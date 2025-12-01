@@ -11,5 +11,6 @@
 - [EndoGS](endogs/)
 - [LGS](lgs/)
 - [ST-Endo4DGS](st-endo4dgs/)
+- [Deform3DGS](deform3dgs/)
 - [Endo-4DGX](endo-4dgx/)
 - [ColorGS](colorgs/)
