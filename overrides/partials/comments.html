@@ -1,0 +1,22 @@
+{% if page.meta and page.meta.comment %}
+  <script src="https://giscus.app/client.js"
+          data-repo="jujimeizuo/note"
+          data-repo-id="R_kgDOKLqQvQ"
+          data-category="General"
+          data-category-id="DIC_kwDOKLqQvc4CY4-G"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="zh-CN"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <script>
+    if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+      var giscus = document.querySelector("script[src*=giscus]")
+      giscus.setAttribute("data-theme", "transparent_dark") 
+    }
+  </script>
+{% endif %}

@@ -1,3 +1,4 @@
 # 代办事项
 
-## 笔记类
+- [ ] revise-time
+- [ ] DUSt3R rename
