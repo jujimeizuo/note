@@ -3,16 +3,16 @@ counter: true
 comment: true
 ---
 
-# KITTI 数据集
+# Waymo
 
 !!! abstract
     waymo提供了两种数据集，`motion` 与 `perception` 两种，其中 `motion` 是鸟瞰图，官网中有介绍，主要用于轨迹预测之类的任务，`perception` 主要用于目标检测跟踪之类的任务，是第一视角，有相机和雷达信息。
 
     Waymo包含 798 个训练场景、202 个验证场景和 150 个测试场景，每个场景的时长为 20 s。Waymo 数据集的标注频率比 nuScenes 高 5 倍，场景数量是 nuScenes 数据集的 3 倍，有数量更多且更密集的 2D/3D 标签。Waymo 数据集对自动驾驶算法的鲁棒性和泛化能力提出了更高的要求，是目前为止最大、最多样化的数据集。
 
-    - paper: https://arxiv.org/abs/1912.04838v7
-    - github: https://github.com/waymo-research/waymo-open-dataset
-    - 主页：https://waymo.com/open
+    - Paper: https://arxiv.org/abs/1912.04838v7
+    - Github: https://github.com/waymo-research/waymo-open-dataset
+    - Home：https://waymo.com/open
 
 <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/waymo-1.gif"></center>
 

@@ -3,7 +3,7 @@ counter: true
 comment: true
 ---
 
-# KITTI 数据集
+# KITTI
 
 !!! abstract
     该数据集用于评测立体图像(stereo)，光流(optical flow)，视觉测距(visual odometry)，3D物体检测(object detection)和3D跟踪(tracking)等计算机视觉技术在车载环境下的性能。
@@ -12,8 +12,8 @@ comment: true
     
     整个数据集由 389 对立体图像和光流图，39.2 km视觉测距序列以及超过 200k 3D 标注物体的图像组成[1] ，以 10Hz 的频率采样及同步。总体上看，原始数据集被分类为`Road`, `City`, `Residential`, `Campus` 和 `Person`。对于 3D 物体检测，label细分为 car, van, truck, pedestrian, pedestrian(sitting), cyclist, tram 以及misc 组成。
 
-    - 主页：https://www.cvlibs.net/datasets/kitti/index.php
-    - 可视化：http://www.danielgm.net/cc/release/
+    - Home：https://www.cvlibs.net/datasets/kitti/index.php
+    - Visualization：http://www.danielgm.net/cc/release/
 
 ## 数据集格式
 

@@ -3,7 +3,7 @@ counter: true
 comment: true
 ---
 
-# TUM 数据集
+# TUM
 
 !!! abstract
     TUM RGB-D 数据集由在不同的室内场景使用 Microsoft Kinect 传感器记录的39 个序列组成，包含了 
@@ -19,8 +19,9 @@ comment: true
 
     等几种针对不同任务的数据集，每个种类有包含多个数据，可以用于多种任务的性能测试。其中之后验证集没有真值，只能通过 TUM 提供的在线测试工具评测我们的计算结果。TUM数据集带有标准的轨迹和一些比较工具，所以非常适合用来做研究。
 
-    - 主页：https://vision.in.tum.de/data/datasets/rgbd-dataset/download
-    - 在线测评工具：https://vision.in.tum.de/data/datasets/rgbd-dataset/online_evaluation
+    - Paper: https://ieeexplore.ieee.org/document/6385773/
+    - Home：https://vision.in.tum.de/data/datasets/rgbd-dataset/download
+    - Evaluation Online：https://vision.in.tum.de/data/datasets/rgbd-dataset/online_evaluation
 
 
 ## 数据集格式
