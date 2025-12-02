@@ -1,8 +1,3 @@
----
-counter: true
-comment: true
----
-
 # Waymo
 
 !!! abstract

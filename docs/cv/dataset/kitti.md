@@ -1,8 +1,3 @@
----
-counter: true
-comment: true
----
-
 # KITTI
 
 !!! abstract

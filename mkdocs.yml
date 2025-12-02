@@ -222,8 +222,13 @@ nav:
     - 数据集相关:
         - cv/dataset/index.md
         - TUM: cv/dataset/tum.md
+        - Bonn: cv/dataset/bonn.md
         - KITTI: cv/dataset/kitti.md
         - Waymo: cv/dataset/waymo.md
+        - EndoNeRF: cv/dataset/endonerf.md
+        - StereoMIS: cv/dataset/stereomis.md
+        - Hamlyn: cv/dataset/hamlyn.md
+        - SCARED: cv/dataset/scared.md
     - 论文相关:
       - cv/papers/index.md
       - PointCloud 系列:

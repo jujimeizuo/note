@@ -26,9 +26,13 @@
 - 数据集相关:
     - index: dataset/
     - TUM: dataset/tum/
+    - Bonn: dataset/bonn/
     - KITTI: dataset/kitti/
     - Waymo: dataset/waymo/
-    - index: 3d-visualization/
+    - EndoNeRF: dataset/endonerf/
+    - StereoMIS: dataset/stereomis/
+    - Hamlyn: dataset/hamlyn/
+    - SCARED: dataset/scared/
 - 论文相关:
     - index: papers/
     - Dynamic SLAM 系列: papers/dynamic-slam/

@@ -3,6 +3,21 @@
     - newpage:
         text: CV > Papers > Endo > EH-SurGS
         href: /cv/papers/endo/eh-surgs/
+    - newpage:
+        text: CV > Dataset > Bonn
+        href: /cv/dataset/bonn/
+    - newpage:
+        text: CV > Dataset > EndoNeRF
+        href: /cv/dataset/endonerf/
+    - newpage:
+        text: CV > Dataset > StereoMIS
+        href: /cv/dataset/stereomis/
+    - newpage:
+        text: CV > Dataset > Hamlyn
+        href: /cv/dataset/hamlyn/
+    - newpage:
+        text: CV > Dataset > SCARED
+        href: /cv/dataset/scared/
   - "2025-12-01":
     - newpage:
         text: CV > Papers > Endo > Deform3DGS
