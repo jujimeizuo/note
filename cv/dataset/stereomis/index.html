@@ -21,7 +21,6 @@
 <link href="../../../css/card.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/changelog_extra.css" rel="stylesheet"/>
-<link href="/css/counter.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
@@ -156,7 +155,7 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../">
+<a class="md-tabs__link md-tabs__link--active" href="../../">
         3DV
       </a>
 </li>
@@ -584,8 +583,8 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../">3DV</a>
 <label for="__nav_3">
@@ -704,8 +703,8 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../">数据集相关</a>
 <label for="__nav_3_4">
@@ -724,6 +723,11 @@ var _hmt = _hmt || [];
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../bonn/">
+        Bonn
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../kitti/">
         KITTI
       </a>
@@ -731,6 +735,49 @@ var _hmt = _hmt || [];
 <li class="md-nav__item">
 <a class="md-nav__link" href="../waymo/">
         Waymo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../endonerf/">
+        EndoNeRF
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          StereoMIS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        StereoMIS
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    数据集格式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    应用场景
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hamlyn/">
+        Hamlyn
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../scared/">
+        SCARED
       </a>
 </li>
 </ul>
@@ -1626,6 +1673,22 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+        目录
+      </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    数据集格式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    应用场景
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -1638,35 +1701,47 @@ var _hmt = _hmt || [];
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <h1 id="stereomis">StereoMIS<a class="headerlink" href="#stereomis" title="Permanent link">¶</a></h1>
-<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>105<span class="heti-spacing"> </span></span>个字 </p>
-</div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p><span>StereoMIS<span class="heti-spacing"> </span></span>是一个用于内窥镜手术中同步定位与地图构建（SLAM）的数据集。该数据集是使用达芬奇<span class="heti-skip"><span class="heti-spacing"> </span>Xi<span class="heti-spacing"> </span></span>手术机器人录制的，捕捉了立体视频流和相机前向运动学数据。它包含<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个在体猪实验对象，以及<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>个包含呼吸、工具运动和组织变形的手术序列。</p>
-<p>Paper: <a href="https://arxiv.org/abs/2304.08023">https://arxiv.org/abs/2304.08023</a>
-Github: <a href="https://github.com/aimi-lab/robust-pose-estimator">https://github.com/aimi-lab/robust-pose-estimator</a>
-Home: <a href="https://zenodo.org/records/7727692">https://zenodo.org/records/7727692</a></p>
+<ul>
+<li>Paper: <a href="https://arxiv.org/abs/2304.08023">https://arxiv.org/abs/2304.08023</a></li>
+<li>Github: <a href="https://github.com/aimi-lab/robust-pose-estimator">https://github.com/aimi-lab/robust-pose-estimator</a></li>
+<li>Home: <a href="https://zenodo.org/records/7727692">https://zenodo.org/records/7727692</a></li>
+</ul>
 </div>
+<h2 id="_1">数据集格式<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ul>
+<li>采集平台：<span>da Vinci Xi<span class="heti-spacing"> </span></span>立体内窥镜，左<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>右目垂直拼接为单路<span class="heti-skip"><span class="heti-spacing"> </span>1920×1080 30-60 fps<span class="heti-spacing"> </span></span>视频</li>
+<li>实验对象：<span>3<span class="heti-spacing"> </span></span>只活体猪（P1、P2、P3<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，共<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>条序列，时长<span><span class="heti-spacing"> </span>52 s</span> – <span>5 min<span class="heti-spacing"> </span></span>不等</li>
+<li>挑战性元素：呼吸运动、器械遮挡、组织切割<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>缝合、出血与烟雾等真实术中动态</li>
+<li>已公开部分：仅猪实验序列（in-vivo porcine）向学术社区开放，人类手术片段未放出</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sequence_name/  
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>├── stereo_video.avi          // 上下拼接的立体内窥镜视频  
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>├── left_mask/                // 自动生成的器械二值掩码（左目，PNG）  
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>├── kinematics.csv            // 机器人前向运动学（时间戳 → 器械关节角）  
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>├── start_stop.csv            // 有效帧起止编号，便于裁剪  
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>└── calib/                    // 内参、外参与畸变系数（YAML/txt）
+</code></pre></div>
+<h2 id="_2">应用场景<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<ol>
+<li>内窥镜<span class="heti-skip"><span class="heti-spacing"> </span>SLAM/<span class="heti-spacing"> </span></span>视觉里程计：评估在呼吸、组织变形和器械遮挡下的相机跟踪鲁棒性；多篇最新方法（如学习<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>几何混合<span><span class="heti-spacing"> </span>VO</span>、自适应加权<span><span class="heti-spacing"> </span>VO</span>）在此数据集上取得<span><span class="heti-spacing"> </span>SOTA ATE</span> ≈ 2.2 mm。</li>
+<li>动态场景<span class="heti-skip"><span class="heti-spacing"> </span>NeRF/3D<span class="heti-spacing"> </span></span>重建：利用左目视频<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>掩码训练可变形<span><span class="heti-spacing"> </span>NeRF</span>（EndoNeRF、4D-GS、<span>FLEx<span class="heti-spacing"> </span></span>等<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，实现“去器械”或“时变组织”新视角合成；<span>FLEx<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>5000<span class="heti-spacing"> </span></span>帧长序列上仍保持<span><span class="heti-spacing"> </span>29.97 PSNR</span>。</li>
+<li>在线组织跟踪与器械分割：地标子集提供<span class="heti-skip"><span class="heti-spacing"> </span>2D-3D<span class="heti-spacing"> </span></span>对应，可用于验证特征跟踪、模板匹配或深度强化学习策略。</li>
+<li>深度估计与立体匹配：双目帧<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>真值轨迹为无监督<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>自监督深度网络提供尺度一致的监督信号，多篇内窥镜深度补全工作以<span class="heti-skip"><span class="heti-spacing"> </span>StereoMIS<span class="heti-spacing"> </span></span>为测试床。</li>
+</ol>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月2日 10:47:19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月2日 21:24:50</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月2日 10:47:19</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月2日 21:24:50</span>
 </small>
 </div>
-<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
-</script>
-<script>
-                      if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
-                        var giscus = document.querySelector("script[src*=giscus]")
-                        giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/jujimeizuo/note/docs/css/giscus.css") 
-                      }
-                    </script>
 </article>
 </div>
 </div>
@@ -1676,6 +1751,34 @@ Home: <a href="https://zenodo.org/records/7727692">https://zenodo.org/records/77
             </a>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: EndoNeRF" class="md-footer__link md-footer__link--prev" href="../endonerf/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              EndoNeRF
+            </div>
+</div>
+</a>
+<a aria-label="下一页: Hamlyn" class="md-footer__link md-footer__link--next" href="../hamlyn/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              Hamlyn
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">

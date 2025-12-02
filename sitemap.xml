@@ -231,7 +231,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.jujimeizuo.cn/cv/dataset/hamlyn/</loc>
+         <lastmod>2025-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/kitti/</loc>
+         <lastmod>2025-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.jujimeizuo.cn/cv/dataset/scared/</loc>
          <lastmod>2025-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
