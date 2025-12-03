@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
@@ -7037,10 +7037,10 @@ var _hmt = _hmt || [];
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>BERT 首先在大规模无监督语料上进行预训练，然后在预训练好的参数基础上增加一个与任务相关的神经网络层，并在该任务的数据上进行微调，最终取得很好的效果。</p>
 <p>BERT的训练过程可以简述为：预训练+微调（finetune），这是近几年 NLP 解决方案的主流范式。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/tf.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/tf.png" alt="预训练+微调"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/bert/tf.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/bert/tf.png" alt="预训练+微调"></a></center></p>
 <h2 id="_1">模型结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>BERT模型的结构如下图最左：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/bert-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/bert-structure.png" alt="BERT模型结构"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/bert/bert-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/bert/bert-structure.png" alt="BERT模型结构"></a></center></p>
 <ul>
 <li>对比 OpenAI GPT，BERT 是双向的 Transformer block 连接，就像单向 RNN 和双向 RNN 的区别，效果会更好。</li>
 <li>对比 ELMo，虽然都是“双向”，但目标函数不同。<ul>
@@ -7056,7 +7056,7 @@ var _hmt = _hmt || [];
 </ul>
 <h2 id="embedding">Embedding<a class="headerlink" href="#embedding" title="Permanent link">&para;</a></h2>
 <p>这里的 Embedding 由三种 Embedding 求和组成：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/embedding.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/embedding.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/bert/embedding.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/bert/embedding.png"></a></center></p>
 <ul>
 <li><code>Token Embedding</code>：词向量，第一个单词是 CLS 标志，可以用于之后的分类任务</li>
 <li><code>Segment Embedding</code>：句子向量，用于区分两个句子，因为预训练不光做 LM 还要做以两个句子为输入的分类任务</li>
@@ -7100,7 +7100,7 @@ var _hmt = _hmt || [];
 <li>命名实体识别NER</li>
 </ul>
 <p>下图展示了BERT在11个不同任务中的模型，它们只需要在BERT的基础上再添加一个输出层便可以完成对特定任务的微调。这些任务类似于我们做过的文科试卷，其中有选择题，简答题等等。图3中其中Tok表示不同的Token，E 表示嵌入向量，<span class="arithmatex">\(T_i\)</span> 表示第 i 个Token在经过BERT处理之后得到的特征向量。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/fine-tuning.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/bert/fine-tuning.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/bert/fine-tuning.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/bert/fine-tuning.png"></a></center></p>
 <p>整体 Fine-Tuning 过程：</p>
 <ol>
 <li>构建图结构，截取目标张量，添加新层</li>
@@ -7293,7 +7293,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../js/katex.js"></script>
       

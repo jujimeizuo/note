@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
@@ -7190,7 +7190,7 @@ var _hmt = _hmt || [];
 <li>Encoder 又称编码器，它的作用就是『将现实问题转化为数学问题』。</li>
 <li>Decoder 又称解码器，它的作用就是『求解数学问题，并转化为现实世界的解决方案』。</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/encoder-decoder.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/encoder-decoder.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/attention/encoder-decoder.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/attention/encoder-decoder.png"></a></center></p>
 <p>关于 Encoder-Decoder：</p>
 <ol>
 <li>不论输入和输出的长度是什么，中间的<strong>向量c</strong>的长度都是固定的（这也是它的缺陷）。</li>
@@ -7205,7 +7205,7 @@ var _hmt = _hmt || [];
 <h2 id="seq2seq">Seq2Seq<a class="headerlink" href="#seq2seq" title="Permanent link">&para;</a></h2>
 <h3 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>Seq2Seq（是 Sequence to Sequence 的缩写），字面意思就是输入一个序列，输出另一个序列。这种结构最重要的地方在于输入序列和输出序列的长度可以可变的。例如下图：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/seq2seq.gif" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/seq2seq.gif"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/attention/seq2seq.gif" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/attention/seq2seq.gif"></a></center></p>
 <p>如上图：输入了 6 个汉字，输出了 3 个英文单词。输入和输出的长度不同。</p>
 <h3 id="seq2seq-encoder-decoder">Seq2Seq 和 Encoder-Decoder 的关系<a class="headerlink" href="#seq2seq-encoder-decoder" title="Permanent link">&para;</a></h3>
 <p>Seq2Seq（强调目的）不特指具体方法，满足「输入序列、输出序列」的目的，都可以统称为 Seq2Seq 模型。</p>
@@ -7220,7 +7220,7 @@ var _hmt = _hmt || [];
 <p>Attention（注意力）机制如果浅层的理解，跟他的名字非常匹配。他的核心逻辑就是「从关注全部到关注重点」。我们的视觉系统就是一种 Attention 机制，将有限的注意力集中在重点信息上，从而节省资源，快速获得最有效的信息。</p>
 <p>Attention 机制最早是在计算机视觉里应用的，随后在 NLP 领域也开始应用了，真正发扬光大是在 NLP 领域，因为 2018 年 BERT 和 GPT 的效果出奇的好，进而走红。而 Transformer 和 Attention 这些核心开始被大家重点关注。</p>
 <p>如果用图来表达 Attention 的位置大致是下面的样子：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/attention-in-nlp.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/attention-in-nlp.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/attention/attention-in-nlp.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/attention/attention-in-nlp.png"></a></center></p>
 <h3 id="_3">三大优点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>之所以要引入 Attention 机制，主要是 3 个原因：</p>
 <ol>
@@ -7232,9 +7232,9 @@ var _hmt = _hmt || [];
 <p>下面的动图演示了 attention 引入 Encoder-Decoder 框架下，完成机器翻译任务的大致流程。</p>
 <p><center><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*5_OtX2-iwgDDXT49.gif" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*5_OtX2-iwgDDXT49.gif"></a></center></p>
 <p>但是，Attention 并不一定要在 Encoder-Decoder 框架下使用的，他是可以脱离 Encoder-Decoder 框架的。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/detach-encoder-decoder.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/detach-encoder-decoder.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/attention/detach-encoder-decoder.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/attention/detach-encoder-decoder.png"></a></center></p>
 <p>Attention 原理分为 3 步：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/attention-step.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/attention-step.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/attention/attention-step.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/attention/attention-step.png"></a></center></p>
 <ol>
 <li>query 和 key 进行相似度计算，得到权值</li>
 <li>将权值进行归一化，得到直接可用的权重</li>
@@ -7244,7 +7244,7 @@ var _hmt = _hmt || [];
 <p>从上面的建模，可以大致感受到 Attention 的思路简单，<strong>四个字“带权求和”</strong>，大道至简。</p>
 </blockquote>
 <h2 id="n">N 种类型<a class="headerlink" href="#n" title="Permanent link">&para;</a></h2>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/n-types.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/n-types.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/transformer/attention/n-types.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/transformer/attention/n-types.png"></a></center></p>
 <h3 id="_5">计算区域<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Soft Attention</strong>，这是比较常见的Attention方式，对所有key求权重概率，每个key都有一个对应的权重，是一种全局的计算方式（也可以叫Global Attention）。这种方式比较理性，参考了所有key的内容，再进行加权。但是计算量可能会比较大一些。</li>
@@ -7502,7 +7502,7 @@ c. Attention机制，对所有step的hidden state进行加权，把注意力集�
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../js/katex.js"></script>
       

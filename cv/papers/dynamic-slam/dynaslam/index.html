@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7094,7 +7094,7 @@ var _hmt = _hmt || [];
 </ol>
 <p><strong>而DynaSLAM不仅可以检测出正在移动的物体，还可以检测出一些“可被移动”的物体。</strong></p>
 <h2 id="system-description">SYSTEM DESCRIPTION<a class="headerlink" href="#system-description" title="Permanent link">&para;</a></h2>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-1.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-1.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/DynaSLAM-1.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/DynaSLAM-1.png"></a></center></p>
 <h3 id="segmentation-of-potentially-dynamic-content-using-a-cnn">Segmentation of Potentially Dynamic Content using a CNN<a class="headerlink" href="#segmentation-of-potentially-dynamic-content-using-a-cnn" title="Permanent link">&para;</a></h3>
 <p>使用 MASK-RCNN 进行像素级分割，只用到语义信息。</p>
 <h3 id="low-cost-tracking">Low-Cost Tracking<a class="headerlink" href="#low-cost-tracking" title="Permanent link">&para;</a></h3>
@@ -7107,12 +7107,12 @@ var _hmt = _hmt || [];
 <li>对于每个关键点，它对应的3D点是 <span class="arithmatex">\(X\)</span>。然后，计算 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(x^\prime\)</span> 反投影之间的夹角，即视差角 <span class="arithmatex">\(\alpha\)</span>。<strong>如果角度大于30度，这个点就有可能被遮挡</strong>，之后就会被忽略。比如在TUM数据集中，如果视差角大于30度，由于视角的不同，静态点就会被视为动态。</li>
 <li>计算出关羽深度的<strong>重投影误差：<span class="arithmatex">\(\Delta z = z_{proj} - z^\prime\)</span></strong>，<span class="arithmatex">\(z^\prime\)</span> 是当前帧中还有的关键点的深度（测量值）。如果 <span class="arithmatex">\(\Delta z &gt; \tau_z\)</span>，关键点 <span class="arithmatex">\(x^\prime\)</span> 就会被视为动态物体。为了一个好的精度和召回率，通过最大化 <span class="arithmatex">\(0.7 * Presion + 0.3 * Recall\)</span>，将 <span class="arithmatex">\(\tau_z\)</span> 定为 0.4m。</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-3.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-3.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/DynaSLAM-3.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/DynaSLAM-3.png"></a></center></p>
 <ul>
 <li>有一些被标记为动态的关键点位于移动物体的边界上，这可能会引起问题。为了避免这种情况，可以使用深度图像所提供的信息。<strong>如果一个关键点被设定为动态，但在深度图中它周围的区域有很大的方差，我们就把标签改为静态。</strong></li>
 <li>为了找到动态物体的所有像素点，在深度图的动态点周围进行区域增长算法。</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-2.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-2.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/DynaSLAM-2.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/DynaSLAM-2.png"></a></center></p>
 <p><strong>这两种方法呈现出功能上的互补，所以最终取了两个Mask的并集，被分割的动态部分被从当前帧和地图中移除：</strong></p>
 <ul>
 <li><strong>多视图几何</strong>：能识别出“可以被移动”的物体，但需要有多视图才能进行初始化。在图4a中看到，不仅检测到了图像前面的人，而且还检测到了他所拿的书和他所坐的椅子；但是远处的人并没有被检测到，原因有二：RGB-D相机在测量远处物体的深度时会有困难；其次，可靠的特征位于确定的，因此是附近的图像部分。</li>
@@ -7130,7 +7130,7 @@ var _hmt = _hmt || [];
 <li>如果它出现了，但没有有效的深度信息。这些空隙也不能用几何方法来重建，而需要一种更复杂的涂抹技术。</li>
 </ul>
 <p>从下面的图5可以看到大部分被分割的部分已经用来自静态背景的信息进行了适当的补全。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-4.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-4.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/DynaSLAM-4.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/DynaSLAM-4.png"></a></center></p>
 <h2 id="experimental-results">EXPERIMENTAL RESULTS<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
 <p>略。</p>
 
@@ -7311,7 +7311,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

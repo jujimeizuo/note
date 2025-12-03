@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7037,7 +7037,7 @@ var _hmt = _hmt || [];
 <h2 id="overview">OVERVIEW<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>本文提出一种 SLAM 框架，将动态部件视为单个刚体，利用运动先验分割静态部件和动态部件。利用分割后的图像对摄像机进行跟踪，重建背景和目标模型。</p>
 <p>重建流程如下图所示，首先需要连续两个 RGB-D 关键帧 A 和 B，以及静态和动态物体的先验信息，静态和动态物体的先验信息及 <span class="arithmatex">\(\widetilde{\xi}_s\)</span> 和 <span class="arithmatex">\(\widetilde{\xi}_d\)</span> 是属于 <span class="arithmatex">\(se(3)\)</span> 的，此外还需要前一帧的语义分割信息 <span class="arithmatex">\(\widetilde{\Gamma}_A \in \mathbb{R}^{W \times H}\)</span>。首先根据运动先验信息检测物体是否为动态物体；然后当物体运动时，基于帧间对其，我们联合估计分割 <span class="arithmatex">\(\widetilde{\Gamma}_B\)</span> 和 刚体运动 <span class="arithmatex">\(\widetilde{\xi}_s\)</span> 和 <span class="arithmatex">\(\widetilde{\xi}_d\)</span>。这些片段用于重建静态环境和动态对象，并利用帧与模型的对其实现摄像机的定位。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/RigidFusion-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/RigidFusion-1.jpg" alt="RigidFusion Pipeline"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/RigidFusion-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/RigidFusion-1.jpg" alt="RigidFusion Pipeline"></a></center></p>
 <h3 id="_1">图像聚合<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>每个新的强度和深度图像 <span class="arithmatex">\((I,D) \in \mathbb{R}^{W \times H}\)</span> 对通过使用 K-均值聚类，被分割成 K 个几何簇 <span class="arithmatex">\(V=V_i|i=1,...,K\)</span>。假设每个簇满足刚性条件，每个刚体可以通过簇的组合来近似。同时文中还为每个集群分配一个分数 <span class="arithmatex">\(\gamma_u \in [0,1]\)</span> 表示簇是否属于静态刚体的概率；<span class="arithmatex">\(\gamma_i=0\)</span> 表示动态簇，而 <span class="arithmatex">\(\gamma_i=1\)</span> 表示静态簇。对于 RGB-D 帧 A，将总体分数表示为 <span class="arithmatex">\(\gamma_A \in \mathbb{R}^K\)</span>。</p>
 <h3 id="_2">距离判断<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7047,7 +7047,7 @@ var _hmt = _hmt || [];
 <h3 id="_4">坐标系转换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>分别从 world-frame、camera-frame 和 object-frame 表示为 <span class="arithmatex">\(F_W、F_C、F_O\)</span>。使用 <span class="arithmatex">\(T_{XY} \in SE(3)\)</span> 将坐标系 <span class="arithmatex">\(F_Y\)</span> 中某个点的齐次坐标转换为 <span class="arithmatex">\(F_X\)</span>。在图像帧 A 中，相机和物体的姿态分别是 <span class="arithmatex">\(T_{WC_A}\)</span> 和 <span class="arithmatex">\(T_{WO_A}\)</span>。考虑两个图像帧 A 和 B，<span class="arithmatex">\(\xi_s\)</span> 与摄像机位姿的关系为 <span class="arithmatex">\(T(\xi_s)=T_{WC_A}^{-1}T_{WC_B}=T_{C_AC_B}\)</span>，求出机器人移动的信息，<span class="arithmatex">\(\xi_d\)</span> 与摄像机的位姿的关系为 <span class="arithmatex">\(T(\xi_d)=T_{WC_A}^{-1}T_{WO_A}T_{WO_B}^{-1}T_{WC_B}=T_{C_AO_A}T_{C_BO_B}^{-1}\)</span>，最后转化为相机和物体的相对运动关系。其中 <span class="arithmatex">\(\widetilde{\xi}_s\)</span> 和 <span class="arithmatex">\(\widetilde{\xi}_d\)</span> 可以由本体感觉传感器提供，如车轮里程计和手臂正向运动学。</p>
 <p>在本文中，静态运动先验 <span class="arithmatex">\(\widetilde{\xi}_s\)</span> 是通过车轮里程计或通过在相机地面真值轨迹上添加模拟漂移来计算。通过模拟对象真值轨迹上的漂移来生成 <span class="arithmatex">\(\widetilde{\xi}_d\)</span>。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/RigidFusion-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/RigidFusion-2.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/RigidFusion-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/RigidFusion-2.jpg"></a></center></p>
 
 
 
@@ -7226,7 +7226,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

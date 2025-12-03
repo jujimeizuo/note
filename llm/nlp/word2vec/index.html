@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
@@ -6997,7 +6997,7 @@ var _hmt = _hmt || [];
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/summary.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/summary.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/summary.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/summary.png"></a></center></p>
 <p>Word2Vec 的特点是能够将单词转化为向量来表示，这样词与词之间就可以定量地去度量它们之间的关系，挖掘词之间的联系。</p>
 <p>最早的词向量采用 One-Hot 编码，又称一位有效编码，每个词向量维度大小为整个词汇表的大小，对于每个具体的词汇表中的词，将对应的位置置为 1.</p>
 </div>
@@ -7005,20 +7005,20 @@ var _hmt = _hmt || [];
 <p>采用One-Hot编码方式来表示词向量非常简单，但缺点也是显而易见的，一方面我们实际使用的词汇表很大，经常是百万级以上，这么高维的数据处理起来会消耗大量的计算资源与时间。另一方面，One-Hot编码中所有词向量之间彼此正交，没有体现词与词之间的相似关系。</p>
 <p>Distributed representation可以解决One-Hot编码存在的问题，它的思路是通过训练，将原来One-Hot编码的每个词都映射到一个较短的词向量上来，而这个较短的词向量的维度可以由我们自己在训练时根据任务需要来自己指定。</p>
 <p>下图是采用Distributed representation的一个例子，我们将词汇表里的词用"Royalty","Masculinity", "Femininity"和"Age"4个维度来表示，King这个词对应的词向量可能是(0.99,0.99,0.05,0.7)。当然在实际情况中，我们并不能对词向量的每个维度做一个很好的解释。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/dr.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/dr.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/dr.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/dr.png"></a></center></p>
 <p>有了用Distributed Representation表示的较短的词向量，我们就可以较容易的分析词之间的关系了，比如我们将词的维度降维到2维，有一个有趣的研究表明，用下图的词向量表示我们的词时，我们可以发现：</p>
 <div class="arithmatex">\[
 \vec{King} - \vec{Man} + \vec{Woman} \approx \vec{Queen}
 \]</div>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/kmwq.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/kmwq.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/kmwq.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/kmwq.png"></a></center></p>
 <p>可见我们只要得到了词汇表里所有词对应的词向量，那么我们就可以做很多有趣的事情了。不过，怎么训练才能得到合适的词向量呢？针对这个问题，Google的Tomas Mikolov在他的论文中提出了CBOW和Skip-gram两种神经网络模型。</p>
 <h2 id="word2vec_2">Word2Vec 原理<a class="headerlink" href="#word2vec_2" title="Permanent link">&para;</a></h2>
 <p>Word2Vec 的训练模型本质上是只具有一个隐含层的神经元网络。</p>
 <p>它的输入采用 One-Hot 编码的词汇表向量，它的输出也是 One-Hot 编码的词汇表向量。使用所有的样本，训练这个神经网络，等到收敛之后，从输入层到隐含层的那些权重，便是每一个词的采用Distributed Representation的词向量。比如，上图中单词的Word embedding后的向量便是矩阵 <span class="arithmatex">\(W_{V \times N}\)</span> 的第i行的转置。这样我们就把原本维数为V的词向量变成了维数为N的词向量（N远小于V），并且词向量间保留了一定的相关关系。</p>
 <p>Google的Mikolov在关于Word2Vec的论文中提出了CBOW和Skip-gram两种模型，CBOW适合于数据集较小的情况，而Skip-Gram在大型语料中表现更好。其中CBOW如下图左部分所示，使用围绕目标单词的其他单词（语境）作为输入，在映射层做加权处理后输出目标单词。与CBOW根据语境预测目标单词不同，Skip-gram根据当前单词预测语境，如下图右部分所示。假如我们有一个句子“There is an apple on the table”作为训练数据，CBOW的输入为（is,an,on,the），输出为apple。而Skip-gram的输入为apple，输出为（is,an,on,the）。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/cbow-skipgram.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/cbow-skipgram.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/cbow-skipgram.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/cbow-skipgram.png"></a></center></p>
 <h2 id="cbow">CBOW<a class="headerlink" href="#cbow" title="Permanent link">&para;</a></h2>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/cbow-net.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/cbow-net.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/cbow-net.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/cbow-net.png"></a></center></p>
 <ol>
 <li>输入层：上下文单词的 One-Hot 编码词向量，V 为词汇表单词个数，C 为上下文单词个数。以 “There is an apple on the table” 为例，C=4，所以模型输入是（is,an,on,the）4 个单词的 One-Hot 编码词向量。</li>
 <li>初始化一个权重矩阵 <span class="arithmatex">\(W_{V \times N}\)</span>，然后用所有输入的 One-Hot 编码词向量左乘该矩阵，得到维数为 N 的向量 <span class="arithmatex">\(w_1,w_2,...,w_c\)</span>，这里的 N 由自己根据任务需要设置。</li>
@@ -7028,7 +7028,7 @@ var _hmt = _hmt || [];
 </ol>
 <p>在训练前需要定义好损失函数（一般为交叉熵代价函数），采用梯度下降算法更新 <span class="arithmatex">\(W\)</span> 和 <span class="arithmatex">\(W^\prime\)</span>。训练完毕后，输入层的每个单词与矩阵 W 相乘得到的向量就是我们想要的 Distributed Representation 表示的词向量，也叫 word embedding。因为 One-Hot 编码词向量中只有一个元素为 1，其他都为 0，所以第 i 个词向量乘以矩阵 W 后，得到的就是矩阵的第 i 行，所以这个矩阵也叫做 look up table，有了 look up table 就可以免去训练过程，直接查表得到单词的词向量。</p>
 <h2 id="skip-gram">Skip-gram<a class="headerlink" href="#skip-gram" title="Permanent link">&para;</a></h2>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/skip-gram-net.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/skip-gram-net.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/skip-gram-net.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/skip-gram-net.png"></a></center></p>
 <p>Skip-Gram 是给定 input word 来预测上下文，其模型结构如上图所示。它的做法是，将一个词所在的上下文中的词作为输出，而那个词本身作为输入，也就是说，给出一个词，希望预测可能出现的上下文的词。通过在一个大的语料库训练，得到一个从输入层到隐含层的权重模型。“apple”的上下文词是（’there’，’is’，’an’，’on’,’the’,’table’）.那么以apple的One-Hot词向量作为输入，输出则是（’there’，’is’，’an’，’on’,’the’,’table’）的One-Hot词向量。训练完成后，就得到了每个词到隐含层的每个维度的权重，就是每个词的向量（和CBOW中一样）。</p>
 <p>假如我们有一个句子“There is an apple on the table”。</p>
 <ol>
@@ -7048,7 +7048,7 @@ var _hmt = _hmt || [];
 <li>第一点是从输入层到隐藏层的映射，没有采用原先的与矩阵 W 相乘然后相加求平均的方法，而是直接对所有输入的词向量求和。假设输入的词向量为（0，1，0，0）和（0，0，0，1），那么隐藏层的向量为（0，1，0，1）。</li>
 <li>Hierarchical Softmax 的第二点改进是采用哈夫曼树来替换了原先的从隐藏层到输出层的矩阵 <span class="arithmatex">\(W^\prime\)</span>。哈夫曼树的叶节点个数为词汇表的单词个数 V，一个叶节点代表一个单词，而从根结点到叶节点的路径确定了这个单词最终输出的词向量。</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/hs-huffman.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/word2vec/hs-huffman.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/word2vec/hs-huffman.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/word2vec/hs-huffman.png"></a></center></p>
 <p>具体来说，这棵哈夫曼树除了根节点以外的所有非叶节点中都含有一个由参数 <span class="arithmatex">\(\theta\)</span> 确定的 sigmoid 函数，不同节点的 <span class="arithmatex">\(\theta\)</span> 不一样。训练时隐藏层的向量与这个 sigmoid 函数进行运算，根据结果进行分类，若分类为负类则沿左子树向下传递，编码为 0；若分类为正类则沿右子树向下传递，编码为 1。最终到达叶节点，叶节点的向量即为输出的词向量。</p>
 <h2 id="negative-sampling">Negative Sampling<a class="headerlink" href="#negative-sampling" title="Permanent link">&para;</a></h2>
 <p>尽管哈夫曼树的引入为模型的训练缩短了许多开销，但对于一些不常见、较生僻的词汇，哈夫曼树在计算它们的词向量时仍然需要做大量的运算。</p>
@@ -7238,7 +7238,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../js/katex.js"></script>
       

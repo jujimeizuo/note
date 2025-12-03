@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7028,7 +7028,7 @@ var _hmt = _hmt || [];
 </ol>
 </li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM-1.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/Detect-SLAM-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/Detect-SLAM-1.jpg"></a></center></p>
 <h2 id="related-work">Related Work<a class="headerlink" href="#related-work" title="Permanent link">&para;</a></h2>
 <p><strong>SLAM</strong></p>
 <ul>
@@ -7063,20 +7063,20 @@ var _hmt = _hmt || [];
 <li>在相机位姿估计前，通过特征匹配和匹配点扩展在跟踪线程中传播运动概率，有效地去除动态物体上提取的特征；</li>
 </ol>
 <p>把属于运动物体的特征点的概率称为运动概率。如下图所示，我们根据移动概率将这些关键点区分为四种状态。在匹配点扩展中使用两个高置信度点将移动概率传播到相邻的不匹配点。在每个点通过传播获得移动概率后，我们移除所有动态点，并使用RANSAC过滤其他异常值以进行姿态估计。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM2.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/Detect-SLAM2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/Detect-SLAM2.jpg"></a></center></p>
 <p><strong>Updating Moving Probability</strong></p>
 <p>考虑到检测的延迟和连续帧的时空一致性，只选择关键帧的彩色图像，通过 DNN 对图像进行预处理和前向传播，在跟踪线程中逐帧传播运动概率。一旦获得检测结果，我们将关键帧插入本地地图并更新本地地图中的移动概率。更新在关键帧中找到匹配关键点的 3D 点的概率：</p>
 <div class="arithmatex">\[
 P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \quad \alpha = 0.3
 \]</div>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM3.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/Detect-SLAM3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/Detect-SLAM3.jpg"></a></center></p>
 <p><strong>Moving Probability Propagation</strong></p>
 <p>在跟踪线程中，通过两个操作逐帧估计每个关键点的移动概率：</p>
 <ol>
 <li>特征匹配</li>
 <li>匹配点扩展（移动概率传播）</li>
 </ol>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM-4.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM-4.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/Detect-SLAM-4.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/Detect-SLAM-4.jpg"></a></center></p>
 <h3 id="mapping-objects">Mapping Objects<a class="headerlink" href="#mapping-objects" title="Permanent link">&para;</a></h3>
 <p><strong>Predicting Region ID</strong></p>
 <ul>
@@ -7274,7 +7274,7 @@ P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \qua
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

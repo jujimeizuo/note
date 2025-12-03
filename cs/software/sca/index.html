@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
@@ -8480,10 +8480,10 @@ var _hmt = _hmt || [];
 <p>构件模型定义了什么是构件、构件的依据、如何使用其他构件提供的服务等。將构件的规格说明和具体实现分离，依靠构件实现的具体模式来推导出构件所提供的服务，可以构造一个构件模型。</p>
 </div>
 <p>使用中间件，也可以使构件之间进行更好地通信。如构件之间直接进行通信，当构成系统的构件数量庞大时，其复杂程度迅速提高；如能引人中介层 (中间件)，则可很好地避免构件间复杂的交互。如下图所示：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/middleware.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="中间件" src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/middleware.jpg" /></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/middleware.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="中间件" src="/assets/images/cs/software/sca/middleware.jpg" /></a></center></p>
 <h4 id="_15">青鸟软件构件模型<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>青鸟软件构件模型国内许多学者在构件模型的研究方面做了不少的工作，其中较为突出的是北京大学杨芙清院士等人提出的“青鸟软件构件模型(JBCOM)”。它由外部接又与内部结构两部分组成。如下图所示：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/Bluebird-model.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="青鸟软件构件模型" src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/Bluebird-model.jpg" /></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/Bluebird-model.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="青鸟软件构件模型" src="/assets/images/cs/software/sca/Bluebird-model.jpg" /></a></center></p>
 <p>构件的外部接口是指构件向其复用者提供的基本信息，包括:构件名称、功能描述、对外功能接口，所需服务的构件和参数化属性等。外部接口是构件与外界的一组交互点，说明了构件所提供的那些服务(消息、操作和变量)。</p>
 <p>构件的内部结构包括两方面的内容:内部成员以及内部成员之间的关系。其中，内部成员包括具体成员与虚拟成员，而成员关系包括成员之间的互联，以及内部成员与外部接口之间的互联。</p>
 <h4 id="_16">构件模型的描述方法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
@@ -8579,7 +8579,7 @@ var _hmt = _hmt || [];
 <p>构件库是对构件实施分类和管理的机构。</p>
 <h4 id="_26">构件库的组织<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p>构件库理论研究的重点是构件分类与检索，即研究构件分类策略、组织模式、检索手段和构件相似性分析等。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/organization-diagram.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="构件库的组织关系图" src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/organization-diagram.jpg" /></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/organization-diagram.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="构件库的组织关系图" src="/assets/images/cs/software/sca/organization-diagram.jpg" /></a></center></p>
 <p>领域上构件库满足的条件：</p>
 <ul>
 <li>领域完整性</li>
@@ -8647,7 +8647,7 @@ var _hmt = _hmt || [];
 <li>管理构件间的关系</li>
 </ol>
 <p>构件之间的关系类型包括拥有关系和外部关系。但从关系的表示角度来看，可分为直接链接和间接链接。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/goujian-relationship.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="构件之间的关系类型与表示" src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/goujian-relationship.jpg" /></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/goujian-relationship.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="构件之间的关系类型与表示" src="/assets/images/cs/software/sca/goujian-relationship.jpg" /></a></center></p>
 <h3 id="_33">构件部署<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
 <ul>
 <li>提供构件运行时的配置数据</li>
@@ -8681,7 +8681,7 @@ var _hmt = _hmt || [];
 <li>组成：产品空间、构件与体系结构、生产计划、需求、产品、管理</li>
 </ul>
 <h4 id="_39">领域工程与应用工程的关系<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/domain-engineering-application-engineering.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/domain-engineering-application-engineering.jpg" alt="领域工程与应用工程的关系"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/domain-engineering-application-engineering.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cs/software/sca/domain-engineering-application-engineering.jpg" alt="领域工程与应用工程的关系"></a></center></p>
 <h3 id="_40">领域共性与变化性<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
 <ul>
 <li>变化性的分类</li>
@@ -8778,7 +8778,7 @@ var _hmt = _hmt || [];
 <li>通信：转发器 - 接收器模式、客户机 - 分配器 - 服务器模式、出版者 - 订阅者模式</li>
 </ul>
 <h4 id="_60">设计模式分类<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h4>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/design-pattern-classification.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/design-pattern-classification.jpg" alt="设计模式分类"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/design-pattern-classification.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cs/software/sca/design-pattern-classification.jpg" alt="设计模式分类"></a></center></p>
 <h3 id="_61">体系结构模式<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h3>
 <h4 id="_62">体系结构模式的定义<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h4>
 <ul>
@@ -8843,7 +8843,7 @@ var _hmt = _hmt || [];
 <li>支持模式系统的自我烟花</li>
 </ul>
 <h4 id="_68">模式系统的全局分类视图<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h4>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/global-classification-of-pattern-systems.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cs/software/sca/global-classification-of-pattern-systems.jpg" alt="模式系统的全局分类"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cs/software/sca/global-classification-of-pattern-systems.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cs/software/sca/global-classification-of-pattern-systems.jpg" alt="模式系统的全局分类"></a></center></p>
 <h4 id="_69">面向问题的模式选择步骤<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
 <ol>
 <li>指定和精确地描述问题</li>
@@ -9037,7 +9037,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../js/katex.js"></script>
       

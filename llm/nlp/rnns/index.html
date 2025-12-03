@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../css/tasklist.css">
     
@@ -7070,7 +7070,7 @@ var _hmt = _hmt || [];
 <p>语言模型就是这样的东西：给定一个一句话前面的部分，预测接下来最有可能的一个词是什么。</p>
 <h2 id="_2">基本循环神经网络<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>基本的 RNN，结构由<strong>输入层、一个隐藏层和输出层</strong>组成。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/rnn-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/rnn-structure.png" width="30%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/rnn-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/rnn-structure.png" width="30%"></a></center></p>
 <ul>
 <li>x 是输入向量</li>
 <li>o 是输出向量</li>
@@ -7080,7 +7080,7 @@ var _hmt = _hmt || [];
 </ul>
 <p>循环神经网络的隐藏层的值 s 不仅仅取决于当前这次的输入 x，还取决于上一次隐藏层的值 s。权重矩阵 W 就是隐藏层上一次的值作为这一次的输入的权重。</p>
 <p>将上图的基本 RNN 结构在时间维度展开（RNN 是一个链式结构，每个时间片使用的都是相同的参数）</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/rnn-time-expansion.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/rnn-time-expansion.png" alt="RNN 时间展开图"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/rnn-time-expansion.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/rnn-time-expansion.png" alt="RNN 时间展开图"></a></center></p>
 <p>这个网络在 t 时刻接收到输入 <span class="arithmatex">\(x_t\)</span> 之后，隐藏层的值是 <span class="arithmatex">\(s_t\)</span>，输出层的值是 <span class="arithmatex">\(o_t\)</span>，<strong>关键的是，<span class="arithmatex">\(s_t\)</span> 的值不仅仅取决于 <span class="arithmatex">\(x_t\)</span>，还取决于 <span class="arithmatex">\(s_{t-1}\)</span></strong>。</p>
 <div class="arithmatex">\[
 s_t=f(U * x_t + W * s_{t-1}) \\
@@ -7104,7 +7104,7 @@ o_t&amp;=g(Vs_t)\\
 <p>从上面可以看出，循环神经网络的输出值，是受前面历次输入值 <span class="arithmatex">\(x_t、x_{t-1}、x_{t-2}、x_{t-3}、...\)</span> 影响的，这就是为什么循环神经网络可以往前看任意多个输入值的原因。这样其实不好，因为如果太前面的值和后面的值已经没有关系了，循环神经网络还考虑前面的值的话，就会影响后面值的判断。</p>
 <h2 id="_3">双向循环神经网络<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>对于语言模型来说，很多时候光看前面的词是不够的，比如下面这句话：<strong>我的手机坏了，我打算<u>  </u>一部新的手机</strong>。 我们这个时候就需要双向循环神经网络。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/brnn-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/brnn-structure.png"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/brnn-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/brnn-structure.png"></a></center></p>
 <p>从上图可以看出，双向循环神经网络的隐藏层需要保存两个值，一个 <span class="arithmatex">\(A\)</span> 参与正向计算，另一个值 <span class="arithmatex">\(A^\prime\)</span> 参与反向计算。最终的输出值 <span class="arithmatex">\(y_2\)</span> 取决于 <span class="arithmatex">\(A_2\)</span> 和 <span class="arithmatex">\(A_2^\prime\)</span>。其计算方法为：</p>
 <div class="arithmatex">\[
 y_2=g(VA_2+V\prime A_2^\prime)
@@ -7134,9 +7134,9 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
 <p>3、使用其他结构的RNNs，比如长短时记忆网络（LTSM）和Gated Recurrent Unit（GRU），这是最流行的做法。</p>
 <h2 id="lstm">长短期记忆网络 LSTM<a class="headerlink" href="#lstm" title="Permanent link">&para;</a></h2>
 <p>原始 RNN 的隐藏层只有一个状态，即 h，它对短期的输入非常敏感。那么如果我们再加一个门（gate）机制用于控制特征的流通和损失，即 c，让它来保存长期的状态，这就是<strong>长短时记忆网络（Long Short Term Memory，LSTM）</strong>。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-structure.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-structure.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-structure.png" width="50%"></a></center></p>
 <p>新增加的状态 c，称为单元状态。把 LSTM 按照时间维度展开：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-time-expansion.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-time-expansion.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-time-expansion.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-time-expansion.png" width="50%"></a></center></p>
 <p>可以看到在 t 时刻</p>
 <ul>
 <li><strong>LSTM 的输入有三个</strong>：当前时刻网络的输入值 <span class="arithmatex">\(x_t\)</span>、上一时刻 LSTM 的输出值 <span class="arithmatex">\(h_{t-1}\)</span>、以及上一时刻的记忆单元向量 <span class="arithmatex">\(c_{t-1}\)</span>。</li>
@@ -7146,15 +7146,15 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
 <p>记忆单元 c 在 LSTM 层内部结束工作，不向其他层输出。LSTM 的输出仅有隐藏状态向量 h。</p>
 </blockquote>
 <p>LSTM 的关键是单元状态，即贯穿图表顶部的水平线，有点像传送带。这一部分一般叫做单元状态（cell state），它自始至终存在于 LSTM 的整个链式系统中。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-cell-state.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-cell-state.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-cell-state.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-cell-state.png" width="50%"></a></center></p>
 <p>记忆单元状态的计算公式：<span class="arithmatex">\(公式1：c_{t}=f_{t} \odot c_{t-1}+i_{t} \odot g_t\)</span></p>
 <h3 id="_5">遗忘门<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(f_t\)</span> 叫做<strong>遗忘门</strong>，表示 <span class="arithmatex">\(C_{t-1}\)</span> 的哪些特征被用于计算 <span class="arithmatex">\(C_t\)</span>。<span class="arithmatex">\(f_t\)</span> 是一个向量，向量的每个元素均位于(0~1)范围内。通常我们使用 sigmoid 作为激活函数，sigmoid 的输出是一个介于(0~1)区间内的值，但是当你观察一个训练好的 LSTM 时，你会发现门的值绝大多数都非常接近 0 或 1，其余的值少之又少。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-forget-gate.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-forget-gate.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-forget-gate.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-forget-gate.png" width="50%"></a></center></p>
 <p>遗忘门的计算公式：<span class="arithmatex">\(公式2：f_t=\sigma (x_tW_x^{(f)}+h_{h-1}W_h^{(f)}+b^{(f)})\)</span></p>
 <h3 id="_6">输入门<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(\tilde{C}_t\)</span> 表示单元状态更新值，有输入数据 <span class="arithmatex">\(x_t\)</span> 和隐节点 <span class="arithmatex">\(h_{t-1}\)</span> 经由一个神经网络层得到，单元状态更新值的激活函数通常使用 tanh。<span class="arithmatex">\(i_t\)</span> 叫做输入门，同 <span class="arithmatex">\(f_t\)</span> 一样也是一个元素介于(0~1)区间内的向量，同样由 <span class="arithmatex">\(x_t\)</span> 和 <span class="arithmatex">\(h_{t-1}\)</span> 经由 sigmoid 激活函数计算而成。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-input-gate.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-input-gate.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-input-gate.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-input-gate.png" width="50%"></a></center></p>
 <p>输入门和单元更新值的计算方式：</p>
 <ul>
 <li><span class="arithmatex">\(公式3：i_t=\sigma (x_tW_x^{(i)}+h_{t-1}W_h^{i}+b^{(i)})\)</span></li>
@@ -7162,17 +7162,17 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
 </ul>
 <h3 id="_7">输出门<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>最后，为了计算预测值 <span class="arithmatex">\(\hat{y}_t\)</span> 和生成下个时间片完整的输入，我们需要计算隐节点的输出 <span class="arithmatex">\(h_t\)</span>。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-output-gate.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-output-gate.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-output-gate.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-output-gate.png" width="50%"></a></center></p>
 <p>输出门和隐节点的计算公式</p>
 <ul>
 <li><span class="arithmatex">\(公式5：o_t=\sigma (x_tW_x^{(o)}+h_{t-1}W_h^{(o)}+b^{(o)})\)</span></li>
 <li><span class="arithmatex">\(公式6：h_t=o_t\odot tanh(c_t)\)</span></li>
 </ul>
 <p>我们来看公式2、3、4、5，都是型如 <span class="arithmatex">\(xW_x+hW_h+b\)</span> 的格式，因此可以整合为通过一个式子进行，如下图所示：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-eq.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-eq.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-eq.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-eq.png" width="50%"></a></center></p>
 <p>4 个权重（或偏置）被整合为了 1 个。如此，原本单独执行4 次的仿射变换通过1 次计算即可完成，可以加快计算速度。这是因为矩阵库计算“大矩阵”时通常会更快，而且通过将权重整合到一起管理，源代码也会更简洁。</p>
 <p>假设 <span class="arithmatex">\(W_x、W_h\)</span> 和 <span class="arithmatex">\(b\)</span> 分别包含 4 个权重（或偏置），此时 LSTM 的计算图如下所示。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-compute-graph.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/lstm-compute-graph.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/lstm-compute-graph.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/lstm-compute-graph.png" width="50%"></a></center></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -7190,9 +7190,9 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
 <h2 id="gru">门控循环单元 GRU<a class="headerlink" href="#gru" title="Permanent link">&para;</a></h2>
 <p>LSTM 的参数太多，计算需要很长时间。因此，最近业界又提出了 GRU（Gated RecurrentUnit，门控循环单元）。GRU 保留了 LSTM使用门的理念，但是减少了参数，缩短了计算时间。</p>
 <p>相对于 LSTM 使用隐藏状态和记忆单元两条线，GRU只使用隐藏状态。异同点如下：</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/gru-lstm.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/gru-lstm.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/gru-lstm.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/gru-lstm.png" width="50%"></a></center></p>
 <p>GRU 的计算图如下所示。</p>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/gru-compute-graph.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/nlp/rnn/gru-compute-graph.png" width="50%"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/llm/nlp/rnn/gru-compute-graph.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/nlp/rnn/gru-compute-graph.png" width="50%"></a></center></p>
 <p>GRU 计算图中，<span class="arithmatex">\(\sigma\)</span> 节点和 tanh 节点有专用的权重，节点内部进行仿射变换（“1−”节点输入x，输出1 − x）</p>
 <p><span class="arithmatex">\(公式2.1：z=\sigma(x_t W_x^{(z)}+h_{t-1} W_h^{(z)}+b^{(z)})\)</span></p>
 <p><span class="arithmatex">\(公式2.2：r=\sigma(x_t W_x^{(r)}+h_{t-1} W_h^{(r)}+b^{(r)})\)</span></p>
@@ -7381,7 +7381,7 @@ s_t^\prime=f(U^\prime x_t+W^\prime s_{t+1}^\prime)
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../js/katex.js"></script>
       

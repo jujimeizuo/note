@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7158,20 +7158,20 @@ var _hmt = _hmt || [];
 <li>一种<strong>位置编码</strong>，将每个输入的 5D 坐标映射到更高维度的空间，以便网络可以学习表示具有更高频率的场景内容</li>
 </ul>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-1.jpg"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-1.jpg"></a>
 </center></p>
 <h3 id="nerf-scene-representation">NeRF Scene Representation<a class="headerlink" href="#nerf-scene-representation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>下图中间的函数 <span class="arithmatex">\(F\)</span> 就是图当中的神经网络，用来表示 3D 场景，这种表示方法是<strong>隐式</strong>的</li>
 </ul>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-3.jpg" width="50%"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-3.jpg" width="50%"></a>
 </center></p>
 <ul>
 <li>输入 <span class="arithmatex">\(x,y,z,\theta,\phi\)</span> 是空间位置和观察方向，输出 <span class="arithmatex">\(RGB, \sigma\)</span> 是颜色和密度，就能算出场景中的颜色和密度</li>
 </ul>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-2.jpg"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-2.jpg"></a>
 </center></p>
 <h3 id="volume-rendering">Volume Rendering<a class="headerlink" href="#volume-rendering" title="Permanent link">&para;</a></h3>
 <h4 id="_1">光线的数学表示与光线采样<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
@@ -7226,7 +7226,7 @@ var _hmt = _hmt || [];
 </div>
 <ol>
 <li>分析单点 P 对成像的贡献。P 距离线起点的距离是 t，然后能得出 P 点坐标 <span class="arithmatex">\(\bold{r}(t)\)</span><ul>
-<li><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-10.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-10.png"></a></li>
+<li><a class="glightbox" href="/assets/images/cv/slam/nerf-10.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-10.png"></a></li>
 <li>密度越高，透明度越低，所以单看P点，它的成像颜色就是 <span class="arithmatex">\(c \cdot \sigma\)</span><ul>
 <li><span class="arithmatex">\(\sigma = 1.0\)</span>：完全不透明，它的成像颜色就是<span class="arithmatex">\(c \cdot 1.0=c\)</span></li>
 <li><span class="arithmatex">\(\sigma = 0.0\)</span>：完成透明，它的成像颜色就是<span class="arithmatex">\(c \cdot 0.0=0\)</span></li>
@@ -7286,44 +7286,44 @@ F_\mathcal{\theta} = F_{\mathcal{\theta}}^\prime \gamma
 \mathcal{L} = \sum_{r \in R} \left [ \left \|   \hat{C}_c(r) - C(r)  \right \|_2^2 - \left \| \hat{C}_f(r) - C(r)  \right \|_2^2 \right ] 
 \]</div>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-11.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-11.jpg"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-11.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-11.jpg"></a>
 </center></p>
 <h2 id="pipeline">Pipeline<a class="headerlink" href="#pipeline" title="Permanent link">&para;</a></h2>
 <ol>
 <li>已知相机在不同的位置拍摄了一组目标场景的照片。（如果你是手机拍摄的一段视频可以用 colormap 转）</li>
 </ol>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-4.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-4.png"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-4.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-4.png"></a>
 </center></p>
 <ol start="2">
 <li>从相机中心开始，沿着某个像素方向发射一条光线。(注意：跟真实的相机成像模型光线方向是相反的，但不影响)。</li>
 </ol>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-5.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-5.png"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-5.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-5.png"></a>
 </center></p>
 <ol start="3">
 <li>建立一个神经网络 <span class="arithmatex">\(F\)</span>，输入 <span class="arithmatex">\((x,y,z,\theta,\phi)\)</span> 是空间位置和观察方向，输出 <span class="arithmatex">\(RGB,\sigma\)</span> 颜色和密度。就能算出场景中每个位置的颜色和密度。</li>
 </ol>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-6.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-6.png"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-6.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-6.png"></a>
 </center></p>
 <ol start="4">
 <li>把这条光线上所有位置上的颜色和密度合成，就能算出图上的像素 RGB 值。</li>
 </ol>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-7.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-7.png"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-7.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-7.png"></a>
 </center></p>
 <ol start="5">
 <li>根据输入的一组图像上的像素 RGB 值，生成无数条光线，不断去优化可微函数 <span class="arithmatex">\(F\)</span>。当优化次数足够，就可以直接使用 <span class="arithmatex">\(F\)</span> 算出所有视角下图像的像素 RGB 值。</li>
 </ol>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-8.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-8.png"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-8.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-8.png"></a>
 </center></p>
 <ol start="6">
 <li>知道每个位置的颜色和密度，就用 Marching Cubes 算法转换为三角网三维模型。完成三维重建。</li>
 </ol>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-9.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-9.png"></a>
+<a class="glightbox" href="/assets/images/cv/slam/nerf-9.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/nerf-9.png"></a>
 </center></p>
 <ol start="7">
 <li>求得 <span class="arithmatex">\(F\)</span> 就实现了三维重建，后面都是合成新视角和转换。</li>
@@ -7340,7 +7340,7 @@ F_\mathcal{\theta} = F_{\mathcal{\theta}}^\prime \gamma
 <h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
 <p>下图是 <code>Instant-NGP</code> 实验：</p>
 <p><center>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%"></a>
+<a class="glightbox" href="/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/ngp-own-scenes-fzt-duck.png" width="100%"></a>
 </center></p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7527,7 +7527,7 @@ F_\mathcal{\theta} = F_{\mathcal{\theta}}^\prime \gamma
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

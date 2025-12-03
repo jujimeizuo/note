@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7042,7 +7042,7 @@ var _hmt = _hmt || [];
 <li>隐式场景表征可以用来做相机位姿估计，但都是离线形式，计算量大，iMAP 使用深度图像能达到实时效果</li>
 <li>持续学习会遇到<strong>灾难性遗忘</strong>，iMAP 采用 replay-based approach，将先前的结果缓存</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-1.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/iMAP-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/iMAP-1.jpg"></a></center></p>
 <h3 id="implicit-scene-neural-network">Implicit Scene Neural Network<a class="headerlink" href="#implicit-scene-neural-network" title="Permanent link">&para;</a></h3>
 <ul>
 <li>借鉴 NeRF，用 MLP 将 3D 坐标点转换成颜色和体积密度值：<span class="arithmatex">\(\bold{p}=(x,y,z),F_\theta(\bold{p})=(\bold{c}, \rho)\)</span></li>
@@ -7135,11 +7135,11 @@ P=\frac{1}{\left | s \right | } \sum_{(u,v) \in s} (\frac{\left | D[u,v] - \hat{
 <ul>
 <li>image active sampling：对图像随机选点，选取方法是先分块，先均匀采样，分块求 loss，计算每一块的权重，然后根据权重采样</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-2.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/iMAP-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/iMAP-2.jpg"></a></center></p>
 <ul>
 <li>keyframe active sampling：为了限制联合优化的计算复杂度，每次迭代只选三个关键帧。同上，也是计算 loss 在分配权重</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-3.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/iMAP-3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/iMAP-3.jpg"></a></center></p>
 </li>
 </ul>
 <h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
@@ -7326,7 +7326,7 @@ P=\frac{1}{\left | s \right | } \sum_{(u,v) \in s} (\frac{\left | D[u,v] - \hat{
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

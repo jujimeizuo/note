@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7008,7 +7008,7 @@ var _hmt = _hmt || [];
 <p>SLAM3R 是一个仅使用 RGB 视频作为输入的实时稠密三维重建系统。SLAM3R 执行隐式相机定位，并更专注稠密场景映射。该系统通过前馈神经网络无缝集成局部三维重建（图像到点 I2P）和全局坐标配准（局部到全局网络 L2W）。保持 20+ FPS 的同时，重建质量可达到离线方法相近的水平。</p>
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h2>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/slam3r-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/slam3r-1.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/slam3r-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/slam3r-1.jpg"></a></center></p>
 <h3 id="i2p-network">I2P Network<a class="headerlink" href="#i2p-network" title="Permanent link">&para;</a></h3>
 <ul>
 <li>通过滑动窗口来处理来自输入视频流的短片段，然后提取局部的 3D 几何信息；</li>
@@ -7017,7 +7017,7 @@ var _hmt = _hmt || [];
 <li>decoder 部分，DUSt3R 使用标准的 cross attention，而 I2P 使用 multi-view cross attention（将多个视角下得到的 token 都进行 cross attention，使用最大池化聚合特征，网络结构不变，只是引入更多的数据流一起运算）；</li>
 <li>训练和 DUSt3R 一样，用 GT scene point 与估算的 pointmap 求 loss</li>
 </ul>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/slam3r-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/slam3r-2.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/slam3r-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/slam3r-2.jpg"></a></center></p>
 <h3 id="l2w-network">L2W Network<a class="headerlink" href="#l2w-network" title="Permanent link">&para;</a></h3>
 <ul>
 <li>与 I2P 网络类似，不同之处在于 L2W 利用多个已配准的关键帧（统称为场景帧）作为全局参考，通过采样机制保存在一个 buffer 中；</li>
@@ -7208,7 +7208,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

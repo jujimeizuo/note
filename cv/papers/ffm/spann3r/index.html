@@ -58,11 +58,11 @@
     
       <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="../../../../assets/jbmono/jetbrainsmono.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
       <link rel="stylesheet" href="../../../../css/tasklist.css">
     
@@ -7024,11 +7024,11 @@ var _hmt = _hmt || [];
 <div class="admonition success">
 <p class="admonition-title">解决方案</p>
 <p>Spann3R 管理一个外部空间记忆，该记忆学习跟踪所有先前相关的 3D 信息，并查询 这个空间记忆来预测下一帧的 3D 结构。并且与 DUSt3R 不同的是，Spann3R 能够预测在全局坐标系中表达的每幅图像的点云图，从而消除基于优化的全局对齐的需求。50 FPS！
-<center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/spann3r-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/spann3r-1.jpg"></a></center></p>
+<center><a class="glightbox" href="/assets/images/cv/slam/spann3r-1.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/spann3r-1.jpg"></a></center></p>
 </div>
 <h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h2>
 <h3 id="network-architecture">Network Architecture<a class="headerlink" href="#network-architecture" title="Permanent link">&para;</a></h3>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/spann3r-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/spann3r-2.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/spann3r-2.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/spann3r-2.jpg"></a></center></p>
 <ul>
 <li>相比于 DUSt3R，Spann3R 多了一个内存编码器和两个 MLP head。</li>
 <li><strong>Feature encoding</strong>：每次前向传播中，将当前帧 <span class="arithmatex">\(I_t\)</span> 和上一个查询 <span class="arithmatex">\(f_{t-1}^Q\)</span> 作为输入，用 ViT 将其编码为视觉特征 <span class="arithmatex">\(f_t^I\)</span>。其中 <span class="arithmatex">\(f_{t-1}^Q\)</span> 用于记忆中检索特征，以输出融合特征 <span class="arithmatex">\(f_{t-1}^G\)</span>。</li>
@@ -7041,7 +7041,7 @@ var _hmt = _hmt || [];
 <li><strong>Memory encoding</strong>：将几何特征 <span class="arithmatex">\(f_{t-1}^H\)</span>、视觉特征 <span class="arithmatex">\(f_{t-1}^I\)</span> 和预测点图 <span class="arithmatex">\(X_{t-1}\)</span> 进行编码得到内存键值特征 <span class="arithmatex">\(f_{t-1}^K, f_{t-1}^V\)</span>。由于内存键值特征同时包含几何特征和视觉特征的信息，所以能基于外观和距离进行内存读取。</li>
 </ul>
 <h3 id="spatial-memory">Spatial Memory<a class="headerlink" href="#spatial-memory" title="Permanent link">&para;</a></h3>
-<p><center><a class="glightbox" href="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/spann3r-3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/spann3r-3.jpg"></a></center></p>
+<p><center><a class="glightbox" href="/assets/images/cv/slam/spann3r-3.jpg" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/cv/slam/spann3r-3.jpg"></a></center></p>
 <ul>
 <li>由一个密集的 working memory 、一个稀疏的 long-term memory 以及从 memory 中提取特征的记忆查询机制组成</li>
 <li><strong>Memory query</strong>：Spatial Memory 存储所有的 key <span class="arithmatex">\(f^K\)</span> 和 value <span class="arithmatex">\(f^V\)</span>。为了计算融合特征 <span class="arithmatex">\(f_{t-1}^G\)</span>，使用 <span class="arithmatex">\(f_{t-1}^Q\)</span> 应用于交叉注意力，<span class="arithmatex">\(f_{t-1}^G = A_{t-1}f^V + f_{t-1}^Q\)</span>。其中 <span class="arithmatex">\(A_{t-1} = \mathrm{Softmax}(\frac{f_{t-1}^Q(f_K)^\top}{\sqrt{C}})\)</span> 是一个 attention map。</li>
@@ -7235,7 +7235,7 @@ var _hmt = _hmt || [];
     
       <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       
