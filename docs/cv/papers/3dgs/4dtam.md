@@ -19,7 +19,7 @@ comment: true
 > 提出第一种 4D 跟踪与映射的方法，通过可微渲染联合优化执行相机定位和非刚性表面重建。通过联合优化场景几何形状、外观、动态以及相机自身运动，从带有深度测量值或预测的彩色图像在线流中捕捉 4D scene。
 > 1. 引入一种基于高斯表面基元的 SLAM 方法，更有效地利用深度信号，从而实现精确的表面重建；
 > 对非刚性变形进行建模，采用由 MLP 表示的变形场，引入新颖的相机位姿估计技术以及有助于时空重建的表面正则化项；
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4dtam-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/4dtam-1.jpg"></center>
 
 
 ## Method

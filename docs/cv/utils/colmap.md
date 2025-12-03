@@ -78,11 +78,11 @@ sudo ninja install
 colmap gui
 ```
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/utils/colmap-1.jpg"></center>
+<center><img src="/assets/images/cv/utils/colmap-1.jpg"></center>
 
 - 点击 `Reconstruction > Automatic Reconstruction` 进行一系列基本设置后，输出的结果会写在 `workspace folder` 中（如果图像在 `path/to/project/images` 中，那么就应该选择 `path/to/project` 作为`workspace`）
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/utils/colmap-2.jpg"></center>
+<center><img src="/assets/images/cv/utils/colmap-2.jpg"></center>
 
 - 运行 `Automatic Reconstruction` 后，文件夹生成为
 

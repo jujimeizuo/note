@@ -18,7 +18,7 @@ comment: true
 > LoopSplat 以 RGB-D 作为输入，利用 3DGS 子地图和帧到模型跟踪进行 dense mapping。
 > - LoopSplat 在线触发 loop closure，并通过 3DGS 配准直接计算子地图之间的相对回环边约束，与传统的全局到局部点云配准相比，提高了效率和准确性。
 > - 采用一种鲁棒的位姿图优化公式，并对各子地图进行刚性对齐以实现全局一致性。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/loop-splat-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/loop-splat-1.jpg"></center>
 
 
 ## Method

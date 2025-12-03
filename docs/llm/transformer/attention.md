@@ -20,7 +20,7 @@ Encoder-Decoder 框架很好地诠释了机器学习的核心思路：
 - Encoder 又称编码器，它的作用就是『将现实问题转化为数学问题』。
 - Decoder 又称解码器，它的作用就是『求解数学问题，并转化为现实世界的解决方案』。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/encoder-decoder.png"></center>
+<center><img src="/assets/images/llm/transformer/attention/encoder-decoder.png"></center>
 
 关于 Encoder-Decoder：
 
@@ -40,7 +40,7 @@ Encoder-Decoder 框架很好地诠释了机器学习的核心思路：
 
 Seq2Seq（是 Sequence to Sequence 的缩写），字面意思就是输入一个序列，输出另一个序列。这种结构最重要的地方在于输入序列和输出序列的长度可以可变的。例如下图：
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/seq2seq.gif"></center>
+<center><img src="/assets/images/llm/transformer/attention/seq2seq.gif"></center>
 
 如上图：输入了 6 个汉字，输出了 3 个英文单词。输入和输出的长度不同。
 
@@ -65,7 +65,7 @@ Attention 机制最早是在计算机视觉里应用的，随后在 NLP 领域�
 
 如果用图来表达 Attention 的位置大致是下面的样子：
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/attention-in-nlp.png"></center>
+<center><img src="/assets/images/llm/transformer/attention/attention-in-nlp.png"></center>
 
 ### 三大优点
 
@@ -84,11 +84,11 @@ Attention 机制最早是在计算机视觉里应用的，随后在 NLP 领域�
 
 但是，Attention 并不一定要在 Encoder-Decoder 框架下使用的，他是可以脱离 Encoder-Decoder 框架的。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/detach-encoder-decoder.png"></center>
+<center><img src="/assets/images/llm/transformer/attention/detach-encoder-decoder.png"></center>
 
 Attention 原理分为 3 步：
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/attention-step.png"></center>
+<center><img src="/assets/images/llm/transformer/attention/attention-step.png"></center>
 
 1. query 和 key 进行相似度计算，得到权值
 2. 将权值进行归一化，得到直接可用的权重
@@ -98,7 +98,7 @@ Attention 原理分为 3 步：
 
 ## N 种类型
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/transformer/attention/n-types.png"></center>
+<center><img src="/assets/images/llm/transformer/attention/n-types.png"></center>
 
 ### 计算区域
 

@@ -37,7 +37,7 @@ comment: true
     - 高层次：物体识别，场景分析等操作
     - PCL 对点云处理方法给出较为明晰的层次划分，如下图所示：
 
-    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/pcd/pc-processing.png" alt="点云处理方法"></center>
+    <center><img src="/assets/images/cv/pcd/pc-processing.png" alt="点云处理方法"></center>
 
 ### 低层次处理方法
 
@@ -74,7 +74,7 @@ comment: true
 
 前期以传统方法为主，2018 年及以后基于深度学习的配准方法居上。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/pcd/pcr-development-sequence.png" alt="点云配准的发展脉络图"></center>
+<center><img src="/assets/images/cv/pcd/pcr-development-sequence.png" alt="点云配准的发展脉络图"></center>
 
 点云配准可以基于以下 5 个方面学习和进阶：
 

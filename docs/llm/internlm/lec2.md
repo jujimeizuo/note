@@ -47,7 +47,7 @@ comment: true
 python /root/code/InternLM/cli_demo.py
 ```
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/terminal_demo.jpg"></center>
+<center><img src="/assets/images/llm/internlm/terminal_demo.jpg"></center>
 
 ### Web Demo
 
@@ -55,7 +55,7 @@ python /root/code/InternLM/cli_demo.py
 streamlit run /root/code/InternLM/web_demo.py --server.address 127.0.0.1 --server.port 6006
 ```
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/web_demo.jpg"></center>
+<center><img src="/assets/images/llm/internlm/web_demo.jpg"></center>
 
 ## Lagent 智能体工具调用
 
@@ -284,7 +284,7 @@ streamlit run /root/code/lagent/examples/react_web_demo.py --server.address 127.
 ```
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/lagent_demo.jpg"></center>
+<center><img src="/assets/images/llm/internlm/lagent_demo.jpg"></center>
 
 
 ## 浦语·灵笔图文理解创作
@@ -296,9 +296,9 @@ python /root/code/InternLM-XComposer/examples/web_demo.py  \
     --port 6006
 ```
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/lingbi-1.jpg"></center>
+<center><img src="/assets/images/llm/internlm/lingbi-1.jpg"></center>
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/lingbi-2.jpg"></center>
+<center><img src="/assets/images/llm/internlm/lingbi-2.jpg"></center>
 
 
 
@@ -306,13 +306,13 @@ python /root/code/InternLM-XComposer/examples/web_demo.py  \
 
 1. 使用 InternLM-Chat-7B 模型生成 300 字的小故事（需截图）。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_2_1.jpg"></center>
+<center><img src="/assets/images/llm/internlm/hw_2_1.jpg"></center>
 
 
 
 2. 熟悉 hugging face 下载功能，使用 `huggingface_hub` python 包，下载 `InternLM-20B` 的 config.json 文件到本地（需截图下载过程）。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_2_2.jpg"></center>
+<center><img src="/assets/images/llm/internlm/hw_2_2.jpg"></center>
 
 
 3. 完成浦语·灵笔的图文理解及创作部署（需截图）

@@ -85,19 +85,19 @@ comment: true
 
 - 持续批处理
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/turbomind_1.jpg"></center>
+<center><img src="/assets/images/llm/internlm/turbomind_1.jpg"></center>
 
 - 有状态的推理
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/turbomind_2.jpg"></center>
+<center><img src="/assets/images/llm/internlm/turbomind_2.jpg"></center>
 
 - 高性能 cuda Kernel
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/turbomind_3.jpg"></center>
+<center><img src="/assets/images/llm/internlm/turbomind_3.jpg"></center>
 
 - Blocked k/v cache
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/turbmind_4.jpg"></center>
+<center><img src="/assets/images/llm/internlm/turbmind_4.jpg"></center>
 
 
 #### 推理服务 api server
@@ -281,14 +281,14 @@ lmdeploy convert  internlm-chat-7b ./quant_output \
 
 - 本地对话
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_5_1.jpg"></center>
+<center><img src="/assets/images/llm/internlm/hw_5_1.jpg"></center>
 
 
 - Web Gradio
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_5_2.jpg"></center>
+<center><img src="/assets/images/llm/internlm/hw_5_2.jpg"></center>
 
 
 - API 服务
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_5_3.jpg"></center>
+<center><img src="/assets/images/llm/internlm/hw_5_3.jpg"></center>

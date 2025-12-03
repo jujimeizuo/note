@@ -17,7 +17,7 @@ comment: true
     - $\mathbf{x}=P\mathbf{X}=[\mathbf{p}_1 \ \mathbf{p}_2 \ \mathbf{p}_3 \ \mathbf{p}_4] \begin{bmatrix} X \\ Y \\ 0 \\ 1 \end{bmatrix}=[\mathbf{p}_1 \ \mathbf{p}_2 \mathbf{p}_4]\begin{bmatrix} X \\ Y \\ 1 \end{bmatrix}$
     - 即$\mathbf{x}=H\mathbf{x}_\pi$。在透视影像下，一张景物平面与一张图像平面之间最一般的变换是平面射影变换
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/perspective-image.jpg"></center>
+<center><img src="/assets/images/cv/mvg/perspective-image.jpg"></center>
 
 ### 对直线的作用
 
@@ -42,7 +42,7 @@ comment: true
     - 视在轮廓线$\gamma$由图像平面与轮廓生成元的射线的相交确定，因此与图像平面有关
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/cg-ac.jpg"></center>
+<center><img src="/assets/images/cv/mvg/cg-ac.jpg"></center>
 
 ## 射影摄像机对二次曲面的作用
 
@@ -56,7 +56,7 @@ comment: true
 - 3 维空间的物体和摄像机中心确定了一个射线集合，而这些射线与一张平面的交就产生该物体的图像，这个集合通常称为**射线锥**
 - 假设射线锥与两张平面相交，那么所得两幅图像$\mathbf{I}$和$\mathbf{I}^\prime$显然以一个透视映射相关联。因为摄像机有共同的中心，从而由这两个摄像机产生的 3 维空间点$\mathbf{X}$的图像之间的关系：$\mathbf{x}^\prime=P^\prime \mathbf{X}=(K^\prime R^\prime)(KR)^{-1}P \mathbf{X}=(K^\prime R^\prime)(KR)^{-1} \mathbf{x}$，对应的图像点以一个形如$\mathbf{x}^\prime=H\mathbf{x}$的平面单应($3 \times 3$矩阵)相关联，其中$H=(K^\prime R^\prime)(KR)^{-1}$
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/raycone.jpg"></center>
+<center><img src="/assets/images/cv/mvg/raycone.jpg"></center>
 
 ### 移动图像平面
 
@@ -115,7 +115,7 @@ comment: true
     3. 由这六个虚圆点的图像拟合出一条二次曲线$\omega$
     4. 用 Cholesky 分解由$\omega=(KK^\top)^{-1}$计算标定$K$
 
-    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/calibration-device.jpg"></center>
+    <center><img src="/assets/images/cv/mvg/calibration-device.jpg"></center>
 
 - **图像中的正交性**
     - 如果图像点关于$\omega$共轭，即如果$\mathbf{x}_1^\top \omega \mathbf{x}_2 = 0$，那么这两个图像点对应于正交的方向
@@ -176,4 +176,4 @@ $$
     - 关于中心反射其中的一个消影点（例如$\mathbf{v}_1$）得到$\overset{\cdot}{\mathbf{v}}_1$
     - 根据条件：$\overset{\cdot}{\mathbf{v}}_1$的极线过$\mathbf{v}_2, \mathbf{v}_3$来确定$C$的半径
 
-    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/bp-cc.jpg"></center>
+    <center><img src="/assets/images/cv/mvg/bp-cc.jpg"></center>

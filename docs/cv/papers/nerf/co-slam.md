@@ -40,10 +40,10 @@ iMAP 采用 MLP 在接近实时内同时追踪和建图，从而实现了 10 Hz 
     2. Camera Tracking：相机到世界的变换矩阵 T，基于匀速恒定运动模型，然后选取当前帧内的 $N_t$ (1024) 个像素，通过最小化目标函数优化位姿，而目标函数与相机外参有关。
     3. BA：在 Co-SLAM 中，不再需要存储完整的关键帧图像或关键帧选择。相反只存储代表每个关键帧的像素子集（约 5%）。为了进行联合优化，我们从全局关键帧列表中随机抽取 $N_g$ 条射线，以优化场景表示和相机位姿。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Co-SLAM-1.png" alt="Framework of Co-SLAM"></center>
+<center><img src="/assets/images/cv/slam/Co-SLAM-1.png" alt="Framework of Co-SLAM"></center>
 
 
 
 ## Experiments
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Co-SLAM-2.png" alt="Experiments of Co-SLAM"></center>
+<center><img src="/assets/images/cv/slam/Co-SLAM-2.png" alt="Experiments of Co-SLAM"></center>

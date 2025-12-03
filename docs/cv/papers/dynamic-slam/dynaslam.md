@@ -55,7 +55,7 @@ DynaSLAM是可以用于单目，双目，RGB-D的动态SLAM系统，相当于是
 
 ## SYSTEM DESCRIPTION
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-1.png"></center>
+<center><img src="/assets/images/cv/slam/DynaSLAM-1.png"></center>
 
 ### Segmentation of Potentially Dynamic Content using a CNN
 
@@ -74,12 +74,12 @@ DynaSLAM是可以用于单目，双目，RGB-D的动态SLAM系统，相当于是
 - 对于每个关键点，它对应的3D点是 $X$。然后，计算 $x$ 和 $x^\prime$ 反投影之间的夹角，即视差角 $\alpha$。**如果角度大于30度，这个点就有可能被遮挡**，之后就会被忽略。比如在TUM数据集中，如果视差角大于30度，由于视角的不同，静态点就会被视为动态。
 - 计算出关羽深度的**重投影误差：$\Delta z = z_{proj} - z^\prime$**，$z^\prime$ 是当前帧中还有的关键点的深度（测量值）。如果 $\Delta z > \tau_z$，关键点 $x^\prime$ 就会被视为动态物体。为了一个好的精度和召回率，通过最大化 $0.7 * Presion + 0.3 * Recall$，将 $\tau_z$ 定为 0.4m。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-3.png"></center>
+<center><img src="/assets/images/cv/slam/DynaSLAM-3.png"></center>
 
 - 有一些被标记为动态的关键点位于移动物体的边界上，这可能会引起问题。为了避免这种情况，可以使用深度图像所提供的信息。**如果一个关键点被设定为动态，但在深度图中它周围的区域有很大的方差，我们就把标签改为静态。**
 - 为了找到动态物体的所有像素点，在深度图的动态点周围进行区域增长算法。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-2.png"></center>
+<center><img src="/assets/images/cv/slam/DynaSLAM-2.png"></center>
 
 
 **这两种方法呈现出功能上的互补，所以最终取了两个Mask的并集，被分割的动态部分被从当前帧和地图中移除：**
@@ -103,7 +103,7 @@ DynaSLAM是可以用于单目，双目，RGB-D的动态SLAM系统，相当于是
 
 从下面的图5可以看到大部分被分割的部分已经用来自静态背景的信息进行了适当的补全。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/DynaSLAM-4.png"></center>
+<center><img src="/assets/images/cv/slam/DynaSLAM-4.png"></center>
 
 ## EXPERIMENTAL RESULTS
 

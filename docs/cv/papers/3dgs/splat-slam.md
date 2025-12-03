@@ -16,7 +16,7 @@ comment: true
 
 > [!Done] 解决方案
 > 首个采用密集 3D 高斯地图表示的仅 RGB SLAM 系统，通过动态适应关键帧位姿和深度更新，主动使 3D 高斯地图变形，从而利用 globally optimized tracking 的所有优势。此外，用单目深度估计器细化不准确区域的深度更新，可进一步提高 3D 重建的准确性。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/splat-slam-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/splat-slam-1.jpg"></center>
 
 
 ## Method

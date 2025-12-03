@@ -9,7 +9,7 @@
     - Github: https://github.com/waymo-research/waymo-open-dataset
     - Home：https://waymo.com/open
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/dataset/waymo-1.gif"></center>
+<center><img src="/assets/images/cv/dataset/waymo-1.gif"></center>
 
 
 ## 数据集格式

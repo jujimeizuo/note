@@ -17,7 +17,7 @@ comment: true
 > 提出 ColorGS，整合空间自适应颜色编码和增强形变建模。
 > 1. 引入彩色高斯基元，采用具有可学习颜色参数的动态锚点来自适应地编码空间变化的纹理，提升在复杂光照和组织相似性条件下的颜色表现力；
 > 2. 设计增强型变模型（EDM），将时间感知高斯基函数与可学习的时间无关形变相结合，能捕捉局部组织形变和全局运动一致性。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/colorgs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/colorgs-1.jpg"></center>
 
 
 ## Method

@@ -16,7 +16,7 @@ comment: true
 2. 提取最快速的深度学习角点（证明局部信息足以提取角点）。
 3. 提出了一种损失函数 mNRE 来提取图像中的局部不变量，并改进了角点提取中的峰值损失。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/LET-NET-1.jpg" alt="Pipeline of LET-NET"></center>
+<center><img src="/assets/images/cv/slam/LET-NET-1.jpg" alt="Pipeline of LET-NET"></center>
 
 
 ## Experiments

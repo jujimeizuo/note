@@ -26,6 +26,6 @@ comment: true
 
 1. 复现课程知识库助手搭建过程 (截图)
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/hw_3_1.jpg"></center>
+<center><img src="/assets/images/llm/internlm/hw_3_1.jpg"></center>
 
 2. 选择一个垂直领域，收集该领域的专业资料构建专业知识库，并搭建专业问答助手，并在 OpenXLab 上成功部署（截图，并提供应用地址）

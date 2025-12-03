@@ -21,11 +21,11 @@ comment: true
 >     - 3D Reconstruction(Photo Collection)
 >     - Inferring Unseen Structure
 > - **该方法具有一个状态的循环模型，能随着每次新的观察不断更新其状态表示，读取信息以预测视图的 3D 属性（点图、相机参数）**
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/cut3r-1.jpg"></center>
 
 ## Method
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-2.jpg"></center>
+<center><img src="/assets/images/cv/slam/cut3r-2.jpg"></center>
 
 ### State-Input Interaction Mechanism
 
@@ -43,7 +43,7 @@ comment: true
 
 ### Querying the State with Unseen Views
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/cut3r-3.jpg"></center>
+<center><img src="/assets/images/cv/slam/cut3r-3.jpg"></center>
 
 - 使用虚拟相机作为查询，从状态中提取信息。虚拟相机的内参和外参表示为一个光线映射 R，对每个像素处光线的起点和方向进行编码 $F_r = Encoder_r(\blod{R})$，后续步骤和上面相同
 - 用相同的 head 将 $F_r^\prime$ 解析为显式表示

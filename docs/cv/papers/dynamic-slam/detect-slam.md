@@ -18,7 +18,7 @@ counter: true
 	2. 构建语义地图
 	3. 提高目标检测性能
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM-1.jpg"></center>
+<center><img src="/assets/images/cv/slam/Detect-SLAM-1.jpg"></center>
 
 ## Related Work
 
@@ -58,7 +58,7 @@ Detect-SLAM 以 ORB-SLAM2 为基，与之相比，包括三个新流程：
 
 把属于运动物体的特征点的概率称为运动概率。如下图所示，我们根据移动概率将这些关键点区分为四种状态。在匹配点扩展中使用两个高置信度点将移动概率传播到相邻的不匹配点。在每个点通过传播获得移动概率后，我们移除所有动态点，并使用RANSAC过滤其他异常值以进行姿态估计。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM2.jpg"></center>
+<center><img src="/assets/images/cv/slam/Detect-SLAM2.jpg"></center>
 
 
 **Updating Moving Probability**
@@ -69,7 +69,7 @@ $$
 P_t(X^i)=(1-\alpha)P_{t-1}(X^i)+\alpha S_t(X^i) \quad \quad 本文中选择 \quad \alpha = 0.3
 $$
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM3.jpg"></center>
+<center><img src="/assets/images/cv/slam/Detect-SLAM3.jpg"></center>
 
 
 **Moving Probability Propagation**
@@ -80,7 +80,7 @@ $$
 2. 匹配点扩展（移动概率传播）
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/Detect-SLAM-4.jpg"></center>
+<center><img src="/assets/images/cv/slam/Detect-SLAM-4.jpg"></center>
 
 ### Mapping Objects
 

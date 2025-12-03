@@ -18,7 +18,7 @@ comment: true
 > 1. Chunking:将长序列分块，分别丢给 VGGT 处理；
 > 2. Chunk-wise Aligning：利用 VGGT 自带的置信度地图对相邻块进行 SIM(3) 配准
 > 3. Loop Closure + Global Optimization：查找非邻接回环，做全局优化消除累积漂移。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/VGGT-Long-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/VGGT-Long-1.jpg"></center>
 
 ## Method
 

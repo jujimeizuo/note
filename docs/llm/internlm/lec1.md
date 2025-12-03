@@ -15,25 +15,25 @@ comment: true
 - 中量级：InternLM-20B
 - 重量级：InternLM-123B
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/20B-pf.jpg"></center>
+<center><img src="/assets/images/llm/internlm/20B-pf.jpg"></center>
 
 ## 从模型到应用
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/model2app.jpg"></center>
+<center><img src="/assets/images/llm/internlm/model2app.jpg"></center>
 
 ## 书生·浦语大模型全链路开源开放体系
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/structure.jpg"></center>
+<center><img src="/assets/images/llm/internlm/structure.jpg"></center>
 
 ### 数据：书生·万卷
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/data.jpg"></center>
+<center><img src="/assets/images/llm/internlm/data.jpg"></center>
 
 具体查看 [openDataLab](https://opendatalab.com/)。
 
 ### 预训练：InternLM-Train
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/internlm-train.jpg"></center>
+<center><img src="/assets/images/llm/internlm/internlm-train.jpg"></center>
 
 ### 微调：XTuner
 
@@ -46,22 +46,22 @@ comment: true
 >       - 使用场景：让模型学会理解和遵循各种指令，或者注入少许领域知识
 >       - 训练数据：高质量的对话、问答数据
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/xtuner.jpg"></center>
+<center><img src="/assets/images/llm/internlm/xtuner.jpg"></center>
 
 ### 评测：OpenCompass
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/opencompass.jpg"></center>
+<center><img src="/assets/images/llm/internlm/opencompass.jpg"></center>
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/opencompass-structure.jpg"></center>
+<center><img src="/assets/images/llm/internlm/opencompass-structure.jpg"></center>
 
 ### 部署：LMDeploy
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/lmdeploy.jpg"></center>
+<center><img src="/assets/images/llm/internlm/lmdeploy.jpg"></center>
 
 
 ### 应用：Lagent、AgentLego
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/lagent.jpg"></center>
+<center><img src="/assets/images/llm/internlm/lagent.jpg"></center>
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/internlm/agentlego.jpg"></center>
+<center><img src="/assets/images/llm/internlm/agentlego.jpg"></center>

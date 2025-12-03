@@ -14,7 +14,7 @@ comment: true
 > [!Question] 问题导向
 > VGGT 在处理涉及运动和变形的复杂动态场景时性能显著下降。
 > 多任务 4D 重建中的一个核心挑战是任务之间的固有冲突：精确的相机位姿估计需要抑制动态区域，而几何重建则需要对这些区域进行建模；
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/page-4d-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/page-4d-1.jpg"></center>
 
 
 > [!Done] 解决方案
@@ -31,7 +31,7 @@ comment: true
     - 动态环境下，用于几何估计的公式对于目标帧和参考帧之间所有未遮挡的像素对有效，而用于位姿估计的公式仅适用于未遮挡像素的静态子集；
     - 动态环境下，相机位姿估计易受到动态运动的影响，但可以从该运动中获取线索。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/page-4d-2.jpg"></center>
+<center><img src="/assets/images/cv/slam/page-4d-2.jpg"></center>
 
 ### PAGE-4D
 
@@ -46,7 +46,7 @@ comment: true
 > - 该 Mask 被用于第二段中用于分离动态和静态内容，以进行位姿和几何估计，第二段包含 10 层（每层一个 Dynamics-Aware Global Attention Block 和一个 Frame Attention Block）；
 > 第三段和第一段相同，包含 6 层。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/page-4d-3.jpg"></center>
+<center><img src="/assets/images/cv/slam/page-4d-3.jpg"></center>
 
 #### Dynamic Mask Prediction
 

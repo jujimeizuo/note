@@ -17,8 +17,8 @@ comment: true
 > [!Done] 解决方案
 > 1. 融合 3D Gaussians 生命周期的变形建模，有效捕捉常规变形和不可逆变形；
 > 2. 自适应运动层次策略，用于区分场景中的静态和可变性区域，减少通过变形场的 3D Gaussians 数量，提高渲染速度；
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/eh-surgs-2.jpg"></center>
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/eh-surgs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/eh-surgs-2.jpg"></center>
+> <center><img src="/assets/images/cv/slam/eh-surgs-1.jpg"></center>
 
 
 ## Method

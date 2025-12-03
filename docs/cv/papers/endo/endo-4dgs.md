@@ -16,7 +16,7 @@ comment: true
 
 > [!Done] 解决方案
 > 4DGS 捕捉时间动态，Depth-Anything 生成伪深度图并作为几何先验；同时提出置信度引导学习，解决单目深度估计位姿估计不准确问题，并通过表面法向约束和深度正则化来增强深度引导的重建效果。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/endo-4dgs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/endo-4dgs-1.jpg"></center>
 
 
 ## Method

@@ -16,7 +16,7 @@ comment: true
 
 > [!Done] 解决方案
 > VGGT 一次输入数百张图片，1s 之内预测所有图片的三维属性（相机的内参外参、pointmap、深度图、3D 点跟踪），且不需要额外的后端优化。和 dust3r 不同（各个结果是额外推理得到），训练的是一个针对 4 个 task 的统一 loss。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/vggt-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/vggt-1.jpg"></center>
 
 ## Method
 

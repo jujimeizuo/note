@@ -26,7 +26,7 @@ comment: true
 
 ## Method
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/instant-splat-1.jpg"></center>
+<center><img src="/assets/images/cv/slam/instant-splat-1.jpg"></center>
 
 ### GS 参数和相机位姿的自监督联合优化
 

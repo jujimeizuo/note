@@ -18,7 +18,7 @@ comment: true
 > - 为最大限度减少高斯数量的冗余，评估每个高斯对形变的影响，提出形变感知剪枝方法（DAP）；
 > 为降低高斯属性的冗余，通过对高斯属性的维度进行剪枝，简化非关键区域的纹理和光照表示（GAP）；
 > 通过 4D 特征场压缩，解决了用于动态场景建模的 4D 神经时空编码器因分辨率而导致的特征场冗余问题（FFC）；
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/lgs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/lgs-1.jpg"></center>
 
 
 ## Method

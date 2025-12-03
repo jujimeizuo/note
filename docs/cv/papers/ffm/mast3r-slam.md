@@ -17,7 +17,7 @@ comment: true
 
 > [!Done] 解决方案
 > 提出一个即插即用的单目 SLAM 系统，除了假设相机中心，不假设其他（固定或相机参数模型等等），能获取全局统一的 pose 和密集的几何形状。(15 FPS)
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-slam-2.jpg"></center>
+> <center><img src="/assets/images/cv/slam/mast3r-slam-2.jpg"></center>
 
 ## Method
 
@@ -37,7 +37,7 @@ comment: true
 - 由于 Pointmap 预测中深度不一致的问题，导致跟踪误差会降低 KeyFrame Pointmap 的质量，影响后端处理，所以将最终的预测 fusion 成一个单一的 Pointmap（平均所有预测），会降低误差。
 - **基于光线误差的跟踪优化**：**利用在中心相机假设下 Pointmap 预测可转化为光线的特性**，计算方向射线误差。同时防止系统在纯旋转情况下退化，添加一个相机中心距离差异的小权重误差项，如下图所示。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/mast3r-slam-1.jpg"></center>
+<center><img src="/assets/images/cv/slam/mast3r-slam-1.jpg"></center>
 
 - **Pointmap Fusion 策略**：系统不仅对几何估计进行滤波，还对光线定义的相机模型进行滤波，求解相对变换 $T_{kf}$ 后通过滑动加权平均滤波器更新 Pointmap。利用滤波融合所有帧的信息，无需在后端对所有相机位姿进行优化。
 

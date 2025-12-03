@@ -18,7 +18,7 @@ comment: true
 - 隐式场景表征可以用来做相机位姿估计，但都是离线形式，计算量大，iMAP 使用深度图像能达到实时效果
 - 持续学习会遇到**灾难性遗忘**，iMAP 采用 replay-based approach，将先前的结果缓存
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-1.jpg"></center>
+<center><img src="/assets/images/cv/slam/iMAP-1.jpg"></center>
 
 ### Implicit Scene Neural Network
 
@@ -106,11 +106,11 @@ $$
 - 为了减少计算复杂度，iMAP 分别对像素点、关键帧都做了 Active Sampling
     - image active sampling：对图像随机选点，选取方法是先分块，先均匀采样，分块求 loss，计算每一块的权重，然后根据权重采样
 
-    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-2.jpg"></center>
+    <center><img src="/assets/images/cv/slam/iMAP-2.jpg"></center>
 
     - keyframe active sampling：为了限制联合优化的计算复杂度，每次迭代只选三个关键帧。同上，也是计算 loss 在分配权重
 
-    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/iMAP-3.jpg"></center>
+    <center><img src="/assets/images/cv/slam/iMAP-3.jpg"></center>
 
 ## Experiments
 

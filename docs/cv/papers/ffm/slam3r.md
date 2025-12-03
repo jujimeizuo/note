@@ -19,7 +19,7 @@ comment: true
 
 ## Method
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/slam3r-1.jpg"></center>
+<center><img src="/assets/images/cv/slam/slam3r-1.jpg"></center>
 
 ### I2P Network
 
@@ -29,7 +29,7 @@ comment: true
 - decoder 部分，DUSt3R 使用标准的 cross attention，而 I2P 使用 multi-view cross attention（将多个视角下得到的 token 都进行 cross attention，使用最大池化聚合特征，网络结构不变，只是引入更多的数据流一起运算）；
 - 训练和 DUSt3R 一样，用 GT scene point 与估算的 pointmap 求 loss
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/slam3r-2.jpg"></center>
+<center><img src="/assets/images/cv/slam/slam3r-2.jpg"></center>
 
 ### L2W Network
 

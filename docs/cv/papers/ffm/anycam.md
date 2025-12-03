@@ -18,8 +18,8 @@ comment: true
 > 1. 采用 Transformer 架构提取深度和光流等特征，端到端地学习视频帧序列的相对相机位姿和内参；
 > 2. 采用不确定性建模，可以处理原始视频且无标签，自动过滤动态物体；
 > 3. 提出一个轻量级的测试时轨迹优化方法，以避免长期漂移。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/AnyCam-1.jpg"></center>
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/AnyCam-2.jpg"></center>
+> <center><img src="/assets/images/cv/slam/AnyCam-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/AnyCam-2.jpg"></center>
 
 
 ## Method

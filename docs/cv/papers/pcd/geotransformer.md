@@ -47,7 +47,7 @@ GeoTransformer 提到在高离群值比情况下，RANSAC 方法收敛缓慢且�
 >[!Info]+ GeoTransformer 整体框架
 > GeoTransformer 的步骤分为**特征提取**、**超点匹配**、**点云匹配**和**局部全局配准**四个过程。
 > 
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/pcd/GeoTransformer-1.jpg"></center>
+> <center><img src="/assets/images/cv/pcd/GeoTransformer-1.jpg"></center>
 
 #### 特征提取
 
@@ -67,9 +67,9 @@ $$e_{i,j}=\frac{(x_iW^Q)(x_jW^K+r_{i,j}W^R)^\top}{\sqrt{d_t}}$$
 
 几何自注意力机制中 更多考虑了几何关系，比如引入超点特征向量$x_i,x_j$，几何结构嵌入向量$r_{i,j}$，作为注意力机制中的$Q、K、R$的权重系数，通过几何关系来影响注意力机制。
 
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/pcd/GeoTransformer-2.jpg"></center>
+> <center><img src="/assets/images/cv/pcd/GeoTransformer-2.jpg"></center>
 
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/pcd/GeoTransformer-3.jpg"></center>
+> <center><img src="/assets/images/cv/pcd/GeoTransformer-3.jpg"></center>
 
 $$r_{i,j} = r_{i,j}^DW^D + \max_x\{r_{i,j,x}^AW^A\}$$
 

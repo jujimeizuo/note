@@ -24,13 +24,13 @@ comment: true
     - 为避免过度关注边缘区域并反复优化相同区域，我们首先使用基于覆盖的策略优化整个场景，然后多次使用基于重叠的策略，重复多次
 - **场景表示和图形渲染**
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/NID-SLAM-1.jpg"></center>
+<center><img src="/assets/images/cv/slam/NID-SLAM-1.jpg"></center>
 
 
 ## Experiments
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/NID-SLAM-2.jpg"></center>
+<center><img src="/assets/images/cv/slam/NID-SLAM-2.jpg"></center>
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/NID-SLAM-3.jpg"></center>
+<center><img src="/assets/images/cv/slam/NID-SLAM-3.jpg"></center>
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/NID-SLAM-4.jpg"></center>
+<center><img src="/assets/images/cv/slam/NID-SLAM-4.jpg"></center>

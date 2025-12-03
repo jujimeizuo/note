@@ -18,7 +18,7 @@ comment: true
 > 利用不确定性感知几何映射来处理动态环境。
 > 1. 整合深度和不确定性信息；
 > 2. 引入一种不确定性地图，由一个浅层 MLP 和 DINOv2 features 预测得出，用于引导动态物体的去除，增强了 DBA 和高斯地图优化；
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/wildgs-slam-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/wildgs-slam-1.jpg"></center>
 
 
 ## Method
@@ -58,7 +58,7 @@ $$
 
 ## Experiments
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/wildgs-slam-2.jpg"></center>
+<center><img src="/assets/images/cv/slam/wildgs-slam-2.jpg"></center>
 
 ## Reference
 

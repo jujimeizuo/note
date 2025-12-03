@@ -18,7 +18,7 @@ comment: true
 > - 提出 ST-Endo4DGS，利用无偏的 4DGS 基元来建模动态内窥镜场景的时空体积，这些基元由具有灵活 4D 旋转的各向异性椭圆参数化；
 > - 扩展了球谐函数来表示随时间变化的外观，实现对光照和视角变化的真实适应；
 > - 一种新的内窥镜法向对齐约束（ENAC）通过将渲染的法向与深度衍生的几何结构对齐，进一步提高几何保真度。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/st-endo4dgs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/st-endo4dgs-1.jpg"></center>
 
 
 ## Method

@@ -19,7 +19,7 @@ comment: true
 > 2. 引入区域感知增强模块，在高斯层面建模子区域的亮度；
 > 3. 引入空间感知调整模块，学习视角一致的亮度调整；
 > 4. 采用曝光控制损失，将不良曝光下的外观恢复到正常水平，实现适应光照的优化。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/endo-4dgx-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/endo-4dgx-1.jpg"></center>
 
 
 ## Method

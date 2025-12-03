@@ -29,5 +29,5 @@ comment: true
 
 ## 结果展示
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/dw2025winter/dw2025w-1-1.png"></center>
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/llm/dw2025winter/dw2025w-1-2.png"></center>
+<center><img src="/assets/images/llm/dw2025winter/dw2025w-1-1.png"></center>
+<center><img src="/assets/images/llm/dw2025winter/dw2025w-1-2.png"></center>

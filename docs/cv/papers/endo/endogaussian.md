@@ -21,8 +21,8 @@ comment: true
 > 1. 设计了一个基础模型驱动的初始化（FMI）模块，从多个视觉基础模型（VFMs）中提取三维线索，快速构建用于高斯初始化的初步场景结构；
 > 2. 设计了时空高斯跟踪（SGT），利用 HexPlane 高效地对场景动态进行建模，结合 Multi-Head Decoder 来跟踪高斯的属性变化；
 > 3. 为了提高对大变形场景的动态建模能力，整合了运动感知帧合成（MFS），自适应地合成新帧作为额外的训练约束。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/endogaussian-1.jpg"></center>
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/endogaussian-2.jpg"></center>
+> <center><img src="/assets/images/cv/slam/endogaussian-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/endogaussian-2.jpg"></center>
 
 
 ## Method
@@ -46,7 +46,7 @@ comment: true
 > 因为形变场缺乏足够的约束，而用于快速组织运动的训练图像数量稀少，无法提供充分的训练约束。
 
 > [!Done] 利用视频插值模型从现有训练图像中合成额外帧的，增强形变场约束
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/endogaussian-3.jpg"></center>
+> <center><img src="/assets/images/cv/slam/endogaussian-3.jpg"></center>
 
 - 为了在组织运动较大的时间间隔处合成图像，首先估计每个间隔的运动程度；
 - 对高斯分布和形变场 $T_p$ 次迭代的预训练后，计算每个间隔的偏移量 $\{u_i \in R^{N \times 3} |u_i = \Delta G_i^\mu - \Delta G_{i-1}^\mu, i \in [1, T]\}$，并计算 $u_i$ 的范数，对所有间隔的结果进行归一化，$\{p_i | p_i = C \sum_j \| u_i^j \| / N, i \in [1, T]\}$；

@@ -17,7 +17,7 @@ comment: true
 > [!Done] 解决方案
 > 1. 整合点云初始化将 3DGS 引入手术场景；
 > 2. 提出灵活形变建模方案（FDM），用于单个高斯层面学习组织形变动态，能通过高效的表示方式对表面形变进行建模，从而实现实时渲染性能。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/deform3dgs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/deform3dgs-1.jpg"></center>
 
 
 ## Method

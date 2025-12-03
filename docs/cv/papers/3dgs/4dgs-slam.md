@@ -19,7 +19,7 @@ comment: true
 > 1. 提出一种新颖的 4DGS Pipeline，用于在高斯辐射场中定位相机位姿并表示动态场景；
 > 2. 将基元分为静态和动态高斯，并引入稀疏控制点以及一个多层感知器（MLP）来对动态高斯的运动进行建模；
 > 3. 一种 2D 光流渲染算法，提高 4D 高斯场的性能。分别从动态 GS 和一个预训练模型估计 2D 光流图，然后将其作为约束来学习动态高斯的运动。
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/4dgs-slam-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/4dgs-slam-1.jpg"></center>
 
 
 ## Method

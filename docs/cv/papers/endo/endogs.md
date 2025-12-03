@@ -17,7 +17,7 @@ comment: true
 > [!Done] 解决方案
 > 1. 首个基于 Gaussian Splatting 的内窥镜组织重建方法；
 > 2. 结合静态 Gaussian 和时空形变参数来表示动态手术场景，并利用深度引导的监督和时空权重掩码来处理单目优化中的工具遮挡问题，同时引入表面对齐正则化项，以更好地捕捉组织几何结构；
-> <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/endogs-1.jpg"></center>
+> <center><img src="/assets/images/cv/slam/endogs-1.jpg"></center>
 
 
 ## Method

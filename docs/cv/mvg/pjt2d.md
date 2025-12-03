@@ -50,7 +50,7 @@ comment: True
 
     $IP^2$的点和线分别为中过原点的射线和平面$x_1x_2$平面上的射线表示理想点，而$x_1x_2$平面表示$I_{\infty}$。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/model.jpg" alt="射影平面模型"></center>
+<center><img src="/assets/images/cv/mvg/model.jpg" alt="射影平面模型"></center>
 
 - **结论4（对偶原理）**
 
@@ -90,7 +90,7 @@ comment: True
 
     上面定义的二次曲线$C$更确切地应称为点二次曲线，因为它定义的是点的方程。同时这种**对偶**（或线）二次曲线也由一个$3 \times 3$矩阵表示，我们把它记为$C^*$，二次曲线$C$的切线$l$满足$l^{\top}C^*l=0$。其中$C^*$表示为$C$的伴随矩阵。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/dual-conics.jpg" alt="二次曲线及其对偶二次曲线"></center>
+<center><img src="/assets/images/cv/mvg/dual-conics.jpg" alt="二次曲线及其对偶二次曲线"></center>
 
 - **退化二次曲线**
 
@@ -355,7 +355,7 @@ $$
 - **不变量的数目**：与函数无关的不变量数等于或大于配置的自由度数减去变换的自由度数。
 
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/summerize-transform.jpg" alt="变换的种类"></center>
+<center><img src="/assets/images/cv/mvg/summerize-transform.jpg" alt="变换的种类"></center>
 
 ## 1D 射影几何和交比
 
@@ -430,7 +430,7 @@ $$
 
 &ensp;&ensp;在平面的像中，一但无穷远直线的像得到辨认，就有可能对原平面进行仿射测量。如下图所示，直接把已辨认的$I_\infty$变换到它的规范位置$I_\infty = (0,0,1)^{\top}$。把实现此变换的(射影)矩阵应用于图像中的每一点以达到对图像进行仿射矫正的目的，即变换之后，仿射测量可以直接在矫正过的图像中进行。
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/affine-correction.jpg" alt="射影平面模型"></center>
+<center><img src="/assets/images/cv/mvg/affine-correction.jpg" alt="射影平面模型"></center>
 
 &ensp;&ensp;如果无穷远直线的像是$\mathbf{I} = (l_1, l_2, l_3)^{\top}$，假定$l_3 \ne 0$，那么把$\mathbf{l}$映射回$l_\infty = (0,0,1)^{\top}$的一个合适的射影点交换是
 
@@ -556,7 +556,7 @@ $$
 
 - **点$\mathbf{x}$关于二次曲线$C$的极线$\mathbf{l}=C\mathbf{x}$交于两点。$C$的过这两点的两条切线相交于$\mathbf{x}$。**
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/pole-pole.jpg" alt="极点-极线-1"></center>
+<center><img src="/assets/images/cv/mvg/pole-pole.jpg" alt="极点-极线-1"></center>
 
 - 如果点$x$在$C$上，则它的极线就是二次曲线过$x$点的切线。
 
@@ -585,7 +585,7 @@ $$
 
 &ensp;&ensp;在欧氏几何中，(非退化或真)二次曲线可以分为双曲线、椭圆和抛物线。在射影几何中三种类型的二次曲线与$l_\infty$的关系如下图所示：
 
-<center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/acoc.jpg" alt="二次曲线的仿射分类"></center>
+<center><img src="/assets/images/cv/mvg/acoc.jpg" alt="二次曲线的仿射分类"></center>
 
 上图中二次曲线是$(a)$椭圆，$(b)$抛物线，$(c)$双曲线。它们与$l_{\infty}$的关系 :$(a)$无实交点、$(b)$相切($2$点接触)、$(c)$有$2$个实交点。
 
@@ -598,7 +598,7 @@ $$
 > &ensp;&ensp;而$\mathbf{e}$和$\lambda \mathbf{e}$表示同一点。类似的推导可以用于不动直线，它对应于$H^{\top}$的特征矢量。
 
 ??? example "平面射影变换的不动点与直线"
-    <center><img src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/mvg/fpasl.jpg" alt="平面射影变换的不动点与直线"></center>
+    <center><img src="/assets/images/cv/mvg/fpasl.jpg" alt="平面射影变换的不动点与直线"></center>
 
     这里有三个不动点和过这三点的不动直线.不动直线和不动点可能是复的：从代数的角度来说，不动点是点变换$(\mathbf{x}^\prime=H\mathbf{x})$的特征矢量$\mathbf{e}_i$，而不动直线是线变换$(\mathbf{l}^\prime =H^{-T}\mathbf{l})$的特征矢量。注意，不动直线不是点点不动：在变换下，直线上的一点被映为其上的另一点，只有不动点才映为自身。
 
