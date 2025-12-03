@@ -250,24 +250,24 @@ nav:
         - WildGS-SLAM: cv/papers/3dgs/wildgs-slam.md
         - 4DTAM: cv/papers/3dgs/4dtam.md
         - 4DGS-SLAM: cv/papers/3dgs/4dgs-slam.md
-      - DUSt3R 系列:
-        - cv/papers/dust3r/index.md
-        - DUSt3R: cv/papers/dust3r/dust3r.md
-        - MASt3R: cv/papers/dust3r/mast3r.md
-        - Spann3R: cv/papers/dust3r/spann3r.md
-        - Fast3R: cv/papers/dust3r/fast3r.md
-        - InstantSplat: cv/papers/dust3r/instant-splat.md
-        - MonST3R: cv/papers/dust3r/monst3r.md
-        - DAS3R: cv/papers/dust3r/das3r.md
-        - CUT3R: cv/papers/dust3r/cut3r.md
-        - Easi3R: cv/papers/dust3r/easi3r.md
-        - MASt3R-SLAM: cv/papers/dust3r/mast3r-slam.md
-        - SLAM3R: cv/papers/dust3r/slam3r.md
-        - VGGT: cv/papers/dust3r/vggt.md
-        - VGGT-SLAM: cv/papers/dust3r/vggt-slam.md
-        - VGGT-Long: cv/papers/dust3r/vggt-long.md
-        - AnyCam: cv/papers/dust3r/anycam.md
-        - PAGE-4D: cv/papers/dust3r/page-4d.md
+      - FFM 系列:
+        - cv/papers/ffm/index.md
+        - DUSt3R: cv/papers/ffm/dust3r.md
+        - MASt3R: cv/papers/ffm/mast3r.md
+        - Spann3R: cv/papers/ffm/spann3r.md
+        - Fast3R: cv/papers/ffm/fast3r.md
+        - InstantSplat: cv/papers/ffm/instant-splat.md
+        - MonST3R: cv/papers/ffm/monst3r.md
+        - DAS3R: cv/papers/ffm/das3r.md
+        - CUT3R: cv/papers/ffm/cut3r.md
+        - Easi3R: cv/papers/ffm/easi3r.md
+        - MASt3R-SLAM: cv/papers/ffm/mast3r-slam.md
+        - SLAM3R: cv/papers/ffm/slam3r.md
+        - VGGT: cv/papers/ffm/vggt.md
+        - VGGT-SLAM: cv/papers/ffm/vggt-slam.md
+        - VGGT-Long: cv/papers/ffm/vggt-long.md
+        - AnyCam: cv/papers/ffm/anycam.md
+        - PAGE-4D: cv/papers/ffm/page-4d.md
       - Endo 系列:
         - cv/papers/endo/index.md
         - EndoscopyDepthEstimation: cv/papers/endo/endoscopy-depth-estimation.md

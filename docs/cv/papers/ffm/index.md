@@ -1,7 +1,7 @@
 # DUSt3R 系列
 
 !!! abstract
-    DUSt3R 系列相关内容
+    Feed Forward Model 系列相关内容
 
 ## Table of Contents
 
