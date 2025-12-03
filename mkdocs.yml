@@ -80,7 +80,7 @@ extra:
 
 extra_css:
   - assets/utils/katex.min.css
-  - assets/jbmono/jetbrainsmono.css
+  - assets/maple/maplemono.css
   - assets/lxgw/lxgwscreen.css
   - css/tasklist.css
   - css/custom.css
