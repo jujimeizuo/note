@@ -1,4 +1,7 @@
 - "2025":
+  - "2025-12-03":
+    - refactor: CV > Papers > DUSt3R -> CV > Papers > FFM
+    - pageupdate: CV > Papers > NeRF > NeRF-Evaluation -> CV > Papers > Others > Reconstruction Evaluation
   - "2025-12-02":
     - refactor: A major update!!!
     - newpage:
@@ -54,7 +57,7 @@
         text: CV > Papers > Endo > ST-Endo4DGS
         href: /cv/papers/endo/st-endo4dgs/
   - "2025-10-20":
-    - refactor: others/EndoscopyDepthEstimation > Endo/EndoscopyDepthEstimation
+    - pageupdate: CV > Papers > Others > EndoscopyDepthEstimation > CV > Papers > Endo > EndoscopyDepthEstimation
   - "2025-08-27":
     - newpage:
         text: CV > Papers > DUSt3R > AnyCam
@@ -180,23 +183,23 @@
         href: /cv/papers/3dgs/3dgs/
   - "2024-9-19":
     - newpage:
-        text: CV > Papers > NERF > NeRF
+        text: CV > Papers > NeRF > NeRF
         href: /cv/papers/nerf/nerf/
   - "2024-9-18":
     - newpage:
-        text: CV > Papers > NERF > NeRF-Evaluation
+        text: CV > Papers > NeRF > NeRF-Evaluation
         href: /cv/papers/nerf/nerf-evaluation/
   - "2024-8-8":
     - newpage:
-        text: CV > Papers > NERF > NICE-SLAM
+        text: CV > Papers > NeRF > NICE-SLAM
         href: /cv/papers/nerf/nice-slam/
   - "2024-8-3":
     - newpage:
-        text: CV > Papers > NERF > iMAP
+        text: CV > Papers > NeRF > iMAP
         href: /cv/papers/nerf/imap/
   - "2024-7-29":
     - newpage:
-        text: CV > Papers > NERF > NID-SLAM
+        text: CV > Papers > NeRF > NID-SLAM
         href: /cv/papers/nerf/nid-slam/
   - "2024-7-8":
     - newpage:
@@ -208,11 +211,11 @@
         href: /cv/papers/others/deepv2d/
   - "2024-6-21":
     - newpage:
-        text: CV > Papers > NERF > Co-SLAM
+        text: CV > Papers > NeRF > Co-SLAM
         href: /cv/papers/nerf/co-slam/
   - "2024-6-6":
     - newpage:
-        text: CV > Papers > NERF > DDN-SLAM
+        text: CV > Papers > NeRF > DDN-SLAM
         href: /cv/papers/nerf/ddn-slam/
   - "2024-5-29":
     - newpage:
