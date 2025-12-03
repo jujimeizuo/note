@@ -79,9 +79,9 @@ extra:
     property: G-CY82KV89G2
 
 extra_css:
-  - https://cdn.jujimeizuo.cn/utils/katex.min.css
-  - https://cdn.jujimeizuo.cn/jbmono/jetbrainsmono.css
-  - https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css
+  - https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css
+  - https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/jbmono/jetbrainsmono.css
+  - https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/lxgw/lxgwscreen.css
   - css/tasklist.css
   - css/custom.css
   - css/card.css
@@ -91,7 +91,7 @@ extra_css:
   - css/svg_extra.css
 
 extra_javascript:
-  - https://cdn.jujimeizuo.cn/utils/katex.min.js
+  - https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/utils/katex.min.css
   - js/katex.js
 
 plugins:

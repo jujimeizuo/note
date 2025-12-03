@@ -438,7 +438,7 @@ $$
 
 ### Office Scenes
 <center>
-<video src="https://cdn.jujimeizuo.cn/note/cv/slam/3dgs-office-scenes-train.mp4" controls width="100%">
+<video src="https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/3dgs-office-scenes-train.mp4" controls width="100%">
 </video>
 </center>
 

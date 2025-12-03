@@ -3,3 +3,4 @@
 .obsidian
 __pycache__/
 site/
+.ignored-commits
