@@ -96,25 +96,19 @@ extra_javascript:
 
 plugins:
   - rss:
-      enabled: !ENV [FULL, false]
+      enabled: false # !ENV [FULL, false]
   - search
   - callouts
   - glightbox:
       width: 80%
-  # - encryptcontent:  # now just for one page, need to be improved
-  #     title_prefix: "🔒 "
-  #     remember_password: True 
-  #     default_expire_dalay: 48
-  #     decryption_failure_message: '密码错误'
-  #     encrypted_something:
-  #       mkdocs-encrypted-toc: [nav, class]
   - git-revision-date-localized:
       enabled: !ENV [FULL, false]
       type: datetime
       timezone: Asia/Shanghai
       locale: zh
+      enable_creation_date: true
       enable_git_follow: true
-      # ignored_commits_file: .ignored-commits
+      ignored_commits_file: .ignored-commits
       exclude:
         - index.md
   - changelog
@@ -123,6 +117,14 @@ plugins:
   - heti:
       enabled: !ENV [FULL, false]
       disable_serve: false
+  # - encryptcontent:  # now just for one page, need to be improved
+  #     title_prefix: "🔒 "
+  #     remember_password: True 
+  #     default_expire_dalay: 48
+  #     decryption_failure_message: '密码错误'
+  #     encrypted_something:
+  #       mkdocs-encrypted-toc: [nav, class]
+  
 
 hooks:
   - hooks/theme_override.py

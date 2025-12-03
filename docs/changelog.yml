@@ -1,7 +1,8 @@
 - "2025":
   - "2025-12-03":
+    - function: update git-revision-date-localized-plugin
     - function: font | JetBrains Mono -> Maple Mono NF
-    - refactor: Links Update
+    - function: Links Update
     - refactor: CV > Papers > DUSt3R -> CV > Papers > FFM
     - pageupdate: CV > Papers > NeRF > NeRF-Evaluation -> CV > Papers > Others > Reconstruction Evaluation
   - "2025-12-02":
