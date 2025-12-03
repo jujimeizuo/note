@@ -25,7 +25,6 @@
     - [NID-SLAM](nerf/nid-slam/)
     - [iMAP](nerf/imap/)
     - [NICE-SLAM](nerf/nice-slam/)
-    - [NeRF-Evaluation](nerf/nerf-evaluation/)
 
 - 3DGS 系列
     - [3DGS](3dgs/3dgs/)
@@ -72,6 +71,7 @@
     - [ORB-SLAM2](others/orbslam2/)
     - [LET-NET](others/let-net/)
     - [DeepV2D](others/deepv2d/)
+    - [Reconstruction Evaluation](others/reconstruction-evaluation/)
 
 ## Reference
 

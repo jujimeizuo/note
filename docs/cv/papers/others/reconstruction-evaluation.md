@@ -3,10 +3,10 @@ counter: true
 comment: true
 ---
 
-# NeRF-Evaluation
+# Reconstruction-Evaluation
 
 > [!abstract]
-> <center>**NeRF 常用评价指标**</center>
+> <center>**Reconstruction 常用评价指标**</center>
 > ![](https://cdn.jsdelivr.net/gh/jujimeizuo/note@gh-pages/assets/images/cv/slam/nerf-evaluation-1.jpg)
 
 ## PSNR

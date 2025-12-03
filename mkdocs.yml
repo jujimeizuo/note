@@ -234,7 +234,6 @@ nav:
       - NeRF 系列:
         - cv/papers/nerf/index.md
         - NeRF: cv/papers/nerf/nerf.md
-        - NeRF-Evaluation: cv/papers/nerf/nerf-evaluation.md
         - iMAP: cv/papers/nerf/imap.md
         - Co-SLAM: cv/papers/nerf/co-slam.md
         - NICE-SLAM: cv/papers/nerf/nice-slam.md
@@ -290,6 +289,7 @@ nav:
         - ORB-SLAM2: cv/papers/others/orbslam2.md
         - LET-NET: cv/papers/others/let-net.md
         - DeepV2D: cv/papers/others/deepv2d.md
+        - Reconstruction Evaluation: cv/papers/others/reconstruction-evaluation.md
     - 工具相关:
       - cv/utils/index.md
       - COLMAP: cv/utils/colmap.md

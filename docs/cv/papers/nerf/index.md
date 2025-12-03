@@ -6,7 +6,6 @@
 ## Table of Contents
 
 - [NeRF](nerf/)
-- [NeRF-Evaluation](nerf-evaluation/)
 - [iMAP](imap/)
 - [NICE-SLAM](nice-slam/)
 - [Co-SLAM](co-slam/)
