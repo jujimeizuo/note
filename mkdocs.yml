@@ -282,6 +282,7 @@ nav:
         - EH-SurGS: cv/papers/endo/eh-surgs.md
         - Endo-4DGX: cv/papers/endo/endo-4dgx.md
         - ColorGS: cv/papers/endo/colorgs.md
+        - D4Recon: cv/papers/endo/d4recon.md
       - 杂项:
         - cv/papers/others/index.md
         - 视觉 SLAM 十四讲:

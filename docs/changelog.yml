@@ -1,4 +1,8 @@
 - "2025":
+  - "2025-12-04":
+    - newpage:
+        text: CV > Papers > Endo > D4Recon
+        href: /cv/papers/endo/d4recon/
   - "2025-12-03":
     - function: update git-revision-date-localized-plugin
     - function: font | JetBrains Mono -> Maple Mono NF

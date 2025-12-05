@@ -5,7 +5,7 @@
 
 ## Table of Contents
 
-- Point Cloud 系列
+- PointCloud 系列
     - [GeoTransformer](pcd/geotransformer/)
     - [MAC](pcd/mac/)
     - [FastMAC](pcd/fastmac/)
@@ -65,6 +65,7 @@
     - [EH-SurGS](endo/eh-surgs/)
     - [Endo-4DGX](endo/endo-4dgx/)
     - [ColorGS](endo/colorgs/)
+    - [D$^4$Recon](endo/d4recon/)
 
 - 杂项
     - [SLAM 14 讲](others/vslam14/)
