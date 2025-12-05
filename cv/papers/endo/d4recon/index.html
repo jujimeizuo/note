@@ -4,29 +4,30 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cv/papers/ffm/" rel="canonical"/>
-<link href="../3dgs/4dgs-slam/" rel="prev"/>
-<link href="dust3r/" rel="next"/>
-<link href="../../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
-<link href="../../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://note.jujimeizuo.cn/cv/papers/endo/d4recon/" rel="canonical"/>
+<link href="../colorgs/" rel="prev"/>
+<link href="../../others/" rel="next"/>
+<link href="../../../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
+<link href="../../../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>DUSt3R 系列 - 狙击美佐的笔记本</title>
-<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../assets/utils/katex.min.css" rel="stylesheet"/>
-<link href="../../../assets/maple/maplemono.css" rel="stylesheet"/>
-<link href="../../../assets/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/card.css" rel="stylesheet"/>
-<link href="../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
-<link href="../../../css/toc_extra.css" rel="stylesheet"/>
-<link href="../../../css/svg_extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<title>D4Recon - 狙击美佐的笔记本</title>
+<link href="../../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../css/counter.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../assets/utils/katex.min.css" rel="stylesheet"/>
+<link href="../../../../assets/maple/maplemono.css" rel="stylesheet"/>
+<link href="../../../../assets/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../../css/card.css" rel="stylesheet"/>
+<link href="../../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="../../../../css/toc_extra.css" rel="stylesheet"/>
+<link href="../../../../css/svg_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -39,7 +40,7 @@ var _hmt = _hmt || [];
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CY82KV89G2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-CY82KV89G2",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CY82KV89G2"></script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -48,13 +49,13 @@ var _hmt = _hmt || [];
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#dust3r">
+<a class="md-skip" href="#d4recon">
           跳转至
         </a>
 </div>
@@ -62,7 +63,7 @@ var _hmt = _hmt || [];
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -78,7 +79,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              DUSt3R 系列
+              D4Recon
             
           </span>
 </div>
@@ -100,7 +101,7 @@ var _hmt = _hmt || [];
 </a>
 </div>
 </div>
-<script src="../../../js/scheme.js" type="text/javascript"></script>
+<script src="../../../../js/scheme.js" type="text/javascript"></script>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
@@ -148,7 +149,7 @@ var _hmt = _hmt || [];
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../../../..">
           
   
   
@@ -159,7 +160,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../cs/">
+<a class="md-tabs__link" href="../../../../cs/">
           
   
   
@@ -170,7 +171,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../">
+<a class="md-tabs__link" href="../../../">
           
   
   
@@ -181,7 +182,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../llm/">
+<a class="md-tabs__link" href="../../../../llm/">
           
   
   
@@ -192,7 +193,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../mb/">
+<a class="md-tabs__link" href="../../../../mb/">
           
   
   
@@ -203,7 +204,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../utils/">
+<a class="md-tabs__link" href="../../../../utils/">
           
   
   
@@ -223,7 +224,7 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"></path></svg>
 </a>
     狙击美佐的笔记本
@@ -242,7 +243,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     Home
     
@@ -259,7 +260,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../changelog/">
+<a class="md-nav__link" href="../../../../changelog/">
 <span class="md-ellipsis">
     更新记录
     
@@ -267,7 +268,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../links/">
+<a class="md-nav__link" href="../../../../links/">
 <span class="md-ellipsis">
     友链
     
@@ -280,7 +281,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/">
+<a class="md-nav__link" href="../../../../cs/">
 <span class="md-ellipsis">
     Computer Science
     
@@ -299,7 +300,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/pl/">
+<a class="md-nav__link" href="../../../../cs/pl/">
 <span class="md-ellipsis">
     编程语言
     
@@ -318,7 +319,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/">
+<a class="md-nav__link" href="../../../../cs/pl/c_cpp/">
 <span class="md-ellipsis">
     C/C++
     
@@ -335,7 +336,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/basic/">
+<a class="md-nav__link" href="../../../../cs/pl/c_cpp/basic/">
 <span class="md-ellipsis">
     C++ 系统知识
     
@@ -343,7 +344,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/stl/">
+<a class="md-nav__link" href="../../../../cs/pl/c_cpp/stl/">
 <span class="md-ellipsis">
     C++ STL
     
@@ -351,7 +352,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../../cs/pl/c_cpp/function/">
 <span class="md-ellipsis">
     C++ 各种函数使用
     
@@ -364,7 +365,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/pl/python/">
+<a class="md-nav__link" href="../../../../cs/pl/python/">
 <span class="md-ellipsis">
     Python
     
@@ -381,7 +382,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/python/basic/">
+<a class="md-nav__link" href="../../../../cs/pl/python/basic/">
 <span class="md-ellipsis">
     Python 语法基础
     
@@ -389,7 +390,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/python/numpy/">
+<a class="md-nav__link" href="../../../../cs/pl/python/numpy/">
 <span class="md-ellipsis">
     Numpy 科学计算库
     
@@ -397,7 +398,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/python/virtual/">
+<a class="md-nav__link" href="../../../../cs/pl/python/virtual/">
 <span class="md-ellipsis">
     Python 虚拟环境
     
@@ -410,7 +411,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/pl/go/">
+<a class="md-nav__link" href="../../../../cs/pl/go/">
 <span class="md-ellipsis">
     Go
     
@@ -427,7 +428,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/go/basic/">
+<a class="md-nav__link" href="../../../../cs/pl/go/basic/">
 <span class="md-ellipsis">
     Go 语法基础
     
@@ -435,7 +436,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/go/gin/">
+<a class="md-nav__link" href="../../../../cs/pl/go/gin/">
 <span class="md-ellipsis">
     gin框架 (TODO)
     
@@ -448,7 +449,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/pl/java/">
+<a class="md-nav__link" href="../../../../cs/pl/java/">
 <span class="md-ellipsis">
     Java
     
@@ -465,7 +466,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/java/basic/">
+<a class="md-nav__link" href="../../../../cs/pl/java/basic/">
 <span class="md-ellipsis">
     Java 系统知识
     
@@ -473,7 +474,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/pl/java/springboot/">
+<a class="md-nav__link" href="../../../../cs/pl/java/springboot/">
 <span class="md-ellipsis">
     SpringBoot
     
@@ -502,7 +503,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../../cs/algorithm/basic-ds/">
 <span class="md-ellipsis">
     基础数据结构
     
@@ -510,7 +511,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../../cs/algorithm/design-analysis/">
 <span class="md-ellipsis">
     算法设计与分析
     
@@ -536,7 +537,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/ai/mode-recognition/">
+<a class="md-nav__link" href="../../../../cs/ai/mode-recognition/">
 <span class="md-ellipsis">
     模式识别
     
@@ -544,7 +545,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/ai/ml/">
+<a class="md-nav__link" href="../../../../cs/ai/ml/">
 <span class="md-ellipsis">
     机器学习
     
@@ -552,7 +553,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/ai/dl/">
+<a class="md-nav__link" href="../../../../cs/ai/dl/">
 <span class="md-ellipsis">
     神经网络与深度学习
     
@@ -565,7 +566,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/hpc/">
+<a class="md-nav__link" href="../../../../cs/hpc/">
 <span class="md-ellipsis">
     高性能计算
     
@@ -582,7 +583,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/outline/">
+<a class="md-nav__link" href="../../../../cs/hpc/outline/">
 <span class="md-ellipsis">
     概论
     
@@ -590,7 +591,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/vectorizecompute/">
+<a class="md-nav__link" href="../../../../cs/hpc/vectorizecompute/">
 <span class="md-ellipsis">
     向量化计算
     
@@ -598,7 +599,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/gpu/">
+<a class="md-nav__link" href="../../../../cs/hpc/gpu/">
 <span class="md-ellipsis">
     GPU 编程
     
@@ -606,7 +607,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/mpi/">
+<a class="md-nav__link" href="../../../../cs/hpc/mpi/">
 <span class="md-ellipsis">
     MPI 基础
     
@@ -614,7 +615,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/hpc/openmp/">
+<a class="md-nav__link" href="../../../../cs/hpc/openmp/">
 <span class="md-ellipsis">
     OpenMP 基础
     
@@ -627,7 +628,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cs/software/">
+<a class="md-nav__link" href="../../../../cs/software/">
 <span class="md-ellipsis">
     软件相关
     
@@ -644,7 +645,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/design-pattern/">
+<a class="md-nav__link" href="../../../../cs/software/design-pattern/">
 <span class="md-ellipsis">
     设计模式
     
@@ -652,7 +653,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/sca/">
+<a class="md-nav__link" href="../../../../cs/software/sca/">
 <span class="md-ellipsis">
     软件构件与体系结构
     
@@ -660,7 +661,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/compa/">
+<a class="md-nav__link" href="../../../../cs/software/compa/">
 <span class="md-ellipsis">
     COM 原理与应用
     
@@ -668,7 +669,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/software/piaserver/">
+<a class="md-nav__link" href="../../../../cs/software/piaserver/">
 <span class="md-ellipsis">
     应用服务器原理与实现
     
@@ -694,7 +695,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/mysql/">
+<a class="md-nav__link" href="../../../../cs/db/mysql/">
 <span class="md-ellipsis">
     MySQL
     
@@ -717,7 +718,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/redis/datatype/">
+<a class="md-nav__link" href="../../../../cs/db/redis/datatype/">
 <span class="md-ellipsis">
     数据类型
     
@@ -725,7 +726,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/redis/cjh/">
+<a class="md-nav__link" href="../../../../cs/db/redis/cjh/">
 <span class="md-ellipsis">
     持久化
     
@@ -733,7 +734,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/db/redis/work/">
+<a class="md-nav__link" href="../../../../cs/db/redis/work/">
 <span class="md-ellipsis">
     事务
     
@@ -762,7 +763,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cs/others/regex/">
+<a class="md-nav__link" href="../../../../cs/others/regex/">
 <span class="md-ellipsis">
     RegEx 正则表达式
     
@@ -778,7 +779,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
+<a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     3DV
     
@@ -797,7 +798,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../mvg/">
+<a class="md-nav__link" href="../../../mvg/">
 <span class="md-ellipsis">
     多视图几何
     
@@ -814,7 +815,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/pjt2d/">
+<a class="md-nav__link" href="../../../mvg/pjt2d/">
 <span class="md-ellipsis">
     2D 射影几何和变换
     
@@ -822,7 +823,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/pjt3d/">
+<a class="md-nav__link" href="../../../mvg/pjt3d/">
 <span class="md-ellipsis">
     3D 射影几何和变换
     
@@ -830,7 +831,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/est2d/">
+<a class="md-nav__link" href="../../../mvg/est2d/">
 <span class="md-ellipsis">
     估计——2D 射影变换
     
@@ -838,7 +839,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/eval/">
+<a class="md-nav__link" href="../../../mvg/eval/">
 <span class="md-ellipsis">
     算法评价和误差分析
     
@@ -846,7 +847,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/camera-model/">
+<a class="md-nav__link" href="../../../mvg/camera-model/">
 <span class="md-ellipsis">
     摄像机模型
     
@@ -854,7 +855,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/calc-p/">
+<a class="md-nav__link" href="../../../mvg/calc-p/">
 <span class="md-ellipsis">
     计算摄像机矩阵 P
     
@@ -862,7 +863,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/one-vg/">
+<a class="md-nav__link" href="../../../mvg/one-vg/">
 <span class="md-ellipsis">
     单视图几何
     
@@ -870,7 +871,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/ag-fm/">
+<a class="md-nav__link" href="../../../mvg/ag-fm/">
 <span class="md-ellipsis">
     对极几何和基本矩阵
     
@@ -878,7 +879,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../mvg/3dr-camera-structure/">
+<a class="md-nav__link" href="../../../mvg/3dr-camera-structure/">
 <span class="md-ellipsis">
     摄像机和结构的 3D 重构
     
@@ -891,7 +892,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pcd/">
+<a class="md-nav__link" href="../../../pcd/">
 <span class="md-ellipsis">
     三维点云
     
@@ -910,7 +911,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pcd/pcr/">
+<a class="md-nav__link" href="../../../pcd/pcr/">
 <span class="md-ellipsis">
     点云配准
     
@@ -927,7 +928,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pcd/pcr/prepare/">
+<a class="md-nav__link" href="../../../pcd/pcr/prepare/">
 <span class="md-ellipsis">
     前置知识
     
@@ -935,7 +936,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pcd/pcr/icp/">
+<a class="md-nav__link" href="../../../pcd/pcr/icp/">
 <span class="md-ellipsis">
     ICP
     
@@ -951,7 +952,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../dataset/">
+<a class="md-nav__link" href="../../../dataset/">
 <span class="md-ellipsis">
     数据集相关
     
@@ -968,7 +969,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/tum/">
+<a class="md-nav__link" href="../../../dataset/tum/">
 <span class="md-ellipsis">
     TUM
     
@@ -976,7 +977,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/bonn/">
+<a class="md-nav__link" href="../../../dataset/bonn/">
 <span class="md-ellipsis">
     Bonn
     
@@ -984,7 +985,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/kitti/">
+<a class="md-nav__link" href="../../../dataset/kitti/">
 <span class="md-ellipsis">
     KITTI
     
@@ -992,7 +993,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/waymo/">
+<a class="md-nav__link" href="../../../dataset/waymo/">
 <span class="md-ellipsis">
     Waymo
     
@@ -1000,7 +1001,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/endonerf/">
+<a class="md-nav__link" href="../../../dataset/endonerf/">
 <span class="md-ellipsis">
     EndoNeRF
     
@@ -1008,7 +1009,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/stereomis/">
+<a class="md-nav__link" href="../../../dataset/stereomis/">
 <span class="md-ellipsis">
     StereoMIS
     
@@ -1016,7 +1017,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/hamlyn/">
+<a class="md-nav__link" href="../../../dataset/hamlyn/">
 <span class="md-ellipsis">
     Hamlyn
     
@@ -1024,7 +1025,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../dataset/scared/">
+<a class="md-nav__link" href="../../../dataset/scared/">
 <span class="md-ellipsis">
     SCARED
     
@@ -1037,7 +1038,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     论文相关
     
@@ -1056,7 +1057,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../pcd/">
+<a class="md-nav__link" href="../../pcd/">
 <span class="md-ellipsis">
     PointCloud 系列
     
@@ -1073,7 +1074,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pcd/geotransformer/">
+<a class="md-nav__link" href="../../pcd/geotransformer/">
 <span class="md-ellipsis">
     GeoTransformer
     
@@ -1081,7 +1082,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pcd/mac/">
+<a class="md-nav__link" href="../../pcd/mac/">
 <span class="md-ellipsis">
     MAC
     
@@ -1089,7 +1090,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pcd/fastmac/">
+<a class="md-nav__link" href="../../pcd/fastmac/">
 <span class="md-ellipsis">
     FastMAC
     
@@ -1102,7 +1103,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../dynamic-slam/">
+<a class="md-nav__link" href="../../dynamic-slam/">
 <span class="md-ellipsis">
     Dynamic SLAM 系列
     
@@ -1119,7 +1120,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dynamic-slam/dynaslam/">
+<a class="md-nav__link" href="../../dynamic-slam/dynaslam/">
 <span class="md-ellipsis">
     DynaSLAM
     
@@ -1127,7 +1128,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dynamic-slam/ds-slam/">
+<a class="md-nav__link" href="../../dynamic-slam/ds-slam/">
 <span class="md-ellipsis">
     DS-SLAM
     
@@ -1135,7 +1136,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dynamic-slam/detect-slam/">
+<a class="md-nav__link" href="../../dynamic-slam/detect-slam/">
 <span class="md-ellipsis">
     Detect-SLAM
     
@@ -1143,7 +1144,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dynamic-slam/flowfusion/">
+<a class="md-nav__link" href="../../dynamic-slam/flowfusion/">
 <span class="md-ellipsis">
     FlowFusion
     
@@ -1151,7 +1152,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dynamic-slam/rigidfusion/">
+<a class="md-nav__link" href="../../dynamic-slam/rigidfusion/">
 <span class="md-ellipsis">
     RigidFusion
     
@@ -1159,7 +1160,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dynamic-slam/crowd-slam/">
+<a class="md-nav__link" href="../../dynamic-slam/crowd-slam/">
 <span class="md-ellipsis">
     Crowd-SLAM
     
@@ -1172,7 +1173,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../nerf/">
+<a class="md-nav__link" href="../../nerf/">
 <span class="md-ellipsis">
     NeRF 系列
     
@@ -1189,7 +1190,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nerf/nerf/">
+<a class="md-nav__link" href="../../nerf/nerf/">
 <span class="md-ellipsis">
     NeRF
     
@@ -1197,7 +1198,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nerf/imap/">
+<a class="md-nav__link" href="../../nerf/imap/">
 <span class="md-ellipsis">
     iMAP
     
@@ -1205,7 +1206,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nerf/co-slam/">
+<a class="md-nav__link" href="../../nerf/co-slam/">
 <span class="md-ellipsis">
     Co-SLAM
     
@@ -1213,7 +1214,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nerf/nice-slam/">
+<a class="md-nav__link" href="../../nerf/nice-slam/">
 <span class="md-ellipsis">
     NICE-SLAM
     
@@ -1221,7 +1222,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nerf/nid-slam/">
+<a class="md-nav__link" href="../../nerf/nid-slam/">
 <span class="md-ellipsis">
     NID-SLAM
     
@@ -1229,7 +1230,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nerf/ddn-slam/">
+<a class="md-nav__link" href="../../nerf/ddn-slam/">
 <span class="md-ellipsis">
     DDN-SLAM
     
@@ -1242,7 +1243,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../3dgs/">
+<a class="md-nav__link" href="../../3dgs/">
 <span class="md-ellipsis">
     3DGS 系列
     
@@ -1259,7 +1260,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/3dgs/">
+<a class="md-nav__link" href="../../3dgs/3dgs/">
 <span class="md-ellipsis">
     3DGS
     
@@ -1267,7 +1268,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/4dgs/">
+<a class="md-nav__link" href="../../3dgs/4dgs/">
 <span class="md-ellipsis">
     4DGS
     
@@ -1275,7 +1276,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/splatam/">
+<a class="md-nav__link" href="../../3dgs/splatam/">
 <span class="md-ellipsis">
     SplaTAM
     
@@ -1283,7 +1284,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/monogs/">
+<a class="md-nav__link" href="../../3dgs/monogs/">
 <span class="md-ellipsis">
     MonoGS
     
@@ -1291,7 +1292,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/loop-splat/">
+<a class="md-nav__link" href="../../3dgs/loop-splat/">
 <span class="md-ellipsis">
     LoopSplat
     
@@ -1299,7 +1300,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/splat-slam/">
+<a class="md-nav__link" href="../../3dgs/splat-slam/">
 <span class="md-ellipsis">
     Splat-SLAM
     
@@ -1307,7 +1308,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/wildgs-slam/">
+<a class="md-nav__link" href="../../3dgs/wildgs-slam/">
 <span class="md-ellipsis">
     WildGS-SLAM
     
@@ -1315,7 +1316,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/4dtam/">
+<a class="md-nav__link" href="../../3dgs/4dtam/">
 <span class="md-ellipsis">
     4DTAM
     
@@ -1323,7 +1324,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3dgs/4dgs-slam/">
+<a class="md-nav__link" href="../../3dgs/4dgs-slam/">
 <span class="md-ellipsis">
     4DGS-SLAM
     
@@ -1333,27 +1334,27 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_5_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link md-nav__link--active" href="./">
+<a class="md-nav__link" href="../../ffm/">
 <span class="md-ellipsis">
     FFM 系列
     
   </span>
 </a>
-<label class="md-nav__link md-nav__link--active" for="__nav_3_5_6" id="__nav_3_5_6_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_5_6" id="__nav_3_5_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_5_6_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_6_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_5_6">
 <span class="md-nav__icon md-icon"></span>
             FFM 系列
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="dust3r/">
+<a class="md-nav__link" href="../../ffm/dust3r/">
 <span class="md-ellipsis">
     DUSt3R
     
@@ -1361,7 +1362,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="mast3r/">
+<a class="md-nav__link" href="../../ffm/mast3r/">
 <span class="md-ellipsis">
     MASt3R
     
@@ -1369,7 +1370,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="spann3r/">
+<a class="md-nav__link" href="../../ffm/spann3r/">
 <span class="md-ellipsis">
     Spann3R
     
@@ -1377,7 +1378,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="fast3r/">
+<a class="md-nav__link" href="../../ffm/fast3r/">
 <span class="md-ellipsis">
     Fast3R
     
@@ -1385,7 +1386,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="instant-splat/">
+<a class="md-nav__link" href="../../ffm/instant-splat/">
 <span class="md-ellipsis">
     InstantSplat
     
@@ -1393,7 +1394,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="monst3r/">
+<a class="md-nav__link" href="../../ffm/monst3r/">
 <span class="md-ellipsis">
     MonST3R
     
@@ -1401,7 +1402,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="das3r/">
+<a class="md-nav__link" href="../../ffm/das3r/">
 <span class="md-ellipsis">
     DAS3R
     
@@ -1409,7 +1410,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="cut3r/">
+<a class="md-nav__link" href="../../ffm/cut3r/">
 <span class="md-ellipsis">
     CUT3R
     
@@ -1417,7 +1418,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="easi3r/">
+<a class="md-nav__link" href="../../ffm/easi3r/">
 <span class="md-ellipsis">
     Easi3R
     
@@ -1425,7 +1426,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="mast3r-slam/">
+<a class="md-nav__link" href="../../ffm/mast3r-slam/">
 <span class="md-ellipsis">
     MASt3R-SLAM
     
@@ -1433,7 +1434,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="slam3r/">
+<a class="md-nav__link" href="../../ffm/slam3r/">
 <span class="md-ellipsis">
     SLAM3R
     
@@ -1441,7 +1442,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="vggt/">
+<a class="md-nav__link" href="../../ffm/vggt/">
 <span class="md-ellipsis">
     VGGT
     
@@ -1449,7 +1450,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="vggt-slam/">
+<a class="md-nav__link" href="../../ffm/vggt-slam/">
 <span class="md-ellipsis">
     VGGT-SLAM
     
@@ -1457,7 +1458,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="vggt-long/">
+<a class="md-nav__link" href="../../ffm/vggt-long/">
 <span class="md-ellipsis">
     VGGT-Long
     
@@ -1465,7 +1466,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="anycam/">
+<a class="md-nav__link" href="../../ffm/anycam/">
 <span class="md-ellipsis">
     AnyCam
     
@@ -1473,7 +1474,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="page-4d/">
+<a class="md-nav__link" href="../../ffm/page-4d/">
 <span class="md-ellipsis">
     PAGE-4D
     
@@ -1483,10 +1484,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_5_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../endo/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     Endo 系列
     
@@ -1496,14 +1497,14 @@ var _hmt = _hmt || [];
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_5_7_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_3_5_7_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_5_7">
 <span class="md-nav__icon md-icon"></span>
             Endo 系列
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/endoscopy-depth-estimation/">
+<a class="md-nav__link" href="../endoscopy-depth-estimation/">
 <span class="md-ellipsis">
     EndoscopyDepthEstimation
     
@@ -1511,7 +1512,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/endo-4dgs/">
+<a class="md-nav__link" href="../endo-4dgs/">
 <span class="md-ellipsis">
     Endo-4DGS
     
@@ -1519,7 +1520,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/endogaussian/">
+<a class="md-nav__link" href="../endogaussian/">
 <span class="md-ellipsis">
     EndoGaussian
     
@@ -1527,7 +1528,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/endogs/">
+<a class="md-nav__link" href="../endogs/">
 <span class="md-ellipsis">
     EndoGS
     
@@ -1535,7 +1536,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/lgs/">
+<a class="md-nav__link" href="../lgs/">
 <span class="md-ellipsis">
     LGS
     
@@ -1543,7 +1544,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/st-endo4dgs/">
+<a class="md-nav__link" href="../st-endo4dgs/">
 <span class="md-ellipsis">
     ST-Endo4DGS
     
@@ -1551,7 +1552,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/deform3dgs/">
+<a class="md-nav__link" href="../deform3dgs/">
 <span class="md-ellipsis">
     Deform3DGS
     
@@ -1559,7 +1560,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/eh-surgs/">
+<a class="md-nav__link" href="../eh-surgs/">
 <span class="md-ellipsis">
     EH-SurGS
     
@@ -1567,7 +1568,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/endo-4dgx/">
+<a class="md-nav__link" href="../endo-4dgx/">
 <span class="md-ellipsis">
     Endo-4DGX
     
@@ -1575,20 +1576,111 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../endo/colorgs/">
+<a class="md-nav__link" href="../colorgs/">
 <span class="md-ellipsis">
     ColorGS
     
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../endo/d4recon/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    D4Recon
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     D4Recon
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method">
+<span class="md-ellipsis">
+      Method
+    </span>
+</a>
+<nav aria-label="Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-3d-scene-representation">
+<span class="md-ellipsis">
+      Dynamic 3D Scene Representation
+    </span>
+</a>
+<nav aria-label="Dynamic 3D Scene Representation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gaussian-initialization">
+<span class="md-ellipsis">
+      Gaussian Initialization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-gaussian-representation">
+<span class="md-ellipsis">
+      Dynamic Gaussian Representation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dual-scale-depth-guidance">
+<span class="md-ellipsis">
+      Dual-scale Depth Guidance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dual-stage-deformation-modeling">
+<span class="md-ellipsis">
+      Dual-stage Deformation Modeling
+    </span>
+</a>
+<nav aria-label="Dual-stage Deformation Modeling" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiview-consistency">
+<span class="md-ellipsis">
+      Multiview Consistency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#temporal-consistency">
+<span class="md-ellipsis">
+      Temporal Consistency
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1596,7 +1688,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../others/">
+<a class="md-nav__link" href="../../others/">
 <span class="md-ellipsis">
     杂项
     
@@ -1615,7 +1707,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_8_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../others/vslam14/">
+<a class="md-nav__link" href="../../others/vslam14/">
 <span class="md-ellipsis">
     视觉 SLAM 十四讲
     
@@ -1632,7 +1724,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/vslam14/lec1/">
+<a class="md-nav__link" href="../../others/vslam14/lec1/">
 <span class="md-ellipsis">
     初识 SLAM
     
@@ -1640,7 +1732,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/vslam14/lec2/">
+<a class="md-nav__link" href="../../others/vslam14/lec2/">
 <span class="md-ellipsis">
     三维空间刚体运动
     
@@ -1651,7 +1743,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/orbslam2/">
+<a class="md-nav__link" href="../../others/orbslam2/">
 <span class="md-ellipsis">
     ORB-SLAM2
     
@@ -1659,7 +1751,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/let-net/">
+<a class="md-nav__link" href="../../others/let-net/">
 <span class="md-ellipsis">
     LET-NET
     
@@ -1667,7 +1759,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/deepv2d/">
+<a class="md-nav__link" href="../../others/deepv2d/">
 <span class="md-ellipsis">
     DeepV2D
     
@@ -1675,7 +1767,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../others/reconstruction-evaluation/">
+<a class="md-nav__link" href="../../others/reconstruction-evaluation/">
 <span class="md-ellipsis">
     Reconstruction Evaluation
     
@@ -1691,7 +1783,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../utils/">
+<a class="md-nav__link" href="../../../utils/">
 <span class="md-ellipsis">
     工具相关
     
@@ -1708,7 +1800,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../utils/colmap/">
+<a class="md-nav__link" href="../../../utils/colmap/">
 <span class="md-ellipsis">
     COLMAP
     
@@ -1719,7 +1811,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3d-visualization/">
+<a class="md-nav__link" href="../../../3d-visualization/">
 <span class="md-ellipsis">
     三维数据场可视化
     
@@ -1732,7 +1824,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/">
+<a class="md-nav__link" href="../../../../llm/">
 <span class="md-ellipsis">
     LLM
     
@@ -1751,7 +1843,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/nlp/">
+<a class="md-nav__link" href="../../../../llm/nlp/">
 <span class="md-ellipsis">
     NLP
     
@@ -1768,7 +1860,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/word2vec/">
+<a class="md-nav__link" href="../../../../llm/nlp/word2vec/">
 <span class="md-ellipsis">
     Word2Vec
     
@@ -1776,7 +1868,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/rnns/">
+<a class="md-nav__link" href="../../../../llm/nlp/rnns/">
 <span class="md-ellipsis">
     RNN
     
@@ -1789,7 +1881,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/transformer/">
+<a class="md-nav__link" href="../../../../llm/transformer/">
 <span class="md-ellipsis">
     Transformer
     
@@ -1806,7 +1898,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/attention/">
+<a class="md-nav__link" href="../../../../llm/transformer/attention/">
 <span class="md-ellipsis">
     Attention
     
@@ -1814,7 +1906,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/transformer/">
+<a class="md-nav__link" href="../../../../llm/transformer/transformer/">
 <span class="md-ellipsis">
     Transformer
     
@@ -1822,7 +1914,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/bert/">
+<a class="md-nav__link" href="../../../../llm/transformer/bert/">
 <span class="md-ellipsis">
     BERT
     
@@ -1830,7 +1922,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/vit/">
+<a class="md-nav__link" href="../../../../llm/transformer/vit/">
 <span class="md-ellipsis">
     ViT
     
@@ -1843,7 +1935,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/internlm/">
+<a class="md-nav__link" href="../../../../llm/internlm/">
 <span class="md-ellipsis">
     书生·浦语大模型实战营
     
@@ -1860,7 +1952,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec1/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec1/">
 <span class="md-ellipsis">
     第一节
     
@@ -1868,7 +1960,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec2/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec2/">
 <span class="md-ellipsis">
     第二节
     
@@ -1876,7 +1968,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec3/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec3/">
 <span class="md-ellipsis">
     第三节
     
@@ -1884,7 +1976,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec4/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec4/">
 <span class="md-ellipsis">
     第四节
     
@@ -1892,7 +1984,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec5/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec5/">
 <span class="md-ellipsis">
     第五节
     
@@ -1900,7 +1992,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec6/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec6/">
 <span class="md-ellipsis">
     第六节
     
@@ -1913,7 +2005,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/dw2025winter/">
+<a class="md-nav__link" href="../../../../llm/dw2025winter/">
 <span class="md-ellipsis">
     2025 AI 冬令营
     
@@ -1930,7 +2022,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/dw2025winter/lec1/">
+<a class="md-nav__link" href="../../../../llm/dw2025winter/lec1/">
 <span class="md-ellipsis">
     速通AI辅助番茄时钟开发
     
@@ -1956,7 +2048,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/others/prompt/">
+<a class="md-nav__link" href="../../../../llm/others/prompt/">
 <span class="md-ellipsis">
     Prompt
     
@@ -1964,7 +2056,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/others/dt/">
+<a class="md-nav__link" href="../../../../llm/others/dt/">
 <span class="md-ellipsis">
     分布式训练
     
@@ -1980,7 +2072,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../mb/">
+<a class="md-nav__link" href="../../../../mb/">
 <span class="md-ellipsis">
     Math Basis
     
@@ -1999,7 +2091,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../mb/optimization-theory/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/">
 <span class="md-ellipsis">
     最优化理论与方法
     
@@ -2016,7 +2108,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/lec1/">
 <span class="md-ellipsis">
     最优化问题
     
@@ -2024,7 +2116,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec2/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/lec2/">
 <span class="md-ellipsis">
     直线搜索
     
@@ -2032,7 +2124,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec3/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/lec3/">
 <span class="md-ellipsis">
     无约束最优化的梯度方法
     
@@ -2045,7 +2137,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../mb/maa/">
+<a class="md-nav__link" href="../../../../mb/maa/">
 <span class="md-ellipsis">
     矩阵分析与应用
     
@@ -2062,7 +2154,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/maa/lec1/">
+<a class="md-nav__link" href="../../../../mb/maa/lec1/">
 <span class="md-ellipsis">
     矩阵代数基础
     
@@ -2070,7 +2162,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/maa/lec2/">
+<a class="md-nav__link" href="../../../../mb/maa/lec2/">
 <span class="md-ellipsis">
     特殊矩阵
     
@@ -2078,7 +2170,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/maa/lec3/">
+<a class="md-nav__link" href="../../../../mb/maa/lec3/">
 <span class="md-ellipsis">
     矩阵微分
     
@@ -2089,7 +2181,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/comb/">
+<a class="md-nav__link" href="../../../../mb/comb/">
 <span class="md-ellipsis">
     组合数学
     
@@ -2102,7 +2194,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../utils/">
+<a class="md-nav__link" href="../../../../utils/">
 <span class="md-ellipsis">
     Utils
     
@@ -2119,7 +2211,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/utilsbox/">
+<a class="md-nav__link" href="../../../../utils/utilsbox/">
 <span class="md-ellipsis">
     工具收集
     
@@ -2142,7 +2234,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/shell/">
+<a class="md-nav__link" href="../../../../utils/shell/">
 <span class="md-ellipsis">
     Shell 命令相关
     
@@ -2150,7 +2242,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/git/">
+<a class="md-nav__link" href="../../../../utils/git/">
 <span class="md-ellipsis">
     Git 命令相关
     
@@ -2158,7 +2250,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/docker/">
+<a class="md-nav__link" href="../../../../utils/docker/">
 <span class="md-ellipsis">
     Docker 命令相关
     
@@ -2166,7 +2258,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/gdb/">
+<a class="md-nav__link" href="../../../../utils/gdb/">
 <span class="md-ellipsis">
     gdb 命令相关
     
@@ -2192,7 +2284,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/action/">
+<a class="md-nav__link" href="../../../../utils/action/">
 <span class="md-ellipsis">
     Github Action
     
@@ -2218,7 +2310,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/reveal-md/">
+<a class="md-nav__link" href="../../../../utils/reveal-md/">
 <span class="md-ellipsis">
     reveal-md
     
@@ -2226,7 +2318,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/gitbook/">
+<a class="md-nav__link" href="../../../../utils/gitbook/">
 <span class="md-ellipsis">
     gitbook
     
@@ -2234,7 +2326,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/mkdocs/">
+<a class="md-nav__link" href="../../../../utils/mkdocs/">
 <span class="md-ellipsis">
     mkdocs
     
@@ -2242,7 +2334,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/hexo/">
+<a class="md-nav__link" href="../../../../utils/hexo/">
 <span class="md-ellipsis">
     hexo
     
@@ -2268,7 +2360,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/ffmpeg/">
+<a class="md-nav__link" href="../../../../utils/ffmpeg/">
 <span class="md-ellipsis">
     ffmpeg
     
@@ -2276,7 +2368,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/imagemagick/">
+<a class="md-nav__link" href="../../../../utils/imagemagick/">
 <span class="md-ellipsis">
     ImageMagick
     
@@ -2302,7 +2394,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/wandb/">
+<a class="md-nav__link" href="../../../../utils/wandb/">
 <span class="md-ellipsis">
     Weights &amp; Biases
     
@@ -2330,11 +2422,79 @@ var _hmt = _hmt || [];
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Table of Contents
+      Introduction
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method">
+<span class="md-ellipsis">
+      Method
+    </span>
+</a>
+<nav aria-label="Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-3d-scene-representation">
+<span class="md-ellipsis">
+      Dynamic 3D Scene Representation
+    </span>
+</a>
+<nav aria-label="Dynamic 3D Scene Representation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gaussian-initialization">
+<span class="md-ellipsis">
+      Gaussian Initialization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamic-gaussian-representation">
+<span class="md-ellipsis">
+      Dynamic Gaussian Representation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dual-scale-depth-guidance">
+<span class="md-ellipsis">
+      Dual-scale Depth Guidance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dual-stage-deformation-modeling">
+<span class="md-ellipsis">
+      Dual-stage Deformation Modeling
+    </span>
+</a>
+<nav aria-label="Dual-stage Deformation Modeling" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiview-consistency">
+<span class="md-ellipsis">
+      Multiview Consistency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#temporal-consistency">
+<span class="md-ellipsis">
+      Temporal Consistency
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2345,45 +2505,126 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="dust3r"><span>DUSt3R<span class="heti-spacing"> </span></span>系列<a class="headerlink" href="#dust3r" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="d4recon">D<span class="arithmatex">\(^4\)</span>Recon<a class="headerlink" href="#d4recon" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1400<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>1<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>分钟</p>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><span>Feed Forward Model<span class="heti-spacing"> </span></span>系列相关内容</p>
-</div>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="dust3r/">DUSt3R</a></li>
-<li><a href="mast3r/">MASt3R</a></li>
-<li><a href="spann3r/">Spann3R</a></li>
-<li><a href="fast3r/">Fast3R</a></li>
-<li><a href="instant-splat/">InstantSplat</a></li>
-<li><a href="monst3r/">MonST3R</a></li>
-<li><a href="das3r/">DAS3R</a></li>
-<li><a href="cut3r/">CUT3R</a></li>
-<li><a href="easi3r/">Easi3R</a></li>
-<li><a href="mast3r-slam/">MASt3R-SLAM</a></li>
-<li><a href="slam3r/">SLAM3R</a></li>
-<li><a href="vggt/">VGGT</a></li>
-<li><a href="vggt-slam/">VGGT-SLAM</a></li>
-<li><a href="vggt-long/">VGGT-Long</a></li>
-<li><a href="anycam/">AnyCam</a></li>
-<li><a href="page-4d/">PAGE-4D</a></li>
+<li>paper：<a href="https://papers.miccai.org/miccai-2025/paper/1587_paper.pdf"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/> D<span class="arithmatex">\(^4\)</span>Recon: Dual-stage Deformation and Dual-scale Depth Guidance for Endoscopic Reconstruction</a></li>
+<li>code：<a href="https://github.com/hritam-98/D4Recon"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> D<span class="arithmatex">\(^4\)</span>Recon</a></li>
 </ul>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">问题导向</p>
+<p>当前方法在高保真重建不可逆组织变形方面存在困难。</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">解决方案</p>
+<ul>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>Dynamic-3DGS<span class="heti-spacing"> </span></span>中提出双阶段变形建模和双尺度深度引导<span><span class="heti-spacing"> </span>D<span class="arithmatex">\(^4\)</span></span>，并结合<span class="heti-skip"><span class="heti-spacing"> </span>MLP<span class="heti-spacing"> </span></span>对内窥镜场景中的动态进行建模；</li>
+<li>在双阶段变形建模中，引入空间变形模型来矫正多视图不一致性，时间变形模型来准确表示参考帧中组织的扭曲以及组织与手术工具的动态交互；</li>
+<li>在双尺度深度引导中，提出平衡局部误差矫正与绝对深度一致性，从而在保留细粒度颜色准确性的同时实现精确的深度细化；
+<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cv/slam/d4recon-1.png"><img src="/assets/images/cv/slam/d4recon-1.png"/></a></center></li>
+</ul>
+</div>
+<h2 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h2>
+<h3 id="dynamic-3d-scene-representation">Dynamic 3D Scene Representation<a class="headerlink" href="#dynamic-3d-scene-representation" title="Permanent link">¶</a></h3>
+<h4 id="gaussian-initialization">Gaussian Initialization<a class="headerlink" href="#gaussian-initialization" title="Permanent link">¶</a></h4>
+<ul>
+<li>从第<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>帧将组织像素投影到<span class="heti-skip"><span class="heti-spacing"> </span>3D<span class="heti-spacing"> </span></span>空间以创建初始点云；</li>
+<li>为解决手术工具遮挡问题，从后续帧更新组织像素信息，生成优化后的<span><span class="heti-spacing"> </span><span class="arithmatex">\((I^\prime, D^\prime, M^\prime)\)</span></span>：对于每个像素<span><span class="heti-spacing"> </span><span class="arithmatex">\(p\)</span></span>，如果第<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>帧的<span><span class="heti-spacing"> </span><span class="arithmatex">\(M_0(p)=1\)</span></span>，而第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>帧的<span><span class="heti-spacing"> </span><span class="arithmatex">\(M_t(p)=0\)</span></span>，则用第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>帧的值更新<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I^\prime\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(D^\prime\)</span></span>，否则保留第<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>帧的数据，优化后的点云<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P^\prime\)</span><span class="heti-spacing"> </span></span>为：</li>
+</ul>
+<div class="arithmatex">\[
+P^\prime = \{D^\prime K_e^{-1}K_i^{-1}(I^\prime \odot (1-M^\prime))\}, \quad M^\prime = \cap_{\tau=0}^t M_\tau
+\]</div>
+<h4 id="dynamic-gaussian-representation">Dynamic Gaussian Representation<a class="headerlink" href="#dynamic-gaussian-representation" title="Permanent link">¶</a></h4>
+<p>类似<span><span class="heti-spacing"> </span>4DGS</span>。</p>
+<h3 id="dual-scale-depth-guidance">Dual-scale Depth Guidance<a class="headerlink" href="#dual-scale-depth-guidance" title="Permanent link">¶</a></h3>
+<ul>
+<li><span>3DGS<span class="heti-spacing"> </span></span>对四个参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{\mu, s, q, \alpha\}\)</span><span class="heti-spacing"> </span></span>进行优化，<strong>然而单目深度比颜色更平滑，对所有参数进行统一正则化可能会导致过拟合和模糊</strong>，为了同时保持几何保真度和视觉清晰度，仅对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{\mu, \alpha\}\)</span><span class="heti-spacing"> </span></span>进行正则化（这两个参数是空间位置和占有率的主要决定因素，同时保持<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(q\)</span><span class="heti-spacing"> </span></span>固定，以避免引入颜色重建伪影<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li>为了增强高斯场，引入<strong>硬深度引导（HDG）</strong>，利用高斯中心<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span><span class="heti-spacing"> </span></span>中编码的全局深度线索；为所有高斯分配一个高不透明度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\beta\)</span><span class="heti-spacing"> </span></span>并主要从沿像素<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(p\)</span><span class="heti-spacing"> </span></span>投射的光线中最接近相机中心<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\rho\)</span><span class="heti-spacing"> </span></span>的高斯渲染出硬深度<span><span class="heti-spacing"> </span><span class="arithmatex">\(D_{HDG}\)</span></span>，从而确保全局深度一致性：</li>
+</ul>
+<div class="arithmatex">\[
+D_{HDG}(p) = \sum_{i} \beta (1 - \beta)^{i-1} \| \rho - \mu_i \|_2
+\]</div>
+<ul>
+<li>硬深度引导缺乏不透明度优化，可能导致半透明表面和空洞结构，所以冻结<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span><span class="heti-spacing"> </span></span>以防止不期望的偏移，并引入<strong>软深度引导（SDG）</strong>来优化<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span></span>，同时保持几何结构，这利用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span><span class="heti-spacing"> </span></span>通过不透明度控制局部深度线索：</li>
+</ul>
+<div class="arithmatex">\[
+D_{SDG}(p) = \sum_{i} \alpha_i^\prime \prod_{j=1}^{i-1} (1 - \alpha_j^\prime) \| \rho - \mu_i \|_2
+\]</div>
+<ul>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L_2\)</span><span class="heti-spacing"> </span></span>损失来加强与单目深度的对齐：</li>
+</ul>
+<div class="arithmatex">\[
+\mathcal{L}_{DDG}(p) = \| D_{HDG}(p) - D_{SDG}(p) \|_2 + \| D_{SDG}(p) - D(p) \|_2
+\]</div>
+<h3 id="dual-stage-deformation-modeling">Dual-stage Deformation Modeling<a class="headerlink" href="#dual-stage-deformation-modeling" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">传统<span class="heti-skip"><span class="heti-spacing"> </span>3DGS<span class="heti-spacing"> </span></span>通常依赖手工设计的深度启发式方法，难以解决多视图不一致带来的固有场景模糊问题（例如，非朗伯表面、瞬态遮挡<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">提出一种变形框架，通过两个新颖的分数蒸馏采样（SDS）目标来分离几何和时间上的细化，该框架利用了预训练的<span class="heti-skip"><span class="heti-spacing"> </span>2D Diffusion Model<span class="heti-spacing"> </span></span>的语义和结构先验</p>
+<p>为减轻多视图冲突和时间闪烁，引入两个变形场：</p>
+<ol>
+<li>空间变形场<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{D}_s\)</span></span>，用于调整高斯位置已解决静态的多视图不一致问题；</li>
+<li>时间变形场<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{D}_t\)</span></span>，用于建模跨时间的动态场景变化；</li>
+</ol>
+<p>这些场通过<span class="heti-skip"><span class="heti-spacing"> </span>SDS<span class="heti-spacing"> </span></span>损失进行联合优化，既与扩散先验保持一致，又能保持物理合理性。</p>
+</div>
+<h4 id="multiview-consistency">Multiview Consistency<a class="headerlink" href="#multiview-consistency" title="Permanent link">¶</a></h4>
+<ul>
+<li>为进行空间细化，从规范轨迹分布中采样一个相机位姿<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{P}_i\)</span></span>，冻结时间<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span></span>，并通过<span class="heti-skip"><span class="heti-spacing"> </span>render<span class="heti-spacing"> </span></span>渲染得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{I}_{\hat{P}_i}\)</span></span>，并用高斯噪声扰动<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{I}_{\hat{P}_i}\)</span><span class="heti-spacing"> </span></span>得到<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{I}_{\hat{P}_i}^\epsilon\)</span></span>，并计算噪声残差<span><span class="heti-spacing"> </span><span class="arithmatex">\(\epsilon_\phi\)</span></span>（<span><span class="arithmatex">\(\phi\)</span><span class="heti-spacing"> </span></span>是冻结的<span><span class="heti-spacing"> </span>diffusion weights</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li>空间<span class="heti-skip"><span class="heti-spacing"> </span>SDS loss <span class="arithmatex">\(\mathcal{L}_{SDS-S}\)</span><span class="heti-spacing"> </span></span>通过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{D}_s\)</span><span class="heti-spacing"> </span></span>反向传播梯度：</li>
+</ul>
+<div class="arithmatex">\[
+\cap \rho \epsilon \nabla_{\theta_{s}} \mathcal{L}_{\mathrm{SDS}-\mathrm{S}}=\mathbb{E}_{\hat{P}_{i}, \epsilon, \sigma}\left[w(\sigma)\left(\epsilon_{\phi}-\epsilon\right) \frac{\partial \mathcal{I}_{\hat{P}_{i}}}{\partial \theta_{s}}\right] ; \epsilon_{\phi}=\operatorname{Diffusion}\left(\mathcal{I}_{\hat{P}_{i}}^{\epsilon}, \hat{P}_{i}, \sigma\right)
+\]</div>
+<h4 id="temporal-consistency">Temporal Consistency<a class="headerlink" href="#temporal-consistency" title="Permanent link">¶</a></h4>
+<ul>
+<li>为防止退化的空间解（例如<span><span class="heti-spacing"> </span>flatness</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，应用时间<span><span class="heti-spacing"> </span>SDS loss <span class="arithmatex">\(\mathcal{L}_{SDS-T}\)</span></span>，以增强在采样时间步长<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t \sim [t_0 - \Delta t, t_0 + \Delta t]\)</span><span class="heti-spacing"> </span></span>上的连贯性；</li>
+<li><span><span class="arithmatex">\(D_t\)</span><span class="heti-spacing"> </span></span>将高斯分布变形到位置<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mu + \mathcal{D}_t(\mu, t)\)</span></span>，<span><span class="arithmatex">\(\mathcal{L}_{SDS-T}\)</span><span class="heti-spacing"> </span></span>在渲染动态序列时会惩罚与扩散先验的偏差；</li>
+<li><strong>空间场和时间场是交替优化的，这将高频几何细节（由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{D}_s\)</span><span class="heti-spacing"> </span></span>处理）与低频运动（由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{D}_t\)</span><span class="heti-spacing"> </span></span>处理）分离开来。</strong></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">与传统的<span><span class="heti-spacing"> </span>SDS</span>（仅简单地蒸馏单视角语义）不同</p>
+<ul>
+<li>方法明确地对真实世界场景的静态<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>动态二元性进行建模，并且在扩散模型中利用相机位姿来解决<span class="heti-skip"><span class="heti-spacing"> </span>SDS<span class="heti-spacing"> </span></span>中的不一致性；</li>
+<li>将总损失表示为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{L}_{\text {total }}=\mathcal{L}_{D D G}+\mathbb{1}_{k} \mathcal{L}_{\mathrm{SDS}-\mathrm{S}}+\left(1-\mathbb{1}_{k}\right) \mathcal{L}_{\mathrm{SDS}-\mathrm{T}}\)</span></span>，迭代<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>次时，<span class="arithmatex">\(G_{Dyn}^{k+1}\gets G_{Dyn}^k-\eta\nabla\mathcal{L}_{total}\)</span>。</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">与<span class="heti-skip"><span class="heti-spacing"> </span>4DGS<span class="heti-spacing"> </span></span>在单一体积表示中对时空进行参数化不用</p>
+<ul>
+<li>方法初始化每帧高斯分布，并通过具有双尺度深度引导的局部时空更新来对齐，因此为<span><span class="heti-spacing"> </span>Dynamic-3DGS</span>。</li>
+</ul>
+</div>
 <div class="hr-before-source-file"><hr/></div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月3日 16:54:59 CST">2025年12月3日 16:54:59</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月5日 23:02:32 CST">2025年12月5日 23:02:32</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年4月24日 16:24:12 CST">2025年4月24日 16:24:12</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月5日 23:02:32 CST">2025年12月5日 23:02:32</span>
 </span>
 </aside>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
+</script>
+<script>
+    if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+      var giscus = document.querySelector("script[src*=giscus]")
+      giscus.setAttribute("data-theme", "transparent_dark") 
+    }
+  </script>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -2395,7 +2636,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 4DGS-SLAM" class="md-footer__link md-footer__link--prev" href="../3dgs/4dgs-slam/">
+<a aria-label="上一页: ColorGS" class="md-footer__link md-footer__link--prev" href="../colorgs/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -2404,17 +2645,17 @@ var _hmt = _hmt || [];
                 上一页
               </span>
 <div class="md-ellipsis">
-                4DGS-SLAM
+                ColorGS
               </div>
 </div>
 </a>
-<a aria-label="下一页: DUSt3R" class="md-footer__link md-footer__link--next" href="dust3r/">
+<a aria-label="下一页: Others" class="md-footer__link md-footer__link--next" href="../../others/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                DUSt3R
+                Others
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -2458,10 +2699,10 @@ var _hmt = _hmt || [];
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
-<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
-<script src="../../../assets/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+<script src="../../../../assets/utils/katex.min.js"></script>
+<script src="../../../../js/katex.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
