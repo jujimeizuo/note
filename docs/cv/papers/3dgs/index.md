@@ -14,3 +14,4 @@
 - [WildGS-SLAM](wildgs-slam/)
 - [4DTAM](4dtam/)
 - [4DGS-SLAM](4dgs-slam/)
+- [FreeTimeGS](freetimegs/)

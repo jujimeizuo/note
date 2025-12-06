@@ -36,6 +36,7 @@
     - [WildGS-SLAM](3dgs/wildgs-slam/)
     - [4DTAM](3dgs/4dtam/)
     - [4DGS-SLAM](3dgs/4dgs-slam/)
+    - [FreeTimeGS](3dgs/freetimegs/)
 
 - FFM 系列
     - [DUSt3R](ffm/dust3r/)

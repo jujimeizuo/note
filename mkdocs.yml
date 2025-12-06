@@ -252,6 +252,7 @@ nav:
         - WildGS-SLAM: cv/papers/3dgs/wildgs-slam.md
         - 4DTAM: cv/papers/3dgs/4dtam.md
         - 4DGS-SLAM: cv/papers/3dgs/4dgs-slam.md
+        - FreeTimeGS: cv/papers/3dgs/freetimegs.md
       - FFM 系列:
         - cv/papers/ffm/index.md
         - DUSt3R: cv/papers/ffm/dust3r.md
