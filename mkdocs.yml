@@ -4,7 +4,7 @@ repo_name: jujimeizuo/note
 repo_url: https://github.com/jujimeizuo/note/
 edit_uri: tree/master/docs
 site_description: 狙击美佐（jujimeizuo）的笔记本
-copyright: Copyright &copy; 2023-2025 <a href="https://github.com/jujimeizuo" target="_blank" rel="noopener">jujimeizuo</a>
+copyright: Copyright &copy; 2023-2026 <a href="https://github.com/jujimeizuo" target="_blank" rel="noopener">jujimeizuo</a>
 
 theme: 
   name: 'material'
