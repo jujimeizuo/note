@@ -1,4 +1,4 @@
-# MIT 6.5840 Lab 学习
+# MIT 6.5840 Lab
 
 > [!abstract]
 > - 分布式系统实验课程 MIT 6.5840 Lab 的学习笔记。
@@ -9,7 +9,7 @@
 ## Table of Contents
 
 - [Lab1 - MapReduce](mr.md/)
-- Lab2 - Key/Value Server
+- [Lab2 - Key/Value Server](kvsrv.md/)
 - Lab3 - Raft
     - Part 3A: Leader Election
     - Part 3B: Log

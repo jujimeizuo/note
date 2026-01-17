@@ -192,6 +192,7 @@ nav:
       - MIT 6.5840:
         - cs/sys/6.5840/index.md
         - Lab1 - MapReduce: cs/sys/6.5840/mr.md
+        - Lab2 - K/V Server: cs/sys/6.5840/kvsrv.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
   - 3DV:

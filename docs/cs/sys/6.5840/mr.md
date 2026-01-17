@@ -7,15 +7,6 @@
 > - paper: [:book: MapReduce: Simplified Data Processing on Large Clusters](http://research.google.com/archive/mapreduce-osdi04.pdf)
 > - home: http://nil.csail.mit.edu/6.5840/2025/labs/lab-mr.html
 
-## Introduction
-
-> [!Question] Job
-> - 实现一个分布式的 MapReduce 框架，由 coordinator 和 worker 组成；
-> - 系统中只会有一个 coordinator process，但会有一个或多个 worker processes 并行执行；
-> - 本次 Lab 只在同一台机器上运行，worker 会通过 RPC 与 coordinator 通信；
-> - 每个 worker 会在一个 for 中向 coordinator 请求任务，从一个或多个文件中读取任务的输入，执行任务，将任务的输出写入一个或多个文件，然后再次向 coordinator 请求新任务；
-> - coordinator 需要监测 worker 是否在合理的时间内完成了任务，如果没有，则将相同的任务分配给另一个 worker。
-
 > [!Tip] Lab Materials
 > - main/mrcoordinator.go：启动一个 coordinator；
 > - main/mrworker.go：加载 wc.so，启动一个 worker；
@@ -25,7 +16,14 @@
 > - mr/rpc.go：RPC 的传入和传出参数格式；
 > - mr/wc.go：一个简单的 word count MapReduce 程序的实现；
 
-## MapReduce
+## Task: MapReduce
+
+> [!Question] Task
+> - 实现一个分布式的 MapReduce 框架，由 coordinator 和 worker 组成；
+> - 系统中只会有一个 coordinator process，但会有一个或多个 worker processes 并行执行；
+> - 本次 Lab 只在同一台机器上运行，worker 会通过 RPC 与 coordinator 通信；
+> - 每个 worker 会在一个 for 中向 coordinator 请求任务，从一个或多个文件中读取任务的输入，执行任务，将任务的输出写入一个或多个文件，然后再次向 coordinator 请求新任务；
+> - coordinator 需要监测 worker 是否在合理的时间内完成了任务，如果没有，则将相同的任务分配给另一个 worker。
 
 <div style="display: flex; justify-content: center;">
   <div style="flex: 1; text-align: center; max-width: 400px;">
