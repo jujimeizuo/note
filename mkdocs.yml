@@ -187,6 +187,11 @@ nav:
         - 数据类型: cs/db/redis/datatype.md
         - 持久化: cs/db/redis/cjh.md
         - 事务: cs/db/redis/work.md
+    - 系统相关:
+      - cs/sys/index.md
+      - MIT 6.5840:
+        - cs/sys/6.5840/index.md
+        - Lab1 - MapReduce: cs/sys/6.5840/mr.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
   - 3DV:
