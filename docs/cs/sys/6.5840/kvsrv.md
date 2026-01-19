@@ -51,7 +51,6 @@
 >       - 也可能在 client 的第一次 RPC 到达 server 之前，另一个 client 已更新了该 key，导致 server 未执行该 client 的任何一次 RPC，并对两次 RPC 都返回了 rpc.ErrVersion；
 > - 如果 client 在重传的 `Put` 中收到 rpc.ErrVersion，client 的 `Put` 必须向应用程序返回 rpc.ErrMaybe 而非 rpc.ErrVersion，因为该 request 可能已被执行；之后，就由应用程序来处理这种情况；
 > 如果 server 在对初始（未重传）的 `Put` 的响应中返回 rpc.ErrVersion，那么 client 应向应用程序返回 rpc.ErrVersion，因为该 RPC 肯定未被 server 执行；
-> <center><img src="/assets/images/cs/sys/6.5840/lab2/task3.jpg"></center>
 
 
 > [!Solve]
