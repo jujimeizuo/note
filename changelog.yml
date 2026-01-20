@@ -1,4 +1,8 @@
 - "2026":
+  - "2026-01-20":
+    - pageupdate:
+        text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3A
+        href: /cs/sys/6.5840/raft/
   - "2026-01-17":
     - newpage:
         text: CS > SYS > MIT 6.5840 > Lab2 - Key/Value Server

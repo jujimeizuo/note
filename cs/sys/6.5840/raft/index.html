@@ -10,44 +10,42 @@
       
       
       
-        <link rel="canonical" href="https://note.jujimeizuo.cn/llm/internlm/">
+        <link rel="canonical" href="https://note.jujimeizuo.cn/cs/sys/6.5840/raft/">
       
       
-        <link rel="prev" href="../transformer/vit/">
+        <link rel="prev" href="../kvsrv/">
       
       
-        <link rel="next" href="lec1/">
+        <link rel="next" href="../../../others/regex/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
   
     
       
-        <title>书生·浦语大模型实战营 - 狙击美佐的笔记本</title>
+        <title>Lab3 - Raft - 狙击美佐的笔记本</title>
       
     
   
 
     
   
-      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
   
-    <link rel="stylesheet" href="../../css/counter.css">
-  
 
     
       
@@ -56,29 +54,29 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../../css/timeline.css">
     
-      <link rel="stylesheet" href="../../assets/utils/katex.min.css">
+      <link rel="stylesheet" href="../../../../assets/utils/katex.min.css">
     
-      <link rel="stylesheet" href="../../assets/maple/maplemono.css">
+      <link rel="stylesheet" href="../../../../assets/maple/maplemono.css">
     
-      <link rel="stylesheet" href="../../assets/lxgw/lxgwscreen.css">
+      <link rel="stylesheet" href="../../../../assets/lxgw/lxgwscreen.css">
     
-      <link rel="stylesheet" href="../../css/tasklist.css">
+      <link rel="stylesheet" href="../../../../css/tasklist.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/card.css">
+      <link rel="stylesheet" href="../../../../css/card.css">
     
-      <link rel="stylesheet" href="../../css/flink.css">
+      <link rel="stylesheet" href="../../../../css/flink.css">
     
-      <link rel="stylesheet" href="../../css/changelog_extra.css">
+      <link rel="stylesheet" href="../../../../css/changelog_extra.css">
     
-      <link rel="stylesheet" href="../../css/toc_extra.css">
+      <link rel="stylesheet" href="../../../../css/toc_extra.css">
     
-      <link rel="stylesheet" href="../../css/svg_extra.css">
+      <link rel="stylesheet" href="../../../../css/svg_extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -107,7 +105,7 @@ var _hmt = _hmt || [];
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -116,7 +114,7 @@ var _hmt = _hmt || [];
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -135,7 +133,7 @@ var _hmt = _hmt || [];
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#raft" class="md-skip">
           跳转至
         </a>
       
@@ -149,7 +147,7 @@ var _hmt = _hmt || [];
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="狙击美佐的笔记本" class="md-header__button md-logo" aria-label="狙击美佐的笔记本" data-md-component="logo">
+    <a href="../../../.." title="狙击美佐的笔记本" class="md-header__button md-logo" aria-label="狙击美佐的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"/></svg>
@@ -169,7 +167,7 @@ var _hmt = _hmt || [];
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              书生·浦语大模型实战营
+              Lab3 - Raft
             
           </span>
         </div>
@@ -198,7 +196,7 @@ var _hmt = _hmt || [];
   </div>
 </div>
     
-<script src="../../js/scheme.js" type="text/javascript"></script>
+<script src="../../../../js/scheme.js" type="text/javascript"></script>
     
     
       
@@ -276,7 +274,7 @@ var _hmt = _hmt || [];
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../../.." class="md-tabs__link">
           
   
   
@@ -294,11 +292,13 @@ var _hmt = _hmt || [];
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../cs/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
   
@@ -320,7 +320,7 @@ var _hmt = _hmt || [];
     
     
       <li class="md-tabs__item">
-        <a href="../../cv/" class="md-tabs__link">
+        <a href="../../../../cv/" class="md-tabs__link">
           
   
   
@@ -338,13 +338,11 @@ var _hmt = _hmt || [];
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../llm/" class="md-tabs__link">
           
   
   
@@ -366,7 +364,7 @@ var _hmt = _hmt || [];
     
     
       <li class="md-tabs__item">
-        <a href="../../mb/" class="md-tabs__link">
+        <a href="../../../../mb/" class="md-tabs__link">
           
   
   
@@ -388,7 +386,7 @@ var _hmt = _hmt || [];
     
     
       <li class="md-tabs__item">
-        <a href="../../utils/" class="md-tabs__link">
+        <a href="../../../../utils/" class="md-tabs__link">
           
   
   
@@ -424,7 +422,7 @@ var _hmt = _hmt || [];
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="狙击美佐的笔记本" class="md-nav__button md-logo" aria-label="狙击美佐的笔记本" data-md-component="logo">
+    <a href="../../../.." title="狙击美佐的笔记本" class="md-nav__button md-logo" aria-label="狙击美佐的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"/></svg>
@@ -479,7 +477,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../../.." class="md-nav__link ">
               
   
   
@@ -514,7 +512,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
+      <a href="../../../../changelog/" class="md-nav__link">
         
   
   
@@ -537,7 +535,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../links/" class="md-nav__link">
+      <a href="../../../../links/" class="md-nav__link">
         
   
   
@@ -564,6 +562,8 @@ var _hmt = _hmt || [];
       
   
   
+    
+  
   
   
     
@@ -593,18 +593,21 @@ var _hmt = _hmt || [];
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -617,13 +620,13 @@ var _hmt = _hmt || [];
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -668,7 +671,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/pl/" class="md-nav__link ">
+            <a href="../../../pl/" class="md-nav__link ">
               
   
   
@@ -730,7 +733,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/pl/c_cpp/" class="md-nav__link ">
+            <a href="../../../pl/c_cpp/" class="md-nav__link ">
               
   
   
@@ -765,7 +768,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/c_cpp/basic/" class="md-nav__link">
+      <a href="../../../pl/c_cpp/basic/" class="md-nav__link">
         
   
   
@@ -788,7 +791,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/c_cpp/stl/" class="md-nav__link">
+      <a href="../../../pl/c_cpp/stl/" class="md-nav__link">
         
   
   
@@ -811,7 +814,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/c_cpp/function/" class="md-nav__link">
+      <a href="../../../pl/c_cpp/function/" class="md-nav__link">
         
   
   
@@ -869,7 +872,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/pl/python/" class="md-nav__link ">
+            <a href="../../../pl/python/" class="md-nav__link ">
               
   
   
@@ -904,7 +907,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/python/basic/" class="md-nav__link">
+      <a href="../../../pl/python/basic/" class="md-nav__link">
         
   
   
@@ -927,7 +930,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/python/numpy/" class="md-nav__link">
+      <a href="../../../pl/python/numpy/" class="md-nav__link">
         
   
   
@@ -950,7 +953,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/python/virtual/" class="md-nav__link">
+      <a href="../../../pl/python/virtual/" class="md-nav__link">
         
   
   
@@ -1006,7 +1009,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/pl/go/" class="md-nav__link ">
+            <a href="../../../pl/go/" class="md-nav__link ">
               
   
   
@@ -1041,7 +1044,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/go/basic/" class="md-nav__link">
+      <a href="../../../pl/go/basic/" class="md-nav__link">
         
   
   
@@ -1064,7 +1067,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/go/gin/" class="md-nav__link">
+      <a href="../../../pl/go/gin/" class="md-nav__link">
         
   
   
@@ -1120,7 +1123,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/pl/java/" class="md-nav__link ">
+            <a href="../../../pl/java/" class="md-nav__link ">
               
   
   
@@ -1155,7 +1158,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/java/basic/" class="md-nav__link">
+      <a href="../../../pl/java/basic/" class="md-nav__link">
         
   
   
@@ -1178,7 +1181,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/pl/java/springboot/" class="md-nav__link">
+      <a href="../../../pl/java/springboot/" class="md-nav__link">
         
   
   
@@ -1264,7 +1267,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithm/basic-ds/" class="md-nav__link">
+      <a href="../../../algorithm/basic-ds/" class="md-nav__link">
         
   
   
@@ -1287,7 +1290,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithm/design-analysis/" class="md-nav__link">
+      <a href="../../../algorithm/design-analysis/" class="md-nav__link">
         
   
   
@@ -1367,7 +1370,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ai/mode-recognition/" class="md-nav__link">
+      <a href="../../../ai/mode-recognition/" class="md-nav__link">
         
   
   
@@ -1390,7 +1393,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ai/ml/" class="md-nav__link">
+      <a href="../../../ai/ml/" class="md-nav__link">
         
   
   
@@ -1413,7 +1416,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ai/dl/" class="md-nav__link">
+      <a href="../../../ai/dl/" class="md-nav__link">
         
   
   
@@ -1475,7 +1478,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/hpc/" class="md-nav__link ">
+            <a href="../../../hpc/" class="md-nav__link ">
               
   
   
@@ -1510,7 +1513,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/hpc/outline/" class="md-nav__link">
+      <a href="../../../hpc/outline/" class="md-nav__link">
         
   
   
@@ -1533,7 +1536,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/hpc/vectorizecompute/" class="md-nav__link">
+      <a href="../../../hpc/vectorizecompute/" class="md-nav__link">
         
   
   
@@ -1556,7 +1559,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/hpc/gpu/" class="md-nav__link">
+      <a href="../../../hpc/gpu/" class="md-nav__link">
         
   
   
@@ -1579,7 +1582,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/hpc/mpi/" class="md-nav__link">
+      <a href="../../../hpc/mpi/" class="md-nav__link">
         
   
   
@@ -1602,7 +1605,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/hpc/openmp/" class="md-nav__link">
+      <a href="../../../hpc/openmp/" class="md-nav__link">
         
   
   
@@ -1662,7 +1665,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/software/" class="md-nav__link ">
+            <a href="../../../software/" class="md-nav__link ">
               
   
   
@@ -1697,7 +1700,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/software/design-pattern/" class="md-nav__link">
+      <a href="../../../software/design-pattern/" class="md-nav__link">
         
   
   
@@ -1720,7 +1723,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/software/sca/" class="md-nav__link">
+      <a href="../../../software/sca/" class="md-nav__link">
         
   
   
@@ -1743,7 +1746,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/software/compa/" class="md-nav__link">
+      <a href="../../../software/compa/" class="md-nav__link">
         
   
   
@@ -1766,7 +1769,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/software/piaserver/" class="md-nav__link">
+      <a href="../../../software/piaserver/" class="md-nav__link">
         
   
   
@@ -1844,7 +1847,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/db/mysql/" class="md-nav__link">
+      <a href="../../../db/mysql/" class="md-nav__link">
         
   
   
@@ -1916,7 +1919,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/db/redis/datatype/" class="md-nav__link">
+      <a href="../../../db/redis/datatype/" class="md-nav__link">
         
   
   
@@ -1939,7 +1942,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/db/redis/cjh/" class="md-nav__link">
+      <a href="../../../db/redis/cjh/" class="md-nav__link">
         
   
   
@@ -1962,7 +1965,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/db/redis/work/" class="md-nav__link">
+      <a href="../../../db/redis/work/" class="md-nav__link">
         
   
   
@@ -1998,6 +2001,8 @@ var _hmt = _hmt || [];
                 
   
   
+    
+  
   
   
     
@@ -2016,15 +2021,15 @@ var _hmt = _hmt || [];
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/sys/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -2043,7 +2048,7 @@ var _hmt = _hmt || [];
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             系统相关
@@ -2056,6 +2061,8 @@ var _hmt = _hmt || [];
                 
   
   
+    
+  
   
   
     
@@ -2078,15 +2085,15 @@ var _hmt = _hmt || [];
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/sys/6.5840/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2105,7 +2112,7 @@ var _hmt = _hmt || [];
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8_2">
             <span class="md-nav__icon md-icon"></span>
             MIT 6.5840
@@ -2121,7 +2128,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/sys/6.5840/mr/" class="md-nav__link">
+      <a href="../mr/" class="md-nav__link">
         
   
   
@@ -2144,7 +2151,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/sys/6.5840/kvsrv/" class="md-nav__link">
+      <a href="../kvsrv/" class="md-nav__link">
         
   
   
@@ -2164,10 +2171,32 @@ var _hmt = _hmt || [];
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../cs/sys/6.5840/raft/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lab3 - Raft
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2178,6 +2207,153 @@ var _hmt = _hmt || [];
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary " aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-3a-leader-election" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3A: leader election
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3A: leader election">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raft_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raft 节点 &amp; 各参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      投票
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="投票">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      接收方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      心跳机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="心跳机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      接收方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3b-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3B: log
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3c-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3C: persistence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3d-log-compaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3D: log compaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2251,7 +2427,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cs/others/regex/" class="md-nav__link">
+      <a href="../../../others/regex/" class="md-nav__link">
         
   
   
@@ -2322,7 +2498,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/" class="md-nav__link ">
+            <a href="../../../../cv/" class="md-nav__link ">
               
   
   
@@ -2396,7 +2572,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/mvg/" class="md-nav__link ">
+            <a href="../../../../cv/mvg/" class="md-nav__link ">
               
   
   
@@ -2431,7 +2607,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/pjt2d/" class="md-nav__link">
+      <a href="../../../../cv/mvg/pjt2d/" class="md-nav__link">
         
   
   
@@ -2454,7 +2630,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/pjt3d/" class="md-nav__link">
+      <a href="../../../../cv/mvg/pjt3d/" class="md-nav__link">
         
   
   
@@ -2477,7 +2653,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/est2d/" class="md-nav__link">
+      <a href="../../../../cv/mvg/est2d/" class="md-nav__link">
         
   
   
@@ -2500,7 +2676,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/eval/" class="md-nav__link">
+      <a href="../../../../cv/mvg/eval/" class="md-nav__link">
         
   
   
@@ -2523,7 +2699,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/camera-model/" class="md-nav__link">
+      <a href="../../../../cv/mvg/camera-model/" class="md-nav__link">
         
   
   
@@ -2546,7 +2722,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/calc-p/" class="md-nav__link">
+      <a href="../../../../cv/mvg/calc-p/" class="md-nav__link">
         
   
   
@@ -2569,7 +2745,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/one-vg/" class="md-nav__link">
+      <a href="../../../../cv/mvg/one-vg/" class="md-nav__link">
         
   
   
@@ -2592,7 +2768,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/ag-fm/" class="md-nav__link">
+      <a href="../../../../cv/mvg/ag-fm/" class="md-nav__link">
         
   
   
@@ -2615,7 +2791,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/mvg/3dr-camera-structure/" class="md-nav__link">
+      <a href="../../../../cv/mvg/3dr-camera-structure/" class="md-nav__link">
         
   
   
@@ -2669,7 +2845,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/pcd/" class="md-nav__link ">
+            <a href="../../../../cv/pcd/" class="md-nav__link ">
               
   
   
@@ -2729,7 +2905,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/pcd/pcr/" class="md-nav__link ">
+            <a href="../../../../cv/pcd/pcr/" class="md-nav__link ">
               
   
   
@@ -2764,7 +2940,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/pcd/pcr/prepare/" class="md-nav__link">
+      <a href="../../../../cv/pcd/pcr/prepare/" class="md-nav__link">
         
   
   
@@ -2787,7 +2963,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/pcd/pcr/icp/" class="md-nav__link">
+      <a href="../../../../cv/pcd/pcr/icp/" class="md-nav__link">
         
   
   
@@ -2863,7 +3039,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/dataset/" class="md-nav__link ">
+            <a href="../../../../cv/dataset/" class="md-nav__link ">
               
   
   
@@ -2898,7 +3074,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/tum/" class="md-nav__link">
+      <a href="../../../../cv/dataset/tum/" class="md-nav__link">
         
   
   
@@ -2921,7 +3097,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/bonn/" class="md-nav__link">
+      <a href="../../../../cv/dataset/bonn/" class="md-nav__link">
         
   
   
@@ -2944,7 +3120,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/kitti/" class="md-nav__link">
+      <a href="../../../../cv/dataset/kitti/" class="md-nav__link">
         
   
   
@@ -2967,7 +3143,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/waymo/" class="md-nav__link">
+      <a href="../../../../cv/dataset/waymo/" class="md-nav__link">
         
   
   
@@ -2990,7 +3166,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/endonerf/" class="md-nav__link">
+      <a href="../../../../cv/dataset/endonerf/" class="md-nav__link">
         
   
   
@@ -3013,7 +3189,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/stereomis/" class="md-nav__link">
+      <a href="../../../../cv/dataset/stereomis/" class="md-nav__link">
         
   
   
@@ -3036,7 +3212,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/hamlyn/" class="md-nav__link">
+      <a href="../../../../cv/dataset/hamlyn/" class="md-nav__link">
         
   
   
@@ -3059,7 +3235,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/dataset/scared/" class="md-nav__link">
+      <a href="../../../../cv/dataset/scared/" class="md-nav__link">
         
   
   
@@ -3125,7 +3301,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/" class="md-nav__link ">
+            <a href="../../../../cv/papers/" class="md-nav__link ">
               
   
   
@@ -3187,7 +3363,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/pcd/" class="md-nav__link ">
+            <a href="../../../../cv/papers/pcd/" class="md-nav__link ">
               
   
   
@@ -3222,7 +3398,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/pcd/geotransformer/" class="md-nav__link">
+      <a href="../../../../cv/papers/pcd/geotransformer/" class="md-nav__link">
         
   
   
@@ -3245,7 +3421,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/pcd/mac/" class="md-nav__link">
+      <a href="../../../../cv/papers/pcd/mac/" class="md-nav__link">
         
   
   
@@ -3268,7 +3444,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/pcd/fastmac/" class="md-nav__link">
+      <a href="../../../../cv/papers/pcd/fastmac/" class="md-nav__link">
         
   
   
@@ -3332,7 +3508,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/dynamic-slam/" class="md-nav__link ">
+            <a href="../../../../cv/papers/dynamic-slam/" class="md-nav__link ">
               
   
   
@@ -3367,7 +3543,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/dynamic-slam/dynaslam/" class="md-nav__link">
+      <a href="../../../../cv/papers/dynamic-slam/dynaslam/" class="md-nav__link">
         
   
   
@@ -3390,7 +3566,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/dynamic-slam/ds-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/dynamic-slam/ds-slam/" class="md-nav__link">
         
   
   
@@ -3413,7 +3589,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/dynamic-slam/detect-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/dynamic-slam/detect-slam/" class="md-nav__link">
         
   
   
@@ -3436,7 +3612,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/dynamic-slam/flowfusion/" class="md-nav__link">
+      <a href="../../../../cv/papers/dynamic-slam/flowfusion/" class="md-nav__link">
         
   
   
@@ -3459,7 +3635,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/dynamic-slam/rigidfusion/" class="md-nav__link">
+      <a href="../../../../cv/papers/dynamic-slam/rigidfusion/" class="md-nav__link">
         
   
   
@@ -3482,7 +3658,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/dynamic-slam/crowd-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/dynamic-slam/crowd-slam/" class="md-nav__link">
         
   
   
@@ -3546,7 +3722,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/nerf/" class="md-nav__link ">
+            <a href="../../../../cv/papers/nerf/" class="md-nav__link ">
               
   
   
@@ -3581,7 +3757,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/nerf/nerf/" class="md-nav__link">
+      <a href="../../../../cv/papers/nerf/nerf/" class="md-nav__link">
         
   
   
@@ -3604,7 +3780,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/nerf/imap/" class="md-nav__link">
+      <a href="../../../../cv/papers/nerf/imap/" class="md-nav__link">
         
   
   
@@ -3627,7 +3803,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/nerf/co-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/nerf/co-slam/" class="md-nav__link">
         
   
   
@@ -3650,7 +3826,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/nerf/nice-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/nerf/nice-slam/" class="md-nav__link">
         
   
   
@@ -3673,7 +3849,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/nerf/nid-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/nerf/nid-slam/" class="md-nav__link">
         
   
   
@@ -3696,7 +3872,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/nerf/ddn-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/nerf/ddn-slam/" class="md-nav__link">
         
   
   
@@ -3768,7 +3944,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/3dgs/" class="md-nav__link ">
+            <a href="../../../../cv/papers/3dgs/" class="md-nav__link ">
               
   
   
@@ -3803,7 +3979,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/3dgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/3dgs/" class="md-nav__link">
         
   
   
@@ -3826,7 +4002,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/4dgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/4dgs/" class="md-nav__link">
         
   
   
@@ -3849,7 +4025,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/splatam/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/splatam/" class="md-nav__link">
         
   
   
@@ -3872,7 +4048,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/monogs/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/monogs/" class="md-nav__link">
         
   
   
@@ -3895,7 +4071,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/loop-splat/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/loop-splat/" class="md-nav__link">
         
   
   
@@ -3918,7 +4094,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/splat-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/splat-slam/" class="md-nav__link">
         
   
   
@@ -3941,7 +4117,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/wildgs-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/wildgs-slam/" class="md-nav__link">
         
   
   
@@ -3964,7 +4140,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/4dtam/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/4dtam/" class="md-nav__link">
         
   
   
@@ -3987,7 +4163,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/4dgs-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/4dgs-slam/" class="md-nav__link">
         
   
   
@@ -4010,7 +4186,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/3dgs/freetimegs/" class="md-nav__link">
+      <a href="../../../../cv/papers/3dgs/freetimegs/" class="md-nav__link">
         
   
   
@@ -4094,7 +4270,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/ffm/" class="md-nav__link ">
+            <a href="../../../../cv/papers/ffm/" class="md-nav__link ">
               
   
   
@@ -4129,7 +4305,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/dust3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/dust3r/" class="md-nav__link">
         
   
   
@@ -4152,7 +4328,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/mast3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/mast3r/" class="md-nav__link">
         
   
   
@@ -4175,7 +4351,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/spann3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/spann3r/" class="md-nav__link">
         
   
   
@@ -4198,7 +4374,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/fast3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/fast3r/" class="md-nav__link">
         
   
   
@@ -4221,7 +4397,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/instant-splat/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/instant-splat/" class="md-nav__link">
         
   
   
@@ -4244,7 +4420,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/monst3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/monst3r/" class="md-nav__link">
         
   
   
@@ -4267,7 +4443,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/das3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/das3r/" class="md-nav__link">
         
   
   
@@ -4290,7 +4466,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/cut3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/cut3r/" class="md-nav__link">
         
   
   
@@ -4313,7 +4489,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/easi3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/easi3r/" class="md-nav__link">
         
   
   
@@ -4336,7 +4512,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/mast3r-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/mast3r-slam/" class="md-nav__link">
         
   
   
@@ -4359,7 +4535,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/slam3r/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/slam3r/" class="md-nav__link">
         
   
   
@@ -4382,7 +4558,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/vggt/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/vggt/" class="md-nav__link">
         
   
   
@@ -4405,7 +4581,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/vggt-slam/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/vggt-slam/" class="md-nav__link">
         
   
   
@@ -4428,7 +4604,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/vggt-long/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/vggt-long/" class="md-nav__link">
         
   
   
@@ -4451,7 +4627,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/anycam/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/anycam/" class="md-nav__link">
         
   
   
@@ -4474,7 +4650,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/ffm/page-4d/" class="md-nav__link">
+      <a href="../../../../cv/papers/ffm/page-4d/" class="md-nav__link">
         
   
   
@@ -4548,7 +4724,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/endo/" class="md-nav__link ">
+            <a href="../../../../cv/papers/endo/" class="md-nav__link ">
               
   
   
@@ -4583,7 +4759,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/endoscopy-depth-estimation/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/endoscopy-depth-estimation/" class="md-nav__link">
         
   
   
@@ -4606,7 +4782,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/endo-4dgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/endo-4dgs/" class="md-nav__link">
         
   
   
@@ -4629,7 +4805,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/endogaussian/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/endogaussian/" class="md-nav__link">
         
   
   
@@ -4652,7 +4828,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/endogs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/endogs/" class="md-nav__link">
         
   
   
@@ -4675,7 +4851,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/lgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/lgs/" class="md-nav__link">
         
   
   
@@ -4698,7 +4874,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/st-endo4dgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/st-endo4dgs/" class="md-nav__link">
         
   
   
@@ -4721,7 +4897,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/deform3dgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/deform3dgs/" class="md-nav__link">
         
   
   
@@ -4744,7 +4920,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/eh-surgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/eh-surgs/" class="md-nav__link">
         
   
   
@@ -4767,7 +4943,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/endo-4dgx/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/endo-4dgx/" class="md-nav__link">
         
   
   
@@ -4790,7 +4966,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/colorgs/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/colorgs/" class="md-nav__link">
         
   
   
@@ -4813,7 +4989,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/endo/d4recon/" class="md-nav__link">
+      <a href="../../../../cv/papers/endo/d4recon/" class="md-nav__link">
         
   
   
@@ -4875,7 +5051,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/others/" class="md-nav__link ">
+            <a href="../../../../cv/papers/others/" class="md-nav__link ">
               
   
   
@@ -4935,7 +5111,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/papers/others/vslam14/" class="md-nav__link ">
+            <a href="../../../../cv/papers/others/vslam14/" class="md-nav__link ">
               
   
   
@@ -4970,7 +5146,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/others/vslam14/lec1/" class="md-nav__link">
+      <a href="../../../../cv/papers/others/vslam14/lec1/" class="md-nav__link">
         
   
   
@@ -4993,7 +5169,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/others/vslam14/lec2/" class="md-nav__link">
+      <a href="../../../../cv/papers/others/vslam14/lec2/" class="md-nav__link">
         
   
   
@@ -5024,7 +5200,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/others/orbslam2/" class="md-nav__link">
+      <a href="../../../../cv/papers/others/orbslam2/" class="md-nav__link">
         
   
   
@@ -5047,7 +5223,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/others/let-net/" class="md-nav__link">
+      <a href="../../../../cv/papers/others/let-net/" class="md-nav__link">
         
   
   
@@ -5070,7 +5246,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/others/deepv2d/" class="md-nav__link">
+      <a href="../../../../cv/papers/others/deepv2d/" class="md-nav__link">
         
   
   
@@ -5093,7 +5269,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/papers/others/reconstruction-evaluation/" class="md-nav__link">
+      <a href="../../../../cv/papers/others/reconstruction-evaluation/" class="md-nav__link">
         
   
   
@@ -5155,7 +5331,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cv/utils/" class="md-nav__link ">
+            <a href="../../../../cv/utils/" class="md-nav__link ">
               
   
   
@@ -5190,7 +5366,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/utils/colmap/" class="md-nav__link">
+      <a href="../../../../cv/utils/colmap/" class="md-nav__link">
         
   
   
@@ -5221,7 +5397,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../cv/3d-visualization/" class="md-nav__link">
+      <a href="../../../../cv/3d-visualization/" class="md-nav__link">
         
   
   
@@ -5248,8 +5424,6 @@ var _hmt = _hmt || [];
       
   
   
-    
-  
   
   
     
@@ -5273,21 +5447,18 @@ var _hmt = _hmt || [];
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../../llm/" class="md-nav__link ">
               
   
   
@@ -5300,13 +5471,13 @@ var _hmt = _hmt || [];
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             LLM
@@ -5347,7 +5518,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../nlp/" class="md-nav__link ">
+            <a href="../../../../llm/nlp/" class="md-nav__link ">
               
   
   
@@ -5382,7 +5553,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../nlp/word2vec/" class="md-nav__link">
+      <a href="../../../../llm/nlp/word2vec/" class="md-nav__link">
         
   
   
@@ -5405,7 +5576,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../nlp/rnns/" class="md-nav__link">
+      <a href="../../../../llm/nlp/rnns/" class="md-nav__link">
         
   
   
@@ -5465,7 +5636,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../transformer/" class="md-nav__link ">
+            <a href="../../../../llm/transformer/" class="md-nav__link ">
               
   
   
@@ -5500,7 +5671,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../transformer/attention/" class="md-nav__link">
+      <a href="../../../../llm/transformer/attention/" class="md-nav__link">
         
   
   
@@ -5523,7 +5694,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../transformer/transformer/" class="md-nav__link">
+      <a href="../../../../llm/transformer/transformer/" class="md-nav__link">
         
   
   
@@ -5546,7 +5717,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../transformer/bert/" class="md-nav__link">
+      <a href="../../../../llm/transformer/bert/" class="md-nav__link">
         
   
   
@@ -5569,7 +5740,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../transformer/vit/" class="md-nav__link">
+      <a href="../../../../llm/transformer/vit/" class="md-nav__link">
         
   
   
@@ -5597,8 +5768,6 @@ var _hmt = _hmt || [];
                 
   
   
-    
-  
   
   
     
@@ -5627,15 +5796,15 @@ var _hmt = _hmt || [];
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../../llm/internlm/" class="md-nav__link ">
               
   
   
@@ -5648,13 +5817,13 @@ var _hmt = _hmt || [];
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             书生·浦语大模型实战营
@@ -5670,7 +5839,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="lec1/" class="md-nav__link">
+      <a href="../../../../llm/internlm/lec1/" class="md-nav__link">
         
   
   
@@ -5693,7 +5862,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="lec2/" class="md-nav__link">
+      <a href="../../../../llm/internlm/lec2/" class="md-nav__link">
         
   
   
@@ -5716,7 +5885,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="lec3/" class="md-nav__link">
+      <a href="../../../../llm/internlm/lec3/" class="md-nav__link">
         
   
   
@@ -5739,7 +5908,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="lec4/" class="md-nav__link">
+      <a href="../../../../llm/internlm/lec4/" class="md-nav__link">
         
   
   
@@ -5762,7 +5931,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="lec5/" class="md-nav__link">
+      <a href="../../../../llm/internlm/lec5/" class="md-nav__link">
         
   
   
@@ -5785,7 +5954,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="lec6/" class="md-nav__link">
+      <a href="../../../../llm/internlm/lec6/" class="md-nav__link">
         
   
   
@@ -5839,7 +6008,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../dw2025winter/" class="md-nav__link ">
+            <a href="../../../../llm/dw2025winter/" class="md-nav__link ">
               
   
   
@@ -5874,7 +6043,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../dw2025winter/lec1/" class="md-nav__link">
+      <a href="../../../../llm/dw2025winter/lec1/" class="md-nav__link">
         
   
   
@@ -5952,7 +6121,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../others/prompt/" class="md-nav__link">
+      <a href="../../../../llm/others/prompt/" class="md-nav__link">
         
   
   
@@ -5975,7 +6144,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../others/dt/" class="md-nav__link">
+      <a href="../../../../llm/others/dt/" class="md-nav__link">
         
   
   
@@ -6040,7 +6209,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mb/" class="md-nav__link ">
+            <a href="../../../../mb/" class="md-nav__link ">
               
   
   
@@ -6102,7 +6271,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mb/optimization-theory/" class="md-nav__link ">
+            <a href="../../../../mb/optimization-theory/" class="md-nav__link ">
               
   
   
@@ -6137,7 +6306,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/optimization-theory/lec1/" class="md-nav__link">
+      <a href="../../../../mb/optimization-theory/lec1/" class="md-nav__link">
         
   
   
@@ -6160,7 +6329,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/optimization-theory/lec2/" class="md-nav__link">
+      <a href="../../../../mb/optimization-theory/lec2/" class="md-nav__link">
         
   
   
@@ -6183,7 +6352,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/optimization-theory/lec3/" class="md-nav__link">
+      <a href="../../../../mb/optimization-theory/lec3/" class="md-nav__link">
         
   
   
@@ -6241,7 +6410,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mb/maa/" class="md-nav__link ">
+            <a href="../../../../mb/maa/" class="md-nav__link ">
               
   
   
@@ -6276,7 +6445,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/maa/lec1/" class="md-nav__link">
+      <a href="../../../../mb/maa/lec1/" class="md-nav__link">
         
   
   
@@ -6299,7 +6468,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/maa/lec2/" class="md-nav__link">
+      <a href="../../../../mb/maa/lec2/" class="md-nav__link">
         
   
   
@@ -6322,7 +6491,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/maa/lec3/" class="md-nav__link">
+      <a href="../../../../mb/maa/lec3/" class="md-nav__link">
         
   
   
@@ -6353,7 +6522,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../mb/comb/" class="md-nav__link">
+      <a href="../../../../mb/comb/" class="md-nav__link">
         
   
   
@@ -6416,7 +6585,7 @@ var _hmt = _hmt || [];
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../utils/" class="md-nav__link ">
+            <a href="../../../../utils/" class="md-nav__link ">
               
   
   
@@ -6451,7 +6620,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/utilsbox/" class="md-nav__link">
+      <a href="../../../../utils/utilsbox/" class="md-nav__link">
         
   
   
@@ -6525,7 +6694,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/shell/" class="md-nav__link">
+      <a href="../../../../utils/shell/" class="md-nav__link">
         
   
   
@@ -6548,7 +6717,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/git/" class="md-nav__link">
+      <a href="../../../../utils/git/" class="md-nav__link">
         
   
   
@@ -6571,7 +6740,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/docker/" class="md-nav__link">
+      <a href="../../../../utils/docker/" class="md-nav__link">
         
   
   
@@ -6594,7 +6763,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/gdb/" class="md-nav__link">
+      <a href="../../../../utils/gdb/" class="md-nav__link">
         
   
   
@@ -6670,7 +6839,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/action/" class="md-nav__link">
+      <a href="../../../../utils/action/" class="md-nav__link">
         
   
   
@@ -6752,7 +6921,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/reveal-md/" class="md-nav__link">
+      <a href="../../../../utils/reveal-md/" class="md-nav__link">
         
   
   
@@ -6775,7 +6944,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/gitbook/" class="md-nav__link">
+      <a href="../../../../utils/gitbook/" class="md-nav__link">
         
   
   
@@ -6798,7 +6967,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/mkdocs/" class="md-nav__link">
+      <a href="../../../../utils/mkdocs/" class="md-nav__link">
         
   
   
@@ -6821,7 +6990,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/hexo/" class="md-nav__link">
+      <a href="../../../../utils/hexo/" class="md-nav__link">
         
   
   
@@ -6899,7 +7068,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/ffmpeg/" class="md-nav__link">
+      <a href="../../../../utils/ffmpeg/" class="md-nav__link">
         
   
   
@@ -6922,7 +7091,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/imagemagick/" class="md-nav__link">
+      <a href="../../../../utils/imagemagick/" class="md-nav__link">
         
   
   
@@ -6998,7 +7167,7 @@ var _hmt = _hmt || [];
   
   
     <li class="md-nav__item">
-      <a href="../../utils/wandb/" class="md-nav__link">
+      <a href="../../../../utils/wandb/" class="md-nav__link">
         
   
   
@@ -7058,9 +7227,126 @@ var _hmt = _hmt || [];
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#part-3a-leader-election" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      Part 3A: leader election
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3A: leader election">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raft_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raft 节点 &amp; 各参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      投票
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="投票">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      接收方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      心跳机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="心跳机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      接收方
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3b-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3B: log
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3c-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3C: persistence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3d-log-compaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3D: log compaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -7088,63 +7374,111 @@ var _hmt = _hmt || [];
   
 
 
-<h1 id="_1">书生·浦语大模型实战营<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="raft">Raft<a class="headerlink" href="#raft" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>归档有关书生·浦语大模型实战营的课程笔记。</p>
 <ul>
-<li>仓库地址：<a href="https://github.com/InternLM/tutorial?tab=readme-ov-file"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> InternLM/tutorial</a></li>
-<li>算力平台：<a href="https://studio.intern-ai.org.cn/console/dashboard">InternStudio</a></li>
+<li>Raft 是一种复制状态机协议，一个复制服务通过多个副本 server 上存储其状态（数据）的完整副本来实现容错，复制使其即使部分 server 出现故障（崩溃或网络中断、不稳定），服务仍能继续运行，但问题在于，故障可能导致各个副本保存的数据不一致；</li>
+<li>Raft 将 client requests 组织成一个序列（日志），并确保所有副本 servers 都能看到相同的日志。每个副本按照日志的顺序执行 client requests，将其应用于服务状态的本地副本；</li>
+<li>由于所有正常运行的副本都能看到相同的日志内容，它们都会以相同顺序执行相同的 requests，从而保持一致性服务状态；</li>
+<li>如果某个 server 发生故障但之后恢复，Raft 会负责使其日志更新到最新状态；</li>
+<li>只要至少大多数 server 处于活跃状态且能够相互通信，Raft 就会继续运行；</li>
+<li>Raft 只能满足 CAP 理论中的 <strong>CP</strong>；</li>
+<li>paper: <img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:" /> <a href="http://nil.csail.mit.edu/6.5840/2023/papers/raft-extended.pdf">In Search of an Understandable Consensus Algorithm</a></li>
+<li>home: <a href="https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html">https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html</a></li>
+<li><a href="https://thesquareplanet.com/blog/students-guide-to-raft/">Students' Guide to Raft</a></li>
+<li><a href="https://thesecretlivesofdata.com/raft/">Visualization of Raft</a></li>
 </ul>
-<p><center><a class="glightbox" href="/assets/images/llm/internlm/camp.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img src="/assets/images/llm/internlm/camp.png"></a></center></p>
 </div>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th align="left">课程时间</th>
-<th align="left">课程内容</th>
-<th align="left">讲师</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">第 1 节</td>
-<td align="left">书生·浦语大模型全链路开源开放体系</td>
-<td align="left">陈恺 </br>上海人工智能实验室青年科学家</td>
-</tr>
-<tr>
-<td align="left">第 2 节</td>
-<td align="left">轻松分钟玩转书生·浦语大模型趣味 Demo</td>
-<td align="left">宋志学</br>d2l-ai-solutions-manual 开源项目负责人</td>
-</tr>
-<tr>
-<td align="left">第 3 节</td>
-<td align="left">基于 InternLM 和 Langchain 搭建你的知识库</td>
-<td align="left">邹雨衡</br>prompt-engineering-for-developers 开源项目负责人</td>
-</tr>
-<tr>
-<td align="left">第 4 节</td>
-<td align="left">XTuner 大模型单卡低成本微调实战</td>
-<td align="left">汪周谦</br>XTuner 社区贡献者</td>
-</tr>
-<tr>
-<td align="left">第 5 节</td>
-<td align="left">LMDeploy 大模型量化部署实践</td>
-<td align="left">长琴</br>HuggingLLM开源项目负责人</td>
-</tr>
-<tr>
-<td align="left">第 6 节</td>
-<td align="left">OpenCompass 大模型评测解读及实战指南</td>
-<td align="left">曹茂松</br>OpenCompass 核心开发者</br></br>王努</br>OpenCompass 社区贡献者</td>
-</tr>
-<tr>
-<td align="left">第 7 节</td>
-<td align="left">彩蛋环节</td>
-<td align="left">神秘嘉宾</td>
-</tr>
-</tbody>
-</table>
+<div class="admonition tip">
+<p class="admonition-title">Lab Materials</p>
+<ul>
+<li>raft1/raft.go：Raft 的框架代码，包含发送 <code>sendRequestVote()</code> 和接收 <code>RequestVote()</code> RPC；</li>
+</ul>
+</div>
+<h2 id="part-3a-leader-election">Part 3A: leader election<a class="headerlink" href="#part-3a-leader-election" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">leader election</p>
+<ul>
+<li>实现 Raft 的 leader 选举和 heartbeats 机制（不带日志条目的 AppendEntries RPC）；</li>
+<li>目标是选举出一个单一的 leader，在没有故障的情况下该 leader 保持其地位，并且当旧 leader 发生故障或旧 leader 之间的数据包丢失时，有新 leader 接管；</li>
+</ul>
+</div>
+<h3 id="raft_1">Raft 节点 &amp; 各参数<a class="headerlink" href="#raft_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>单个 raft 节点、RequestVote RPC、AppendEntries RPC 的各个变量需完全遵循 paper 里的<strong>图2</strong>！</li>
+<li>每个 raft 节点可以是 leader | candidate | follower，都可以发送和接收 RPC，维护唯一一个运行的 goroutine；</li>
+<li>每个 raft 节点都有一个选举定时器，每次收到 heartbeat 或 log 的 RPC 时，都会重置选举定时器，发送者是 leader，接收者是 follwer，一旦选举定时器超时，节点转化为 candidate 并进行投票选举；</li>
+</ol>
+<h3 id="_1">投票<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><code>ticker()</code>：运行在每个节点上，判断是否需要投票。</p>
+</blockquote>
+<h4 id="_2">发送方<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>若当前节点不是 leader 并且上一次心跳间隔 &gt; 选举定时器，就要触发 leader election；</li>
+<li>变量的定义，state 变为 candidate、term++、给自己投票、重置心跳时间戳等；</li>
+<li>依次请求其他 raft 节点进行投票 <code>sendRequestVote()</code>，注意 term 的变更；</li>
+</ul>
+<h4 id="_3">接收方<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>RequestVote()</code> 接收来自 candidate 的投票请求；</li>
+<li>根据自己角色的不同采取不同的投票措施，注意 votedFor 的变更;</li>
+</ul>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ol>
+<li>若投票超半数，则当选 leader 并广播给其他节点，否则重新一轮选举；</li>
+<li>避免脑裂：每个 candidate 都给自己投票，如果只有两个 follower 并且转化成 candidate 发起选举，都给自己投一票，就会形成脑裂，解决办法就是<strong>随机设置选举定时器的超时时间</strong>，至少超过 leader 的心跳间隔；</li>
+<li>心跳机制和发起投票是并行的，即使当前 candidate 正在选举，一旦选举计时器出发，应该开始另一次选举，避免 RPC 延迟或丢失；</li>
+</ol>
+</div>
+<h3 id="_4">心跳机制<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>leader 在任期期间，会不间断地发送心跳给所有 follower，防止触发超时选举；</li>
+<li>和 <code>AppendEntries()</code> RPC 相同，只是参数为空，表示发送心跳；</li>
+</ul>
+</blockquote>
+<h4 id="_5">发送方<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>与 <code>ticker()</code> 类似，区别在于当前角色是不是 leader，如果是则发送心跳给其他 follower，否则等待；</li>
+</ul>
+<h4 id="_6">接收方<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>AppendEntries()</code>：接收来自 leader 的追加条目，当前 Part 3A 不涉及日志相关，所以只更新一些参数变更如 term、心跳时间戳等；</li>
+</ul>
+<h2 id="part-3b-log">Part 3B: log<a class="headerlink" href="#part-3b-log" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">log</p>
+<ul>
+<li>实现日志存储；</li>
+</ul>
+</div>
+<div class="admonition solve">
+<p class="admonition-title">Solve</p>
+</div>
+<h2 id="part-3c-persistence">Part 3C: persistence<a class="headerlink" href="#part-3c-persistence" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">persistence</p>
+</div>
+<div class="admonition solve">
+<p class="admonition-title">Solve</p>
+</div>
+<h2 id="part-3d-log-compaction">Part 3D: log compaction<a class="headerlink" href="#part-3d-log-compaction" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">log compaction</p>
+</div>
+<div class="admonition solve">
+<p class="admonition-title">Solve</p>
+</div>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/702642993">【论文解读 第1期】Raft共识算法论文翻译</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Kz4y1H7gw?vd_source=c5fdcb7e8bfbd07851554854d73aa1fa">解析分布式共识算法之Raft算法</a></li>
+<li><a href="https://vanilla-beauty.github.io/categories/CS%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/MIT6-5840-6-824-2023/">MIT6.5840(6.824)</a></li>
+</ul>
 
 
 
@@ -7155,9 +7489,6 @@ var _hmt = _hmt || [];
 
 
 
-
-  
-  
 
 
 
@@ -7191,7 +7522,7 @@ var _hmt = _hmt || [];
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../transformer/vit/" class="md-footer__link md-footer__link--prev" aria-label="上一页: ViT">
+          <a href="../kvsrv/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Lab2 - K/V Server">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7201,20 +7532,20 @@ var _hmt = _hmt || [];
                 上一页
               </span>
               <div class="md-ellipsis">
-                ViT
+                Lab2 - K/V Server
               </div>
             </div>
           </a>
         
         
           
-          <a href="lec1/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第一节">
+          <a href="../../../others/regex/" class="md-footer__link md-footer__link--next" aria-label="下一页: RegEx 正则表达式">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                第一节
+                RegEx 正则表达式
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -7297,14 +7628,14 @@ var _hmt = _hmt || [];
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../assets/utils/katex.min.js"></script>
+        <script src="../../../../assets/utils/katex.min.js"></script>
       
-        <script src="../../js/katex.js"></script>
+        <script src="../../../../js/katex.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
