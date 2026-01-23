@@ -8,17 +8,17 @@
 
 ## Table of Contents
 
-- [Lab1 - MapReduce](mr.md/)
-- [Lab2 - Key/Value Server](kvsrv.md/)
-- [Lab3 - Raft](raft.md/)
-    - Part 3A: Leader Election
-    - Part 3B: Log
-    - Part 3C: Persistence
-    - Part 3D: Log Compaction
-- Lab 4 - Fault-tolerant Key/Value Service
-    - Part A: replicated state machine (RSM)
-    - Part B: Key/value service without snapshots
-    - Part C: Key/value service with snapshots
+- [x] [Lab1 - MapReduce](mr.md/)
+- [x] [Lab2 - Key/Value Server](kvsrv.md/)
+- [ ] [Lab3 - Raft](raft.md/)
+    - [x] Part 3A: Leader Election
+    - [x] Part 3B: Log
+    - [ ] Part 3C: Persistence
+    - [ ] Part 3D: Log Compaction
+- [ ] Lab 4 - Fault-tolerant Key/Value Service
+    - [ ] Part A: replicated state machine (RSM)
+    - [ ] Part B: Key/value service without snapshots
+    - [ ] Part C: Key/value service with snapshots
 
 ## Reference
 
