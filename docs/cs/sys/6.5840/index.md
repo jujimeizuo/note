@@ -13,7 +13,7 @@
 - [ ] [Lab3 - Raft](raft.md/)
     - [x] Part 3A: Leader Election
     - [x] Part 3B: Log
-    - [ ] Part 3C: Persistence
+    - [x] Part 3C: Persistence
     - [ ] Part 3D: Log Compaction
 - [ ] Lab 4 - Fault-tolerant Key/Value Service
     - [ ] Part A: replicated state machine (RSM)

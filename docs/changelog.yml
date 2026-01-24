@@ -1,4 +1,8 @@
 - "2026":
+  - "2026-01-24":
+    - pageupdate:
+        text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3B - persistence
+        href: /cs/sys/6.5840/raft/#part-3c-persistence/
   - "2026-01-23":
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3B - log

@@ -1,3 +1,10 @@
+---
+
+counter: True
+
+comment: True
+
+---
 # Raft
 
 > [!abstract]
@@ -103,7 +110,11 @@
 - 同样是一个轮询的协程，用条件变量来实现；
 - 不断检查 `rf.commitIndex > rf.lastApplied`，然后封装 ApplyMsg 并通过 applyCh 发送给应用层；
 
-### 快速回退
+### 日志冲突
+
+#### 快速回退
+
+> 当日志的长度小于 `args.PrevLogIndex` 或者该 index 下的 `Term` 不同时，触发快速回退；
 
 > [!Question] RPC 次数
 > 当日志冲突时，如果采用逐条日志回退，导致 `AppendEntries` 的 RPC 次数增多，所以采用快速回退的优化机制，能使 leader 能够一次性地跳过整个冲突的 Term，减少 RPC 次数。
@@ -112,8 +123,8 @@
 - 定义三个变量 XTerm、XLen、XIndex：
 	- XTerm：冲突 log 对应的 Term，如果 PrevLogIndex 位置上没有 log 则为 -1；
 	- XIndex：follower 上对应 Term 为 XTerm 的第一条 Log 的 index；
-	- XLen：follower 日志的实际总长度；
-#### follower 发现日志冲突
+	- XLen：空白的 Log 槽位数（代码中写为 follower 日志的实际总长度）；
+##### follower 发现日志冲突
 
 ```go
 // fast rollback
@@ -130,7 +141,7 @@ if len(rf.log) <= args.PrevLogIndex {
 }
 ```
 
-#### leader 调整日志冲突
+##### leader 调整日志冲突
 
 ```go
 if reply.XTerm == -1 {
@@ -149,7 +160,7 @@ if reply.XTerm == -1 {
 }
 ```
 
-#### follower 处理日志冲突
+##### follower 处理日志冲突
 
 ```go
 conflictIndex := -1
@@ -168,6 +179,26 @@ if conflictIndex != -1 {
 }
 ```
 
+#### 普通冲突
+
+> 当 `args.PrevLogIndex` 下的 `Term` 相同时，不能保证后续 `index` 下的 `Term` 继续相同，需要截断处理，并且追加该 `index` 后的新 log；
+
+- 假设 leader 的 index 和 term 分别为 [1, 1, 2, 3]，`args.PrevLogIndex` 为 3；
+
+1. case 1：follower [1, 1, 2, 2]，发现最后一个 Term 不同，所以先截断 [2] 然后添加 [3] 处的日志；
+2. case 2：follower [1, 1, 2, 3, 3, 3]，发现 follower 和 leader 的日志保持一致并且多出 [3, 3]，根据 paper 中提到 “**If an existing entry conflicts with a new one (same index but different terms), delete the existing entry and all that follow it (§5.3)**”，不需要截断超出的 log（可能是网络延迟或故障，leader 实际上已经有了 [3, 3]），当然截断超出的 log 也是正确的；
+
+```go
+for i, entry := range args.Entries {
+	index := args.PrevLogIndex + 1 + i
+	if index >= len(rf.log) || rf.log[index].TermId != entry.TermId {
+		rf.log = append(rf.log[:index], args.Entries[i:]...)
+		rf.persist()
+		break
+	}
+}
+```
+
 ---
 
 > [!Tip]
@@ -175,11 +206,28 @@ if conflictIndex != -1 {
 > - `LastLogTerm > rf.log[len(rf.log)-1].TermId`
 > - `LastLogTerm == rf.log[len(rf.log)-1].TermId && LastLogIndex ≥ len(rf.log)-1`
 
+
 ## Part 3C: persistence
 
 > [!Question] persistence
+> - 如果一个 server 挂掉后重启，需要利用持久化存储的数据恢复节点的状态；
+> - 持久化的内容是什么？
+> - 什么时候持久化？
 
+### 持久化内容
 
+1. `votedFor`：当前 Term 内收到本节点选票的 CandidateId；
+	- 确保一个 Term 只能投一票；
+	- 如果没有持久化，节点重启后不知道自己是否投过票，可能导致在同一 Term 投票给另一个 Candidate，随后出现两个 leader；
+2. `currentTerm`：服务器已知最新的 Term；
+	- 防止一个节点在同一 Term 内投出两张票，或者旧 leader 重启时认为自己仍是当前 leader；
+3. `log`：需要 log 来恢复状态机，并与其他节点进行日志匹配与同步；
+4. 其他数据不需要持久化，因为可以通过心跳的方式逐步推理获取；
+
+### 持久化时机
+
+- 数据持久化到硬盘的开销远大于 RPC，所以在除开必要持久化外得越少越好；
+- 所有修改 `votedFor`、`currentTerm` 和 `log` 操作后，必须要持久化；
 
 ## Part 3D: log compaction
 
