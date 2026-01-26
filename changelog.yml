@@ -1,7 +1,11 @@
 - "2026":
+  - "2026-01-26":
+    - pageupdate:
+        text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3D - log compaction
+        href: /cs/sys/6.5840/raft/#part-3d-log-compaction/
   - "2026-01-24":
     - pageupdate:
-        text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3B - persistence
+        text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3C - persistence
         href: /cs/sys/6.5840/raft/#part-3c-persistence/
   - "2026-01-23":
     - pageupdate:
