@@ -46,20 +46,21 @@ comment: True
 #### 发送方
 
 - 若当前节点不是 leader 并且上一次心跳间隔 > 选举定时器，就要触发 leader election；
-- 变量的定义，state 变为 candidate、term++、给自己投票、重置心跳时间戳等；
-- 依次请求其他 raft 节点进行投票 `sendRequestVote()`，注意 term 的变更；
+- 变量的定义，state 变为 candidate、`Term++`、给自己投票、重置心跳时间戳等；
+- 依次请求其他 raft 节点进行投票 `sendRequestVote()`，注意 `Term` 的变更；
+- 如果获得超过一半的票数则当选 leader，并随后给其他 follower 发送心跳；
 #### 接收方
 
 - `RequestVote()` 接收来自 candidate 的投票请求；
-- 根据自己角色的不同采取不同的投票措施，注意 votedFor 的变更;
-### 心跳机制
+- 比较 `Term`、是否投过票、投的票的是不是 CandidateId 等返回 `VoteGranted`;
+### Heartbeat RPC
 
 > leader 在任期期间，会不间断地发送心跳给所有 follower，防止触发超时选举；
 
 #### 发送方
 
 - 采用轮询的方式，设置一个心跳间隔，依次发送心跳；
-- 与投票类似，区别在于当前角色是不是 leader，如果是则发送心跳给其他 follower，否则等待；
+- 与投票类似，区别在于当前角色是不是 leader，如果是则发送心跳给其他 follower，否则退出重新选举；
 #### 接收方
 
 - `AppendEntries()`：接收来自 leader 的心跳或日志，当前 Part 3A 不涉及日志相关，所以只更新一些参数变更如 term、心跳时间戳等；
@@ -69,7 +70,7 @@ comment: True
 > [!Tip]
 > 1. 若投票超半数，则当选 leader 并广播给其他节点，否则重新一轮选举；
 > 2. **避免脑裂**：每个 candidate 都给自己投票，如果只有两个 follower 并且转化成 candidate 发起选举，都给自己投一票，就会形成脑裂，解决办法就是**随机设置选举定时器的超时时间**，并且至少超过 leader 的心跳间隔；
-> 3. 心跳机制和发起投票是并行的，即使当前 candidate 正在选举，一旦选举计时器出发，应该开始另一次选举，避免 RPC 延迟或丢失；
+> 3. 心跳机制和发起投票是并行的，即使当前 candidate 正在选举，一旦选举计时器触发，应该开始另一次选举，避免 RPC 延迟或丢失；
 
 ## Part 3B: log
 
@@ -83,7 +84,7 @@ comment: True
 
 ### 心跳和日志
 
-- 日志是带有 logEntry 的心跳；
+- 日志是带有 logEntry 的心跳，心跳是长度为 0 的日志；
 - 每个节点都需要将 log 写入到磁盘中；
 - 心跳仅有 Term，而日志还带有 Command；
 - leader 除了维护自己的 log，还要同步 follower 的 log，必要时解决冲突；
@@ -119,7 +120,7 @@ comment: True
 > [!Question] RPC 次数
 > 当日志冲突时，如果采用逐条日志回退，导致 `AppendEntries` 的 RPC 次数增多，所以采用快速回退的优化机制，能使 leader 能够一次性地跳过整个冲突的 Term，减少 RPC 次数。
 
-- 日志冲突条件：`len(rf.log) <= args.PrevLogIndex || rf.log[args.PrevLogIndex].TermId != args.PrevLogTermId`；
+- 日志冲突条件：`len(rf.log) <= args.PrevLogIndex || rf.log[args.PrevLogIndex].Term != args.PrevLogTerm`；
 - 定义三个变量 XTerm、XLen、XIndex：
 	- XTerm：冲突 log 对应的 Term，如果 PrevLogIndex 位置上没有 log 则为 -1；
 	- XIndex：follower 上对应 Term 为 XTerm 的第一条 Log 的 index；
@@ -132,10 +133,10 @@ reply.XLen = len(rf.log)
 if len(rf.log) <= args.PrevLogIndex {
 	reply.XTerm = -1
 	reply.XIndex = -1
-} else if rf.log[args.PrevLogIndex].TermId != args.PrevLogTermId {
-	reply.XTerm = rf.log[args.PrevLogIndex].TermId
+} else if rf.log[args.PrevLogIndex].Term != args.PrevLogTerm {
+	reply.XTerm = rf.log[args.PrevLogIndex].Term
 	reply.XIndex = args.PrevLogIndex
-	for reply.XIndex > 0 && rf.log[reply.XIndex-1].TermId == reply.XTerm {
+	for reply.XIndex > 0 && rf.log[reply.XIndex-1].Term == reply.XTerm {
 		reply.XIndex -= 1
 	}
 }
@@ -147,11 +148,11 @@ if len(rf.log) <= args.PrevLogIndex {
 if reply.XTerm == -1 {
 	rf.nextIndex[server] = reply.XLen
 } else {
-	if rf.log[reply.XIndex].TermId != reply.XTerm {
+	if rf.log[reply.XIndex].Term != reply.XTerm {
 		rf.nextIndex[server] = reply.XIndex
 	} else {
 		for j := reply.XIndex; j < len(rf.log); j++ {
-			if rf.log[j].TermId != reply.XTerm {
+			if rf.log[j].Term != reply.XTerm {
 				rf.nextIndex[server] = j
 				break
 			}
@@ -163,19 +164,13 @@ if reply.XTerm == -1 {
 ##### follower 处理日志冲突
 
 ```go
-conflictIndex := -1
 for i, entry := range args.Entries {
 	index := args.PrevLogIndex + 1 + i
-	if index >= len(rf.log) {
+	if index >= len(rf.log) || rf.log[index].Term != entry.Term {
+		rf.log = append(rf.log[:index], args.Entries[i:]...)
+		rf.persist()
 		break
 	}
-	if rf.log[index].TermId != entry.TermId {
-		conflictIndex = index
-		break
-	}
-}
-if conflictIndex != -1 {
-	rf.log = rf.log[:conflictIndex]
 }
 ```
 
@@ -191,9 +186,8 @@ if conflictIndex != -1 {
 ```go
 for i, entry := range args.Entries {
 	index := args.PrevLogIndex + 1 + i
-	if index >= len(rf.log) || rf.log[index].TermId != entry.TermId {
+	if index >= len(rf.log) || rf.log[index].Term != entry.Term {
 		rf.log = append(rf.log[:index], args.Entries[i:]...)
-		rf.persist()
 		break
 	}
 }
@@ -203,8 +197,8 @@ for i, entry := range args.Entries {
 
 > [!Tip]
 > paper 中图2说到：“**at least as up-to-date as receiver’s log, grant vote**”，因此判断的条件有两个：（而我踩的坑是 "index≥"且"term≥"）
-> - `LastLogTerm > rf.log[len(rf.log)-1].TermId`
-> - `LastLogTerm == rf.log[len(rf.log)-1].TermId && LastLogIndex ≥ len(rf.log)-1`
+> - `LastLogTerm > rf.log[len(rf.log)-1].Term`
+> - `LastLogTerm == rf.log[len(rf.log)-1].Term && LastLogIndex ≥ len(rf.log)-1`
 
 
 ## Part 3C: persistence
@@ -232,9 +226,71 @@ for i, entry := range args.Entries {
 ## Part 3D: log compaction
 
 > [!Question] log compaction
+> - Part 3C 中虽然实现了持久化，但是对于长期运行的 server 来说，持久化完整的 log 并不现实，因此日志压缩为 snapshot，对于 Raft 会丢弃快照之前的 log，可以大大减少持久化数据量并加快重启速度；
+> - 某个 follower 落后太多，导致 leader 已经丢弃了用于追加的 log，所以 leader 需要发送快照以及从该快照开始的 log；
+> - 既然会丢弃部分 log，那么这部分 log 的缺失会出现什么问题？
+> - 哪些节点需要压缩成 snapshot？
+> - 快照存储什么数据？快照是否需要持久化？
+> - 当 follower 发现自己的 log 已经落后于 leader，leader 如何通知 follower 使用快照进行替换？
 
+### 日志截断
 
+- 根据论文中的描述，当日志压缩时，需要进行日志截断，通俗来说就是只保留最后一个日志作为开头，而其他日志全部删除，但这样如果要恢复快照，就需要三个参数进行恢复：
+	- `snapshot`：快照数据
+	- `lastIncludedIndex`: 日志中最高索引
+	- `lastIncludedTerm`: 日志中最高 Term
+- 当存在日志截断后，Raft 节点中的各参数需要位置偏移，比如取 `rf.log` 中的数据时，需要 `- lastIncludedIndex`，而取 `rf.log` 的长度时，需要加 `+ lastIncludedIndex`，既然如此，声明两个函数来操作：
 
+```go
+// 使用 log 切片时使用的索引
+func (rf *Raft) RealLogIndex(virtualLogIndex int) int {
+	return virtualLogIndex - rf.lastIncludedIndex
+}
+// 全局真实递增索引
+func (rf *Raft) VirtualLogIndex(realLogIndex int) int {
+	return realLogIndex + rf.lastIncludedIndex
+}
+```
+
+### Snapshot()
+
+> 接收应用层的快照请求，并截断 log 数组；
+
+1. 判断是否接受 `snapshot`；
+2. 保存 `snapshot`；
+3. 更新 `lastIncludedIndex` 和 `lastIncludedTerm`;
+
+### 持久化
+
+- 新增三个持久化内容，`lastIncludedIndex`、`lastIncludedTerm` 和 `snapshot`;
+
+### InstallSnapshot RPC
+
+> 当某个某个节点落后了 `nextIndex - 1 < lastIncludedIndex`，需要发送快照；
+
+#### 发送方
+
+- 当 leader 发现 follower 要求回退的日志已经被截断时，触发 InstallSnapshot；
+- InstallSnapshot 触发时机：
+	- leader 发送心跳之前判断 follower 是否落后于快照；
+	- leader 发送心跳后，如果发现日志冲突了，更改 `rf.nextIndex` 时再判断 follower 是否落后于快照；
+	- 只要 `nextIndex < lastIncludedIndex`，就要触发；
+- 触发成功后，要重新设置 `nextIndex` 和 `matchIndex`；
+
+#### 接收方
+
+- 如果 `args.LastIncludedIndex` 处存在日志，那么需要日志截断并创建快照；
+- 如果 `args.LastIncludedIndex` 处不存在日志，那么需要清空日志；
+- 更新 `lastApplied` 和 `commitIndex`;
+- 完成操作后，需要封装 ApplyMsg 并通过 applyCh 发送给应用层；
+
+---
+
+> [!Tip] 数组越界
+> - 由于加入了日志截断，所以有 `RealLogIndex` 和 `VirtualLogIndex`，还有 `lastIncludedIndex` 和 0 的区别，很可能导致书逐月节；
+> - 例如：
+> 	- 新 leader 没有进行 `nextIndex` 和 `matchIndex` 初始化
+> 	- 快速回退中 `XIndex > lastIncludedIndex` 而不是 0；
 
 ## Reference
 

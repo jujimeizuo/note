@@ -10,11 +10,11 @@
 
 - [x] [Lab1 - MapReduce](mr.md/)
 - [x] [Lab2 - Key/Value Server](kvsrv.md/)
-- [ ] [Lab3 - Raft](raft.md/)
+- [x] [Lab3 - Raft](raft.md/)
     - [x] Part 3A: Leader Election
     - [x] Part 3B: Log
     - [x] Part 3C: Persistence
-    - [ ] Part 3D: Log Compaction
+    - [x] Part 3D: Log Compaction
 - [ ] Lab 4 - Fault-tolerant Key/Value Service
     - [ ] Part A: replicated state machine (RSM)
     - [ ] Part B: Key/value service without snapshots
