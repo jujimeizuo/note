@@ -1,10 +1,8 @@
 ---
-
 counter: True
-
 comment: True
-
 ---
+
 # Raft
 
 > [!abstract]
@@ -94,6 +92,7 @@ comment: True
 ### Start()
 
 - 仅仅将 command 追加到 leader 的 log 中，不需要保证 command 是否提交，交给心跳/日志协程处理；
+- 为了效率，当有命令到达时，需要立即触发一次心跳；
 
 ### 两阶段提交
 

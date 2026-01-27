@@ -194,6 +194,7 @@ nav:
         - Lab1 - MapReduce: cs/sys/6.5840/mr.md
         - Lab2 - K/V Server: cs/sys/6.5840/kvsrv.md
         - Lab3 - Raft: cs/sys/6.5840/raft.md
+        - Lab4 - KV Raft: cs/sys/6.5840/kvraft.md
     - 杂项:
       - RegEx 正则表达式: cs/others/regex.md
   - 3DV:
