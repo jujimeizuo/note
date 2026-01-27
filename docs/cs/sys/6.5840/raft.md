@@ -92,7 +92,7 @@ comment: True
 ### Start()
 
 - 仅仅将 command 追加到 leader 的 log 中，不需要保证 command 是否提交，交给心跳/日志协程处理；
-- 为了效率，当有命令到达时，需要立即触发一次心跳；
+- 为了效率，当有命令到达时，需要立即触发一次心跳，但防止只包含一个日志的心跳过多，导致 RPC 调用频繁，所以可以等待一个比心跳间隔小的时间，收集这个时间段的日志后一起处理；
 
 ### 两阶段提交
 
@@ -167,7 +167,6 @@ for i, entry := range args.Entries {
 	index := args.PrevLogIndex + 1 + i
 	if index >= len(rf.log) || rf.log[index].Term != entry.Term {
 		rf.log = append(rf.log[:index], args.Entries[i:]...)
-		rf.persist()
 		break
 	}
 }
@@ -275,6 +274,7 @@ func (rf *Raft) VirtualLogIndex(realLogIndex int) int {
 	- leader 发送心跳后，如果发现日志冲突了，更改 `rf.nextIndex` 时再判断 follower 是否落后于快照；
 	- 只要 `nextIndex < lastIncludedIndex`，就要触发；
 - 触发成功后，要重新设置 `nextIndex` 和 `matchIndex`；
+- 为了防止频繁触发 InstallSnapshot，可以先设置 `rf.nextIndex`，而不立刻 `go InstallSnapshot`，交给下次心跳来触发；
 
 #### 接收方
 

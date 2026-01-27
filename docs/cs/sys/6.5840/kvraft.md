@@ -9,7 +9,6 @@ comment: True
 > [!abstract]
 > - 这是一个基于 Raft 和 RSM 的 KV 数据库系统，多个 server 通过 Raft 协议来同步操作日志，保证所有 server 上的状态机保持一致；
 > - 与 Lab2 类似，只是该服务并非单一 server，而是多个 server 组成的 Raft 集群；
-> - paper: [:book: MapReduce: Simplified Data Processing on Large Clusters](http://research.google.com/archive/mapreduce-osdi04.pdf)
 > - home: https://pdos.csail.mit.edu/6.824/labs/lab-kvraft1.html
 
 > [!Tip]
@@ -43,6 +42,7 @@ comment: True
 
 > [!important] 当 raft 节点 kill 时关闭了 applyCh，而此时 applier 还在把提交的命令发送给 applyCh，导致错误。
 > 当 `Kill()` 时，`applyCond.Broadcast()` 唤醒所有等待的 goroutinue，并且用 `sync.WaitGroup` 等待所有 goroutine 退出；
+> InstallSnapshot 中也会发送快照到 applyCh，因此要判断 rf 是否 `killed()`；
 
 ### Submit()
 
@@ -62,11 +62,70 @@ comment: True
 ## Part 4B: Key/value service without snapshots
 
 > [!Question] Key/value service without snapshots
+> - 使用 rsm 来复制一个 KV Server，每个 kvserver 都会关联一个 rsm/raft 节点，client 通过 `Get()` 和 `Put()` RPC 向其关联的 kvserver(raft leader) 发送请求，kvserver 将 `Get()/Put()` 提交给 rsm，rsm 使用 raft 对其复制，并在每个节点上调用 DoOp，应用于 KV Database；
+> - 实现一个在没有消息丢失且没有故障的环境下能正常工作的 KV 服务；
+> - Clerk 不知道哪个 kvserver 是 Raft leader， 应该如何处理？
+> - 如果故障如何处理？
+
+
+### client
+
+- `leaderId`：Clerk 维护当前认为的 Raft leader 的 kvserver id；
+- `clientId`：Clerk 的全局唯一 id，用于 server 识别请求来自哪个 client；
+- `requestId`：Clerk 维护每个 Request 的唯一 id，用于 server 识别同一个 client 的重复请求，每次 `Put` 递增；
+
+#### Get()
+
+- 同 lab2；
+- 轮询 leader，每次读 `leaderId` 然后向对应 server 发送 RPC；
+- 如果 RPC 失败或返回 `ErrWrongLeader`，则尝试下一个 kvserver，直到成功为止；
+
+#### Put()
+
+- 同 lab2；
+- `requestId++`，同 `clientId` 一起发送给 server；
+- 轮询 leader 并处理结果，注意是否首次发送请求；
+
+### server
+
+- `kvMap`: 存储所有 kv 及其对应版本号，`{key: (value, version)}`；
+- `clientPutResults`: 缓存每个 client 的最新 `Put()` 结果，当重复 Request 到达时，直接返回缓存结果，保证线性一致性；
+
+#### DoOp()
+
+- 根据 `req.(type)` 判断是 `DoGet()` 还是 `DoPut()`；
+- `DoGet()`：同 lab2，从 `kvMap` 中读取 key 的值，返回 `ErrNoKey` 或对应 value；
+- `DoPut()`：
+    - 同 lab2；
+    - 检查 `clientPutResults`，如果是重复请求，直接返回缓存结果；
+    - 否则，更新 `kvMap`，并将结果缓存到 `clientPutResults` 中；
+
+#### Get()
+
+- 向 rsm 提交 `Get` 请求，等待结果返回；
+
+#### Put()
+
+- 向 rsm 提交 `Put` 请求，等待结果返回；
 
 
 ## Part 4C: Key/value service with snapshots
 
 > [!Question] Key/value service with snapshots
+> - 修改 rsm，使其能够检测到持久化的 Raft 状态何时变得过大，然后将快照交给 Raft，以便节省日志空间并减少重启时间；
+> - 实现 `Snapshot()` 和 `Restore()` 方法，rsm 在什么时机调用？
+> - 除了 server 状态外，快照中还应包含哪些数据？
 
-## Reference
+### Snapshot()
 
+- 对 server 的 kvMap 做快照；
+- 调用时机：
+    - 当 snapshot 的大小超过给定的 maxraftstate 时调用；
+    - 应在 log 应用后即执行 `DoOp()` 后调用；
+
+### Restore()
+
+- 在 Raft 中收到快照，并在 server 中恢复数据；
+- 调用时机：
+    - 当 RSM 重启时 snapshot 大小不为 0 时调用；
+    - `reader()` 中接收到快照时调用；
