@@ -1,4 +1,8 @@
 - "2026":
+  - "2026-01-27":
+    - newpage:
+        text: CS > SYS > MIT 6.5840 > Lab4 - KV Raft - Part 4A - replicated state machine (RSM)
+        href: /cs/sys/6.5840/kvraft/#part-4a-replicated-state machine/
   - "2026-01-26":
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3D - log compaction
@@ -12,7 +16,7 @@
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3B - log
         href: /cs/sys/6.5840/raft/#part-3b-log/
   - "2026-01-20":
-    - pageupdate:
+    - newpage:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3A - leader election
         href: /cs/sys/6.5840/raft/#part-3a-leader-election/
   - "2026-01-17":
