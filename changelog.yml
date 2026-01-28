@@ -1,9 +1,11 @@
 - "2026":
+  - "2025-01-28":
+    - function: font | Maple Mono NF | ttf -> woff2
   - "2026-01-27":
-    - newpage:
+    - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab4 - KV Raft - Part 4A - replicated state machine (RSM)
         href: /cs/sys/6.5840/kvraft/
-    - newpage:
+    - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab4 - KV Raft - Part 4B - Key/value service without snapshots
         href: /cs/sys/6.5840/kvraft/
     - newpage:
