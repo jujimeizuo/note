@@ -15,7 +15,7 @@
     - [x] Part 3B: Log
     - [x] Part 3C: Persistence
     - [x] Part 3D: Log Compaction
-- [x] Lab 4: Fault-tolerant Key/Value Service
+- [x] [Lab 4: Fault-tolerant Key/Value Service](kvraft.md/)
     - [x] Part A: replicated state machine (RSM)
     - [x] Part B: Key/value service without snapshots
     - [x] Part C: Key/value service with snapshots

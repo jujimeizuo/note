@@ -12,9 +12,9 @@ comment: True
 > - home: https://pdos.csail.mit.edu/6.824/labs/lab-kvraft1.html
 
 > [!Tip]
-> client.go: 供应用程序调用，发起 `Get()` 和 `Put()`；
-> server.go: KV Server，接收 client 的 RPC 请求，并将其提交给 Raft 集群；
-> rsm.go：复制状态机层，连接 KV Sotrage 和 Raft 的桥梁，负责将操作提交给 Raft、从 Raft 应用已提交的日志条目到状态机，以及管理快照；
+> - client.go: 供应用程序调用，发起 `Get()` 和 `Put()`；
+> - server.go: KV Server，接收 client 的 RPC 请求，并将其提交给 Raft 集群；
+> - rsm.go：复制状态机层，连接 KV Storage 和 Raft 的桥梁，负责将操作提交给 Raft、从 Raft 应用已提交的日志条目到状态机，以及管理快照；
 > <center><img src="/assets/images/cs/sys/6.5840/lab4/kvraft.png"></center>
 
 ## Part 4A: replicated state machine (RSM)
@@ -41,8 +41,8 @@ comment: True
 
 
 > [!important] 当 raft 节点 kill 时关闭了 applyCh，而此时 applier 还在把提交的命令发送给 applyCh，导致错误。
-> 当 `Kill()` 时，`applyCond.Broadcast()` 唤醒所有等待的 goroutinue，并且用 `sync.WaitGroup` 等待所有 goroutine 退出；
-> InstallSnapshot 中也会发送快照到 applyCh，因此要判断 rf 是否 `killed()`；
+> - 当 `Kill()` 时，`applyCond.Broadcast()` 唤醒所有等待的 goroutinue，并且用 `sync.WaitGroup` 等待所有 goroutine 退出；
+> - InstallSnapshot 中也会发送快照到 applyCh，因此要判断 rf 是否 `killed()`；
 
 ### Submit()
 
