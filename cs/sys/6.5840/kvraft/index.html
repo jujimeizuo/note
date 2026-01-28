@@ -2703,10 +2703,12 @@ var _hmt = _hmt || [];
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><span>client.go:<span class="heti-spacing"> </span></span>供应用程序调用，发起 <code>Get()</code> 和 <code>Put()</code>；
-server.go: KV Server，接收 client 的 RPC 请求，并将其提交给 Raft 集群；
-rsm.go：复制状态机层，连接 KV Sotrage 和 Raft 的桥梁，负责将操作提交给 Raft、从 Raft 应用已提交的日志条目到状态机，以及管理快照；
-</p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab4/kvraft.png"><img src="/assets/images/cs/sys/6.5840/lab4/kvraft.png"/></a></center>
+<ul>
+<li><span>client.go:<span class="heti-spacing"> </span></span>供应用程序调用，发起 <code>Get()</code> 和 <code>Put()</code>；</li>
+<li>server.go: KV Server，接收<span class="heti-skip"><span class="heti-spacing"> </span>client<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>请求，并将其提交给<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>集群；</li>
+<li>rsm.go：复制状态机层，连接<span class="heti-skip"><span class="heti-spacing"> </span>KV Storage<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>的桥梁，负责将操作提交给<span><span class="heti-spacing"> </span>Raft</span>、从<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>应用已提交的日志条目到状态机，以及管理快照；
+<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab4/kvraft.png"><img src="/assets/images/cs/sys/6.5840/lab4/kvraft.png"/></a></center></li>
+</ul>
 </div>
 <h2 id="part-4a-replicated-state-machine-rsm">Part 4A: replicated state machine (RSM)<a class="headerlink" href="#part-4a-replicated-state-machine-rsm" title="Permanent link">¶</a></h2>
 <div class="admonition question">
@@ -2745,8 +2747,10 @@ rsm.go：复制状态机层，连接 KV Sotrage 和 Raft 的桥梁，负责将�
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">当<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>节点<span class="heti-skip"><span class="heti-spacing"> </span>kill<span class="heti-spacing"> </span></span>时关闭了<span><span class="heti-spacing"> </span>applyCh</span>，而此时<span class="heti-skip"><span class="heti-spacing"> </span>applier<span class="heti-spacing"> </span></span>还在把提交的命令发送给<span><span class="heti-spacing"> </span>applyCh</span>，导致错误。</p>
-<p>当 <code>Kill()</code> 时，<code>applyCond.Broadcast()</code> 唤醒所有等待的<span><span class="heti-spacing"> </span>goroutinue</span>，并且用 <code>sync.WaitGroup</code> 等待所有<span class="heti-skip"><span class="heti-spacing"> </span>goroutine<span class="heti-spacing"> </span></span>退出；
-InstallSnapshot 中也会发送快照到 applyCh，因此要判断 rf 是否 <code>killed()</code>；</p>
+<ul>
+<li>当 <code>Kill()</code> 时，<code>applyCond.Broadcast()</code> 唤醒所有等待的<span><span class="heti-spacing"> </span>goroutinue</span>，并且用 <code>sync.WaitGroup</code> 等待所有<span class="heti-skip"><span class="heti-spacing"> </span>goroutine<span class="heti-spacing"> </span></span>退出；</li>
+<li><span>InstallSnapshot<span class="heti-spacing"> </span></span>中也会发送快照到<span><span class="heti-spacing"> </span>applyCh</span>，因此要判断<span class="heti-skip"><span class="heti-spacing"> </span>rf<span class="heti-spacing"> </span></span>是否 <code>killed()</code>；</li>
+</ul>
 </div>
 <h3 id="submit">Submit()<a class="headerlink" href="#submit" title="Permanent link">¶</a></h3>
 <ol>
@@ -2850,7 +2854,7 @@ InstallSnapshot 中也会发送快照到 applyCh，因此要判断 rf 是否 <co
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月27日 22:44:32 CST">2026年1月27日 22:44:32</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月28日 12:39:14 CST">2026年1月28日 12:39:14</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
