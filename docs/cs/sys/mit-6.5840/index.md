@@ -19,10 +19,7 @@
     - [x] Part A: replicated state machine (RSM)
     - [x] Part B: Key/value service without snapshots
     - [x] Part C: Key/value service with snapshots
-- [ ] Lab 5: Shared Key/Value Service
-    - [ ] Part A: Moving shards
-    - [ ] Part B: Handling a failed controller
-    - [ ] Part C: Concurrent configuration changes
+
 
 ## Reference
 

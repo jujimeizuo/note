@@ -4,37 +4,37 @@
   - "2026-01-27":
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab4 - KV Raft - Part 4A - replicated state machine (RSM)
-        href: /cs/sys/6.5840/kvraft/
+        href: /cs/sys/mit-6.5840/kvraft/
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab4 - KV Raft - Part 4B - Key/value service without snapshots
-        href: /cs/sys/6.5840/kvraft/
+        href: /cs/sys/mit-6.5840/kvraft/
     - newpage:
         text: CS > SYS > MIT 6.5840 > Lab4 - KV Raft - Part 4C -  Key/value service with snapshots
-        href: /cs/sys/6.5840/kvraft/
+        href: /cs/sys/mit-6.5840/kvraft/
   - "2026-01-26":
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3D - log compaction
-        href: /cs/sys/6.5840/raft/
+        href: /cs/sys/mit-6.5840/raft/
   - "2026-01-24":
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3C - persistence
-        href: /cs/sys/6.5840/raft/
+        href: /cs/sys/mit-6.5840/raft/
   - "2026-01-23":
     - pageupdate:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3B - log
-        href: /cs/sys/6.5840/raft/
+        href: /cs/sys/mit-6.5840/raft/
   - "2026-01-20":
     - newpage:
         text: CS > SYS > MIT 6.5840 > Lab3 - Raft - Part 3A - leader election
-        href: /cs/sys/6.5840/raft/
+        href: /cs/sys/mit-6.5840/raft/
   - "2026-01-17":
     - newpage:
         text: CS > SYS > MIT 6.5840 > Lab2 - Key/Value Server
-        href: /cs/sys/6.5840/kvsrv/
+        href: /cs/sys/mit-6.5840/kvsrv/
   - "2026-01-16":
     - newpage:
         text: CS > SYS > MIT 6.5840 > Lab1 - MapReduce
-        href: /cs/sys/6.5840/mr/
+        href: /cs/sys/mit-6.5840/mr/
 - "2025":
   - "2025-12-05":
     - newpage:
