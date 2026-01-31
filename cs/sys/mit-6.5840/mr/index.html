@@ -4,14 +4,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/sys/6.5840/raft/" rel="canonical"/>
-<link href="../kvsrv/" rel="prev"/>
-<link href="../kvraft/" rel="next"/>
+<link href="https://note.jujimeizuo.cn/cs/sys/mit-6.5840/mr/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../kvsrv/" rel="next"/>
 <link href="../../../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
 <link href="../../../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>Lab3 - Raft - 狙击美佐的笔记本</title>
+<title>Lab1 - MapReduce - 狙击美佐的笔记本</title>
 <link href="../../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/counter.css" rel="stylesheet"/>
@@ -55,7 +55,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#raft">
+<a class="md-skip" href="#mapreduce">
           跳转至
         </a>
 </div>
@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Lab3 - Raft
+              Lab1 - MapReduce
             
           </span>
 </div>
@@ -785,34 +785,18 @@ var _hmt = _hmt || [];
             MIT 6.5840
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../mr/">
-<span class="md-ellipsis">
-    Lab1 - MapReduce
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../kvsrv/">
-<span class="md-ellipsis">
-    Lab2 - K/V Server
-    
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Lab3 - Raft
+    Lab1 - MapReduce
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Lab3 - Raft
+    Lab1 - MapReduce
     
   </span>
 </a>
@@ -823,233 +807,26 @@ var _hmt = _hmt || [];
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#part-3a-leader-election">
+<a class="md-nav__link" href="#task-mapreduce">
 <span class="md-ellipsis">
-      Part 3A: leader election
+      Task: MapReduce
     </span>
 </a>
-<nav aria-label="Part 3A: leader election" class="md-nav">
+<nav aria-label="Task: MapReduce" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#raft_1">
+<a class="md-nav__link" href="#coordinator">
 <span class="md-ellipsis">
-      Raft 节点
+      Coordinator
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#worker">
 <span class="md-ellipsis">
-      投票
+      Worker
     </span>
 </a>
-<nav aria-label="投票" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      发送方
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      接收方
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#heartbeat-rpc">
-<span class="md-ellipsis">
-      Heartbeat RPC
-    </span>
-</a>
-<nav aria-label="Heartbeat RPC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      发送方
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      接收方
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#part-3b-log">
-<span class="md-ellipsis">
-      Part 3B: log
-    </span>
-</a>
-<nav aria-label="Part 3B: log" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      心跳和日志
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#start">
-<span class="md-ellipsis">
-      Start()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      两阶段提交
-    </span>
-</a>
-<nav aria-label="两阶段提交" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      日志复制
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      日志提交
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      应用状态机
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      日志冲突
-    </span>
-</a>
-<nav aria-label="日志冲突" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      快速回退
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-<span class="md-ellipsis">
-      普通冲突
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#part-3c-persistence">
-<span class="md-ellipsis">
-      Part 3C: persistence
-    </span>
-</a>
-<nav aria-label="Part 3C: persistence" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-<span class="md-ellipsis">
-      持久化内容
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
-<span class="md-ellipsis">
-      持久化时机
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#part-3d-log-compaction">
-<span class="md-ellipsis">
-      Part 3D: log compaction
-    </span>
-</a>
-<nav aria-label="Part 3D: log compaction" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
-<span class="md-ellipsis">
-      日志截断
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#snapshot">
-<span class="md-ellipsis">
-      Snapshot()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
-<span class="md-ellipsis">
-      持久化
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installsnapshot-rpc">
-<span class="md-ellipsis">
-      InstallSnapshot RPC
-    </span>
-</a>
-<nav aria-label="InstallSnapshot RPC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-<span class="md-ellipsis">
-      发送方
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_19">
-<span class="md-ellipsis">
-      接收方
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1063,6 +840,22 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../kvsrv/">
+<span class="md-ellipsis">
+    Lab2 - K/V Server
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raft/">
+<span class="md-ellipsis">
+    Lab3 - Raft
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../kvraft/">
@@ -2670,233 +2463,26 @@ var _hmt = _hmt || [];
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#part-3a-leader-election">
+<a class="md-nav__link" href="#task-mapreduce">
 <span class="md-ellipsis">
-      Part 3A: leader election
+      Task: MapReduce
     </span>
 </a>
-<nav aria-label="Part 3A: leader election" class="md-nav">
+<nav aria-label="Task: MapReduce" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#raft_1">
+<a class="md-nav__link" href="#coordinator">
 <span class="md-ellipsis">
-      Raft 节点
+      Coordinator
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#worker">
 <span class="md-ellipsis">
-      投票
+      Worker
     </span>
 </a>
-<nav aria-label="投票" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      发送方
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      接收方
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#heartbeat-rpc">
-<span class="md-ellipsis">
-      Heartbeat RPC
-    </span>
-</a>
-<nav aria-label="Heartbeat RPC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      发送方
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      接收方
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#part-3b-log">
-<span class="md-ellipsis">
-      Part 3B: log
-    </span>
-</a>
-<nav aria-label="Part 3B: log" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      心跳和日志
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#start">
-<span class="md-ellipsis">
-      Start()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      两阶段提交
-    </span>
-</a>
-<nav aria-label="两阶段提交" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      日志复制
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      日志提交
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      应用状态机
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      日志冲突
-    </span>
-</a>
-<nav aria-label="日志冲突" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      快速回退
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-<span class="md-ellipsis">
-      普通冲突
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#part-3c-persistence">
-<span class="md-ellipsis">
-      Part 3C: persistence
-    </span>
-</a>
-<nav aria-label="Part 3C: persistence" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-<span class="md-ellipsis">
-      持久化内容
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
-<span class="md-ellipsis">
-      持久化时机
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#part-3d-log-compaction">
-<span class="md-ellipsis">
-      Part 3D: log compaction
-    </span>
-</a>
-<nav aria-label="Part 3D: log compaction" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
-<span class="md-ellipsis">
-      日志截断
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#snapshot">
-<span class="md-ellipsis">
-      Snapshot()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
-<span class="md-ellipsis">
-      持久化
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installsnapshot-rpc">
-<span class="md-ellipsis">
-      InstallSnapshot RPC
-    </span>
-</a>
-<nav aria-label="InstallSnapshot RPC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-<span class="md-ellipsis">
-      发送方
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_19">
-<span class="md-ellipsis">
-      接收方
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -2917,326 +2503,72 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="raft">Raft<a class="headerlink" href="#raft" title="Permanent link">¶</a></h1>
+<h1 id="mapreduce">MapReduce<a class="headerlink" href="#mapreduce" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>2630<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> <span>48<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>483<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>2<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li><span>Raft<span class="heti-spacing"> </span></span>是一种复制状态机协议，一个复制服务通过多个副本<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>上存储其状态（数据）的完整副本来实现容错，复制使其即使部分<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>出现故障（崩溃或网络中断、不稳定<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，服务仍能继续运行，但问题在于，故障可能导致各个副本保存的数据不一致；</li>
-<li><span>Raft<span class="heti-spacing"> </span></span>将<span class="heti-skip"><span class="heti-spacing"> </span>client requests<span class="heti-spacing"> </span></span>组织成一个序列（日志<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，并确保所有副本<span class="heti-skip"><span class="heti-spacing"> </span>servers<span class="heti-spacing"> </span></span>都能看到相同的日志。每个副本按照日志的顺序执行<span><span class="heti-spacing"> </span>client requests</span>，将其应用于服务状态的本地副本；</li>
-<li>由于所有正常运行的副本都能看到相同的日志内容，它们都会以相同顺序执行相同的<span><span class="heti-spacing"> </span>requests</span>，从而保持一致性服务状态；</li>
-<li>如果某个<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>发生故障但之后恢复，<span>Raft<span class="heti-spacing"> </span></span>会负责使其日志更新到最新状态；</li>
-<li>只要至少大多数<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>处于活跃状态且能够相互通信，<span>Raft<span class="heti-spacing"> </span></span>就会继续运行；</li>
-<li><span>Raft<span class="heti-spacing"> </span></span>只能满足<span class="heti-skip"><span class="heti-spacing"> </span>CAP<span class="heti-spacing"> </span></span>理论中的 <strong>CP</strong>；</li>
-<li>paper: <img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/> <a href="http://nil.csail.mit.edu/6.5840/2023/papers/raft-extended.pdf">In Search of an Understandable Consensus Algorithm</a></li>
-<li>home: <a href="https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html">https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html</a></li>
-<li><a href="https://thesquareplanet.com/blog/students-guide-to-raft/">Students' Guide to Raft</a></li>
-<li><a href="https://thesecretlivesofdata.com/raft/">Visualization of Raft</a></li>
+<li><span>MapReduce<span class="heti-spacing"> </span></span>实际是定义了两个接口<span class="heti-skip"><span class="heti-spacing"> </span>Map<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Reduce</span>：<ul>
+<li><span>Map<span class="heti-spacing"> </span></span>完成程序逻辑的分发；</li>
+<li><span>Reduce<span class="heti-spacing"> </span></span>完成并发结果的规约和收集；</li>
+</ul>
+</li>
+<li>paper: <a href="http://research.google.com/archive/mapreduce-osdi04.pdf"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/> MapReduce: Simplified Data Processing on Large Clusters</a></li>
+<li>home: <a href="http://nil.csail.mit.edu/6.5840/2025/labs/lab-mr.html">http://nil.csail.mit.edu/6.5840/2025/labs/lab-mr.html</a></li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Lab Materials</p>
 <ul>
-<li>raft1/raft.go：<span>Raft<span class="heti-spacing"> </span></span>的框架代码；</li>
-<li>raft1/raft_test.go：<span>Lab 3<span class="heti-spacing"> </span></span>的所有测试代码，必要时要自己构造测试，然后<span class="heti-skip"><span class="heti-spacing"> </span>debug<span class="heti-spacing"> </span></span>发现问题；</li>
+<li>main/mrcoordinator.go：启动一个<span><span class="heti-spacing"> </span>coordinator</span>；</li>
+<li>main/mrworker.go：加载<span><span class="heti-spacing"> </span>wc.so</span>，启动一个<span><span class="heti-spacing"> </span>worker</span>；</li>
+<li>mr/mrsequential.go：以顺序方式运行<span class="heti-skip"><span class="heti-spacing"> </span>MapReduce<span class="heti-spacing"> </span></span>任务的参考实现；</li>
+<li>mr/coordinator.go：初始化<span><span class="heti-spacing"> </span>Task</span>，分配<span><span class="heti-spacing"> </span>Task</span>，并监测<span><span class="heti-spacing"> </span>Task</span>；</li>
+<li>mr/worker.go：请求任务、处理任务、返回任务完成情况；</li>
+<li>mr/rpc.go：<span>RPC<span class="heti-spacing"> </span></span>的传入和传出参数格式；</li>
+<li>mr/wc.go：一个简单的<span class="heti-skip"><span class="heti-spacing"> </span>word count MapReduce<span class="heti-spacing"> </span></span>程序的实现；</li>
 </ul>
 </div>
-<h2 id="part-3a-leader-election">Part 3A: leader election<a class="headerlink" href="#part-3a-leader-election" title="Permanent link">¶</a></h2>
+<h2 id="task-mapreduce">Task: MapReduce<a class="headerlink" href="#task-mapreduce" title="Permanent link">¶</a></h2>
 <div class="admonition question">
-<p class="admonition-title">leader election</p>
+<p class="admonition-title">Task</p>
 <ul>
-<li>实现<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>选举和<span class="heti-skip"><span class="heti-spacing"> </span>heartbeats<span class="heti-spacing"> </span></span>机制（不带日志条目的<span><span class="heti-spacing"> </span>AppendEntries RPC</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
-<li>目标是选举出一个单一的<span><span class="heti-spacing"> </span>leader</span>，在没有故障的情况下该<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>保持其地位，并且当旧<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>发生故障或旧<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>之间的数据包丢失时，有新<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>接管；</li>
-<li>选举定时器的重置时机；</li>
+<li>实现一个分布式的<span class="heti-skip"><span class="heti-spacing"> </span>MapReduce<span class="heti-spacing"> </span></span>框架，由<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>worker<span class="heti-spacing"> </span></span>组成；</li>
+<li>系统中只会有一个<span><span class="heti-spacing"> </span>coordinator process</span>，但会有一个或多个<span class="heti-skip"><span class="heti-spacing"> </span>worker processes<span class="heti-spacing"> </span></span>并行执行；</li>
+<li>本次<span class="heti-skip"><span class="heti-spacing"> </span>Lab<span class="heti-spacing"> </span></span>只在同一台机器上运行，<span>worker<span class="heti-spacing"> </span></span>会通过<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>通信；</li>
+<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>worker<span class="heti-spacing"> </span></span>会在一个<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>中向<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>请求任务，从一个或多个文件中读取任务的输入，执行任务，将任务的输出写入一个或多个文件，然后再次向<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>请求新任务；</li>
+<li><span>coordinator<span class="heti-spacing"> </span></span>需要监测<span class="heti-skip"><span class="heti-spacing"> </span>worker<span class="heti-spacing"> </span></span>是否在合理的时间内完成了任务，如果没有，则将相同的任务分配给另一个<span><span class="heti-spacing"> </span>worker</span>。</li>
 </ul>
 </div>
-<h3 id="raft_1"><span>Raft<span class="heti-spacing"> </span></span>节点<a class="headerlink" href="#raft_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li>单个<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>节点、RequestVote RPC、<span>AppendEntries RPC<span class="heti-spacing"> </span></span>的各个变量需完全遵循<span class="heti-skip"><span class="heti-spacing"> </span>paper<span class="heti-spacing"> </span></span>里的<strong>图<span><span class="heti-spacing"> </span>2</span></strong>！</li>
-<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>节点可以是<span><span class="heti-spacing"> </span>leader | candidate | follower</span>，都可以发送和接收<span><span class="heti-spacing"> </span>RPC</span>，维护唯一一个运行的<span><span class="heti-spacing"> </span>goroutine</span>；</li>
-<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>节点都有一个选举定时器，每次收到<span class="heti-skip"><span class="heti-spacing"> </span>heartbeat<span class="heti-spacing"> </span></span>或<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>时，都会重置选举定时器，发送者是<span><span class="heti-spacing"> </span>leader</span>，接收者是<span><span class="heti-spacing"> </span>follwer</span>，一旦选举定时器超时，节点转化为<span class="heti-skip"><span class="heti-spacing"> </span>candidate<span class="heti-spacing"> </span></span>并进行投票选举；</li>
-</ol>
-<h3 id="_1">投票<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<blockquote>
-<p><code>ticker()</code>：运行在每个节点上，判断是否需要投票。</p>
-</blockquote>
-<h4 id="_2">发送方<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>若当前节点不是<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>并且上一次心跳间隔<span class="heti-skip"><span class="heti-spacing"> </span>&gt;<span class="heti-spacing"> </span></span>选举定时器，就要触发<span><span class="heti-spacing"> </span>leader election</span>；</li>
-<li>变量的定义，<span>state<span class="heti-spacing"> </span></span>变为<span><span class="heti-spacing"> </span>candidate</span>、<code>Term++</code>、给自己投票、重置心跳时间戳等；</li>
-<li>依次请求其他<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>节点进行投票 <code>sendRequestVote()</code>，注意 <code>Term</code> 的变更；</li>
-<li>如果获得超过一半的票数则当选<span><span class="heti-spacing"> </span>leader</span>，并随后给其他<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>发送心跳；</li>
-</ul>
-<h4 id="_3">接收方<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li><code>RequestVote()</code> 接收来自<span class="heti-skip"><span class="heti-spacing"> </span>candidate<span class="heti-spacing"> </span></span>的投票请求；</li>
-<li>比较 <code>Term</code>、是否投过票、投的票的是不是<span class="heti-skip"><span class="heti-spacing"> </span>CandidateId<span class="heti-spacing"> </span></span>等返回<code>VoteGranted</code><span><span class="heti-spacing"> </span>;</span></li>
-</ul>
-<h3 id="heartbeat-rpc">Heartbeat RPC<a class="headerlink" href="#heartbeat-rpc" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><span>leader<span class="heti-spacing"> </span></span>在任期期间，会不间断地发送心跳给所有<span><span class="heti-spacing"> </span>follower</span>，防止触发超时选举；</p>
-</blockquote>
-<h4 id="_4">发送方<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>采用轮询的方式，设置一个心跳间隔，依次发送心跳；</li>
-<li>与投票类似，区别在于当前角色是不是<span><span class="heti-spacing"> </span>leader</span>，如果是则发送心跳给其他<span><span class="heti-spacing"> </span>follower</span>，否则退出重新选举；</li>
-</ul>
-<h4 id="_5">接收方<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li><code>AppendEntries()</code>：接收来自<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的心跳或日志，当前<span class="heti-skip"><span class="heti-spacing"> </span>Part 3A<span class="heti-spacing"> </span></span>不涉及日志相关，所以只更新一些参数变更如<span><span class="heti-spacing"> </span>term</span>、心跳时间戳等；</li>
-</ul>
-<hr/>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<ol>
-<li>若投票超半数，则当选<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>并广播给其他节点，否则重新一轮选举；</li>
-<li><strong>避免脑裂</strong>：每个<span class="heti-skip"><span class="heti-spacing"> </span>candidate<span class="heti-spacing"> </span></span>都给自己投票，如果只有两个<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>并且转化成<span class="heti-skip"><span class="heti-spacing"> </span>candidate<span class="heti-spacing"> </span></span>发起选举，都给自己投一票，就会形成脑裂，解决办法就是<strong>随机设置选举定时器的超时时间</strong>，并且至少超过<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的心跳间隔；</li>
-<li>心跳机制和发起投票是并行的，即使当前<span class="heti-skip"><span class="heti-spacing"> </span>candidate<span class="heti-spacing"> </span></span>正在选举，一旦选举计时器触发，应该开始另一次选举，避免<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>延迟或丢失；</li>
-</ol>
+<div style="display: flex; justify-content: center;">
+<div style="flex: 1; text-align: center; max-width: 400px;">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab1/map.jpg"><img src="/assets/images/cs/sys/6.5840/lab1/map.jpg" width="100%"/></a>
+<p><strong><span>Map<span class="heti-spacing"> </span></span>阶段</strong>：分散计算，将输入数据分割并并行处理</p>
 </div>
-<h2 id="part-3b-log">Part 3B: log<a class="headerlink" href="#part-3b-log" title="Permanent link">¶</a></h2>
-<div class="admonition question">
-<p class="admonition-title">log</p>
-<ul>
-<li>实现日志存储；</li>
-<li>心跳和日志的区别？</li>
-<li>日志的两阶段提交如何实现？日志复制的逻辑？</li>
-<li><span>leader<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>接收到新的日志时，各个<span class="heti-skip"><span class="heti-spacing"> </span>index<span class="heti-spacing"> </span></span>如何处理？</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>的日志不一致时如何恢复？</li>
-<li>但<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>的日志不一致时，有无优化机制用于减少日志同步的<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>次数，而非逐条日志回退？</li>
-</ul>
+<div style="flex: 1; text-align: center; max-width: 400px;">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab1/reduce.jpg"><img src="/assets/images/cs/sys/6.5840/lab1/reduce.jpg" width="100%"/></a>
+<p><strong><span>Reduce<span class="heti-spacing"> </span></span>阶段</strong>：聚合结果，汇总中间结果并生成最终输出</p>
 </div>
-<h3 id="_6">心跳和日志<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>日志是带有<span class="heti-skip"><span class="heti-spacing"> </span>logEntry<span class="heti-spacing"> </span></span>的心跳，心跳是长度为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的日志；</li>
-<li>每个节点都需要将<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>写入到磁盘中；</li>
-<li>心跳仅有<span><span class="heti-spacing"> </span>Term</span>，而日志还带有<span><span class="heti-spacing"> </span>Command</span>；</li>
-<li><span>leader<span class="heti-spacing"> </span></span>除了维护自己的<span><span class="heti-spacing"> </span>log</span>，还要同步<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>log</span>，必要时解决冲突；</li>
-<li>心跳和日志都使用同一个发射器，通过 <code>nextIndex</code> 和 <code>len(log)</code> 的大小来判断是心跳还是日志；</li>
-<li>为了简化操作，心跳和日志共同使用<code>AppendEntries</code><span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>来处理；</li>
-</ul>
-<h3 id="start">Start()<a class="headerlink" href="#start" title="Permanent link">¶</a></h3>
-<ul>
-<li>仅仅将<span class="heti-skip"><span class="heti-spacing"> </span>command<span class="heti-spacing"> </span></span>追加到<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>中，不需要保证<span class="heti-skip"><span class="heti-spacing"> </span>command<span class="heti-spacing"> </span></span>是否提交，交给心跳<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>日志协程处理；</li>
-<li>为了效率，当有命令到达时，需要立即触发一次心跳，但防止只包含一个日志的心跳过多，导致<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>调用频繁，所以可以等待一个比心跳间隔小的时间，收集这个时间段的日志后一起处理；</li>
-</ul>
-<h3 id="_7">两阶段提交<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_8">日志复制<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ol>
-<li><strong>客户端请求</strong>：<span>leader<span class="heti-spacing"> </span></span>收到<span class="heti-skip"><span class="heti-spacing"> </span>client<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>command<span class="heti-spacing"> </span></span>后，追加到自己的本地<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>中；</li>
-<li><strong>并发分发</strong>：<span>leader<span class="heti-spacing"> </span></span>通过<code>AppendEntries</code><span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>将这条日志并行地分发到集群中的所有<span><span class="heti-spacing"> </span>follower</span>；</li>
-<li><strong>预持久化</strong>：<span>follower<span class="heti-spacing"> </span></span>收到日志后，会先处理冲突日志，保证不冲突会将其追加到自己的本地<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>中（此时日子处于未提交<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>不安全状态<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，并向<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>返回 <code>Sucess = true</code>；</li>
-</ol>
-<h4 id="_9">日志提交<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ol>
-<li><strong>达成多数派</strong>：当<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>收到超过半数的<span class="heti-skip"><span class="heti-spacing"> </span>true<span class="heti-spacing"> </span></span>时，认为该日志已经安全；</li>
-<li><strong>更新<span><span class="heti-spacing"> </span>commitIndex</span></strong>：<span>leader<span class="heti-spacing"> </span></span>将这条日志标记为 <code>commited</code>，并<span class="heti-skip"><span class="heti-spacing"> </span>applied<span class="heti-spacing"> </span></span>到自己的状态机中；</li>
-<li><strong>通知<span><span class="heti-spacing"> </span>follower</span></strong>：<span>leader<span class="heti-spacing"> </span></span>在之后的心跳中，会携带最新的 <code>LeaderCommit</code> 索引，<span>follower<span class="heti-spacing"> </span></span>收到后也会将该日志<span class="heti-skip"><span class="heti-spacing"> </span>applied<span class="heti-spacing"> </span></span>到自己的状态机中。</li>
-</ol>
-<h3 id="_10">应用状态机<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>同样是一个轮询的协程，用条件变量来实现；</li>
-<li>不断检查 <code>rf.commitIndex &gt; rf.lastApplied</code>，然后封装<span class="heti-skip"><span class="heti-spacing"> </span>ApplyMsg<span class="heti-spacing"> </span></span>并通过<span class="heti-skip"><span class="heti-spacing"> </span>applyCh<span class="heti-spacing"> </span></span>发送给应用层；</li>
-</ul>
-<h3 id="_11">日志冲突<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_12">快速回退<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<blockquote>
-<p>当日志的长度小于 <code>args.PrevLogIndex</code> 或者该<span class="heti-skip"><span class="heti-spacing"> </span>index<span class="heti-spacing"> </span></span>下的 <code>Term</code> 不同时，触发快速回退；</p>
-</blockquote>
-<div class="admonition question">
-<p class="admonition-title"><span>RPC<span class="heti-spacing"> </span></span>次数</p>
-<p>当日志冲突时，如果采用逐条日志回退，导致 <code>AppendEntries</code> 的<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>次数增多，所以采用快速回退的优化机制，能使<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>能够一次性地跳过整个冲突的<span><span class="heti-spacing"> </span>Term</span>，减少<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>次数。</p>
 </div>
+<h3 id="coordinator">Coordinator<a class="headerlink" href="#coordinator" title="Permanent link">¶</a></h3>
 <ul>
-<li>日志冲突条件：<code>len(rf.log) &lt;= args.PrevLogIndex || rf.log[args.PrevLogIndex].Term != args.PrevLogTerm</code>；</li>
-<li>定义三个变量<span><span class="heti-spacing"> </span>XTerm</span>、XLen、XIndex：<ul>
-<li>XTerm：冲突<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>对应的<span><span class="heti-spacing"> </span>Term</span>，如果<span class="heti-skip"><span class="heti-spacing"> </span>PrevLogIndex<span class="heti-spacing"> </span></span>位置上没有<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>则为<span><span class="heti-spacing"> </span>-1</span>；</li>
-<li>XIndex：<span>follower<span class="heti-spacing"> </span></span>上对应<span class="heti-skip"><span class="heti-spacing"> </span>Term<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>XTerm<span class="heti-spacing"> </span></span>的第一条<span class="heti-skip"><span class="heti-spacing"> </span>Log<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>index</span>；</li>
-<li>XLen：空白的<span class="heti-skip"><span class="heti-spacing"> </span>Log<span class="heti-spacing"> </span></span>槽位数（代码中写为<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>日志的实际总长度<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li><span>Task<span class="heti-spacing"> </span></span>分为<span class="heti-skip"><span class="heti-spacing"> </span>MapTask<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>ReduceTask</span>，<span>Coordinator<span class="heti-spacing"> </span></span>负责将任务分配给<span><span class="heti-spacing"> </span>Worker</span>，并监测任务的完成情况；</li>
+<li>当所有<span class="heti-skip"><span class="heti-spacing"> </span>Map<span class="heti-spacing"> </span></span>任务完成后，<span>Coordinator<span class="heti-spacing"> </span></span>会分配<span class="heti-skip"><span class="heti-spacing"> </span>Reduce<span class="heti-spacing"> </span></span>任务；</li>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>Worker<span class="heti-spacing"> </span></span>在合理时间内未完成任务，<span>Coordinator<span class="heti-spacing"> </span></span>会将任务重新分配给其他<span><span class="heti-spacing"> </span>Worker</span>。</li>
 </ul>
-</li>
-</ul>
-<h5 id="follower"><span>follower<span class="heti-spacing"> </span></span>发现日志冲突<a class="headerlink" href="#follower" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// fast rollback</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nx">reply</span><span class="p">.</span><span class="nx">XLen</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogIndex</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XTerm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogIndex</span><span class="p">].</span><span class="nx">Term</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogTerm</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XTerm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogIndex</span><span class="p">].</span><span class="nx">Term</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogIndex</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">Term</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XTerm</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
-</code></pre></div>
-<h5 id="leader"><span>leader<span class="heti-spacing"> </span></span>调整日志冲突<a class="headerlink" href="#leader" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">if</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XTerm</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nx">rf</span><span class="p">.</span><span class="nx">nextIndex</span><span class="p">[</span><span class="nx">server</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XLen</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="p">].</span><span class="nx">Term</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XTerm</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nx">rf</span><span class="p">.</span><span class="nx">nextIndex</span><span class="p">[</span><span class="nx">server</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XIndex</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">Term</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">reply</span><span class="p">.</span><span class="nx">XTerm</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">                </span><span class="nx">rf</span><span class="p">.</span><span class="nx">nextIndex</span><span class="p">[</span><span class="nx">server</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">j</span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="k">break</span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">            </span><span class="p">}</span>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="p">}</span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="p">}</span>
-</code></pre></div>
-<h5 id="follower_1"><span>follower<span class="heti-spacing"> </span></span>处理日志冲突<a class="headerlink" href="#follower_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">Entries</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nx">index</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogIndex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">Term</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">entry</span><span class="p">.</span><span class="nx">Term</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[:</span><span class="nx">index</span><span class="p">],</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">Entries</span><span class="p">[</span><span class="nx">i</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="k">break</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="_13">普通冲突<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<blockquote>
-<p>当 <code>args.PrevLogIndex</code> 下的 <code>Term</code> 相同时，不能保证后续 <code>index</code> 下的 <code>Term</code> 继续相同，需要截断处理，并且追加该 <code>index</code> 后的新<span><span class="heti-spacing"> </span>log</span>；</p>
-</blockquote>
+<h3 id="worker">Worker<a class="headerlink" href="#worker" title="Permanent link">¶</a></h3>
 <ul>
-<li>假设<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>index<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>term<span class="heti-spacing"> </span></span>分别为<span><span class="heti-spacing"> </span>[1, 1, 2, 3]</span>，<code>args.PrevLogIndex</code> 为<span><span class="heti-spacing"> </span>3</span>；</li>
+<li><span>Worker<span class="heti-spacing"> </span></span>通过<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>向<span class="heti-skip"><span class="heti-spacing"> </span>Coordinator<span class="heti-spacing"> </span></span>请求任务（<span>MapTask<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>ReduceTask</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li><span>Worker<span class="heti-spacing"> </span></span>执行分配的任务，并将结果写入中间文件；</li>
+<li><span>Worker<span class="heti-spacing"> </span></span>处理完任务后，向<span class="heti-skip"><span class="heti-spacing"> </span>Coordinator<span class="heti-spacing"> </span></span>汇报任务完成情况。</li>
 </ul>
-<ol>
-<li>case 1：follower [1, 1, 2, 2]，发现最后一个<span class="heti-skip"><span class="heti-spacing"> </span>Term<span class="heti-spacing"> </span></span>不同，所以先截断<span class="heti-skip"><span class="heti-spacing"> </span>[2]<span class="heti-spacing"> </span></span>然后添加<span class="heti-skip"><span class="heti-spacing"> </span>[3]<span class="heti-spacing"> </span></span>处的日志；</li>
-<li>case 2：follower [1, 1, 2, 3, 3, 3]，发现<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的日志保持一致并且多出<span><span class="heti-spacing"> </span>[3, 3]</span>，根据<span class="heti-skip"><span class="heti-spacing"> </span>paper<span class="heti-spacing"> </span></span>中提到 “<strong>If an existing entry conflicts with a new one (same index but different terms), delete the existing entry and all that follow it (§5.3)</strong>”，不需要截断超出的<span><span class="heti-spacing"> </span>log</span>（可能是网络延迟或故障，<span>leader<span class="heti-spacing"> </span></span>实际上已经有了<span><span class="heti-spacing"> </span>[3, 3]</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，当然截断超出的<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>也是正确的；</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">Entries</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nx">index</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">PrevLogIndex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">Term</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">entry</span><span class="p">.</span><span class="nx">Term</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">rf</span><span class="p">.</span><span class="nx">log</span><span class="p">[:</span><span class="nx">index</span><span class="p">],</span><span class="w"> </span><span class="nx">args</span><span class="p">.</span><span class="nx">Entries</span><span class="p">[</span><span class="nx">i</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="k">break</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
-</code></pre></div>
-<hr/>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><span>paper<span class="heti-spacing"> </span></span>中图<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>说到<heti-adjacent class="heti-adjacent-quarter">：</heti-adjacent>“<strong>at least as up-to-date as receiver’s log, grant vote</strong>”，因此判断的条件有两个<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（而我踩的坑是<span><span class="heti-spacing"> </span>"index</span>≥<span>"<span class="heti-spacing"> </span></span>且<span><span class="heti-spacing"> </span>"term</span>≥"）</p>
-<ul>
-<li><code>LastLogTerm &gt; rf.log[len(rf.log)-1].Term</code></li>
-<li><code>LastLogTerm == rf.log[len(rf.log)-1].Term &amp;&amp; LastLogIndex ≥ len(rf.log)-1</code></li>
-</ul>
-</div>
-<h2 id="part-3c-persistence">Part 3C: persistence<a class="headerlink" href="#part-3c-persistence" title="Permanent link">¶</a></h2>
-<div class="admonition question">
-<p class="admonition-title">persistence</p>
-<ul>
-<li>如果一个<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>挂掉后重启，需要利用持久化存储的数据恢复节点的状态；</li>
-<li>持久化的内容是什么？</li>
-<li>什么时候持久化？</li>
-</ul>
-</div>
-<h3 id="_14">持久化内容<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ol>
-<li><code>votedFor</code>：当前<span class="heti-skip"><span class="heti-spacing"> </span>Term<span class="heti-spacing"> </span></span>内收到本节点选票的<span><span class="heti-spacing"> </span>CandidateId</span>；<ul>
-<li>确保一个<span class="heti-skip"><span class="heti-spacing"> </span>Term<span class="heti-spacing"> </span></span>只能投一票；</li>
-<li>如果没有持久化，节点重启后不知道自己是否投过票，可能导致在同一<span class="heti-skip"><span class="heti-spacing"> </span>Term<span class="heti-spacing"> </span></span>投票给另一个<span><span class="heti-spacing"> </span>Candidate</span>，随后出现两个<span><span class="heti-spacing"> </span>leader</span>；</li>
-</ul>
-</li>
-<li><code>currentTerm</code>：服务器已知最新的<span><span class="heti-spacing"> </span>Term</span>；<ul>
-<li>防止一个节点在同一<span class="heti-skip"><span class="heti-spacing"> </span>Term<span class="heti-spacing"> </span></span>内投出两张票，或者旧<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>重启时认为自己仍是当前<span><span class="heti-spacing"> </span>leader</span>；</li>
-</ul>
-</li>
-<li><code>log</code>：需要<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>来恢复状态机，并与其他节点进行日志匹配与同步；</li>
-<li>其他数据不需要持久化，因为可以通过心跳的方式逐步推理获取；</li>
-</ol>
-<h3 id="_15">持久化时机<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>数据持久化到硬盘的开销远大于<span><span class="heti-spacing"> </span>RPC</span>，所以在除开必要持久化外得越少越好；</li>
-<li>所有修改 <code>votedFor</code>、<code>currentTerm</code> 和 <code>log</code> 操作后，必须要持久化；</li>
-</ul>
-<h2 id="part-3d-log-compaction">Part 3D: log compaction<a class="headerlink" href="#part-3d-log-compaction" title="Permanent link">¶</a></h2>
-<div class="admonition question">
-<p class="admonition-title">log compaction</p>
-<ul>
-<li><span>Part 3C<span class="heti-spacing"> </span></span>中虽然实现了持久化，但是对于长期运行的<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>来说，持久化完整的<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>并不现实，因此日志压缩为<span><span class="heti-spacing"> </span>snapshot</span>，对于<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>会丢弃快照之前的<span><span class="heti-spacing"> </span>log</span>，可以大大减少持久化数据量并加快重启速度；</li>
-<li>某个<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>落后太多，导致<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>已经丢弃了用于追加的<span><span class="heti-spacing"> </span>log</span>，所以<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>需要发送快照以及从该快照开始的<span><span class="heti-spacing"> </span>log</span>；</li>
-<li>既然会丢弃部分<span><span class="heti-spacing"> </span>log</span>，那么这部分<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>的缺失会出现什么问题？</li>
-<li>哪些节点需要压缩成<span><span class="heti-spacing"> </span>snapshot</span>？</li>
-<li>快照存储什么数据？快照是否需要持久化？</li>
-<li>当<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>发现自己的<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>已经落后于<span><span class="heti-spacing"> </span>leader</span>，<span>leader<span class="heti-spacing"> </span></span>如何通知<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>使用快照进行替换？</li>
-</ul>
-</div>
-<h3 id="_16">日志截断<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>根据论文中的描述，当日志压缩时，需要进行日志截断，通俗来说就是只保留最后一个日志作为开头，而其他日志全部删除，但这样如果要恢复快照，就需要三个参数进行恢复：<ul>
-<li><code>snapshot</code>：快照数据</li>
-<li><code>lastIncludedIndex</code><span>:<span class="heti-spacing"> </span></span>日志中最高索引</li>
-<li><code>lastIncludedTerm</code><span>:<span class="heti-spacing"> </span></span>日志中最高<span><span class="heti-spacing"> </span>Term</span></li>
-</ul>
-</li>
-<li>当存在日志截断后，<span>Raft<span class="heti-spacing"> </span></span>节点中的各参数需要位置偏移，比如取 <code>rf.log</code> 中的数据时，需要 <code>- lastIncludedIndex</code>，而取 <code>rf.log</code> 的长度时，需要加 <code>+ lastIncludedIndex</code>，既然如此，声明两个函数来操作：</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// 使用 log 切片时使用的索引</span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">rf</span><span class="w"> </span><span class="o">*</span><span class="nx">Raft</span><span class="p">)</span><span class="w"> </span><span class="nx">RealLogIndex</span><span class="p">(</span><span class="nx">virtualLogIndex</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">virtualLogIndex</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">lastIncludedIndex</span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">}</span>
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1">// 全局真实递增索引</span>
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">rf</span><span class="w"> </span><span class="o">*</span><span class="nx">Raft</span><span class="p">)</span><span class="w"> </span><span class="nx">VirtualLogIndex</span><span class="p">(</span><span class="nx">realLogIndex</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">realLogIndex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">rf</span><span class="p">.</span><span class="nx">lastIncludedIndex</span>
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="snapshot">Snapshot()<a class="headerlink" href="#snapshot" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>接收应用层的快照请求，并截断<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>数组；</p>
-</blockquote>
-<ol>
-<li>判断是否接受 <code>snapshot</code>；</li>
-<li>保存 <code>snapshot</code>；</li>
-<li>更新 <code>lastIncludedIndex</code> 和<code>lastIncludedTerm</code><span><span class="heti-spacing"> </span>;</span></li>
-</ol>
-<h3 id="_17">持久化<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>新增三个持久化内容，<code>lastIncludedIndex</code>、<code>lastIncludedTerm</code> 和<code>snapshot</code><span><span class="heti-spacing"> </span>;</span></li>
-</ul>
-<h3 id="installsnapshot-rpc">InstallSnapshot RPC<a class="headerlink" href="#installsnapshot-rpc" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>当某个某个节点落后了 <code>nextIndex - 1 &lt; lastIncludedIndex</code>，需要发送快照；</p>
-</blockquote>
-<h4 id="_18">发送方<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>当<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>发现<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>要求回退的日志已经被截断时，触发<span><span class="heti-spacing"> </span>InstallSnapshot</span>；</li>
-<li><span>InstallSnapshot<span class="heti-spacing"> </span></span>触发时机：<ul>
-<li><span>leader<span class="heti-spacing"> </span></span>发送心跳之前判断<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>是否落后于快照；</li>
-<li><span>leader<span class="heti-spacing"> </span></span>发送心跳后，如果发现日志冲突了，更改 <code>rf.nextIndex</code> 时再判断<span class="heti-skip"><span class="heti-spacing"> </span>follower<span class="heti-spacing"> </span></span>是否落后于快照；</li>
-<li>只要 <code>nextIndex &lt; lastIncludedIndex</code>，就要触发；</li>
-</ul>
-</li>
-<li>触发成功后，要重新设置 <code>nextIndex</code> 和 <code>matchIndex</code>；</li>
-<li>为了防止频繁触发<span><span class="heti-spacing"> </span>InstallSnapshot</span>，可以先设置 <code>rf.nextIndex</code>，而不立刻 <code>go InstallSnapshot</code>，交给下次心跳来触发；</li>
-</ul>
-<h4 id="_19">接收方<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>如果 <code>args.LastIncludedIndex</code> 处存在日志，那么需要日志截断并创建快照；</li>
-<li>如果 <code>args.LastIncludedIndex</code> 处不存在日志，那么需要清空日志；</li>
-<li>更新 <code>lastApplied</code> 和<code>commitIndex</code><span><span class="heti-spacing"> </span>;</span></li>
-<li>完成操作后，需要封装<span class="heti-skip"><span class="heti-spacing"> </span>ApplyMsg<span class="heti-spacing"> </span></span>并通过<span class="heti-skip"><span class="heti-spacing"> </span>applyCh<span class="heti-spacing"> </span></span>发送给应用层；</li>
-</ul>
-<hr/>
-<div class="admonition tip">
-<p class="admonition-title">数组越界</p>
-<ul>
-<li>由于加入了日志截断，所以有 <code>RealLogIndex</code> 和 <code>VirtualLogIndex</code>，还有 <code>lastIncludedIndex</code> 和<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的区别，很可能导致书逐月节；</li>
-<li>例如：<ul>
-<li>新<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>没有进行 <code>nextIndex</code> 和 <code>matchIndex</code> 初始化</li>
-<li>快速回退中 <code>XIndex &gt; lastIncludedIndex</code> 而不是<span><span class="heti-spacing"> </span>0</span>；</li>
-</ul>
-</li>
-</ul>
-</div>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://zhuanlan.zhihu.com/p/702642993">【论文解读 第<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>期】<span>Raft<span class="heti-spacing"> </span></span>共识算法论文翻译</a></li>
-<li><a href="https://www.bilibili.com/video/BV1Kz4y1H7gw?vd_source=c5fdcb7e8bfbd07851554854d73aa1fa">解析分布式共识算法之<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>算法</a></li>
-<li><a href="https://vanilla-beauty.github.io/categories/CS%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/MIT6-5840-6-824-2023/">MIT6.5840(6.824)</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Vb411m7go/?vd_source=5e048b202705330980eefcc9a56cc5d0">深入浅出讲解<span><span class="heti-spacing"> </span>MapReduce</span></a></li>
+<li><a href="https://airekans.github.io/cloud-computing/2014/01/25/mapreduce-intro"><span>MapReduce<span class="heti-spacing"> </span></span>简介</a></li>
+<li><a href="https://github.com/chaozh/MIT-6.824/issues/2">Lec1：入门介绍（以<span class="heti-skip"><span class="heti-spacing"> </span>MapReduce<span class="heti-spacing"> </span></span>为例）</a></li>
 </ul>
 <div class="hr-before-source-file"><hr/></div>
 <aside class="md-source-file">
@@ -3244,13 +2576,13 @@ var _hmt = _hmt || [];
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月27日 22:44:32 CST">2026年1月27日 22:44:32</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月31日 20:45:37 CST">2026年1月31日 20:45:37</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月19日 21:28:02 CST">2026年1月19日 21:28:02</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月17日 15:51:18 CST">2026年1月17日 15:51:18</span>
 </span>
 </aside>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -3272,7 +2604,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Lab2 - K/V Server" class="md-footer__link md-footer__link--prev" href="../kvsrv/">
+<a aria-label="上一页: MIT 6.5840 Lab" class="md-footer__link md-footer__link--prev" href="../">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -3281,17 +2613,17 @@ var _hmt = _hmt || [];
                 上一页
               </span>
 <div class="md-ellipsis">
-                Lab2 - K/V Server
+                MIT 6.5840 Lab
               </div>
 </div>
 </a>
-<a aria-label="下一页: Lab4 - KV Raft" class="md-footer__link md-footer__link--next" href="../kvraft/">
+<a aria-label="下一页: Lab2 - K/V Server" class="md-footer__link md-footer__link--next" href="../kvsrv/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Lab4 - KV Raft
+                Lab2 - K/V Server
               </div>
 </div>
 <div class="md-footer__button md-icon">

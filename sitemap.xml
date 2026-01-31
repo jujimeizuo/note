@@ -2,742 +2,742 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://note.jujimeizuo.cn/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/changelog/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/links/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/todo/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/ai/dl/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/ai/ml/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/ai/mode-recognition/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/algorithm/basic-ds/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/algorithm/design-analysis/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/db/mysql/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/db/redis/cjh/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/db/redis/datatype/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/db/redis/work/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/gpu/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/mpi/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/openmp/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/outline/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/hpc/vectorizecompute/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/others/regex/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/basic/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/function/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/c_cpp/stl/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/go/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/go/basic/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/go/gin/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/java/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/java/basic/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/java/springboot/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/basic/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/numpy/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/pl/python/virtual/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/software/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/software/compa/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/software/design-pattern/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/software/piaserver/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/software/sca/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cs/sys/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/cs/sys/6.5840/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <loc>https://note.jujimeizuo.cn/cs/sys/mit-6.5840/</loc>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/cs/sys/6.5840/kvraft/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <loc>https://note.jujimeizuo.cn/cs/sys/mit-6.5840/kvraft/</loc>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/cs/sys/6.5840/kvsrv/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <loc>https://note.jujimeizuo.cn/cs/sys/mit-6.5840/kvsrv/</loc>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/cs/sys/6.5840/mr/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <loc>https://note.jujimeizuo.cn/cs/sys/mit-6.5840/mr/</loc>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
-         <loc>https://note.jujimeizuo.cn/cs/sys/6.5840/raft/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <loc>https://note.jujimeizuo.cn/cs/sys/mit-6.5840/raft/</loc>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/3d-visualization/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/bonn/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/endonerf/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/hamlyn/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/kitti/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/scared/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/stereomis/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/tum/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/dataset/waymo/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/3dr-camera-structure/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/ag-fm/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/calc-p/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/camera-model/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/est2d/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/eval/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/one-vg/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/pjt2d/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/mvg/pjt3d/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/3dgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/4dgs-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/4dgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/4dtam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/freetimegs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/loop-splat/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/monogs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/splat-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/splatam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/3dgs/wildgs-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/crowd-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/detect-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/ds-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/dynaslam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/flowfusion/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/dynamic-slam/rigidfusion/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/colorgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/d4recon/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/deform3dgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/eh-surgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/endo-4dgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/endo-4dgx/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/endogaussian/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/endogs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/endoscopy-depth-estimation/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/lgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/endo/st-endo4dgs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/anycam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/cut3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/das3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/dust3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/easi3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/fast3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/instant-splat/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/mast3r-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/mast3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/monst3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/page-4d/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/slam3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/spann3r/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/vggt-long/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/vggt-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/ffm/vggt/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/co-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/ddn-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/imap/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/nerf/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/nice-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/nerf/nid-slam/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/deepv2d/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/let-net/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/orbslam2/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/reconstruction-evaluation/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/vslam14/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/vslam14/lec1/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/others/vslam14/lec2/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/pcd/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/pcd/fastmac/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/pcd/geotransformer/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/papers/pcd/mac/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/pcd/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/pcd/pcr/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/pcd/pcr/icp/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/pcd/pcr/prepare/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/utils/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/cv/utils/colmap/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/dw2025winter/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/dw2025winter/lec1/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/lec1/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/lec2/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/lec3/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/lec4/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/lec5/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/internlm/lec6/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/nlp/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/nlp/rnns/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/nlp/word2vec/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/others/dt/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/others/prompt/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/transformer/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/transformer/attention/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/transformer/bert/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/transformer/transformer/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/llm/transformer/vit/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/comb/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/maa/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/maa/lec1/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/maa/lec2/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/maa/lec3/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/optimization-theory/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/optimization-theory/lec1/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/optimization-theory/lec2/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/mb/optimization-theory/lec3/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/action/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/docker/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/ffmpeg/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/gdb/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/git/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/gitbook/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/hexo/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/imagemagick/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/mkdocs/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/reveal-md/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/shell/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/utilsbox/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
     <url>
          <loc>https://note.jujimeizuo.cn/utils/wandb/</loc>
-         <lastmod>2026-01-28</lastmod>
+         <lastmod>2026-01-31</lastmod>
     </url>
 </urlset>

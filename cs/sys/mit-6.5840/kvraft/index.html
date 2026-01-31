@@ -4,14 +4,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/sys/6.5840/mr/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../kvsrv/" rel="next"/>
+<link href="https://note.jujimeizuo.cn/cs/sys/mit-6.5840/kvraft/" rel="canonical"/>
+<link href="../raft/" rel="prev"/>
+<link href="../../../others/regex/" rel="next"/>
 <link href="../../../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
 <link href="../../../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>Lab1 - MapReduce - 狙击美佐的笔记本</title>
+<title>Lab4 - KV Raft - 狙击美佐的笔记本</title>
 <link href="../../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/counter.css" rel="stylesheet"/>
@@ -55,7 +55,7 @@ var _hmt = _hmt || [];
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mapreduce">
+<a class="md-skip" href="#fault-tolerant-keyvalue-service">
           跳转至
         </a>
 </div>
@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Lab1 - MapReduce
+              Lab4 - KV Raft
             
           </span>
 </div>
@@ -785,61 +785,13 @@ var _hmt = _hmt || [];
             MIT 6.5840
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Lab1 - MapReduce
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mr/">
 <span class="md-ellipsis">
     Lab1 - MapReduce
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#task-mapreduce">
-<span class="md-ellipsis">
-      Task: MapReduce
-    </span>
-</a>
-<nav aria-label="Task: MapReduce" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#coordinator">
-<span class="md-ellipsis">
-      Coordinator
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#worker">
-<span class="md-ellipsis">
-      Worker
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reference">
-<span class="md-ellipsis">
-      Reference
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../kvsrv/">
@@ -857,13 +809,154 @@ var _hmt = _hmt || [];
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../kvraft/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Lab4 - KV Raft
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Lab4 - KV Raft
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#part-4a-replicated-state-machine-rsm">
+<span class="md-ellipsis">
+      Part 4A: replicated state machine (RSM)
+    </span>
+</a>
+<nav aria-label="Part 4A: replicated state machine (RSM)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      数据一致性
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submit">
+<span class="md-ellipsis">
+      Submit()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reader">
+<span class="md-ellipsis">
+      reader()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#part-4b-keyvalue-service-without-snapshots">
+<span class="md-ellipsis">
+      Part 4B: Key/value service without snapshots
+    </span>
+</a>
+<nav aria-label="Part 4B: Key/value service without snapshots" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client">
+<span class="md-ellipsis">
+      client
+    </span>
+</a>
+<nav aria-label="client" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get">
+<span class="md-ellipsis">
+      Get()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#put">
+<span class="md-ellipsis">
+      Put()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server">
+<span class="md-ellipsis">
+      server
+    </span>
+</a>
+<nav aria-label="server" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#doop">
+<span class="md-ellipsis">
+      DoOp()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_1">
+<span class="md-ellipsis">
+      Get()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#put_1">
+<span class="md-ellipsis">
+      Put()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#part-4c-keyvalue-service-with-snapshots">
+<span class="md-ellipsis">
+      Part 4C: Key/value service with snapshots
+    </span>
+</a>
+<nav aria-label="Part 4C: Key/value service with snapshots" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snapshot">
+<span class="md-ellipsis">
+      Snapshot()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restore">
+<span class="md-ellipsis">
+      Restore()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2463,24 +2556,31 @@ var _hmt = _hmt || [];
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#task-mapreduce">
+<a class="md-nav__link" href="#part-4a-replicated-state-machine-rsm">
 <span class="md-ellipsis">
-      Task: MapReduce
+      Part 4A: replicated state machine (RSM)
     </span>
 </a>
-<nav aria-label="Task: MapReduce" class="md-nav">
+<nav aria-label="Part 4A: replicated state machine (RSM)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#coordinator">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      Coordinator
+      数据一致性
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#worker">
+<a class="md-nav__link" href="#submit">
 <span class="md-ellipsis">
-      Worker
+      Submit()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reader">
+<span class="md-ellipsis">
+      reader()
     </span>
 </a>
 </li>
@@ -2488,11 +2588,97 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reference">
+<a class="md-nav__link" href="#part-4b-keyvalue-service-without-snapshots">
 <span class="md-ellipsis">
-      Reference
+      Part 4B: Key/value service without snapshots
     </span>
 </a>
+<nav aria-label="Part 4B: Key/value service without snapshots" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client">
+<span class="md-ellipsis">
+      client
+    </span>
+</a>
+<nav aria-label="client" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get">
+<span class="md-ellipsis">
+      Get()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#put">
+<span class="md-ellipsis">
+      Put()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server">
+<span class="md-ellipsis">
+      server
+    </span>
+</a>
+<nav aria-label="server" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#doop">
+<span class="md-ellipsis">
+      DoOp()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get_1">
+<span class="md-ellipsis">
+      Get()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#put_1">
+<span class="md-ellipsis">
+      Put()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#part-4c-keyvalue-service-with-snapshots">
+<span class="md-ellipsis">
+      Part 4C: Key/value service with snapshots
+    </span>
+</a>
+<nav aria-label="Part 4C: Key/value service with snapshots" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snapshot">
+<span class="md-ellipsis">
+      Snapshot()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restore">
+<span class="md-ellipsis">
+      Restore()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2503,72 +2689,164 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="mapreduce">MapReduce<a class="headerlink" href="#mapreduce" title="Permanent link">¶</a></h1>
+<h1 id="fault-tolerant-keyvalue-service">Fault-tolerant Key/Value Service<a class="headerlink" href="#fault-tolerant-keyvalue-service" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>483<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>2<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1305<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>1<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li><span>MapReduce<span class="heti-spacing"> </span></span>实际是定义了两个接口<span class="heti-skip"><span class="heti-spacing"> </span>Map<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Reduce</span>：<ul>
-<li><span>Map<span class="heti-spacing"> </span></span>完成程序逻辑的分发；</li>
-<li><span>Reduce<span class="heti-spacing"> </span></span>完成并发结果的规约和收集；</li>
-</ul>
-</li>
-<li>paper: <a href="http://research.google.com/archive/mapreduce-osdi04.pdf"><img alt="📖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4d6.svg" title=":book:"/> MapReduce: Simplified Data Processing on Large Clusters</a></li>
-<li>home: <a href="http://nil.csail.mit.edu/6.5840/2025/labs/lab-mr.html">http://nil.csail.mit.edu/6.5840/2025/labs/lab-mr.html</a></li>
+<li>这是一个基于<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>RSM<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>KV<span class="heti-spacing"> </span></span>数据库系统，多个<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>通过<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>协议来同步操作日志，保证所有<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>上的状态机保持一致；</li>
+<li>与<span class="heti-skip"><span class="heti-spacing"> </span>Lab2<span class="heti-spacing"> </span></span>类似，只是该服务并非单一<span><span class="heti-spacing"> </span>server</span>，而是多个<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>组成的<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>集群；</li>
+<li>home: <a href="https://pdos.csail.mit.edu/6.824/labs/lab-kvraft1.html">https://pdos.csail.mit.edu/6.824/labs/lab-kvraft1.html</a></li>
 </ul>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Lab Materials</p>
+<p class="admonition-title">Tip</p>
 <ul>
-<li>main/mrcoordinator.go：启动一个<span><span class="heti-spacing"> </span>coordinator</span>；</li>
-<li>main/mrworker.go：加载<span><span class="heti-spacing"> </span>wc.so</span>，启动一个<span><span class="heti-spacing"> </span>worker</span>；</li>
-<li>mr/mrsequential.go：以顺序方式运行<span class="heti-skip"><span class="heti-spacing"> </span>MapReduce<span class="heti-spacing"> </span></span>任务的参考实现；</li>
-<li>mr/coordinator.go：初始化<span><span class="heti-spacing"> </span>Task</span>，分配<span><span class="heti-spacing"> </span>Task</span>，并监测<span><span class="heti-spacing"> </span>Task</span>；</li>
-<li>mr/worker.go：请求任务、处理任务、返回任务完成情况；</li>
-<li>mr/rpc.go：<span>RPC<span class="heti-spacing"> </span></span>的传入和传出参数格式；</li>
-<li>mr/wc.go：一个简单的<span class="heti-skip"><span class="heti-spacing"> </span>word count MapReduce<span class="heti-spacing"> </span></span>程序的实现；</li>
+<li><span>client.go:<span class="heti-spacing"> </span></span>供应用程序调用，发起 <code>Get()</code> 和 <code>Put()</code>；</li>
+<li>server.go: KV Server，接收<span class="heti-skip"><span class="heti-spacing"> </span>client<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>请求，并将其提交给<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>集群；</li>
+<li>rsm.go：复制状态机层，连接<span class="heti-skip"><span class="heti-spacing"> </span>KV Storage<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>的桥梁，负责将操作提交给<span><span class="heti-spacing"> </span>Raft</span>、从<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>应用已提交的日志条目到状态机，以及管理快照；
+<center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab4/kvraft.png"><img src="/assets/images/cs/sys/6.5840/lab4/kvraft.png"/></a></center></li>
 </ul>
 </div>
-<h2 id="task-mapreduce">Task: MapReduce<a class="headerlink" href="#task-mapreduce" title="Permanent link">¶</a></h2>
+<h2 id="part-4a-replicated-state-machine-rsm">Part 4A: replicated state machine (RSM)<a class="headerlink" href="#part-4a-replicated-state-machine-rsm" title="Permanent link">¶</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Task</p>
+<p class="admonition-title">replicated state machine (RSM)</p>
 <ul>
-<li>实现一个分布式的<span class="heti-skip"><span class="heti-spacing"> </span>MapReduce<span class="heti-spacing"> </span></span>框架，由<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>worker<span class="heti-spacing"> </span></span>组成；</li>
-<li>系统中只会有一个<span><span class="heti-spacing"> </span>coordinator process</span>，但会有一个或多个<span class="heti-skip"><span class="heti-spacing"> </span>worker processes<span class="heti-spacing"> </span></span>并行执行；</li>
-<li>本次<span class="heti-skip"><span class="heti-spacing"> </span>Lab<span class="heti-spacing"> </span></span>只在同一台机器上运行，<span>worker<span class="heti-spacing"> </span></span>会通过<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>通信；</li>
-<li>每个<span class="heti-skip"><span class="heti-spacing"> </span>worker<span class="heti-spacing"> </span></span>会在一个<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>中向<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>请求任务，从一个或多个文件中读取任务的输入，执行任务，将任务的输出写入一个或多个文件，然后再次向<span class="heti-skip"><span class="heti-spacing"> </span>coordinator<span class="heti-spacing"> </span></span>请求新任务；</li>
-<li><span>coordinator<span class="heti-spacing"> </span></span>需要监测<span class="heti-skip"><span class="heti-spacing"> </span>worker<span class="heti-spacing"> </span></span>是否在合理的时间内完成了任务，如果没有，则将相同的任务分配给另一个<span><span class="heti-spacing"> </span>worker</span>。</li>
+<li>实现<span class="heti-skip"><span class="heti-spacing"> </span>rsm.go<span class="heti-spacing"> </span></span>中的 <code>Submit()</code> 和 一个<code>reader()</code><span><span class="heti-spacing"> </span>goroutine</span>；</li>
+<li>网络分区情况下如何保证数据一致性？</li>
+<li><span>raft<span class="heti-spacing"> </span></span>节点<span class="heti-skip"><span class="heti-spacing"> </span>kill<span class="heti-spacing"> </span></span>时，<span>applyCh<span class="heti-spacing"> </span></span>的处理？</li>
 </ul>
 </div>
-<div style="display: flex; justify-content: center;">
-<div style="flex: 1; text-align: center; max-width: 400px;">
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab1/map.jpg"><img src="/assets/images/cs/sys/6.5840/lab1/map.jpg" width="100%"/></a>
-<p><strong><span>Map<span class="heti-spacing"> </span></span>阶段</strong>：分散计算，将输入数据分割并并行处理</p>
-</div>
-<div style="flex: 1; text-align: center; max-width: 400px;">
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/sys/6.5840/lab1/reduce.jpg"><img src="/assets/images/cs/sys/6.5840/lab1/reduce.jpg" width="100%"/></a>
-<p><strong><span>Reduce<span class="heti-spacing"> </span></span>阶段</strong>：聚合结果，汇总中间结果并生成最终输出</p>
-</div>
-</div>
-<h3 id="coordinator">Coordinator<a class="headerlink" href="#coordinator" title="Permanent link">¶</a></h3>
+<h3 id="_1">数据一致性<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<blockquote>
+<p>可能因为网络分区、节点宕机等，会发生<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>改变，<span>client<span class="heti-spacing"> </span></span>只有在操作真正被正确的<span class="heti-skip"><span class="heti-spacing"> </span>term<span class="heti-spacing"> </span></span>提交、且内容未改动时，才能收到<span><span class="heti-spacing"> </span>OK</span>。</p>
+</blockquote>
 <ul>
-<li><span>Task<span class="heti-spacing"> </span></span>分为<span class="heti-skip"><span class="heti-spacing"> </span>MapTask<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>ReduceTask</span>，<span>Coordinator<span class="heti-spacing"> </span></span>负责将任务分配给<span><span class="heti-spacing"> </span>Worker</span>，并监测任务的完成情况；</li>
-<li>当所有<span class="heti-skip"><span class="heti-spacing"> </span>Map<span class="heti-spacing"> </span></span>任务完成后，<span>Coordinator<span class="heti-spacing"> </span></span>会分配<span class="heti-skip"><span class="heti-spacing"> </span>Reduce<span class="heti-spacing"> </span></span>任务；</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>Worker<span class="heti-spacing"> </span></span>在合理时间内未完成任务，<span>Coordinator<span class="heti-spacing"> </span></span>会将任务重新分配给其他<span><span class="heti-spacing"> </span>Worker</span>。</li>
+<li>为了保证数据一致性，<span>rsm<span class="heti-spacing"> </span></span>维护一个哈希表<span><span class="heti-spacing"> </span>opMap</span>：<ul>
+<li><span>key<span class="heti-spacing"> </span></span>为<span><span class="heti-spacing"> </span>Id</span>，表示<span class="heti-skip"><span class="heti-spacing"> </span>op<span class="heti-spacing"> </span></span>的唯一<span><span class="heti-spacing"> </span>id</span>，可以用<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>index<span class="heti-spacing"> </span></span>表示；</li>
+<li><span>value<span class="heti-spacing"> </span></span>为<span><span class="heti-spacing"> </span>opEntry</span>，包含期望的<span><span class="heti-spacing"> </span>Term</span>、<span>Req<span class="heti-spacing"> </span></span>和结果<span><span class="heti-spacing"> </span>channel</span>；</li>
 </ul>
-<h3 id="worker">Worker<a class="headerlink" href="#worker" title="Permanent link">¶</a></h3>
-<ul>
-<li><span>Worker<span class="heti-spacing"> </span></span>通过<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>向<span class="heti-skip"><span class="heti-spacing"> </span>Coordinator<span class="heti-spacing"> </span></span>请求任务（<span>MapTask<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>ReduceTask</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
-<li><span>Worker<span class="heti-spacing"> </span></span>执行分配的任务，并将结果写入中间文件；</li>
-<li><span>Worker<span class="heti-spacing"> </span></span>处理完任务后，向<span class="heti-skip"><span class="heti-spacing"> </span>Coordinator<span class="heti-spacing"> </span></span>汇报任务完成情况。</li>
+</li>
+<li>如何保证数据一致性：<ul>
+<li><span>opMap<span class="heti-spacing"> </span></span>中是否存在<span><span class="heti-spacing"> </span>Id</span>：<ul>
+<li><code>rsm.opMap[applyMsg.CommandIndex]</code></li>
 </ul>
-<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+</li>
+<li><span>Req<span class="heti-spacing"> </span></span>比较：从<span class="heti-skip"><span class="heti-spacing"> </span>applyCh<span class="heti-spacing"> </span></span>读取到有<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>提交，就可以去应用，但是这个<span class="heti-skip"><span class="heti-spacing"> </span>Req<span class="heti-spacing"> </span></span>可能是旧<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的未提交<span><span class="heti-spacing"> </span>log</span>，因此需要和当前<span class="heti-skip"><span class="heti-spacing"> </span>client<span class="heti-spacing"> </span></span>发起的<span class="heti-skip"><span class="heti-spacing"> </span>Req<span class="heti-spacing"> </span></span>做对比：<ul>
+<li><code>!reflect.DeepEqual(opEntry.Req, op.Req)</code></li>
+</ul>
+</li>
+<li><span>Term<span class="heti-spacing"> </span></span>比较：<span>Term<span class="heti-spacing"> </span></span>的改变可能意味<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的改变，旧<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>的未提交<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>可能会被覆盖：<ul>
+<li><code>opEntry.Term != applyMsg.Term</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">当<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>节点<span class="heti-skip"><span class="heti-spacing"> </span>kill<span class="heti-spacing"> </span></span>时关闭了<span><span class="heti-spacing"> </span>applyCh</span>，而此时<span class="heti-skip"><span class="heti-spacing"> </span>applier<span class="heti-spacing"> </span></span>还在把提交的命令发送给<span><span class="heti-spacing"> </span>applyCh</span>，导致错误。</p>
 <ul>
-<li><a href="https://www.bilibili.com/video/BV1Vb411m7go/?vd_source=5e048b202705330980eefcc9a56cc5d0">深入浅出讲解<span><span class="heti-spacing"> </span>MapReduce</span></a></li>
-<li><a href="https://airekans.github.io/cloud-computing/2014/01/25/mapreduce-intro"><span>MapReduce<span class="heti-spacing"> </span></span>简介</a></li>
-<li><a href="https://github.com/chaozh/MIT-6.824/issues/2">Lec1：入门介绍（以<span class="heti-skip"><span class="heti-spacing"> </span>MapReduce<span class="heti-spacing"> </span></span>为例）</a></li>
+<li>当 <code>Kill()</code> 时，<code>applyCond.Broadcast()</code> 唤醒所有等待的<span><span class="heti-spacing"> </span>goroutinue</span>，并且用 <code>sync.WaitGroup</code> 等待所有<span class="heti-skip"><span class="heti-spacing"> </span>goroutine<span class="heti-spacing"> </span></span>退出；</li>
+<li><span>InstallSnapshot<span class="heti-spacing"> </span></span>中也会发送快照到<span><span class="heti-spacing"> </span>applyCh</span>，因此要判断<span class="heti-skip"><span class="heti-spacing"> </span>rf<span class="heti-spacing"> </span></span>是否 <code>killed()</code>；</li>
+</ul>
+</div>
+<h3 id="submit">Submit()<a class="headerlink" href="#submit" title="Permanent link">¶</a></h3>
+<ol>
+<li>向<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>使用 <code>rf.Start()</code> 等待<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>提交请求，并发送给<span><span class="heti-spacing"> </span>applyCh</span>；</li>
+<li>建立<span><span class="heti-spacing"> </span>OpEntry</span>，记录期望的<span><span class="heti-spacing"> </span>Term</span>、<span>Req<span class="heti-spacing"> </span></span>和结果<span><span class="heti-spacing"> </span>channel</span>；</li>
+<li>用<span class="heti-skip"><span class="heti-spacing"> </span>select<span class="heti-spacing"> </span></span>阻塞等待结果；</li>
+</ol>
+<h3 id="reader">reader()<a class="headerlink" href="#reader" title="Permanent link">¶</a></h3>
+<ol>
+<li>轮询<span><span class="heti-spacing"> </span>applyCh</span>，读取已提交的<span><span class="heti-spacing"> </span>log</span>；</li>
+<li>若<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>异常关闭，需要向<span class="heti-skip"><span class="heti-spacing"> </span>opMap<span class="heti-spacing"> </span></span>内所有待处理的<span class="heti-skip"><span class="heti-spacing"> </span>opEntry<span class="heti-spacing"> </span></span>发送 <code>ErrWrongLeader</code>，并清空<span class="heti-skip"><span class="heti-spacing"> </span>opMap<span class="heti-spacing"> </span></span>后退出；</li>
+<li>若<span class="heti-skip"><span class="heti-spacing"> </span>applyMsg<span class="heti-spacing"> </span></span>正确，则执行状态机 <code>rsm.sm.DoOp(op.Req)</code>，在加锁前执行，保证每个已提交日志都被应用一次；<ol>
+<li>如何保证只应用一次？<span>reader()<span class="heti-spacing"> </span></span>从<span class="heti-skip"><span class="heti-spacing"> </span>applyCh<span class="heti-spacing"> </span></span>逐个接受日志，<span>raft<span class="heti-spacing"> </span></span>本身保证每个已提交日志只应用一次，不会重复发送同一个 <code>CommandIndex</code> 的<span><span class="heti-spacing"> </span>applyMsg</span>，所以<span class="heti-skip"><span class="heti-spacing"> </span>DoOp<span class="heti-spacing"> </span></span>只会执行一次；</li>
+<li>为什么在加锁前？ 因为<span class="heti-skip"><span class="heti-spacing"> </span>DoOp<span class="heti-spacing"> </span></span>可能是耗时操作，若在加锁后执行，可能会阻塞其他<span class="heti-skip"><span class="heti-spacing"> </span>goroutine<span class="heti-spacing"> </span></span>的访问，影响性能；</li>
+</ol>
+</li>
+<li>三层验证，<span>opMap<span class="heti-spacing"> </span></span>是否存在 <code>CommandIndex</code>、<code>Term</code> 是否匹配、<code>Req</code> 是否匹配，正确与否都要做相应处理和回复；</li>
+</ol>
+<h2 id="part-4b-keyvalue-service-without-snapshots">Part 4B: Key/value service without snapshots<a class="headerlink" href="#part-4b-keyvalue-service-without-snapshots" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Key/value service without snapshots</p>
+<ul>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span>rsm<span class="heti-spacing"> </span></span>来复制一个<span><span class="heti-spacing"> </span>KV Server</span>，每个<span class="heti-skip"><span class="heti-spacing"> </span>kvserver<span class="heti-spacing"> </span></span>都会关联一个<span class="heti-skip"><span class="heti-spacing"> </span>rsm/raft<span class="heti-spacing"> </span></span>节点，<span>client<span class="heti-spacing"> </span></span>通过 <code>Get()</code> 和<code>Put()</code><span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>向其关联的<span class="heti-skip"><span class="heti-spacing"> </span>kvserver(raft leader)<span class="heti-spacing"> </span></span>发送请求，<span>kvserver<span class="heti-spacing"> </span></span>将 <code>Get()/Put()</code> 提交给<span><span class="heti-spacing"> </span>rsm</span>，<span>rsm<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>raft<span class="heti-spacing"> </span></span>对其复制，并在每个节点上调用<span><span class="heti-spacing"> </span>DoOp</span>，应用于<span><span class="heti-spacing"> </span>KV Database</span>；</li>
+<li>实现一个在没有消息丢失且没有故障的环境下能正常工作的<span class="heti-skip"><span class="heti-spacing"> </span>KV<span class="heti-spacing"> </span></span>服务；</li>
+<li><span>Clerk<span class="heti-spacing"> </span></span>不知道哪个<span class="heti-skip"><span class="heti-spacing"> </span>kvserver<span class="heti-spacing"> </span></span>是<span><span class="heti-spacing"> </span>Raft leader</span>， 应该如何处理？</li>
+<li>如果故障如何处理？</li>
+</ul>
+</div>
+<h3 id="client">client<a class="headerlink" href="#client" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>leaderId</code>：<span>Clerk<span class="heti-spacing"> </span></span>维护当前认为的<span class="heti-skip"><span class="heti-spacing"> </span>Raft leader<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>kvserver id</span>；</li>
+<li><code>clientId</code>：<span>Clerk<span class="heti-spacing"> </span></span>的全局唯一<span><span class="heti-spacing"> </span>id</span>，用于<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>识别请求来自哪个<span><span class="heti-spacing"> </span>client</span>；</li>
+<li><code>requestId</code>：<span>Clerk<span class="heti-spacing"> </span></span>维护每个<span class="heti-skip"><span class="heti-spacing"> </span>Request<span class="heti-spacing"> </span></span>的唯一<span><span class="heti-spacing"> </span>id</span>，用于<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>识别同一个<span class="heti-skip"><span class="heti-spacing"> </span>client<span class="heti-spacing"> </span></span>的重复请求，每次 <code>Put</code> 递增；</li>
+</ul>
+<h4 id="get">Get()<a class="headerlink" href="#get" title="Permanent link">¶</a></h4>
+<ul>
+<li>同<span><span class="heti-spacing"> </span>lab2</span>；</li>
+<li>轮询<span><span class="heti-spacing"> </span>leader</span>，每次读 <code>leaderId</code> 然后向对应<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>发送<span><span class="heti-spacing"> </span>RPC</span>；</li>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>RPC<span class="heti-spacing"> </span></span>失败或返回 <code>ErrWrongLeader</code>，则尝试下一个<span><span class="heti-spacing"> </span>kvserver</span>，直到成功为止；</li>
+</ul>
+<h4 id="put">Put()<a class="headerlink" href="#put" title="Permanent link">¶</a></h4>
+<ul>
+<li>同<span><span class="heti-spacing"> </span>lab2</span>；</li>
+<li><code>requestId++</code>，同 <code>clientId</code> 一起发送给<span><span class="heti-spacing"> </span>server</span>；</li>
+<li>轮询<span class="heti-skip"><span class="heti-spacing"> </span>leader<span class="heti-spacing"> </span></span>并处理结果，注意是否首次发送请求；</li>
+</ul>
+<h3 id="server">server<a class="headerlink" href="#server" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>kvMap</code><span>:<span class="heti-spacing"> </span></span>存储所有<span class="heti-skip"><span class="heti-spacing"> </span>kv<span class="heti-spacing"> </span></span>及其对应版本号，<code>{key: (value, version)}</code>；</li>
+<li><code>clientPutResults</code><span>:<span class="heti-spacing"> </span></span>缓存每个<span class="heti-skip"><span class="heti-spacing"> </span>client<span class="heti-spacing"> </span></span>的最新 <code>Put()</code> 结果，当重复<span class="heti-skip"><span class="heti-spacing"> </span>Request<span class="heti-spacing"> </span></span>到达时，直接返回缓存结果，保证线性一致性；</li>
+</ul>
+<h4 id="doop">DoOp()<a class="headerlink" href="#doop" title="Permanent link">¶</a></h4>
+<ul>
+<li>根据 <code>req.(type)</code> 判断是 <code>DoGet()</code> 还是 <code>DoPut()</code>；</li>
+<li><code>DoGet()</code>：同<span><span class="heti-spacing"> </span>lab2</span>，从 <code>kvMap</code> 中读取<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>的值，返回 <code>ErrNoKey</code> 或对应<span><span class="heti-spacing"> </span>value</span>；</li>
+<li><code>DoPut()</code>：<ul>
+<li>同<span><span class="heti-spacing"> </span>lab2</span>；</li>
+<li>检查 <code>clientPutResults</code>，如果是重复请求，直接返回缓存结果；</li>
+<li>否则，更新 <code>kvMap</code>，并将结果缓存到 <code>clientPutResults</code> 中；</li>
+</ul>
+</li>
+</ul>
+<h4 id="get_1">Get()<a class="headerlink" href="#get_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>向<span class="heti-skip"><span class="heti-spacing"> </span>rsm<span class="heti-spacing"> </span></span>提交 <code>Get</code> 请求，等待结果返回；</li>
+</ul>
+<h4 id="put_1">Put()<a class="headerlink" href="#put_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>向<span class="heti-skip"><span class="heti-spacing"> </span>rsm<span class="heti-spacing"> </span></span>提交 <code>Put</code> 请求，等待结果返回；</li>
+</ul>
+<h2 id="part-4c-keyvalue-service-with-snapshots">Part 4C: Key/value service with snapshots<a class="headerlink" href="#part-4c-keyvalue-service-with-snapshots" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Key/value service with snapshots</p>
+<ul>
+<li>修改<span><span class="heti-spacing"> </span>rsm</span>，使其能够检测到持久化的<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>状态何时变得过大，然后将快照交给<span><span class="heti-spacing"> </span>Raft</span>，以便节省日志空间并减少重启时间；</li>
+<li>实现 <code>Snapshot()</code> 和 <code>Restore()</code> 方法，<span>rsm<span class="heti-spacing"> </span></span>在什么时机调用？</li>
+<li>除了<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>状态外，快照中还应包含哪些数据？</li>
+</ul>
+</div>
+<h3 id="snapshot">Snapshot()<a class="headerlink" href="#snapshot" title="Permanent link">¶</a></h3>
+<ul>
+<li>对<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>kvMap<span class="heti-spacing"> </span></span>做快照；</li>
+<li>调用时机：<ul>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span>snapshot<span class="heti-spacing"> </span></span>的大小超过给定的<span class="heti-skip"><span class="heti-spacing"> </span>maxraftstate<span class="heti-spacing"> </span></span>时调用；</li>
+<li>应在<span class="heti-skip"><span class="heti-spacing"> </span>log<span class="heti-spacing"> </span></span>应用后即执行 <code>DoOp()</code> 后调用；</li>
+</ul>
+</li>
+</ul>
+<h3 id="restore">Restore()<a class="headerlink" href="#restore" title="Permanent link">¶</a></h3>
+<ul>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>Raft<span class="heti-spacing"> </span></span>中收到快照，并在<span class="heti-skip"><span class="heti-spacing"> </span>server<span class="heti-spacing"> </span></span>中恢复数据；</li>
+<li>调用时机：<ul>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span>RSM<span class="heti-spacing"> </span></span>重启时<span class="heti-skip"><span class="heti-spacing"> </span>snapshot<span class="heti-spacing"> </span></span>大小不为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>时调用；</li>
+<li><code>reader()</code> 中接收到快照时调用；</li>
+</ul>
+</li>
 </ul>
 <div class="hr-before-source-file"><hr/></div>
 <aside class="md-source-file">
@@ -2576,13 +2854,13 @@ var _hmt = _hmt || [];
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月27日 16:08:21 CST">2026年1月27日 16:08:21</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月31日 20:45:37 CST">2026年1月31日 20:45:37</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月17日 15:51:18 CST">2026年1月17日 15:51:18</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年1月27日 16:08:21 CST">2026年1月27日 16:08:21</span>
 </span>
 </aside>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -2604,7 +2882,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: MIT 6.5840 Lab" class="md-footer__link md-footer__link--prev" href="../">
+<a aria-label="上一页: Lab3 - Raft" class="md-footer__link md-footer__link--prev" href="../raft/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -2613,17 +2891,17 @@ var _hmt = _hmt || [];
                 上一页
               </span>
 <div class="md-ellipsis">
-                MIT 6.5840 Lab
+                Lab3 - Raft
               </div>
 </div>
 </a>
-<a aria-label="下一页: Lab2 - K/V Server" class="md-footer__link md-footer__link--next" href="../kvsrv/">
+<a aria-label="下一页: RegEx 正则表达式" class="md-footer__link md-footer__link--next" href="../../../others/regex/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Lab2 - K/V Server
+                RegEx 正则表达式
               </div>
 </div>
 <div class="md-footer__button md-icon">
