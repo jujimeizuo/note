@@ -79,9 +79,9 @@ extra:
     property: G-CY82KV89G2
 
 extra_css:
-  - assets/utils/katex.min.css
-  - assets/maple/maplemono.css
-  - assets/lxgw/lxgwscreen.css
+  - https://cdn.jujimeizuo.cn/utils/katex.min.css
+  - https://cdn.jujimeizuo.cn/maple/maplemono.css
+  - https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css
   - css/tasklist.css
   - css/custom.css
   - css/card.css
@@ -91,7 +91,7 @@ extra_css:
   - css/svg_extra.css
 
 extra_javascript:
-  - assets/utils/katex.min.js
+  - https://cdn.jujimeizuo.cn/utils/katex.min.js
   - js/katex.js
 
 plugins:
@@ -189,6 +189,9 @@ nav:
         - 事务: cs/db/redis/work.md
     - 系统相关:
       - cs/sys/index.md
+      - CMU 15-445:
+        - cs/sys/cmu-15-445/index.md
+        - Project 0 - C++ Primer: cs/sys/cmu-15-445/c++-primer.md
       - MIT 6.5840:
         - cs/sys/mit-6.5840/index.md
         - Lab1 - MapReduce: cs/sys/mit-6.5840/mr.md

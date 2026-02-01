@@ -38,7 +38,8 @@
     - MySQL: db/mysql/
     - Redis: db/redis/datatype/
 - 系统:
-    - MIT 6.5840[lab]: sys/6.5840/
+    - CMU 15445[lab]: sys/cmu-15-445/
+    - MIT 6.5840[lab]: sys/mit-6.5840/
 - 杂项:
     - RegEx 正则表达式: others/regex/
 
