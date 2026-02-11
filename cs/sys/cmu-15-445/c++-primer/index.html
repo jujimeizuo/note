@@ -4,30 +4,30 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="狙击美佐（jujimeizuo）的笔记本" name="description"/>
-<link href="https://note.jujimeizuo.cn/cs/hpc/openmp/" rel="canonical"/>
-<link href="../mpi/" rel="prev"/>
-<link href="../../software/" rel="next"/>
-<link href="../../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
-<link href="../../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://note.jujimeizuo.cn/cs/sys/cmu-15-445/c%2B%2B-primer/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../buffer-pool-manager/" rel="next"/>
+<link href="../../../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
+<link href="../../../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
-<title>OpenMP 基础 - 狙击美佐的笔记本</title>
-<link href="../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/counter.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../css/timeline.css" rel="stylesheet"/>
+<title>Project 0 - C++ Primer - 狙击美佐的笔记本</title>
+<link href="../../../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../css/counter.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/maple/maplemono.css" rel="stylesheet"/>
 <link href="https://cdn.jujimeizuo.cn/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/card.css" rel="stylesheet"/>
-<link href="../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
-<link href="../../../css/toc_extra.css" rel="stylesheet"/>
-<link href="../../../css/svg_extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../../css/card.css" rel="stylesheet"/>
+<link href="../../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
+<link href="../../../../css/toc_extra.css" rel="stylesheet"/>
+<link href="../../../../css/svg_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -40,7 +40,7 @@ var _hmt = _hmt || [];
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-CY82KV89G2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-CY82KV89G2",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CY82KV89G2"></script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -49,13 +49,13 @@ var _hmt = _hmt || [];
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#openmp">
+<a class="md-skip" href="#c-primer">
           跳转至
         </a>
 </div>
@@ -63,7 +63,7 @@ var _hmt = _hmt || [];
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              OpenMP 基础
+              Project 0 - C++ Primer
             
           </span>
 </div>
@@ -101,7 +101,7 @@ var _hmt = _hmt || [];
 </a>
 </div>
 </div>
-<script src="../../../js/scheme.js" type="text/javascript"></script>
+<script src="../../../../js/scheme.js" type="text/javascript"></script>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
@@ -149,7 +149,7 @@ var _hmt = _hmt || [];
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../../../..">
           
   
   
@@ -160,7 +160,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../">
+<a class="md-tabs__link" href="../../../">
           
   
   
@@ -171,7 +171,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../cv/">
+<a class="md-tabs__link" href="../../../../cv/">
           
   
   
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../llm/">
+<a class="md-tabs__link" href="../../../../llm/">
           
   
   
@@ -193,7 +193,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../mb/">
+<a class="md-tabs__link" href="../../../../mb/">
           
   
   
@@ -204,7 +204,7 @@ var _hmt = _hmt || [];
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../utils/">
+<a class="md-tabs__link" href="../../../../utils/">
           
   
   
@@ -224,7 +224,7 @@ var _hmt = _hmt || [];
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="狙击美佐的笔记本">
+<a aria-label="狙击美佐的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="狙击美佐的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"></path></svg>
 </a>
     狙击美佐的笔记本
@@ -243,7 +243,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     Home
     
@@ -260,7 +260,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../changelog/">
+<a class="md-nav__link" href="../../../../changelog/">
 <span class="md-ellipsis">
     更新记录
     
@@ -268,7 +268,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../links/">
+<a class="md-nav__link" href="../../../../links/">
 <span class="md-ellipsis">
     友链
     
@@ -281,7 +281,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
+<a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     Computer Science
     
@@ -300,7 +300,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pl/">
+<a class="md-nav__link" href="../../../pl/">
 <span class="md-ellipsis">
     编程语言
     
@@ -319,7 +319,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pl/c_cpp/">
+<a class="md-nav__link" href="../../../pl/c_cpp/">
 <span class="md-ellipsis">
     C/C++
     
@@ -336,7 +336,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/basic/">
+<a class="md-nav__link" href="../../../pl/c_cpp/basic/">
 <span class="md-ellipsis">
     C++ 系统知识
     
@@ -344,7 +344,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/stl/">
+<a class="md-nav__link" href="../../../pl/c_cpp/stl/">
 <span class="md-ellipsis">
     C++ STL
     
@@ -352,7 +352,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/c_cpp/function/">
+<a class="md-nav__link" href="../../../pl/c_cpp/function/">
 <span class="md-ellipsis">
     C++ 各种函数使用
     
@@ -365,7 +365,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pl/python/">
+<a class="md-nav__link" href="../../../pl/python/">
 <span class="md-ellipsis">
     Python
     
@@ -382,7 +382,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/basic/">
+<a class="md-nav__link" href="../../../pl/python/basic/">
 <span class="md-ellipsis">
     Python 语法基础
     
@@ -390,7 +390,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/numpy/">
+<a class="md-nav__link" href="../../../pl/python/numpy/">
 <span class="md-ellipsis">
     Numpy 科学计算库
     
@@ -398,7 +398,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/python/virtual/">
+<a class="md-nav__link" href="../../../pl/python/virtual/">
 <span class="md-ellipsis">
     Python 虚拟环境
     
@@ -411,7 +411,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pl/go/">
+<a class="md-nav__link" href="../../../pl/go/">
 <span class="md-ellipsis">
     Go
     
@@ -428,7 +428,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/go/basic/">
+<a class="md-nav__link" href="../../../pl/go/basic/">
 <span class="md-ellipsis">
     Go 语法基础
     
@@ -436,7 +436,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/go/gin/">
+<a class="md-nav__link" href="../../../pl/go/gin/">
 <span class="md-ellipsis">
     gin框架 (TODO)
     
@@ -449,7 +449,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../pl/java/">
+<a class="md-nav__link" href="../../../pl/java/">
 <span class="md-ellipsis">
     Java
     
@@ -466,7 +466,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/java/basic/">
+<a class="md-nav__link" href="../../../pl/java/basic/">
 <span class="md-ellipsis">
     Java 系统知识
     
@@ -474,7 +474,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../pl/java/springboot/">
+<a class="md-nav__link" href="../../../pl/java/springboot/">
 <span class="md-ellipsis">
     SpringBoot
     
@@ -503,7 +503,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../algorithm/basic-ds/">
+<a class="md-nav__link" href="../../../algorithm/basic-ds/">
 <span class="md-ellipsis">
     基础数据结构
     
@@ -511,7 +511,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../algorithm/design-analysis/">
+<a class="md-nav__link" href="../../../algorithm/design-analysis/">
 <span class="md-ellipsis">
     算法设计与分析
     
@@ -537,7 +537,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ai/mode-recognition/">
+<a class="md-nav__link" href="../../../ai/mode-recognition/">
 <span class="md-ellipsis">
     模式识别
     
@@ -545,7 +545,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ai/ml/">
+<a class="md-nav__link" href="../../../ai/ml/">
 <span class="md-ellipsis">
     机器学习
     
@@ -553,7 +553,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ai/dl/">
+<a class="md-nav__link" href="../../../ai/dl/">
 <span class="md-ellipsis">
     神经网络与深度学习
     
@@ -563,10 +563,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../../hpc/">
 <span class="md-ellipsis">
     高性能计算
     
@@ -576,14 +576,14 @@ var _hmt = _hmt || [];
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
             高性能计算
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../outline/">
+<a class="md-nav__link" href="../../../hpc/outline/">
 <span class="md-ellipsis">
     概论
     
@@ -591,7 +591,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../vectorizecompute/">
+<a class="md-nav__link" href="../../../hpc/vectorizecompute/">
 <span class="md-ellipsis">
     向量化计算
     
@@ -599,7 +599,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gpu/">
+<a class="md-nav__link" href="../../../hpc/gpu/">
 <span class="md-ellipsis">
     GPU 编程
     
@@ -607,245 +607,20 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mpi/">
+<a class="md-nav__link" href="../../../hpc/mpi/">
 <span class="md-ellipsis">
     MPI 基础
     
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    OpenMP 基础
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../hpc/openmp/">
 <span class="md-ellipsis">
     OpenMP 基础
     
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openmp_1">
-<span class="md-ellipsis">
-      什么是 OpenMP
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      并行性
-    </span>
-</a>
-<nav aria-label="并行性" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      进程和线程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      线程的硬件调度
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      硬件的内存模型
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fork-join">
-<span class="md-ellipsis">
-      Fork-Join 模型
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openmp_2">
-<span class="md-ellipsis">
-      OpenMP 编程
-    </span>
-</a>
-<nav aria-label="OpenMP 编程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      安装
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      编译使用
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      库函数
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      制导语句
-    </span>
-</a>
-<nav aria-label="制导语句" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#parallel">
-<span class="md-ellipsis">
-      parallel 线程并行
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for">
-<span class="md-ellipsis">
-      for 循环并行
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#if">
-<span class="md-ellipsis">
-      if 条件并行
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reduction">
-<span class="md-ellipsis">
-      reduction 执行过程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      同步构造
-    </span>
-</a>
-<nav aria-label="同步构造" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-sections">
-<span class="md-ellipsis">
-      #pragma omp sections
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-barrier">
-<span class="md-ellipsis">
-      #pragma omp barrier
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-single">
-<span class="md-ellipsis">
-      #pragma omp single
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-master">
-<span class="md-ellipsis">
-      #pragma omp master
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-critical">
-<span class="md-ellipsis">
-      #pragma omp critical
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-atomic">
-<span class="md-ellipsis">
-      #pragma omp atomic
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#false-sharing">
-<span class="md-ellipsis">
-      False Sharing
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      更多特性
-    </span>
-</a>
-<nav aria-label="更多特性" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      任务构造
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      向量化
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gpu">
-<span class="md-ellipsis">
-      GPU 支持
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -853,7 +628,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../software/">
+<a class="md-nav__link" href="../../../software/">
 <span class="md-ellipsis">
     软件相关
     
@@ -870,7 +645,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/design-pattern/">
+<a class="md-nav__link" href="../../../software/design-pattern/">
 <span class="md-ellipsis">
     设计模式
     
@@ -878,7 +653,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/sca/">
+<a class="md-nav__link" href="../../../software/sca/">
 <span class="md-ellipsis">
     软件构件与体系结构
     
@@ -886,7 +661,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/compa/">
+<a class="md-nav__link" href="../../../software/compa/">
 <span class="md-ellipsis">
     COM 原理与应用
     
@@ -894,7 +669,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../software/piaserver/">
+<a class="md-nav__link" href="../../../software/piaserver/">
 <span class="md-ellipsis">
     应用服务器原理与实现
     
@@ -920,7 +695,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/mysql/">
+<a class="md-nav__link" href="../../../db/mysql/">
 <span class="md-ellipsis">
     MySQL
     
@@ -943,7 +718,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/datatype/">
+<a class="md-nav__link" href="../../../db/redis/datatype/">
 <span class="md-ellipsis">
     数据类型
     
@@ -951,7 +726,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/cjh/">
+<a class="md-nav__link" href="../../../db/redis/cjh/">
 <span class="md-ellipsis">
     持久化
     
@@ -959,7 +734,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../db/redis/work/">
+<a class="md-nav__link" href="../../../db/redis/work/">
 <span class="md-ellipsis">
     事务
     
@@ -972,10 +747,10 @@ var _hmt = _hmt || [];
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../sys/">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     系统相关
     
@@ -985,16 +760,16 @@ var _hmt = _hmt || [];
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_8">
 <span class="md-nav__icon md-icon"></span>
             系统相关
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_8_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_8_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../sys/cmu-15-445/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     CMU 15-445
     
@@ -1004,22 +779,77 @@ var _hmt = _hmt || [];
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_8_2_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_2_8_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_8_2">
 <span class="md-nav__icon md-icon"></span>
             CMU 15-445
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../sys/cmu-15-445/c%2B%2B-primer/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Project 0 - C++ Primer
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Project 0 - C++ Primer
     
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-1">
+<span class="md-ellipsis">
+      Task 1
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../sys/cmu-15-445/buffer-pool-manager/">
+<a class="md-nav__link" href="#task-2">
+<span class="md-ellipsis">
+      Task 2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-2023">
+<span class="md-ellipsis">
+      Spring 2023
+    </span>
+</a>
+<nav aria-label="Spring 2023" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-1-copy-on-write-trie">
+<span class="md-ellipsis">
+      Task 1: Copy-On-Write Trie
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-2-concurrent-key-value-store">
+<span class="md-ellipsis">
+      Task 2: Concurrent Key-Value Store
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../buffer-pool-manager/">
 <span class="md-ellipsis">
     Project 1 - Buffer Pool Manager
     
@@ -1032,7 +862,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_8_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../sys/mit-6.5840/">
+<a class="md-nav__link" href="../../mit-6.5840/">
 <span class="md-ellipsis">
     MIT 6.5840
     
@@ -1049,7 +879,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../sys/mit-6.5840/mr/">
+<a class="md-nav__link" href="../../mit-6.5840/mr/">
 <span class="md-ellipsis">
     Lab1 - MapReduce
     
@@ -1057,7 +887,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../sys/mit-6.5840/kvsrv/">
+<a class="md-nav__link" href="../../mit-6.5840/kvsrv/">
 <span class="md-ellipsis">
     Lab2 - K/V Server
     
@@ -1065,7 +895,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../sys/mit-6.5840/raft/">
+<a class="md-nav__link" href="../../mit-6.5840/raft/">
 <span class="md-ellipsis">
     Lab3 - Raft
     
@@ -1073,7 +903,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../sys/mit-6.5840/kvraft/">
+<a class="md-nav__link" href="../../mit-6.5840/kvraft/">
 <span class="md-ellipsis">
     Lab4 - KV Raft
     
@@ -1102,7 +932,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../others/regex/">
+<a class="md-nav__link" href="../../../others/regex/">
 <span class="md-ellipsis">
     RegEx 正则表达式
     
@@ -1118,7 +948,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/">
+<a class="md-nav__link" href="../../../../cv/">
 <span class="md-ellipsis">
     3DV
     
@@ -1137,7 +967,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/mvg/">
+<a class="md-nav__link" href="../../../../cv/mvg/">
 <span class="md-ellipsis">
     多视图几何
     
@@ -1154,7 +984,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt2d/">
+<a class="md-nav__link" href="../../../../cv/mvg/pjt2d/">
 <span class="md-ellipsis">
     2D 射影几何和变换
     
@@ -1162,7 +992,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/pjt3d/">
+<a class="md-nav__link" href="../../../../cv/mvg/pjt3d/">
 <span class="md-ellipsis">
     3D 射影几何和变换
     
@@ -1170,7 +1000,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/est2d/">
+<a class="md-nav__link" href="../../../../cv/mvg/est2d/">
 <span class="md-ellipsis">
     估计——2D 射影变换
     
@@ -1178,7 +1008,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/eval/">
+<a class="md-nav__link" href="../../../../cv/mvg/eval/">
 <span class="md-ellipsis">
     算法评价和误差分析
     
@@ -1186,7 +1016,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/camera-model/">
+<a class="md-nav__link" href="../../../../cv/mvg/camera-model/">
 <span class="md-ellipsis">
     摄像机模型
     
@@ -1194,7 +1024,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/calc-p/">
+<a class="md-nav__link" href="../../../../cv/mvg/calc-p/">
 <span class="md-ellipsis">
     计算摄像机矩阵 P
     
@@ -1202,7 +1032,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/one-vg/">
+<a class="md-nav__link" href="../../../../cv/mvg/one-vg/">
 <span class="md-ellipsis">
     单视图几何
     
@@ -1210,7 +1040,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/ag-fm/">
+<a class="md-nav__link" href="../../../../cv/mvg/ag-fm/">
 <span class="md-ellipsis">
     对极几何和基本矩阵
     
@@ -1218,7 +1048,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/mvg/3dr-camera-structure/">
+<a class="md-nav__link" href="../../../../cv/mvg/3dr-camera-structure/">
 <span class="md-ellipsis">
     摄像机和结构的 3D 重构
     
@@ -1231,7 +1061,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/pcd/">
+<a class="md-nav__link" href="../../../../cv/pcd/">
 <span class="md-ellipsis">
     三维点云
     
@@ -1250,7 +1080,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/pcd/pcr/">
+<a class="md-nav__link" href="../../../../cv/pcd/pcr/">
 <span class="md-ellipsis">
     点云配准
     
@@ -1267,7 +1097,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/pcd/pcr/prepare/">
+<a class="md-nav__link" href="../../../../cv/pcd/pcr/prepare/">
 <span class="md-ellipsis">
     前置知识
     
@@ -1275,7 +1105,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/pcd/pcr/icp/">
+<a class="md-nav__link" href="../../../../cv/pcd/pcr/icp/">
 <span class="md-ellipsis">
     ICP
     
@@ -1291,7 +1121,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/dataset/">
+<a class="md-nav__link" href="../../../../cv/dataset/">
 <span class="md-ellipsis">
     数据集相关
     
@@ -1308,7 +1138,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/tum/">
+<a class="md-nav__link" href="../../../../cv/dataset/tum/">
 <span class="md-ellipsis">
     TUM
     
@@ -1316,7 +1146,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/bonn/">
+<a class="md-nav__link" href="../../../../cv/dataset/bonn/">
 <span class="md-ellipsis">
     Bonn
     
@@ -1324,7 +1154,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/kitti/">
+<a class="md-nav__link" href="../../../../cv/dataset/kitti/">
 <span class="md-ellipsis">
     KITTI
     
@@ -1332,7 +1162,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/waymo/">
+<a class="md-nav__link" href="../../../../cv/dataset/waymo/">
 <span class="md-ellipsis">
     Waymo
     
@@ -1340,7 +1170,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/endonerf/">
+<a class="md-nav__link" href="../../../../cv/dataset/endonerf/">
 <span class="md-ellipsis">
     EndoNeRF
     
@@ -1348,7 +1178,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/stereomis/">
+<a class="md-nav__link" href="../../../../cv/dataset/stereomis/">
 <span class="md-ellipsis">
     StereoMIS
     
@@ -1356,7 +1186,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/hamlyn/">
+<a class="md-nav__link" href="../../../../cv/dataset/hamlyn/">
 <span class="md-ellipsis">
     Hamlyn
     
@@ -1364,7 +1194,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/dataset/scared/">
+<a class="md-nav__link" href="../../../../cv/dataset/scared/">
 <span class="md-ellipsis">
     SCARED
     
@@ -1377,7 +1207,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/">
+<a class="md-nav__link" href="../../../../cv/papers/">
 <span class="md-ellipsis">
     论文相关
     
@@ -1396,7 +1226,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/pcd/">
+<a class="md-nav__link" href="../../../../cv/papers/pcd/">
 <span class="md-ellipsis">
     PointCloud 系列
     
@@ -1413,7 +1243,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/pcd/geotransformer/">
+<a class="md-nav__link" href="../../../../cv/papers/pcd/geotransformer/">
 <span class="md-ellipsis">
     GeoTransformer
     
@@ -1421,7 +1251,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/pcd/mac/">
+<a class="md-nav__link" href="../../../../cv/papers/pcd/mac/">
 <span class="md-ellipsis">
     MAC
     
@@ -1429,7 +1259,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/pcd/fastmac/">
+<a class="md-nav__link" href="../../../../cv/papers/pcd/fastmac/">
 <span class="md-ellipsis">
     FastMAC
     
@@ -1442,7 +1272,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/">
 <span class="md-ellipsis">
     Dynamic SLAM 系列
     
@@ -1459,7 +1289,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/dynaslam/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/dynaslam/">
 <span class="md-ellipsis">
     DynaSLAM
     
@@ -1467,7 +1297,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/ds-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/ds-slam/">
 <span class="md-ellipsis">
     DS-SLAM
     
@@ -1475,7 +1305,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/detect-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/detect-slam/">
 <span class="md-ellipsis">
     Detect-SLAM
     
@@ -1483,7 +1313,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/flowfusion/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/flowfusion/">
 <span class="md-ellipsis">
     FlowFusion
     
@@ -1491,7 +1321,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/rigidfusion/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/rigidfusion/">
 <span class="md-ellipsis">
     RigidFusion
     
@@ -1499,7 +1329,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/dynamic-slam/crowd-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/dynamic-slam/crowd-slam/">
 <span class="md-ellipsis">
     Crowd-SLAM
     
@@ -1512,7 +1342,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/nerf/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/">
 <span class="md-ellipsis">
     NeRF 系列
     
@@ -1529,7 +1359,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/nerf/nerf/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/nerf/">
 <span class="md-ellipsis">
     NeRF
     
@@ -1537,7 +1367,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/nerf/imap/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/imap/">
 <span class="md-ellipsis">
     iMAP
     
@@ -1545,7 +1375,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/nerf/co-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/co-slam/">
 <span class="md-ellipsis">
     Co-SLAM
     
@@ -1553,7 +1383,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/nerf/nice-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/nice-slam/">
 <span class="md-ellipsis">
     NICE-SLAM
     
@@ -1561,7 +1391,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/nerf/nid-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/nid-slam/">
 <span class="md-ellipsis">
     NID-SLAM
     
@@ -1569,7 +1399,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/nerf/ddn-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/nerf/ddn-slam/">
 <span class="md-ellipsis">
     DDN-SLAM
     
@@ -1582,7 +1412,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/">
 <span class="md-ellipsis">
     3DGS 系列
     
@@ -1599,7 +1429,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/3dgs/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/3dgs/">
 <span class="md-ellipsis">
     3DGS
     
@@ -1607,7 +1437,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/4dgs/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/4dgs/">
 <span class="md-ellipsis">
     4DGS
     
@@ -1615,7 +1445,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/splatam/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/splatam/">
 <span class="md-ellipsis">
     SplaTAM
     
@@ -1623,7 +1453,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/monogs/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/monogs/">
 <span class="md-ellipsis">
     MonoGS
     
@@ -1631,7 +1461,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/loop-splat/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/loop-splat/">
 <span class="md-ellipsis">
     LoopSplat
     
@@ -1639,7 +1469,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/splat-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/splat-slam/">
 <span class="md-ellipsis">
     Splat-SLAM
     
@@ -1647,7 +1477,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/wildgs-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/wildgs-slam/">
 <span class="md-ellipsis">
     WildGS-SLAM
     
@@ -1655,7 +1485,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/4dtam/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/4dtam/">
 <span class="md-ellipsis">
     4DTAM
     
@@ -1663,7 +1493,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/4dgs-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/4dgs-slam/">
 <span class="md-ellipsis">
     4DGS-SLAM
     
@@ -1671,7 +1501,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/3dgs/freetimegs/">
+<a class="md-nav__link" href="../../../../cv/papers/3dgs/freetimegs/">
 <span class="md-ellipsis">
     FreeTimeGS
     
@@ -1684,7 +1514,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/ffm/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/">
 <span class="md-ellipsis">
     FFM 系列
     
@@ -1701,7 +1531,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/dust3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/dust3r/">
 <span class="md-ellipsis">
     DUSt3R
     
@@ -1709,7 +1539,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/mast3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/mast3r/">
 <span class="md-ellipsis">
     MASt3R
     
@@ -1717,7 +1547,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/spann3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/spann3r/">
 <span class="md-ellipsis">
     Spann3R
     
@@ -1725,7 +1555,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/fast3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/fast3r/">
 <span class="md-ellipsis">
     Fast3R
     
@@ -1733,7 +1563,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/instant-splat/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/instant-splat/">
 <span class="md-ellipsis">
     InstantSplat
     
@@ -1741,7 +1571,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/monst3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/monst3r/">
 <span class="md-ellipsis">
     MonST3R
     
@@ -1749,7 +1579,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/das3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/das3r/">
 <span class="md-ellipsis">
     DAS3R
     
@@ -1757,7 +1587,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/cut3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/cut3r/">
 <span class="md-ellipsis">
     CUT3R
     
@@ -1765,7 +1595,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/easi3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/easi3r/">
 <span class="md-ellipsis">
     Easi3R
     
@@ -1773,7 +1603,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/mast3r-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/mast3r-slam/">
 <span class="md-ellipsis">
     MASt3R-SLAM
     
@@ -1781,7 +1611,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/slam3r/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/slam3r/">
 <span class="md-ellipsis">
     SLAM3R
     
@@ -1789,7 +1619,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/vggt/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/vggt/">
 <span class="md-ellipsis">
     VGGT
     
@@ -1797,7 +1627,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/vggt-slam/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/vggt-slam/">
 <span class="md-ellipsis">
     VGGT-SLAM
     
@@ -1805,7 +1635,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/vggt-long/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/vggt-long/">
 <span class="md-ellipsis">
     VGGT-Long
     
@@ -1813,7 +1643,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/anycam/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/anycam/">
 <span class="md-ellipsis">
     AnyCam
     
@@ -1821,7 +1651,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/ffm/page-4d/">
+<a class="md-nav__link" href="../../../../cv/papers/ffm/page-4d/">
 <span class="md-ellipsis">
     PAGE-4D
     
@@ -1834,7 +1664,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/endo/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/">
 <span class="md-ellipsis">
     Endo 系列
     
@@ -1851,7 +1681,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/endoscopy-depth-estimation/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/endoscopy-depth-estimation/">
 <span class="md-ellipsis">
     EndoscopyDepthEstimation
     
@@ -1859,7 +1689,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/endo-4dgs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/endo-4dgs/">
 <span class="md-ellipsis">
     Endo-4DGS
     
@@ -1867,7 +1697,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/endogaussian/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/endogaussian/">
 <span class="md-ellipsis">
     EndoGaussian
     
@@ -1875,7 +1705,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/endogs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/endogs/">
 <span class="md-ellipsis">
     EndoGS
     
@@ -1883,7 +1713,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/lgs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/lgs/">
 <span class="md-ellipsis">
     LGS
     
@@ -1891,7 +1721,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/st-endo4dgs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/st-endo4dgs/">
 <span class="md-ellipsis">
     ST-Endo4DGS
     
@@ -1899,7 +1729,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/deform3dgs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/deform3dgs/">
 <span class="md-ellipsis">
     Deform3DGS
     
@@ -1907,7 +1737,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/eh-surgs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/eh-surgs/">
 <span class="md-ellipsis">
     EH-SurGS
     
@@ -1915,7 +1745,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/endo-4dgx/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/endo-4dgx/">
 <span class="md-ellipsis">
     Endo-4DGX
     
@@ -1923,7 +1753,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/colorgs/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/colorgs/">
 <span class="md-ellipsis">
     ColorGS
     
@@ -1931,7 +1761,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/endo/d4recon/">
+<a class="md-nav__link" href="../../../../cv/papers/endo/d4recon/">
 <span class="md-ellipsis">
     D4Recon
     
@@ -1944,7 +1774,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/others/">
+<a class="md-nav__link" href="../../../../cv/papers/others/">
 <span class="md-ellipsis">
     杂项
     
@@ -1963,7 +1793,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5_8_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/papers/others/vslam14/">
+<a class="md-nav__link" href="../../../../cv/papers/others/vslam14/">
 <span class="md-ellipsis">
     视觉 SLAM 十四讲
     
@@ -1980,7 +1810,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/others/vslam14/lec1/">
+<a class="md-nav__link" href="../../../../cv/papers/others/vslam14/lec1/">
 <span class="md-ellipsis">
     初识 SLAM
     
@@ -1988,7 +1818,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/others/vslam14/lec2/">
+<a class="md-nav__link" href="../../../../cv/papers/others/vslam14/lec2/">
 <span class="md-ellipsis">
     三维空间刚体运动
     
@@ -1999,7 +1829,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/others/orbslam2/">
+<a class="md-nav__link" href="../../../../cv/papers/others/orbslam2/">
 <span class="md-ellipsis">
     ORB-SLAM2
     
@@ -2007,7 +1837,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/others/let-net/">
+<a class="md-nav__link" href="../../../../cv/papers/others/let-net/">
 <span class="md-ellipsis">
     LET-NET
     
@@ -2015,7 +1845,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/others/deepv2d/">
+<a class="md-nav__link" href="../../../../cv/papers/others/deepv2d/">
 <span class="md-ellipsis">
     DeepV2D
     
@@ -2023,7 +1853,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/papers/others/reconstruction-evaluation/">
+<a class="md-nav__link" href="../../../../cv/papers/others/reconstruction-evaluation/">
 <span class="md-ellipsis">
     Reconstruction Evaluation
     
@@ -2039,7 +1869,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../cv/utils/">
+<a class="md-nav__link" href="../../../../cv/utils/">
 <span class="md-ellipsis">
     工具相关
     
@@ -2056,7 +1886,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/utils/colmap/">
+<a class="md-nav__link" href="../../../../cv/utils/colmap/">
 <span class="md-ellipsis">
     COLMAP
     
@@ -2067,7 +1897,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../cv/3d-visualization/">
+<a class="md-nav__link" href="../../../../cv/3d-visualization/">
 <span class="md-ellipsis">
     三维数据场可视化
     
@@ -2080,7 +1910,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/">
+<a class="md-nav__link" href="../../../../llm/">
 <span class="md-ellipsis">
     LLM
     
@@ -2099,7 +1929,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/nlp/">
+<a class="md-nav__link" href="../../../../llm/nlp/">
 <span class="md-ellipsis">
     NLP
     
@@ -2116,7 +1946,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/word2vec/">
+<a class="md-nav__link" href="../../../../llm/nlp/word2vec/">
 <span class="md-ellipsis">
     Word2Vec
     
@@ -2124,7 +1954,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/nlp/rnns/">
+<a class="md-nav__link" href="../../../../llm/nlp/rnns/">
 <span class="md-ellipsis">
     RNN
     
@@ -2137,7 +1967,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/transformer/">
+<a class="md-nav__link" href="../../../../llm/transformer/">
 <span class="md-ellipsis">
     Transformer
     
@@ -2154,7 +1984,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/attention/">
+<a class="md-nav__link" href="../../../../llm/transformer/attention/">
 <span class="md-ellipsis">
     Attention
     
@@ -2162,7 +1992,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/transformer/">
+<a class="md-nav__link" href="../../../../llm/transformer/transformer/">
 <span class="md-ellipsis">
     Transformer
     
@@ -2170,7 +2000,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/bert/">
+<a class="md-nav__link" href="../../../../llm/transformer/bert/">
 <span class="md-ellipsis">
     BERT
     
@@ -2178,7 +2008,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/transformer/vit/">
+<a class="md-nav__link" href="../../../../llm/transformer/vit/">
 <span class="md-ellipsis">
     ViT
     
@@ -2191,7 +2021,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/internlm/">
+<a class="md-nav__link" href="../../../../llm/internlm/">
 <span class="md-ellipsis">
     书生·浦语大模型实战营
     
@@ -2208,7 +2038,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec1/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec1/">
 <span class="md-ellipsis">
     第一节
     
@@ -2216,7 +2046,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec2/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec2/">
 <span class="md-ellipsis">
     第二节
     
@@ -2224,7 +2054,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec3/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec3/">
 <span class="md-ellipsis">
     第三节
     
@@ -2232,7 +2062,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec4/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec4/">
 <span class="md-ellipsis">
     第四节
     
@@ -2240,7 +2070,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec5/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec5/">
 <span class="md-ellipsis">
     第五节
     
@@ -2248,7 +2078,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/internlm/lec6/">
+<a class="md-nav__link" href="../../../../llm/internlm/lec6/">
 <span class="md-ellipsis">
     第六节
     
@@ -2261,7 +2091,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../llm/dw2025winter/">
+<a class="md-nav__link" href="../../../../llm/dw2025winter/">
 <span class="md-ellipsis">
     2025 AI 冬令营
     
@@ -2278,7 +2108,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/dw2025winter/lec1/">
+<a class="md-nav__link" href="../../../../llm/dw2025winter/lec1/">
 <span class="md-ellipsis">
     速通AI辅助番茄时钟开发
     
@@ -2304,7 +2134,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/others/prompt/">
+<a class="md-nav__link" href="../../../../llm/others/prompt/">
 <span class="md-ellipsis">
     Prompt
     
@@ -2312,7 +2142,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../llm/others/dt/">
+<a class="md-nav__link" href="../../../../llm/others/dt/">
 <span class="md-ellipsis">
     分布式训练
     
@@ -2328,7 +2158,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../mb/">
+<a class="md-nav__link" href="../../../../mb/">
 <span class="md-ellipsis">
     Math Basis
     
@@ -2347,7 +2177,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../mb/optimization-theory/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/">
 <span class="md-ellipsis">
     最优化理论与方法
     
@@ -2364,7 +2194,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec1/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/lec1/">
 <span class="md-ellipsis">
     最优化问题
     
@@ -2372,7 +2202,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec2/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/lec2/">
 <span class="md-ellipsis">
     直线搜索
     
@@ -2380,7 +2210,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/optimization-theory/lec3/">
+<a class="md-nav__link" href="../../../../mb/optimization-theory/lec3/">
 <span class="md-ellipsis">
     无约束最优化的梯度方法
     
@@ -2393,7 +2223,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../mb/maa/">
+<a class="md-nav__link" href="../../../../mb/maa/">
 <span class="md-ellipsis">
     矩阵分析与应用
     
@@ -2410,7 +2240,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/maa/lec1/">
+<a class="md-nav__link" href="../../../../mb/maa/lec1/">
 <span class="md-ellipsis">
     矩阵代数基础
     
@@ -2418,7 +2248,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/maa/lec2/">
+<a class="md-nav__link" href="../../../../mb/maa/lec2/">
 <span class="md-ellipsis">
     特殊矩阵
     
@@ -2426,7 +2256,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/maa/lec3/">
+<a class="md-nav__link" href="../../../../mb/maa/lec3/">
 <span class="md-ellipsis">
     矩阵微分
     
@@ -2437,7 +2267,7 @@ var _hmt = _hmt || [];
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mb/comb/">
+<a class="md-nav__link" href="../../../../mb/comb/">
 <span class="md-ellipsis">
     组合数学
     
@@ -2450,7 +2280,7 @@ var _hmt = _hmt || [];
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../utils/">
+<a class="md-nav__link" href="../../../../utils/">
 <span class="md-ellipsis">
     Utils
     
@@ -2467,7 +2297,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/utilsbox/">
+<a class="md-nav__link" href="../../../../utils/utilsbox/">
 <span class="md-ellipsis">
     工具收集
     
@@ -2490,7 +2320,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/shell/">
+<a class="md-nav__link" href="../../../../utils/shell/">
 <span class="md-ellipsis">
     Shell 命令相关
     
@@ -2498,7 +2328,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/git/">
+<a class="md-nav__link" href="../../../../utils/git/">
 <span class="md-ellipsis">
     Git 命令相关
     
@@ -2506,7 +2336,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/docker/">
+<a class="md-nav__link" href="../../../../utils/docker/">
 <span class="md-ellipsis">
     Docker 命令相关
     
@@ -2514,7 +2344,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/gdb/">
+<a class="md-nav__link" href="../../../../utils/gdb/">
 <span class="md-ellipsis">
     gdb 命令相关
     
@@ -2540,7 +2370,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/action/">
+<a class="md-nav__link" href="../../../../utils/action/">
 <span class="md-ellipsis">
     Github Action
     
@@ -2566,7 +2396,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/reveal-md/">
+<a class="md-nav__link" href="../../../../utils/reveal-md/">
 <span class="md-ellipsis">
     reveal-md
     
@@ -2574,7 +2404,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/gitbook/">
+<a class="md-nav__link" href="../../../../utils/gitbook/">
 <span class="md-ellipsis">
     gitbook
     
@@ -2582,7 +2412,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/mkdocs/">
+<a class="md-nav__link" href="../../../../utils/mkdocs/">
 <span class="md-ellipsis">
     mkdocs
     
@@ -2590,7 +2420,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/hexo/">
+<a class="md-nav__link" href="../../../../utils/hexo/">
 <span class="md-ellipsis">
     hexo
     
@@ -2616,7 +2446,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/ffmpeg/">
+<a class="md-nav__link" href="../../../../utils/ffmpeg/">
 <span class="md-ellipsis">
     ffmpeg
     
@@ -2624,7 +2454,7 @@ var _hmt = _hmt || [];
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/imagemagick/">
+<a class="md-nav__link" href="../../../../utils/imagemagick/">
 <span class="md-ellipsis">
     ImageMagick
     
@@ -2650,7 +2480,7 @@ var _hmt = _hmt || [];
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../utils/wandb/">
+<a class="md-nav__link" href="../../../../utils/wandb/">
 <span class="md-ellipsis">
     Weights &amp; Biases
     
@@ -2678,210 +2508,40 @@ var _hmt = _hmt || [];
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#openmp_1">
+<a class="md-nav__link" href="#task-1">
 <span class="md-ellipsis">
-      什么是 OpenMP
+      Task 1
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#task-2">
 <span class="md-ellipsis">
-      并行性
+      Task 2
     </span>
 </a>
-<nav aria-label="并行性" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-2023">
+<span class="md-ellipsis">
+      Spring 2023
+    </span>
+</a>
+<nav aria-label="Spring 2023" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#task-1-copy-on-write-trie">
 <span class="md-ellipsis">
-      进程和线程
+      Task 1: Copy-On-Write Trie
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#task-2-concurrent-key-value-store">
 <span class="md-ellipsis">
-      线程的硬件调度
+      Task 2: Concurrent Key-Value Store
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      硬件的内存模型
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fork-join">
-<span class="md-ellipsis">
-      Fork-Join 模型
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openmp_2">
-<span class="md-ellipsis">
-      OpenMP 编程
-    </span>
-</a>
-<nav aria-label="OpenMP 编程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      安装
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      编译使用
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      库函数
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      制导语句
-    </span>
-</a>
-<nav aria-label="制导语句" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#parallel">
-<span class="md-ellipsis">
-      parallel 线程并行
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for">
-<span class="md-ellipsis">
-      for 循环并行
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#if">
-<span class="md-ellipsis">
-      if 条件并行
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reduction">
-<span class="md-ellipsis">
-      reduction 执行过程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      同步构造
-    </span>
-</a>
-<nav aria-label="同步构造" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-sections">
-<span class="md-ellipsis">
-      #pragma omp sections
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-barrier">
-<span class="md-ellipsis">
-      #pragma omp barrier
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-single">
-<span class="md-ellipsis">
-      #pragma omp single
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-master">
-<span class="md-ellipsis">
-      #pragma omp master
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-critical">
-<span class="md-ellipsis">
-      #pragma omp critical
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pragma-omp-atomic">
-<span class="md-ellipsis">
-      #pragma omp atomic
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#false-sharing">
-<span class="md-ellipsis">
-      False Sharing
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      更多特性
-    </span>
-</a>
-<nav aria-label="更多特性" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      任务构造
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      向量化
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gpu">
-<span class="md-ellipsis">
-      GPU 支持
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -2895,283 +2555,142 @@ var _hmt = _hmt || [];
 <link href="/css/fold_toc.css" rel="stylesheet"/>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="openmp"><span>OpenMP<span class="heti-spacing"> </span></span>基础<a class="headerlink" href="#openmp" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h1 id="c-primer">C++ Primer<a class="headerlink" href="#c-primer" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1763<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> <span>38<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>1<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>885<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> <span>17<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>分钟</p>
 </div>
-<h2 id="openmp_1">什么是<span><span class="heti-spacing"> </span>OpenMP</span><a class="headerlink" href="#openmp_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
 <ul>
-<li>Open Multi-Processing</li>
-<li><span>OpenMP<span class="heti-spacing"> </span></span>是一个应用程序接口（API<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，可以简单理解为一个库</li>
-<li>支持<span><span class="heti-spacing"> </span>C</span>、<span>C++<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Fortran</span></li>
-<li>支持多种指令集和操作系统</li>
+<li><span>HyperLogLog<span class="heti-spacing"> </span></span>是是一种概率性数据结构，目标是在不明确存储每个项目的情况下，统计海量数据流中唯一条目的数量。</li>
+<li>补充了<span class="heti-skip"><span class="heti-spacing"> </span>Spring 2023<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>COW Trie</span>。</li>
+<li>home: <a href="https://15445.courses.cs.cmu.edu/fall2024/project0/">https://15445.courses.cs.cmu.edu/fall2024/project0/</a></li>
 </ul>
-<p><span>OpenMP<span class="heti-spacing"> </span></span>的适用范围：多线程、共享内存</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><span>HLL<span class="heti-spacing"> </span></span>的概率计数机制</p>
 <ul>
-<li>共享存储体系结构上的一个并行编程模型</li>
-<li>适用于<span><span class="heti-spacing"> </span>SMP</span>（Symmetric Multi-Processor）共享内存多处理系统和多核处理器体系结构</li>
+<li><code>b</code><span>:<span class="heti-spacing"> </span></span>哈希值二进制表示中初始位的数量；</li>
+<li><code>m=2^b</code><span>:<span class="heti-spacing"> </span></span>寄存器（桶）数量，可以被视为一个内存块；</li>
+<li><code>p</code>：<span>1<span class="heti-spacing"> </span></span>的最高有效位位置；</li>
 </ul>
-<p>三类主要<span><span class="heti-spacing"> </span>API</span>（表现为编译制导指令，但实际上仍为<span><span class="heti-spacing"> </span>API</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：编译器指令、运行时库函数、环境变量</p>
-<p>传统上，我们利用<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>进行单机器<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>优化（可跨处理器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，不过在较新的<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>版本的中，你甚至可以直接使用<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>将代码优化到<span class="heti-skip"><span class="heti-spacing"> </span>GPU<span class="heti-spacing"> </span></span>等异构计算设备上</p>
-<h2 id="_1">并行性<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_2">进程和线程<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+</div>
+<h2 id="task-1">Task 1<a class="headerlink" href="#task-1" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">实现一个基本的<span><span class="heti-spacing"> </span>HyperLogLog</span>，把最左侧<span class="heti-skip"><span class="heti-spacing"> </span>1 bit<span class="heti-spacing"> </span></span>的位置存储在寄存器中。</p>
+<p>实现一个基本的<span><span class="heti-spacing"> </span>HyperLogLog</span>，把最左侧<span class="heti-skip"><span class="heti-spacing"> </span>1 bit<span class="heti-spacing"> </span></span>的位置存储在寄存器中。</p>
+</div>
 <ul>
-<li>进程<ul>
-<li>每个进程有自己独立的地址空间</li>
-<li><span>CPU<span class="heti-spacing"> </span></span>在进程之间切换需要进行上下文切换</li>
+<li><code>ComputeHash(hash)</code><span>:<span class="heti-spacing"> </span></span>直接调用 <code>std::bitset&lt;64&gt;</code> 的构造函数返回二进制即可；</li>
+<li><code>PositionOfLeftmostOne(bset)</code><span>:<span class="heti-spacing"> </span></span>取除了 <code>n_bits</code> 以外剩余比特位中最高的<span class="heti-skip"><span class="heti-spacing"> </span>1 bit<span class="heti-spacing"> </span></span>的位置；</li>
+<li><code>AddElem(val)</code><span>:<span class="heti-spacing"> </span></span>计算哈希值 <code>hash</code>，将其转为二进制并计算寄存器索引 <code>idx</code> 和 <code>p</code> 值，最后更新寄存器 <code>R[idx]</code>；</li>
+<li><code>ComputeCardinality</code><span>:<span class="heti-spacing"> </span></span>使用公式即可<span><span class="heti-spacing"> </span><span class="arithmatex">\(N = \alpha_m * m^2 * (\sum_{j=0}^{m-1} 2^{-R[j]})^{-1}\)</span></span>；</li>
 </ul>
+<div class="admonition bug">
+<p class="admonition-title">注意事项</p>
+<ul>
+<li><span>n_bits<span class="heti-spacing"> </span></span>可能为负，需<span class="heti-skip"><span class="heti-spacing"> </span>return<span class="heti-spacing"> </span></span>处理；</li>
+<li>不可以使用 <code>std::pow(2, -r)</code>，因为 <code>r</code> 是 <code>uint8_t</code>，不可以变成负数，所以使用 <code>1.0 / std::pow(2, r)</code>；</li>
+</ul>
+</div>
+<h2 id="task-2">Task 2<a class="headerlink" href="#task-2" title="Permanent link">¶</a></h2>
+<div class="admonition question">
+<p class="admonition-title">实现<span class="heti-skip"><span class="heti-spacing"> </span>Presto<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>HLL<span class="heti-spacing"> </span></span>密集布局，把最右侧连续<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的计数存储在寄存器中。</p>
+<ul>
+<li>实现<span class="heti-skip"><span class="heti-spacing"> </span>Presto<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>HLL<span class="heti-spacing"> </span></span>密集布局，把最右侧连续<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的计数存储在寄存器中。</li>
+</ul>
+</div>
+<ul>
+<li><code>AddElem(bset)</code>: <ol>
+<li>计算哈希值 <code>hash</code> 并转为二进制；</li>
+<li>计算寄存器索引 <code>idx</code>；</li>
+<li>计算最右连续<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>个数作为 <code>p</code> 值，分解为 <code>dense_value</code> 和 <code>overflow_value</code>（如果超过了 <code>DENSE_BUCKET_SIZE</code> 位<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li>更新 <code>dense_bucket_[idx]</code> 和 <code>overflow_buckets_[idx]</code>；</li>
+</ol>
 </li>
-<li>线程<ul>
-<li>一个进程下的线程共享地址空间</li>
-<li><span>CPU<span class="heti-spacing"> </span></span>在线程之间切换开销小</li>
-</ul>
-</li>
-</ul>
-<h3 id="_3">线程的硬件调度<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>硬件和操作系统会自动将线程调度到<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>核心运行</li>
-<li>当线程数目超过核心数，会出现多个线程抢占一个<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>核心，导致性能下降</li>
-<li>超线程（hyper-threading）将单个<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>物理核心抽象为多个（目前通常为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>个）逻辑核心，共享物理核心的计算资源</li>
-</ul>
-<h3 id="_4">硬件的内存模型<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><span>CPU<span class="heti-spacing"> </span></span>核心在主存之上有<span class="heti-skip"><span class="heti-spacing"> </span>L1,L2,L3<span class="heti-spacing"> </span></span>多级缓存</li>
-<li><span>L1,L2<span class="heti-spacing"> </span></span>缓存是核心私有的</li>
-<li>硬件和操作系统保证不同核心的缓存一致性（coherence）</li>
-<li>被称为<span><span class="heti-spacing"> </span>cache coherence non-uniform memory access</span>（ccNUMA）</li>
-<li>缓存一致性会带来<span class="heti-skip"><span class="heti-spacing"> </span>False Sharing<span class="heti-spacing"> </span></span>的问题</li>
-</ul>
-<h3 id="fork-join"><span>Fork-Join<span class="heti-spacing"> </span></span>模型<a class="headerlink" href="#fork-join" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>单线程（initial thread）开始执行</li>
-<li>进入并行区（parallel region）开始并行执行</li>
-<li>在并行区结尾<strong>进行同步</strong>和结束线程，继续单线程执行程序</li>
-</ul>
-<p></p><center><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="/assets/images/cs/hpc/fork-join.jpg"><img src="/assets/images/cs/hpc/fork-join.jpg"/></a></center>
-<h2 id="openmp_2"><span>OpenMP<span class="heti-spacing"> </span></span>编程<a class="headerlink" href="#openmp_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_5">安装<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>含在<span class="heti-skip"><span class="heti-spacing"> </span>Ubuntu<span class="heti-spacing"> </span></span>提供的<span class="heti-skip"><span class="heti-spacing"> </span>build-essential<span class="heti-spacing"> </span></span>包中</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">echo</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cpp<span class="w"> </span>-fopenmp<span class="w"> </span>-dM<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>open
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># #define _OPENMP 201511</span>
-</code></pre></div>
-<h3 id="_6">编译使用<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>可以直接在编译语句添加 <code>-fopenmp</code>，如</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>g++<span class="w"> </span>-O2<span class="w"> </span>-std<span class="o">=</span>c++14<span class="w"> </span>-fopenmp<span class="w"> </span>hello.cp<span class="w"> </span>-o<span class="w"> </span>hello
-</code></pre></div>
-<ul>
-<li>如果用<span class="heti-skip"><span class="heti-spacing"> </span>cmake<span class="heti-spacing"> </span></span>构建项目，<span>gcc<span class="heti-spacing"> </span></span>加入 <code>-Wunknown-pragmas</code> 会在编译时报告没有处理的 <code>#pragma</code>，可以用来检查是否有遗漏的<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP<span class="heti-spacing"> </span></span>指令</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">OpenMP</span><span class="p">)</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-Wunknown-pragmas</span><span class="p">)</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">hello</span><span class="w"> </span><span class="s">src/hello.cpp</span><span class="p">)</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">hello</span><span class="w"> </span><span class="s">OpenMP::OpenMP_CXX</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="_7">库函数<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>使用时要 <code class="highlight"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span></code>，一些常用函数：</p>
-<ul>
-<li><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">omp_set_num_threads</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span></code>：设置并行区运行的线程数</li>
-<li><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获取当前线程号</li>
-<li><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">omp_get_num_threads</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获取总线程数</li>
-<li><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">omp_get_wtime</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获取时间，常用于计算线程内语句执行时间</li>
-<li><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">opm_get_wtick</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code>：获得 <code>omp_get_wtime</code> 时间精度</li>
-</ul>
-<p><span>OpenMP<span class="heti-spacing"> </span></span>会读取环境变量 <strong>OMP_NUM_THREADS</strong> 来决定创建的线程数</p>
-<h3 id="_8">制导语句<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li>同一类 <code>openmp</code> 制导语句称为一种构造（construct）</li>
-<li>形式为 <code class="highlight"><span class="cp">#pragma omp &lt;directive&gt; &lt;clause&gt;</span></code></li>
-<li>使用 <code>{}</code> 标记作用的代码块</li>
-<li>支持的从句<ul>
-<li><code>default(shared|none)</code>：指定默认<ul>
-<li><code>shared</code>：默认为共享变量</li>
-<li><code>none</code>：无默认变量类型，每个变量都需要另外指定</li>
-</ul>
-</li>
-<li><code>shared(list)</code>：指定共享变量列表变量类型<ul>
-<li>共享变量在内存中只有一份，所有线程都可以访问</li>
-<li>请保证共享访问不会冲突</li>
-<li>不特别指定并行区变量<strong>默认为<span><span class="heti-spacing"> </span>shared</span></strong></li>
-</ul>
-</li>
-<li><code>private(list)</code>：指定私有变量列表<ul>
-<li>每个线程生成一份与该私有变量同类型的数据对象</li>
-<li>变量需要<strong>重新初始化</strong></li>
-</ul>
-</li>
-<li><code>firstprivate(list)</code><ul>
-<li>同<span><span class="heti-spacing"> </span>private</span></li>
-<li>对变量根据祝线程中的数据进行初始化</li>
-</ul>
-</li>
-<li><code>lastprivate(list)</code><ul>
-<li>同<span><span class="heti-spacing"> </span>private</span></li>
-<li>执行最后一个循环的线程的私有数据取出赋值给主线程的变量</li>
-</ul>
-</li>
-<li><code>nowait</code>：取消代码块结束的栅栏同步（barrier）</li>
-<li><code>collapse(n)</code>：应用于<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>重循环，合并（展开）循环并行<ul>
-<li>注意循环之间是否有数据依赖</li>
-</ul>
-</li>
-<li><code>ordered</code>：声明有潜在的顺序执行部分<ul>
-<li>使用 <code class="highlight"><span class="cp">#pragma omp ordered</span></code> 标记顺序执行代码（搭配使用）</li>
-<li><span>ordered<span class="heti-spacing"> </span></span>区内的语句任意时刻仅由最多一个线程执行</li>
-</ul>
-</li>
-<li><code>schedule(type [, chuck])</code>：控制调度方式<ul>
-<li><code>static</code>：<span>chunk<span class="heti-spacing"> </span></span>大小固定（默认<span><span class="heti-spacing"> </span>n/p</span>）</li>
-<li><code>dynamic</code>：动态调度，<span>chunk<span class="heti-spacing"> </span></span>大小固定（默认<span><span class="heti-spacing"> </span>1</span>）</li>
-<li><code>guided</code>：<span>chunk<span class="heti-spacing"> </span></span>大小动态递减</li>
-<li><code>runtime</code>：由系统环境 <code>OMP_SCHEDULE</code> 决定</li>
-</ul>
+<li><code>ComputeCardinality()</code>: <ol>
+<li>先从 <code>dense_bucket_</code> 和 <code>overflow_buckets_</code> 求出<span><span class="heti-spacing"> </span>bit</span> （<code>dense_bucket_value</code> 和 <code>overflow_bucket_value</code><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li>合并这两个<span><span class="heti-spacing"> </span>bit</span>，<code>merge = dense_bucket_value + (overflow_bucket_value &lt;&lt; DENSE_BUCKET_SIZE)</code>；</li>
+<li>最后使用公式计算基数； </li>
+</ol>
 </li>
 </ul>
-</li>
-</ul>
-<h4 id="parallel"><span>parallel<span class="heti-spacing"> </span></span>线程并行<a class="headerlink" href="#parallel" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>使用 <code class="highlight"><span class="cp">#pragma omp parallel</span></code> 创建并行块来并行运行同一段程序：
-</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="cp">#pragma omp parallel</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">{</span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">();</span>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"thread #%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">ID</span><span class="p">);</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="for"><span>for<span class="heti-spacing"> </span></span>循环并行<a class="headerlink" href="#for" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><span>parallel<span class="heti-spacing"> </span></span>块内可以使用 <code class="highlight"><span class="cp">#pragma omp for</span></code> 来对<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>循环进行并行，相当于将循环拆成不同部分分配给多个线程</p>
+<hr/>
+<h2 id="spring-2023">Spring 2023<a class="headerlink" href="#spring-2023" title="Permanent link">¶</a></h2>
+<h3 id="task-1-copy-on-write-trie">Task 1: Copy-On-Write Trie<a class="headerlink" href="#task-1-copy-on-write-trie" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Copy-On-Write Trie</p>
+<p>修改 <code>trie.h</code> 和 <code>trie.cpp</code> 来实现一个<span><span class="heti-spacing"> </span>Copy-On-Write Trie</span>；</p>
+</div>
 <ul>
-<li>格式要求<ul>
-<li><span>init-expr:<span class="heti-spacing"> </span></span>需要是 <code>var=lb</code> 形式，类型也有限制</li>
-<li><span>test-expr:<span class="heti-spacing"> </span></span>限制为 <code>var reational-opb</code> 或者 <code>b relational-opb var</code></li>
-<li><span>incr-expr:<span class="heti-spacing"> </span></span>限制为 <code>var=var +/- incr</code> 或者 <code>var=var +/- incr</code></li>
+<li><code>Get(key)</code>：沿着<span class="heti-skip"><span class="heti-spacing"> </span>key<span class="heti-spacing"> </span></span>逐字符向下查找节点；如果路径不存在或节点值类型不匹配则返回空，否则返回该值指针。</li>
+<li><code>Put(key, value)</code>：持久化插入<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>更新；递归创建或克隆路径上的节点，仅替换目标分支并保留其他分支，最后返回新的<span class="heti-skip"><span class="heti-spacing"> </span>Trie<span class="heti-spacing"> </span></span>根。</li>
+<li><code>Remove(key)</code>：持久化删除；递归移除目标值并必要时回收空节点，保持其他分支不变，最终返回新的<span class="heti-skip"><span class="heti-spacing"> </span>Trie<span class="heti-spacing"> </span></span>根（可能为空<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</li>
 </ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">#pragma omp parallel</span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">{</span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="cp">#pragma omp for</span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="p">{</span>
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="p">}</span>
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
-</code></pre></div>
-<p><span>parallel<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>可以合起来写作一行 <code class="highlight"><span class="cp">#pragma omp parallel for</span></code></p>
-<h4 id="if"><span>if<span class="heti-spacing"> </span></span>条件并行<a class="headerlink" href="#if" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>可以在制导语句后面加<span class="heti-skip"><span class="heti-spacing"> </span>if<span class="heti-spacing"> </span></span>子句来决定是否进行并行：
-</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">#pragma omp parallel if(x) num_threads(4)</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="p">{</span>
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="p">...</span>
-<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span><span class="w"> </span>
+<h3 id="task-2-concurrent-key-value-store">Task 2: Concurrent Key-Value Store<a class="headerlink" href="#task-2-concurrent-key-value-store" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Concurrent Key-Value Store</p>
+<p>在单线程的<span class="heti-skip"><span class="heti-spacing"> </span>Copy-On-Wirte Trie<span class="heti-spacing"> </span></span>基础上，实现一个支持多线程的并发<span><span class="heti-spacing"> </span>key-value store</span>。</p>
+</div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>┌───────────────────────────────────┐
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>│             TrieStore             │  ← 线程安全包装层
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>│  ┌─────────┐        ┌──────────┐  │
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>│  │root_lock│        │write_lock│  │  ← 两把锁分工
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>│  └────┬────┘        └─────┬────┘  │
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>│       │                   │       │
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>│       ▼                   ▼       │
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>│  ┌─────────────────────────────┐  │
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>│  │        Trie (COW)           │  │
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>│  │   root_: shared_ptr&lt;const   │  │  ← 不可变数据结构
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>│  │           TrieNode&gt;         │  │
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>│  └─────────────────────────────┘  │
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>└───────────────────────────────────┘
 </code></pre></div>
 <ul>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>不为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>则分为四个线程执行块内内容</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>则由主线程串行执行</li>
+<li><span>COW Trie<span class="heti-spacing"> </span></span>本身是不可变的，所以读操作不需要锁，只需要保护根指针的读取；</li>
+<li><code>root_lock_</code>：保护 <code>root_</code> 指针的读写（获取当前版本）</li>
+<li><code>write_lock_</code>：序列化所有修改操作（<code>Put</code>/<code>Remove</code>）</li>
+<li><code>Get(key)</code>：<ul>
+<li><code>root_lock_</code> 只保护对 <code>root_</code> 的读取，获取 <code>snapshot</code> 后立刻释放；</li>
+<li>后续遍历无需上锁，因为 <code>snapshot</code> 是局部副本；</li>
 </ul>
-<h3 id="reduction"><span>reduction<span class="heti-spacing"> </span></span>执行过程<a class="headerlink" href="#reduction" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><span>fork<span class="heti-spacing"> </span></span>线程并分配任务</li>
-<li>每一个线程定义一个私有变量 <code>omp_private</code>，同 <code>private</code></li>
-<li>各个线程执行计算</li>
-<li>所有 <code>omp_priv</code> 和 <code>omp_in</code> 一起顺序进行<span><span class="heti-spacing"> </span>reduction</span>，写回原变量</li>
-</ul>
-<h3 id="_9">同步构造<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="pragma-omp-sections">#pragma omp sections<a class="headerlink" href="#pragma-omp-sections" title="Permanent link">¶</a></h4>
-<ul>
-<li>将并行区内的代码块划分为多个 <code>section</code> 分配执行</li>
-<li>可以搭配 <code>parallel</code> 合并为 <code class="highlight"><span class="cp">#pragma omp parallel sections</span></code> 构造</li>
-<li>每个 <code>section</code> 由一个线程执行<ul>
-<li>线程数大于 <code>section</code> 数目：部分线程空闲</li>
-<li>线程数小于 <code>section</code> 数目，部分线程分配多个 <code>section</code></li>
+</li>
+<li><code>Put(key, value)</code> 和 <code>Remove(key)</code>：:<ul>
+<li><code>write_lock_</code> 确保只有一个<span class="heti-skip"><span class="heti-spacing"> </span>writer<span class="heti-spacing"> </span></span>执行 <code>Put</code> 或 <code>Remove</code>，避免并发修改；</li>
+<li>实际的 <code>Trie::Put/Remove</code> 不在锁内执行，避免阻塞<span><span class="heti-spacing"> </span>writer</span>；</li>
+<li>使用双锁策略，<code>write_lock_</code> 保护序列化，<code>root_lock_</code> 保护根指针安全；</li>
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">#pragma omp parallel sections</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">{</span>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="cp">#pragma omp section</span>
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="n">code1</span><span class="p">();</span>
-<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="cp">#pragma omp section</span>
-<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="n">code2</span><span class="p">();</span>
-<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
+<div class="admonition note">
+<p class="admonition-title">为什么需要<code>ValueGruad</code><span><span class="heti-spacing"> </span>?</span></p>
+<ul>
+<li>
+<p>假设这样一个场景：<code>Get(key)</code> 返回指针后，另一个线程执行了 <code>Remove(key)</code>：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>T1: auto val = trie_store.Get&lt;int&gt;("key");  // 获取值引用
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>T2: trie_store.Remove("key");               // 删除键，COW 创建新 root
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>   // 旧 root 的节点如果没有其他引用会被销毁
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>T1: cout &lt;&lt; *val;  // 如果 val 只存指针，这里会悬空！
 </code></pre></div>
-<h4 id="pragma-omp-barrier">#pragma omp barrier<a class="headerlink" href="#pragma-omp-barrier" title="Permanent link">¶</a></h4>
-<ul>
-<li>在特定位置进行栅栏同步</li>
-<li>每个并行块都含有隐式的<span><span class="heti-spacing"> </span>barrier</span>，也就是在所有线程都结束后才能继续向下运行
-在并行块内也可以利用 <code class="highlight"><span class="cp">#pragma omp barrier</span></code> 来同步各线程，即所有线程都触碰到 barrier 时再继续</li>
-<li>可以利用<span class="heti-skip"><span class="heti-spacing"> </span>nowait<span class="heti-spacing"> </span></span>子句来取消并行块结尾的隐式<span><span class="heti-spacing"> </span>barrier</span>，避免同步产生的开销</li>
-</ul>
-<h4 id="pragma-omp-single">#pragma omp single<a class="headerlink" href="#pragma-omp-single" title="Permanent link">¶</a></h4>
-<ul>
-<li>某段代码单线程执行，带隐式同步（使用<span class="heti-skip"><span class="heti-spacing"> </span>nowait<span class="heti-spacing"> </span></span>去掉）</li>
-<li><span>single<span class="heti-spacing"> </span></span>用来序列化一段代码，即在一个进程中执行（处理非线程安全的代码，例如<span><span class="heti-spacing"> </span>IO</span>）</li>
-</ul>
-<h4 id="pragma-omp-master">#pragma omp master<a class="headerlink" href="#pragma-omp-master" title="Permanent link">¶</a></h4>
-<ul>
-<li>采用主线程执行，无隐式同步</li>
-</ul>
-<h4 id="pragma-omp-critical">#pragma omp critical<a class="headerlink" href="#pragma-omp-critical" title="Permanent link">¶</a></h4>
-<ul>
-<li>某段代码线程互斥执行</li>
-</ul>
-<h4 id="pragma-omp-atomic">#pragma omp atomic<a class="headerlink" href="#pragma-omp-atomic" title="Permanent link">¶</a></h4>
-<ul>
-<li>单个特定格式的语句或语句组中某个变量进行原子操作</li>
-</ul>
-<h3 id="false-sharing">False Sharing<a class="headerlink" href="#false-sharing" title="Permanent link">¶</a></h3>
-<ul>
-<li>耗时增加<span><span class="heti-spacing"> </span>24%</span></li>
-<li>不同核心对同一<span class="heti-skip"><span class="heti-spacing"> </span>cache line<span class="heti-spacing"> </span></span>的同时读写会造成严重的冲突，导致该级缓存失效</li>
-</ul>
-<h3 id="_10">更多特性<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_11">任务构造<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>前述的构造都遵循<span class="heti-skip"><span class="heti-spacing"> </span>Fork-Join<span class="heti-spacing"> </span></span>模式，对任务类型有限制</li>
-<li>任务（task）构造允许定义任务以及依赖关系，动态调度执行</li>
-<li>即动态管理线程池（thread pool）和任务池（task pool）</li>
-</ul>
-<h4 id="_12">向量化<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>将循环转换为<span class="heti-skip"><span class="heti-spacing"> </span>SIMD<span class="heti-spacing"> </span></span>循环</li>
-<li><code>aligned</code> 用于列出内存对齐的指针</li>
-<li><code>safelen</code> 用于标记循环展开时的数据依赖</li>
-<li>编译器也自带向量化功能，例如<span><span class="heti-spacing"> </span>gcc</span><ul>
-<li>-O3</li>
-<li>-ffast-math</li>
-<li>-fivopts</li>
-<li>-march=native</li>
-<li>-fopt-info-vec</li>
-<li>-fopt-info-vec-missed</li>
-</ul>
+</li>
+<li>
+<p>解决方案：<span>ValueGuard<span class="heti-spacing"> </span></span>持有<span class="heti-skip"><span class="heti-spacing"> </span>Trie<span class="heti-spacing"> </span></span>的拷贝（root_<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，确保节点不会被销毁，即使其他线程修改了<span class="heti-skip"><span class="heti-spacing"> </span>TrieStore<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>root_</span>，<span>ValueGuard<span class="heti-spacing"> </span></span>持有的旧版本仍然有效（通过<span class="heti-skip"><span class="heti-spacing"> </span>shared_ptr<span class="heti-spacing"> </span></span>的引用计数）</p>
 </li>
 </ul>
-<h4 id="gpu"><span>GPU<span class="heti-spacing"> </span></span>支持<a class="headerlink" href="#gpu" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<ul>
-<li>从<span class="heti-skip"><span class="heti-spacing"> </span>OpenMP API 4.0<span class="heti-spacing"> </span></span>开始支持<span class="heti-skip"><span class="heti-spacing"> </span>GPU<span class="heti-spacing"> </span></span>加速</li>
-</ul>
+</div>
 <div class="hr-before-source-file"><hr/></div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月3日 21:25:35 CST">2025年12月3日 21:25:35</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年2月1日 15:16:21 CST">2026年2月1日 15:16:21</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2023年9月20日 21:06:07 CST">2023年9月20日 21:06:07</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年2月1日 15:16:21 CST">2026年2月1日 15:16:21</span>
 </span>
 </aside>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOKLqQvc4CY4-G" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="jujimeizuo/note" data-repo-id="R_kgDOKLqQvQ" data-theme="light" src="https://giscus.app/client.js">
@@ -3193,7 +2712,7 @@ var _hmt = _hmt || [];
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: MPI 基础" class="md-footer__link md-footer__link--prev" href="../mpi/">
+<a aria-label="上一页: CMU 15-445 Lab" class="md-footer__link md-footer__link--prev" href="../">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -3202,17 +2721,17 @@ var _hmt = _hmt || [];
                 上一页
               </span>
 <div class="md-ellipsis">
-                MPI 基础
+                CMU 15-445 Lab
               </div>
 </div>
 </a>
-<a aria-label="下一页: 软件相关" class="md-footer__link md-footer__link--next" href="../../software/">
+<a aria-label="下一页: Project 1 - Buffer Pool Manager" class="md-footer__link md-footer__link--next" href="../buffer-pool-manager/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                软件相关
+                Project 1 - Buffer Pool Manager
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -3256,10 +2775,10 @@ var _hmt = _hmt || [];
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
-<script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
 <script src="https://cdn.jujimeizuo.cn/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
+<script src="../../../../js/katex.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>

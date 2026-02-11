@@ -1,4 +1,12 @@
 - "2026":
+  - "2025-02-11":
+    - newpage:
+        text: CS > SYS > CMU 15-445 > Project 1 - Buffer Pool Manager
+        href: /cs/sys/cmu-15-445/buffer-pool-manager/
+  - "2025-02-09":
+    - newpage:
+        text: CS > SYS > CMU 15-445 > Project 0 - C++ Primer
+        href: /cs/sys/cmu-15-445/c++-primer/
   - "2025-01-28":
     - function: font | Maple Mono NF | ttf -> woff2
   - "2026-01-27":
